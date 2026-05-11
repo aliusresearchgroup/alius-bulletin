@@ -6,7 +6,8 @@
     "Shared-assets",
     "Bulletins",
     "Instructions",
-    "AI-agents"
+    "AI-agents",
+    "Cover-Art"
   ],
   "pieces": [
     {
@@ -494,5 +495,56 @@
     "Instructions\\editor-checklist.tex",
     "Instructions\\template_alius_bulletin.pdf",
     "Instructions\\template_alius_bulletin.tex"
+  ],
+  "cover_art": [
+    {
+      "issue": "Issue01",
+      "tex": "Cover-Art/issue01-cover.tex",
+      "pdf": "Cover-Art/issue01-cover.pdf",
+      "reference_cover_pdf": "Cover-Art/reference-covers/issue01-original-cover.pdf",
+      "source_issue_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-01\\alius-bulletin-issue-01-full.pdf"
+    },
+    {
+      "issue": "Issue02",
+      "tex": "Cover-Art/issue02-cover.tex",
+      "pdf": "Cover-Art/issue02-cover.pdf",
+      "reference_cover_pdf": "Cover-Art/reference-covers/issue02-original-cover.pdf",
+      "source_issue_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-02\\alius-bulletin-issue-02-full.pdf"
+    },
+    {
+      "issue": "Issue03",
+      "tex": "Cover-Art/issue03-cover.tex",
+      "pdf": "Cover-Art/issue03-cover.pdf",
+      "reference_cover_pdf": "Cover-Art/reference-covers/issue03-original-cover.pdf",
+      "source_issue_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-03\\alius-bulletin-issue-03-full.pdf"
+    },
+    {
+      "issue": "Issue04",
+      "tex": "Cover-Art/issue04-cover.tex",
+      "pdf": "Cover-Art/issue04-cover.pdf",
+      "reference_cover_pdf": "Cover-Art/reference-covers/issue04-original-cover.pdf",
+      "source_issue_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-04\\alius-bulletin-issue-04-full.pdf"
+    },
+    {
+      "issue": "Issue05",
+      "tex": "Cover-Art/issue05-cover.tex",
+      "pdf": "Cover-Art/issue05-cover.pdf",
+      "reference_cover_pdf": "Cover-Art/reference-covers/issue05-original-cover.pdf",
+      "source_issue_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-05\\alius-bulletin-issue-05-full.pdf"
+    },
+    {
+      "issue": "Issue06",
+      "tex": "Cover-Art/issue06-cover.tex",
+      "pdf": "Cover-Art/issue06-cover.pdf",
+      "reference_cover_pdf": "Cover-Art/reference-covers/issue06-original-cover.pdf",
+      "source_issue_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-06\\alius-bulletin-issue-06-full.pdf"
+    },
+    {
+      "issue": "Issue07",
+      "tex": "Cover-Art/issue07-cover.tex",
+      "pdf": "Cover-Art/issue07-cover.pdf",
+      "reference_cover_pdf": "Cover-Art/reference-covers/issue07-original-cover.pdf",
+      "source_issue_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-07\\alius-bulletin-issue-07-full.pdf"
+    }
   ]
 }

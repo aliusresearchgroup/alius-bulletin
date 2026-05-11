@@ -1,0 +1,177 @@
+{
+  "dpi": 144,
+  "issue_count": 7,
+  "visual_pass_count": 7,
+  "pixel_perfect_count": 7,
+  "criteria": "pixel-perfect rendered comparison at 144 dpi, with page-size delta <= 0.001 pt to allow TeX/PDF fixed-point media-box rounding",
+  "results": [
+    {
+      "issue": "Issue01",
+      "source_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-01\\alius-bulletin-issue-01-full.pdf",
+      "generated_pdf": "Cover-Art\\issue01-cover.pdf",
+      "source_page_size_pt": [
+        595.0,
+        842.0
+      ],
+      "generated_page_size_pt": [
+        595.0,
+        842.0
+      ],
+      "page_size_delta_pt": 0.0,
+      "render_size_px": [
+        1190,
+        1684
+      ],
+      "same_render_size": true,
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_ratio_gt_3": 0.0,
+      "pixel_perfect": true,
+      "visual_pass": true
+    },
+    {
+      "issue": "Issue02",
+      "source_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-02\\alius-bulletin-issue-02-full.pdf",
+      "generated_pdf": "Cover-Art\\issue02-cover.pdf",
+      "source_page_size_pt": [
+        595.0,
+        842.0
+      ],
+      "generated_page_size_pt": [
+        595.0,
+        842.0
+      ],
+      "page_size_delta_pt": 0.0,
+      "render_size_px": [
+        1190,
+        1684
+      ],
+      "same_render_size": true,
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_ratio_gt_3": 0.0,
+      "pixel_perfect": true,
+      "visual_pass": true
+    },
+    {
+      "issue": "Issue03",
+      "source_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-03\\alius-bulletin-issue-03-full.pdf",
+      "generated_pdf": "Cover-Art\\issue03-cover.pdf",
+      "source_page_size_pt": [
+        595.440002,
+        841.919983
+      ],
+      "generated_page_size_pt": [
+        595.440002,
+        841.919983
+      ],
+      "page_size_delta_pt": 0.0,
+      "render_size_px": [
+        1191,
+        1684
+      ],
+      "same_render_size": true,
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_ratio_gt_3": 0.0,
+      "pixel_perfect": true,
+      "visual_pass": true
+    },
+    {
+      "issue": "Issue04",
+      "source_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-04\\alius-bulletin-issue-04-full.pdf",
+      "generated_pdf": "Cover-Art\\issue04-cover.pdf",
+      "source_page_size_pt": [
+        595.440002,
+        841.919983
+      ],
+      "generated_page_size_pt": [
+        595.440002,
+        841.919983
+      ],
+      "page_size_delta_pt": 0.0,
+      "render_size_px": [
+        1191,
+        1684
+      ],
+      "same_render_size": true,
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_ratio_gt_3": 0.0,
+      "pixel_perfect": true,
+      "visual_pass": true
+    },
+    {
+      "issue": "Issue05",
+      "source_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-05\\alius-bulletin-issue-05-full.pdf",
+      "generated_pdf": "Cover-Art\\issue05-cover.pdf",
+      "source_page_size_pt": [
+        595.275574,
+        841.889771
+      ],
+      "generated_page_size_pt": [
+        595.276001,
+        841.890015
+      ],
+      "page_size_delta_pt": 0.00042724609375,
+      "render_size_px": [
+        1191,
+        1684
+      ],
+      "same_render_size": true,
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_ratio_gt_3": 0.0,
+      "pixel_perfect": true,
+      "visual_pass": true
+    },
+    {
+      "issue": "Issue06",
+      "source_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-06\\alius-bulletin-issue-06-full.pdf",
+      "generated_pdf": "Cover-Art\\issue06-cover.pdf",
+      "source_page_size_pt": [
+        595.919983,
+        842.880005
+      ],
+      "generated_page_size_pt": [
+        595.919983,
+        842.880005
+      ],
+      "page_size_delta_pt": 0.0,
+      "render_size_px": [
+        1192,
+        1686
+      ],
+      "same_render_size": true,
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_ratio_gt_3": 0.0,
+      "pixel_perfect": true,
+      "visual_pass": true
+    },
+    {
+      "issue": "Issue07",
+      "source_pdf": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\aliusresearch.org\\docs\\library\\pdfs\\alius-bulletin\\issue-07\\alius-bulletin-issue-07-full.pdf",
+      "generated_pdf": "Cover-Art\\issue07-cover.pdf",
+      "source_page_size_pt": [
+        596.0,
+        842.0
+      ],
+      "generated_page_size_pt": [
+        596.0,
+        842.0
+      ],
+      "page_size_delta_pt": 0.0,
+      "render_size_px": [
+        1192,
+        1684
+      ],
+      "same_render_size": true,
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_ratio_gt_3": 0.0,
+      "pixel_perfect": true,
+      "visual_pass": true
+    }
+  ]
+}

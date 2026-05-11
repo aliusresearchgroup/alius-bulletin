@@ -1,0 +1,15 @@
+% !TeX program = pdflatex
+% ALIUS Bulletin Issue 7 cover. Compile from the repository root.
+% This preserves the published cover by shipping the canonical first page
+% extracted from the original full issue PDF at its native page size.
+\documentclass{article}
+\pagestyle{empty}
+\begin{document}
+\pdfximage page 1 {Cover-Art/reference-covers/issue07-original-cover.pdf}
+\setbox0=\hbox{\pdfrefximage\pdflastximage}
+\pdfpagewidth=\wd0
+\pdfpageheight=\ht0
+\hoffset=-1in
+\voffset=-1in
+\shipout\box0
+\end{document}

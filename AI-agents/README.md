@@ -8,6 +8,7 @@ The rest of the repository is the deliverable. Keep agent notes, operating assum
 
 - `Interviews/IssueXX/Interview_Names/`: one standalone `.tex`, one `.bib`, and one generated `.pdf` for each interview or bulletin piece.
 - `Bulletins/`: issue-level `.tex` files and generated `.pdf` files.
+- `Cover-Art/`: standalone cover `.tex` files, generated cover PDFs, and one-page original cover references for Issues 1-7.
 - `Instructions/`: ALIUS Bulletin instruction/template sources and rendered PDFs.
 - `Shared-assets/`: copied source PDFs, QA logs, visual comparison reports, and the project manifest.
 - `AI-agents/`: maintenance guidance for future AI agents.
