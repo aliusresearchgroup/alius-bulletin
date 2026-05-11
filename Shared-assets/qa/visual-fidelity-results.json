@@ -1,0 +1,3868 @@
+{
+  "interviews": [
+    {
+      "name": "Issue01/Carhart-Harris_Fortier_Milliere",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue01_Carhart-Harris_Fortier_Milliere.log.txt",
+      "comparison": {
+        "reference_page_count": 16,
+        "candidate_page_count": 16,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 16,
+        "max_changed_ratio": 0.017132,
+        "max_mean_abs": 0.004786,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.00297,
+            "changed_ratio": 0.010559
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002796,
+            "changed_ratio": 0.009773
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.004786,
+            "changed_ratio": 0.017132
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.003182,
+            "changed_ratio": 0.010515
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.003127,
+            "changed_ratio": 0.010613
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.002926,
+            "changed_ratio": 0.009236
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.001661,
+            "changed_ratio": 0.005757
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.004064,
+            "changed_ratio": 0.013306
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.001719,
+            "changed_ratio": 0.007304
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.001744,
+            "changed_ratio": 0.0063
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.002881,
+            "changed_ratio": 0.010322
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.004428,
+            "changed_ratio": 0.015404
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.002675,
+            "changed_ratio": 0.009607
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.001237,
+            "changed_ratio": 0.005735
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.001049,
+            "changed_ratio": 0.004836
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.000727,
+            "changed_ratio": 0.003232
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue01\\Carhart-Harris_Fortier_Milliere\\Carhart-Harris_Fortier_Milliere.pdf"
+    },
+    {
+      "name": "Issue01/Hohwy_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue01_Hohwy_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 7,
+        "candidate_page_count": 7,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 7,
+        "max_changed_ratio": 0.014926,
+        "max_mean_abs": 0.004176,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002002,
+            "changed_ratio": 0.00689
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002008,
+            "changed_ratio": 0.006811
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.003015,
+            "changed_ratio": 0.010831
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.004176,
+            "changed_ratio": 0.014926
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001753,
+            "changed_ratio": 0.005517
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.001115,
+            "changed_ratio": 0.004054
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.001639,
+            "changed_ratio": 0.005627
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue01\\Hohwy_Koroma\\Hohwy_Koroma.pdf"
+    },
+    {
+      "name": "Issue01/Luhrmann_Fortier",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue01_Luhrmann_Fortier.log.txt",
+      "comparison": {
+        "reference_page_count": 12,
+        "candidate_page_count": 12,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 12,
+        "max_changed_ratio": 0.014376,
+        "max_mean_abs": 0.004097,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002694,
+            "changed_ratio": 0.009769
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002987,
+            "changed_ratio": 0.010142
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.001762,
+            "changed_ratio": 0.007445
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.003058,
+            "changed_ratio": 0.010701
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.003158,
+            "changed_ratio": 0.011098
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.002847,
+            "changed_ratio": 0.010038
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.004097,
+            "changed_ratio": 0.014376
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.003405,
+            "changed_ratio": 0.01103
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.003178,
+            "changed_ratio": 0.011328
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.002051,
+            "changed_ratio": 0.006725
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.001534,
+            "changed_ratio": 0.006669
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000426,
+            "changed_ratio": 0.001599
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue01\\Luhrmann_Fortier\\Luhrmann_Fortier.pdf"
+    },
+    {
+      "name": "Issue01/McCarthy-Jones_Frerejouan",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue01_McCarthy-Jones_Frerejouan.log.txt",
+      "comparison": {
+        "reference_page_count": 9,
+        "candidate_page_count": 9,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 9,
+        "max_changed_ratio": 0.014136,
+        "max_mean_abs": 0.004092,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.003586,
+            "changed_ratio": 0.013126
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002817,
+            "changed_ratio": 0.00934
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.003043,
+            "changed_ratio": 0.010064
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.004092,
+            "changed_ratio": 0.014136
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.00327,
+            "changed_ratio": 0.011162
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.00323,
+            "changed_ratio": 0.010559
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.003729,
+            "changed_ratio": 0.011863
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.002584,
+            "changed_ratio": 0.008781
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000411,
+            "changed_ratio": 0.001495
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue01\\McCarthy-Jones_Frerejouan\\McCarthy-Jones_Frerejouan.pdf"
+    },
+    {
+      "name": "Issue01/Seligman_Halloy",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue01_Seligman_Halloy.log.txt",
+      "comparison": {
+        "reference_page_count": 6,
+        "candidate_page_count": 6,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 6,
+        "max_changed_ratio": 0.01097,
+        "max_mean_abs": 0.003154,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.001403,
+            "changed_ratio": 0.00529
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002105,
+            "changed_ratio": 0.007581
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.003154,
+            "changed_ratio": 0.01097
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.002833,
+            "changed_ratio": 0.009683
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001774,
+            "changed_ratio": 0.005954
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.00049,
+            "changed_ratio": 0.001814
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue01\\Seligman_Halloy\\Seligman_Halloy.pdf"
+    },
+    {
+      "name": "Issue01/Windt_Bucci_Milliere",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue01_Windt_Bucci_Milliere.log.txt",
+      "comparison": {
+        "reference_page_count": 26,
+        "candidate_page_count": 26,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 26,
+        "max_changed_ratio": 0.015398,
+        "max_mean_abs": 0.004667,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002995,
+            "changed_ratio": 0.010194
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.003093,
+            "changed_ratio": 0.009729
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.003509,
+            "changed_ratio": 0.012022
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.004318,
+            "changed_ratio": 0.01495
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.002385,
+            "changed_ratio": 0.007617
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.0043,
+            "changed_ratio": 0.014501
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.003128,
+            "changed_ratio": 0.011004
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.002932,
+            "changed_ratio": 0.009892
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.003377,
+            "changed_ratio": 0.011641
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.004236,
+            "changed_ratio": 0.014671
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.003338,
+            "changed_ratio": 0.010693
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.003419,
+            "changed_ratio": 0.011851
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.003403,
+            "changed_ratio": 0.011541
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.003101,
+            "changed_ratio": 0.010765
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.003507,
+            "changed_ratio": 0.011962
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.003296,
+            "changed_ratio": 0.010525
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.003588,
+            "changed_ratio": 0.012669
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.004667,
+            "changed_ratio": 0.015398
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.003254,
+            "changed_ratio": 0.010324
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.004398,
+            "changed_ratio": 0.015154
+          },
+          {
+            "page": 21,
+            "mean_abs": 0.003359,
+            "changed_ratio": 0.010637
+          },
+          {
+            "page": 22,
+            "mean_abs": 0.002706,
+            "changed_ratio": 0.009226
+          },
+          {
+            "page": 23,
+            "mean_abs": 0.000923,
+            "changed_ratio": 0.004545
+          },
+          {
+            "page": 24,
+            "mean_abs": 0.001248,
+            "changed_ratio": 0.005667
+          },
+          {
+            "page": 25,
+            "mean_abs": 0.00118,
+            "changed_ratio": 0.005497
+          },
+          {
+            "page": 26,
+            "mean_abs": 0.000497,
+            "changed_ratio": 0.00191
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue01\\Windt_Bucci_Milliere\\Windt_Bucci_Milliere.pdf"
+    },
+    {
+      "name": "Issue02/Friston",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue02_Friston.log.txt",
+      "comparison": {
+        "reference_page_count": 8,
+        "candidate_page_count": 8,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 8,
+        "max_changed_ratio": 0.010419,
+        "max_mean_abs": 0.003006,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002565,
+            "changed_ratio": 0.009342
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000504,
+            "changed_ratio": 0.000944
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.002819,
+            "changed_ratio": 0.009699
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000151,
+            "changed_ratio": 0.000248
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.003006,
+            "changed_ratio": 0.010413
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000151,
+            "changed_ratio": 0.000255
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.002833,
+            "changed_ratio": 0.010419
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.001028,
+            "changed_ratio": 0.003503
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue02\\Friston\\Friston.pdf"
+    },
+    {
+      "name": "Issue02/Fox_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue02_Fox_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 15,
+        "candidate_page_count": 15,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 15,
+        "max_changed_ratio": 0.013322,
+        "max_mean_abs": 0.003839,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.001317,
+            "changed_ratio": 0.005284
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002829,
+            "changed_ratio": 0.00991
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000147,
+            "changed_ratio": 0.000202
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.003839,
+            "changed_ratio": 0.013322
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001929,
+            "changed_ratio": 0.007878
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.001952,
+            "changed_ratio": 0.00716
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.003176,
+            "changed_ratio": 0.011853
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.002968,
+            "changed_ratio": 0.010108
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.00319,
+            "changed_ratio": 0.011457
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.002987,
+            "changed_ratio": 0.010849
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000591,
+            "changed_ratio": 0.002092
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.002053,
+            "changed_ratio": 0.008172
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.001327,
+            "changed_ratio": 0.005818
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.00108,
+            "changed_ratio": 0.004491
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.001067,
+            "changed_ratio": 0.004645
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue02\\Fox_Koroma\\Fox_Koroma.pdf"
+    },
+    {
+      "name": "Issue02/Friston_Fortier_Friedman",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue02_Friston_Fortier_Friedman.log.txt",
+      "comparison": {
+        "reference_page_count": 27,
+        "candidate_page_count": 27,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 27,
+        "max_changed_ratio": 0.011587,
+        "max_mean_abs": 0.002911,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002615,
+            "changed_ratio": 0.010459
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.00213,
+            "changed_ratio": 0.007459
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.001248,
+            "changed_ratio": 0.006002
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.001438,
+            "changed_ratio": 0.007613
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001944,
+            "changed_ratio": 0.006936
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.002856,
+            "changed_ratio": 0.009801
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.001921,
+            "changed_ratio": 0.0071
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.002786,
+            "changed_ratio": 0.010693
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.001596,
+            "changed_ratio": 0.008407
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.002911,
+            "changed_ratio": 0.010032
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.002602,
+            "changed_ratio": 0.01006
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.002831,
+            "changed_ratio": 0.009637
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.00263,
+            "changed_ratio": 0.010691
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.001541,
+            "changed_ratio": 0.00691
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.0027,
+            "changed_ratio": 0.011587
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.002821,
+            "changed_ratio": 0.009599
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.00167,
+            "changed_ratio": 0.008347
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.002752,
+            "changed_ratio": 0.009807
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.002831,
+            "changed_ratio": 0.011228
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.002763,
+            "changed_ratio": 0.010763
+          },
+          {
+            "page": 21,
+            "mean_abs": 0.002279,
+            "changed_ratio": 0.00793
+          },
+          {
+            "page": 22,
+            "mean_abs": 0.002181,
+            "changed_ratio": 0.008471
+          },
+          {
+            "page": 23,
+            "mean_abs": 0.00111,
+            "changed_ratio": 0.004761
+          },
+          {
+            "page": 24,
+            "mean_abs": 0.001108,
+            "changed_ratio": 0.004761
+          },
+          {
+            "page": 25,
+            "mean_abs": 0.001962,
+            "changed_ratio": 0.007401
+          },
+          {
+            "page": 26,
+            "mean_abs": 0.001166,
+            "changed_ratio": 0.00501
+          },
+          {
+            "page": 27,
+            "mean_abs": 0.000212,
+            "changed_ratio": 0.000535
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue02\\Friston_Fortier_Friedman\\Friston_Fortier_Friedman.pdf"
+    },
+    {
+      "name": "Issue02/Metzinger_Limanowski_Milliere",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue02_Metzinger_Limanowski_Milliere.log.txt",
+      "comparison": {
+        "reference_page_count": 21,
+        "candidate_page_count": 21,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 21,
+        "max_changed_ratio": 0.020895,
+        "max_mean_abs": 0.005163,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.003414,
+            "changed_ratio": 0.012587
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002984,
+            "changed_ratio": 0.009633
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.005163,
+            "changed_ratio": 0.020895
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.00305,
+            "changed_ratio": 0.011863
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.002216,
+            "changed_ratio": 0.008024
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.002828,
+            "changed_ratio": 0.010701
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.0031,
+            "changed_ratio": 0.010755
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.002889,
+            "changed_ratio": 0.011487
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.003458,
+            "changed_ratio": 0.012863
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.003002,
+            "changed_ratio": 0.01123
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.003816,
+            "changed_ratio": 0.015859
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.003176,
+            "changed_ratio": 0.013308
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.003483,
+            "changed_ratio": 0.012637
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.002598,
+            "changed_ratio": 0.009551
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.001957,
+            "changed_ratio": 0.007872
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.002523,
+            "changed_ratio": 0.009218
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.0016,
+            "changed_ratio": 0.006423
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.00232,
+            "changed_ratio": 0.00833
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.002035,
+            "changed_ratio": 0.007874
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.001319,
+            "changed_ratio": 0.005836
+          },
+          {
+            "page": 21,
+            "mean_abs": 0.001022,
+            "changed_ratio": 0.004387
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue02\\Metzinger_Limanowski_Milliere\\Metzinger_Limanowski_Milliere.pdf"
+    },
+    {
+      "name": "Issue02/Nichols_Roseman_Timmermann",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue02_Nichols_Roseman_Timmermann.log.txt",
+      "comparison": {
+        "reference_page_count": 11,
+        "candidate_page_count": 11,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 11,
+        "max_changed_ratio": 0.013916,
+        "max_mean_abs": 0.003763,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.001715,
+            "changed_ratio": 0.006715
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.003255,
+            "changed_ratio": 0.011759
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.003763,
+            "changed_ratio": 0.013705
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.00369,
+            "changed_ratio": 0.013916
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.002549,
+            "changed_ratio": 0.010535
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.002235,
+            "changed_ratio": 0.008866
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.002872,
+            "changed_ratio": 0.010344
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.002661,
+            "changed_ratio": 0.010058
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.002673,
+            "changed_ratio": 0.010731
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.00039,
+            "changed_ratio": 0.001158
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000764,
+            "changed_ratio": 0.003144
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue02\\Nichols_Roseman_Timmermann\\Nichols_Roseman_Timmermann.pdf"
+    },
+    {
+      "name": "Issue02/ORegan_Erickson-Davis",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue02_ORegan_Erickson-Davis.log.txt",
+      "comparison": {
+        "reference_page_count": 8,
+        "candidate_page_count": 8,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 8,
+        "max_changed_ratio": 0.019845,
+        "max_mean_abs": 0.005335,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.005335,
+            "changed_ratio": 0.019845
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002665,
+            "changed_ratio": 0.008689
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.002777,
+            "changed_ratio": 0.010194
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.002729,
+            "changed_ratio": 0.009761
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.003572,
+            "changed_ratio": 0.012637
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.002562,
+            "changed_ratio": 0.009445
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.001921,
+            "changed_ratio": 0.006619
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.00189,
+            "changed_ratio": 0.007367
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue02\\ORegan_Erickson-Davis\\ORegan_Erickson-Davis.pdf"
+    },
+    {
+      "name": "Issue02/Ratcliffe_Frerejouan",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue02_Ratcliffe_Frerejouan.log.txt",
+      "comparison": {
+        "reference_page_count": 13,
+        "candidate_page_count": 13,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 13,
+        "max_changed_ratio": 0.012399,
+        "max_mean_abs": 0.003284,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002631,
+            "changed_ratio": 0.010483
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002726,
+            "changed_ratio": 0.009483
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.003256,
+            "changed_ratio": 0.011874
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.003284,
+            "changed_ratio": 0.012399
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.002832,
+            "changed_ratio": 0.009405
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.003007,
+            "changed_ratio": 0.010172
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.003047,
+            "changed_ratio": 0.010695
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.003,
+            "changed_ratio": 0.01025
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.00238,
+            "changed_ratio": 0.008785
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.001874,
+            "changed_ratio": 0.006838
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000361,
+            "changed_ratio": 0.000938
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.001242,
+            "changed_ratio": 0.005509
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.000217,
+            "changed_ratio": 0.000527
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue02\\Ratcliffe_Frerejouan\\Ratcliffe_Frerejouan.pdf"
+    },
+    {
+      "name": "Issue02/Taves_Fortier_Canna",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue02_Taves_Fortier_Canna.log.txt",
+      "comparison": {
+        "reference_page_count": 20,
+        "candidate_page_count": 20,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 20,
+        "max_changed_ratio": 0.015256,
+        "max_mean_abs": 0.003826,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002755,
+            "changed_ratio": 0.011433
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.001855,
+            "changed_ratio": 0.006607
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.001403,
+            "changed_ratio": 0.006042
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.002708,
+            "changed_ratio": 0.011405
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.002466,
+            "changed_ratio": 0.009361
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.003826,
+            "changed_ratio": 0.015256
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.001467,
+            "changed_ratio": 0.00712
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000639,
+            "changed_ratio": 0.001904
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.002679,
+            "changed_ratio": 0.010198
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.001426,
+            "changed_ratio": 0.006715
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.002747,
+            "changed_ratio": 0.011425
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.002836,
+            "changed_ratio": 0.010609
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.002387,
+            "changed_ratio": 0.010128
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.002274,
+            "changed_ratio": 0.009739
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.001266,
+            "changed_ratio": 0.005074
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.001402,
+            "changed_ratio": 0.004797
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.001144,
+            "changed_ratio": 0.00508
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.002116,
+            "changed_ratio": 0.008505
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.001029,
+            "changed_ratio": 0.00427
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.000876,
+            "changed_ratio": 0.003665
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue02\\Taves_Fortier_Canna\\Taves_Fortier_Canna.pdf"
+    },
+    {
+      "name": "Issue03/Bayne_Bucci_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue03_Bayne_Bucci_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 9,
+        "candidate_page_count": 9,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 9,
+        "max_changed_ratio": 0.010539,
+        "max_mean_abs": 0.003075,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.00038,
+            "changed_ratio": 0.00168
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000443,
+            "changed_ratio": 0.001863
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.003075,
+            "changed_ratio": 0.010539
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000431,
+            "changed_ratio": 0.001772
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000477,
+            "changed_ratio": 0.001883
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000481,
+            "changed_ratio": 0.001965
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000436,
+            "changed_ratio": 0.001726
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.0004,
+            "changed_ratio": 0.001768
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000438,
+            "changed_ratio": 0.001437
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue03\\Bayne_Bucci_Koroma\\Bayne_Bucci_Koroma.pdf"
+    },
+    {
+      "name": "Issue03/Dennett_Fleig-Goldstein_Friedman",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue03_Dennett_Fleig-Goldstein_Friedman.log.txt",
+      "comparison": {
+        "reference_page_count": 15,
+        "candidate_page_count": 15,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 15,
+        "max_changed_ratio": 0.002427,
+        "max_mean_abs": 0.000576,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000326,
+            "changed_ratio": 0.001229
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000306,
+            "changed_ratio": 0.00116
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000377,
+            "changed_ratio": 0.001228
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.00038,
+            "changed_ratio": 0.001481
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000576,
+            "changed_ratio": 0.002427
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000506,
+            "changed_ratio": 0.002108
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000506,
+            "changed_ratio": 0.001963
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000534,
+            "changed_ratio": 0.002154
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000439,
+            "changed_ratio": 0.001742
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000446,
+            "changed_ratio": 0.001853
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000401,
+            "changed_ratio": 0.001714
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000268,
+            "changed_ratio": 0.001088
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.000371,
+            "changed_ratio": 0.001038
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.000431,
+            "changed_ratio": 0.001341
+          },
+          {
+            "page": 15,
+            "mean_abs": 6.5e-05,
+            "changed_ratio": 0.00011
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue03\\Dennett_Fleig-Goldstein_Friedman\\Dennett_Fleig-Goldstein_Friedman.pdf"
+    },
+    {
+      "name": "Issue03/Dienes_Martin",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue03_Dienes_Martin.log.txt",
+      "comparison": {
+        "reference_page_count": 9,
+        "candidate_page_count": 9,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 9,
+        "max_changed_ratio": 0.010709,
+        "max_mean_abs": 0.003026,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.001655,
+            "changed_ratio": 0.00606
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.001418,
+            "changed_ratio": 0.004986
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.00139,
+            "changed_ratio": 0.004858
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.001662,
+            "changed_ratio": 0.006086
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.002637,
+            "changed_ratio": 0.009368
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.003026,
+            "changed_ratio": 0.010709
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.00033,
+            "changed_ratio": 0.001433
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000681,
+            "changed_ratio": 0.003085
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000343,
+            "changed_ratio": 0.00121
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue03\\Dienes_Martin\\Dienes_Martin.pdf"
+    },
+    {
+      "name": "Issue03/Preller_Dumas",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue03_Preller_Dumas.log.txt",
+      "comparison": {
+        "reference_page_count": 8,
+        "candidate_page_count": 8,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 8,
+        "max_changed_ratio": 0.004826,
+        "max_mean_abs": 0.001418,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.001418,
+            "changed_ratio": 0.004826
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000493,
+            "changed_ratio": 0.00222
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000446,
+            "changed_ratio": 0.001993
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000419,
+            "changed_ratio": 0.001793
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.00038,
+            "changed_ratio": 0.001572
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000331,
+            "changed_ratio": 0.001387
+          },
+          {
+            "page": 7,
+            "mean_abs": 7.1e-05,
+            "changed_ratio": 0.000145
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000405,
+            "changed_ratio": 0.001206
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue03\\Preller_Dumas\\Preller_Dumas.pdf"
+    },
+    {
+      "name": "Issue03/Winkelman_Fortier",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue03_Winkelman_Fortier.log.txt",
+      "comparison": {
+        "reference_page_count": 53,
+        "candidate_page_count": 53,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 53,
+        "max_changed_ratio": 0.015479,
+        "max_mean_abs": 0.00458,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000285,
+            "changed_ratio": 0.001237
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002325,
+            "changed_ratio": 0.008591
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.001638,
+            "changed_ratio": 0.005705
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000455,
+            "changed_ratio": 0.002011
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.003477,
+            "changed_ratio": 0.011406
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000485,
+            "changed_ratio": 0.001891
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000483,
+            "changed_ratio": 0.001847
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000407,
+            "changed_ratio": 0.00152
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000512,
+            "changed_ratio": 0.002056
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000449,
+            "changed_ratio": 0.001913
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000402,
+            "changed_ratio": 0.00155
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000433,
+            "changed_ratio": 0.001875
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.0005,
+            "changed_ratio": 0.002039
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.000269,
+            "changed_ratio": 0.001124
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.001504,
+            "changed_ratio": 0.005283
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.00458,
+            "changed_ratio": 0.015479
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.000443,
+            "changed_ratio": 0.001036
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.000477,
+            "changed_ratio": 0.001706
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.002584,
+            "changed_ratio": 0.00876
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.000509,
+            "changed_ratio": 0.001853
+          },
+          {
+            "page": 21,
+            "mean_abs": 0.000339,
+            "changed_ratio": 0.001423
+          },
+          {
+            "page": 22,
+            "mean_abs": 0.001221,
+            "changed_ratio": 0.004629
+          },
+          {
+            "page": 23,
+            "mean_abs": 0.000367,
+            "changed_ratio": 0.00162
+          },
+          {
+            "page": 24,
+            "mean_abs": 0.002428,
+            "changed_ratio": 0.008349
+          },
+          {
+            "page": 25,
+            "mean_abs": 0.002398,
+            "changed_ratio": 0.008616
+          },
+          {
+            "page": 26,
+            "mean_abs": 0.000763,
+            "changed_ratio": 0.002752
+          },
+          {
+            "page": 27,
+            "mean_abs": 0.000535,
+            "changed_ratio": 0.001104
+          },
+          {
+            "page": 28,
+            "mean_abs": 0.000476,
+            "changed_ratio": 0.001931
+          },
+          {
+            "page": 29,
+            "mean_abs": 0.000546,
+            "changed_ratio": 0.001945
+          },
+          {
+            "page": 30,
+            "mean_abs": 0.00054,
+            "changed_ratio": 0.001971
+          },
+          {
+            "page": 31,
+            "mean_abs": 0.000567,
+            "changed_ratio": 0.002168
+          },
+          {
+            "page": 32,
+            "mean_abs": 0.001253,
+            "changed_ratio": 0.00484
+          },
+          {
+            "page": 33,
+            "mean_abs": 0.000411,
+            "changed_ratio": 0.001863
+          },
+          {
+            "page": 34,
+            "mean_abs": 0.000449,
+            "changed_ratio": 0.001963
+          },
+          {
+            "page": 35,
+            "mean_abs": 0.000373,
+            "changed_ratio": 0.001415
+          },
+          {
+            "page": 36,
+            "mean_abs": 0.00047,
+            "changed_ratio": 0.001758
+          },
+          {
+            "page": 37,
+            "mean_abs": 0.001316,
+            "changed_ratio": 0.005034
+          },
+          {
+            "page": 38,
+            "mean_abs": 0.000426,
+            "changed_ratio": 0.001815
+          },
+          {
+            "page": 39,
+            "mean_abs": 0.000325,
+            "changed_ratio": 0.001154
+          },
+          {
+            "page": 40,
+            "mean_abs": 7.4e-05,
+            "changed_ratio": 0.000209
+          },
+          {
+            "page": 41,
+            "mean_abs": 0.000534,
+            "changed_ratio": 0.002039
+          },
+          {
+            "page": 42,
+            "mean_abs": 0.000455,
+            "changed_ratio": 0.001331
+          },
+          {
+            "page": 43,
+            "mean_abs": 0.000426,
+            "changed_ratio": 0.001259
+          },
+          {
+            "page": 44,
+            "mean_abs": 0.000475,
+            "changed_ratio": 0.001481
+          },
+          {
+            "page": 45,
+            "mean_abs": 0.000446,
+            "changed_ratio": 0.001441
+          },
+          {
+            "page": 46,
+            "mean_abs": 0.000444,
+            "changed_ratio": 0.001455
+          },
+          {
+            "page": 47,
+            "mean_abs": 0.00044,
+            "changed_ratio": 0.001307
+          },
+          {
+            "page": 48,
+            "mean_abs": 0.000437,
+            "changed_ratio": 0.001297
+          },
+          {
+            "page": 49,
+            "mean_abs": 0.000453,
+            "changed_ratio": 0.001355
+          },
+          {
+            "page": 50,
+            "mean_abs": 0.000537,
+            "changed_ratio": 0.001937
+          },
+          {
+            "page": 51,
+            "mean_abs": 0.000374,
+            "changed_ratio": 0.001018
+          },
+          {
+            "page": 52,
+            "mean_abs": 0.000613,
+            "changed_ratio": 0.002589
+          },
+          {
+            "page": 53,
+            "mean_abs": 0.00053,
+            "changed_ratio": 0.002499
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue03\\Winkelman_Fortier\\Winkelman_Fortier.pdf"
+    },
+    {
+      "name": "Issue04/Baird_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue04_Baird_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 15,
+        "candidate_page_count": 15,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 15,
+        "max_changed_ratio": 0.003063,
+        "max_mean_abs": 0.000605,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000321,
+            "changed_ratio": 0.001188
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000521,
+            "changed_ratio": 0.001811
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.00058,
+            "changed_ratio": 0.002039
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.00052,
+            "changed_ratio": 0.000955
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000512,
+            "changed_ratio": 0.00221
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000429,
+            "changed_ratio": 0.001654
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000605,
+            "changed_ratio": 0.001459
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000475,
+            "changed_ratio": 0.001897
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000418,
+            "changed_ratio": 0.001642
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000546,
+            "changed_ratio": 0.001337
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000339,
+            "changed_ratio": 0.001622
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000422,
+            "changed_ratio": 0.000905
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.000291,
+            "changed_ratio": 0.002015
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.000355,
+            "changed_ratio": 0.003063
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.000237,
+            "changed_ratio": 0.001502
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue04\\Baird_Koroma\\Baird_Koroma.pdf"
+    },
+    {
+      "name": "Issue04/Carter_Preller",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue04_Carter_Preller.log.txt",
+      "comparison": {
+        "reference_page_count": 9,
+        "candidate_page_count": 9,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 9,
+        "max_changed_ratio": 0.005187,
+        "max_mean_abs": 0.001243,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000231,
+            "changed_ratio": 0.001054
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000366,
+            "changed_ratio": 0.001674
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000394,
+            "changed_ratio": 0.001582
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000558,
+            "changed_ratio": 0.001321
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000343,
+            "changed_ratio": 0.001495
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000548,
+            "changed_ratio": 0.001229
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000491,
+            "changed_ratio": 0.001245
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.001243,
+            "changed_ratio": 0.005187
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.0002,
+            "changed_ratio": 0.001208
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue04\\Carter_Preller\\Carter_Preller.pdf"
+    },
+    {
+      "name": "Issue04/Gosseries_Martial",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue04_Gosseries_Martial.log.txt",
+      "comparison": {
+        "reference_page_count": 17,
+        "candidate_page_count": 17,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 17,
+        "max_changed_ratio": 0.020664,
+        "max_mean_abs": 0.004613,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000266,
+            "changed_ratio": 0.001134
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000252,
+            "changed_ratio": 0.001168
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000317,
+            "changed_ratio": 0.001287
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000528,
+            "changed_ratio": 0.00121
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.004613,
+            "changed_ratio": 0.020664
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000557,
+            "changed_ratio": 0.001303
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000306,
+            "changed_ratio": 0.001421
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000457,
+            "changed_ratio": 0.002473
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000666,
+            "changed_ratio": 0.001803
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000328,
+            "changed_ratio": 0.001423
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000362,
+            "changed_ratio": 0.001724
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000359,
+            "changed_ratio": 0.001499
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.000441,
+            "changed_ratio": 0.001048
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.000288,
+            "changed_ratio": 0.001493
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.000341,
+            "changed_ratio": 0.001813
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.000254,
+            "changed_ratio": 0.001333
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.000225,
+            "changed_ratio": 0.001261
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue04\\Gosseries_Martial\\Gosseries_Martial.pdf"
+    },
+    {
+      "name": "Issue04/Hanks_Mikhailova_Friedman",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue04_Hanks_Mikhailova_Friedman.log.txt",
+      "comparison": {
+        "reference_page_count": 13,
+        "candidate_page_count": 13,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 13,
+        "max_changed_ratio": 0.002401,
+        "max_mean_abs": 0.000665,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000328,
+            "changed_ratio": 0.001315
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.00062,
+            "changed_ratio": 0.001526
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000652,
+            "changed_ratio": 0.001714
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000234,
+            "changed_ratio": 0.001108
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000665,
+            "changed_ratio": 0.001799
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000566,
+            "changed_ratio": 0.001343
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000426,
+            "changed_ratio": 0.001652
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000385,
+            "changed_ratio": 0.001542
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000445,
+            "changed_ratio": 0.001959
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000564,
+            "changed_ratio": 0.001287
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000253,
+            "changed_ratio": 0.001172
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000265,
+            "changed_ratio": 0.001823
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.000285,
+            "changed_ratio": 0.002401
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue04\\Hanks_Mikhailova_Friedman\\Hanks_Mikhailova_Friedman.pdf"
+    },
+    {
+      "name": "Issue04/Lenggenhager_Ho_Milliere",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue04_Lenggenhager_Ho_Milliere.log.txt",
+      "comparison": {
+        "reference_page_count": 24,
+        "candidate_page_count": 24,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 24,
+        "max_changed_ratio": 0.005155,
+        "max_mean_abs": 0.001767,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000332,
+            "changed_ratio": 0.001598
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000341,
+            "changed_ratio": 0.001578
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000352,
+            "changed_ratio": 0.001331
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000588,
+            "changed_ratio": 0.001305
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000633,
+            "changed_ratio": 0.002096
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000434,
+            "changed_ratio": 0.002068
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000484,
+            "changed_ratio": 0.00175
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000585,
+            "changed_ratio": 0.001764
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000387,
+            "changed_ratio": 0.001421
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000612,
+            "changed_ratio": 0.00169
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.00046,
+            "changed_ratio": 0.001967
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000593,
+            "changed_ratio": 0.001564
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.001767,
+            "changed_ratio": 0.005155
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.00052,
+            "changed_ratio": 0.001993
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.000685,
+            "changed_ratio": 0.00175
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.000489,
+            "changed_ratio": 0.001793
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.000552,
+            "changed_ratio": 0.001616
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.000439,
+            "changed_ratio": 0.000829
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.000261,
+            "changed_ratio": 0.001138
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.000393,
+            "changed_ratio": 0.002423
+          },
+          {
+            "page": 21,
+            "mean_abs": 0.000662,
+            "changed_ratio": 0.003864
+          },
+          {
+            "page": 22,
+            "mean_abs": 0.000267,
+            "changed_ratio": 0.002047
+          },
+          {
+            "page": 23,
+            "mean_abs": 0.000338,
+            "changed_ratio": 0.002158
+          },
+          {
+            "page": 24,
+            "mean_abs": 0.000203,
+            "changed_ratio": 0.001453
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue04\\Lenggenhager_Ho_Milliere\\Lenggenhager_Ho_Milliere.pdf"
+    },
+    {
+      "name": "Issue04/Nichols_Nichols",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue04_Nichols_Nichols.log.txt",
+      "comparison": {
+        "reference_page_count": 7,
+        "candidate_page_count": 7,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 7,
+        "max_changed_ratio": 0.001801,
+        "max_mean_abs": 0.000366,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000294,
+            "changed_ratio": 0.001501
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000288,
+            "changed_ratio": 0.001331
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.00033,
+            "changed_ratio": 0.001572
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000366,
+            "changed_ratio": 0.001801
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000314,
+            "changed_ratio": 0.001461
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000282,
+            "changed_ratio": 0.001341
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000282,
+            "changed_ratio": 0.001467
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue04\\Nichols_Nichols\\Nichols_Nichols.pdf"
+    },
+    {
+      "name": "Issue04/Fortier_ALIUS",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue04_Fortier_ALIUS.log.txt",
+      "comparison": {
+        "reference_page_count": 14,
+        "candidate_page_count": 14,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 14,
+        "max_changed_ratio": 0.004173,
+        "max_mean_abs": 0.00122,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.00122,
+            "changed_ratio": 0.004173
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000299,
+            "changed_ratio": 0.001445
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.0003,
+            "changed_ratio": 0.001435
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.00031,
+            "changed_ratio": 0.00151
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.00035,
+            "changed_ratio": 0.00171
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000272,
+            "changed_ratio": 0.001291
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000259,
+            "changed_ratio": 0.001204
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.00027,
+            "changed_ratio": 0.001271
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000296,
+            "changed_ratio": 0.001447
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000288,
+            "changed_ratio": 0.001345
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000392,
+            "changed_ratio": 0.001937
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000272,
+            "changed_ratio": 0.001281
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.00027,
+            "changed_ratio": 0.001249
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.000105,
+            "changed_ratio": 0.00048
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue04\\Fortier_ALIUS\\Fortier_ALIUS.pdf"
+    },
+    {
+      "name": "Issue04/Vignemont_Milliere_Serrahima",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue04_Vignemont_Milliere_Serrahima.log.txt",
+      "comparison": {
+        "reference_page_count": 27,
+        "candidate_page_count": 27,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 27,
+        "max_changed_ratio": 0.003364,
+        "max_mean_abs": 0.000745,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000453,
+            "changed_ratio": 0.001927
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000425,
+            "changed_ratio": 0.001586
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000279,
+            "changed_ratio": 0.001327
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000669,
+            "changed_ratio": 0.001678
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000549,
+            "changed_ratio": 0.001251
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000482,
+            "changed_ratio": 0.001451
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000722,
+            "changed_ratio": 0.002489
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.000358,
+            "changed_ratio": 0.001528
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.000643,
+            "changed_ratio": 0.001686
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000414,
+            "changed_ratio": 0.001805
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000621,
+            "changed_ratio": 0.001692
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000534,
+            "changed_ratio": 0.001084
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.000729,
+            "changed_ratio": 0.002292
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.000595,
+            "changed_ratio": 0.001518
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.000395,
+            "changed_ratio": 0.001718
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.000668,
+            "changed_ratio": 0.001576
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.000486,
+            "changed_ratio": 0.001652
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.000416,
+            "changed_ratio": 0.001353
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.00068,
+            "changed_ratio": 0.001875
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.000456,
+            "changed_ratio": 0.001674
+          },
+          {
+            "page": 21,
+            "mean_abs": 0.000575,
+            "changed_ratio": 0.001791
+          },
+          {
+            "page": 22,
+            "mean_abs": 0.000439,
+            "changed_ratio": 0.001451
+          },
+          {
+            "page": 23,
+            "mean_abs": 0.000309,
+            "changed_ratio": 0.001455
+          },
+          {
+            "page": 24,
+            "mean_abs": 0.000293,
+            "changed_ratio": 0.002228
+          },
+          {
+            "page": 25,
+            "mean_abs": 0.000269,
+            "changed_ratio": 0.001853
+          },
+          {
+            "page": 26,
+            "mean_abs": 0.000745,
+            "changed_ratio": 0.003364
+          },
+          {
+            "page": 27,
+            "mean_abs": 0.000617,
+            "changed_ratio": 0.00314
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue04\\Vignemont_Milliere_Serrahima\\Vignemont_Milliere_Serrahima.pdf"
+    },
+    {
+      "name": "Issue05/Martial",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue05_Martial.log.txt",
+      "comparison": {
+        "reference_page_count": 10,
+        "candidate_page_count": 10,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 10,
+        "max_changed_ratio": 0.015611,
+        "max_mean_abs": 0.004573,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.004014,
+            "changed_ratio": 0.014481
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.003414,
+            "changed_ratio": 0.011018
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.002288,
+            "changed_ratio": 0.007345
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.003449,
+            "changed_ratio": 0.011437
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001307,
+            "changed_ratio": 0.004307
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.001426,
+            "changed_ratio": 0.004759
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.004573,
+            "changed_ratio": 0.015611
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.004156,
+            "changed_ratio": 0.013879
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.002045,
+            "changed_ratio": 0.011358
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.002711,
+            "changed_ratio": 0.011453
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue05\\Martial\\Martial.pdf"
+    },
+    {
+      "name": "Issue05/Canna_Seligman_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue05_Canna_Seligman_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 16,
+        "candidate_page_count": 16,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 16,
+        "max_changed_ratio": 0.013126,
+        "max_mean_abs": 0.003506,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000994,
+            "changed_ratio": 0.004775
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.001384,
+            "changed_ratio": 0.004934
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.003506,
+            "changed_ratio": 0.013126
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.001463,
+            "changed_ratio": 0.005313
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001186,
+            "changed_ratio": 0.004731
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.001588,
+            "changed_ratio": 0.007016
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.001513,
+            "changed_ratio": 0.00486
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.001483,
+            "changed_ratio": 0.005998
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.001354,
+            "changed_ratio": 0.00418
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.001528,
+            "changed_ratio": 0.006465
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.001488,
+            "changed_ratio": 0.004745
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.001446,
+            "changed_ratio": 0.005755
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.001664,
+            "changed_ratio": 0.005427
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.000883,
+            "changed_ratio": 0.004571
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.000956,
+            "changed_ratio": 0.005703
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.000788,
+            "changed_ratio": 0.004072
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue05\\Canna_Seligman_Koroma\\Canna_Seligman_Koroma.pdf"
+    },
+    {
+      "name": "Issue05/Chadha_Aviles_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue05_Chadha_Aviles_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 10,
+        "candidate_page_count": 10,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 10,
+        "max_changed_ratio": 0.015841,
+        "max_mean_abs": 0.004579,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000925,
+            "changed_ratio": 0.004441
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.002205,
+            "changed_ratio": 0.008242
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.001585,
+            "changed_ratio": 0.006395
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.004579,
+            "changed_ratio": 0.015841
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.004225,
+            "changed_ratio": 0.015048
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.002547,
+            "changed_ratio": 0.009194
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.00145,
+            "changed_ratio": 0.005064
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.002364,
+            "changed_ratio": 0.008407
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.003519,
+            "changed_ratio": 0.012439
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.002034,
+            "changed_ratio": 0.008353
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue05\\Chadha_Aviles_Koroma\\Chadha_Aviles_Koroma.pdf"
+    },
+    {
+      "name": "Issue05/Olson_Yaden_Fejer",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue05_Olson_Yaden_Fejer.log.txt",
+      "comparison": {
+        "reference_page_count": 18,
+        "candidate_page_count": 18,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 18,
+        "max_changed_ratio": 0.014044,
+        "max_mean_abs": 0.004139,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.001922,
+            "changed_ratio": 0.007421
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.001537,
+            "changed_ratio": 0.006008
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.001361,
+            "changed_ratio": 0.004848
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.001317,
+            "changed_ratio": 0.004419
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001236,
+            "changed_ratio": 0.004621
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.001209,
+            "changed_ratio": 0.004012
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.003945,
+            "changed_ratio": 0.013984
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.004139,
+            "changed_ratio": 0.014044
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.00141,
+            "changed_ratio": 0.004667
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.001451,
+            "changed_ratio": 0.00509
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.001404,
+            "changed_ratio": 0.004896
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.001413,
+            "changed_ratio": 0.005
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.00122,
+            "changed_ratio": 0.004268
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.002545,
+            "changed_ratio": 0.008924
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.001194,
+            "changed_ratio": 0.00416
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.001143,
+            "changed_ratio": 0.003932
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.001251,
+            "changed_ratio": 0.004942
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.001382,
+            "changed_ratio": 0.008583
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue05\\Olson_Yaden_Fejer\\Olson_Yaden_Fejer.pdf"
+    },
+    {
+      "name": "Issue05/Schmidt_Fejer",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue05_Schmidt_Fejer.log.txt",
+      "comparison": {
+        "reference_page_count": 16,
+        "candidate_page_count": 16,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 16,
+        "max_changed_ratio": 0.018242,
+        "max_mean_abs": 0.005224,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.001271,
+            "changed_ratio": 0.006445
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.004338,
+            "changed_ratio": 0.014603
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.001281,
+            "changed_ratio": 0.004541
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.00303,
+            "changed_ratio": 0.010725
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.003407,
+            "changed_ratio": 0.011627
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.003347,
+            "changed_ratio": 0.011643
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.003316,
+            "changed_ratio": 0.01193
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.003656,
+            "changed_ratio": 0.012172
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.001628,
+            "changed_ratio": 0.006002
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.005224,
+            "changed_ratio": 0.018242
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.002531,
+            "changed_ratio": 0.008757
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.00352,
+            "changed_ratio": 0.012555
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.004004,
+            "changed_ratio": 0.013839
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.001933,
+            "changed_ratio": 0.008395
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.002724,
+            "changed_ratio": 0.012892
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.000567,
+            "changed_ratio": 0.004238
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue05\\Schmidt_Fejer\\Schmidt_Fejer.pdf"
+    },
+    {
+      "name": "Issue06/Ciaunica_Friedman_Coutrot_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue06_Ciaunica_Friedman_Coutrot_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 3,
+        "candidate_page_count": 3,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 3,
+        "max_changed_ratio": 0.001616,
+        "max_mean_abs": 0.000388,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000332,
+            "changed_ratio": 0.001369
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000388,
+            "changed_ratio": 0.001616
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000261,
+            "changed_ratio": 0.000902
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue06\\Ciaunica_Friedman_Coutrot_Koroma\\Ciaunica_Friedman_Coutrot_Koroma.pdf"
+    },
+    {
+      "name": "Issue06/Doss_Fejer",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue06_Doss_Fejer.log.txt",
+      "comparison": {
+        "reference_page_count": 27,
+        "candidate_page_count": 27,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 27,
+        "max_changed_ratio": 0.016282,
+        "max_mean_abs": 0.004255,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002927,
+            "changed_ratio": 0.012155
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000993,
+            "changed_ratio": 0.005069
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.001112,
+            "changed_ratio": 0.005651
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.00116,
+            "changed_ratio": 0.005721
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001422,
+            "changed_ratio": 0.007696
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.001177,
+            "changed_ratio": 0.005888
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.00248,
+            "changed_ratio": 0.010792
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.001236,
+            "changed_ratio": 0.006325
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.002301,
+            "changed_ratio": 0.010292
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.003017,
+            "changed_ratio": 0.012147
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.002175,
+            "changed_ratio": 0.009408
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.001219,
+            "changed_ratio": 0.006022
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.003617,
+            "changed_ratio": 0.014357
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.002372,
+            "changed_ratio": 0.010235
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.004255,
+            "changed_ratio": 0.016282
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.003172,
+            "changed_ratio": 0.012211
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.002421,
+            "changed_ratio": 0.010661
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.003215,
+            "changed_ratio": 0.013142
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.002312,
+            "changed_ratio": 0.010236
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.002695,
+            "changed_ratio": 0.012468
+          },
+          {
+            "page": 21,
+            "mean_abs": 0.001158,
+            "changed_ratio": 0.005948
+          },
+          {
+            "page": 22,
+            "mean_abs": 0.001995,
+            "changed_ratio": 0.008226
+          },
+          {
+            "page": 23,
+            "mean_abs": 0.00182,
+            "changed_ratio": 0.007395
+          },
+          {
+            "page": 24,
+            "mean_abs": 0.001045,
+            "changed_ratio": 0.004864
+          },
+          {
+            "page": 25,
+            "mean_abs": 0.002032,
+            "changed_ratio": 0.008248
+          },
+          {
+            "page": 26,
+            "mean_abs": 0.002055,
+            "changed_ratio": 0.008465
+          },
+          {
+            "page": 27,
+            "mean_abs": 0.000573,
+            "changed_ratio": 0.002551
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue06\\Doss_Fejer\\Doss_Fejer.pdf"
+    },
+    {
+      "name": "Issue06/Gonzalez_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue06_Gonzalez_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 18,
+        "candidate_page_count": 18,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 18,
+        "max_changed_ratio": 0.003748,
+        "max_mean_abs": 0.001194,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000218,
+            "changed_ratio": 0.000933
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000447,
+            "changed_ratio": 0.001867
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000431,
+            "changed_ratio": 0.001757
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000346,
+            "changed_ratio": 0.001332
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000351,
+            "changed_ratio": 0.001437
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.000427,
+            "changed_ratio": 0.001763
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.000353,
+            "changed_ratio": 0.001441
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.00031,
+            "changed_ratio": 0.00121
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.00037,
+            "changed_ratio": 0.001473
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000319,
+            "changed_ratio": 0.001109
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.000342,
+            "changed_ratio": 0.001328
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.000325,
+            "changed_ratio": 0.001236
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.000324,
+            "changed_ratio": 0.00129
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.001194,
+            "changed_ratio": 0.003748
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.000408,
+            "changed_ratio": 0.001692
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.000369,
+            "changed_ratio": 0.001485
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.00032,
+            "changed_ratio": 0.001226
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.000241,
+            "changed_ratio": 0.000738
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue06\\Gonzalez_Koroma\\Gonzalez_Koroma.pdf"
+    },
+    {
+      "name": "Issue06/Jillings_Friedman_Coutrot_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue06_Jillings_Friedman_Coutrot_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 5,
+        "candidate_page_count": 5,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 5,
+        "max_changed_ratio": 0.001461,
+        "max_mean_abs": 0.000367,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000251,
+            "changed_ratio": 0.000987
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000367,
+            "changed_ratio": 0.001461
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000277,
+            "changed_ratio": 0.001013
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000301,
+            "changed_ratio": 0.001196
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000273,
+            "changed_ratio": 0.000957
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue06\\Jillings_Friedman_Coutrot_Koroma\\Jillings_Friedman_Coutrot_Koroma.pdf"
+    },
+    {
+      "name": "Issue06/Koroma_Friedman_Coutrot",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue06_Koroma_Friedman_Coutrot.log.txt",
+      "comparison": {
+        "reference_page_count": 5,
+        "candidate_page_count": 5,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 5,
+        "max_changed_ratio": 0.00161,
+        "max_mean_abs": 0.000381,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.00029,
+            "changed_ratio": 0.001168
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000381,
+            "changed_ratio": 0.00161
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000297,
+            "changed_ratio": 0.001041
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.000258,
+            "changed_ratio": 0.000802
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.000134,
+            "changed_ratio": 0.000241
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue06\\Koroma_Friedman_Coutrot\\Koroma_Friedman_Coutrot.pdf"
+    },
+    {
+      "name": "Issue06/Sapolsky_Mikhailova_Friedman",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue06_Sapolsky_Mikhailova_Friedman.log.txt",
+      "comparison": {
+        "reference_page_count": 11,
+        "candidate_page_count": 11,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 11,
+        "max_changed_ratio": 0.014587,
+        "max_mean_abs": 0.004115,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.002425,
+            "changed_ratio": 0.009264
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000941,
+            "changed_ratio": 0.004494
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.002804,
+            "changed_ratio": 0.010938
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.003133,
+            "changed_ratio": 0.011886
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001122,
+            "changed_ratio": 0.005476
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.00207,
+            "changed_ratio": 0.007939
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.004115,
+            "changed_ratio": 0.014587
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.001026,
+            "changed_ratio": 0.004872
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.001087,
+            "changed_ratio": 0.004047
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.003737,
+            "changed_ratio": 0.013212
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.001224,
+            "changed_ratio": 0.003828
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue06\\Sapolsky_Mikhailova_Friedman\\Sapolsky_Mikhailova_Friedman.pdf"
+    },
+    {
+      "name": "Issue06/Skipper_Roseman_Koroma_Fejer",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue06_Skipper_Roseman_Koroma_Fejer.log.txt",
+      "comparison": {
+        "reference_page_count": 31,
+        "candidate_page_count": 31,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 31,
+        "max_changed_ratio": 0.043022,
+        "max_mean_abs": 0.011247,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.005061,
+            "changed_ratio": 0.019975
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.006332,
+            "changed_ratio": 0.027083
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.006884,
+            "changed_ratio": 0.027792
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.009874,
+            "changed_ratio": 0.036862
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.006929,
+            "changed_ratio": 0.02812
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.007845,
+            "changed_ratio": 0.030136
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.009349,
+            "changed_ratio": 0.035176
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.006002,
+            "changed_ratio": 0.025281
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.010282,
+            "changed_ratio": 0.037868
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.008657,
+            "changed_ratio": 0.034619
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.00807,
+            "changed_ratio": 0.031324
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.007258,
+            "changed_ratio": 0.029249
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.009802,
+            "changed_ratio": 0.036591
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.008423,
+            "changed_ratio": 0.033074
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.006211,
+            "changed_ratio": 0.025358
+          },
+          {
+            "page": 16,
+            "mean_abs": 0.004637,
+            "changed_ratio": 0.020792
+          },
+          {
+            "page": 17,
+            "mean_abs": 0.005538,
+            "changed_ratio": 0.023903
+          },
+          {
+            "page": 18,
+            "mean_abs": 0.005169,
+            "changed_ratio": 0.02275
+          },
+          {
+            "page": 19,
+            "mean_abs": 0.006833,
+            "changed_ratio": 0.026299
+          },
+          {
+            "page": 20,
+            "mean_abs": 0.005588,
+            "changed_ratio": 0.023163
+          },
+          {
+            "page": 21,
+            "mean_abs": 0.0048,
+            "changed_ratio": 0.021617
+          },
+          {
+            "page": 22,
+            "mean_abs": 0.008403,
+            "changed_ratio": 0.033356
+          },
+          {
+            "page": 23,
+            "mean_abs": 0.011247,
+            "changed_ratio": 0.043022
+          },
+          {
+            "page": 24,
+            "mean_abs": 0.006498,
+            "changed_ratio": 0.028349
+          },
+          {
+            "page": 25,
+            "mean_abs": 0.010333,
+            "changed_ratio": 0.039273
+          },
+          {
+            "page": 26,
+            "mean_abs": 0.006915,
+            "changed_ratio": 0.026763
+          },
+          {
+            "page": 27,
+            "mean_abs": 0.006416,
+            "changed_ratio": 0.027625
+          },
+          {
+            "page": 28,
+            "mean_abs": 0.009927,
+            "changed_ratio": 0.03891
+          },
+          {
+            "page": 29,
+            "mean_abs": 0.005472,
+            "changed_ratio": 0.021987
+          },
+          {
+            "page": 30,
+            "mean_abs": 0.006915,
+            "changed_ratio": 0.028436
+          },
+          {
+            "page": 31,
+            "mean_abs": 0.00506,
+            "changed_ratio": 0.02745
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue06\\Skipper_Roseman_Koroma_Fejer\\Skipper_Roseman_Koroma_Fejer.pdf"
+    },
+    {
+      "name": "Issue07/Froese_Koroma",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue07_Froese_Koroma.log.txt",
+      "comparison": {
+        "reference_page_count": 11,
+        "candidate_page_count": 11,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 11,
+        "max_changed_ratio": 0.008449,
+        "max_mean_abs": 0.002223,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.000809,
+            "changed_ratio": 0.003543
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.000906,
+            "changed_ratio": 0.00436
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.000969,
+            "changed_ratio": 0.004505
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.001127,
+            "changed_ratio": 0.005111
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.001204,
+            "changed_ratio": 0.00534
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.001287,
+            "changed_ratio": 0.006177
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.002223,
+            "changed_ratio": 0.008449
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.001143,
+            "changed_ratio": 0.005195
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.001636,
+            "changed_ratio": 0.006287
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.000937,
+            "changed_ratio": 0.003284
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.00111,
+            "changed_ratio": 0.004589
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue07\\Froese_Koroma\\Froese_Koroma.pdf"
+    },
+    {
+      "name": "Issue07/Changeux_Dumas",
+      "status": "compiled",
+      "log": "Shared-assets\\qa\\logs\\Issue07_Changeux_Dumas.log.txt",
+      "comparison": {
+        "reference_page_count": 15,
+        "candidate_page_count": 15,
+        "page_count_match": true,
+        "page_size_match": true,
+        "pages_compared": 15,
+        "max_changed_ratio": 0.040134,
+        "max_mean_abs": 0.010523,
+        "visual_pass": true,
+        "page_diffs": [
+          {
+            "page": 1,
+            "mean_abs": 0.00546,
+            "changed_ratio": 0.021659
+          },
+          {
+            "page": 2,
+            "mean_abs": 0.007474,
+            "changed_ratio": 0.031308
+          },
+          {
+            "page": 3,
+            "mean_abs": 0.007764,
+            "changed_ratio": 0.030912
+          },
+          {
+            "page": 4,
+            "mean_abs": 0.00355,
+            "changed_ratio": 0.017367
+          },
+          {
+            "page": 5,
+            "mean_abs": 0.010523,
+            "changed_ratio": 0.040134
+          },
+          {
+            "page": 6,
+            "mean_abs": 0.003903,
+            "changed_ratio": 0.019903
+          },
+          {
+            "page": 7,
+            "mean_abs": 0.003499,
+            "changed_ratio": 0.019053
+          },
+          {
+            "page": 8,
+            "mean_abs": 0.00697,
+            "changed_ratio": 0.031454
+          },
+          {
+            "page": 9,
+            "mean_abs": 0.003319,
+            "changed_ratio": 0.017534
+          },
+          {
+            "page": 10,
+            "mean_abs": 0.007342,
+            "changed_ratio": 0.03137
+          },
+          {
+            "page": 11,
+            "mean_abs": 0.006315,
+            "changed_ratio": 0.02764
+          },
+          {
+            "page": 12,
+            "mean_abs": 0.003829,
+            "changed_ratio": 0.020592
+          },
+          {
+            "page": 13,
+            "mean_abs": 0.007451,
+            "changed_ratio": 0.029278
+          },
+          {
+            "page": 14,
+            "mean_abs": 0.002907,
+            "changed_ratio": 0.01529
+          },
+          {
+            "page": 15,
+            "mean_abs": 0.001311,
+            "changed_ratio": 0.00908
+          }
+        ]
+      },
+      "final_pdf": "Interviews\\Issue07\\Changeux_Dumas\\Changeux_Dumas.pdf"
+    }
+  ],
+  "bulletins": [
+    {
+      "name": "issue01.tex",
+      "status": "compiled",
+      "pages": 76,
+      "final_pdf": "Bulletins\\issue01.pdf",
+      "log": "Shared-assets\\qa\\logs\\issue01.log.txt"
+    },
+    {
+      "name": "issue02.tex",
+      "status": "compiled",
+      "pages": 123,
+      "final_pdf": "Bulletins\\issue02.pdf",
+      "log": "Shared-assets\\qa\\logs\\issue02.log.txt"
+    },
+    {
+      "name": "issue03.tex",
+      "status": "compiled",
+      "pages": 94,
+      "final_pdf": "Bulletins\\issue03.pdf",
+      "log": "Shared-assets\\qa\\logs\\issue03.log.txt"
+    },
+    {
+      "name": "issue04.tex",
+      "status": "compiled",
+      "pages": 126,
+      "final_pdf": "Bulletins\\issue04.pdf",
+      "log": "Shared-assets\\qa\\logs\\issue04.log.txt"
+    },
+    {
+      "name": "issue05.tex",
+      "status": "compiled",
+      "pages": 70,
+      "final_pdf": "Bulletins\\issue05.pdf",
+      "log": "Shared-assets\\qa\\logs\\issue05.log.txt"
+    },
+    {
+      "name": "issue06.tex",
+      "status": "compiled",
+      "pages": 100,
+      "final_pdf": "Bulletins\\issue06.pdf",
+      "log": "Shared-assets\\qa\\logs\\issue06.log.txt"
+    },
+    {
+      "name": "issue07.tex",
+      "status": "compiled",
+      "pages": 26,
+      "final_pdf": "Bulletins\\issue07.pdf",
+      "log": "Shared-assets\\qa\\logs\\issue07.log.txt"
+    }
+  ]
+}

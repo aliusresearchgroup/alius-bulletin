@@ -1,0 +1,287 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Bulletins/issue04.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo)
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
+ty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
+y))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpage
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+ (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
+y
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
+or.cfg)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
+tex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
+or.ltx)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
+x.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+x.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
+y)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
+phics.cfg)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdfte
+x.def))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
+end-pdftex.def)
+No file issue04.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
+f-sys.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape-nometadata.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.
+sty))) (Interviews/Issue04/Baird_Koroma/Baird_Koroma.tex [1 <./Shared-assets/or
+iginal-pdfs/Issue04/alius-bulletin-issue-04-baird-internally-generated-consciou
+s-activity-reflections-upon-lucid-dreaming.pdf>] [2 <./Shared-assets/original-p
+dfs/Issue04/alius-bulletin-issue-04-baird-internally-generated-conscious-activi
+ty-reflections-upon-lucid-dreaming.pdf>] [3 <./Shared-assets/original-pdfs/Issu
+e04/alius-bulletin-issue-04-baird-internally-generated-conscious-activity-refle
+ctions-upon-lucid-dreaming.pdf>] [4 <./Shared-assets/original-pdfs/Issue04/aliu
+s-bulletin-issue-04-baird-internally-generated-conscious-activity-reflections-u
+pon-lucid-dreaming.pdf>] [5 <./Shared-assets/original-pdfs/Issue04/alius-bullet
+in-issue-04-baird-internally-generated-conscious-activity-reflections-upon-luci
+d-dreaming.pdf>] [6 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue
+-04-baird-internally-generated-conscious-activity-reflections-upon-lucid-dreami
+ng.pdf>] [7 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-bair
+d-internally-generated-conscious-activity-reflections-upon-lucid-dreaming.pdf>]
+[8 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-baird-interna
+lly-generated-conscious-activity-reflections-upon-lucid-dreaming.pdf>] [9 <./Sh
+ared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-baird-internally-gene
+rated-conscious-activity-reflections-upon-lucid-dreaming.pdf>] [10 <./Shared-as
+sets/original-pdfs/Issue04/alius-bulletin-issue-04-baird-internally-generated-c
+onscious-activity-reflections-upon-lucid-dreaming.pdf>] [11 <./Shared-assets/or
+iginal-pdfs/Issue04/alius-bulletin-issue-04-baird-internally-generated-consciou
+s-activity-reflections-upon-lucid-dreaming.pdf>] [12 <./Shared-assets/original-
+pdfs/Issue04/alius-bulletin-issue-04-baird-internally-generated-conscious-activ
+ity-reflections-upon-lucid-dreaming.pdf>] [13 <./Shared-assets/original-pdfs/Is
+sue04/alius-bulletin-issue-04-baird-internally-generated-conscious-activity-ref
+lections-upon-lucid-dreaming.pdf>] [14 <./Shared-assets/original-pdfs/Issue04/a
+lius-bulletin-issue-04-baird-internally-generated-conscious-activity-reflection
+s-upon-lucid-dreaming.pdf>] [15 <./Shared-assets/original-pdfs/Issue04/alius-bu
+lletin-issue-04-baird-internally-generated-conscious-activity-reflections-upon-
+lucid-dreaming.pdf>]) (Interviews/Issue04/Carter_Preller/Carter_Preller.tex
+[16 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-carter-dimen
+sions-of-consciousness-from-perceptual-illusions-to-psychedelics.pdf>] [17 <./S
+hared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-carter-dimensions-of
+-consciousness-from-perceptual-illusions-to-psychedelics.pdf>] [18 <./Shared-as
+sets/original-pdfs/Issue04/alius-bulletin-issue-04-carter-dimensions-of-conscio
+usness-from-perceptual-illusions-to-psychedelics.pdf>] [19 <./Shared-assets/ori
+ginal-pdfs/Issue04/alius-bulletin-issue-04-carter-dimensions-of-consciousness-f
+rom-perceptual-illusions-to-psychedelics.pdf>] [20 <./Shared-assets/original-pd
+fs/Issue04/alius-bulletin-issue-04-carter-dimensions-of-consciousness-from-perc
+eptual-illusions-to-psychedelics.pdf>] [21 <./Shared-assets/original-pdfs/Issue
+04/alius-bulletin-issue-04-carter-dimensions-of-consciousness-from-perceptual-i
+llusions-to-psychedelics.pdf>] [22 <./Shared-assets/original-pdfs/Issue04/alius
+-bulletin-issue-04-carter-dimensions-of-consciousness-from-perceptual-illusions
+-to-psychedelics.pdf>] [23 <./Shared-assets/original-pdfs/Issue04/alius-bulleti
+n-issue-04-carter-dimensions-of-consciousness-from-perceptual-illusions-to-psyc
+hedelics.pdf>] [24 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-
+04-carter-dimensions-of-consciousness-from-perceptual-illusions-to-psychedelics
+.pdf>]) (Interviews/Issue04/Gosseries_Martial/Gosseries_Martial.tex [25 <./Shar
+ed-assets/original-pdfs/Issue04/alius-bulletin-issue-04-gosseries-use-of-psyche
+delics-in-the-treatment-of-disorders-of-consciousness.pdf>] [26 <./Shared-asset
+s/original-pdfs/Issue04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-i
+n-the-treatment-of-disorders-of-consciousness.pdf>] [27 <./Shared-assets/origin
+al-pdfs/Issue04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-tr
+eatment-of-disorders-of-consciousness.pdf>] [28 <./Shared-assets/original-pdfs/
+Issue04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-
+of-disorders-of-consciousness.pdf>] [29 <./Shared-assets/original-pdfs/Issue04/
+alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disor
+ders-of-consciousness.pdf>] [30 <./Shared-assets/original-pdfs/Issue04/alius-bu
+lletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disorders-of-
+consciousness.pdf>] [31 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-i
+ssue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disorders-of-consciou
+sness.pdf>] [32 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-
+gosseries-use-of-psychedelics-in-the-treatment-of-disorders-of-consciousness.pd
+f>] [33 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-gosserie
+s-use-of-psychedelics-in-the-treatment-of-disorders-of-consciousness.pdf>]
+[34 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-gosseries-us
+e-of-psychedelics-in-the-treatment-of-disorders-of-consciousness.pdf>] [35 <./S
+hared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-gosseries-use-of-psy
+chedelics-in-the-treatment-of-disorders-of-consciousness.pdf>] [36 <./Shared-as
+sets/original-pdfs/Issue04/alius-bulletin-issue-04-gosseries-use-of-psychedelic
+s-in-the-treatment-of-disorders-of-consciousness.pdf>] [37 <./Shared-assets/ori
+ginal-pdfs/Issue04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the
+-treatment-of-disorders-of-consciousness.pdf>] [38 <./Shared-assets/original-pd
+fs/Issue04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatme
+nt-of-disorders-of-consciousness.pdf>] [39 <./Shared-assets/original-pdfs/Issue
+04/alius-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-di
+sorders-of-consciousness.pdf>] [40 <./Shared-assets/original-pdfs/Issue04/alius
+-bulletin-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disorders-
+of-consciousness.pdf>] [41 <./Shared-assets/original-pdfs/Issue04/alius-bulleti
+n-issue-04-gosseries-use-of-psychedelics-in-the-treatment-of-disorders-of-consc
+iousness.pdf>])
+(Interviews/Issue04/Hanks_Mikhailova_Friedman/Hanks_Mikhailova_Friedman.tex
+[42 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-hanks-neuros
+cience-of-decision-making.pdf>] [43 <./Shared-assets/original-pdfs/Issue04/aliu
+s-bulletin-issue-04-hanks-neuroscience-of-decision-making.pdf>] [44 <./Shared-a
+ssets/original-pdfs/Issue04/alius-bulletin-issue-04-hanks-neuroscience-of-decis
+ion-making.pdf>] [45 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issu
+e-04-hanks-neuroscience-of-decision-making.pdf>] [46 <./Shared-assets/original-
+pdfs/Issue04/alius-bulletin-issue-04-hanks-neuroscience-of-decision-making.pdf>
+] [47 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-hanks-neur
+oscience-of-decision-making.pdf>] [48 <./Shared-assets/original-pdfs/Issue04/al
+ius-bulletin-issue-04-hanks-neuroscience-of-decision-making.pdf>] [49 <./Shared
+-assets/original-pdfs/Issue04/alius-bulletin-issue-04-hanks-neuroscience-of-dec
+ision-making.pdf>] [50 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-is
+sue-04-hanks-neuroscience-of-decision-making.pdf>] [51 <./Shared-assets/origina
+l-pdfs/Issue04/alius-bulletin-issue-04-hanks-neuroscience-of-decision-making.pd
+f>] [52 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-hanks-ne
+uroscience-of-decision-making.pdf>] [53 <./Shared-assets/original-pdfs/Issue04/
+alius-bulletin-issue-04-hanks-neuroscience-of-decision-making.pdf>] [54 <./Shar
+ed-assets/original-pdfs/Issue04/alius-bulletin-issue-04-hanks-neuroscience-of-d
+ecision-making.pdf>])
+(Interviews/Issue04/Lenggenhager_Ho_Milliere/Lenggenhager_Ho_Milliere.tex
+[55 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[56 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[57 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[58 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[59 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[60 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[61 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[62 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[63 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[64 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[65 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[66 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[67 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[68 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[69 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[70 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[71 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[72 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[73 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[74 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[75 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[76 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[77 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>]
+[78 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-lenggenhager
+-bodily-boundaries-and-beyond-exploring-the-malleability-of-bodily-self.pdf>])
+(Interviews/Issue04/Nichols_Nichols/Nichols_Nichols.tex [79 <./Shared-assets/or
+iginal-pdfs/Issue04/alius-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mamm
+alian-brain-a-critical-appraisal.pdf>] [80 <./Shared-assets/original-pdfs/Issue
+04/alius-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mammalian-brain-a-cri
+tical-appraisal.pdf>] [81 <./Shared-assets/original-pdfs/Issue04/alius-bulletin
+-issue-04-nichols-and-nichols-dmt-in-the-mammalian-brain-a-critical-appraisal.p
+df>] [82 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-nichols
+-and-nichols-dmt-in-the-mammalian-brain-a-critical-appraisal.pdf>] [83 <./Share
+d-assets/original-pdfs/Issue04/alius-bulletin-issue-04-nichols-and-nichols-dmt-
+in-the-mammalian-brain-a-critical-appraisal.pdf>] [84 <./Shared-assets/original
+-pdfs/Issue04/alius-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mammalian-
+brain-a-critical-appraisal.pdf>] [85 <./Shared-assets/original-pdfs/Issue04/ali
+us-bulletin-issue-04-nichols-and-nichols-dmt-in-the-mammalian-brain-a-critical-
+appraisal.pdf>]) (Interviews/Issue04/Fortier_ALIUS/Fortier_ALIUS.tex [86 <./Sha
+red-assets/original-pdfs/Issue04/alius-bulletin-issue-04-tribute-to-martin-fort
+ier.pdf>] [87 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-tr
+ibute-to-martin-fortier.pdf>] [88 <./Shared-assets/original-pdfs/Issue04/alius-
+bulletin-issue-04-tribute-to-martin-fortier.pdf>] [89 <./Shared-assets/original
+-pdfs/Issue04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf>] [90 <./Sh
+ared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-tribute-to-martin-for
+tier.pdf>] [91 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-t
+ribute-to-martin-fortier.pdf>] [92 <./Shared-assets/original-pdfs/Issue04/alius
+-bulletin-issue-04-tribute-to-martin-fortier.pdf>] [93 <./Shared-assets/origina
+l-pdfs/Issue04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf>] [94 <./S
+hared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-tribute-to-martin-fo
+rtier.pdf>] [95 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-
+tribute-to-martin-fortier.pdf>] [96 <./Shared-assets/original-pdfs/Issue04/aliu
+s-bulletin-issue-04-tribute-to-martin-fortier.pdf>] [97 <./Shared-assets/origin
+al-pdfs/Issue04/alius-bulletin-issue-04-tribute-to-martin-fortier.pdf>]
+[98 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-tribute-to-m
+artin-fortier.pdf>] [99 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-i
+ssue-04-tribute-to-martin-fortier.pdf>])
+(Interviews/Issue04/Vignemont_Milliere_Serrahima/Vignemont_Milliere_Serrahima.t
+ex [100 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vignemon
+t-body-meets-self.pdf>] [101 <./Shared-assets/original-pdfs/Issue04/alius-bulle
+tin-issue-04-vignemont-body-meets-self.pdf>] [102 <./Shared-assets/original-pdf
+s/Issue04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf>] [103 <./Share
+d-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vignemont-body-meets-sel
+f.pdf>] [104 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vig
+nemont-body-meets-self.pdf>] [105 <./Shared-assets/original-pdfs/Issue04/alius-
+bulletin-issue-04-vignemont-body-meets-self.pdf>] [106 <./Shared-assets/origina
+l-pdfs/Issue04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf>] [107 <./
+Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vignemont-body-meet
+s-self.pdf>] [108 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-0
+4-vignemont-body-meets-self.pdf>] [109 <./Shared-assets/original-pdfs/Issue04/a
+lius-bulletin-issue-04-vignemont-body-meets-self.pdf>] [110 <./Shared-assets/or
+iginal-pdfs/Issue04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf>]
+[111 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vignemont-b
+ody-meets-self.pdf>] [112 <./Shared-assets/original-pdfs/Issue04/alius-bulletin
+-issue-04-vignemont-body-meets-self.pdf>] [113 <./Shared-assets/original-pdfs/I
+ssue04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf>] [114 <./Shared-a
+ssets/original-pdfs/Issue04/alius-bulletin-issue-04-vignemont-body-meets-self.p
+df>] [115 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vignem
+ont-body-meets-self.pdf>] [116 <./Shared-assets/original-pdfs/Issue04/alius-bul
+letin-issue-04-vignemont-body-meets-self.pdf>] [117 <./Shared-assets/original-p
+dfs/Issue04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf>] [118 <./Sha
+red-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vignemont-body-meets-s
+elf.pdf>] [119 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-v
+ignemont-body-meets-self.pdf>] [120 <./Shared-assets/original-pdfs/Issue04/aliu
+s-bulletin-issue-04-vignemont-body-meets-self.pdf>] [121 <./Shared-assets/origi
+nal-pdfs/Issue04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf>]
+[122 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vignemont-b
+ody-meets-self.pdf>] [123 <./Shared-assets/original-pdfs/Issue04/alius-bulletin
+-issue-04-vignemont-body-meets-self.pdf>] [124 <./Shared-assets/original-pdfs/I
+ssue04/alius-bulletin-issue-04-vignemont-body-meets-self.pdf>] [125 <./Shared-a
+ssets/original-pdfs/Issue04/alius-bulletin-issue-04-vignemont-body-meets-self.p
+df>] [126 <./Shared-assets/original-pdfs/Issue04/alius-bulletin-issue-04-vignem
+ont-body-meets-self.pdf>]) (issue04.aux) )
+Output written on issue04.pdf (126 pages, 3611564 bytes).
+Transcript written on issue04.log.

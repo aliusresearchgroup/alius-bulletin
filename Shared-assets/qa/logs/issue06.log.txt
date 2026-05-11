@@ -1,0 +1,381 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Bulletins/issue06.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo)
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
+ty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
+y))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpage
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+ (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
+y
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
+or.cfg)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
+tex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
+or.ltx)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
+x.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+x.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
+y)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
+phics.cfg)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdfte
+x.def))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
+end-pdftex.def)
+No file issue06.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
+f-sys.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape-nometadata.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.
+sty)))
+(Interviews/Issue06/Ciaunica_Friedman_Coutrot_Koroma/Ciaunica_Friedman_Coutrot_
+Koroma.tex [1 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-ci
+aunica-what-is-like-to-be-in-early-sensory-life.pdf>] [2 <./Shared-assets/origi
+nal-pdfs/Issue06/alius-bulletin-issue-06-ciaunica-what-is-like-to-be-in-early-s
+ensory-life.pdf>] [3 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issu
+e-06-ciaunica-what-is-like-to-be-in-early-sensory-life.pdf>])
+(Interviews/Issue06/Doss_Fejer/Doss_Fejer.tex [4 <./Shared-assets/original-pdfs
+/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>]
+[5 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-si
+ns-of-psychedelic-research.pdf>] [6 <./Shared-assets/original-pdfs/Issue06/aliu
+s-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>] [7 <./Shared-
+assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psyched
+elic-research.pdf>] [8 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-is
+sue-06-doss-cinco-sins-of-psychedelic-research.pdf>] [9 <./Shared-assets/origin
+al-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research
+.pdf>] [10 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-
+cinco-sins-of-psychedelic-research.pdf>] [11 <./Shared-assets/original-pdfs/Iss
+ue06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>]
+[12 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-s
+ins-of-psychedelic-research.pdf>] [13 <./Shared-assets/original-pdfs/Issue06/al
+ius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>] [14 <./Shar
+ed-assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psyc
+hedelic-research.pdf>] [15 <./Shared-assets/original-pdfs/Issue06/alius-bulleti
+n-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>] [16 <./Shared-assets/o
+riginal-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-res
+earch.pdf>] [17 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-
+doss-cinco-sins-of-psychedelic-research.pdf>] [18 <./Shared-assets/original-pdf
+s/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>]
+[19 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-s
+ins-of-psychedelic-research.pdf>] [20 <./Shared-assets/original-pdfs/Issue06/al
+ius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>] [21 <./Shar
+ed-assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psyc
+hedelic-research.pdf>] [22 <./Shared-assets/original-pdfs/Issue06/alius-bulleti
+n-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>] [23 <./Shared-assets/o
+riginal-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-res
+earch.pdf>] [24 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-
+doss-cinco-sins-of-psychedelic-research.pdf>] [25 <./Shared-assets/original-pdf
+s/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>]
+[26 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-s
+ins-of-psychedelic-research.pdf>] [27 <./Shared-assets/original-pdfs/Issue06/al
+ius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>] [28 <./Shar
+ed-assets/original-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psyc
+hedelic-research.pdf>] [29 <./Shared-assets/original-pdfs/Issue06/alius-bulleti
+n-issue-06-doss-cinco-sins-of-psychedelic-research.pdf>] [30 <./Shared-assets/o
+riginal-pdfs/Issue06/alius-bulletin-issue-06-doss-cinco-sins-of-psychedelic-res
+earch.pdf>]) (Interviews/Issue06/Gonzalez_Koroma/Gonzalez_Koroma.tex [31 <./Sha
+red-assets/original-pdfs/Issue06/alius-bulletin-issue-06-gonzalez-an-interdisci
+plinary-journey-into-consciousness-research.pdf>] [32 <./Shared-assets/original
+-pdfs/Issue06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-int
+o-consciousness-research.pdf>] [33 <./Shared-assets/original-pdfs/Issue06/alius
+-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-res
+earch.pdf>] [34 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-
+gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf>]
+[35 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-gonzalez-an-
+interdisciplinary-journey-into-consciousness-research.pdf>] [36 <./Shared-asset
+s/original-pdfs/Issue06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-j
+ourney-into-consciousness-research.pdf>] [37 <./Shared-assets/original-pdfs/Iss
+ue06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-conscio
+usness-research.pdf>] [38 <./Shared-assets/original-pdfs/Issue06/alius-bulletin
+-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.pdf
+>] [39 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-gonzalez-
+an-interdisciplinary-journey-into-consciousness-research.pdf>] [40 <./Shared-as
+sets/original-pdfs/Issue06/alius-bulletin-issue-06-gonzalez-an-interdisciplinar
+y-journey-into-consciousness-research.pdf>] [41 <./Shared-assets/original-pdfs/
+Issue06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-cons
+ciousness-research.pdf>] [42 <./Shared-assets/original-pdfs/Issue06/alius-bulle
+tin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-research.
+pdf>] [43 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-gonzal
+ez-an-interdisciplinary-journey-into-consciousness-research.pdf>] [44 <./Shared
+-assets/original-pdfs/Issue06/alius-bulletin-issue-06-gonzalez-an-interdiscipli
+nary-journey-into-consciousness-research.pdf>] [45 <./Shared-assets/original-pd
+fs/Issue06/alius-bulletin-issue-06-gonzalez-an-interdisciplinary-journey-into-c
+onsciousness-research.pdf>] [46 <./Shared-assets/original-pdfs/Issue06/alius-bu
+lletin-issue-06-gonzalez-an-interdisciplinary-journey-into-consciousness-resear
+ch.pdf>] [47 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-gon
+zalez-an-interdisciplinary-journey-into-consciousness-research.pdf>] [48 <./Sha
+red-assets/original-pdfs/Issue06/alius-bulletin-issue-06-gonzalez-an-interdisci
+plinary-journey-into-consciousness-research.pdf>])
+(Interviews/Issue06/Jillings_Friedman_Coutrot_Koroma/Jillings_Friedman_Coutrot_
+Koroma.tex [49 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-j
+illings-what-is-like-to-be-in-weightlessness.pdf>] [50 <./Shared-assets/origina
+l-pdfs/Issue06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightles
+sness.pdf>] [51 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-
+jillings-what-is-like-to-be-in-weightlessness.pdf>] [52 <./Shared-assets/origin
+al-pdfs/Issue06/alius-bulletin-issue-06-jillings-what-is-like-to-be-in-weightle
+ssness.pdf>] [53 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06
+-jillings-what-is-like-to-be-in-weightlessness.pdf>])
+(Interviews/Issue06/Koroma_Friedman_Coutrot/Koroma_Friedman_Coutrot.tex
+[54 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-koroma-what-
+is-like-to-be-asleep.pdf>] [55 <./Shared-assets/original-pdfs/Issue06/alius-bul
+letin-issue-06-koroma-what-is-like-to-be-asleep.pdf>] [56 <./Shared-assets/orig
+inal-pdfs/Issue06/alius-bulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf>
+] [57 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-koroma-wha
+t-is-like-to-be-asleep.pdf>] [58 <./Shared-assets/original-pdfs/Issue06/alius-b
+ulletin-issue-06-koroma-what-is-like-to-be-asleep.pdf>])
+(Interviews/Issue06/Sapolsky_Mikhailova_Friedman/Sapolsky_Mikhailova_Friedman.t
+ex [59 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-sapolsky-
+on-free-will-or-the-lack-thereof.pdf>] [60 <./Shared-assets/original-pdfs/Issue
+06/alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf>]
+[61 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-sapolsky-on-
+free-will-or-the-lack-thereof.pdf>] [62 <./Shared-assets/original-pdfs/Issue06/
+alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf>]
+[63 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-sapolsky-on-
+free-will-or-the-lack-thereof.pdf>] [64 <./Shared-assets/original-pdfs/Issue06/
+alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf>]
+[65 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-sapolsky-on-
+free-will-or-the-lack-thereof.pdf>] [66 <./Shared-assets/original-pdfs/Issue06/
+alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf>]
+[67 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-sapolsky-on-
+free-will-or-the-lack-thereof.pdf>] [68 <./Shared-assets/original-pdfs/Issue06/
+alius-bulletin-issue-06-sapolsky-on-free-will-or-the-lack-thereof.pdf>]
+[69 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-sapolsky-on-
+free-will-or-the-lack-thereof.pdf>])
+(Interviews/Issue06/Skipper_Roseman_Koroma_Fejer/Skipper_Roseman_Koroma_Fejer.t
+ex
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[70 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[71 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[72 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[73 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[74 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[75 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[76 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[77 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[78 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[79 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[80 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[81 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[82 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[83 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[84 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[85 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[86 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[87 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[88 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[89 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[90 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[91 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[92 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[93 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[94 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[95 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[96 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[97 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[98 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[99 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-inti
+macy-of-psychedelics-language-and-consciousness.pdf>]
+
+pdfTeX warning: pdflatex (file ./Shared-assets/original-pdfs/Issue06/alius-bull
+etin-issue-06-skipper-intimacy-of-psychedelics-language-and-consciousness.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+[100 <./Shared-assets/original-pdfs/Issue06/alius-bulletin-issue-06-skipper-int
+imacy-of-psychedelics-language-and-consciousness.pdf>]) (issue06.aux) )
+Output written on issue06.pdf (100 pages, 2399178 bytes).
+Transcript written on issue06.log.

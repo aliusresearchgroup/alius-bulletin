@@ -1,0 +1,244 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Bulletins/issue03.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo)
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
+ty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
+y))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpage
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+ (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
+y
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
+or.cfg)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
+tex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
+or.ltx)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
+x.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+x.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
+y)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
+phics.cfg)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdfte
+x.def))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
+end-pdftex.def)
+No file issue03.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
+f-sys.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape-nometadata.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.
+sty))) (Interviews/Issue03/Bayne_Bucci_Koroma/Bayne_Bucci_Koroma.tex [1 <./Shar
+ed-assets/original-pdfs/Issue03/alius-bulletin-issue-03-bayne-how-to-study-cons
+ciousness-as-a-natural-phenomenon.pdf>] [2 <./Shared-assets/original-pdfs/Issue
+03/alius-bulletin-issue-03-bayne-how-to-study-consciousness-as-a-natural-phenom
+enon.pdf>] [3 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-ba
+yne-how-to-study-consciousness-as-a-natural-phenomenon.pdf>] [4 <./Shared-asset
+s/original-pdfs/Issue03/alius-bulletin-issue-03-bayne-how-to-study-consciousnes
+s-as-a-natural-phenomenon.pdf>] [5 <./Shared-assets/original-pdfs/Issue03/alius
+-bulletin-issue-03-bayne-how-to-study-consciousness-as-a-natural-phenomenon.pdf
+>] [6 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-bayne-how-
+to-study-consciousness-as-a-natural-phenomenon.pdf>] [7 <./Shared-assets/origin
+al-pdfs/Issue03/alius-bulletin-issue-03-bayne-how-to-study-consciousness-as-a-n
+atural-phenomenon.pdf>] [8 <./Shared-assets/original-pdfs/Issue03/alius-bulleti
+n-issue-03-bayne-how-to-study-consciousness-as-a-natural-phenomenon.pdf>]
+[9 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-bayne-how-to-
+study-consciousness-as-a-natural-phenomenon.pdf>])
+(Interviews/Issue03/Dennett_Fleig-Goldstein_Friedman/Dennett_Fleig-Goldstein_Fr
+iedman.tex [10 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-d
+ennett-explained.pdf>] [11 <./Shared-assets/original-pdfs/Issue03/alius-bulleti
+n-issue-03-dennett-explained.pdf>] [12 <./Shared-assets/original-pdfs/Issue03/a
+lius-bulletin-issue-03-dennett-explained.pdf>] [13 <./Shared-assets/original-pd
+fs/Issue03/alius-bulletin-issue-03-dennett-explained.pdf>] [14 <./Shared-assets
+/original-pdfs/Issue03/alius-bulletin-issue-03-dennett-explained.pdf>] [15 <./S
+hared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-dennett-explained.pd
+f>] [16 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-dennett-
+explained.pdf>] [17 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue
+-03-dennett-explained.pdf>] [18 <./Shared-assets/original-pdfs/Issue03/alius-bu
+lletin-issue-03-dennett-explained.pdf>] [19 <./Shared-assets/original-pdfs/Issu
+e03/alius-bulletin-issue-03-dennett-explained.pdf>] [20 <./Shared-assets/origin
+al-pdfs/Issue03/alius-bulletin-issue-03-dennett-explained.pdf>] [21 <./Shared-a
+ssets/original-pdfs/Issue03/alius-bulletin-issue-03-dennett-explained.pdf>]
+[22 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-dennett-expl
+ained.pdf>] [23 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-
+dennett-explained.pdf>] [24 <./Shared-assets/original-pdfs/Issue03/alius-bullet
+in-issue-03-dennett-explained.pdf>])
+(Interviews/Issue03/Dienes_Martin/Dienes_Martin.tex [25 <./Shared-assets/origin
+al-pdfs/Issue03/alius-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-
+in-consciousness-research.pdf>] [26 <./Shared-assets/original-pdfs/Issue03/aliu
+s-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-in-consciousness-res
+earch.pdf>] [27 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-
+dienes-role-of-hypnosis-and-meditation-in-consciousness-research.pdf>] [28 <./S
+hared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-dienes-role-of-hypno
+sis-and-meditation-in-consciousness-research.pdf>] [29 <./Shared-assets/origina
+l-pdfs/Issue03/alius-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-i
+n-consciousness-research.pdf>] [30 <./Shared-assets/original-pdfs/Issue03/alius
+-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-in-consciousness-rese
+arch.pdf>] [31 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-d
+ienes-role-of-hypnosis-and-meditation-in-consciousness-research.pdf>] [32 <./Sh
+ared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-dienes-role-of-hypnos
+is-and-meditation-in-consciousness-research.pdf>] [33 <./Shared-assets/original
+-pdfs/Issue03/alius-bulletin-issue-03-dienes-role-of-hypnosis-and-meditation-in
+-consciousness-research.pdf>])
+(Interviews/Issue03/Preller_Dumas/Preller_Dumas.tex [34 <./Shared-assets/origin
+al-pdfs/Issue03/alius-bulletin-issue-03-preller-psychedelics-and-sociality-prob
+ing-the-diversity-of-cognition-beyond.pdf>] [35 <./Shared-assets/original-pdfs/
+Issue03/alius-bulletin-issue-03-preller-psychedelics-and-sociality-probing-the-
+diversity-of-cognition-beyond.pdf>] [36 <./Shared-assets/original-pdfs/Issue03/
+alius-bulletin-issue-03-preller-psychedelics-and-sociality-probing-the-diversit
+y-of-cognition-beyond.pdf>] [37 <./Shared-assets/original-pdfs/Issue03/alius-bu
+lletin-issue-03-preller-psychedelics-and-sociality-probing-the-diversity-of-cog
+nition-beyond.pdf>] [38 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-i
+ssue-03-preller-psychedelics-and-sociality-probing-the-diversity-of-cognition-b
+eyond.pdf>] [39 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-
+preller-psychedelics-and-sociality-probing-the-diversity-of-cognition-beyond.pd
+f>] [40 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-preller-
+psychedelics-and-sociality-probing-the-diversity-of-cognition-beyond.pdf>]
+[41 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-preller-psyc
+hedelics-and-sociality-probing-the-diversity-of-cognition-beyond.pdf>])
+(Interviews/Issue03/Winkelman_Fortier/Winkelman_Fortier.tex [42 <./Shared-asset
+s/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evolutionary-neuroant
+hropology-of-consciousness-exploring-the-diversity.pdf>] [43 <./Shared-assets/o
+riginal-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthro
+pology-of-consciousness-exploring-the-diversity.pdf>] [44 <./Shared-assets/orig
+inal-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropol
+ogy-of-consciousness-exploring-the-diversity.pdf>] [45 <./Shared-assets/origina
+l-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology
+-of-consciousness-exploring-the-diversity.pdf>] [46 <./Shared-assets/original-p
+dfs/Issue03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of
+-consciousness-exploring-the-diversity.pdf>] [47 <./Shared-assets/original-pdfs
+/Issue03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-co
+nsciousness-exploring-the-diversity.pdf>] [48 <./Shared-assets/original-pdfs/Is
+sue03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consc
+iousness-exploring-the-diversity.pdf>] [49 <./Shared-assets/original-pdfs/Issue
+03/alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciou
+sness-exploring-the-diversity.pdf>] [50 <./Shared-assets/original-pdfs/Issue03/
+alius-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousne
+ss-exploring-the-diversity.pdf>] [51 <./Shared-assets/original-pdfs/Issue03/ali
+us-bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-
+exploring-the-diversity.pdf>] [52 <./Shared-assets/original-pdfs/Issue03/alius-
+bulletin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exp
+loring-the-diversity.pdf>] [53 <./Shared-assets/original-pdfs/Issue03/alius-bul
+letin-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-explor
+ing-the-diversity.pdf>] [54 <./Shared-assets/original-pdfs/Issue03/alius-bullet
+in-issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring
+-the-diversity.pdf>] [55 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-
+issue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-th
+e-diversity.pdf>] [56 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-iss
+ue-03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-d
+iversity.pdf>] [57 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-
+03-winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-dive
+rsity.pdf>] [58 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-
+winkelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversi
+ty.pdf>] [59 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-win
+kelman-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.
+pdf>] [60 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkel
+man-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf
+>] [61 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman
+-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[62 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[63 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[64 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[65 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[66 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[67 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[68 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[69 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[70 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[71 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[72 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[73 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[74 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[75 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[76 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[77 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[78 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[79 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[80 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[81 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[82 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[83 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[84 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[85 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[86 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[87 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[88 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[89 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[90 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[91 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[92 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[93 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[94 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>])
+(issue03.aux) )
+Output written on issue03.pdf (94 pages, 1305701 bytes).
+Transcript written on issue03.log.

@@ -1,0 +1,213 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Bulletins/issue01.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo)
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
+ty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
+y))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpage
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+ (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
+y
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
+or.cfg)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
+tex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
+or.ltx)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
+x.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+x.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
+y)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
+phics.cfg)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdfte
+x.def))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
+end-pdftex.def)
+No file issue01.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
+f-sys.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape-nometadata.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.
+sty)))
+(Interviews/Issue01/Carhart-Harris_Fortier_Milliere/Carhart-Harris_Fortier_Mill
+iere.tex [1 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-carh
+art-harris-consciousness-and-psychedelics.pdf>] [2 <./Shared-assets/original-pd
+fs/Issue01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelic
+s.pdf>] [3 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-carha
+rt-harris-consciousness-and-psychedelics.pdf>] [4 <./Shared-assets/original-pdf
+s/Issue01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics
+.pdf>] [5 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-carhar
+t-harris-consciousness-and-psychedelics.pdf>] [6 <./Shared-assets/original-pdfs
+/Issue01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.
+pdf>] [7 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-carhart
+-harris-consciousness-and-psychedelics.pdf>] [8 <./Shared-assets/original-pdfs/
+Issue01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.p
+df>] [9 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-carhart-
+harris-consciousness-and-psychedelics.pdf>] [10 <./Shared-assets/original-pdfs/
+Issue01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.p
+df>] [11 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-carhart
+-harris-consciousness-and-psychedelics.pdf>] [12 <./Shared-assets/original-pdfs
+/Issue01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics.
+pdf>] [13 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-carhar
+t-harris-consciousness-and-psychedelics.pdf>] [14 <./Shared-assets/original-pdf
+s/Issue01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelics
+.pdf>] [15 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-carha
+rt-harris-consciousness-and-psychedelics.pdf>] [16 <./Shared-assets/original-pd
+fs/Issue01/alius-bulletin-issue-01-carhart-harris-consciousness-and-psychedelic
+s.pdf>]) (Interviews/Issue01/Hohwy_Koroma/Hohwy_Koroma.tex [17 <./Shared-assets
+/original-pdfs/Issue01/alius-bulletin-issue-01-hohwy-on-different-ways-of-being
+-conscious-modes-of-consciousness-and-the.pdf>] [18 <./Shared-assets/original-p
+dfs/Issue01/alius-bulletin-issue-01-hohwy-on-different-ways-of-being-conscious-
+modes-of-consciousness-and-the.pdf>] [19 <./Shared-assets/original-pdfs/Issue01
+/alius-bulletin-issue-01-hohwy-on-different-ways-of-being-conscious-modes-of-co
+nsciousness-and-the.pdf>] [20 <./Shared-assets/original-pdfs/Issue01/alius-bull
+etin-issue-01-hohwy-on-different-ways-of-being-conscious-modes-of-consciousness
+-and-the.pdf>] [21 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-
+01-hohwy-on-different-ways-of-being-conscious-modes-of-consciousness-and-the.pd
+f>] [22 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-hohwy-on
+-different-ways-of-being-conscious-modes-of-consciousness-and-the.pdf>]
+[23 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-hohwy-on-dif
+ferent-ways-of-being-conscious-modes-of-consciousness-and-the.pdf>])
+(Interviews/Issue01/Luhrmann_Fortier/Luhrmann_Fortier.tex [24 <./Shared-assets/
+original-pdfs/Issue01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exp
+loring-unusual-sensations-and-spiritual.pdf>] [25 <./Shared-assets/original-pdf
+s/Issue01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusu
+al-sensations-and-spiritual.pdf>] [26 <./Shared-assets/original-pdfs/Issue01/al
+ius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensation
+s-and-spiritual.pdf>] [27 <./Shared-assets/original-pdfs/Issue01/alius-bulletin
+-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spirit
+ual.pdf>] [28 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-lu
+hrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf>]
+[29 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-luhrmann-ant
+hropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf>] [30 <./Share
+d-assets/original-pdfs/Issue01/alius-bulletin-issue-01-luhrmann-anthropology-of
+-mind-exploring-unusual-sensations-and-spiritual.pdf>] [31 <./Shared-assets/ori
+ginal-pdfs/Issue01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-explor
+ing-unusual-sensations-and-spiritual.pdf>] [32 <./Shared-assets/original-pdfs/I
+ssue01/alius-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-
+sensations-and-spiritual.pdf>] [33 <./Shared-assets/original-pdfs/Issue01/alius
+-bulletin-issue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-a
+nd-spiritual.pdf>] [34 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-is
+sue-01-luhrmann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual
+.pdf>] [35 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-luhrm
+ann-anthropology-of-mind-exploring-unusual-sensations-and-spiritual.pdf>])
+(Interviews/Issue01/McCarthy-Jones_Frerejouan/McCarthy-Jones_Frerejouan.tex
+[36 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-mccarthy-jon
+es-phenomenon-of-voice-hearing-an-interdisciplinary-approach.pdf>] [37 <./Share
+d-assets/original-pdfs/Issue01/alius-bulletin-issue-01-mccarthy-jones-phenomeno
+n-of-voice-hearing-an-interdisciplinary-approach.pdf>] [38 <./Shared-assets/ori
+ginal-pdfs/Issue01/alius-bulletin-issue-01-mccarthy-jones-phenomenon-of-voice-h
+earing-an-interdisciplinary-approach.pdf>] [39 <./Shared-assets/original-pdfs/I
+ssue01/alius-bulletin-issue-01-mccarthy-jones-phenomenon-of-voice-hearing-an-in
+terdisciplinary-approach.pdf>] [40 <./Shared-assets/original-pdfs/Issue01/alius
+-bulletin-issue-01-mccarthy-jones-phenomenon-of-voice-hearing-an-interdisciplin
+ary-approach.pdf>] [41 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-is
+sue-01-mccarthy-jones-phenomenon-of-voice-hearing-an-interdisciplinary-approach
+.pdf>] [42 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-mccar
+thy-jones-phenomenon-of-voice-hearing-an-interdisciplinary-approach.pdf>]
+[43 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-mccarthy-jon
+es-phenomenon-of-voice-hearing-an-interdisciplinary-approach.pdf>] [44 <./Share
+d-assets/original-pdfs/Issue01/alius-bulletin-issue-01-mccarthy-jones-phenomeno
+n-of-voice-hearing-an-interdisciplinary-approach.pdf>])
+(Interviews/Issue01/Seligman_Halloy/Seligman_Halloy.tex [45 <./Shared-assets/or
+iginal-pdfs/Issue01/alius-bulletin-issue-01-seligman-towards-a-biocultural-appr
+oach-to-dissociative-consciousness.pdf>] [46 <./Shared-assets/original-pdfs/Iss
+ue01/alius-bulletin-issue-01-seligman-towards-a-biocultural-approach-to-dissoci
+ative-consciousness.pdf>] [47 <./Shared-assets/original-pdfs/Issue01/alius-bull
+etin-issue-01-seligman-towards-a-biocultural-approach-to-dissociative-conscious
+ness.pdf>] [48 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-s
+eligman-towards-a-biocultural-approach-to-dissociative-consciousness.pdf>]
+[49 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-seligman-tow
+ards-a-biocultural-approach-to-dissociative-consciousness.pdf>] [50 <./Shared-a
+ssets/original-pdfs/Issue01/alius-bulletin-issue-01-seligman-towards-a-biocultu
+ral-approach-to-dissociative-consciousness.pdf>])
+(Interviews/Issue01/Windt_Bucci_Milliere/Windt_Bucci_Milliere.tex [51 <./Shared
+-assets/original-pdfs/Issue01/alius-bulletin-issue-01-windt-relocating-dreams-o
+n-the-conceptual-map-how-the-analysis-of-sleep-and.pdf>] [52 <./Shared-assets/o
+riginal-pdfs/Issue01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-con
+ceptual-map-how-the-analysis-of-sleep-and.pdf>] [53 <./Shared-assets/original-p
+dfs/Issue01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-m
+ap-how-the-analysis-of-sleep-and.pdf>] [54 <./Shared-assets/original-pdfs/Issue
+01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-th
+e-analysis-of-sleep-and.pdf>] [55 <./Shared-assets/original-pdfs/Issue01/alius-
+bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysi
+s-of-sleep-and.pdf>] [56 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-
+issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-slee
+p-and.pdf>] [57 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-
+windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf
+>] [58 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-windt-rel
+ocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf>]
+[59 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-windt-reloca
+ting-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf>] [60 <./Sh
+ared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-windt-relocating-drea
+ms-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf>] [61 <./Shared-asse
+ts/original-pdfs/Issue01/alius-bulletin-issue-01-windt-relocating-dreams-on-the
+-conceptual-map-how-the-analysis-of-sleep-and.pdf>] [62 <./Shared-assets/origin
+al-pdfs/Issue01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptu
+al-map-how-the-analysis-of-sleep-and.pdf>] [63 <./Shared-assets/original-pdfs/I
+ssue01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-ho
+w-the-analysis-of-sleep-and.pdf>] [64 <./Shared-assets/original-pdfs/Issue01/al
+ius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-ana
+lysis-of-sleep-and.pdf>] [65 <./Shared-assets/original-pdfs/Issue01/alius-bulle
+tin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-
+sleep-and.pdf>] [66 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue
+-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and
+.pdf>] [67 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-windt
+-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf>]
+[68 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-windt-reloca
+ting-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf>] [69 <./Sh
+ared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-windt-relocating-drea
+ms-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf>] [70 <./Shared-asse
+ts/original-pdfs/Issue01/alius-bulletin-issue-01-windt-relocating-dreams-on-the
+-conceptual-map-how-the-analysis-of-sleep-and.pdf>] [71 <./Shared-assets/origin
+al-pdfs/Issue01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptu
+al-map-how-the-analysis-of-sleep-and.pdf>] [72 <./Shared-assets/original-pdfs/I
+ssue01/alius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-ho
+w-the-analysis-of-sleep-and.pdf>] [73 <./Shared-assets/original-pdfs/Issue01/al
+ius-bulletin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-ana
+lysis-of-sleep-and.pdf>] [74 <./Shared-assets/original-pdfs/Issue01/alius-bulle
+tin-issue-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-
+sleep-and.pdf>] [75 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue
+-01-windt-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and
+.pdf>] [76 <./Shared-assets/original-pdfs/Issue01/alius-bulletin-issue-01-windt
+-relocating-dreams-on-the-conceptual-map-how-the-analysis-of-sleep-and.pdf>])
+(issue01.aux) )
+Output written on issue01.pdf (76 pages, 1180352 bytes).
+Transcript written on issue01.log.

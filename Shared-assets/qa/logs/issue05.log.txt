@@ -1,0 +1,208 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Bulletins/issue05.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo)
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
+ty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
+y))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpage
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+ (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
+y
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
+or.cfg)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
+tex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
+or.ltx)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
+x.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+x.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
+y)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
+phics.cfg)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdfte
+x.def))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
+end-pdftex.def)
+No file issue05.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
+f-sys.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape-nometadata.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.
+sty))) (Interviews/Issue05/Martial/Martial.tex [1 <./Shared-assets/original-pdf
+s/Issue05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-d
+ebate-a-scientific-perspective.pdf>] [2 <./Shared-assets/original-pdfs/Issue05/
+alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-debate-a-sc
+ientific-perspective.pdf>] [3 <./Shared-assets/original-pdfs/Issue05/alius-bull
+etin-issue-05-debate-near-death-experiences-in-the-public-debate-a-scientific-p
+erspective.pdf>] [4 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue
+-05-debate-near-death-experiences-in-the-public-debate-a-scientific-perspective
+.pdf>] [5 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-debate
+-near-death-experiences-in-the-public-debate-a-scientific-perspective.pdf>]
+[6 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-debate-near-d
+eath-experiences-in-the-public-debate-a-scientific-perspective.pdf>] [7 <./Shar
+ed-assets/original-pdfs/Issue05/alius-bulletin-issue-05-debate-near-death-exper
+iences-in-the-public-debate-a-scientific-perspective.pdf>] [8 <./Shared-assets/
+original-pdfs/Issue05/alius-bulletin-issue-05-debate-near-death-experiences-in-
+the-public-debate-a-scientific-perspective.pdf>] [9 <./Shared-assets/original-p
+dfs/Issue05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public
+-debate-a-scientific-perspective.pdf>] [10 <./Shared-assets/original-pdfs/Issue
+05/alius-bulletin-issue-05-debate-near-death-experiences-in-the-public-debate-a
+-scientific-perspective.pdf>])
+(Interviews/Issue05/Canna_Seligman_Koroma/Canna_Seligman_Koroma.tex [11 <./Shar
+ed-assets/original-pdfs/Issue05/alius-bulletin-issue-05-canna-and-seligman-how-
+culture-breaks-down-the-mind-body-divide.pdf>] [12 <./Shared-assets/original-pd
+fs/Issue05/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-t
+he-mind-body-divide.pdf>] [13 <./Shared-assets/original-pdfs/Issue05/alius-bull
+etin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.p
+df>] [14 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-canna-a
+nd-seligman-how-culture-breaks-down-the-mind-body-divide.pdf>] [15 <./Shared-as
+sets/original-pdfs/Issue05/alius-bulletin-issue-05-canna-and-seligman-how-cultu
+re-breaks-down-the-mind-body-divide.pdf>] [16 <./Shared-assets/original-pdfs/Is
+sue05/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mi
+nd-body-divide.pdf>] [17 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-
+issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf>]
+[18 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-canna-and-se
+ligman-how-culture-breaks-down-the-mind-body-divide.pdf>] [19 <./Shared-assets/
+original-pdfs/Issue05/alius-bulletin-issue-05-canna-and-seligman-how-culture-br
+eaks-down-the-mind-body-divide.pdf>] [20 <./Shared-assets/original-pdfs/Issue05
+/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-bo
+dy-divide.pdf>] [21 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue
+-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf>]
+[22 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-canna-and-se
+ligman-how-culture-breaks-down-the-mind-body-divide.pdf>] [23 <./Shared-assets/
+original-pdfs/Issue05/alius-bulletin-issue-05-canna-and-seligman-how-culture-br
+eaks-down-the-mind-body-divide.pdf>] [24 <./Shared-assets/original-pdfs/Issue05
+/alius-bulletin-issue-05-canna-and-seligman-how-culture-breaks-down-the-mind-bo
+dy-divide.pdf>] [25 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue
+-05-canna-and-seligman-how-culture-breaks-down-the-mind-body-divide.pdf>]
+[26 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-canna-and-se
+ligman-how-culture-breaks-down-the-mind-body-divide.pdf>])
+(Interviews/Issue05/Chadha_Aviles_Koroma/Chadha_Aviles_Koroma.tex [27 <./Shared
+-assets/original-pdfs/Issue05/alius-bulletin-issue-05-chadha-indian-philosophy-
+and-the-value-of-transformative-experiences.pdf>] [28 <./Shared-assets/original
+-pdfs/Issue05/alius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of
+-transformative-experiences.pdf>] [29 <./Shared-assets/original-pdfs/Issue05/al
+ius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-transformative-
+experiences.pdf>] [30 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-iss
+ue-05-chadha-indian-philosophy-and-the-value-of-transformative-experiences.pdf>
+] [31 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-chadha-ind
+ian-philosophy-and-the-value-of-transformative-experiences.pdf>] [32 <./Shared-
+assets/original-pdfs/Issue05/alius-bulletin-issue-05-chadha-indian-philosophy-a
+nd-the-value-of-transformative-experiences.pdf>] [33 <./Shared-assets/original-
+pdfs/Issue05/alius-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-
+transformative-experiences.pdf>] [34 <./Shared-assets/original-pdfs/Issue05/ali
+us-bulletin-issue-05-chadha-indian-philosophy-and-the-value-of-transformative-e
+xperiences.pdf>] [35 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issu
+e-05-chadha-indian-philosophy-and-the-value-of-transformative-experiences.pdf>]
+[36 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-chadha-india
+n-philosophy-and-the-value-of-transformative-experiences.pdf>])
+(Interviews/Issue05/Olson_Yaden_Fejer/Olson_Yaden_Fejer.tex [37 <./Shared-asset
+s/original-pdfs/Issue05/alius-bulletin-issue-05-olson-and-yaden-are-the-subject
+ive-effects-of-psychedelics-necessary-for-their-enduring.pdf>] [38 <./Shared-as
+sets/original-pdfs/Issue05/alius-bulletin-issue-05-olson-and-yaden-are-the-subj
+ective-effects-of-psychedelics-necessary-for-their-enduring.pdf>] [39 <./Shared
+-assets/original-pdfs/Issue05/alius-bulletin-issue-05-olson-and-yaden-are-the-s
+ubjective-effects-of-psychedelics-necessary-for-their-enduring.pdf>] [40 <./Sha
+red-assets/original-pdfs/Issue05/alius-bulletin-issue-05-olson-and-yaden-are-th
+e-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf>]
+[41 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-olson-and-ya
+den-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.pdf
+>] [42 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-olson-and
+-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduring.
+pdf>] [43 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-olson-
+and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-enduri
+ng.pdf>] [44 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-ols
+on-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-end
+uring.pdf>] [45 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-
+olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-their-
+enduring.pdf>] [46 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-
+05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-the
+ir-enduring.pdf>] [47 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-iss
+ue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-for-
+their-enduring.pdf>] [48 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-
+issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessary-f
+or-their-enduring.pdf>] [49 <./Shared-assets/original-pdfs/Issue05/alius-bullet
+in-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-necessar
+y-for-their-enduring.pdf>] [50 <./Shared-assets/original-pdfs/Issue05/alius-bul
+letin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-neces
+sary-for-their-enduring.pdf>] [51 <./Shared-assets/original-pdfs/Issue05/alius-
+bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics-ne
+cessary-for-their-enduring.pdf>] [52 <./Shared-assets/original-pdfs/Issue05/ali
+us-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedelics
+-necessary-for-their-enduring.pdf>] [53 <./Shared-assets/original-pdfs/Issue05/
+alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psychedel
+ics-necessary-for-their-enduring.pdf>] [54 <./Shared-assets/original-pdfs/Issue
+05/alius-bulletin-issue-05-olson-and-yaden-are-the-subjective-effects-of-psyche
+delics-necessary-for-their-enduring.pdf>])
+(Interviews/Issue05/Schmidt_Fejer/Schmidt_Fejer.tex [55 <./Shared-assets/origin
+al-pdfs/Issue05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-a
+ltered-states-database-for-consciousness.pdf>] [56 <./Shared-assets/original-pd
+fs/Issue05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altere
+d-states-database-for-consciousness.pdf>] [57 <./Shared-assets/original-pdfs/Is
+sue05/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-sta
+tes-database-for-consciousness.pdf>] [58 <./Shared-assets/original-pdfs/Issue05
+/alius-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-d
+atabase-for-consciousness.pdf>] [59 <./Shared-assets/original-pdfs/Issue05/aliu
+s-bulletin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-databa
+se-for-consciousness.pdf>] [60 <./Shared-assets/original-pdfs/Issue05/alius-bul
+letin-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-fo
+r-consciousness.pdf>] [61 <./Shared-assets/original-pdfs/Issue05/alius-bulletin
+-issue-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-for-con
+sciousness.pdf>] [62 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issu
+e-05-schmidt-phenomenoconnectomics-and-the-altered-states-database-for-consciou
+sness.pdf>] [63 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-
+schmidt-phenomenoconnectomics-and-the-altered-states-database-for-consciousness
+.pdf>] [64 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-schmi
+dt-phenomenoconnectomics-and-the-altered-states-database-for-consciousness.pdf>
+] [65 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-schmidt-ph
+enomenoconnectomics-and-the-altered-states-database-for-consciousness.pdf>]
+[66 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-schmidt-phen
+omenoconnectomics-and-the-altered-states-database-for-consciousness.pdf>]
+[67 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-schmidt-phen
+omenoconnectomics-and-the-altered-states-database-for-consciousness.pdf>]
+[68 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-schmidt-phen
+omenoconnectomics-and-the-altered-states-database-for-consciousness.pdf>]
+[69 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-schmidt-phen
+omenoconnectomics-and-the-altered-states-database-for-consciousness.pdf>]
+[70 <./Shared-assets/original-pdfs/Issue05/alius-bulletin-issue-05-schmidt-phen
+omenoconnectomics-and-the-altered-states-database-for-consciousness.pdf>])
+(issue05.aux) )
+Output written on issue05.pdf (70 pages, 2802713 bytes).
+Transcript written on issue05.log.

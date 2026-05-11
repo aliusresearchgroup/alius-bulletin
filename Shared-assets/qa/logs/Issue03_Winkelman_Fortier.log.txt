@@ -1,0 +1,235 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Interviews/Issue03/Winkelman_Fortier/Winkelman_Fortier.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo)
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
+ty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
+y))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpage
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+ (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
+y
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
+or.cfg)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
+tex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
+or.ltx)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
+x.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+x.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
+y)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
+phics.cfg)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdfte
+x.def))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperre
+f.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetk
+eys.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\k
+vdefinekeys.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfe
+scape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmd
+s.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdf
+texcmds.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infw
+arerr.sty)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref
+.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcoun
+t.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring
+\gettitlestring.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvopti
+ons.sty)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stri
+ngenc.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.
+def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcal
+c.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.d
+ef) (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\big
+intcalc.sty)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex
+.def
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\r
+erunfilecheck.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\
+uniquecounter.sty)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microt
+ype.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microt
+ype-pdftex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microt
+ype.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
+end-pdftex.def)
+No file Winkelman_Fortier.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
+f-sys.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape-nometadata.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.
+sty)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr
+.cfg) [1 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelm
+an-evolutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>
+] [2 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-e
+volutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[3 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evo
+lutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[4 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evo
+lutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[5 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evo
+lutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[6 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evo
+lutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[7 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evo
+lutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[8 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evo
+lutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[9 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-evo
+lutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[10 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[11 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[12 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[13 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[14 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[15 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[16 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[17 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[18 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[19 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[20 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[21 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[22 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[23 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[24 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[25 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[26 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[27 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[28 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[29 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[30 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[31 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[32 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[33 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[34 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[35 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[36 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[37 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[38 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[39 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[40 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[41 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[42 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[43 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[44 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[45 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[46 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[47 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[48 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[49 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[50 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[51 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[52 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+[53 <./Shared-assets/original-pdfs/Issue03/alius-bulletin-issue-03-winkelman-ev
+olutionary-neuroanthropology-of-consciousness-exploring-the-diversity.pdf>]
+(Winkelman_Fortier.aux)
+
+Package rerunfilecheck Warning: File `Winkelman_Fortier.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+Output written on Winkelman_Fortier.pdf (53 pages, 767099 bytes).
+Transcript written on Winkelman_Fortier.log.

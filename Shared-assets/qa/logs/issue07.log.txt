@@ -1,0 +1,115 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Bulletins/issue07.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo)
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
+ty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
+y))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpage
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+ (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
+y
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
+or.cfg)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
+tex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
+or.ltx)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
+x.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+x.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
+y)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
+phics.cfg)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdfte
+x.def))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
+end-pdftex.def)
+No file issue07.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
+f-sys.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape-nometadata.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.
+sty))) (Interviews/Issue07/Froese_Koroma/Froese_Koroma.tex [1 <./Shared-assets/
+original-pdfs/Issue07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-
+matter-route-to-consciousness.pdf>] [2 <./Shared-assets/original-pdfs/Issue07/a
+lius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-conscio
+usness.pdf>] [3 <./Shared-assets/original-pdfs/Issue07/alius-bulletin-issue-07-
+froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf>] [4 <./Shar
+ed-assets/original-pdfs/Issue07/alius-bulletin-issue-07-froese-irruption-theory
+-mind-and-matter-route-to-consciousness.pdf>] [5 <./Shared-assets/original-pdfs
+/Issue07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-
+to-consciousness.pdf>] [6 <./Shared-assets/original-pdfs/Issue07/alius-bulletin
+-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousness.pdf>]
+[7 <./Shared-assets/original-pdfs/Issue07/alius-bulletin-issue-07-froese-irrupt
+ion-theory-mind-and-matter-route-to-consciousness.pdf>] [8 <./Shared-assets/ori
+ginal-pdfs/Issue07/alius-bulletin-issue-07-froese-irruption-theory-mind-and-mat
+ter-route-to-consciousness.pdf>] [9 <./Shared-assets/original-pdfs/Issue07/aliu
+s-bulletin-issue-07-froese-irruption-theory-mind-and-matter-route-to-consciousn
+ess.pdf>] [10 <./Shared-assets/original-pdfs/Issue07/alius-bulletin-issue-07-fr
+oese-irruption-theory-mind-and-matter-route-to-consciousness.pdf>] [11 <./Share
+d-assets/original-pdfs/Issue07/alius-bulletin-issue-07-froese-irruption-theory-
+mind-and-matter-route-to-consciousness.pdf>])
+(Interviews/Issue07/Changeux_Dumas/Changeux_Dumas.tex [12 <./Shared-assets/orig
+inal-pdfs/Issue07/alius-bulletin-issue-07-changeux-consciousness-from-molecular
+-to-social-scales.pdf>] [13 <./Shared-assets/original-pdfs/Issue07/alius-bullet
+in-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf>]
+[14 <./Shared-assets/original-pdfs/Issue07/alius-bulletin-issue-07-changeux-con
+sciousness-from-molecular-to-social-scales.pdf>] [15 <./Shared-assets/original-
+pdfs/Issue07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-s
+ocial-scales.pdf>] [16 <./Shared-assets/original-pdfs/Issue07/alius-bulletin-is
+sue-07-changeux-consciousness-from-molecular-to-social-scales.pdf>] [17 <./Shar
+ed-assets/original-pdfs/Issue07/alius-bulletin-issue-07-changeux-consciousness-
+from-molecular-to-social-scales.pdf>] [18 <./Shared-assets/original-pdfs/Issue0
+7/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scale
+s.pdf>] [19 <./Shared-assets/original-pdfs/Issue07/alius-bulletin-issue-07-chan
+geux-consciousness-from-molecular-to-social-scales.pdf>] [20 <./Shared-assets/o
+riginal-pdfs/Issue07/alius-bulletin-issue-07-changeux-consciousness-from-molecu
+lar-to-social-scales.pdf>] [21 <./Shared-assets/original-pdfs/Issue07/alius-bul
+letin-issue-07-changeux-consciousness-from-molecular-to-social-scales.pdf>]
+[22 <./Shared-assets/original-pdfs/Issue07/alius-bulletin-issue-07-changeux-con
+sciousness-from-molecular-to-social-scales.pdf>] [23 <./Shared-assets/original-
+pdfs/Issue07/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-s
+ocial-scales.pdf>] [24 <./Shared-assets/original-pdfs/Issue07/alius-bulletin-is
+sue-07-changeux-consciousness-from-molecular-to-social-scales.pdf>] [25 <./Shar
+ed-assets/original-pdfs/Issue07/alius-bulletin-issue-07-changeux-consciousness-
+from-molecular-to-social-scales.pdf>] [26 <./Shared-assets/original-pdfs/Issue0
+7/alius-bulletin-issue-07-changeux-consciousness-from-molecular-to-social-scale
+s.pdf>]) (issue07.aux) )
+Output written on issue07.pdf (26 pages, 484185 bytes).
+Transcript written on issue07.log.

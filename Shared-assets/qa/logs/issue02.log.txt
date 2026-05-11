@@ -1,0 +1,304 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Bulletins/issue02.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo)
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
+sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
+ty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
+y))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
+y.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpage
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+ (C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.
+sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
+y
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
+or.cfg)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
+tex.def)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
+or.ltx)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
+x.sty)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+x.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
+s.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
+y)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
+phics.cfg)))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdfte
+x.def))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
+end-pdftex.def)
+No file issue02.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
+f-sys.cfg))
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsc
+ape-nometadata.sty
+(C:\Users\cogpsy-vrlab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.
+sty))) (Interviews/Issue02/Friston/Friston.tex [1 <./Shared-assets/original-pdf
+s/Issue02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autob
+iography.pdf>] [2 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-0
+2-biography-am-i-autistic-an-intellectual-autobiography.pdf>] [3 <./Shared-asse
+ts/original-pdfs/Issue02/alius-bulletin-issue-02-biography-am-i-autistic-an-int
+ellectual-autobiography.pdf>] [4 <./Shared-assets/original-pdfs/Issue02/alius-b
+ulletin-issue-02-biography-am-i-autistic-an-intellectual-autobiography.pdf>]
+[5 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-biography-am-
+i-autistic-an-intellectual-autobiography.pdf>] [6 <./Shared-assets/original-pdf
+s/Issue02/alius-bulletin-issue-02-biography-am-i-autistic-an-intellectual-autob
+iography.pdf>] [7 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-0
+2-biography-am-i-autistic-an-intellectual-autobiography.pdf>] [8 <./Shared-asse
+ts/original-pdfs/Issue02/alius-bulletin-issue-02-biography-am-i-autistic-an-int
+ellectual-autobiography.pdf>]) (Interviews/Issue02/Fox_Koroma/Fox_Koroma.tex
+[9 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-fox-wandering
+-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf>] [10 <./Sh
+ared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-fox-wandering-along-t
+he-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf>] [11 <./Shared-ass
+ets/original-pdfs/Issue02/alius-bulletin-issue-02-fox-wandering-along-the-spect
+rum-of-spontaneous-thinking-dreaming-meditation.pdf>] [12 <./Shared-assets/orig
+inal-pdfs/Issue02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-s
+pontaneous-thinking-dreaming-meditation.pdf>] [13 <./Shared-assets/original-pdf
+s/Issue02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontaneo
+us-thinking-dreaming-meditation.pdf>] [14 <./Shared-assets/original-pdfs/Issue0
+2/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontaneous-think
+ing-dreaming-meditation.pdf>] [15 <./Shared-assets/original-pdfs/Issue02/alius-
+bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontaneous-thinking-drea
+ming-meditation.pdf>] [16 <./Shared-assets/original-pdfs/Issue02/alius-bulletin
+-issue-02-fox-wandering-along-the-spectrum-of-spontaneous-thinking-dreaming-med
+itation.pdf>] [17 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-0
+2-fox-wandering-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.
+pdf>] [18 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-fox-wa
+ndering-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf>]
+[19 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-fox-wanderin
+g-along-the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf>] [20 <./S
+hared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-fox-wandering-along-
+the-spectrum-of-spontaneous-thinking-dreaming-meditation.pdf>] [21 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-fox-wandering-along-the-spec
+trum-of-spontaneous-thinking-dreaming-meditation.pdf>] [22 <./Shared-assets/ori
+ginal-pdfs/Issue02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-
+spontaneous-thinking-dreaming-meditation.pdf>] [23 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-fox-wandering-along-the-spectrum-of-spontane
+ous-thinking-dreaming-meditation.pdf>])
+(Interviews/Issue02/Friston_Fortier_Friedman/Friston_Fortier_Friedman.tex
+[24 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-w
+oodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>] [25 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-
+a-bayesian-account-of-cognition-life-and.pdf>] [26 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-accou
+nt-of-cognition-life-and.pdf>] [27 <./Shared-assets/original-pdfs/Issue02/alius
+-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-
+life-and.pdf>] [28 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-
+02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>]
+[29 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-w
+oodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>] [30 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-
+a-bayesian-account-of-cognition-life-and.pdf>] [31 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-accou
+nt-of-cognition-life-and.pdf>] [32 <./Shared-assets/original-pdfs/Issue02/alius
+-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-
+life-and.pdf>] [33 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-
+02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>]
+[34 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-w
+oodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>] [35 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-
+a-bayesian-account-of-cognition-life-and.pdf>] [36 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-accou
+nt-of-cognition-life-and.pdf>] [37 <./Shared-assets/original-pdfs/Issue02/alius
+-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-
+life-and.pdf>] [38 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-
+02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>]
+[39 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-w
+oodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>] [40 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-
+a-bayesian-account-of-cognition-life-and.pdf>] [41 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-accou
+nt-of-cognition-life-and.pdf>] [42 <./Shared-assets/original-pdfs/Issue02/alius
+-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-
+life-and.pdf>] [43 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-
+02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>]
+[44 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-w
+oodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>] [45 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-
+a-bayesian-account-of-cognition-life-and.pdf>] [46 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-accou
+nt-of-cognition-life-and.pdf>] [47 <./Shared-assets/original-pdfs/Issue02/alius
+-bulletin-issue-02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-
+life-and.pdf>] [48 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-
+02-friston-of-woodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>]
+[49 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-w
+oodlice-and-men-a-bayesian-account-of-cognition-life-and.pdf>] [50 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-friston-of-woodlice-and-men-
+a-bayesian-account-of-cognition-life-and.pdf>])
+(Interviews/Issue02/Metzinger_Limanowski_Milliere/Metzinger_Limanowski_Milliere
+.tex [51 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-metzing
+er-splendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf>]
+[52 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-metzinger-sp
+lendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf>] [53 <./S
+hared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-metzinger-splendor-a
+nd-misery-of-self-models-conceptual-and-empirical-issues.pdf>] [54 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-metzinger-splendor-and-miser
+y-of-self-models-conceptual-and-empirical-issues.pdf>] [55 <./Shared-assets/ori
+ginal-pdfs/Issue02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-sel
+f-models-conceptual-and-empirical-issues.pdf>] [56 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models
+-conceptual-and-empirical-issues.pdf>] [57 <./Shared-assets/original-pdfs/Issue
+02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-concept
+ual-and-empirical-issues.pdf>] [58 <./Shared-assets/original-pdfs/Issue02/alius
+-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-
+empirical-issues.pdf>] [59 <./Shared-assets/original-pdfs/Issue02/alius-bulleti
+n-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirica
+l-issues.pdf>] [60 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-
+02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues
+.pdf>] [61 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-metzi
+nger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf>]
+[62 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-metzinger-sp
+lendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf>] [63 <./S
+hared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-metzinger-splendor-a
+nd-misery-of-self-models-conceptual-and-empirical-issues.pdf>] [64 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-metzinger-splendor-and-miser
+y-of-self-models-conceptual-and-empirical-issues.pdf>] [65 <./Shared-assets/ori
+ginal-pdfs/Issue02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-sel
+f-models-conceptual-and-empirical-issues.pdf>] [66 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models
+-conceptual-and-empirical-issues.pdf>] [67 <./Shared-assets/original-pdfs/Issue
+02/alius-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-concept
+ual-and-empirical-issues.pdf>] [68 <./Shared-assets/original-pdfs/Issue02/alius
+-bulletin-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-
+empirical-issues.pdf>] [69 <./Shared-assets/original-pdfs/Issue02/alius-bulleti
+n-issue-02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirica
+l-issues.pdf>] [70 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-
+02-metzinger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues
+.pdf>] [71 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-metzi
+nger-splendor-and-misery-of-self-models-conceptual-and-empirical-issues.pdf>])
+(Interviews/Issue02/Nichols_Roseman_Timmermann/Nichols_Roseman_Timmermann.tex
+[72 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-nichols-psyc
+hedelics-from-pharmacology-to-phenomenology.pdf>] [73 <./Shared-assets/original
+-pdfs/Issue02/alius-bulletin-issue-02-nichols-psychedelics-from-pharmacology-to
+-phenomenology.pdf>] [74 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-
+issue-02-nichols-psychedelics-from-pharmacology-to-phenomenology.pdf>] [75 <./S
+hared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-nichols-psychedelics
+-from-pharmacology-to-phenomenology.pdf>] [76 <./Shared-assets/original-pdfs/Is
+sue02/alius-bulletin-issue-02-nichols-psychedelics-from-pharmacology-to-phenome
+nology.pdf>] [77 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02
+-nichols-psychedelics-from-pharmacology-to-phenomenology.pdf>] [78 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-nichols-psychedelics-from-ph
+armacology-to-phenomenology.pdf>] [79 <./Shared-assets/original-pdfs/Issue02/al
+ius-bulletin-issue-02-nichols-psychedelics-from-pharmacology-to-phenomenology.p
+df>] [80 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-nichols
+-psychedelics-from-pharmacology-to-phenomenology.pdf>] [81 <./Shared-assets/ori
+ginal-pdfs/Issue02/alius-bulletin-issue-02-nichols-psychedelics-from-pharmacolo
+gy-to-phenomenology.pdf>] [82 <./Shared-assets/original-pdfs/Issue02/alius-bull
+etin-issue-02-nichols-psychedelics-from-pharmacology-to-phenomenology.pdf>])
+(Interviews/Issue02/ORegan_Erickson-Davis/ORegan_Erickson-Davis.tex [83 <./Shar
+ed-assets/original-pdfs/Issue02/alius-bulletin-issue-02-o-regan-on-the-feel-of-
+things-the-sensorimotor-theory-of-consciousness.pdf>] [84 <./Shared-assets/orig
+inal-pdfs/Issue02/alius-bulletin-issue-02-o-regan-on-the-feel-of-things-the-sen
+sorimotor-theory-of-consciousness.pdf>] [85 <./Shared-assets/original-pdfs/Issu
+e02/alius-bulletin-issue-02-o-regan-on-the-feel-of-things-the-sensorimotor-theo
+ry-of-consciousness.pdf>] [86 <./Shared-assets/original-pdfs/Issue02/alius-bull
+etin-issue-02-o-regan-on-the-feel-of-things-the-sensorimotor-theory-of-consciou
+sness.pdf>] [87 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-
+o-regan-on-the-feel-of-things-the-sensorimotor-theory-of-consciousness.pdf>]
+[88 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-o-regan-on-t
+he-feel-of-things-the-sensorimotor-theory-of-consciousness.pdf>] [89 <./Shared-
+assets/original-pdfs/Issue02/alius-bulletin-issue-02-o-regan-on-the-feel-of-thi
+ngs-the-sensorimotor-theory-of-consciousness.pdf>] [90 <./Shared-assets/origina
+l-pdfs/Issue02/alius-bulletin-issue-02-o-regan-on-the-feel-of-things-the-sensor
+imotor-theory-of-consciousness.pdf>])
+(Interviews/Issue02/Ratcliffe_Frerejouan/Ratcliffe_Frerejouan.tex [91 <./Shared
+-assets/original-pdfs/Issue02/alius-bulletin-issue-02-ratcliffe-verbal-hallucin
+ations-intentionality-and-interpersonal-experience.pdf>] [92 <./Shared-assets/o
+riginal-pdfs/Issue02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-in
+tentionality-and-interpersonal-experience.pdf>] [93 <./Shared-assets/original-p
+dfs/Issue02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-intentional
+ity-and-interpersonal-experience.pdf>] [94 <./Shared-assets/original-pdfs/Issue
+02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-intentionality-and-i
+nterpersonal-experience.pdf>] [95 <./Shared-assets/original-pdfs/Issue02/alius-
+bulletin-issue-02-ratcliffe-verbal-hallucinations-intentionality-and-interperso
+nal-experience.pdf>] [96 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-
+issue-02-ratcliffe-verbal-hallucinations-intentionality-and-interpersonal-exper
+ience.pdf>] [97 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-
+ratcliffe-verbal-hallucinations-intentionality-and-interpersonal-experience.pdf
+>] [98 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-ratcliffe
+-verbal-hallucinations-intentionality-and-interpersonal-experience.pdf>]
+[99 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-ratcliffe-ve
+rbal-hallucinations-intentionality-and-interpersonal-experience.pdf>] [100 <./S
+hared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-ratcliffe-verbal-hal
+lucinations-intentionality-and-interpersonal-experience.pdf>] [101 <./Shared-as
+sets/original-pdfs/Issue02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinati
+ons-intentionality-and-interpersonal-experience.pdf>] [102 <./Shared-assets/ori
+ginal-pdfs/Issue02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-inte
+ntionality-and-interpersonal-experience.pdf>] [103 <./Shared-assets/original-pd
+fs/Issue02/alius-bulletin-issue-02-ratcliffe-verbal-hallucinations-intentionali
+ty-and-interpersonal-experience.pdf>])
+(Interviews/Issue02/Taves_Fortier_Canna/Taves_Fortier_Canna.tex [104 <./Shared-
+assets/original-pdfs/Issue02/alius-bulletin-issue-02-taves-conceptual-anthropol
+ogical-and-cognitive-issues-surrounding-religious.pdf>] [105 <./Shared-assets/o
+riginal-pdfs/Issue02/alius-bulletin-issue-02-taves-conceptual-anthropological-a
+nd-cognitive-issues-surrounding-religious.pdf>] [106 <./Shared-assets/original-
+pdfs/Issue02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cogni
+tive-issues-surrounding-religious.pdf>] [107 <./Shared-assets/original-pdfs/Iss
+ue02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-iss
+ues-surrounding-religious.pdf>] [108 <./Shared-assets/original-pdfs/Issue02/ali
+us-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surr
+ounding-religious.pdf>] [109 <./Shared-assets/original-pdfs/Issue02/alius-bulle
+tin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-
+religious.pdf>] [110 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issu
+e-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religiou
+s.pdf>] [111 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-tav
+es-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf>]
+[112 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-taves-conce
+ptual-anthropological-and-cognitive-issues-surrounding-religious.pdf>] [113 <./
+Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-taves-conceptual-an
+thropological-and-cognitive-issues-surrounding-religious.pdf>] [114 <./Shared-a
+ssets/original-pdfs/Issue02/alius-bulletin-issue-02-taves-conceptual-anthropolo
+gical-and-cognitive-issues-surrounding-religious.pdf>] [115 <./Shared-assets/or
+iginal-pdfs/Issue02/alius-bulletin-issue-02-taves-conceptual-anthropological-an
+d-cognitive-issues-surrounding-religious.pdf>] [116 <./Shared-assets/original-p
+dfs/Issue02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognit
+ive-issues-surrounding-religious.pdf>] [117 <./Shared-assets/original-pdfs/Issu
+e02/alius-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issu
+es-surrounding-religious.pdf>] [118 <./Shared-assets/original-pdfs/Issue02/aliu
+s-bulletin-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surro
+unding-religious.pdf>] [119 <./Shared-assets/original-pdfs/Issue02/alius-bullet
+in-issue-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-r
+eligious.pdf>] [120 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue
+-02-taves-conceptual-anthropological-and-cognitive-issues-surrounding-religious
+.pdf>] [121 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-tave
+s-conceptual-anthropological-and-cognitive-issues-surrounding-religious.pdf>]
+[122 <./Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-taves-conce
+ptual-anthropological-and-cognitive-issues-surrounding-religious.pdf>] [123 <./
+Shared-assets/original-pdfs/Issue02/alius-bulletin-issue-02-taves-conceptual-an
+thropological-and-cognitive-issues-surrounding-religious.pdf>]) (issue02.aux) )
+
+Output written on issue02.pdf (123 pages, 3076337 bytes).
+Transcript written on issue02.log.
