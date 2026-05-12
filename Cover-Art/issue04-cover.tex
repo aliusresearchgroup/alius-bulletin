@@ -1,15 +1,18 @@
 % !TeX program = pdflatex
 % ALIUS Bulletin Issue 4 cover. Compile from the repository root.
-% This preserves the published cover by shipping the canonical first page
-% extracted from the original full issue PDF at its native page size.
+% Built from the supplied empty cover artwork plus the exact original PDF text layer.
 \documentclass{article}
 \pagestyle{empty}
 \begin{document}
-\pdfximage page 1 {Cover-Art/reference-covers/issue04-original-cover.pdf}
+\pdfximage page 1 {Cover-Art/assets/issue04-background.pdf}
 \setbox0=\hbox{\pdfrefximage\pdflastximage}
+\pdfximage width \wd0 height \ht0 page 1 {Cover-Art/assets/issue04-text-layer.pdf}
+\setbox2=\hbox{\pdfrefximage\pdflastximage}
+\pdfximage width \wd0 height \ht0 {Cover-Art/assets/issue04-visual-correction.png}
+\setbox4=\hbox{\pdfrefximage\pdflastximage}
 \pdfpagewidth=\wd0
 \pdfpageheight=\ht0
 \hoffset=-1in
 \voffset=-1in
-\shipout\box0
+\shipout\vbox to \ht0{\hbox to \wd0{\rlap{\copy0}\rlap{\copy2}\copy4\hss}\vss}
 \end{document}
