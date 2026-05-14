@@ -1,0 +1,116 @@
+\usepackage[a4paper,top=27mm,bottom=24mm,left=25mm,right=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{xurl}
+
+\definecolor{aliusgreen}{HTML}{13823A}
+\definecolor{aliusgray}{HTML}{7A7A7A}
+\definecolor{aliusline}{HTML}{9A9A9A}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=aliusgreen,
+  urlcolor=aliusgreen
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.72em}
+\setlength{\tabcolsep}{0pt}
+\raggedbottom
+\sloppy
+\urlstyle{same}
+
+\newcommand{\ALIUSFooterTitle}{ALIUS Bulletin Guidelines (2022)}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\footnotesize\color{aliusgray}\ALIUSFooterTitle}
+\fancyfoot[R]{\footnotesize\color{aliusgray}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.45pt}
+
+\setlist[itemize]{
+  leftmargin=1.35em,
+  itemsep=0.18em,
+  topsep=0.15em,
+  parsep=0em
+}
+\setlist[enumerate]{
+  leftmargin=2.05em,
+  itemsep=0.42em,
+  topsep=0.2em,
+  parsep=0em
+}
+\setlist[description]{
+  leftmargin=0em,
+  labelsep=0.55em,
+  itemsep=0.35em,
+  topsep=0.2em,
+  font=\normalfont\bfseries
+}
+
+\newcommand{\guideDivider}{%
+  \par\noindent{\color{aliusline}\rule{\textwidth}{0.45pt}}\par
+}
+
+\newcommand{\guideMeta}[2]{%
+  {\footnotesize\bfseries\MakeUppercase{#1}}\par
+  {\footnotesize #2}\par\vspace{0.65em}
+}
+
+\newcommand{\guideHeader}[5]{%
+  \thispagestyle{fancy}%
+  \vspace*{1mm}
+  \begin{center}
+    {\Large\bfseries\MakeUppercase{ALIUS Bulletin}\par}
+    \vspace{0.25em}
+    {\normalsize *\par}
+    \vspace{0.25em}
+    {\normalsize\bfseries\MakeUppercase{Guidelines For}\par}
+    \vspace{0.15em}
+    {\LARGE\bfseries\MakeUppercase{#1}\par}
+  \end{center}
+  \vspace{1.05em}
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.55\textwidth}!{\hspace{1.35em}{\color{aliusline}\vrule width 0.5pt}\hspace{1.35em}}>{\raggedright\arraybackslash}X@{}}
+    {\large\itshape #2} &
+    \guideMeta{Format}{#3}
+    \guideMeta{Editorial Route}{#4}
+    \guideMeta{Contact}{#5}
+  \end{tabularx}
+  \vspace{0.75em}
+  \guideDivider
+  \vspace{0.25em}
+}
+
+\newcommand{\guideSection}[1]{%
+  \Needspace{6\baselineskip}%
+  \par\vspace{1.1em}
+  \begin{center}
+    {\color{aliusline}\rule{0.14\textwidth}{0.45pt}}\hspace{0.85em}%
+    {\large\bfseries #1}%
+    \hspace{0.85em}{\color{aliusline}\rule{0.14\textwidth}{0.45pt}}
+  \end{center}
+  \vspace{-0.25em}
+}
+
+\newcommand{\guideSubsection}[1]{%
+  \par\vspace{0.65em}{\bfseries #1}\par\vspace{-0.35em}
+}
+
+\newcommand{\guideQuestion}[1]{%
+  \par\vspace{0.55em}{\color{aliusgreen}\bfseries #1}\par
+}
+
+\newenvironment{guideChecklist}
+  {\begin{itemize}[label=\textendash]}
+  {\end{itemize}}
