@@ -1,27 +1,28 @@
-# Agent Instructions
+﻿# Agent Instructions
 
 These notes are for AI agents working on the `alius-bulletin` Overleaf archive.
 
 ## Mission
 
-Maintain an Overleaf-importable archive where each bulletin piece has its own folder, source, bibliography, and final rendered PDF, while issue-level files can compile complete bulletin PDFs.
+Maintain an Overleaf-importable source archive where bulletin pieces and issue-level files are reconstructed from editable LaTeX sources rather than pre-existing article PDFs.
 
 ## Repository Contract
 
 - Keep top-level folders intentional: `Interviews`, `Bulletins`, `Cover-Art`, `Guidelines`, `Shared-assets`, and `AI-agents`.
-- Do not create extra top-level working folders. Put temporary outputs outside the repository or under an ignored local scratch area if one is later added.
-- Each interview or piece folder must contain one `.tex`, one `.bib`, and one final `.pdf`.
-- Each issue file in `Bulletins/` should have a matching generated `.pdf`.
-- Each cover file in `Cover-Art/` should have a matching generated `.pdf`.
-- Keep one-page original cover references under `Cover-Art/reference-covers/`.
-- Keep original/source PDFs under `Shared-assets/original-pdfs/`.
-- Keep QA evidence under `Shared-assets/qa/`.
+- Do not create extra top-level working folders. Put temporary outputs under ignored build folders or outside the repository.
+- Each interview or piece folder should contain editable source: one `.tex` and one `.bib` when a bibliography is present.
+- Generated PDFs are build outputs, not source of truth, and should not be committed.
+- The only tolerated committed PDF asset is `Cover-Art/assets/front-cover-empty-no-leaf.pdf`, because it is the explicit shared cover background resource.
+- The canonical cover leaf asset is `Cover-Art/assets/alius-leaf.svg`.
+- Do not include published/original article PDFs from `.tex` sources. Original PDFs may be used only outside the build path for temporary human QA.
+- Keep QA evidence textual or image-based unless a PDF is explicitly approved as a shared asset resource.
 
 ## Editing Rules
 
-- Prefer editing `.tex` and `.bib` sources, then regenerating PDFs.
+- Prefer editing `.tex` and `.bib` sources, then regenerating local PDFs only as ignored build artifacts.
 - Do not manually edit generated PDFs as the only source of truth.
 - Preserve standalone behavior for individual interview `.tex` files.
+- Preserve issue-level compilation through `Bulletins/issueXX.tex` without relying on original article PDFs.
 - Use paths that work when the whole repository is imported into Overleaf.
 - Keep folder names stable once published because Overleaf, issue files, and manifest paths depend on them.
 - Use ASCII in generated source files unless a source file already requires non-ASCII text.
@@ -34,24 +35,24 @@ When checking a single interview, compile from the repository root:
 pdflatex -interaction=nonstopmode -halt-on-error "Interviews/Issue01/Carhart-Harris_Fortier_Milliere/Carhart-Harris_Fortier_Milliere.tex"
 ```
 
-When checking a full issue, compile from the repository root:
+When checking a full issue, compile from the repository root through the build script so cover PDFs are generated locally first:
 
 ```powershell
-pdflatex -interaction=nonstopmode -halt-on-error "Bulletins/issue01.tex"
+.\build-bulletins.ps1 -Issues 01
 ```
 
-After compilation, move or confirm the final PDF sits beside the source `.tex` it came from.
+Generated PDFs should remain untracked.
 
 ## Visual QA Expectations
 
-- Compare generated PDFs against original/source PDFs for page count, page size, and obvious visual drift.
+- Compare generated PDFs against external references only when needed; do not wire reference PDFs into the TeX build path.
 - Check interview titles, quotation placement, parenthetical text, footnotes, and bibliography rendering.
-- Treat large layout drift, missing pages, missing included PDFs, or broken issue compilation as blockers.
+- Treat missing source text, missing shared cover assets, or issue compilation failures as blockers.
 
 ## Before Committing
 
 - Run `git status --short --branch`.
-- Confirm no accidental build products such as `.aux`, `.log`, `.out`, `.toc`, or scratch directories are staged.
-- Confirm every changed interview folder still has `.tex`, `.bib`, and `.pdf`.
-- Confirm every changed issue has both `.tex` and `.pdf`.
+- Confirm no accidental build products such as `.aux`, `.log`, `.out`, `.toc`, or generated `.pdf` files are staged.
+- Confirm the only staged PDF, if any, is the approved cover background asset.
+- Confirm changed interview folders still have editable `.tex` sources and matching `.bib` files when applicable.
 - Summarize any visual QA limits honestly in the final note.

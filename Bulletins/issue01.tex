@@ -1,12 +1,17 @@
 % !TeX program = pdflatex
 % Compile this from the ALIUS-bulletin project root.
+% The cover is rendered from TeX plus Cover-Art/assets/front-cover-empty-no-leaf.pdf and Cover-Art/assets/alius-leaf.svg.
 \documentclass[a4paper]{article}
-\usepackage[margin=0pt]{geometry}
-\usepackage{pdfpages}
+\input{Cover-Art/cover-style.tex}
+\usepackage[hidelinks]{hyperref}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{parskip}
 \newcommand{\ALIUSIssueBuild}{1}
 \begin{document}
-\includepdf[pages=1,fitpaper=true]{Cover-Art/issue01-cover.pdf}
-% ALIUS Bulletin issue 1 assembled from standalone interview files.
+\input{Cover-Art/issue01-cover.tex}
+\newgeometry{margin=22mm}
+\pagestyle{plain}
+% ALIUS Bulletin issue 1 assembled from native standalone source files.
 \input{Interviews/Issue01/Carhart-Harris_Fortier_Milliere/Carhart-Harris_Fortier_Milliere.tex}
 \input{Interviews/Issue01/Hohwy_Koroma/Hohwy_Koroma.tex}
 \input{Interviews/Issue01/Luhrmann_Fortier/Luhrmann_Fortier.tex}

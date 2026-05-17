@@ -1,14 +1,13 @@
-"""Regenerate the vector ALIUS leaf assets used by the cover renderer.
+"""Regenerate the canonical vector ALIUS leaf sources used by the cover renderer.
 
 The historical static leaf SVG is an SVG wrapper around three embedded PNG
 layers. The animated brand source contains the same three leaves as real SVG
 paths. This script extracts the first animation frame into a static vector SVG
-and builds an Overleaf-safe vector PDF cache with pdfLaTeX/TikZ.
+and a TeX path cache without creating or depending on any PDF cache.
 """
 
 from __future__ import annotations
 
-import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -17,8 +16,7 @@ ROOT = Path(__file__).resolve().parent
 SOURCE_SVG = ROOT / "source-assets" / "logo-ALIUS-original-animated-leaf.svg"
 STATIC_SVG = ROOT / "assets" / "alius-leaf.svg"
 GENERATED_DIR = ROOT / "generated"
-GENERATED_TEX = GENERATED_DIR / "alius-leaf-from-svg.tex"
-GENERATED_PDF = GENERATED_DIR / "alius-leaf-from-svg.pdf"
+GENERATED_TEX = GENERATED_DIR / "alius-leaf-paths.tex"
 
 SVG_NS = "{http://www.w3.org/2000/svg}"
 LEAF_COLORS = {
@@ -64,50 +62,35 @@ def _write_static_svg(paths: list[tuple[str, str, str]]) -> None:
     STATIC_SVG.write_text("\n".join(lines), encoding="utf-8")
 
 
-def _write_pdf_source(paths: list[tuple[str, str, str]]) -> None:
+def _write_tex_paths(paths: list[tuple[str, str, str]]) -> None:
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
     lines = [
-        r"\documentclass{article}",
-        r"\usepackage[paperwidth=1023bp,paperheight=1111bp,margin=0bp]{geometry}",
-        r"\usepackage{xcolor}",
-        r"\usepackage{tikz}",
-        r"\usetikzlibrary{svg.path}",
-        r"\pagestyle{empty}",
+        "% Generated from Cover-Art/assets/alius-leaf.svg by Cover-Art/generate_leaf_cache.py.",
+        "% This is a TeX path cache, not a PDF asset.",
     ]
     for leaf_id, fill, _ in paths:
         lines.append(rf"\definecolor{{{LEAF_COLORS[leaf_id]}}}{{HTML}}{{{fill}}}")
     lines.extend(
         [
-            r"\begin{document}",
-            r"\noindent\begin{tikzpicture}[x=1bp,y=1bp]",
-            r"\useasboundingbox (0,0) rectangle (1023,1111);",
-            r"\begin{scope}[yshift=1111bp,yscale=-1]",
+            r"\newcommand{\AliusRenderLeafPaths}{%",
+            r"  \begin{tikzpicture}[x=1bp,y=1bp]",
+            r"    \useasboundingbox (0,0) rectangle (1023,1111);",
+            r"    \begin{scope}[yshift=1111bp,yscale=-1]",
         ]
     )
     for leaf_id, _, d in paths:
-        lines.append(r"\begin{scope}[blend mode=multiply]")
-        lines.append(rf"\path[fill={LEAF_COLORS[leaf_id]}] svg {{{d}}};")
-        lines.append(r"\end{scope}")
-    lines.extend([r"\end{scope}", r"\end{tikzpicture}", r"\end{document}", ""])
-    GENERATED_TEX.write_text("\n".join(lines), encoding="ascii")
-
-
-def _build_pdf() -> None:
-    subprocess.run(
+        lines.append(r"      \begin{scope}[blend mode=multiply]")
+        lines.append(rf"        \path[fill={LEAF_COLORS[leaf_id]}] svg {{{d}}};")
+        lines.append(r"      \end{scope}")
+    lines.extend(
         [
-            "pdflatex",
-            "-interaction=nonstopmode",
-            "-halt-on-error",
-            f"-output-directory={GENERATED_DIR}",
-            str(GENERATED_TEX),
-        ],
-        cwd=ROOT.parent,
-        check=True,
+            r"    \end{scope}",
+            r"  \end{tikzpicture}%",
+            r"}",
+            "",
+        ]
     )
-    for suffix in [".aux", ".log"]:
-        build_file = GENERATED_TEX.with_suffix(suffix)
-        if build_file.exists():
-            build_file.unlink()
+    GENERATED_TEX.write_text("\n".join(lines), encoding="ascii")
 
 
 def main() -> None:
@@ -118,15 +101,10 @@ def main() -> None:
 
     paths = _paths_from_source()
     _write_static_svg(paths)
-    _write_pdf_source(paths)
-    _build_pdf()
-
-    old_png = GENERATED_DIR / "alius-leaf-from-svg.png"
-    if old_png.exists():
-        old_png.unlink()
+    _write_tex_paths(paths)
 
     print(f"Wrote {STATIC_SVG.relative_to(ROOT)}")
-    print(f"Wrote {GENERATED_PDF.relative_to(ROOT)}")
+    print(f"Wrote {GENERATED_TEX.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

@@ -1,29 +1,30 @@
-# Cover Art
+﻿# Cover Art
 
 This folder contains standalone TeX entry points for the ALIUS Bulletin covers, Issues 1-7.
 
-The editable source artwork is intentionally limited to two shared files in `assets/`:
+The only committed PDF tolerated in the repository is the shared cover background:
 
-- `front-cover-empty-no-leaf.pdf`
-- `alius-leaf.svg`
+- `assets/front-cover-empty-no-leaf.pdf`
 
-`alius-leaf.svg` is the true vector leaf asset: three SVG paths extracted from the animated ALIUS brand source, with multiply blending preserving the overlap logic. The original animated vector file is retained in `source-assets/` for provenance and regeneration, but it is not used directly by the covers.
+The editable vector leaf source is:
 
-The common cover layer is generated once in `cover-style.tex`:
+- `assets/alius-leaf.svg`
+
+`alius-leaf.svg` is the canonical leaf asset: three SVG paths extracted from the animated ALIUS brand source, with multiply blending preserving the overlap logic. The original animated vector file is retained in `source-assets/` for provenance and regeneration, but it is not used directly by the covers.
+
+The common cover layer is generated in `cover-style.tex` from those two assets:
 
 - the background PDF
-- the ALIUS vector leaf
+- the ALIUS vector leaf, rendered from a TeX path cache generated from the SVG
 - the shared `ALIUS / BULLETIN / exploring the diversity of consciousness` header block
 
-Each `issueXX-cover.tex` file contains only issue-specific content:
+Each `issueXX-cover.tex` file contains only issue-specific live TeX text:
 
 - the editor line under the header
-- the left-side interviewee names, placed against shared right-edge arch bins that follow the white area of the background art
+- the left-side interviewee names
 - the issue number, date line, and website values in the footer
 
-All text remains live TeX text; no per-issue raster overlays are used.
-
-The QA references in `reference-covers/` are comparison inputs only; they are not used to build the covers.
+No committed per-issue cover PDFs are source assets. Cover PDFs are generated locally and ignored by Git.
 
 Compile one cover from the repository root:
 
@@ -39,17 +40,15 @@ Build all covers and then all issue PDFs:
 .\build-bulletins.ps1
 ```
 
-Render a reference comparison sheet while tuning the issue-specific text layer:
+Render a comparison sheet while tuning the issue-specific text layer, using PNG references only:
 
 ```powershell
 py Cover-Art\compare_covers.py
 ```
 
-`cover-style.tex` is engine-aware. Overleaf can compile the cover files with `pdflatex`; XeLaTeX/LuaLaTeX are also supported for local font matching. Under pdfTeX, the issue-specific text layer uses TeX Live's packaged Lato and Arial fonts when available, with Helvetica-compatible fallbacks only if those packages are missing.
+`cover-style.tex` is engine-aware. Overleaf can compile the cover files with `pdflatex` without Inkscape or shell-escape SVG conversion, because `generated/alius-leaf-paths.tex` is a TeX path cache derived from the SVG. XeLaTeX/LuaLaTeX are also supported for local font matching. Under pdfTeX, the issue-specific text layer uses TeX Live's packaged Lato and Arial fonts when available, with Helvetica-compatible fallbacks only if those packages are missing.
 
-For Overleaf/pdfTeX reliability, `cover-style.tex` first includes `generated/alius-leaf-from-svg.pdf`, which is a committed vector cache derived from `assets/alius-leaf.svg`. The SVG remains the canonical editable leaf source; the cache avoids an Inkscape dependency while preserving vector output. For local preview work, the style also accepts an untracked raster cache at `Cover-Art/.build/alius-leaf-preview.png`, then falls back to direct SVG conversion.
-
-Regenerate the static SVG and vector PDF cache from the animated source:
+Regenerate the static SVG and TeX path cache from the animated source:
 
 ```powershell
 py Cover-Art\generate_leaf_cache.py

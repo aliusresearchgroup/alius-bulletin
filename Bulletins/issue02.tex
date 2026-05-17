@@ -1,12 +1,17 @@
 % !TeX program = pdflatex
 % Compile this from the ALIUS-bulletin project root.
+% The cover is rendered from TeX plus Cover-Art/assets/front-cover-empty-no-leaf.pdf and Cover-Art/assets/alius-leaf.svg.
 \documentclass[a4paper]{article}
-\usepackage[margin=0pt]{geometry}
-\usepackage{pdfpages}
+\input{Cover-Art/cover-style.tex}
+\usepackage[hidelinks]{hyperref}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{parskip}
 \newcommand{\ALIUSIssueBuild}{1}
 \begin{document}
-\includepdf[pages=1,fitpaper=true]{Cover-Art/issue02-cover.pdf}
-% ALIUS Bulletin issue 2 assembled from standalone interview files.
+\input{Cover-Art/issue02-cover.tex}
+\newgeometry{margin=22mm}
+\pagestyle{plain}
+% ALIUS Bulletin issue 2 assembled from native standalone source files.
 \input{Interviews/Issue02/Friston/Friston.tex}
 \input{Interviews/Issue02/Fox_Koroma/Fox_Koroma.tex}
 \input{Interviews/Issue02/Friston_Fortier_Friedman/Friston_Fortier_Friedman.tex}
