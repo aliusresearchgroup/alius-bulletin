@@ -1,7 +1,9 @@
 % Shared cover renderer for Issues 01-07.
-% Source artwork is intentionally limited to:
+% Editable source artwork is intentionally limited to:
 %   - assets/front-cover-empty-no-leaf.pdf
 %   - assets/alius-leaf.svg
+% generated/alius-leaf-from-svg.png is a committed pdfTeX/Overleaf cache
+% derived from assets/alius-leaf.svg so the embedded SVG image layers render.
 \usepackage[
   paperwidth=595.44bp,
   paperheight=841.92bp,
@@ -10,10 +12,23 @@
 \usepackage{etoolbox}
 \usepackage{graphicx}
 \usepackage{iftex}
-\usepackage{svg}
 \usepackage{tikz}
 \usepackage{xcolor}
 \pagestyle{empty}
+
+\newif\ifAliusUseSvgFallback
+\IfFileExists{Cover-Art/generated/alius-leaf-from-svg.png}{%
+  \AliusUseSvgFallbackfalse
+}{%
+  \IfFileExists{Cover-Art/.build/alius-leaf-preview.png}{%
+    \AliusUseSvgFallbackfalse
+  }{%
+    \AliusUseSvgFallbacktrue
+  }%
+}
+\ifAliusUseSvgFallback
+  \usepackage{svg}
+\fi
 
 \definecolor{AliusCoverGreen}{HTML}{83BC25}
 \definecolor{AliusGreenDark}{HTML}{068236}
@@ -49,10 +64,14 @@
 \newcommand{\AliusClearInterviewees}{\gdef\AliusIntervieweeNodes{}}
 
 \newcommand{\AliusLeafGraphic}{%
-  \IfFileExists{Cover-Art/.build/alius-leaf-preview.png}{%
-    \includegraphics[width=43mm]{Cover-Art/.build/alius-leaf-preview.png}%
+  \IfFileExists{Cover-Art/generated/alius-leaf-from-svg.png}{%
+    \includegraphics[width=43mm]{Cover-Art/generated/alius-leaf-from-svg.png}%
   }{%
-    \includesvg[width=43mm]{Cover-Art/assets/alius-leaf}%
+    \IfFileExists{Cover-Art/.build/alius-leaf-preview.png}{%
+      \includegraphics[width=43mm]{Cover-Art/.build/alius-leaf-preview.png}%
+    }{%
+      \includesvg[inkscapelatex=false,width=43mm]{Cover-Art/assets/alius-leaf}%
+    }%
   }%
 }
 

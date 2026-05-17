@@ -2,7 +2,7 @@
 
 This folder contains standalone TeX entry points for the ALIUS Bulletin covers, Issues 1-7.
 
-The source artwork is intentionally limited to two shared files in `assets/`:
+The editable source artwork is intentionally limited to two shared files in `assets/`:
 
 - `front-cover-empty-no-leaf.pdf`
 - `alius-leaf.svg`
@@ -45,6 +45,6 @@ py Cover-Art\compare_covers.py
 
 `cover-style.tex` is engine-aware. Overleaf can compile the cover files with `pdflatex`; XeLaTeX/LuaLaTeX are also supported for local font matching.
 
-`cover-style.tex` prefers the canonical SVG leaf. For local preview work, it also accepts an untracked raster cache at `Cover-Art/.build/alius-leaf-preview.png`; Overleaf can compile directly from the SVG path.
+For Overleaf/pdfTeX reliability, `cover-style.tex` first includes `generated/alius-leaf-from-svg.png`, which is a committed cache derived from `assets/alius-leaf.svg`. The SVG remains the canonical editable leaf source; the cache only avoids Overleaf dropping the SVG's embedded image layers during compilation. For local preview work, the style also accepts an untracked raster cache at `Cover-Art/.build/alius-leaf-preview.png`, then falls back to direct SVG conversion.
 
 The second LaTeX pass is required because the shared renderer uses TikZ page anchors for absolute positioning.

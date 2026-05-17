@@ -10,7 +10,7 @@ The cover workflow now uses exactly two shared artwork assets:
 `cover-style.tex` owns the common layer for every issue:
 
 - the background PDF
-- the ALIUS leaf SVG
+- the ALIUS leaf, sourced from the SVG
 - the shared header block: `ALIUS`, `BULLETIN`, and `exploring the diversity of consciousness`
 
 The issue files own only:
@@ -46,6 +46,12 @@ Build all covers and bulletin PDFs:
 ```
 
 The cover sources are compatible with Overleaf's `pdflatex` default. `cover-style.tex` uses `fontspec` only under XeLaTeX/LuaLaTeX and falls back to TeX's Helvetica-compatible font family under pdfTeX.
+
+The SVG leaf contains embedded PNG layers. To avoid Overleaf silently dropping those layers during SVG conversion, the TeX layer includes `generated/alius-leaf-from-svg.png`, a committed cache regenerated from `assets/alius-leaf.svg` with:
+
+```powershell
+py Cover-Art\generate_leaf_cache.py
+```
 
 Render a fresh historical comparison sheet:
 
