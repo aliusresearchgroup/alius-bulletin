@@ -45,7 +45,7 @@ Render a reference comparison sheet while tuning the issue-specific text layer:
 py Cover-Art\compare_covers.py
 ```
 
-`cover-style.tex` is engine-aware. Overleaf can compile the cover files with `pdflatex`; XeLaTeX/LuaLaTeX are also supported for local font matching.
+`cover-style.tex` is engine-aware. Overleaf can compile the cover files with `pdflatex`; XeLaTeX/LuaLaTeX are also supported for local font matching. Under pdfTeX, the issue-specific text layer uses TeX Live's packaged Lato and Arial fonts when available, with Helvetica-compatible fallbacks only if those packages are missing.
 
 For Overleaf/pdfTeX reliability, `cover-style.tex` first includes `generated/alius-leaf-from-svg.pdf`, which is a committed vector cache derived from `assets/alius-leaf.svg`. The SVG remains the canonical editable leaf source; the cache avoids an Inkscape dependency while preserving vector output. For local preview work, the style also accepts an untracked raster cache at `Cover-Art/.build/alius-leaf-preview.png`, then falls back to direct SVG conversion.
 

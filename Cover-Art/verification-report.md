@@ -47,7 +47,9 @@ Build all covers and bulletin PDFs:
 .\build-bulletins.ps1
 ```
 
-The cover sources are compatible with Overleaf's `pdflatex` default. `cover-style.tex` uses `fontspec` only under XeLaTeX/LuaLaTeX and falls back to TeX's Helvetica-compatible font family under pdfTeX.
+The cover sources are compatible with Overleaf's `pdflatex` default. `cover-style.tex` uses `fontspec` only under XeLaTeX/LuaLaTeX. Under pdfTeX, it uses TeX Live's packaged Lato fonts for the early/late issue-specific text layer and packaged Arial for Issue 04 when available, with Helvetica-compatible fallbacks only if those packages are missing.
+
+Issue 04's interviewee names are horizontally scaled line by line against the live-text historical cover metrics so the text follows the original left-side arc without spilling into the background figure.
 
 The TeX layer includes `generated/alius-leaf-from-svg.pdf`, a committed vector cache regenerated from `assets/alius-leaf.svg` and `source-assets/logo-ALIUS-original-animated-leaf.svg` with:
 
