@@ -8,25 +8,80 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{tikz}
-\usepackage{fontspec}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp}
+  \usepackage{amssymb}
+\else
+  \usepackage{fontspec}
+\fi
 \pagestyle{empty}
 \fi
-\makeatletter
-\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
-\makeatother
-\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
-\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
-\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
-\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
-\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
-\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
-\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
-\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
-\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
-\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
-\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
-\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
-\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\ifPDFTeX
+  \providecommand{\ALIUSDeclareUnicodeFallbacks}{%
+    \DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}%
+    \DeclareUnicodeCharacter{00BE}{\ensuremath{\frac{3}{4}}}%
+    \DeclareUnicodeCharacter{0101}{\=a}%
+    \DeclareUnicodeCharacter{0107}{\'c}%
+    \DeclareUnicodeCharacter{012B}{\=\i}%
+    \DeclareUnicodeCharacter{0131}{\i}%
+    \DeclareUnicodeCharacter{0142}{\l}%
+    \DeclareUnicodeCharacter{015B}{\'s}%
+    \DeclareUnicodeCharacter{016B}{\=u}%
+    \DeclareUnicodeCharacter{025C}{\ensuremath{\epsilon}}%
+    \DeclareUnicodeCharacter{0278}{\ensuremath{\phi}}%
+    \DeclareUnicodeCharacter{02AE}{th}%
+    \DeclareUnicodeCharacter{02B0}{h}%
+    \DeclareUnicodeCharacter{02B4}{r}%
+    \DeclareUnicodeCharacter{02BE}{'}%
+    \DeclareUnicodeCharacter{02BF}{fi}%
+    \DeclareUnicodeCharacter{02C0}{fl}%
+    \DeclareUnicodeCharacter{02C1}{f}%
+    \DeclareUnicodeCharacter{02D9}{Th}%
+    \DeclareUnicodeCharacter{02EF}{-}%
+    \DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}%
+    \DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}%
+    \DeclareUnicodeCharacter{03BA}{\ensuremath{\kappa}}%
+    \DeclareUnicodeCharacter{068D}{-}%
+    \DeclareUnicodeCharacter{08BC}{I}%
+    \DeclareUnicodeCharacter{099E}{i}%
+    \DeclareUnicodeCharacter{1E43}{\d{m}}%
+    \DeclareUnicodeCharacter{1E47}{\d{n}}%
+    \DeclareUnicodeCharacter{1E63}{\d{s}}%
+    \DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}%
+    \DeclareUnicodeCharacter{25A1}{\ensuremath{\square}}%
+  }%
+  \ifdefined\ALIUSIssueBuild\else\ALIUSDeclareUnicodeFallbacks\fi
+  \providecommand{\ALIUSFontLatoLight}{\fontfamily{lato-LF}\fontseries{l}\selectfont}
+  \providecommand{\ALIUSFontLatoRegular}{\fontfamily{lato-LF}\fontseries{m}\selectfont}
+  \providecommand{\ALIUSFontLatoItalic}{\fontfamily{lato-LF}\fontseries{m}\itshape}
+  \providecommand{\ALIUSFontLatoLightItalic}{\fontfamily{lato-LF}\fontseries{l}\itshape}
+  \providecommand{\ALIUSFontCormorantRegular}{\fontfamily{CormorantGaramond-LF}\fontseries{m}\selectfont}
+  \providecommand{\ALIUSFontCormorantLight}{\fontfamily{CormorantGaramond-LF}\fontseries{l}\selectfont}
+  \providecommand{\ALIUSFontCormorantMedium}{\fontfamily{CormorantGaramond-LF}\fontseries{medium}\selectfont}
+  \providecommand{\ALIUSFontCormorantBold}{\fontfamily{CormorantGaramond-LF}\fontseries{b}\selectfont}
+  \providecommand{\ALIUSFontCormorantItalic}{\fontfamily{CormorantGaramond-LF}\fontseries{m}\itshape}
+  \providecommand{\ALIUSFontTimes}{\fontfamily{ptm}\selectfont}
+  \providecommand{\ALIUSFontCalibri}{\fontfamily{phv}\selectfont}
+  \providecommand{\ALIUSFontCambria}{\fontfamily{ptm}\selectfont}
+  \providecommand{\ALIUSFontSymbolFallback}{\fontfamily{ptm}\selectfont}
+\else
+  \providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+  \providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+  \providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+  \providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+  \providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+  \providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+  \providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+  \providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+  \providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+  \providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+  \providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+  \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+  \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\fi
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
 \definecolor{ALIUSC595959}{HTML}{595959}

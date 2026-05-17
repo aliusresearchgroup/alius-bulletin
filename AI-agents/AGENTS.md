@@ -26,14 +26,20 @@ Maintain an Overleaf-importable source archive where bulletin pieces and issue-l
 - Use paths that work when the whole repository is imported into Overleaf.
 - Keep folder names stable once published because Overleaf, issue files, and manifest paths depend on them.
 - Use ASCII in generated source files unless a source file already requires non-ASCII text.
+- After any completed repo change, commit and push the newest state to `origin/main` so Overleaf can sync it immediately.
+- Keep `AI-agents/formatting-context.md` current whenever formatting, compile-engine, layout, or visual-QA assumptions change.
 
 ## LaTeX Workflow
 
-When checking a single interview, compile from the repository root:
+LuaLaTeX is the faithful reconstruction engine because the interview layouts use OpenType fonts through `fontspec`. The repository includes `.latexmkrc` to force Overleaf/latexmk onto LuaLaTeX even if Overleaf's UI is still set to pdfLaTeX.
+
+When checking a single interview faithfully, compile from the repository root:
 
 ```powershell
-pdflatex -interaction=nonstopmode -halt-on-error "Interviews/Issue01/Carhart-Harris_Fortier_Milliere/Carhart-Harris_Fortier_Milliere.tex"
+lualatex -interaction=nonstopmode -halt-on-error "Interviews/Issue01/Carhart-Harris_Fortier_Milliere/Carhart-Harris_Fortier_Milliere.tex"
 ```
+
+Individual interview files also carry a pdfTeX fallback for Overleaf/direct-compile resilience, but pdfLaTeX output is a compatibility path rather than the visual-fidelity target.
 
 When checking a full issue, compile from the repository root through the build script so cover PDFs are generated locally first:
 

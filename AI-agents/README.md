@@ -11,3 +11,5 @@ This repository is a source-first reconstruction archive. The goal is to rebuild
 - `AI-agents/`: maintenance notes for future agents.
 
 Generated PDFs are local build artifacts and should stay untracked. The canonical cover leaf is `Cover-Art/assets/alius-leaf.svg`; the cover background PDF is tolerated only because it is explicitly the shared cover artwork substrate.
+
+For current formatting and compile-engine assumptions, read `AI-agents/formatting-context.md` before changing layout code. After completing repo work, commit and push `main` so Overleaf can sync the newest version.

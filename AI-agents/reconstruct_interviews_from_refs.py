@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 r"""
 Rebuild ALIUS interview TeX files from off-repo reference PDFs.
 
@@ -74,17 +74,17 @@ def normalize_extracted_text(text: str) -> str:
     """Repair common Word/PDF mojibake before TeX escaping."""
 
     manual = {
-        "â€”": "—",
-        "â€“": "–",
-        "â€œ": "“",
-        "â€\x9d": "”",
-        "â€": "”",
-        "â€˜": "‘",
-        "â€™": "’",
-        "â€¦": "…",
-        "Â°": "°",
-        "Â ": " ",
-        "Â": "",
+        "Ã¢â‚¬â€": "â€”",
+        "Ã¢â‚¬â€œ": "â€“",
+        "Ã¢â‚¬Å“": "â€œ",
+        "Ã¢â‚¬\x9d": "â€",
+        "Ã¢â‚¬Â": "â€",
+        "Ã¢â‚¬Ëœ": "â€˜",
+        "Ã¢â‚¬â„¢": "â€™",
+        "Ã¢â‚¬Â¦": "â€¦",
+        "Ã‚Â°": "Â°",
+        "Ã‚ ": " ",
+        "Ã‚": "",
     }
     for bad, good in manual.items():
         text = text.replace(bad, good)
@@ -280,25 +280,80 @@ def preamble(width: float, height: float, colors: set[int]) -> list[str]:
         r"\usepackage{graphicx}",
         r"\usepackage{xcolor}",
         r"\usepackage{tikz}",
-        r"\usepackage{fontspec}",
+        r"\usepackage{iftex}",
+        r"\ifPDFTeX",
+        r"  \usepackage[T1]{fontenc}",
+        r"  \usepackage[utf8]{inputenc}",
+        r"  \usepackage{textcomp}",
+        r"  \usepackage{amssymb}",
+        r"\else",
+        r"  \usepackage{fontspec}",
+        r"\fi",
         r"\pagestyle{empty}",
         r"\fi",
-        r"\makeatletter",
-        r"\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}",
-        r"\makeatother",
-        r"\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}",
-        r"\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}",
-        r"\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}",
-        r"\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}",
-        r"\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}",
-        r"\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}",
-        r"\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}",
-        r"\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}",
-        r"\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}",
-        r"\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}",
-        r"\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}",
-        r"\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}",
-        r"\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}",
+        r"\ifPDFTeX",
+        r"  \\providecommand{\\ALIUSDeclareUnicodeFallbacks}{%",
+        r"    \\DeclareUnicodeCharacter{00AC}{\\ensuremath{\\neg}}%",
+        r"    \\DeclareUnicodeCharacter{00BE}{\\ensuremath{\\frac{3}{4}}}%",
+        r"    \\DeclareUnicodeCharacter{0101}{\\=a}%",
+        r"    \\DeclareUnicodeCharacter{0107}{\\\'c}%",
+        r"    \\DeclareUnicodeCharacter{012B}{\\=\\i}%",
+        r"    \\DeclareUnicodeCharacter{0131}{\\i}%",
+        r"    \\DeclareUnicodeCharacter{0142}{\\l}%",
+        r"    \\DeclareUnicodeCharacter{015B}{\\\'s}%",
+        r"    \\DeclareUnicodeCharacter{016B}{\\=u}%",
+        r"    \\DeclareUnicodeCharacter{025C}{\\ensuremath{\\epsilon}}%",
+        r"    \\DeclareUnicodeCharacter{0278}{\\ensuremath{\\phi}}%",
+        r"    \\DeclareUnicodeCharacter{02AE}{th}%",
+        r"    \\DeclareUnicodeCharacter{02B0}{h}%",
+        r"    \\DeclareUnicodeCharacter{02B4}{r}%",
+        r"    \\DeclareUnicodeCharacter{02BE}{\'}%",
+        r"    \\DeclareUnicodeCharacter{02BF}{fi}%",
+        r"    \\DeclareUnicodeCharacter{02C0}{fl}%",
+        r"    \\DeclareUnicodeCharacter{02C1}{f}%",
+        r"    \\DeclareUnicodeCharacter{02D9}{Th}%",
+        r"    \\DeclareUnicodeCharacter{02EF}{-}%",
+        r"    \\DeclareUnicodeCharacter{0394}{\\ensuremath{\\Delta}}%",
+        r"    \\DeclareUnicodeCharacter{03B2}{\\ensuremath{\\beta}}%",
+        r"    \\DeclareUnicodeCharacter{03BA}{\\ensuremath{\\kappa}}%",
+        r"    \\DeclareUnicodeCharacter{068D}{-}%",
+        r"    \\DeclareUnicodeCharacter{08BC}{I}%",
+        r"    \\DeclareUnicodeCharacter{099E}{i}%",
+        r"    \\DeclareUnicodeCharacter{1E43}{\\d{m}}%",
+        r"    \\DeclareUnicodeCharacter{1E47}{\\d{n}}%",
+        r"    \\DeclareUnicodeCharacter{1E63}{\\d{s}}%",
+        r"    \\DeclareUnicodeCharacter{2260}{\\ensuremath{\\neq}}%",
+        r"    \\DeclareUnicodeCharacter{25A1}{\\ensuremath{\\square}}%",
+        r"  }%",
+        r"  \\ifdefined\\ALIUSIssueBuild\\else\\ALIUSDeclareUnicodeFallbacks\\fi",
+        r"  \providecommand{\ALIUSFontLatoLight}{\fontfamily{lato-LF}\fontseries{l}\selectfont}",
+        r"  \providecommand{\ALIUSFontLatoRegular}{\fontfamily{lato-LF}\fontseries{m}\selectfont}",
+        r"  \providecommand{\ALIUSFontLatoItalic}{\fontfamily{lato-LF}\fontseries{m}\itshape}",
+        r"  \providecommand{\ALIUSFontLatoLightItalic}{\fontfamily{lato-LF}\fontseries{l}\itshape}",
+        r"  \providecommand{\ALIUSFontCormorantRegular}{\fontfamily{CormorantGaramond-LF}\fontseries{m}\selectfont}",
+        r"  \providecommand{\ALIUSFontCormorantLight}{\fontfamily{CormorantGaramond-LF}\fontseries{l}\selectfont}",
+        r"  \providecommand{\ALIUSFontCormorantMedium}{\fontfamily{CormorantGaramond-LF}\fontseries{medium}\selectfont}",
+        r"  \providecommand{\ALIUSFontCormorantBold}{\fontfamily{CormorantGaramond-LF}\fontseries{b}\selectfont}",
+        r"  \providecommand{\ALIUSFontCormorantItalic}{\fontfamily{CormorantGaramond-LF}\fontseries{m}\itshape}",
+        r"  \providecommand{\ALIUSFontTimes}{\fontfamily{ptm}\selectfont}",
+        r"  \providecommand{\ALIUSFontCalibri}{\fontfamily{phv}\selectfont}",
+        r"  \providecommand{\ALIUSFontCambria}{\fontfamily{ptm}\selectfont}",
+        r"  \providecommand{\ALIUSFontSymbolFallback}{\fontfamily{ptm}\selectfont}",
+        r"\else",
+        r"  \providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}",
+        r"  \providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}",
+        r"  \providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}",
+        r"  \providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}",
+        r"  \providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}",
+        r"  \providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}",
+        r"  \providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}",
+        r"  \providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}",
+        r"  \providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}",
+        r"  \providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}",
+        r"  \providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}",
+        r"  \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}",
+        r"  \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}",
+        r"\fi",
     ]
     for c in sorted(colors):
         lines.append(rf"\definecolor{{{color_name(c)}}}{{HTML}}{{{color_hex(c)}}}")
@@ -367,13 +422,13 @@ def apply_manual_overrides(item: dict[str, Any], pages: list[tuple[list[dict[str
     spans = pages[0][0]
     for span in spans:
         if span["text"] == "Karl Friston" and 70 <= span["x"] <= 80 and 130 <= span["y"] <= 145:
-            span["text"] = "Karl Friston, Martin Fortier, Matthieu Koroma and Raphaël Millière"
+            span["text"] = "Karl Friston, Martin Fortier, Matthieu Koroma and RaphaÃ«l MilliÃ¨re"
             span["w"] = 268.0
         elif span["text"] == "Karl Friston" and 345 <= span["x"] <= 360 and 150 <= span["y"] <= 165:
-            span["text"] = "Karl Friston, Martin Fortier, Matthieu Koroma & Raphaël Millière"
+            span["text"] = "Karl Friston, Martin Fortier, Matthieu Koroma & RaphaÃ«l MilliÃ¨re"
             span["w"] = 168.0
         elif span["text"].startswith("Citation: Friston, K. (2018)."):
-            span["text"] = "Citation: Friston, K., Fortier, M., Koroma, M. & Millière, R. (2018)."
+            span["text"] = "Citation: Friston, K., Fortier, M., Koroma, M. & MilliÃ¨re, R. (2018)."
             span["w"] = 268.941
         elif span["text"] == "autobiography.":
             span["text"] = "Am I autistic? An intellectual autobiography."
