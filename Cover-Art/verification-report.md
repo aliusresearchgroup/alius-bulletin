@@ -7,6 +7,8 @@ The cover workflow now uses exactly two shared artwork assets:
 - `assets/front-cover-empty-no-leaf.pdf`
 - `assets/alius-leaf.svg`
 
+`assets/alius-leaf.svg` is a static vector leaf extracted from the animated ALIUS brand source. It uses three SVG paths and multiply blending for the leaf overlaps; it no longer embeds raster PNG data.
+
 `cover-style.tex` owns the common layer for every issue:
 
 - the background PDF
@@ -47,11 +49,13 @@ Build all covers and bulletin PDFs:
 
 The cover sources are compatible with Overleaf's `pdflatex` default. `cover-style.tex` uses `fontspec` only under XeLaTeX/LuaLaTeX and falls back to TeX's Helvetica-compatible font family under pdfTeX.
 
-The SVG leaf contains embedded PNG layers. To avoid Overleaf silently dropping those layers during SVG conversion, the TeX layer includes `generated/alius-leaf-from-svg.png`, a committed cache regenerated from `assets/alius-leaf.svg` with:
+The TeX layer includes `generated/alius-leaf-from-svg.pdf`, a committed vector cache regenerated from `assets/alius-leaf.svg` and `source-assets/logo-ALIUS-original-animated-leaf.svg` with:
 
 ```powershell
 py Cover-Art\generate_leaf_cache.py
 ```
+
+The generated cache contains no raster images (`pdfimages -list Cover-Art\generated\alius-leaf-from-svg.pdf` returns an empty image list).
 
 Render a fresh historical comparison sheet:
 

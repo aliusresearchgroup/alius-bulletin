@@ -2,8 +2,8 @@
 % Editable source artwork is intentionally limited to:
 %   - assets/front-cover-empty-no-leaf.pdf
 %   - assets/alius-leaf.svg
-% generated/alius-leaf-from-svg.png is a committed pdfTeX/Overleaf cache
-% derived from assets/alius-leaf.svg so the embedded SVG image layers render.
+% generated/alius-leaf-from-svg.pdf is a committed vector pdfTeX/Overleaf cache
+% derived from assets/alius-leaf.svg.
 \usepackage[
   paperwidth=595.44bp,
   paperheight=841.92bp,
@@ -17,7 +17,7 @@
 \pagestyle{empty}
 
 \newif\ifAliusUseSvgFallback
-\IfFileExists{Cover-Art/generated/alius-leaf-from-svg.png}{%
+\IfFileExists{Cover-Art/generated/alius-leaf-from-svg.pdf}{%
   \AliusUseSvgFallbackfalse
 }{%
   \IfFileExists{Cover-Art/.build/alius-leaf-preview.png}{%
@@ -63,14 +63,18 @@
 \newcommand{\AliusSetIssueEditors}[1]{\gdef\AliusIssueEditors{#1}}
 \newcommand{\AliusClearInterviewees}{\gdef\AliusIntervieweeNodes{}}
 
+\newcommand{\AliusLeafWidth}{55mm}
+\newcommand{\AliusLeafX}{30.50}
+\newcommand{\AliusLeafY}{14.50}
+
 \newcommand{\AliusLeafGraphic}{%
-  \IfFileExists{Cover-Art/generated/alius-leaf-from-svg.png}{%
-    \includegraphics[width=43mm]{Cover-Art/generated/alius-leaf-from-svg.png}%
+  \IfFileExists{Cover-Art/generated/alius-leaf-from-svg.pdf}{%
+    \includegraphics[width=\AliusLeafWidth]{Cover-Art/generated/alius-leaf-from-svg.pdf}%
   }{%
     \IfFileExists{Cover-Art/.build/alius-leaf-preview.png}{%
-      \includegraphics[width=43mm]{Cover-Art/.build/alius-leaf-preview.png}%
+      \includegraphics[width=\AliusLeafWidth]{Cover-Art/.build/alius-leaf-preview.png}%
     }{%
-      \includesvg[inkscapelatex=false,width=43mm]{Cover-Art/assets/alius-leaf}%
+      \includesvg[inkscapelatex=false,width=\AliusLeafWidth]{Cover-Art/assets/alius-leaf}%
     }%
   }%
 }
@@ -150,7 +154,7 @@
 \newcommand{\AliusRenderSharedCoverElements}{%
   \node[anchor=north west,inner sep=0pt] at (current page.north west)
     {\includegraphics[width=\paperwidth,height=\paperheight]{Cover-Art/assets/front-cover-empty-no-leaf.pdf}};
-  \node[anchor=north west,inner sep=0pt] at ([xshift=31.18bp,yshift=-28.35bp]current page.north west)
+  \node[anchor=north west,inner sep=0pt] at ([xshift=\AliusLeafX bp,yshift=-\AliusLeafY bp]current page.north west)
     {\AliusLeafGraphic};
   \node[anchor=base west,text=AliusCoverGreen] at ([xshift=\AliusTitleX bp,yshift=-\AliusTitleY bp]current page.north west)
     {{\AliusHeaderFont\fontsize{\AliusTitleSize}{\AliusTitleSize}\selectfont ALIUS}};
