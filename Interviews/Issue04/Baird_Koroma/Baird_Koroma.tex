@@ -1,38 +1,1052 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.2756bp,paperheight=841.8898bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{Internally generated conscious activity: Reflections upon (lucid) dreaming, mind-wandering and meditation}
-\author{Benjamin Baird Interviewed by Matthieu Koroma}
-\date{ALIUS Bulletin 4}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC0000FF}{HTML}{0000FF}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\definecolor{ALIUSCFF0000}{HTML}{FF0000}
+\definecolor{ALIUSCFFFFFF}{HTML}{FFFFFF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/h9bs-xs28\par
-\textbf{Keywords:} dreaming, lucid dreaming, mind-wandering, meditation, metacognition\par
-\section*{Abstract}
-Certain conscious states such as dreaming reveal that conscious activity can be to a large extent internally generated rather than being driven by sensory stimuli. In this interview, psychologist and neuroscientist Benjamin Baird discusses the developments of scientific research on these conscious phenomena including dreaming, mind-wandering and meditation and how they interrelate. Lucid dreaming, the ability to become aware that one is dreaming while in a dream, is highlighted as a unique way to gain experimental control over internally generated conscious activity during sleep.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin Internally Generated Conscious Activity: Reflections upon (lucid) dreaming, mind- wandering and meditation An interview with Benjamin Baird by Matthieu Koroma Benjamin Baird bbaird@wisc.edu University of Madison- Wisconsin, USA Matthieu Koroma mkoroma@ens-paris-saclay.fr Ecole Normale Superieure, Paris, France Cite as: Baird, B. \& Koroma, M. (2020). Internally generated conscious activity: Reflections upon (lucid) dreaming, mind-wandering and meditation. An interview with Benjamin Baird by Matthieu Koroma. ALIUS Bulletin, 4, 24-38, https://doi.org/10.34700/h9bs-xs28 Abstract Certain conscious states such as dreaming reveal that conscious activity can be to a large extent internally generated rather than being driven by sensory stimuli. In this interview, psychologist and neuroscientist Benjamin Baird discusses the developments of scientific research on these conscious phenomena including dreaming, mind-wandering and meditation and how they interrelate. Lucid dreaming, the ability to become aware that one is dreaming while in a dream, is highlighted as a unique way to gain experimental control over internally generated conscious activity during sleep. keywords: dreaming, lucid dreaming, mind-wandering, meditation, metacognition You hold a PhD in cognitive neuroscience and currently are a postdoctoral research fellow at the Wisconsin Institute for Sleep and Consciousness in the School of Medicine and Public Health at the University of Wisconsin, Madison. In your research, you have investigated topics such as mind-wandering, metacognition, meditation and dreaming. Could you introduce the scientific questions that you are targeting in your research? Since I was young I have been interested in conscious experience and how it arises in nature. Overall, my long-term research interests extend to broad scientific questions (which I grant I will likely never see answered in my lifetime but I pursue them nonetheless!) including: how subjectivity arises in Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 25 natural systems, how the capacity for explicit self-awareness arises in the human brain, the significance of language and symbolic representation in defining human cognition, as well as issues pertaining to emergence, information, and semiotic processes in biological systems. My research to date has mostly focused on spontaneous or self-generated conscious phenomena (e.g., mind-wandering, dreaming). I believe that studies of these spontaneous states can provide unique and useful ways of approaching scientific questions regarding consciousness, including characterizing its dynamics as well as specifying the necessary conditions for its presence or absence. Broadly, I am particularly interested in self-reflective awareness, both the fundamental question of how a creature or entity can have self- reflective awareness at all, as well as more generally how we monitor our conscious states. Along these lines, I have a particular interest in lucid dreaming, and I have focused on this state in my latest research. Dreaming and mind wandering have been proposed to rely on similar mechanisms to the extent that dreaming has been cast as "an intensified form of mind-wandering" (Fox et al., 2013). In this account, dreaming and mind wandering phenomena differ in quantitative rather than qualitative terms. Supporting this proposal, electroencephalogram (EEG) measurements have found that slow waves that are classically observed during sleep are also linked to mind-wandering experiences during wakefulness (Andrillon et al., 2019). These results blur the lines between cognitive and neural processes observed across sleep and wakefulness. Could you please explain some of the similarities and differences between dreaming during sleep and mind- wandering during wakefulness? Do you think we should study mind wandering and dreaming beyond the wakefulness vs. sleep dichotomy? What would be the advantages and pitfalls of doing so? I think "similarities and differences" is a good way to look at it, rather than "are they the same"? They are clearly not the same. They are both sections of the brain-mind state-space if you like, so in that sense continuous, but there are important differences between dreaming and mind-wandering. First, as a number of researchers have pointed out, dreams, particularly those occurring during Rapid Eye Movement (REM) sleep, often involve what might be called "full immersion", whereas mind-wandering does not. That is, in a dream you often find yourself embodied in a dream body interacting with a tridimensional (3D) multimodal virtual dream world. Even vivid Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 26 daydreams or mind-wandering episodes do not lead to this level of immersiveness, or, to borrow a term from the field of virtual reality, "presence". From this perspective, dreaming might be regarded as a full- blown world-simulation, which in this sense is more similar to our experience during the waking state as a whole, rather than just mind-wandering. This point is also related to the differences in experiential vividness of the states. For instance, in our research we have found that individuals can perform smooth pursuit eye movement tracking in REM sleep dreaming but not during visuomotor imagination during wakefulness (LaBerge, Baird \& Zimbardo, 2018). These and other findings indicate that the perceptual vividness of dreaming is likely higher than that typically experienced during mind-wandering or daydreaming states. In turn (there are many overlapping constructs here!), we have proposed that this is potentially related to the amount of disconnection or decoupling from the external environment. While we have found that mind-wandering consistently involves sensory decoupling, as revealed by event-related potentials (ERP), pupillometry, and cortical phase-locking for example, the decoupling during REM sleep is more intense, which may allow for increased vividness due to reduced competition from external stimuli. From the neuroscience perspective, an argument has been made that the states should be regarded as qualitatively the same because of overlapping neural substrates. However, while the evidence indicates that there are some brain regions that are shared between waking mind-wandering and REM sleep dreaming, there are also many differences, and overall in my view the substrate of REM sleep dreaming appears to be notably different, both in terms of neural activation patterns and neurochemistry, from that of waking mind-wandering. Finally, part of the answer to this question hinges on how we define mind-wandering. Jennifer Windt has made the important point that on a broad definition of mind-wandering as spontaneous conscious thoughts, such types of thoughts can occur in a dream! If one thing can occur within, or during, the overall state of the other, then it seems problematic to equate the two. There are many interesting similarities as well - i.e., perceptual decoupling, spontaneous internal generation, etc. - and thus overall I find the similarities and differences approach to be the most fruitful. Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 27 Lucid dreaming is defined as a kind of dream during which dreamers are aware that they are dreaming. Stephen LaBerge provided the first experimental evidence for lucid dreaming by showing that lucid dreamers can perform in their dream an eye-movement sequence defined with the experimenter during wakefulness (LaBerge et al., 1981). You published recently a major synthesis on the advances of the neurocognitive research investigating the cerebral bases of lucid dreaming (Baird, Mota-Rolim, et al., 2019). Can you summarize the state of what we know about the neural mechanisms of lucid dreaming? First, I would like to emphasize that research on this topic is still in its infancy and we need substantially more research before definitive conclusions can be drawn. After objectively validating lucid dreaming as a phenomenon of REM sleep using the eye signaling method, LaBerge and colleagues went on to study physiological correlates of lucid REM sleep using this technique. Their team did fantastic and rigorous research, which has unfortunately often been overlooked and not received the recognition that it deserves. One of the main findings of that initial period of research was that lucid REM sleep was associated with measures of phasic activation and autonomic nervous system arousal, including higher REM density, respiration rate and heart rate (LaBerge et al., 1986). Together these findings suggest that lucid dreams tend to occur during periods of heightened physiological activation during ongoing REM sleep. These findings also raised the further question of whether the lucid REM sleep state was associated with a global and non-specific activation of the brain or whether it was associated with activation of specific localized brain areas or changes in specific neural oscillatory patterns. Over the past 40 years there have unfortunately only been about four EEG studies on lucid dreaming published in peer-reviewed journals. And even more unfortunately, each finds a different purported neural signature of lucid dreaming! Many of these Dreams, particularly those occurring during Rapid Eye Movement (REM) sleep, often involve what might be called "full immersion", whereas mind-wandering does not. " " Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 28 studies have substantial interpretive issues and limited spatial sampling of the scalp, making them hard to interpret or compare. Thus in terms of EEG all we can say right now is that the current research consists of mixed results and more research is needed. In terms of functional magnetic resonance imaging (fMRI) experiments, research is even more scant, but several recent studies have pointed to regions of the frontoparietal network as important for lucid dreaming (Dresler et al., 2012; Baird et al., 2018). Critically, however, this comes from a case report and an individual differences study and there is still no group-level fMRI. As such, that remains one of the most important goals for upcoming work. One of the most important findings we have comes from pharmacology. Specifically, we know that the probability of having a lucid dream is substantially enhanced by cholinergic stimulation during REM sleep (LaBerge, LaMarca \& Baird, 2018). This fits overall with the findings noted above suggesting lucidity is associated with increased activation. In my view one of the most interesting and important next steps for research on the neurobiology of lucid dreaming therefore is to understand mechanistically why Acetylcholinesterase inhibitors have such a dramatic effect on lucid REM sleep. Extending the approach of LaBerge, several labs around the world recently investigated the ability of experimenters to communicate with the lucid dreamer. To do so, they observed the response of the lucid dreamer to questions (e.g., arithmetic operations) using a variety of predefined "codes", such as moving the eyes in one direction or moving certain muscles of the face to say "yes" and moving the eyes in another direction or moving other muscles for "no". Which new insights can be gained by the development of an extended real-time communication with a lucid dreamer? I think these findings are important to publish in the peer-reviewed literature as a proof of concept. Nevertheless, it is perhaps worth mentioning that many of us in the field have known for a long time that this was possible since there have been lucid dream induction devices available for decades that include the possibility for two-way interaction with the device through eye movements. I haven't yet heard a compelling argument for how this will open up new avenues of research. Most of the time lucid dreamers should be in a position to remember experimental tasks and intentions that were set in conversation with an experimenter before going to sleep, so it is hard to see Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 29 what this adds that goes beyond that in a substantially different way. Furthermore, communicating in this way with someone who is asleep and dreaming consistently runs the risk of waking him or her up. These comments should not in any way be taken to denigrate this research, as again I think it is important to publish as proof-of-concept. And perhaps there could be uses for this that I have not thought of yet. On the other hand, it does strike me that having a higher repertoire of signals on the output side could be useful for "annotating" ongoing physiological sleep recordings. For instance, my colleague Stephen LaBerge has suggested that by using something like 10 different types of eye signals a dreamer in the sleep lab could indicate that they are currently experiencing a variety of specific kinds of conscious content. By making these distinct signals, they could in real time label ongoing physiological recordings of dreams. This could be highly useful for psychophysiological studies of mind-brain relationships during sleep. Lucid dreaming differs from dreaming in terms of metacognition, the cognitive ability of having explicit knowledge on our cognitive processes. Indeed, we know that we are dreaming when we are dreaming lucidly as contrary to regular dreaming (Kahan \& LaBerge, 1994). Yet, lucid dreaming is also characterized by other mental capacities that differ from regular dreaming. For example, voluntary control is rated by the lucid dreamer as similar as wakefulness and is enhanced as compared to normal dreaming (Dresler et al., 2014). This allows for the dreamer to take the control of the course of the dreaming scenario. What can lucid dreaming teach us about the role of metacognition and more generally about the difference in cognitive activity during dreams and the waking state? You ask an interesting and important question. In fact, the paper you cite by Kahan and LaBerge showed that non-lucid dreams are characterized by more metacognitive thought than people typically acknowledge. For instance, they found that people often experience high-level cognition in dreams, including thoughts such as "I wonder how what I just said may have caused so-and-so to feel" or "so-and-so asked me a question and I realized I didn't know the answer and I felt embarrassed", etc. These are remarkably complex thoughts that have metacognitive components i.e., directly reflecting on one's own cognition or emotional state and/or others (theory-of-mind). Nevertheless, despite this, by definition we lack a specific kind of metacognitive knowledge Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 30 in (non-lucid) dreams: namely, knowledge about the overall state of consciousness we are in. On the basis of these findings, Kahan and LaBerge argued that dreaming and wakefulness actually aren't that different in terms of ongoing thought. After all, most of us don't go around during the waking state reflecting on our state of being awake, and so it was argued that it's actually not that peculiar that we do not do this during dreaming either. However, a problem with this argument is that dreaming scenarios and content are not merely a recapitulation of our waking lives. Instead, not only do highly bizarre events occur during dreams, but I can experience myself as a totally different person, or living in a totally different century, or I could find myself on another planet! The point is that during dreams we can find ourselves in situations that are profoundly discontinuous with the rest of our waking lives and yet we still don't notice that anything is amiss. This shows how the picture is actually more complex than is typically discussed: on the one hand, we can have highly complex, including metacognitive, thoughts, and on the other hand, we can be completely disoriented, which suggests that something is profoundly different about our state of consciousness during dreams. I think an interesting direction to pursue in resolving this apparent paradox is Tulving's notion of "autonoetic consciousness" (Tulving, 1985). In other research we find that, contrary to thoughts in the waking state and particularly mind-wandering, dreaming individuals rarely engage in episodic memory or autobiographical planning for the future. Thus one way to think about what is different during dreaming consciousness is in terms of our self- model, including our experience of ourselves as a self extended over time. Jennifer Windt and Thomas Metzinger have done excellent work in this area, and have begun to think about how many of the key changes in consciousness that occur after becoming lucid that you note above - including volitional control, episodic memory and metacognitive awareness of state - may all be related to changes in our self-model (Windt \& Metzinger, 2007). One way to think about what is different during dreaming consciousness is in terms of our self- model, including our experience of ourselves as a self extended over time. " " Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 31 Specifically, they have made the interesting suggestion that the specific metacognitive deficit in dreams may be directly linked to our ability to think about our self being in a current state. Similarly, as noted above, the re- instantiation of episodic memory also seems directly linked to our ability to experience selfhood, specifically the experience of ourselves over time, and volitional control is the experience of myself as an agent that can direct my attention or actions. Overall this suggests that for humans a key difference between waking and dreaming may be in how we experience ourselves as conscious subjects. For inexperienced lucid dreamers, dream reports reveal that it is difficult to maintain the state of lucidity and attempts to control the dream scenario may lead to the loss of lucidity or to awakenings (LaBerge \& Rheingold, 1990). Yet, with training, expert lucid dreamers can learn how to maintain such a state (Stumbrys et al., 2012). Such consideration can be extended to meditation as beginners might have difficulty entering the meditative state or remaining in it (Brown \& Engler, 1980). How does training allow for the access and stabilization of these conscious states? How do they relate to interindividual traits and practices (Schredl \& Erlacher, 2004; Baird, Riedner, et al., 2019)? Your question points to the connections between lucid dreaming and meditation, which to my mind is an interesting topic deserving of more research. There are two distinct aspects: access and stabilization. We have found that long-term meditation practitioners report more frequent lucid dreams compared to individuals without meditation training, suggesting that there is something about meditation practice that leads to greater access to the lucid dreaming state (Baird et al., 2019). Additionally, many of the primary skills cultivated in meditation practice (particularly open- monitoring or focused-attention meditation), including stability of attention and meta-awareness, are thought to be useful in having lucid dreams. Stumbrys et al. (2015) found an intriguing association between dispositional mindfulness (a construct that broadly refers to cultivating awareness of experience in the present moment) during waking states and lucid dream frequency, but only in individuals with prior meditation experience. Although preliminary, one interpretation of this finding is that at least some types of meditation practices result in changes in trait mindfulness, or cognitive skills associated with specific aspects of mindfulness, that then Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 32 carry over into sleep and dream states, leading to increases in lucidity. Our recent research has also found a link between specific aspects of trait mindfulness and lucid dream frequency. The link between mental training and sustaining lucidity is equally interesting from a theoretical point of view, however almost no empirical work has been done to explore this connection. Dunne, Thompson and Schooler (2019) have recently argued that certain styles of mediation, for instance Tibetan Mahamudra, specifically cultivate a type of non- propositional, sustained meta-awareness that could be useful in sustaining lucidity during a dream. I would like to see this investigated in future research. Sleep represents an interesting case for consciousness research since it consists in periods during which conscious activity is reduced, typically in NREM sleep, and a period where conscious activity qualitatively differs from wakefulness, typically in REM sleep. Yet, conscious experiences during sleep have long been considered with caution as reports about dreaming activity are available only after the sleeper has awakened and not during sleep (Malcolm, 1958; Windt, 2013). The identification of neural markers of consciousness, as well as the development of lucid dreaming research, opens novel ways to directly probe consciousness during sleep. What is the relevance of studying sleep according to you to understand consciousness? I think there are (at least) three critical points to be made here, and then a point specifically about lucid dreaming as methodology. First, sleep is the only naturally occurring physiological state characterized by a global loss and recovery of consciousness. Thus, sleep turns out to be a useful state for building and testing theories of consciousness. Specifically, any theory of consciousness needs to both account for and be consistent with the neurophysiology of sleep states associated with consciousness. If the predictions of a neurobiological theory are inconsistent with the observation that consciousness occurs in particular brain states during sleep, then the theory needs to be revised or discarded. Having the opportunity to study a state with a different neurophysiological milieu seems a great boon to scientific research in this area. Being able to study this alternate state puts us in a stronger position to build better, more generalizable theories. Second, unlike other states, such as anesthesia-induced states of unconsciousness, Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 33 sleep affords us the unique opportunity to contrast consciousness with unconsciousness within the same overall vigilance state. There are likely many changes in the brain that take place during the shift from wakefulness to sleep or anesthesia to post-recovery wakefulness that have nothing to do with consciousness per se. Thus, within-state contrasts in NREM or REM sleep allow us to study specific changes in brain activity associated with the change in consciousness and to avoid confounding differences in brain activity between vigilance states that are not related to consciousness. Third, conscious states during sleep are largely decoupled from the external environment, so this fortuitously allows us to study the neural substrate of consciousness while avoiding another critical confound: namely, the neural activity associated with stimulus processing but not related to the generation of conscious percepts. Finally, in line with the high value of sleep research for consciousness, lucid dreaming opens up a new way for us to directly study conscious content during ongoing sleep dreaming. I don't think this fact has yet been appreciated or widely recognized. What lucid dreaming essentially gives us is experimental control over the dream state in a way that was previously impossible. As we have shown in our recent studies, lucid dreamers can perform specific tasks during dreams or invoke specific types of conscious content (e.g., LaBerge, Baird \& Zimbardo, 2018). Lucid dreaming is thus an invaluable methodological tool within the cognitive neuroscience to study dreaming and by extension consciousness. On a final note, mind-wandering has been reported for accounting about 50\% of our awake life (Killingsworth \& Gilbert, 2010) and sleep represents 30\% of our lifetime (Iber et al., 2007). Your research topics cover thus the majority of our life. How does research on these topics change our view of mental life and the potential of the mind? What lucid dreaming essentially gives us is experimental control over the dream state in a way that was previously impossible. " " Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 34 One of the things that I find most fascinating about self-generated states of consciousness is that they illustrate the profound extent to which our ongoing conscious experiences are generated internally. This is illustrated most strikingly in the case of dreams, where, as I mentioned earlier, we can experience a multimodal 3D virtual reality that can seem just as real and experientially vivid as waking life, but we know is generated completely independently of the external environment. For me personally, this has profoundly altered my view of perception. I spent most of my life as a naive- realist, thinking that I was looking out through the windows of my eyes and seeing directly physical objects in front of me. It turns out that is not how perception works. Instead, at all times what we experience is quite literally a "virtual reality" generated by our brain. I regard this as one of the most interesting things I have ever learned. So overall, one view that emerges from studying self-generated states, in particular dreaming, is that our experience of the world is at all times endogenously generated by the ongoing dynamics of the brain, but is merely shaped by environmental input some of the time. This point has been made several times by other researchers, but I emphasize it again here because I think it does offer a profound shift in how we think about our ongoing conscious mental activities and the nature of our perceptual experience of the world. In terms of the potentials of the mind, that is a big question. I will just mention one here. One of the ways of exploring this that has most fascinated me is examining the following question: By extending self-aware consciousness into dream and sleep states, could we tap into potentials of our minds that we haven't yet explored? This is yet another one of the reasons I have been fascinated by lucid dreaming and drawn to do scientific research on the topic. The question is, by being able to bring our "wake-like" cognitive faculties into the REM sleep dreaming state, could we explore a part of our mind-brain "state-space" that we haven't previously had access to? And could this state have unique uses, for example for things like problem-solving, art or creativity? To briefly mention an example, I met a professional composer who in his lucid dreams would find a radio and turn it on and hear symphonies being played. He would then wake up and transcribe the music that he heard in the dream into musical notation. In this way he was able to consciously use the REM sleep state for creative inspiration. I've met visual Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 35 artists that have done the same type of thing, for instance walking into an "art gallery" in their lucid dream and seeing paintings on the walls displayed, and then waking up and painting the paintings that they saw in the dream gallery. These are anecdotes and this needs to be researched. But it does raise the intriguing possibility that there may be untapped potentials of our minds that we may be able to access by extending greater awareness into the REM sleep state. Overall, I don't think we've really considered yet what the potentials could be of making the dreaming state of the brain accessible to our unique form of self-aware consciousness. References Andrillon, T., Windt, J., Silk, T., Drummond, S. P. A., Bellgrove, M. A., \& Tsuchiya, N. (2019). Does the Mind Wander When the Brain Takes a Break? Local Sleep in Wakefulness, Attentional Lapses and Mind-Wandering. Frontiers in Neuroscience, 13, 949. https://doi.org/10.3389/fnins.2019.00949 Baird, B., Smallwood, J., Mrazek, M. D., Kam, J. W. Y., Franklin, M. S., \& Schooler, J. W. (2012). Inspired by Distraction: Mind Wandering Facilitates Creative Incubation. Psychological Science, 23(10), 1117-1122. https://doi.org/10.1177/0956797612446024 Baird, B., Castelnovo, A., Gosseries, O., \& Tononi, G. (2018). Frequent lucid dreaming associated with increased functional connectivity between frontopolar cortex and temporoparietal association areas. Scientific reports, 8(1), 1-15. https://doi.org/ 10.1038/s41598-018-36190-w Baird, B., Mota-Rolim, S. A., \& Dresler, M. (2019). The cognitive neuroscience of lucid dreaming. Neuroscience \& Biobehavioral Reviews, 100, 305-323. https://doi.org/10.1016/j.neubiorev.2019.03.008 Baird, B., Riedner, B. A., Boly, M., Davidson, R. J., \& Tononi, G. (2019). Increased lucid dream frequency in long-term meditators but not following By extending self-aware consciousness into dream and sleep states, could we tap into potentials of our minds that we haven't yet explored? " " Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 36 mindfulness-based stress reduction training. Psychology of Consciousness: Theory, Research, and Practice, 6(1), 40-54. https://doi.org/10.1037/cns0000176 Brown, D. P., \& Engler, J. (1980). The stages of mindfulness meditation: A validation study. The Journal of Transpersonal Psychology; Palo Alto, Calif., 12(2), 143-193. http://atpweb.org/jtparchive/trps-12-80-02-143.pdf Cai, D. J., Mednick, S. A., Harrison, E. M., Kanady, J. C., \& Mednick, S. C. (2009). REM, not incubation, improves creativity by priming associative networks. Proceedings of the National Academy of Sciences, 106(25), 10130-10134. https://doi.org/10.1073/pnas.0900271106 Colzato, L. S., Ozturk, A., \& Hommel, B. (2012). Meditate to Create: The Impact of Focused-Attention and Open-Monitoring Training on Convergent and Divergent Thinking. Frontiers in Psychology, 3. https://doi.org/10.3389/fpsyg.2012.00116 Dement, W., \& Kleitman, N. (1957). Cyclic variations in EEG during sleep and their relation to eye movements, body motility, and dreaming. Electroencephalography and Clinical Neurophysiology, 9(4), 673-690. https://doi.org/10.1016/0013-4694(57)90088-3 Ding, X., Tang, Y.-Y., Tang, R., \& Posner, M. I. (2014). Improving creativity performance by short-term meditation. Behavioral and Brain Functions: BBF, 10, 9. https://doi.org/10.1186/1744-9081-10-9 Dresler, M., Wehrle, R., Spoormaker, V. I., Koch, S. P., Holsboer, F., Steiger, A., Obrig., H., Samann, P. G., \& Czisch, M. (2012). Neural correlates of dream lucidity obtained from contrasting lucid versus non-lucid REM sleep: a combined EEG/fMRI case study. Sleep, 35(7), 1017-1020. https://doi.org/10.5665/sleep.1974 Dresler, M., Eibl, L., Fischer, C. F. J., Wehrle, R., Spoormaker, V. I., Steiger, A., Czisch, M., \& Pawlowski, M. (2014). Volitional components of consciousness vary across wakefulness, dreaming and lucid dreaming. Frontiers in Psychology, 4. https://doi.org/10.3389/fpsyg.2013.00987 Fox, K. C. R., Nijeboer, S., Solomonova, E., Domhoff, G. W., \& Christoff, K. (2013). Dreaming as mind wandering: Evidence from functional neuroimaging and first-person content reports. Frontiers in Human Neuroscience, 7. https://doi.org/10.3389/fnhum.2013.00412 Grecucci, A., Pappaianni, E., Siugzdaite, R., Theuninck, A., \& Job, R. (2015). Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 37 Mindful Emotion Regulation: Exploring the Neurocognitive Mechanisms behind Mindfulness. BioMed Research International, 2015, 1-9. https://doi.org/10.1155/2015/670724 Iber, C., Ancoli-Israel, S., Chesson, A. L., \& Quan, S. F. (2007). The AASM manual for the scoring of sleep and associated events: Rules, terminology and technical specifications (Vol. 1). Westchester, IL: American Academy of Sleep Medicine. https://aasm.org/clinical-resources/scoring-manual/ Kahan, T. L., \& LaBerge, S. (1994). Lucid dreaming as metacognition: Implications for cognitive science. Consciousness and Cognition, 3, 246-264. https://doi.org/10.1111/cogs.12491 Killingsworth, M. A., \& Gilbert, D. T. (2010). A Wandering Mind Is an Unhappy Mind. Science, 330(6006), 932-932. https://doi.org/10.1126/science.1192439 Kircanski, K., Thompson, R. J., Sorenson, J., Sherdell, L., \& Gotlib, I. H. (2018). The everyday dynamics of rumination and worry: Precipitant events and affective consequences. Cognition and Emotion, 32(7), 1424-1436. https://doi.org/10.1080/02699931.2017.1278679 LaBerge, S., Baird, B., \& Zimbardo, P. G. (2018). Smooth tracking of visual targets distinguishes lucid REM sleep dreaming and waking perception from imagination. Nature communications, 9(1), 1-8. https://doi.org/10.1038/s41467-018-05547-0 LaBerge, S., LaMarca, K., \& Baird, B. (2018). Pre-sleep treatment with galantamine stimulates lucid dreaming: A double-blind, placebo-controlled, crossover study. PLoS One, 13(8), e0201246. https://doi.org/10.1371/journal.pone.0201246 La Berge, S. P., Nagel, L. E., Dement, W. C., \& Zarcone, V. P. (1981). Lucid Dreaming Verified by Volitional Communication during Rem Sleep. Perceptual and Motor Skills, 52(3), 727-732. https://doi.org/10.2466/pms.1981.52.3.727 LaBerge, S., \& Rheingold, H. (1990). Exploring the World of Lucid Dreaming. New York: Ballantine Books. Levin, R., \& Nielsen, T. (2009). Nightmares, Bad Dreams, and Emotion Dysregulation: A Review and New Neurocognitive Model of Dreaming. Current Directions in Psychological Science, 18(2), 84-88. https://doi.org/10.1111/j.1467-8721.2009.01614.x Benjamin Baird - Internally generated conscious activity ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 38 Malcolm, N. (1958). Dreaming Malcolm. Nielsen, T. A. (2004). Chronobiological features of dream production. Sleep Medicine Reviews, 8(5), 403-424. https://doi.org/10.1016/j.smrv.2004.06.005 Schredl, M., \& Erlacher, D. (2004). Lucid dreaming frequency and personality. Personality and Individual Differences, 37(7), 1463-1473. https://doi.org/10.1016/j.paid.2004.02.003 Siclari, F., Baird, B., Perogamvros, L., Bernardi, G., LaRocque, J. J., Riedner, B., Boly, M., Postle, B. R., \& Tononi, G. (2017). The neural correlates of dreaming. Nature Neuroscience, 20(6), 872-878. https://doi.org/10.1038/nn.4545 Smallwood, J., Fishman, D. J., \& Schooler, J. W. (2007). Counting the cost of an absent mind: Mind wandering as an underrecognized influence on educational performance. Psychonomic Bulletin \& Review, 14(2), 230-236. https://doi.org/10.3758/BF03194057 Smallwood, J., Fitzgerald, A., Miles, L. K., \& Phillips, L. H. (2009). Shifting moods, wandering minds: Negative moods lead the mind to wander. Emotion, 9(2), 271-276. https://doi.org/10.1037/a0014855 Tulving, E. (1985). Memory and consciousness. Canadian Psychology/Psychologie canadienne, 26(1), 1. http://doi.org/10.1037/h0080017 Wagner, U., Gais, S., Haider, H., Verleger, R., \& Born, J. (2004). Sleep inspires insight. Nature, 427(6972), 352-355. https://doi.org/10.1038/nature02223 Walker, M. P., \& van der Helm, E. (2009). Overnight therapy? The role of sleep in emotional brain processing. Psychological Bulletin, 135(5), 731-748. https://doi.org/10.1037/a0016570 Windt, J. M. (2013). Reporting dream experience: Why (not) to be skeptical about dream reports. Frontiers in Human Neuroscience, 7. https://doi.org/10.3389/fnhum.2013.00708 Windt, J. M., \& Metzinger, T. (2007). The philosophy of dreaming and self consciousness: what happens to the experiential subject during the dream state?. In D. Barrett \& P. McNamara (Eds.), Praeger perspectives. The new science of dreaming: Vol. 3. Cultural and theoretical perspectives (p. 193- 247). Praeger Publishers/Greenwood Publishing Group. https://psycnet.apa.org/record/2007-09897-009\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC1F8135] (401.031bp,-224.391bp) rectangle ++(65.520bp,-0.240bp);
+  \fill[ALIUSC1F8135] (401.031bp,-284.391bp) rectangle ++(114.000bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (395.511bp,-201.351bp) rectangle ++(0.480bp,-69.600bp);
+  \fill[ALIUSC0000FF] (194.151bp,-320.151bp) rectangle ++(162.720bp,-0.480bp);
+  \fill[ALIUSCBFBFBF] (395.511bp,-270.951bp) rectangle ++(0.480bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (395.511bp,-273.111bp) rectangle ++(0.480bp,-48.240bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-395.031bp) rectangle ++(414.960bp,-14.400bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-409.431bp) rectangle ++(414.960bp,-14.400bp);
+  \fill[ALIUSCFFFFFF] (105.111bp,-423.831bp) rectangle ++(400.800bp,-14.400bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-438.231bp) rectangle ++(414.960bp,-14.400bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-452.631bp) rectangle ++(414.960bp,-14.400bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-467.031bp) rectangle ++(414.960bp,-14.400bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-481.431bp) rectangle ++(414.960bp,-14.400bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-495.831bp) rectangle ++(215.520bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-566.151bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-583.431bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-600.711bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-617.751bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-635.031bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-652.311bp) rectangle ++(268.080bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-686.871bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-706.311bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-725.751bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-745.431bp) rectangle ++(414.960bp,-17.040bp);
+  \ALIUSPlacedTextContent{90.951}{72.970}{358.794}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Internally Generated Conscious Activity:}
+  \ALIUSPlacedTextContent{90.951}{108.970}{346.427}{ALIUSC000000}{\ALIUSFontLatoLight}{19.920}{Reflections upon (lucid) dreaming, mind-}
+  \ALIUSPlacedTextContent{90.951}{132.970}{230.116}{ALIUSC000000}{\ALIUSFontLatoLight}{19.920}{wandering and meditation}
+  \ALIUSPlacedTextContent{401.031}{201.254}{76.013}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Benjamin Baird}
+  \ALIUSPlacedTextContent{88.791}{201.320}{130.764}{ALIUSC000000}{\ALIUSFontLatoLight}{16.080}{An interview with}
+  \ALIUSPlacedTextContent{401.031}{214.429}{72.891}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{bbaird@wisc.edu}
+  \ALIUSPlacedTextContent{88.791}{220.557}{128.693}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Benjamin Baird}
+  \ALIUSPlacedTextContent{401.031}{225.229}{91.376}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{University of Madison-}
+  \ALIUSPlacedTextContent{401.031}{236.029}{64.125}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Wisconsin, USA}
+  \ALIUSPlacedTextContent{88.791}{255.279}{119.346}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Matthieu Koroma}
+  \ALIUSPlacedTextContent{401.031}{261.254}{88.206}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Matthieu Koroma}
+  \ALIUSPlacedTextContent{88.791}{273.242}{304.241}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Cite as: Baird, B. \& Koroma, M. (2020). Internally generated conscious}
+  \ALIUSPlacedTextContent{401.031}{274.429}{116.378}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{mkoroma@ens-paris-saclay.fr}
+  \ALIUSPlacedTextContent{401.031}{285.229}{105.901}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Ecole Normale Supérieure,}
+  \ALIUSPlacedTextContent{88.791}{285.242}{304.235}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{activity: Reflections upon (lucid) dreaming, mind-wandering and}
+  \ALIUSPlacedTextContent{401.031}{296.029}{51.966}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Paris, France}
+  \ALIUSPlacedTextContent{88.791}{297.242}{304.246}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{meditation. An interview with Benjamin Baird by Matthieu Koroma.}
+  \ALIUSPlacedTextContent{88.791}{309.242}{58.122}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{146.869}{309.242}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{151.774}{309.242}{5.846}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{4}
+  \ALIUSPlacedTextContent{157.574}{309.242}{34.011}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{, 24-38,}
+  \ALIUSPlacedTextContent{194.127}{309.242}{162.742}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/h9bs-xs28}
+  \ALIUSPlacedTextContent{90.951}{366.412}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
+  \ALIUSPlacedTextContent{90.951}{394.947}{418.269}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{Certain conscious states such as dreaming reveal that conscious activity can be}
+  \ALIUSPlacedTextContent{90.951}{409.347}{418.274}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{to a large extent internally generated rather than being driven by sensory stimuli.}
+  \ALIUSPlacedTextContent{90.951}{423.747}{418.275}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In this interview, psychologist and neuroscientist Benjamin Baird discusses the}
+  \ALIUSPlacedTextContent{90.951}{438.147}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{developments of scientific research on these conscious phenomena including}
+  \ALIUSPlacedTextContent{90.951}{452.547}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{dreaming, mind-wandering and meditation and how they interrelate. Lucid}
+  \ALIUSPlacedTextContent{90.951}{466.947}{418.267}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{dreaming, the ability to become aware that one is dreaming while in a dream, is}
+  \ALIUSPlacedTextContent{90.951}{481.347}{418.264}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{highlighted as a unique way to gain experimental control over internally}
+  \ALIUSPlacedTextContent{90.951}{495.987}{212.874}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{generated conscious activity during sleep}
+  \ALIUSPlacedTextContent{303.813}{497.487}{2.628}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{.}
+  \ALIUSPlacedTextContent{90.951}{522.867}{47.340}{ALIUSC000000}{\ALIUSFontLatoItalic}{12.000}{keywords}
+  \ALIUSPlacedTextContent{138.289}{522.867}{349.726}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{: dreaming, lucid dreaming, mind-wandering, meditation, metacognition}
+  \ALIUSPlacedTextContent{90.951}{566.373}{418.407}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You hold a PhD in cognitive neuroscience and currently are a postdoctoral}
+  \ALIUSPlacedTextContent{90.951}{583.653}{418.304}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{research fellow at the Wisconsin Institute for Sleep and Consciousness in the}
+  \ALIUSPlacedTextContent{90.951}{600.933}{418.256}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{School of Medicine and Public Health at the University of Wisconsin, Madison.}
+  \ALIUSPlacedTextContent{90.951}{617.973}{418.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In your research, you have investigated topics such as mind-wandering,}
+  \ALIUSPlacedTextContent{90.951}{635.253}{418.374}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{metacognition, meditation and dreaming. Could you introduce the scientific}
+  \ALIUSPlacedTextContent{90.951}{652.533}{267.922}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{questions that you are targeting in your research?}
+  \ALIUSPlacedTextContent{90.951}{686.969}{418.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Since I was young I have been interested in conscious experience and how it}
+  \ALIUSPlacedTextContent{90.951}{706.409}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{arises in nature. Overall, my long-term research interests extend to broad}
+  \ALIUSPlacedTextContent{90.951}{725.849}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{scientific questions (which I grant I will likely never see answered in my}
+  \ALIUSPlacedTextContent{90.951}{745.529}{418.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lifetime but I pursue them nonetheless!) including: how subjectivity arises in}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSCFFFFFF] (90.951bp,-72.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-92.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-111.831bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-131.511bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-150.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-170.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-189.831bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-209.511bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-228.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-248.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-267.831bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-287.511bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-306.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-326.391bp) rectangle ++(346.560bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-357.831bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-375.111bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-392.391bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-409.671bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-426.951bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-444.231bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-461.511bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-478.551bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-495.831bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-513.111bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-530.391bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-547.671bp) rectangle ++(414.960bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-564.951bp) rectangle ++(269.280bp,-15.120bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-594.231bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-613.671bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-633.111bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-652.551bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-672.231bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-691.671bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-711.111bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-730.551bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-750.231bp) rectangle ++(414.960bp,-17.040bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{494.631}{36.329}{14.611}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{25}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{natural systems, how the capacity for explicit self-awareness arises in the}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{human brain, the significance of language and symbolic representation in}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{defining human cognition, as well as issues pertaining to emergence,}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{information, and semiotic processes in biological systems. My research to}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{date has mostly focused on spontaneous or self-generated conscious}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.164}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{phenomena (e.g., mind-wandering, dreaming). I believe that studies of these}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{spontaneous states can provide unique and useful ways of approaching}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.374}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{scientific questions regarding consciousness, including characterizing its}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dynamics as well as specifying the necessary conditions for its presence or}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{absence. Broadly, I am particularly interested in self-reflective awareness,}
+  \ALIUSPlacedTextContent{90.951}{267.928}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{both the fundamental question of how a creature or entity can have self-}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reflective awareness at all, as well as more generally how we monitor our}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious states. Along these lines, I have a particular interest in lucid}
+  \ALIUSPlacedTextContent{90.951}{326.488}{353.208}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming, and I have focused on this state in my latest research.}
+  \ALIUSPlacedTextContent{90.951}{358.053}{418.511}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Dreaming and mind wandering have been proposed to rely on similar}
+  \ALIUSPlacedTextContent{90.951}{375.333}{418.389}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{mechanisms to the extent that dreaming has been cast as "an intensified form}
+  \ALIUSPlacedTextContent{90.951}{392.613}{418.399}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{of mind-wandering" (Fox et al., 2013). In this account, dreaming and mind}
+  \ALIUSPlacedTextContent{90.951}{409.893}{418.375}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{wandering phenomena differ in quantitative rather than qualitative terms.}
+  \ALIUSPlacedTextContent{90.951}{427.173}{418.292}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Supporting this proposal, electroencephalogram (EEG) measurements have}
+  \ALIUSPlacedTextContent{90.951}{444.453}{418.429}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{found that slow waves that are classically observed during sleep are also linked}
+  \ALIUSPlacedTextContent{90.951}{461.733}{418.463}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{to mind-wandering experiences during wakefulness (Andrillon et al., 2019).}
+  \ALIUSPlacedTextContent{90.951}{478.773}{418.310}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{These results blur the lines between cognitive and neural processes observed}
+  \ALIUSPlacedTextContent{90.951}{496.053}{418.377}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{across sleep and wakefulness. Could you please explain some of the}
+  \ALIUSPlacedTextContent{90.951}{513.333}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{similarities and differences between dreaming during sleep and mind-}
+  \ALIUSPlacedTextContent{90.951}{530.613}{418.462}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{wandering during wakefulness? Do you think we should study mind}
+  \ALIUSPlacedTextContent{90.951}{547.893}{418.369}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{wandering and dreaming beyond the wakefulness vs. sleep dichotomy? What}
+  \ALIUSPlacedTextContent{90.951}{565.173}{272.783}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{would be the advantages and pitfalls of doing so?}
+  \ALIUSPlacedTextContent{90.951}{594.328}{418.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think "similarities and differences" is a good way to look at it, rather than}
+  \ALIUSPlacedTextContent{90.951}{613.768}{418.364}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"are they the same"? They are clearly not the same. They are both sections of}
+  \ALIUSPlacedTextContent{90.951}{633.208}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the brain-mind state-space if you like, so in that sense continuous, but there}
+  \ALIUSPlacedTextContent{90.951}{652.648}{418.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{are important differences between dreaming and mind-wandering. First, as}
+  \ALIUSPlacedTextContent{90.951}{672.328}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a number of researchers have pointed out, dreams, particularly those}
+  \ALIUSPlacedTextContent{90.951}{691.768}{418.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{occurring during Rapid Eye Movement (REM) sleep, often involve what}
+  \ALIUSPlacedTextContent{90.951}{711.208}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might be called "full immersion", whereas mind-wandering does not. That is,}
+  \ALIUSPlacedTextContent{90.951}{730.648}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in a dream you often find yourself embodied in a dream body interacting}
+  \ALIUSPlacedTextContent{90.951}{750.328}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with a tridimensional (3D) multimodal virtual dream world. Even vivid}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSCFFFFFF] (90.951bp,-72.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-92.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-111.831bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-131.511bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-150.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-170.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-189.831bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-209.511bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-228.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-248.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-267.831bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-287.511bp) rectangle ++(216.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-326.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-345.831bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-365.511bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-384.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-404.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-423.831bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-443.511bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-462.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-482.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-501.831bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-521.271bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-540.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-560.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-579.831bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-599.271bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-618.951bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-638.391bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-657.831bp) rectangle ++(414.960bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-677.271bp) rectangle ++(414.960bp,-17.280bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-696.951bp) rectangle ++(382.320bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (480.471bp,-696.951bp) rectangle ++(25.440bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-716.391bp) rectangle ++(344.880bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (449.511bp,-716.391bp) rectangle ++(56.400bp,-17.040bp);
+  \fill[ALIUSCFFFFFF] (90.951bp,-735.831bp) rectangle ++(414.960bp,-17.040bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{26}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{daydreams or mind-wandering episodes do not lead to this level of}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{immersiveness, or, to borrow a term from the field of virtual reality,}
+  \ALIUSPlacedTextContent{90.951}{111.928}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"presence". From this perspective, dreaming might be regarded as a full-}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{blown world-simulation, which in this sense is more similar to our experience}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{during the waking state as a whole, rather than just mind-wandering. This}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{point is also related to the differences in experiential vividness of the states.}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.140}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{For instance, in our research we have found that individuals can perform}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.329}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{smooth pursuit eye movement tracking in REM sleep dreaming but not}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{during visuomotor imagination during wakefulness (LaBerge, Baird \&}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Zimbardo, 2018). These and other findings indicate that the perceptual}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vividness of dreaming is likely higher than that typically experienced during}
+  \ALIUSPlacedTextContent{90.951}{287.608}{223.557}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind-wandering or daydreaming states.}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.230}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In turn (there are many overlapping constructs here!), we have proposed that}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this is potentially related to the amount of disconnection or decoupling from}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the external environment. While we have found that mind-wandering}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consistently involves sensory decoupling, as revealed by event-related}
+  \ALIUSPlacedTextContent{90.951}{404.488}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{potentials (ERP), pupillometry, and cortical phase-locking for example, the}
+  \ALIUSPlacedTextContent{90.951}{423.928}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decoupling during REM sleep is more intense, which may allow for increased}
+  \ALIUSPlacedTextContent{90.951}{443.608}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vividness due to reduced competition from external stimuli. From the}
+  \ALIUSPlacedTextContent{90.951}{463.048}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroscience perspective, an argument has been made that the states should}
+  \ALIUSPlacedTextContent{90.951}{482.488}{418.217}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be regarded as qualitatively the same because of overlapping neural}
+  \ALIUSPlacedTextContent{90.951}{501.928}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{substrates. However, while the evidence indicates that there are some brain}
+  \ALIUSPlacedTextContent{90.951}{521.369}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{regions that are shared between waking mind-wandering and REM sleep}
+  \ALIUSPlacedTextContent{90.951}{541.049}{418.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming, there are also many differences, and overall in my view the}
+  \ALIUSPlacedTextContent{90.951}{560.489}{418.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{substrate of REM sleep dreaming appears to be notably different, both in}
+  \ALIUSPlacedTextContent{90.951}{579.928}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{terms of neural activation patterns and neurochemistry, from that of waking}
+  \ALIUSPlacedTextContent{90.951}{599.369}{418.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind-wandering. Finally, part of the answer to this question hinges on how}
+  \ALIUSPlacedTextContent{90.951}{619.048}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we define mind-wandering. Jennifer Windt has made the important point}
+  \ALIUSPlacedTextContent{90.951}{638.489}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that on a broad definition of mind-wandering as spontaneous conscious}
+  \ALIUSPlacedTextContent{90.951}{657.928}{418.356}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thoughts, such types of thoughts can occur in a dream! If one thing can occur}
+  \ALIUSPlacedTextContent{90.951}{677.369}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{within, or during, the overall state of the other, then it seems problematic to}
+  \ALIUSPlacedTextContent{90.951}{697.048}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{equate the two. There are many interesting similarities as well – i.e.,}
+  \ALIUSPlacedTextContent{90.951}{716.489}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perceptual decoupling, spontaneous internal generation, etc. – and thus}
+  \ALIUSPlacedTextContent{90.951}{735.929}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{overall I find the similarities and differences approach to be the most fruitful.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{494.391}{36.329}{14.891}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{27}
+  \ALIUSPlacedTextContent{111.871}{70.839}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{140.191}{81.307}{314.879}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Dreams, particularly those occurring during}
+  \ALIUSPlacedTextContent{140.191}{99.307}{314.919}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Rapid Eye Movement (REM) sleep, often involve}
+  \ALIUSPlacedTextContent{140.191}{117.307}{314.865}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{what might be called "full immersion", whereas}
+  \ALIUSPlacedTextContent{465.391}{123.399}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{140.191}{135.307}{169.421}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{mind-wandering does not.}
+  \ALIUSPlacedTextContent{90.951}{181.173}{418.352}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Lucid dreaming is defined as a kind of dream during which dreamers are aware}
+  \ALIUSPlacedTextContent{90.951}{198.453}{418.348}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{that they are dreaming. Stephen LaBerge provided the first experimental}
+  \ALIUSPlacedTextContent{90.951}{215.733}{418.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{evidence for lucid dreaming by showing that lucid dreamers can perform in}
+  \ALIUSPlacedTextContent{90.951}{233.013}{418.447}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{their dream an eye-movement sequence defined with the experimenter}
+  \ALIUSPlacedTextContent{90.951}{250.053}{418.345}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{during wakefulness (LaBerge et al., 1981). You published recently a major}
+  \ALIUSPlacedTextContent{90.951}{267.333}{418.402}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{synthesis on the advances of the neurocognitive research investigating the}
+  \ALIUSPlacedTextContent{90.951}{284.613}{418.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{cerebral bases of lucid dreaming (Baird, Mota-Rolim, et al., 2019). Can you}
+  \ALIUSPlacedTextContent{90.951}{301.893}{418.410}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{summarize the state of what we know about the neural mechanisms of lucid}
+  \ALIUSPlacedTextContent{90.951}{319.173}{55.401}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{dreaming?}
+  \ALIUSPlacedTextContent{90.951}{355.768}{418.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{First, I would like to emphasize that research on this topic is still in its}
+  \ALIUSPlacedTextContent{90.951}{375.208}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{infancy and we need substantially more research before definitive}
+  \ALIUSPlacedTextContent{90.951}{394.888}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conclusions can be drawn. After objectively validating lucid dreaming as a}
+  \ALIUSPlacedTextContent{90.951}{414.328}{418.300}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{phenomenon of REM sleep using the eye signaling method, LaBerge and}
+  \ALIUSPlacedTextContent{90.951}{433.768}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{colleagues went on to study physiological correlates of lucid REM sleep using}
+  \ALIUSPlacedTextContent{90.951}{453.208}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this technique. Their team did fantastic and rigorous research, which has}
+  \ALIUSPlacedTextContent{90.951}{472.888}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unfortunately often been overlooked and not received the recognition that it}
+  \ALIUSPlacedTextContent{90.951}{492.328}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{deserves. One of the main findings of that initial period of research was that}
+  \ALIUSPlacedTextContent{90.951}{511.768}{418.178}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lucid REM sleep was associated with measures of phasic activation and}
+  \ALIUSPlacedTextContent{90.951}{531.208}{418.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{autonomic nervous system arousal, including higher REM density,}
+  \ALIUSPlacedTextContent{90.951}{550.648}{418.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{respiration rate and heart rate (LaBerge et al., 1986). Together these findings}
+  \ALIUSPlacedTextContent{90.951}{570.328}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{suggest that lucid dreams tend to occur during periods of heightened}
+  \ALIUSPlacedTextContent{90.951}{589.768}{287.563}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{physiological activation during ongoing REM sleep.}
+  \ALIUSPlacedTextContent{90.951}{628.648}{418.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{These findings also raised the further question of whether the lucid REM}
+  \ALIUSPlacedTextContent{90.951}{648.328}{418.319}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sleep state was associated with a global and non-specific activation of the}
+  \ALIUSPlacedTextContent{90.951}{667.768}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain or whether it was associated with activation of specific localized brain}
+  \ALIUSPlacedTextContent{90.951}{687.208}{418.217}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{areas or changes in specific neural oscillatory patterns. Over the past 40 years}
+  \ALIUSPlacedTextContent{90.951}{706.648}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there have unfortunately only been about four EEG studies on lucid dreaming}
+  \ALIUSPlacedTextContent{90.951}{726.328}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{published in peer-reviewed journals. And even more unfortunately, each}
+  \ALIUSPlacedTextContent{90.951}{745.768}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{finds a different purported neural signature of lucid dreaming! Many of these}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{493.431}{36.329}{15.731}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{28}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{studies have substantial interpretive issues and limited spatial sampling of}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the scalp, making them hard to interpret or compare. Thus in terms of EEG}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.081}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{all we can say right now is that the current research consists of mixed results}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and more research is needed. In terms of functional magnetic resonance}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{imaging (fMRI) experiments, research is even more scant, but several recent}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.374}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{studies have pointed to regions of the frontoparietal network as important}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for lucid dreaming (Dresler et al., 2012; Baird et al., 2018). Critically, however,}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this comes from a case report and an individual differences study and there}
+  \ALIUSPlacedTextContent{90.951}{229.049}{146.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is still no group-level fMRI}
+  \ALIUSPlacedTextContent{237.462}{229.049}{6.015}{ALIUSCFF0000}{\ALIUSFontCormorantRegular}{13.920}{.}
+  \ALIUSPlacedTextContent{243.251}{229.049}{265.970}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{As such, that remains one of the most important}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{goals for upcoming work. One of the most important findings we have comes}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{from pharmacology. Specifically, we know that the probability of having a}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.364}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lucid dream is substantially enhanced by cholinergic stimulation during}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{REM sleep (LaBerge, LaMarca \& Baird, 2018). This fits overall with the}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{findings noted above suggesting lucidity is associated with increased}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{activation. In my view one of the most interesting and important next steps}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for research on the neurobiology of lucid dreaming therefore is to understand}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanistically why Acetylcholinesterase inhibitors have such a dramatic}
+  \ALIUSPlacedTextContent{90.951}{404.488}{149.610}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effect on lucid REM sleep.}
+  \ALIUSPlacedTextContent{90.951}{443.733}{418.320}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Extending the approach of LaBerge, several labs around the world recently}
+  \ALIUSPlacedTextContent{90.951}{460.773}{418.495}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{investigated the ability of experimenters to communicate with the lucid}
+  \ALIUSPlacedTextContent{90.951}{478.053}{418.312}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{dreamer. To do so, they observed the response of the lucid dreamer to}
+  \ALIUSPlacedTextContent{90.951}{495.333}{418.340}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{questions (e.g., arithmetic operations) using a variety of predefined "codes",}
+  \ALIUSPlacedTextContent{90.951}{512.613}{418.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{such as moving the eyes in one direction or moving certain muscles of the}
+  \ALIUSPlacedTextContent{90.951}{529.893}{418.330}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{face to say "yes" and moving the eyes in another direction or moving other}
+  \ALIUSPlacedTextContent{90.951}{547.173}{418.401}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{muscles for "no". Which new insights can be gained by the development of an}
+  \ALIUSPlacedTextContent{90.951}{564.453}{313.244}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{extended real-time communication with a lucid dreamer?}
+  \ALIUSPlacedTextContent{90.951}{593.609}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think these findings are important to publish in the peer-reviewed literature}
+  \ALIUSPlacedTextContent{90.951}{613.048}{418.140}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as a proof of concept. Nevertheless, it is perhaps worth mentioning that many}
+  \ALIUSPlacedTextContent{90.951}{632.489}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of us in the field have known for a long time that this was possible since there}
+  \ALIUSPlacedTextContent{90.951}{651.928}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have been lucid dream induction devices available for decades that include}
+  \ALIUSPlacedTextContent{90.951}{671.369}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the possibility for two-way interaction with the device through eye}
+  \ALIUSPlacedTextContent{90.951}{691.048}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{movements. I haven't yet heard a compelling argument for how this will open}
+  \ALIUSPlacedTextContent{90.951}{710.489}{418.118}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{up new avenues of research. Most of the time lucid dreamers should be in a}
+  \ALIUSPlacedTextContent{90.951}{729.929}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{position to remember experimental tasks and intentions that were set in}
+  \ALIUSPlacedTextContent{90.951}{749.369}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conversation with an experimenter before going to sleep, so it is hard to see}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{29}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.272}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{what this adds that goes beyond that in a substantially different way.}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.325}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Furthermore, communicating in this way with someone who is asleep and}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming consistently runs the risk of waking him or her up. These comments}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{should not in any way be taken to denigrate this research, as again I think it}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is important to publish as proof-of-concept. And perhaps there could be uses}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for this that I have not thought of yet. On the other hand, it does strike me}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.300}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that having a higher repertoire of signals on the output side could be useful}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for "annotating" ongoing physiological sleep recordings. For instance, my}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{colleague Stephen LaBerge has suggested that by using something like 10}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different types of eye signals a dreamer in the sleep lab could indicate that}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.272}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they are currently experiencing a variety of specific kinds of conscious}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{content. By making these distinct signals, they could in real time label}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ongoing physiological recordings of dreams. This could be highly useful for}
+  \ALIUSPlacedTextContent{90.951}{326.488}{382.410}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychophysiological studies of mind-brain relationships during sleep.}
+  \ALIUSPlacedTextContent{90.951}{358.053}{418.281}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Lucid dreaming differs from dreaming in terms of metacognition, the cognitive}
+  \ALIUSPlacedTextContent{90.951}{375.333}{418.273}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{ability of having explicit knowledge on our cognitive processes. Indeed, we}
+  \ALIUSPlacedTextContent{90.951}{392.613}{418.414}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{know that we are dreaming when we are dreaming lucidly as contrary to}
+  \ALIUSPlacedTextContent{90.951}{409.893}{418.466}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{regular dreaming (Kahan \& LaBerge, 1994). Yet, lucid dreaming is also}
+  \ALIUSPlacedTextContent{90.951}{427.173}{418.473}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{characterized by other mental capacities that differ from regular dreaming.}
+  \ALIUSPlacedTextContent{90.951}{444.453}{418.287}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{For example, voluntary control is rated by the lucid dreamer as similar as}
+  \ALIUSPlacedTextContent{90.951}{461.733}{418.399}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{wakefulness and is enhanced as compared to normal dreaming (Dresler et al.,}
+  \ALIUSPlacedTextContent{90.951}{478.773}{418.305}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{2014). This allows for the dreamer to take the control of the course of the}
+  \ALIUSPlacedTextContent{90.951}{496.053}{418.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{dreaming scenario. What can lucid dreaming teach us about the role of}
+  \ALIUSPlacedTextContent{90.951}{513.333}{418.454}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{metacognition and more generally about the difference in cognitive activity}
+  \ALIUSPlacedTextContent{90.951}{530.613}{200.965}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{during dreams and the waking state?}
+  \ALIUSPlacedTextContent{90.951}{559.768}{418.039}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{You ask an interesting and important question. In fact, the paper you cite by}
+  \ALIUSPlacedTextContent{90.951}{579.208}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Kahan and LaBerge showed that non-lucid dreams are characterized by more}
+  \ALIUSPlacedTextContent{90.951}{598.648}{418.060}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{metacognitive thought than people typically acknowledge. For instance, they}
+  \ALIUSPlacedTextContent{90.951}{618.328}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{found that people often experience high-level cognition in dreams, including}
+  \ALIUSPlacedTextContent{90.951}{637.768}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thoughts such as "I wonder how what I just said may have caused so-and-so}
+  \ALIUSPlacedTextContent{90.951}{657.208}{418.340}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to feel" or "so-and-so asked me a question and I realized I didn't know the}
+  \ALIUSPlacedTextContent{90.951}{676.648}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{answer and I felt embarrassed", etc. These are remarkably complex thoughts}
+  \ALIUSPlacedTextContent{90.951}{696.328}{418.278}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that have metacognitive components i.e., directly reflecting on one's own}
+  \ALIUSPlacedTextContent{90.951}{715.768}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cognition or emotional state and/or others (theory-of-mind). Nevertheless,}
+  \ALIUSPlacedTextContent{90.951}{735.208}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{despite this, by definition we lack a specific kind of metacognitive knowledge}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{493.911}{36.329}{15.381}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{30}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.173}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in (non-lucid) dreams: namely, knowledge about the overall state of}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness we are in. On the basis of these findings, Kahan and LaBerge}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{argued that dreaming and wakefulness actually aren't that different in terms}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of ongoing thought. After all, most of us don't go around during the waking}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{state reflecting on our state of being awake, and so it was argued that it's}
+  \ALIUSPlacedTextContent{90.951}{170.488}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{actually not that peculiar that we do not do this during dreaming either.}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{However, a problem with this argument is that dreaming scenarios and}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{content are not merely a recapitulation of our waking lives. Instead, not only}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{do highly bizarre events occur during dreams, but I can experience myself as}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.129}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a totally different person, or living in a totally different century, or I could}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{find myself on another planet! The point is that during dreams we can find}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ourselves in situations that are profoundly discontinuous with the rest of our}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{waking lives and yet we still don't notice that anything is amiss. This shows}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.183}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{how the picture is actually more complex than is typically discussed: on the}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.316}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{one hand, we can have highly complex, including metacognitive, thoughts,}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.329}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and on the other hand, we can be completely disoriented, which suggests that}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{something is profoundly different about our state of consciousness during}
+  \ALIUSPlacedTextContent{90.951}{404.488}{48.547}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreams.}
+  \ALIUSPlacedTextContent{90.951}{435.928}{418.328}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think an interesting direction to pursue in resolving this apparent paradox}
+  \ALIUSPlacedTextContent{90.951}{455.608}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is Tulving's notion of "autonoetic consciousness" (Tulving, 1985). In other}
+  \ALIUSPlacedTextContent{90.951}{475.048}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research we find that, contrary to thoughts in the waking state and}
+  \ALIUSPlacedTextContent{90.951}{494.488}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particularly mind-wandering, dreaming individuals rarely engage in episodic}
+  \ALIUSPlacedTextContent{90.951}{513.928}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{memory or autobiographical planning for the future. Thus one way to think}
+  \ALIUSPlacedTextContent{90.951}{533.369}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about what is different during dreaming consciousness is in terms of our self-}
+  \ALIUSPlacedTextContent{90.951}{553.049}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{model, including our experience of ourselves as a self extended over time.}
+  \ALIUSPlacedTextContent{90.951}{572.489}{418.159}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Jennifer Windt and Thomas Metzinger have done excellent work in this area,}
+  \ALIUSPlacedTextContent{90.951}{591.928}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and have begun to think about how many of the key changes in consciousness}
+  \ALIUSPlacedTextContent{90.951}{611.369}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that occur after becoming lucid that you note above – including volitional}
+  \ALIUSPlacedTextContent{90.951}{631.048}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{control, episodic memory and metacognitive awareness of state – may all be}
+  \ALIUSPlacedTextContent{90.951}{650.489}{355.532}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{related to changes in our self-model (Windt \& Metzinger, 2007).}
+  \ALIUSPlacedTextContent{109.951}{677.079}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{138.511}{688.747}{320.476}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{One way to think about what is different during}
+  \ALIUSPlacedTextContent{138.511}{706.747}{316.634}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{dreaming consciousness is in terms of our self-}
+  \ALIUSPlacedTextContent{138.511}{724.747}{320.400}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{model, including our experience of ourselves as a}
+  \ALIUSPlacedTextContent{465.391}{734.199}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{138.511}{742.747}{156.413}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{self extended over time.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{495.831}{36.329}{13.351}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{31}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Specifically, they have made the interesting suggestion that the specific}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{metacognitive deficit in dreams may be directly linked to our ability to think}
+  \ALIUSPlacedTextContent{90.951}{111.928}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about our self being in a current state. Similarly, as noted above, the re-}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{instantiation of episodic memory also seems directly linked to our ability to}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience selfhood, specifically the experience of ourselves over time, and}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{volitional control is the experience of myself as an agent that can direct my}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.107}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{attention or actions. Overall this suggests that for humans a key difference}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{between waking and dreaming may be in how we experience ourselves as}
+  \ALIUSPlacedTextContent{90.951}{229.049}{108.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious subjects.}
+  \ALIUSPlacedTextContent{90.951}{260.613}{418.443}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{For inexperienced lucid dreamers, dream reports reveal that it is difficult to}
+  \ALIUSPlacedTextContent{90.951}{277.893}{418.412}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{maintain the state of lucidity and attempts to control the dream scenario may}
+  \ALIUSPlacedTextContent{90.951}{295.173}{418.457}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{lead to the loss of lucidity or to awakenings (LaBerge \& Rheingold, 1990). Yet,}
+  \ALIUSPlacedTextContent{90.951}{312.453}{418.493}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{with training, expert lucid dreamers can learn how to maintain such a state}
+  \ALIUSPlacedTextContent{90.951}{329.733}{418.272}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Stumbrys et al., 2012). Such consideration can be extended to meditation as}
+  \ALIUSPlacedTextContent{90.951}{347.013}{418.252}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{beginners might have difficulty entering the meditative state or remaining in}
+  \ALIUSPlacedTextContent{90.951}{364.053}{418.403}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{it (Brown \& Engler, 1980). How does training allow for the access and}
+  \ALIUSPlacedTextContent{90.951}{381.333}{418.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{stabilization of these conscious states? How do they relate to interindividual}
+  \ALIUSPlacedTextContent{90.951}{398.613}{405.226}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{traits and practices (Schredl \& Erlacher, 2004; Baird, Riedner, et al., 2019)?}
+  \ALIUSPlacedTextContent{90.951}{427.768}{418.087}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Your question points to the connections between lucid dreaming and}
+  \ALIUSPlacedTextContent{90.951}{447.208}{418.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{meditation, which to my mind is an interesting topic deserving of more}
+  \ALIUSPlacedTextContent{90.951}{466.888}{418.164}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research. There are two distinct aspects: access and stabilization. We have}
+  \ALIUSPlacedTextContent{90.951}{486.328}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{found that long-term meditation practitioners report more frequent lucid}
+  \ALIUSPlacedTextContent{90.951}{505.768}{418.223}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreams compared to individuals without meditation training, suggesting that}
+  \ALIUSPlacedTextContent{90.951}{525.208}{418.343}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there is something about meditation practice that leads to greater access to}
+  \ALIUSPlacedTextContent{90.951}{544.648}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the lucid dreaming state (Baird et al., 2019). Additionally, many of the}
+  \ALIUSPlacedTextContent{90.951}{564.328}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{primary skills cultivated in meditation practice (particularly open-}
+  \ALIUSPlacedTextContent{90.951}{583.768}{418.163}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{monitoring or focused-attention meditation), including stability of attention}
+  \ALIUSPlacedTextContent{90.951}{603.208}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and meta-awareness, are thought to be useful in having lucid dreams.}
+  \ALIUSPlacedTextContent{90.951}{622.648}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Stumbrys et al. (2015) found an intriguing association between dispositional}
+  \ALIUSPlacedTextContent{90.951}{642.328}{418.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mindfulness (a construct that broadly refers to cultivating awareness of}
+  \ALIUSPlacedTextContent{90.951}{661.768}{418.393}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience in the present moment) during waking states and lucid dream}
+  \ALIUSPlacedTextContent{90.951}{681.208}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{frequency, but only in individuals with prior meditation experience.}
+  \ALIUSPlacedTextContent{90.951}{700.648}{418.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Although preliminary, one interpretation of this finding is that at least some}
+  \ALIUSPlacedTextContent{90.951}{720.328}{418.319}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{types of meditation practices result in changes in trait mindfulness, or}
+  \ALIUSPlacedTextContent{90.951}{739.768}{418.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cognitive skills associated with specific aspects of mindfulness, that then}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{494.871}{36.329}{14.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{32}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{carry over into sleep and dream states, leading to increases in lucidity. Our}
+  \ALIUSPlacedTextContent{90.951}{92.488}{37.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recent}
+  \ALIUSPlacedTextContent{152.612}{92.488}{48.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research}
+  \ALIUSPlacedTextContent{224.981}{92.488}{20.842}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{has}
+  \ALIUSPlacedTextContent{269.990}{92.488}{24.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{also}
+  \ALIUSPlacedTextContent{318.327}{92.488}{35.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{found}
+  \ALIUSPlacedTextContent{378.052}{92.488}{9.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a}
+  \ALIUSPlacedTextContent{411.337}{92.488}{24.797}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{link}
+  \ALIUSPlacedTextContent{460.301}{92.488}{52.183}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{between}
+  \ALIUSPlacedTextContent{90.951}{111.928}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{specific aspects of trait mindfulness and lucid dream frequency.}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The link between mental training and sustaining lucidity is equally}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interesting from a theoretical point of view, however almost no empirical}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{work has been done to explore this connection. Dunne, Thompson and}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Schooler (2019) have recently argued that certain styles of mediation, for}
+  \ALIUSPlacedTextContent{90.951}{209.609}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{instance Tibetan Mahamudra, specifically cultivate a type of non-}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{propositional, sustained meta-awareness that could be useful in sustaining}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lucidity during a dream. I would like to see this investigated in future}
+  \ALIUSPlacedTextContent{90.951}{267.928}{50.960}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research.}
+  \ALIUSPlacedTextContent{90.951}{299.733}{418.403}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Sleep represents an interesting case for consciousness research since it}
+  \ALIUSPlacedTextContent{90.951}{317.013}{418.519}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consists in periods during which conscious activity is reduced, typically in}
+  \ALIUSPlacedTextContent{90.951}{334.053}{418.420}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{NREM sleep, and a period where conscious activity qualitatively differs from}
+  \ALIUSPlacedTextContent{90.951}{351.333}{418.428}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{wakefulness, typically in REM sleep. Yet, conscious experiences during sleep}
+  \ALIUSPlacedTextContent{90.951}{368.613}{418.320}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{have long been considered with caution as reports about dreaming activity}
+  \ALIUSPlacedTextContent{90.951}{385.893}{418.329}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{are available only after the sleeper has awakened and not during sleep}
+  \ALIUSPlacedTextContent{90.951}{403.173}{418.306}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Malcolm, 1958; Windt, 2013). The identification of neural markers of}
+  \ALIUSPlacedTextContent{90.951}{420.453}{418.334}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consciousness, as well as the development of lucid dreaming research, opens}
+  \ALIUSPlacedTextContent{90.951}{437.733}{418.345}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{novel ways to directly probe consciousness during sleep. What is the}
+  \ALIUSPlacedTextContent{90.951}{455.013}{405.827}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{relevance of studying sleep according to you to understand consciousness?}
+  \ALIUSPlacedTextContent{90.951}{483.928}{418.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think there are (at least) three critical points to be made here, and then a}
+  \ALIUSPlacedTextContent{90.951}{503.608}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{point specifically about lucid dreaming as methodology. First, sleep is the}
+  \ALIUSPlacedTextContent{90.951}{523.049}{418.342}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{only naturally occurring physiological state characterized by a global loss and}
+  \ALIUSPlacedTextContent{90.951}{542.489}{418.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recovery of consciousness. Thus, sleep turns out to be a useful state for}
+  \ALIUSPlacedTextContent{90.951}{561.928}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{building and testing theories of consciousness. Specifically, any}
+  \ALIUSPlacedTextContent{90.951}{581.609}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{theory of consciousness needs to both account for and be consistent with the}
+  \ALIUSPlacedTextContent{90.951}{601.048}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neurophysiology of sleep states associated with consciousness. If the}
+  \ALIUSPlacedTextContent{90.951}{620.489}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{predictions of a neurobiological theory are inconsistent with the observation}
+  \ALIUSPlacedTextContent{90.951}{639.928}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that consciousness occurs in particular brain states during sleep, then the}
+  \ALIUSPlacedTextContent{90.951}{659.609}{418.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{theory needs to be revised or discarded. Having the opportunity to study a}
+  \ALIUSPlacedTextContent{90.951}{679.048}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{state with a different neurophysiological milieu seems a great boon to}
+  \ALIUSPlacedTextContent{90.951}{698.489}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{scientific research in this area. Being able to study this alternate state puts us}
+  \ALIUSPlacedTextContent{90.951}{717.929}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in a stronger position to build better, more generalizable theories. Second,}
+  \ALIUSPlacedTextContent{90.951}{737.369}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unlike other states, such as anesthesia-induced states of unconsciousness,}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 10
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{495.111}{36.329}{14.149}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{33}
+  \ALIUSPlacedTextContent{103.471}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.111}{87.307}{307.204}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{What lucid dreaming essentially gives us is}
+  \ALIUSPlacedTextContent{136.111}{105.307}{307.160}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experimental control over the dream state in a}
+  \ALIUSPlacedTextContent{453.631}{114.759}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.111}{123.307}{230.574}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{way that was previously impossible.}
+  \ALIUSPlacedTextContent{90.951}{165.208}{418.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sleep affords us the unique opportunity to contrast consciousness with}
+  \ALIUSPlacedTextContent{90.951}{184.889}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unconsciousness within the same overall vigilance state. There are likely}
+  \ALIUSPlacedTextContent{90.951}{204.329}{418.143}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{many changes in the brain that take place during the shift from wakefulness}
+  \ALIUSPlacedTextContent{90.951}{223.768}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to sleep or anesthesia to post-recovery wakefulness that have nothing to do}
+  \ALIUSPlacedTextContent{90.951}{243.209}{108.094}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with consciousness}
+  \ALIUSPlacedTextContent{200.933}{243.209}{29.406}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{per se}
+  \ALIUSPlacedTextContent{230.368}{243.209}{278.867}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{. Thus, within-state contrasts in NREM or REM}
+  \ALIUSPlacedTextContent{90.951}{262.888}{418.369}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sleep allow us to study specific changes in brain activity associated with the}
+  \ALIUSPlacedTextContent{90.951}{282.328}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{change in consciousness and to avoid confounding differences in brain}
+  \ALIUSPlacedTextContent{90.951}{301.768}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{activity between vigilance states that are not related to consciousness. Third,}
+  \ALIUSPlacedTextContent{90.951}{321.208}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious states during sleep are largely decoupled from the external}
+  \ALIUSPlacedTextContent{90.951}{340.888}{418.405}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{environment, so this fortuitously allows us to study the neural substrate of}
+  \ALIUSPlacedTextContent{90.951}{360.328}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness while avoiding another critical confound: namely, the neural}
+  \ALIUSPlacedTextContent{90.951}{379.768}{418.090}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{activity associated with stimulus processing but not related to the generation}
+  \ALIUSPlacedTextContent{90.951}{399.208}{125.208}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of conscious percepts.}
+  \ALIUSPlacedTextContent{90.951}{430.648}{418.172}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Finally, in line with the high value of sleep research for consciousness, lucid}
+  \ALIUSPlacedTextContent{90.951}{450.328}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming opens up a new way for us to directly study conscious content}
+  \ALIUSPlacedTextContent{90.951}{469.768}{418.217}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{during ongoing sleep dreaming. I don't think this fact has yet been}
+  \ALIUSPlacedTextContent{90.951}{489.208}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{appreciated or widely recognized. What lucid dreaming essentially gives us is}
+  \ALIUSPlacedTextContent{90.951}{508.648}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experimental control over the dream state in a way that was previously}
+  \ALIUSPlacedTextContent{90.951}{528.328}{418.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{impossible. As we have shown in our recent studies, lucid dreamers can}
+  \ALIUSPlacedTextContent{90.951}{547.768}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perform specific tasks during dreams or invoke specific types of conscious}
+  \ALIUSPlacedTextContent{90.951}{567.208}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{content (e.g., LaBerge, Baird \& Zimbardo, 2018). Lucid dreaming is thus an}
+  \ALIUSPlacedTextContent{90.951}{586.648}{418.322}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{invaluable methodological tool within the cognitive neuroscience to study}
+  \ALIUSPlacedTextContent{90.951}{606.328}{237.739}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming and by extension consciousness.}
+  \ALIUSPlacedTextContent{90.951}{655.173}{418.323}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{On a final note, mind-wandering has been reported for accounting about 50\%}
+  \ALIUSPlacedTextContent{90.951}{672.453}{418.302}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{of our awake life (Killingsworth \& Gilbert, 2010) and sleep represents 30\% of}
+  \ALIUSPlacedTextContent{90.951}{689.493}{418.397}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{our lifetime (Iber et al., 2007). Your research topics cover thus the majority of}
+  \ALIUSPlacedTextContent{90.951}{706.773}{421.795}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{our life. How does research on these topics change our view of mental life}
+  \ALIUSPlacedTextContent{90.951}{724.053}{166.366}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and the potential of the mind?}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 11
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{494.151}{36.329}{15.017}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{34}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{One of the things that I find most fascinating about self-generated states of}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness is that they illustrate the profound extent to which our}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ongoing conscious experiences are generated internally. This is illustrated}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{most strikingly in the case of dreams, where, as I mentioned earlier, we can}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.323}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience a multimodal 3D virtual reality that can seem just as real and}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experientially vivid as waking life, but we know is generated completely}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{independently of the external environment. For me personally, this has}
+  \ALIUSPlacedTextContent{90.951}{209.609}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{profoundly altered my view of perception. I spent most of my life as a naïve-}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{realist, thinking that I was looking out through the windows of my eyes and}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{seeing directly physical objects in front of me. It turns out that is not how}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perception works. Instead, at all times what we experience is quite literally a}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"virtual reality" generated by our brain. I regard this as one of the most}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interesting things I have ever learned. So overall, one view that emerges from}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{studying self-generated states, in particular dreaming, is that our experience}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the world is at all times endogenously generated by the ongoing dynamics}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the brain, but is merely shaped by environmental input some of the time.}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This point has been made several times by other researchers, but I emphasize}
+  \ALIUSPlacedTextContent{90.951}{404.488}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it again here because I think it does offer a profound shift in how we think}
+  \ALIUSPlacedTextContent{90.951}{423.928}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about our ongoing conscious mental activities and the nature of our}
+  \ALIUSPlacedTextContent{90.951}{443.608}{198.525}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perceptual experience of the world.}
+  \ALIUSPlacedTextContent{90.951}{475.048}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In terms of the potentials of the mind, that is a big question. I will just}
+  \ALIUSPlacedTextContent{90.951}{494.488}{418.079}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mention one here. One of the ways of exploring this that has most fascinated}
+  \ALIUSPlacedTextContent{90.951}{513.928}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{me is examining the following question: By extending self-aware}
+  \ALIUSPlacedTextContent{90.951}{533.369}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness into dream and sleep states, could we tap into potentials of our}
+  \ALIUSPlacedTextContent{90.951}{553.049}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minds that we haven't yet explored? This is yet another one of the reasons I}
+  \ALIUSPlacedTextContent{90.951}{572.489}{418.123}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have been fascinated by lucid dreaming and drawn to do scientific research}
+  \ALIUSPlacedTextContent{90.951}{591.928}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on the topic. The question is, by being able to bring our "wake-like" cognitive}
+  \ALIUSPlacedTextContent{90.951}{611.369}{418.345}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{faculties into the REM sleep dreaming state, could we explore a part of our}
+  \ALIUSPlacedTextContent{90.951}{631.048}{418.272}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind-brain "state-space" that we haven't previously had access to? And could}
+  \ALIUSPlacedTextContent{90.951}{650.489}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this state have unique uses, for example for things like problem-solving, art}
+  \ALIUSPlacedTextContent{90.951}{669.928}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or creativity? To briefly mention an example, I met a professional composer}
+  \ALIUSPlacedTextContent{90.951}{689.369}{418.335}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{who in his lucid dreams would find a radio and turn it on and hear}
+  \ALIUSPlacedTextContent{90.951}{709.048}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{symphonies being played. He would then wake up and transcribe the music}
+  \ALIUSPlacedTextContent{90.951}{728.489}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that he heard in the dream into musical notation. In this way he was able to}
+  \ALIUSPlacedTextContent{90.951}{747.929}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciously use the REM sleep state for creative inspiration. I've met visual}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 12
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (305.511bp,-506.391bp) rectangle ++(200.400bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-585.351bp) rectangle ++(206.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (174.711bp,-654.231bp) rectangle ++(218.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-707.511bp) rectangle ++(232.080bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{494.871}{36.329}{14.429}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{35}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{artists that have done the same type of thing, for instance walking into an}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"art gallery" in their lucid dream and seeing paintings on the walls displayed,}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and then waking up and painting the paintings that they saw in the dream}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.093}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{gallery. These are anecdotes and this needs to be researched. But it does raise}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the intriguing possibility that there may be untapped potentials of our minds}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.342}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that we may be able to access by extending greater awareness into the REM}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sleep state. Overall, I don't think we've really considered yet what the}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.150}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{potentials could be of making the dreaming state of the brain accessible to}
+  \ALIUSPlacedTextContent{90.951}{229.049}{245.774}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{our unique form of self-aware consciousness.}
+  \ALIUSPlacedTextContent{111.871}{274.119}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{143.551}{294.907}{318.018}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{By extending self-aware consciousness into}
+  \ALIUSPlacedTextContent{143.551}{312.907}{318.021}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{dream and sleep states, could we tap into}
+  \ALIUSPlacedTextContent{143.551}{330.907}{318.122}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{potentials of our minds that we haven't yet}
+  \ALIUSPlacedTextContent{143.551}{348.907}{62.932}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{explored?}
+  \ALIUSPlacedTextContent{471.871}{349.959}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{264.617}{416.332}{71.454}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
+  \ALIUSPlacedTextContent{90.951}{446.416}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Andrillon, T., Windt, J., Silk, T., Drummond, S. P. A., Bellgrove, M. A., \&}
+  \ALIUSPlacedTextContent{126.951}{462.016}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Tsuchiya, N. (2019). Does the Mind Wander When the Brain Takes a Break?}
+  \ALIUSPlacedTextContent{126.951}{477.856}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Local Sleep in Wakefulness, Attentional Lapses and Mind-Wandering.}
+  \ALIUSPlacedTextContent{126.951}{493.456}{123.949}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Neuroscience}
+  \ALIUSPlacedTextContent{250.919}{493.456}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{260.462}{493.456}{8.215}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{13}
+  \ALIUSPlacedTextContent{268.691}{493.456}{33.102}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 949.}
+  \ALIUSPlacedTextContent{305.405}{493.456}{200.560}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fnins.2019.00949}
+  \ALIUSPlacedTextContent{90.951}{525.136}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Baird, B., Smallwood, J., Mrazek, M. D., Kam, J. W. Y., Franklin, M. S., \& Schooler,}
+  \ALIUSPlacedTextContent{126.951}{540.736}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{J. W. (2012). Inspired by Distraction: Mind Wandering Facilitates Creative}
+  \ALIUSPlacedTextContent{126.951}{556.576}{61.379}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Incubation.}
+  \ALIUSPlacedTextContent{188.309}{556.576}{97.472}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychological Science}
+  \ALIUSPlacedTextContent{285.767}{556.576}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{291.695}{556.576}{9.151}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{23}
+  \ALIUSPlacedTextContent{300.860}{556.576}{84.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(10), 1117–1122.}
+  \ALIUSPlacedTextContent{126.951}{572.416}{206.599}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0956797612446024}
+  \ALIUSPlacedTextContent{90.951}{594.016}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Baird, B., Castelnovo, A., Gosseries, O., \& Tononi, G. (2018). Frequent lucid}
+  \ALIUSPlacedTextContent{126.951}{609.856}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dreaming associated with increased functional connectivity between}
+  \ALIUSPlacedTextContent{126.951}{625.456}{297.475}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{frontopolar cortex and temporoparietal association areas.}
+  \ALIUSPlacedTextContent{425.309}{625.456}{77.770}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Scientific reports}
+  \ALIUSPlacedTextContent{503.064}{625.456}{8.961}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{126.951}{641.296}{5.702}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{8}
+  \ALIUSPlacedTextContent{132.671}{641.296}{42.019}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1-15.}
+  \ALIUSPlacedTextContent{174.699}{641.296}{218.511}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/ 10.1038/s41598-018-36190-w}
+  \ALIUSPlacedTextContent{90.951}{662.896}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Baird, B., Mota-Rolim, S. A., \& Dresler, M. (2019). The cognitive neuroscience of}
+  \ALIUSPlacedTextContent{126.951}{678.736}{82.102}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{lucid dreaming.}
+  \ALIUSPlacedTextContent{209.017}{678.736}{180.002}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience \& Biobehavioral Reviews}
+  \ALIUSPlacedTextContent{389.051}{678.736}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{394.979}{678.736}{15.148}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{100}
+  \ALIUSPlacedTextContent{410.150}{678.736}{50.130}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 305–323.}
+  \ALIUSPlacedTextContent{126.951}{694.576}{232.247}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.neubiorev.2019.03.008}
+  \ALIUSPlacedTextContent{90.951}{726.016}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Baird, B., Riedner, B. A., Boly, M., Davidson, R. J., \& Tononi, G. (2019). Increased}
+  \ALIUSPlacedTextContent{126.951}{741.616}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{lucid dream frequency in long-term meditators but not following}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 13
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (332.151bp,-101.751bp) rectangle ++(173.760bp,-0.720bp);
+  \fill[ALIUSC0000FF] (198.951bp,-170.631bp) rectangle ++(255.120bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-249.351bp) rectangle ++(198.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-328.071bp) rectangle ++(197.520bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-406.791bp) rectangle ++(225.360bp,-0.720bp);
+  \fill[ALIUSC0000FF] (154.071bp,-469.671bp) rectangle ++(190.080bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-564.231bp) rectangle ++(167.520bp,-0.720bp);
+  \fill[ALIUSC0000FF] (251.751bp,-648.711bp) rectangle ++(200.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (203.031bp,-727.431bp) rectangle ++(205.200bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{493.911}{36.329}{15.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{36}
+  \ALIUSPlacedTextContent{126.951}{72.976}{236.840}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{mindfulness-based stress reduction training.}
+  \ALIUSPlacedTextContent{367.285}{72.976}{144.740}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychology of Consciousness:}
+  \ALIUSPlacedTextContent{126.951}{88.816}{141.683}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Theory, Research, and Practice}
+  \ALIUSPlacedTextContent{268.677}{88.816}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{274.039}{88.816}{5.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{6}
+  \ALIUSPlacedTextContent{279.499}{88.816}{53.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 40–54.}
+  \ALIUSPlacedTextContent{332.184}{88.816}{176.799}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1037/cns0000176}
+  \ALIUSPlacedTextContent{90.951}{126.016}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Brown, D. P., \& Engler, J. (1980). The stages of mindfulness meditation: A}
+  \ALIUSPlacedTextContent{126.951}{141.856}{89.335}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{validation study.}
+  \ALIUSPlacedTextContent{218.557}{141.856}{284.497}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Transpersonal Psychology; Palo Alto, Calif.}
+  \ALIUSPlacedTextContent{503.064}{141.856}{8.961}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{126.951}{157.696}{8.488}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{12}
+  \ALIUSPlacedTextContent{135.452}{157.696}{62.129}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 143–193.}
+  \ALIUSPlacedTextContent{198.951}{157.696}{255.076}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{http://atpweb.org/jtparchive/trps-12-80-02-143.pdf}
+  \ALIUSPlacedTextContent{90.951}{189.136}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Cai, D. J., Mednick, S. A., Harrison, E. M., Kanady, J. C., \& Mednick, S. C. (2009).}
+  \ALIUSPlacedTextContent{126.951}{204.736}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{REM, not incubation, improves creativity by priming associative networks.}
+  \ALIUSPlacedTextContent{126.951}{220.576}{260.431}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences}
+  \ALIUSPlacedTextContent{387.294}{220.576}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{399.316}{220.576}{14.914}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{106}
+  \ALIUSPlacedTextContent{414.253}{220.576}{97.772}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(25), 10130–10134.}
+  \ALIUSPlacedTextContent{126.951}{236.416}{198.681}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1073/pnas.0900271106}
+  \ALIUSPlacedTextContent{90.951}{267.856}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Colzato, L. S., Ozturk, A., \& Hommel, B. (2012). Meditate to Create: The Impact}
+  \ALIUSPlacedTextContent{126.951}{283.456}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of Focused-Attention and Open-Monitoring Training on Convergent and}
+  \ALIUSPlacedTextContent{126.951}{299.296}{106.452}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Divergent Thinking.}
+  \ALIUSPlacedTextContent{233.444}{299.296}{107.685}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Psychology}
+  \ALIUSPlacedTextContent{341.159}{299.296}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{347.087}{299.296}{4.432}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{3}
+  \ALIUSPlacedTextContent{351.533}{299.296}{5.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.951}{315.136}{197.452}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fpsyg.2012.00116}
+  \ALIUSPlacedTextContent{90.951}{346.576}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dement, W., \& Kleitman, N. (1957). Cyclic variations in EEG during sleep and}
+  \ALIUSPlacedTextContent{126.951}{362.176}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{their relation to eye movements, body motility, and dreaming.}
+  \ALIUSPlacedTextContent{126.951}{378.016}{111.407}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Electroencephalography}
+  \ALIUSPlacedTextContent{249.485}{378.016}{20.500}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{and}
+  \ALIUSPlacedTextContent{281.112}{378.016}{39.396}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Clinical}
+  \ALIUSPlacedTextContent{331.636}{378.016}{76.638}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neurophysiology}
+  \ALIUSPlacedTextContent{408.281}{378.016}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{425.325}{378.016}{5.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{9}
+  \ALIUSPlacedTextContent{430.785}{378.016}{19.811}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4),}
+  \ALIUSPlacedTextContent{461.727}{378.016}{50.298}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{673–690.}
+  \ALIUSPlacedTextContent{126.951}{393.856}{225.412}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/0013-4694(57)90088-3}
+  \ALIUSPlacedTextContent{90.951}{425.296}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Ding, X., Tang, Y.-Y., Tang, R., \& Posner, M. I. (2014). Improving creativity}
+  \ALIUSPlacedTextContent{126.951}{440.896}{202.611}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{performance by short-term meditation.}
+  \ALIUSPlacedTextContent{329.677}{440.896}{173.397}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Behavioral and Brain Functions: BBF}
+  \ALIUSPlacedTextContent{503.064}{440.896}{8.961}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{126.951}{456.736}{9.460}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{10}
+  \ALIUSPlacedTextContent{136.427}{456.736}{17.571}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 9.}
+  \ALIUSPlacedTextContent{154.003}{456.736}{190.128}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1186/1744-9081-10-9}
+  \ALIUSPlacedTextContent{90.951}{488.176}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dresler, M., Wehrle, R., Spoormaker, V. I., Koch, S. P., Holsboer, F., Steiger,}
+  \ALIUSPlacedTextContent{126.951}{504.016}{382.042}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{A., Obrig., H., Sämann, P. G., \& Czisch, M. (2012). Neural correlates of}
+  \ALIUSPlacedTextContent{126.951}{519.616}{382.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dream lucidity obtained from contrasting lucid versus non-lucid REM sleep:}
+  \ALIUSPlacedTextContent{126.951}{535.456}{8.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{a}
+  \ALIUSPlacedTextContent{148.965}{535.456}{53.362}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{combined}
+  \ALIUSPlacedTextContent{215.861}{535.456}{58.610}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{EEG/fMRI}
+  \ALIUSPlacedTextContent{288.005}{535.456}{23.525}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{case}
+  \ALIUSPlacedTextContent{325.065}{535.456}{33.097}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{study.}
+  \ALIUSPlacedTextContent{371.716}{535.456}{23.284}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Sleep}
+  \ALIUSPlacedTextContent{395.011}{535.456}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{414.465}{535.456}{9.292}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{35}
+  \ALIUSPlacedTextContent{423.773}{535.456}{19.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(7),}
+  \ALIUSPlacedTextContent{456.840}{535.456}{49.114}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1017-1020.}
+  \ALIUSPlacedTextContent{126.951}{551.296}{170.518}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.5665/sleep.1974}
+  \ALIUSPlacedTextContent{90.951}{588.736}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dresler, M., Eibl, L., Fischer, C. F. J., Wehrle, R., Spoormaker, V. I., Steiger, A.,}
+  \ALIUSPlacedTextContent{126.951}{604.336}{391.159}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Czisch, M., \& Pawlowski, M. (2014). Volitional components of}
+  \ALIUSPlacedTextContent{126.951}{620.176}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness vary across wakefulness, dreaming and lucid dreaming.}
+  \ALIUSPlacedTextContent{126.951}{635.776}{107.685}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Psychology}
+  \ALIUSPlacedTextContent{234.666}{635.776}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{240.594}{635.776}{5.482}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{4}
+  \ALIUSPlacedTextContent{246.092}{635.776}{5.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{251.695}{635.776}{200.689}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fpsyg.2013.00987}
+  \ALIUSPlacedTextContent{90.951}{667.456}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fox, K. C. R., Nijeboer, S., Solomonova, E., Domhoff, G. W., \& Christoff, K.}
+  \ALIUSPlacedTextContent{126.951}{683.056}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2013). Dreaming as mind wandering: Evidence from functional}
+  \ALIUSPlacedTextContent{126.951}{698.896}{267.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{neuroimaging and first-person content reports.}
+  \ALIUSPlacedTextContent{400.706}{698.896}{111.319}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Human}
+  \ALIUSPlacedTextContent{126.951}{714.496}{59.603}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
+  \ALIUSPlacedTextContent{186.580}{714.496}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{192.508}{714.496}{5.016}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{7}
+  \ALIUSPlacedTextContent{197.539}{714.496}{5.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{203.142}{714.496}{208.193}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fnhum.2013.00412}
+  \ALIUSPlacedTextContent{90.951}{746.176}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Grecucci, A., Pappaianni, E., Siugzdaite, R., Theuninck, A., \& Job, R. (2015).}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 14
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-117.351bp) rectangle ++(174.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-196.071bp) rectangle ++(261.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-258.951bp) rectangle ++(162.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (315.351bp,-306.231bp) rectangle ++(190.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-384.951bp) rectangle ++(228.960bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-463.671bp) rectangle ++(213.360bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-542.391bp) rectangle ++(220.080bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-621.111bp) rectangle ++(202.800bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-747.111bp) rectangle ++(229.920bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{494.391}{36.329}{14.709}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{37}
+  \ALIUSPlacedTextContent{126.951}{72.976}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Mindful Emotion Regulation: Exploring the Neurocognitive Mechanisms}
+  \ALIUSPlacedTextContent{126.951}{88.576}{38.382}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{behind}
+  \ALIUSPlacedTextContent{178.430}{88.576}{67.913}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Mindfulness.}
+  \ALIUSPlacedTextContent{259.463}{88.576}{37.942}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{BioMed}
+  \ALIUSPlacedTextContent{310.515}{88.576}{44.165}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Research}
+  \ALIUSPlacedTextContent{367.777}{88.576}{61.420}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{International}
+  \ALIUSPlacedTextContent{429.233}{88.576}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{448.254}{88.576}{19.042}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{2015}
+  \ALIUSPlacedTextContent{467.312}{88.576}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{486.330}{88.576}{25.696}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1–9.}
+  \ALIUSPlacedTextContent{126.951}{104.416}{174.640}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1155/2015/670724}
+  \ALIUSPlacedTextContent{90.951}{135.856}{323.554}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Iber, C., Ancoli-Israel, S., Chesson, A. L., \& Quan, S. F. (2007).}
+  \ALIUSPlacedTextContent{414.954}{135.856}{97.071}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The AASM manual}
+  \ALIUSPlacedTextContent{126.951}{151.696}{385.075}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{for the scoring of sleep and associated events: Rules, terminology and technical}
+  \ALIUSPlacedTextContent{126.951}{167.296}{382.033}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{specifications (Vol. 1). Westchester, IL: American Academy of Sleep Medicine.}
+  \ALIUSPlacedTextContent{126.951}{183.136}{261.469}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://aasm.org/clinical-resources/scoring-manual/}
+  \ALIUSPlacedTextContent{90.951}{214.576}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Kahan, T. L., \& LaBerge, S. (1994). Lucid dreaming as metacognition: Implications}
+  \ALIUSPlacedTextContent{126.951}{230.416}{17.959}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{for}
+  \ALIUSPlacedTextContent{155.976}{230.416}{49.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{cognitive}
+  \ALIUSPlacedTextContent{216.577}{230.416}{41.539}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{science.}
+  \ALIUSPlacedTextContent{269.183}{230.416}{66.983}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Consciousness}
+  \ALIUSPlacedTextContent{347.231}{230.416}{20.495}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{and}
+  \ALIUSPlacedTextContent{378.791}{230.416}{45.210}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Cognition}
+  \ALIUSPlacedTextContent{424.025}{230.416}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{441.003}{230.416}{4.432}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{3}
+  \ALIUSPlacedTextContent{445.449}{230.416}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{462.432}{230.416}{43.506}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{246–264.}
+  \ALIUSPlacedTextContent{126.951}{246.016}{162.733}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/cogs.12491}
+  \ALIUSPlacedTextContent{90.951}{277.456}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Killingsworth, M. A., \& Gilbert, D. T. (2010). A Wandering Mind Is an Unhappy}
+  \ALIUSPlacedTextContent{126.951}{293.296}{33.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Mind.}
+  \ALIUSPlacedTextContent{164.804}{293.296}{33.144}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Science}
+  \ALIUSPlacedTextContent{197.954}{293.296}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{208.339}{293.296}{14.567}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{330}
+  \ALIUSPlacedTextContent{222.925}{293.296}{87.856}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6006), 932–932.}
+  \ALIUSPlacedTextContent{315.246}{293.296}{190.671}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1126/science.1192439}
+  \ALIUSPlacedTextContent{90.951}{324.736}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Kircanski, K., Thompson, R. J., Sorenson, J., Sherdell, L., \& Gotlib, I. H. (2018).}
+  \ALIUSPlacedTextContent{126.951}{340.576}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{The everyday dynamics of rumination and worry: Precipitant events and}
+  \ALIUSPlacedTextContent{126.951}{356.176}{45.952}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{affective}
+  \ALIUSPlacedTextContent{183.832}{356.176}{73.391}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consequences.}
+  \ALIUSPlacedTextContent{268.151}{356.176}{48.266}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Cognition}
+  \ALIUSPlacedTextContent{327.339}{356.176}{20.495}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{and}
+  \ALIUSPlacedTextContent{358.757}{356.176}{38.877}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Emotion}
+  \ALIUSPlacedTextContent{397.678}{356.176}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{414.525}{356.176}{9.150}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{32}
+  \ALIUSPlacedTextContent{423.690}{356.176}{19.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(7),}
+  \ALIUSPlacedTextContent{454.139}{356.176}{57.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1424–1436.}
+  \ALIUSPlacedTextContent{126.951}{372.016}{229.046}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/02699931.2017.1278679}
+  \ALIUSPlacedTextContent{90.951}{403.456}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{LaBerge, S., Baird, B., \& Zimbardo, P. G. (2018). Smooth tracking of visual targets}
+  \ALIUSPlacedTextContent{126.951}{419.296}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{distinguishes lucid REM sleep dreaming and waking perception from}
+  \ALIUSPlacedTextContent{126.951}{434.896}{66.933}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{imagination.}
+  \ALIUSPlacedTextContent{193.860}{434.896}{110.770}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature communications}
+  \ALIUSPlacedTextContent{304.618}{434.896}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{310.546}{434.896}{5.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{9}
+  \ALIUSPlacedTextContent{316.006}{434.896}{38.743}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1-8.}
+  \ALIUSPlacedTextContent{126.951}{450.736}{213.331}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/s41467-018-05547-0}
+  \ALIUSPlacedTextContent{90.951}{482.176}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{LaBerge, S., LaMarca, K., \& Baird, B. (2018). Pre-sleep treatment with galantamine}
+  \ALIUSPlacedTextContent{126.951}{498.016}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{stimulates lucid dreaming: A double-blind, placebo-controlled, crossover}
+  \ALIUSPlacedTextContent{126.951}{513.616}{33.113}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{study.}
+  \ALIUSPlacedTextContent{160.060}{513.616}{46.170}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{PLoS One}
+  \ALIUSPlacedTextContent{206.236}{513.616}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{212.164}{513.616}{8.215}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{13}
+  \ALIUSPlacedTextContent{220.392}{513.616}{70.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(8), e0201246.}
+  \ALIUSPlacedTextContent{126.951}{529.456}{223.038}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1371/journal.pone.0201246}
+  \ALIUSPlacedTextContent{90.951}{560.896}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{La Berge, S. P., Nagel, L. E., Dement, W. C., \& Zarcone, V. P. (1981). Lucid}
+  \ALIUSPlacedTextContent{126.951}{576.736}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dreaming Verified by Volitional Communication during Rem Sleep.}
+  \ALIUSPlacedTextContent{126.951}{592.336}{127.669}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Perceptual and Motor Skills}
+  \ALIUSPlacedTextContent{254.634}{592.336}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{260.562}{592.336}{9.566}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{52}
+  \ALIUSPlacedTextContent{270.143}{592.336}{78.883}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 727–732.}
+  \ALIUSPlacedTextContent{126.951}{608.176}{202.789}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.2466/pms.1981.52.3.727}
+  \ALIUSPlacedTextContent{90.951}{639.616}{192.101}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{LaBerge, S., \& Rheingold, H. (1990).}
+  \ALIUSPlacedTextContent{284.612}{639.616}{193.249}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Exploring the World of Lucid Dreaming.}
+  \ALIUSPlacedTextContent{477.842}{639.616}{46.351}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{New}
+  \ALIUSPlacedTextContent{126.951}{655.456}{121.524}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{York: Ballantine Books.}
+  \ALIUSPlacedTextContent{90.951}{686.896}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Levin, R., \& Nielsen, T. (2009). Nightmares, Bad Dreams, and Emotion}
+  \ALIUSPlacedTextContent{126.951}{702.496}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dysregulation: A Review and New Neurocognitive Model of Dreaming.}
+  \ALIUSPlacedTextContent{126.951}{718.336}{39.873}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current}
+  \ALIUSPlacedTextContent{185.302}{718.336}{49.740}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Directions}
+  \ALIUSPlacedTextContent{253.520}{718.336}{12.294}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{in}
+  \ALIUSPlacedTextContent{284.293}{718.336}{64.287}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychological}
+  \ALIUSPlacedTextContent{367.058}{718.336}{33.136}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Science}
+  \ALIUSPlacedTextContent{400.213}{718.336}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{424.606}{718.336}{9.485}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{18}
+  \ALIUSPlacedTextContent{434.109}{718.336}{19.176}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2),}
+  \ALIUSPlacedTextContent{471.764}{718.336}{40.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{84–88.}
+  \ALIUSPlacedTextContent{126.951}{734.176}{229.831}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/j.1467-8721.2009.01614.x}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 15
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (297.831bp,-132.951bp) rectangle ++(208.080bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-196.071bp) rectangle ++(204.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-274.791bp) rectangle ++(155.760bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-353.511bp) rectangle ++(176.160bp,-0.720bp);
+  \fill[ALIUSC0000FF] (240.711bp,-416.391bp) rectangle ++(161.520bp,-0.720bp);
+  \fill[ALIUSC0000FF] (222.951bp,-463.671bp) rectangle ++(174.240bp,-0.720bp);
+  \fill[ALIUSC0000FF] (301.911bp,-510.951bp) rectangle ++(177.360bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-579.831bp) rectangle ++(161.760bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-642.711bp) rectangle ++(207.840bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-753.111bp) rectangle ++(237.840bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{322.226}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Benjamin Baird – Internally generated conscious activity}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.549}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{38}
+  \ALIUSPlacedTextContent{90.951}{72.976}{101.158}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Malcolm, N. (1958).}
+  \ALIUSPlacedTextContent{192.114}{72.976}{88.199}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Dreaming Malcolm}
+  \ALIUSPlacedTextContent{280.369}{72.976}{8.635}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{90.951}{104.416}{387.579}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nielsen, T. A. (2004). Chronobiological features of dream production.}
+  \ALIUSPlacedTextContent{482.655}{104.416}{29.370}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Sleep}
+  \ALIUSPlacedTextContent{126.951}{120.016}{84.849}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Medicine Reviews}
+  \ALIUSPlacedTextContent{211.786}{120.016}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{220.663}{120.016}{5.702}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{8}
+  \ALIUSPlacedTextContent{226.383}{120.016}{68.589}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5), 403–424.}
+  \ALIUSPlacedTextContent{297.931}{120.016}{207.979}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.smrv.2004.06.005}
+  \ALIUSPlacedTextContent{90.951}{151.696}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Schredl, M., \& Erlacher, D. (2004). Lucid dreaming frequency and personality.}
+  \ALIUSPlacedTextContent{126.951}{167.296}{55.112}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Personality}
+  \ALIUSPlacedTextContent{205.151}{167.296}{20.496}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{and}
+  \ALIUSPlacedTextContent{248.736}{167.296}{51.425}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Individual}
+  \ALIUSPlacedTextContent{323.249}{167.296}{50.220}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Differences}
+  \ALIUSPlacedTextContent{373.497}{167.296}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{402.506}{167.296}{9.461}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{37}
+  \ALIUSPlacedTextContent{411.982}{167.296}{19.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(7),}
+  \ALIUSPlacedTextContent{454.601}{167.296}{51.330}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1463–1473.}
+  \ALIUSPlacedTextContent{126.951}{183.136}{204.603}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.paid.2004.02.003}
+  \ALIUSPlacedTextContent{90.951}{214.576}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Siclari, F., Baird, B., Perogamvros, L., Bernardi, G., LaRocque, J. J., Riedner, B.,}
+  \ALIUSPlacedTextContent{126.951}{230.416}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Boly, M., Postle, B. R., \& Tononi, G. (2017). The neural correlates of}
+  \ALIUSPlacedTextContent{126.951}{246.016}{53.711}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dreaming.}
+  \ALIUSPlacedTextContent{217.839}{246.016}{35.886}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature}
+  \ALIUSPlacedTextContent{290.908}{246.016}{59.603}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
+  \ALIUSPlacedTextContent{350.549}{246.016}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{393.651}{246.016}{10.395}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{20}
+  \ALIUSPlacedTextContent{404.064}{246.016}{19.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6),}
+  \ALIUSPlacedTextContent{461.237}{246.016}{50.789}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{872–878.}
+  \ALIUSPlacedTextContent{126.951}{261.856}{155.718}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/nn.4545}
+  \ALIUSPlacedTextContent{90.951}{293.296}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Smallwood, J., Fishman, D. J., \& Schooler, J. W. (2007). Counting the cost of an}
+  \ALIUSPlacedTextContent{126.951}{309.136}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{absent mind: Mind wandering as an underrecognized influence on}
+  \ALIUSPlacedTextContent{126.951}{324.736}{134.968}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{educational performance.}
+  \ALIUSPlacedTextContent{265.111}{324.736}{158.060}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychonomic Bulletin \& Review}
+  \ALIUSPlacedTextContent{423.155}{324.736}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{432.249}{324.736}{9.265}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{14}
+  \ALIUSPlacedTextContent{441.531}{324.736}{70.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 230–236.}
+  \ALIUSPlacedTextContent{126.951}{340.576}{176.169}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3758/BF03194057}
+  \ALIUSPlacedTextContent{90.951}{372.016}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Smallwood, J., Fitzgerald, A., Miles, L. K., \& Phillips, L. H. (2009). Shifting}
+  \ALIUSPlacedTextContent{126.951}{387.856}{385.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{moods, wandering minds: Negative moods lead the mind to wander.}
+  \ALIUSPlacedTextContent{126.951}{403.456}{38.901}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Emotion}
+  \ALIUSPlacedTextContent{165.859}{403.456}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{171.787}{403.456}{5.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{9}
+  \ALIUSPlacedTextContent{177.247}{403.456}{63.432}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 271–276.}
+  \ALIUSPlacedTextContent{240.698}{403.456}{164.618}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1037/a0014855}
+  \ALIUSPlacedTextContent{90.951}{434.896}{252.707}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Tulving, E. (1985). Memory and consciousness.}
+  \ALIUSPlacedTextContent{346.954}{434.896}{165.071}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Canadian Psychology/Psychologie}
+  \ALIUSPlacedTextContent{126.951}{450.736}{51.774}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{canadienne}
+  \ALIUSPlacedTextContent{178.755}{450.736}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{184.683}{450.736}{10.162}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{26}
+  \ALIUSPlacedTextContent{194.862}{450.736}{25.148}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1.}
+  \ALIUSPlacedTextContent{223.016}{451.539}{174.092}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{http://doi.org/10.1037/h0080017}
+  \ALIUSPlacedTextContent{90.951}{482.176}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Wagner, U., Gais, S., Haider, H., Verleger, R., \& Born, J. (2004). Sleep inspires}
+  \ALIUSPlacedTextContent{126.951}{498.016}{40.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{insight.}
+  \ALIUSPlacedTextContent{167.431}{498.016}{32.841}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature}
+  \ALIUSPlacedTextContent{200.295}{498.016}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{206.223}{498.016}{15.236}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{427}
+  \ALIUSPlacedTextContent{221.471}{498.016}{80.426}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6972), 352–355.}
+  \ALIUSPlacedTextContent{301.913}{498.016}{177.228}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/nature02223}
+  \ALIUSPlacedTextContent{90.951}{535.456}{421.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Walker, M. P., \& van der Helm, E. (2009). Overnight therapy? The role of sleep in}
+  \ALIUSPlacedTextContent{126.951}{551.056}{161.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{emotional brain processing.}
+  \ALIUSPlacedTextContent{297.380}{551.056}{109.972}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychological Bulletin}
+  \ALIUSPlacedTextContent{407.363}{551.056}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{422.435}{551.056}{13.074}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{135}
+  \ALIUSPlacedTextContent{435.526}{551.056}{76.500}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5), 731–748.}
+  \ALIUSPlacedTextContent{126.951}{566.896}{161.861}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1037/a0016570}
+  \ALIUSPlacedTextContent{90.951}{598.336}{424.117}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Windt, J. M. (2013). Reporting dream experience: Why (not) to be skeptical about}
+  \ALIUSPlacedTextContent{126.951}{614.176}{35.096}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dream}
+  \ALIUSPlacedTextContent{184.280}{614.176}{42.001}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{reports.}
+  \ALIUSPlacedTextContent{248.521}{614.176}{44.783}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers}
+  \ALIUSPlacedTextContent{315.538}{614.176}{12.286}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{in}
+  \ALIUSPlacedTextContent{350.057}{614.176}{38.290}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Human}
+  \ALIUSPlacedTextContent{410.580}{614.176}{59.635}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
+  \ALIUSPlacedTextContent{470.209}{614.176}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{498.359}{614.176}{5.016}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{7}
+  \ALIUSPlacedTextContent{503.390}{614.176}{8.635}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.951}{629.776}{207.921}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fnhum.2013.00708}
+  \ALIUSPlacedTextContent{90.951}{661.456}{219.421}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Windt, J. M., \& Metzinger, T. (2007).}
+  \ALIUSPlacedTextContent{315.419}{661.456}{193.564}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The philosophy of dreaming and self}
+  \ALIUSPlacedTextContent{126.951}{677.056}{385.075}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{consciousness: what happens to the experiential subject during the dream}
+  \ALIUSPlacedTextContent{126.951}{692.896}{28.077}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{state?.}
+  \ALIUSPlacedTextContent{155.043}{692.896}{353.973}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{In D. Barrett \& P. McNamara (Eds.), Praeger perspectives. The new}
+  \ALIUSPlacedTextContent{126.951}{708.496}{378.979}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{science of dreaming: Vol. 3. Cultural and theoretical perspectives (p. 193–}
+  \ALIUSPlacedTextContent{126.951}{724.336}{26.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{247).}
+  \ALIUSPlacedTextContent{178.106}{724.336}{41.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Praeger}
+  \ALIUSPlacedTextContent{244.391}{724.336}{118.947}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Publishers/Greenwood}
+  \ALIUSPlacedTextContent{388.224}{724.336}{56.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Publishing}
+  \ALIUSPlacedTextContent{470.082}{724.336}{38.901}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Group.}
+  \ALIUSPlacedTextContent{126.951}{740.176}{237.707}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://psycnet.apa.org/record/2007-09897-009}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

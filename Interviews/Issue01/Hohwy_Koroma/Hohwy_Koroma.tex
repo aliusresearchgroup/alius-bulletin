@@ -1,38 +1,432 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.0000bp,paperheight=842.0000bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{On different ways of being conscious: modes of consciousness and the predictive mind}
-\author{Jakob Hohwy Interviewed by Matthieu Koroma}
-\date{ALIUS Bulletin 1}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSC7F7F7F}{HTML}{7F7F7F}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
+
+% --- Draft abstract retained as comments; not rendered in reconstruction. ---
+% \section*{Abstract}
+% This interview with Jakob Hohwy covers the conceptual scaffolding behind his account of modes of consciousness and its connection to predictive processing. Hohwy describes how an early background in analytic philosophy of language gave way, through exposure to theories of delusion formation by Ian Gold and to the cognitive neuroscience network around Andreas Roepstorff and Chris Frith, to an empirically oriented philosophy of mind centred on how the brain makes sense of sensory input. The conversation introduces the notion of modes of consciousness developed jointly with Tim Bayne, characterised not as a rival account but as global states or ways of being conscious that are not reducible to either contents or levels. Hohwy addresses the mutual exclusivity of modes in relation to the unity of consciousness defended by Bayne, mixed cases such as local sleep and asymmetric wake-sleep states, and how noetic feelings and metacognition might modulate global states from within. Further sections consider whether new abilities in drug-induced or meditative states call for a bush-like ordering of dimensions, the rejection of levels of consciousness in favour of multidimensional variation along content, functional, and arousal dimensions, and the implications of mode-pluralism for the search for neural correlates of consciousness through multifactorial experimental designs. The discussion takes up self-oriented versus externally-oriented axes in disorders of consciousness, and closes by proposing that modes might be tied together as different overall rates of prediction error minimization within the Bayesian brain framework.\par
+% --- End draft abstract. ---
+% --- End draft abstract. ---
+% --- End draft abstract. ---
+% --- End draft abstract. ---
+% --- End draft abstract. ---
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/8yq5-pv76\par
-\textbf{Keywords:} modes of consciousness, predictive processing, multidimensional framework, noetic feelings, neural correlates of consciousness\par
-\section*{Abstract}
-This interview with Jakob Hohwy covers the conceptual scaffolding behind his account of modes of consciousness and its connection to predictive processing. Hohwy describes how an early background in analytic philosophy of language gave way, through exposure to theories of delusion formation by Ian Gold and to the cognitive neuroscience network around Andreas Roepstorff and Chris Frith, to an empirically oriented philosophy of mind centred on how the brain makes sense of sensory input. The conversation introduces the notion of modes of consciousness developed jointly with Tim Bayne, characterised not as a rival account but as global states or ways of being conscious that are not reducible to either contents or levels. Hohwy addresses the mutual exclusivity of modes in relation to the unity of consciousness defended by Bayne, mixed cases such as local sleep and asymmetric wake-sleep states, and how noetic feelings and metacognition might modulate global states from within. Further sections consider whether new abilities in drug-induced or meditative states call for a bush-like ordering of dimensions, the rejection of levels of consciousness in favour of multidimensional variation along content, functional, and arousal dimensions, and the implications of mode-pluralism for the search for neural correlates of consciousness through multifactorial experimental designs. The discussion takes up self-oriented versus externally-oriented axes in disorders of consciousness, and closes by proposing that modes might be tied together as different overall rates of prediction error minimization within the Bayesian brain framework.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent 17 ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin On different ways of being conscious Modes of consciousness and the predictive mind An interview with Jakob Hohwy By Matthieu Koroma Jakob Hohwy jakob.hohwy@monash.edu Department of Philosophy Monash University, Melbourne, Australia Matthieu Koroma mkoroma@ens-paris-saclay.fr Department of Cognitive Studies Ecole Normale Superieure, Paris, France Citation: Hohwy, J. \& Koroma, M. (2017). On different ways of being conscious: modes of consciousness and the predictive mind. An interview with Jakob Hohwy. ALIUS Bulletin, 1, 17-23. Could you first explain how you have come in your academic career to adopt a strong empirically oriented philosophy - what triggered your interest in the study of the variety of conscious states? It is hard to say what actually drives a particular career path - lots of coincidences, I suspect. Like most young philosophers back in the 1990's, I did not have much interest in, or understanding of, empirical science. I saw myself as engaged in a priori conceptual analysis. Most of my research was in philosophy of language. But I got to share an office with Ian Gold, who had done serious work in psychopathology. Ian Gold introduced me to theories of delusion formation and thereby to cognitive neuroscience. It immediately appealed to me and I think that deep down I must always have known that the philosophical problems that I wrestled with in fact do relate to science. In other words, these philosophical problems can't be addressed only with conceptual analysis (though conceptual analysis can be essential to science!). Even though I continued traditional philosophical work, I sought out more and more researchers from neuroscience and other disciplines. I talked a lot with Andreas Roepstorff at Aarhus who was busy building a research network around cognitive neuroscience and got intrigued by the clever experiments conducted there by Chris Frith and others. I think the overarching philosophical problem that interests me, and has been the focus of my work for a long time, is how we (or our brains) make sense of the sensory input that hits the senses. Perhaps I am interested in this because I am myself often perplexed at what the world around me means! Perception is, when you think about it, pretty amazing, and the varieties of conscious experience that accompany perception are so rich and multifaceted that it is hard to believe that a biological organ like the brain is responsible for it all. Of course, I would like to know what the ultimate nature of consciousness is - how the J. Hohwy - On Different Ways of Being Conscious ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 18 brain gives rise to any kind of consciousness - but I am actually more interested in what shapes our conscious experience. Could you please describe briefly the concept of a "mode of consciousness" and how it differs from other accounts of consciousness? I wouldn't say that a "mode of consciousness" is an account of consciousness that is in competition with other accounts. It is more a way to point to an aspect of consciousness that hasn't received so much attention. Most researchers focus either on contents of consciousness ("I experience a red rose") or levels or states of consciousness ("How conscious are you?"). What Tim Bayne and I did was simply highlight that there are global states of consciousness too - which we called "modes", or ways, of being conscious. Modes are not just a matter of accumulating all the contents, they are a global way of having or characterizing those contents. Similarly, modes are not just a matter of having a level of consciousness, they are a way of characterizing what that level is (besides, we don't really think there are levels of consciousness as such; see our new paper in Trends in Cognitive Sciences (Bayne et al. 2016)). We argued that perhaps we can learn something new about consciousness from considering modes and different dimensions of consciousness rather than just levels and contents. A recent study in Neuroimage Clinical by Sergent and colleagues intriguingly supports this multidimensional approach to consciousness (Sergent et al., 2017). You describe modes of consciousness as global states of consciousness being mutually exclusive (here I am referring specifically to when you say that a "creature cannot be in two distinct modes of consciousness at once", p. 60 in "Modes of Consciousness" (Bayne \& Hohwy, 2016)). Is this necessitated by unity being a fundamental property of conscious experience, as defended by Tim Bayne (2002), or does it add something else to the understanding of consciousness? This is a good question. Perhaps Tim thinks there is a link between unity and modes - that is not a bad thought! But the main idea to begin with was that when we characterize modes, it seems we can't find cases where two modes overlap. I am quite open to hearing counterexamples to this though. A lot obviously hangs on how modes are defined. Considering a mode as a multidimensional construct (determined by dimensions of content and functionality, and perhaps arousal states), one can imagine two creatures being in the same mode for different reasons There are global states of consciousness too - which we called "modes", or ways, of being conscious. " " J. Hohwy - On Different Ways of Being Conscious ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 19 (being placed in different positions on different dimensions might end up determining the same state overall). It is less clear how there could be two modes in the same creature, from this kind of perspective. Following the previous question, functionally, it appears that for example some parts of the brain can enter sleep states while the rest of the brain remains in an awake state and affect properties of the conscious experience (Vyazovskiy et al., 2001; Hung et al., 2014). This phenomenon is experience dependent, and could affect differentially functional properties of the conscious experience (Sarasso et al., 2014). For example, "modes" have more of a familial resemblance rather than a shared core set of functional properties (or dispositional properties). I wonder if you would prefer to frame these transitional or mixed states as either "awake" or "asleep" with some gradation along the relevant dimensions and how you would accommodate these transitions in your model? Again, this is a nice type of case to think about. One way to go would be to label that mixed case as its own overall, global mode. This is almost cheating, of course, since we naturally would want some taxonomy of modes (e.g. either "awake" or "asleep"). But perhaps what the multidimensional account teaches us is that modes can come in many different forms, and that as long as there is something it is like to be in that mode from a global perspective, then it is a mode, even if it is determined by an unusual constellation of positions on the various dimensions making up the current global conscious state. You might think that this move brings us in to the vicinity of dependence on a unity view, a la Bayne, as mentioned in the question above. You describe a criterion for defining modes as "something to be like in, from a global perspective". As you explain in "Modes of consciousness" (Bayne \& Hohwy, 2016), modes are not to be understood as phenomenological constructs but rather characterizations of distinguishable states of consciousness. Nonetheless, it seems possible to develop some phenomenology or subjective knowledge about modes, in the forms of noetic feelings (e.g. feeling tired) or metacognition (e.g. becoming lucid during dreams). How do such metacognitive instances relate to modes and what could their function be in the conscious process? This is exactly the kind of question we are hoping will arise once we begin focusing more on modes of consciousness. It opens up possibilities of new discussions. For noetic feelings, there is probably a spectrum from local to global (for discussion, see Dokic 2012). A feeling of knowing seems local to a particular content (e.g. "I feel I know what the capital of Latvia is but I can't retrieve it"). A feeling of tiredness, or various moods, may be more global, coloring the entire global state of consciousness across both content and functional dimensions; this would make is closer to a mode. I think it is right that there is a distinct phenomenological feel to being tired but J. Hohwy - On Different Ways of Being Conscious ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 20 apart from describing the physiological aspects ("I can't keep my eyes open") and offering metaphors ("feels like I am walking through treacle") it is perhaps hard to pinpoint these feelings phenomenologically. Metacognitive states more generally are good candidates for teaching us about modes, I think. However, much here depends on what such states amount to. Feelings of uncertainty or confidence for example might or might not be important for the overall conscious process. Some people think that metacognition is essential to consciousness, others do not. But irrespective of their role in theories of consciousness, I am quite interested in the idea that such feelings in fact modulate the global state of consciousness. This also sits well with my pet theory of prediction error minimization: if the brain engages in precision-weighted prediction error minimization, then it would be natural to assume that it continuously assessed the overall rate of prediction error minimization and expected precisions, and brings this to bear on perceptual inference in a global sense. Developing these vague thoughts further is a project for the future (or for someone else)! How would a multidimensional account tackle the apparition of entirely new abilities or functions in some states of consciousness (e.g. in some drug-induced or meditative practices)? Could we frame the emergence of new abilities in different conscious states as a hierarchical ordering of dimensions, where new dimensions appear to further classify subgroups of conscious' states, or as interaction between functional dimensions (by hierarchical, I am rather picturing a bush-like structure, just as in evolutionary science, rather than a single tree)? Perhaps this is in fact an empirical question as well as a conceptual one - it may require extensive empirical work to somehow vary the dimensions of consciousness and figure out how they belong together and build on each other. It might be hierarchical in some sense (and I like the idea of wayward tree more than a linear hierarchy). Following the previous question, I wonder then if all conscious states share the same multidimensional space. Would you identify some fundamental dimensions of consciousness on to which any state of consciousness can be projected? We have certainly tried to argue that there are no levels of consciousness in any strict, straightforward sense (in the Trends in Cognitive Sciences paper mentioned earlier (Bayne et al., 2016)). Part of this conclusion comes from our suspicion that consciousness itself is not something that can be said to come in degrees but that rather the dimensions that determine global states of consciousness (in terms of content ranges, and functional properties such as attention) can come in degrees. It seems quite likely to me that these dimensions will interact with each other and thereby create fluctuations that are not easy to order in any hierarchical way. J. Hohwy - On Different Ways of Being Conscious ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 21 The diversity of modes suggests that consciousness could be realized in a multiple fashion rather than relying on a single mechanism. Could this consideration be relevant in the search of neuronal correlates of consciousness? I very much think that the search for the neural correlates of consciousness needs to take modes or global states of consciousness into consideration. I am not sure multiple realization is the best way to describe this, mainly because that discussion pertains to metaphysical concerns about functionalism and identity theory, whereas the neural correlates is an empirical issue. But the thought is right: the same perceptual content might be experienced under different modes, such that the underlying neural mechanism differs. This is something that is dealt with nicely in multifactorial experimental designs where modes could be a factor alongside content. For example, one could look at binocular rivalry in different modes of consciousness (e.g. tired vs. alert). The idea is that contents might interact with modes such that the mechanism for consciousness differs for different modes and different contents. Note that the interaction may go both ways: we might perceive some object differently depending on the mode (a friendly face may be perceived as hostile when in a low mood), and some modes may be modulated by some contents (perceiving the tiger will make you feel less tired). Do you think that a multidimensional account of consciousness would benefit from the identification of trade-offs linked to biological constraints? For example, using the externally-oriented vs. self-oriented axis to study wake vs. sleep, rather than just a unidimensional conception of connected vs. disconnected from the environment? I think that is very likely. It seems that there many dimensions that can go into what determines a mode of consciousness. This will involve interoceptive states, aspects of action and decision-making, and perceptual inference concerning self vs. world. I agree it is important to move away from the kind of "environment connectedness" that typical bedside tests of consciousness are most focused on. This relates to the recent spate of studies of vestiges of consciousness in disorders of consciousness (e.g. work by Adrian Owen and Steven Laureys (Owen et al., 2009)). They show that consciousness does not need to be directly related to responsiveness to the environment but can be a more endogenous process. This invites the thought that Consciousness itself is not something that can be said to come in degrees, but rather the dimensions that determine global states of consciousness can come in degrees. " " J. Hohwy - On Different Ways of Being Conscious ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 22 perhaps in some modes, there is a very strong focus on internal, endogenous, self- related aspects of consciousness. The frameworks of Predictive Coding and Bayesianism have been successful in explaining several aspects of cognition in a neurocomputational framework (Hohwy, 2013). Some work has been done to link this to phenomenology (e.g. the work from Corlett's laboratory). How do predictive and Bayesian approaches shed light on the understanding of the different modes of consciousness and their phenomenology? It is tempting to think of modes of consciousness as different overall ways of minimizing prediction error in a brain in a certain situation. That is, the brain may minimize prediction error at different rates, and may realize the same rate of prediction error minimization in different ways - and the overall rate of prediction error minimization may be reflected in the current mode. This perspective would matter because it ties different modes together under one theoretical umbrella, having the potential to explain why such different states (when explained in terms of content and functionality dimensions) all have in common that they are modes of consciousness. Of course, with this comes a rather speculative notion that the state of consciousness is determined by the overall rate of prediction error minimization: if you minimize too little, or too much, at any given time and relative to a model, then you lose consciousness. Don't ask me to justify this theory just yet though! J. Hohwy - On Different Ways of Being Conscious ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 23 References Bayne, T. (2012). The Unity of Consciousness. Oxford: Oxford University Press. Bayne, T., Hohwy, J. (2016). Modes of consciousness. In Finding Consciousness: The Neuroscience, Ethics, and Law of Severe Brain Damage, Sinnott-Armstrong, W. (Ed.) Oxford: Oxford University Press, 57-80. Bayne, T., Hohwy, J., \& Owen, A. M. (2016). Are There Levels of Consciousness?. Trends in Cognitive Sciences. 20(6), 405-413. Dokic, J. (2012). Seeds of self-knowledge: noetic feelings and metacognition. In M. Beran, J. Brandl, J. Perner, \& J. Proust (Eds.), Foundations of Metacognition (302-321). Oxford: Oxford University Press. Hohwy, J. (2013). The predictive mind. Oxford: Oxford University Press. Hung, C. S., Sarasso, S., Ferrarelli, F., Riedner, B., Ghilardi, M. F., Cirelli, C., \& Tononi, G. (2013). Local experience-dependent changes in the wake EEG after prolonged wakefulness. Sleep, 36(1), 59-72. Owen, A. M., Schiff, N. D., \& Laureys, S. (2009). A new era of coma and consciousness science. Progress in brain research, 177, 399-411. Sarasso, S., Pigorini, A., Proserpio, P., Gibbs, S. A., Massimini, M., \& Nobili, L. (2014). Fluid boundaries between wake and sleep: experimental evidence from Stereo-EEG recordings. Arch Ital Biol, 152(2e3), 169e77. Sergent, C., et al. (2017). Multidimensional cognitive evaluation of patients with disorders of consciousness using EEG: A proof of concept study. NeuroImage: Clinical, 13, 455-469. Vyazovskiy, V. V., Olcese, U., Hanlon, E. C., Nir, Y., Cirelli, C., \& Tononi, G. (2011). Local sleep in awake rats. Nature, 472(7344), 443-447.\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \fill[ALIUSC1F8135] (361.240bp,-161.080bp) rectangle ++(101.760bp,-0.240bp);
+  \fill[ALIUSC1F8135] (361.240bp,-235.480bp) rectangle ++(113.520bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (355.480bp,-136.600bp) rectangle ++(0.240bp,-84.240bp);
+  \fill[ALIUSCBFBFBF] (355.480bp,-220.840bp) rectangle ++(0.240bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (355.480bp,-223.000bp) rectangle ++(0.240bp,-36.000bp);
+  \ALIUSPlacedTextContent{511.620}{35.460}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{17}
+  \ALIUSPlacedTextContent{71.080}{71.099}{327.461}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{On different ways of being conscious}
+  \ALIUSPlacedTextContent{71.080}{101.311}{370.975}{ALIUSC000000}{\ALIUSFontLatoLight}{17.755}{Modes of consciousness and the predictive mind}
+  \ALIUSPlacedTextContent{69.400}{136.566}{125.486}{ALIUSC000000}{\ALIUSFontLatoLight}{15.840}{An interview with}
+  \ALIUSPlacedTextContent{361.240}{137.700}{65.113}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Jakob Hohwy}
+  \ALIUSPlacedTextContent{361.240}{151.115}{105.125}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{jakob.hohwy@monash.edu}
+  \ALIUSPlacedTextContent{69.400}{155.807}{113.373}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Jakob Hohwy}
+  \ALIUSPlacedTextContent{361.240}{161.915}{102.363}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Philosophy}
+  \ALIUSPlacedTextContent{361.240}{172.715}{158.238}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Monash University, Melbourne, Australia}
+  \ALIUSPlacedTextContent{69.400}{190.528}{117.861}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{By Matthieu Koroma}
+  \ALIUSPlacedTextContent{361.240}{212.100}{85.493}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Matthieu Koroma}
+  \ALIUSPlacedTextContent{69.400}{223.128}{282.891}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{Citation: Hohwy, J. \& Koroma, M. (2017). On different ways of}
+  \ALIUSPlacedTextContent{361.240}{225.515}{116.866}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{mkoroma@ens-paris-saclay.fr}
+  \ALIUSPlacedTextContent{69.400}{235.128}{282.899}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{being conscious: modes of consciousness and the predictive mind.}
+  \ALIUSPlacedTextContent{361.240}{236.315}{127.315}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Cognitive Studies}
+  \ALIUSPlacedTextContent{361.240}{247.115}{155.052}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{École Normale Supérieure, Paris, France}
+  \ALIUSPlacedTextContent{69.400}{247.128}{138.136}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{An interview with Jakob Hohwy.}
+  \ALIUSPlacedTextContent{207.567}{247.128}{57.395}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.840}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{265.051}{247.128}{3.874}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{,}
+  \ALIUSPlacedTextContent{268.955}{247.128}{5.707}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.840}{1}
+  \ALIUSPlacedTextContent{274.755}{247.128}{32.377}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{, 17-23.}
+  \ALIUSPlacedTextContent{71.080}{310.447}{455.684}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Could you first explain how you have come in your academic career to adopt a strong}
+  \ALIUSPlacedTextContent{71.080}{327.727}{455.771}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{empirically oriented philosophy – what triggered your interest in the study of the}
+  \ALIUSPlacedTextContent{71.080}{345.007}{146.369}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{variety of conscious states?}
+  \ALIUSPlacedTextContent{71.080}{374.058}{456.549}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It is hard to say what actually drives a particular career path – lots of coincidences,}
+  \ALIUSPlacedTextContent{71.080}{390.858}{456.519}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I suspect. Like most young philosophers back in the 1990's, I did not have much}
+  \ALIUSPlacedTextContent{71.080}{407.898}{456.462}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interest in, or understanding of, empirical science. I saw myself as engaged in a priori}
+  \ALIUSPlacedTextContent{71.080}{424.938}{456.376}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conceptual analysis. Most of my research was in philosophy of language. But I got to}
+  \ALIUSPlacedTextContent{71.080}{441.738}{456.584}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{share an office with Ian Gold, who had done serious work in psychopathology. Ian}
+  \ALIUSPlacedTextContent{71.080}{458.778}{456.739}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Gold introduced me to theories of delusion formation and thereby to cognitive}
+  \ALIUSPlacedTextContent{71.080}{475.578}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroscience. It immediately appealed to me and I think that deep down I must}
+  \ALIUSPlacedTextContent{71.080}{492.618}{456.567}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{always have known that the philosophical problems that I wrestled with in fact do}
+  \ALIUSPlacedTextContent{71.080}{509.658}{456.537}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{relate to science. In other words, these philosophical problems can't be addressed}
+  \ALIUSPlacedTextContent{71.080}{526.458}{456.570}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{only with conceptual analysis (though conceptual analysis can be essential to}
+  \ALIUSPlacedTextContent{71.080}{543.498}{456.571}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{science!). Even though I continued traditional philosophical work, I sought out more}
+  \ALIUSPlacedTextContent{71.080}{560.538}{456.484}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and more researchers from neuroscience and other disciplines. I talked a lot with}
+  \ALIUSPlacedTextContent{71.080}{577.338}{456.590}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Andreas Roepstorff at Aarhus who was busy building a research network around}
+  \ALIUSPlacedTextContent{71.080}{594.378}{456.536}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cognitive neuroscience and got intrigued by the clever experiments conducted there}
+  \ALIUSPlacedTextContent{71.080}{611.418}{456.622}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by Chris Frith and others. I think the overarching philosophical problem that}
+  \ALIUSPlacedTextContent{71.080}{628.218}{456.439}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interests me, and has been the focus of my work for a long time, is how we (or our}
+  \ALIUSPlacedTextContent{71.080}{645.258}{456.486}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brains) make sense of the sensory input that hits the senses. Perhaps I am interested}
+  \ALIUSPlacedTextContent{71.080}{662.058}{456.542}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in this because I am myself often perplexed at what the world around me means!}
+  \ALIUSPlacedTextContent{71.080}{679.098}{456.598}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Perception is, when you think about it, pretty amazing, and the varieties of}
+  \ALIUSPlacedTextContent{71.080}{696.138}{456.590}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious experience that accompany perception are so rich and multifaceted that}
+  \ALIUSPlacedTextContent{71.080}{712.938}{456.676}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it is hard to believe that a biological organ like the brain is responsible for it all. Of}
+  \ALIUSPlacedTextContent{71.080}{729.978}{456.557}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{course, I would like to know what the ultimate nature of consciousness is – how the}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{235.318}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Hohwy – On Different Ways of Being Conscious}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{18}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.522}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain gives rise to any kind of consciousness – but I am actually more interested in}
+  \ALIUSPlacedTextContent{71.080}{87.978}{210.342}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{what shapes our conscious experience.}
+  \ALIUSPlacedTextContent{71.080}{117.006}{455.728}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Could you please describe briefly the concept of a "mode of consciousness" and how it}
+  \ALIUSPlacedTextContent{71.080}{134.286}{240.722}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{differs from other accounts of consciousness?}
+  \ALIUSPlacedTextContent{71.080}{163.338}{456.724}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I wouldn't say that a "mode of consciousness" is an account of consciousness that is}
+  \ALIUSPlacedTextContent{71.080}{180.378}{456.527}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in competition with other accounts. It is more a way to point to an aspect of}
+  \ALIUSPlacedTextContent{71.080}{197.418}{456.467}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness that hasn't received so much attention. Most researchers focus either}
+  \ALIUSPlacedTextContent{71.080}{214.218}{456.468}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on contents of consciousness ("I experience a red rose") or levels or states of}
+  \ALIUSPlacedTextContent{71.080}{231.258}{456.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness ("How conscious are you?"). What Tim Bayne and I did was simply}
+  \ALIUSPlacedTextContent{71.080}{248.058}{456.554}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{highlight that there are global states of consciousness too – which we called "modes",}
+  \ALIUSPlacedTextContent{71.080}{265.098}{456.673}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or ways, of being conscious. Modes are not just a matter of accumulating all the}
+  \ALIUSPlacedTextContent{71.080}{282.138}{456.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contents, they are a global way of having or characterizing those contents. Similarly,}
+  \ALIUSPlacedTextContent{71.080}{298.938}{456.540}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modes are not just a matter of having a level of consciousness, they are a way of}
+  \ALIUSPlacedTextContent{71.080}{315.978}{456.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characterizing what that level is (besides, we don't really think there are levels of}
+  \ALIUSPlacedTextContent{71.080}{333.018}{240.194}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness as such; see our new paper in}
+  \ALIUSPlacedTextContent{311.576}{333.018}{142.338}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Trends in Cognitive Sciences}
+  \ALIUSPlacedTextContent{453.991}{333.018}{73.648}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Bayne et al.}
+  \ALIUSPlacedTextContent{71.080}{349.818}{456.675}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2016)). We argued that perhaps we can learn something new about consciousness}
+  \ALIUSPlacedTextContent{71.080}{366.858}{456.461}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{from considering modes and different dimensions of consciousness rather than just}
+  \ALIUSPlacedTextContent{71.080}{383.898}{207.436}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{levels and contents. A recent study in}
+  \ALIUSPlacedTextContent{278.611}{383.898}{102.408}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Neuroimage Clinical}
+  \ALIUSPlacedTextContent{381.035}{383.898}{146.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by Sergent and colleagues}
+  \ALIUSPlacedTextContent{71.080}{400.698}{456.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{intriguingly supports this multidimensional approach to consciousness (Sergent et}
+  \ALIUSPlacedTextContent{71.080}{417.738}{55.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{al., 2017).}
+  \ALIUSPlacedTextContent{160.120}{428.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{175.720}{448.073}{163.213}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{There are global states of}
+  \ALIUSPlacedTextContent{175.720}{466.073}{231.828}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{consciousness too – which we called}
+  \ALIUSPlacedTextContent{409.720}{482.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{175.720}{483.833}{235.432}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{"modes", or ways, of being conscious.}
+  \ALIUSPlacedTextContent{71.080}{528.846}{455.495}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{You describe modes of consciousness as global states of consciousness being mutually}
+  \ALIUSPlacedTextContent{71.080}{546.127}{455.718}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{exclusive (here I am referring specifically to when you say that a "creature cannot be in}
+  \ALIUSPlacedTextContent{71.080}{563.406}{455.709}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{two distinct modes of consciousness at once", p. 60 in "Modes of Consciousness"}
+  \ALIUSPlacedTextContent{71.080}{580.686}{455.526}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{(Bayne \& Hohwy, 2016)). Is this necessitated by unity being a fundamental property of}
+  \ALIUSPlacedTextContent{71.080}{597.966}{455.683}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{conscious experience, as defended by Tim Bayne (2002), or does it add something else}
+  \ALIUSPlacedTextContent{71.080}{615.247}{209.581}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{to the understanding of consciousness?}
+  \ALIUSPlacedTextContent{71.080}{644.298}{456.504}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is a good question. Perhaps Tim thinks there is a link between unity and modes}
+  \ALIUSPlacedTextContent{71.080}{661.098}{456.596}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{– that is not a bad thought! But the main idea to begin with was that when we}
+  \ALIUSPlacedTextContent{71.080}{678.138}{456.405}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characterize modes, it seems we can't find cases where two modes overlap. I am quite}
+  \ALIUSPlacedTextContent{71.080}{694.938}{456.518}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{open to hearing counterexamples to this though. A lot obviously hangs on how}
+  \ALIUSPlacedTextContent{71.080}{711.978}{456.446}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modes are defined. Considering a mode as a multidimensional construct}
+  \ALIUSPlacedTextContent{71.080}{729.018}{456.550}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(determined by dimensions of content and functionality, and perhaps arousal}
+  \ALIUSPlacedTextContent{71.080}{745.818}{456.572}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{states), one can imagine two creatures being in the same mode for different reasons}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{235.318}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Hohwy – On Different Ways of Being Conscious}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{19}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.512}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(being placed in different positions on different dimensions might end up}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.543}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{determining the same state overall). It is less clear how there could be two modes in}
+  \ALIUSPlacedTextContent{71.080}{104.778}{266.047}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the same creature, from this kind of perspective.}
+  \ALIUSPlacedTextContent{71.080}{134.047}{455.685}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Following the previous question, functionally, it appears that for example some parts of}
+  \ALIUSPlacedTextContent{71.080}{151.326}{455.711}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{the brain can enter sleep states while the rest of the brain remains in an awake state}
+  \ALIUSPlacedTextContent{71.080}{168.607}{455.850}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{and affect properties of the conscious experience (Vyazovskiy et al., 2001; Hung et al.,}
+  \ALIUSPlacedTextContent{71.080}{185.886}{455.709}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{2014). This phenomenon is experience dependent, and could affect differentially}
+  \ALIUSPlacedTextContent{71.080}{203.167}{455.712}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{functional properties of the conscious experience (Sarasso et al., 2014). For example,}
+  \ALIUSPlacedTextContent{71.080}{220.446}{455.727}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{"modes" have more of a familial resemblance rather than a shared core set of functional}
+  \ALIUSPlacedTextContent{71.080}{237.487}{455.763}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{properties (or dispositional properties). I wonder if you would prefer to frame these}
+  \ALIUSPlacedTextContent{71.080}{254.766}{455.704}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{transitional or mixed states as either "awake" or "asleep" with some gradation along the}
+  \ALIUSPlacedTextContent{71.080}{272.047}{455.709}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{relevant dimensions and how you would accommodate these transitions in your model?}
+  \ALIUSPlacedTextContent{71.080}{301.098}{456.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Again, this is a nice type of case to think about. One way to go would be to label}
+  \ALIUSPlacedTextContent{71.080}{318.138}{456.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that mixed case as its own overall, global mode. This is almost cheating, of course,}
+  \ALIUSPlacedTextContent{71.080}{334.938}{456.637}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{since we naturally would want some taxonomy of modes (e.g. either "awake" or}
+  \ALIUSPlacedTextContent{71.080}{351.978}{456.558}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"asleep"). But perhaps what the multidimensional account teaches us is that modes}
+  \ALIUSPlacedTextContent{71.080}{369.018}{456.387}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can come in many different forms, and that as long as there is something it is like to}
+  \ALIUSPlacedTextContent{71.080}{385.818}{456.622}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be in that mode from a global perspective, then it is a mode, even if it is determined}
+  \ALIUSPlacedTextContent{71.080}{402.858}{456.604}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by an unusual constellation of positions on the various dimensions making up the}
+  \ALIUSPlacedTextContent{71.080}{419.898}{456.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{current global conscious state. You might think that this move brings us in to the}
+  \ALIUSPlacedTextContent{71.080}{436.698}{456.527}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vicinity of dependence on a unity view, a la Bayne, as mentioned in the question}
+  \ALIUSPlacedTextContent{71.080}{453.738}{37.515}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{above.}
+  \ALIUSPlacedTextContent{71.080}{482.767}{455.722}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{You describe a criterion for defining modes as "something to be like in, from a global}
+  \ALIUSPlacedTextContent{71.080}{500.047}{455.713}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{perspective". As you explain in "Modes of consciousness" (Bayne \& Hohwy, 2016),}
+  \ALIUSPlacedTextContent{71.080}{517.326}{455.774}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{modes are not to be understood as phenomenological constructs but rather}
+  \ALIUSPlacedTextContent{71.080}{534.607}{455.696}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{characterizations of distinguishable states of consciousness. Nonetheless, it seems}
+  \ALIUSPlacedTextContent{71.080}{551.887}{455.742}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{possible to develop some phenomenology or subjective knowledge about modes, in the}
+  \ALIUSPlacedTextContent{71.080}{569.167}{455.589}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{forms of noetic feelings (e.g. feeling tired) or metacognition (e.g. becoming lucid during}
+  \ALIUSPlacedTextContent{71.080}{586.446}{455.669}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{dreams). How do such metacognitive instances relate to modes and what could their}
+  \ALIUSPlacedTextContent{71.080}{603.727}{197.219}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{function be in the conscious process?}
+  \ALIUSPlacedTextContent{73.589}{632.538}{454.063}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is exactly the kind of question we are hoping will arise once we begin focusing}
+  \ALIUSPlacedTextContent{71.080}{649.578}{456.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more on modes of consciousness. It opens up possibilities of new discussions. For}
+  \ALIUSPlacedTextContent{71.080}{666.618}{456.590}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{noetic feelings, there is probably a spectrum from local to global (for discussion, see}
+  \ALIUSPlacedTextContent{71.080}{683.418}{456.527}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dokic 2012). A feeling of knowing seems local to a particular content (e.g. "I feel I}
+  \ALIUSPlacedTextContent{71.080}{700.458}{456.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{know what the capital of Latvia is but I can't retrieve it"). A feeling of tiredness, or}
+  \ALIUSPlacedTextContent{71.080}{717.498}{456.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{various moods, may be more global, coloring the entire global state of consciousness}
+  \ALIUSPlacedTextContent{71.080}{734.298}{456.543}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{across both content and functional dimensions; this would make is closer to a mode.}
+  \ALIUSPlacedTextContent{71.080}{751.338}{456.597}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think it is right that there is a distinct phenomenological feel to being tired but}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{235.318}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Hohwy – On Different Ways of Being Conscious}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{20}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.596}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{apart from describing the physiological aspects ("I can't keep my eyes open") and}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.602}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{offering metaphors ("feels like I am walking through treacle") it is perhaps hard to}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.516}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pinpoint these feelings phenomenologically. Metacognitive states more generally are}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{good candidates for teaching us about modes, I think. However, much here depends}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.550}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on what such states amount to. Feelings of uncertainty or confidence for example}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.356}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might or might not be important for the overall conscious process. Some people}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.626}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think that metacognition is essential to consciousness, others do not. But}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.506}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{irrespective of their role in theories of consciousness, I am quite interested in the}
+  \ALIUSPlacedTextContent{71.080}{206.538}{456.542}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{idea that such feelings in fact modulate the global state of consciousness. This also}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.572}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sits well with my pet theory of prediction error minimization: if the brain engages}
+  \ALIUSPlacedTextContent{71.080}{240.618}{456.499}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in precision–weighted prediction error minimization, then it would be natural to}
+  \ALIUSPlacedTextContent{71.080}{257.418}{456.494}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{assume that it continuously assessed the overall rate of prediction error}
+  \ALIUSPlacedTextContent{71.080}{274.458}{456.409}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimization and expected precisions, and brings this to bear on perceptual}
+  \ALIUSPlacedTextContent{71.080}{291.498}{456.506}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{inference in a global sense. Developing these vague thoughts further is a project for}
+  \ALIUSPlacedTextContent{71.080}{308.298}{174.596}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the future (or for someone else)!}
+  \ALIUSPlacedTextContent{71.080}{337.567}{455.808}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{How would a multidimensional account tackle the apparition of entirely new abilities or}
+  \ALIUSPlacedTextContent{71.080}{354.847}{455.716}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{functions in some states of consciousness (e.g. in some drug–induced or meditative}
+  \ALIUSPlacedTextContent{71.080}{372.127}{455.709}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{practices)? Could we frame the emergence of new abilities in different conscious states}
+  \ALIUSPlacedTextContent{71.080}{389.167}{455.857}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{as a hierarchical ordering of dimensions, where new dimensions appear to further}
+  \ALIUSPlacedTextContent{71.080}{406.447}{455.718}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{classify subgroups of conscious' states, or as interaction between functional}
+  \ALIUSPlacedTextContent{71.080}{423.727}{455.727}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{dimensions (by hierarchical, I am rather picturing a bush–like structure, just as in}
+  \ALIUSPlacedTextContent{71.080}{441.007}{248.281}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{evolutionary science, rather than a single tree)?}
+  \ALIUSPlacedTextContent{71.080}{470.058}{456.567}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Perhaps this is in fact an empirical question as well as a conceptual one – it may}
+  \ALIUSPlacedTextContent{71.080}{487.098}{456.576}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{require extensive empirical work to somehow vary the dimensions of consciousness}
+  \ALIUSPlacedTextContent{71.080}{503.898}{456.589}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and figure out how they belong together and build on each other. It might be}
+  \ALIUSPlacedTextContent{71.080}{520.938}{456.434}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hierarchical in some sense (and I like the idea of wayward tree more than a linear}
+  \ALIUSPlacedTextContent{71.080}{537.978}{65.010}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hierarchy).}
+  \ALIUSPlacedTextContent{71.080}{567.007}{455.776}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Following the previous question, I wonder then if all conscious states share the same}
+  \ALIUSPlacedTextContent{71.080}{584.286}{455.709}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{multidimensional space. Would you identify some fundamental dimensions of}
+  \ALIUSPlacedTextContent{71.080}{601.566}{378.704}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{consciousness on to which any state of consciousness can be projected?}
+  \ALIUSPlacedTextContent{71.080}{630.618}{456.580}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We have certainly tried to argue that there are no levels of consciousness in any}
+  \ALIUSPlacedTextContent{71.080}{647.418}{203.083}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{strict, straightforward sense (in the}
+  \ALIUSPlacedTextContent{276.199}{647.418}{147.558}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Trends in Cognitive Sciences}
+  \ALIUSPlacedTextContent{423.822}{647.418}{103.812}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{paper mentioned}
+  \ALIUSPlacedTextContent{71.080}{664.458}{456.732}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{earlier (Bayne et al., 2016)). Part of this conclusion comes from our suspicion that}
+  \ALIUSPlacedTextContent{71.080}{681.498}{456.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness itself is not something that can be said to come in degrees but that}
+  \ALIUSPlacedTextContent{71.080}{698.298}{456.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{rather the dimensions that determine global states of consciousness (in terms of}
+  \ALIUSPlacedTextContent{71.080}{715.338}{456.617}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{content ranges, and functional properties such as attention) can come in degrees. It}
+  \ALIUSPlacedTextContent{71.080}{732.378}{456.590}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{seems quite likely to me that these dimensions will interact with each other and}
+  \ALIUSPlacedTextContent{71.080}{749.178}{422.116}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thereby create fluctuations that are not easy to order in any hierarchical way.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{235.318}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Hohwy – On Different Ways of Being Conscious}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{21}
+  \ALIUSPlacedTextContent{139.720}{75.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{155.080}{90.473}{268.114}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Consciousness itself is not something that}
+  \ALIUSPlacedTextContent{155.080}{108.473}{265.492}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{can be said to come in degrees, but rather}
+  \ALIUSPlacedTextContent{155.080}{126.473}{279.378}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the dimensions that determine global states}
+  \ALIUSPlacedTextContent{155.080}{144.473}{244.072}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{of consciousness can come in degrees.}
+  \ALIUSPlacedTextContent{403.480}{145.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{71.080}{187.326}{455.697}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{The diversity of modes suggests that consciousness could be realized in a multiple}
+  \ALIUSPlacedTextContent{71.080}{204.607}{455.564}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{fashion rather than relying on a single mechanism. Could this consideration be relevant}
+  \ALIUSPlacedTextContent{71.080}{221.886}{285.617}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{in the search of neuronal correlates of consciousness?}
+  \ALIUSPlacedTextContent{71.080}{250.938}{456.532}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I very much think that the search for the neural correlates of consciousness needs to}
+  \ALIUSPlacedTextContent{71.080}{267.738}{456.621}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{take modes or global states of consciousness into consideration. I am not sure}
+  \ALIUSPlacedTextContent{71.080}{284.778}{456.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{multiple realization is the best way to describe this, mainly because that discussion}
+  \ALIUSPlacedTextContent{71.080}{301.818}{456.535}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pertains to metaphysical concerns about functionalism and identity theory, whereas}
+  \ALIUSPlacedTextContent{71.080}{318.618}{456.647}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the neural correlates is an empirical issue. But the thought is right: the same}
+  \ALIUSPlacedTextContent{71.080}{335.658}{456.442}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perceptual content might be experienced under different modes, such that the}
+  \ALIUSPlacedTextContent{71.080}{352.458}{456.528}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{underlying neural mechanism differs. This is something that is dealt with nicely in}
+  \ALIUSPlacedTextContent{71.080}{369.498}{456.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{multifactorial experimental designs where modes could be a factor alongside}
+  \ALIUSPlacedTextContent{71.080}{386.538}{456.501}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{content. For example, one could look at binocular rivalry in different modes of}
+  \ALIUSPlacedTextContent{71.080}{403.338}{456.573}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness (e.g. tired vs. alert). The idea is that contents might interact with}
+  \ALIUSPlacedTextContent{71.080}{420.378}{456.348}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modes such that the mechanism for consciousness differs for different modes and}
+  \ALIUSPlacedTextContent{71.080}{437.418}{456.547}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different contents. Note that the interaction may go both ways: we might perceive}
+  \ALIUSPlacedTextContent{71.080}{454.218}{456.587}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{some object differently depending on the mode (a friendly face may be perceived as}
+  \ALIUSPlacedTextContent{71.080}{471.258}{456.566}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hostile when in a low mood), and some modes may be modulated by some contents}
+  \ALIUSPlacedTextContent{71.080}{488.298}{270.989}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(perceiving the tiger will make you feel less tired).}
+  \ALIUSPlacedTextContent{71.080}{517.326}{455.726}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Do you think that a multidimensional account of consciousness would benefit from the}
+  \ALIUSPlacedTextContent{71.080}{534.607}{455.685}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{identification of trade–offs linked to biological constraints? For example, using the}
+  \ALIUSPlacedTextContent{71.080}{551.887}{455.707}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{externally–oriented vs. self–oriented axis to study wake vs. sleep, rather than just a}
+  \ALIUSPlacedTextContent{71.080}{569.167}{428.428}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{unidimensional conception of connected vs. disconnected from the environment?}
+  \ALIUSPlacedTextContent{71.080}{598.218}{456.523}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think that is very likely. It seems that there many dimensions that can go into what}
+  \ALIUSPlacedTextContent{71.080}{615.018}{456.572}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{determines a mode of consciousness. This will involve interoceptive states, aspects}
+  \ALIUSPlacedTextContent{71.080}{632.058}{456.523}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of action and decision–making, and perceptual inference concerning self vs. world.}
+  \ALIUSPlacedTextContent{71.080}{649.098}{456.514}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I agree it is important to move away from the kind of "environment connectedness"}
+  \ALIUSPlacedTextContent{71.080}{665.898}{456.612}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that typical bedside tests of consciousness are most focused on. This relates to the}
+  \ALIUSPlacedTextContent{71.080}{682.938}{456.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recent spate of studies of vestiges of consciousness in disorders of consciousness (e.g.}
+  \ALIUSPlacedTextContent{71.080}{699.978}{456.612}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{work by Adrian Owen and Steven Laureys (Owen et al., 2009)). They show that}
+  \ALIUSPlacedTextContent{71.080}{716.778}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness does not need to be directly related to responsiveness to the}
+  \ALIUSPlacedTextContent{71.080}{733.818}{456.739}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{environment but can be a more endogenous process. This invites the thought that}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{235.318}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Hohwy – On Different Ways of Being Conscious}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{22}
+  \ALIUSPlacedTextContent{71.080}{70.938}{453.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perhaps in some modes, there is a very strong focus on internal, endogenous, self–}
+  \ALIUSPlacedTextContent{71.080}{87.978}{181.446}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{related aspects of consciousness.}
+  \ALIUSPlacedTextContent{71.080}{117.006}{455.645}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{The frameworks of Predictive Coding and Bayesianism have been successful in}
+  \ALIUSPlacedTextContent{71.080}{134.286}{455.722}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{explaining several aspects of cognition in a neurocomputational framework (Hohwy,}
+  \ALIUSPlacedTextContent{71.080}{151.566}{455.735}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{2013). Some work has been done to link this to phenomenology (e.g. the work from}
+  \ALIUSPlacedTextContent{71.080}{168.846}{455.560}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Corlett's laboratory). How do predictive and Bayesian approaches shed light on the}
+  \ALIUSPlacedTextContent{71.080}{186.127}{431.450}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{understanding of the different modes of consciousness and their phenomenology?}
+  \ALIUSPlacedTextContent{71.080}{215.178}{456.557}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It is tempting to think of modes of consciousness as different overall ways of}
+  \ALIUSPlacedTextContent{71.080}{232.218}{456.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimizing prediction error in a brain in a certain situation. That is, the brain may}
+  \ALIUSPlacedTextContent{71.080}{249.018}{456.579}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimize prediction error at different rates, and may realize the same rate of}
+  \ALIUSPlacedTextContent{71.080}{266.058}{456.571}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{prediction error minimization in different ways – and the overall rate of prediction}
+  \ALIUSPlacedTextContent{71.080}{282.858}{456.697}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{error minimization may be reflected in the current mode. This perspective would}
+  \ALIUSPlacedTextContent{71.080}{299.898}{456.390}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{matter because it ties different modes together under one theoretical umbrella,}
+  \ALIUSPlacedTextContent{71.080}{316.938}{456.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{having the potential to explain why such different states (when explained in terms}
+  \ALIUSPlacedTextContent{71.080}{333.738}{456.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of content and functionality dimensions) all have in common that they are modes of}
+  \ALIUSPlacedTextContent{71.080}{350.778}{456.445}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness. Of course, with this comes a rather speculative notion that the state}
+  \ALIUSPlacedTextContent{71.080}{367.818}{456.579}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of consciousness is determined by the overall rate of prediction error minimization:}
+  \ALIUSPlacedTextContent{71.080}{384.618}{456.544}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{if you minimize too little, or too much, at any given time and relative to a model,}
+  \ALIUSPlacedTextContent{71.080}{401.658}{432.615}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{then you lose consciousness. Don't ask me to justify this theory just yet though!}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{235.318}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Hohwy – On Different Ways of Being Conscious}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{23}
+  \ALIUSPlacedTextContent{263.991}{71.444}{70.165}{ALIUSC000000}{\ALIUSFontLatoLight}{13.731}{References}
+  \ALIUSPlacedTextContent{71.080}{104.778}{91.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Bayne, T. (2012).}
+  \ALIUSPlacedTextContent{162.372}{104.778}{141.697}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{The Unity of Consciousness.}
+  \ALIUSPlacedTextContent{304.175}{104.778}{180.542}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Oxford: Oxford University Press.}
+  \ALIUSPlacedTextContent{71.080}{127.818}{313.520}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Bayne, T., Hohwy, J. (2016). Modes of consciousness. In}
+  \ALIUSPlacedTextContent{386.067}{127.818}{141.591}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Finding Consciousness: The}
+  \ALIUSPlacedTextContent{71.080}{144.858}{282.516}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Neuroscience, Ethics, and Law of Severe Brain Damage}
+  \ALIUSPlacedTextContent{353.589}{144.858}{174.039}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, Sinnott–Armstrong, W. (Ed.)}
+  \ALIUSPlacedTextContent{71.080}{161.658}{216.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Oxford: Oxford University Press, 57–80}
+  \ALIUSPlacedTextContent{287.713}{161.658}{2.756}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{.}
+  \ALIUSPlacedTextContent{71.080}{184.698}{456.524}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Bayne, T., Hohwy, J., \& Owen, A. M. (2016). Are There Levels of Consciousness?.}
+  \ALIUSPlacedTextContent{71.080}{201.738}{141.502}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Trends in Cognitive Sciences}
+  \ALIUSPlacedTextContent{212.658}{201.738}{6.029}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{.}
+  \ALIUSPlacedTextContent{218.706}{201.738}{11.193}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{20}
+  \ALIUSPlacedTextContent{229.934}{201.738}{69.924}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(6), 405–413.}
+  \ALIUSPlacedTextContent{71.080}{224.538}{456.578}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dokic, J. (2012). Seeds of self–knowledge: noetic feelings and metacognition. In M.}
+  \ALIUSPlacedTextContent{71.080}{241.578}{248.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Beran, J. Brandl, J. Perner, \& J. Proust (Eds.),}
+  \ALIUSPlacedTextContent{319.707}{241.578}{152.137}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Foundations of Metacognition}
+  \ALIUSPlacedTextContent{472.245}{241.578}{55.402}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(302–321).}
+  \ALIUSPlacedTextContent{71.080}{258.618}{177.756}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Oxford: Oxford University Press}
+  \ALIUSPlacedTextContent{248.863}{258.618}{2.756}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{.}
+  \ALIUSPlacedTextContent{71.080}{281.418}{93.818}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Hohwy, J. (2013).}
+  \ALIUSPlacedTextContent{164.948}{281.418}{99.188}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{The predictive mind}
+  \ALIUSPlacedTextContent{264.192}{281.418}{199.544}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{. Oxford: Oxford University Press.}
+  \ALIUSPlacedTextContent{71.080}{304.458}{456.610}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Hung, C. S., Sarasso, S., Ferrarelli, F., Riedner, B., Ghilardi, M. F., Cirelli, C., \&}
+  \ALIUSPlacedTextContent{71.080}{321.258}{456.550}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Tononi, G. (2013). Local experience–dependent changes in the wake EEG after}
+  \ALIUSPlacedTextContent{71.080}{338.298}{129.996}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{prolonged wakefulness.}
+  \ALIUSPlacedTextContent{201.110}{338.298}{25.048}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Sleep}
+  \ALIUSPlacedTextContent{226.197}{338.298}{6.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{,}
+  \ALIUSPlacedTextContent{232.581}{338.298}{10.635}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{36}
+  \ALIUSPlacedTextContent{243.249}{338.298}{56.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(1), 59–72.}
+  \ALIUSPlacedTextContent{71.080}{361.338}{456.609}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Owen, A. M., Schiff, N. D., \& Laureys, S. (2009). A new era of coma and}
+  \ALIUSPlacedTextContent{71.080}{378.138}{122.716}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness science.}
+  \ALIUSPlacedTextContent{193.844}{378.138}{127.890}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Progress in brain research}
+  \ALIUSPlacedTextContent{321.786}{378.138}{6.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{,}
+  \ALIUSPlacedTextContent{328.170}{378.138}{14.886}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{177}
+  \ALIUSPlacedTextContent{343.079}{378.138}{53.712}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, 399–411.}
+  \ALIUSPlacedTextContent{71.080}{401.178}{456.589}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Sarasso, S., Pigorini, A., Proserpio, P., Gibbs, S. A., Massimini, M., \& Nobili, L.}
+  \ALIUSPlacedTextContent{71.080}{418.218}{456.520}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(2014). Fluid boundaries between wake and sleep: experimental evidence from}
+  \ALIUSPlacedTextContent{71.080}{435.018}{133.907}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Stereo–EEG recordings.}
+  \ALIUSPlacedTextContent{205.016}{435.018}{68.266}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Arch Ital Biol}
+  \ALIUSPlacedTextContent{273.306}{435.018}{6.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{,}
+  \ALIUSPlacedTextContent{279.690}{435.018}{14.357}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{152}
+  \ALIUSPlacedTextContent{294.082}{435.018}{73.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(2e3), 169e77.}
+  \ALIUSPlacedTextContent{71.080}{458.058}{456.529}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Sergent, C., et al. (2017). Multidimensional cognitive evaluation of patients with}
+  \ALIUSPlacedTextContent{71.080}{475.098}{345.639}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{disorders of consciousness using EEG: A proof of concept study.}
+  \ALIUSPlacedTextContent{415.976}{475.098}{105.281}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{NeuroImage: Clinical}
+  \ALIUSPlacedTextContent{521.272}{475.098}{6.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{,}
+  \ALIUSPlacedTextContent{71.080}{491.898}{8.835}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{13}
+  \ALIUSPlacedTextContent{79.942}{491.898}{56.722}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, 455–469.}
+  \ALIUSPlacedTextContent{71.080}{514.938}{456.456}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Vyazovskiy, V. V., Olcese, U., Hanlon, E. C., Nir, Y., Cirelli, C., \& Tononi, G. (2011).}
+  \ALIUSPlacedTextContent{71.080}{531.978}{140.600}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Local sleep in awake rats.}
+  \ALIUSPlacedTextContent{211.736}{531.978}{35.364}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Nature}
+  \ALIUSPlacedTextContent{247.127}{531.978}{6.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{,}
+  \ALIUSPlacedTextContent{253.510}{531.978}{16.395}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{472}
+  \ALIUSPlacedTextContent{269.932}{531.978}{89.090}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(7344), 443–447.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage
