@@ -45,6 +45,8 @@ Build all covers and bulletin PDFs:
 .\build-bulletins.ps1
 ```
 
+The cover sources are compatible with Overleaf's `pdflatex` default. `cover-style.tex` uses `fontspec` only under XeLaTeX/LuaLaTeX and falls back to TeX's Helvetica-compatible font family under pdfTeX.
+
 Render a fresh historical comparison sheet:
 
 ```powershell

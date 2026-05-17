@@ -8,8 +8,8 @@
   margin=0bp
 ]{geometry}
 \usepackage{etoolbox}
-\usepackage{fontspec}
 \usepackage{graphicx}
+\usepackage{iftex}
 \usepackage{svg}
 \usepackage{tikz}
 \usepackage{xcolor}
@@ -19,9 +19,20 @@
 \definecolor{AliusGreenDark}{HTML}{068236}
 \definecolor{AliusCoverInk}{HTML}{111111}
 
-\newfontfamily\AliusEarlyFont{Lato Light}
-\newfontfamily\AliusIssueFourFont{Arial}
-\newfontfamily\AliusLateFont{Lato Regular}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp}
+  \usepackage[scaled=0.95]{helvet}
+  \newcommand{\AliusEarlyFont}{\fontfamily{phv}\selectfont}
+  \newcommand{\AliusIssueFourFont}{\fontfamily{phv}\selectfont}
+  \newcommand{\AliusLateFont}{\fontfamily{phv}\selectfont}
+\else
+  \usepackage{fontspec}
+  \newfontfamily\AliusEarlyFont{Lato Light}
+  \newfontfamily\AliusIssueFourFont{Arial}
+  \newfontfamily\AliusLateFont{Lato Regular}
+\fi
 
 \newcommand{\AliusIssueNumber}{}
 \newcommand{\AliusIssueDateLine}{}

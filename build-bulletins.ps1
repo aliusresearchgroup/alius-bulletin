@@ -14,7 +14,7 @@ try {
         }
         # TikZ remember-picture anchors settle on the second pass.
         1..2 | ForEach-Object {
-            xelatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory=Cover-Art $CoverTex
+            pdflatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory=Cover-Art $CoverTex
         }
     }
 

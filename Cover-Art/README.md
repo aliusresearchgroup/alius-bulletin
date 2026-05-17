@@ -27,7 +27,7 @@ Compile one cover from the repository root:
 
 ```powershell
 1..2 | ForEach-Object {
-  xelatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory=Cover-Art Cover-Art/issue01-cover.tex
+  pdflatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory=Cover-Art Cover-Art/issue01-cover.tex
 }
 ```
 
@@ -43,6 +43,8 @@ Render a reference comparison sheet while tuning the issue-specific text layer:
 py Cover-Art\compare_covers.py
 ```
 
+`cover-style.tex` is engine-aware. Overleaf can compile the cover files with `pdflatex`; XeLaTeX/LuaLaTeX are also supported for local font matching.
+
 `cover-style.tex` prefers the canonical SVG leaf. For local preview work, it also accepts an untracked raster cache at `Cover-Art/.build/alius-leaf-preview.png`; Overleaf can compile directly from the SVG path.
 
-The second XeLaTeX pass is required because the shared renderer uses TikZ page anchors for absolute positioning.
+The second LaTeX pass is required because the shared renderer uses TikZ page anchors for absolute positioning.
