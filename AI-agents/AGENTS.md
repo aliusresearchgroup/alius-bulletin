@@ -8,7 +8,7 @@ Maintain an Overleaf-importable archive where each bulletin piece has its own fo
 
 ## Repository Contract
 
-- Keep top-level folders intentional: `Interviews`, `Bulletins`, `Cover-Art`, `Instructions`, `Shared-assets`, and `AI-agents`.
+- Keep top-level folders intentional: `Interviews`, `Bulletins`, `Cover-Art`, `Guidelines`, `Shared-assets`, and `AI-agents`.
 - Do not create extra top-level working folders. Put temporary outputs outside the repository or under an ignored local scratch area if one is later added.
 - Each interview or piece folder must contain one `.tex`, one `.bib`, and one final `.pdf`.
 - Each issue file in `Bulletins/` should have a matching generated `.pdf`.

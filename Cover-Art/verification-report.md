@@ -49,7 +49,7 @@ Build all covers and bulletin PDFs:
 
 The cover sources are compatible with Overleaf's `pdflatex` default. `cover-style.tex` uses `fontspec` only under XeLaTeX/LuaLaTeX. Under pdfTeX, it uses TeX Live's packaged Lato fonts for the classic left-column interviewee names plus the early/late issue-specific text layer, and packaged Arial for Issue 04 when available, with Helvetica-compatible fallbacks only if those packages are missing.
 
-All left-column interviewee names now intentionally use the Issue 01-02 convention: light Lato, a larger initial letter, and smaller following capitals. This is applied consistently across Issues 01-07 even where the historical covers used a different treatment.
+All left-column interviewee names now intentionally use the Issue 01-02 convention: light Lato, a larger initial letter, and smaller following capitals. They are also placed with shared right-edge arch bins that follow the figure contour, so later issues can reuse the same curved alignment system instead of bespoke center coordinates.
 
 The TeX layer includes `generated/alius-leaf-from-svg.pdf`, a committed vector cache regenerated from `assets/alius-leaf.svg` and `source-assets/logo-ALIUS-original-animated-leaf.svg` with:
 

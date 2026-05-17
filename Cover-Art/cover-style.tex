@@ -157,9 +157,25 @@
   {\AliusIntervieweeFont\fontsize{\AliusSubjectRestSize}{\AliusSubjectRestSize}\selectfont #2}%
 }
 
+\newcommand{\AliusIntervieweeArchOne}{246}
+\newcommand{\AliusIntervieweeArchTwo}{248}
+\newcommand{\AliusIntervieweeArchThree}{252}
+\newcommand{\AliusIntervieweeArchFour}{262}
+\newcommand{\AliusIntervieweeArchFive}{276}
+\newcommand{\AliusIntervieweeArchSix}{286}
+\newcommand{\AliusIntervieweeArchSeven}{280}
+\newcommand{\AliusIntervieweeArchEight}{274}
+\newcommand{\AliusIntervieweeArchNine}{260}
+
 \newcommand{\AliusAddIntervieweeSmallcaps}[3]{%
   \gappto\AliusIntervieweeNodes{%
     \node[anchor=base,text=AliusCoverInk] at ([xshift=#1bp,yshift=-#2bp]current page.north west) {#3};%
+  }%
+}
+
+\newcommand{\AliusAddIntervieweeArch}[3]{%
+  \gappto\AliusIntervieweeNodes{%
+    \node[anchor=base east,text=AliusCoverInk] at ([xshift=#1bp,yshift=-#2bp]current page.north west) {#3};%
   }%
 }
 

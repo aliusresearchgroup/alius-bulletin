@@ -18,7 +18,7 @@ The common cover layer is generated once in `cover-style.tex`:
 Each `issueXX-cover.tex` file contains only issue-specific content:
 
 - the editor line under the header
-- the left-side interviewee names, with explicit placements that follow the white area of the background art
+- the left-side interviewee names, placed against shared right-edge arch bins that follow the white area of the background art
 - the issue number, date line, and website values in the footer
 
 All text remains live TeX text; no per-issue raster overlays are used.

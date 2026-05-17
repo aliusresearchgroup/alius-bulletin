@@ -10,7 +10,7 @@ Use this checklist when adding, regenerating, or reviewing bulletin material.
 - [ ] `Bulletins/` contains `issueXX.tex` and `issueXX.pdf` for each complete issue.
 - [ ] `Cover-Art/` contains `issueXX-cover.tex` and `issueXX-cover.pdf` for each issue cover.
 - [ ] `Cover-Art/reference-covers/` contains the one-page original cover references used by the cover TeX files.
-- [ ] `Instructions/` contains matching `.tex` and `.pdf` instruction/template files.
+- [ ] `Guidelines/` contains guideline/template sources, original DOCX guideline files, and rendered PDFs.
 - [ ] `Shared-assets/project-manifest.json` reflects the current top-level folders and exported files.
 
 ## Compilation
