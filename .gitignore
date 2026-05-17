@@ -1,0 +1,8 @@
+Cover-Art/.build/
+Cover-Art/*.aux
+Cover-Art/*.log
+Cover-Art/*-cover-1.png
+Cover-Art/_fonttest.*
+Cover-Art/_svgtest.*
+Bulletins/*.aux
+Bulletins/*.log

@@ -1,0 +1,152 @@
+% Shared cover renderer for Issues 01-07.
+% Source artwork is intentionally limited to:
+%   - assets/front-cover-empty-no-leaf.pdf
+%   - assets/alius-leaf.svg
+\usepackage[
+  paperwidth=595.44bp,
+  paperheight=841.92bp,
+  margin=0bp
+]{geometry}
+\usepackage{etoolbox}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pagestyle{empty}
+
+\definecolor{AliusCoverGreen}{HTML}{83BC25}
+\definecolor{AliusGreenDark}{HTML}{068236}
+\definecolor{AliusCoverInk}{HTML}{111111}
+
+\newfontfamily\AliusEarlyFont{Lato Light}
+\newfontfamily\AliusIssueFourFont{Arial}
+\newfontfamily\AliusLateFont{Lato Regular}
+
+\newcommand{\AliusIssueNumber}{}
+\newcommand{\AliusIssueDateLine}{}
+\newcommand{\AliusIssueWebsite}{aliusresearch.org}
+\newcommand{\AliusIssueTagline}{exploring the diversity of consciousness}
+\newcommand{\AliusIssueEditors}{}
+\newcommand{\AliusIntervieweeNodes}{}
+
+\newcommand{\AliusSetIssueNumber}[1]{\gdef\AliusIssueNumber{#1}}
+\newcommand{\AliusSetIssueDateLine}[1]{\gdef\AliusIssueDateLine{#1}}
+\newcommand{\AliusSetIssueWebsite}[1]{\gdef\AliusIssueWebsite{#1}}
+\newcommand{\AliusSetIssueTagline}[1]{\gdef\AliusIssueTagline{#1}}
+\newcommand{\AliusSetIssueEditors}[1]{\gdef\AliusIssueEditors{#1}}
+\newcommand{\AliusClearInterviewees}{\gdef\AliusIntervieweeNodes{}}
+
+\newcommand{\AliusLeafGraphic}{%
+  \IfFileExists{Cover-Art/.build/alius-leaf-preview.png}{%
+    \includegraphics[width=43mm]{Cover-Art/.build/alius-leaf-preview.png}%
+  }{%
+    \includesvg[width=43mm]{Cover-Art/assets/alius-leaf}%
+  }%
+}
+
+% Preset state. Coordinates are bp from the top-left page corner and use text baselines.
+\newcommand{\AliusHeaderFont}{\AliusIssueFourFont}
+\newcommand{\AliusBodyFont}{\AliusEarlyFont}
+\newcommand{\AliusTitleX}{193.93}
+\newcommand{\AliusTitleY}{119.58}
+\newcommand{\AliusTitleSize}{125}
+\newcommand{\AliusBulletinX}{187.62}
+\newcommand{\AliusBulletinY}{180.41}
+\newcommand{\AliusBulletinSize}{72}
+\newcommand{\AliusTaglineX}{36.32}
+\newcommand{\AliusTaglineY}{213.01}
+\newcommand{\AliusTaglineSize}{29.85}
+\newcommand{\AliusCenterX}{297.72}
+\newcommand{\AliusEditorsY}{242.61}
+\newcommand{\AliusEditorsSize}{20.47}
+\newcommand{\AliusIssueNumberY}{746.16}
+\newcommand{\AliusIssueDateY}{783.07}
+\newcommand{\AliusIssueWebsiteY}{818.51}
+\newcommand{\AliusFooterIssueSize}{30}
+\newcommand{\AliusFooterDateSize}{28.5}
+\newcommand{\AliusFooterWebsiteSize}{28.45}
+\newcommand{\AliusSubjectInitialSize}{24}
+\newcommand{\AliusSubjectRestSize}{16.88}
+\newcommand{\AliusPlainSubjectSize}{24}
+
+\newcommand{\AliusUseEarlyBodyStyle}{%
+  \renewcommand{\AliusBodyFont}{\AliusEarlyFont}%
+  \renewcommand{\AliusEditorsSize}{20.47}%
+  \renewcommand{\AliusFooterIssueSize}{30}%
+  \renewcommand{\AliusFooterDateSize}{28.5}%
+  \renewcommand{\AliusFooterWebsiteSize}{28.45}%
+  \renewcommand{\AliusSubjectInitialSize}{24}%
+  \renewcommand{\AliusSubjectRestSize}{16.88}%
+}
+
+\newcommand{\AliusUseIssueFourBodyStyle}{%
+  \renewcommand{\AliusBodyFont}{\AliusIssueFourFont}%
+  \renewcommand{\AliusEditorsSize}{16.98}%
+  \renewcommand{\AliusFooterIssueSize}{30}%
+  \renewcommand{\AliusFooterDateSize}{26.62}%
+  \renewcommand{\AliusFooterWebsiteSize}{28.45}%
+  \renewcommand{\AliusPlainSubjectSize}{24}%
+}
+
+\newcommand{\AliusUseLateBodyStyle}{%
+  \renewcommand{\AliusBodyFont}{\AliusLateFont}%
+  \renewcommand{\AliusEditorsSize}{16.98}%
+  \renewcommand{\AliusFooterIssueSize}{30}%
+  \renewcommand{\AliusFooterDateSize}{26.62}%
+  \renewcommand{\AliusFooterWebsiteSize}{28.45}%
+  \renewcommand{\AliusSubjectInitialSize}{24}%
+  \renewcommand{\AliusSubjectRestSize}{17.25}%
+}
+
+\newcommand{\AliusSmallcapsWord}[2]{%
+  {\AliusBodyFont\fontsize{\AliusSubjectInitialSize}{\AliusSubjectInitialSize}\selectfont #1}%
+  {\AliusBodyFont\fontsize{\AliusSubjectRestSize}{\AliusSubjectRestSize}\selectfont #2}%
+}
+
+\newcommand{\AliusAddIntervieweeSmallcaps}[3]{%
+  \gappto\AliusIntervieweeNodes{%
+    \node[anchor=base,text=AliusCoverInk] at ([xshift=#1bp,yshift=-#2bp]current page.north west) {#3};%
+  }%
+}
+
+\newcommand{\AliusAddIntervieweePlain}[3]{%
+  \gappto\AliusIntervieweeNodes{%
+    \node[anchor=base,text=AliusCoverInk] at ([xshift=#1bp,yshift=-#2bp]current page.north west)
+      {{\AliusBodyFont\fontsize{\AliusPlainSubjectSize}{\AliusPlainSubjectSize}\selectfont #3}};%
+  }%
+}
+
+\newcommand{\AliusRenderSharedCoverElements}{%
+  \node[anchor=north west,inner sep=0pt] at (current page.north west)
+    {\includegraphics[width=\paperwidth,height=\paperheight]{Cover-Art/assets/front-cover-empty-no-leaf.pdf}};
+  \node[anchor=north west,inner sep=0pt] at ([xshift=31.18bp,yshift=-28.35bp]current page.north west)
+    {\AliusLeafGraphic};
+  \node[anchor=base west,text=AliusCoverGreen] at ([xshift=\AliusTitleX bp,yshift=-\AliusTitleY bp]current page.north west)
+    {{\AliusHeaderFont\fontsize{\AliusTitleSize}{\AliusTitleSize}\selectfont ALIUS}};
+  \node[anchor=base west,text=AliusCoverGreen] at ([xshift=\AliusBulletinX bp,yshift=-\AliusBulletinY bp]current page.north west)
+    {{\AliusHeaderFont\fontsize{\AliusBulletinSize}{\AliusBulletinSize}\selectfont BULLETIN}};
+  \node[anchor=base west,text=AliusCoverGreen] at ([xshift=\AliusTaglineX bp,yshift=-\AliusTaglineY bp]current page.north west)
+    {{\AliusHeaderFont\fontsize{\AliusTaglineSize}{\AliusTaglineSize}\selectfont \AliusIssueTagline}};
+}
+
+\newcommand{\AliusRenderIssueSpecificElements}{%
+  \node[anchor=base,text=AliusGreenDark] at ([xshift=\AliusCenterX bp,yshift=-\AliusEditorsY bp]current page.north west)
+    {{\AliusBodyFont\fontsize{\AliusEditorsSize}{\AliusEditorsSize}\selectfont \AliusIssueEditors}};
+  \AliusIntervieweeNodes
+  \node[anchor=base,text=white] at ([xshift=\AliusCenterX bp,yshift=-\AliusIssueNumberY bp]current page.north west)
+    {{\AliusBodyFont\fontsize{\AliusFooterIssueSize}{\AliusFooterIssueSize}\selectfont n\textdegree\AliusIssueNumber}};
+  \node[anchor=base,text=white] at ([xshift=\AliusCenterX bp,yshift=-\AliusIssueDateY bp]current page.north west)
+    {{\AliusBodyFont\fontsize{\AliusFooterDateSize}{\AliusFooterDateSize}\selectfont \AliusIssueDateLine}};
+  \node[anchor=base,text=AliusCoverGreen] at ([xshift=\AliusCenterX bp,yshift=-\AliusIssueWebsiteY bp]current page.north west)
+    {{\AliusBodyFont\fontsize{\AliusFooterWebsiteSize}{\AliusFooterWebsiteSize}\selectfont \AliusIssueWebsite}};
+}
+
+\newcommand{\AliusRenderIssueCover}{%
+  \begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp]
+    \AliusRenderSharedCoverElements
+    \AliusRenderIssueSpecificElements
+  \end{tikzpicture}%
+  \null
+  \clearpage
+}

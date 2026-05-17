@@ -1,16 +1,17 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin Issue 1 cover. Compile from the repository root.
-% Built from the empty cover artwork plus an isolated transparent text overlay.
+% !TeX program = xelatex
 \documentclass{article}
-\pagestyle{empty}
+\input{Cover-Art/cover-style.tex}
 \begin{document}
-\pdfximage page 1 {Cover-Art/assets/issue01-background.pdf}
-\setbox0=\hbox{\pdfrefximage\pdflastximage}
-\pdfximage width \wd0 height \ht0 {Cover-Art/assets/issue01-text-overlay.png}
-\setbox2=\hbox{\pdfrefximage\pdflastximage}
-\pdfpagewidth=\wd0
-\pdfpageheight=\ht0
-\hoffset=-1in
-\voffset=-1in
-\shipout\vbox to \ht0{\hbox to \wd0{\rlap{\copy0}\copy2\hss}\vss}
+\AliusUseEarlyBodyStyle
+\AliusSetIssueNumber{1}
+\AliusSetIssueDateLine{FEBRUARY 2017}
+\AliusSetIssueEditors{Martin Fortier, Fran\c{c}ois Lemoine \& Rapha\"el Milli\`ere (eds.)}
+\AliusClearInterviewees
+\AliusAddIntervieweeSmallcaps{160}{347}{\AliusSmallcapsWord{R}{OBIN} \AliusSmallcapsWord{C}{ARHART-}\AliusSmallcapsWord{H}{ARRIS}}
+\AliusAddIntervieweeSmallcaps{178}{390}{\AliusSmallcapsWord{J}{AKOB} \AliusSmallcapsWord{H}{OHWY}}
+\AliusAddIntervieweeSmallcaps{186}{433}{\AliusSmallcapsWord{T}{ANYA} \AliusSmallcapsWord{L}{UHRMANN}}
+\AliusAddIntervieweeSmallcaps{169}{476}{\AliusSmallcapsWord{S}{IMON} \AliusSmallcapsWord{M}{CCARTHY-}\AliusSmallcapsWord{J}{ONES}}
+\AliusAddIntervieweeSmallcaps{184}{519}{\AliusSmallcapsWord{R}{EBECCA} \AliusSmallcapsWord{S}{ELIGMAN}}
+\AliusAddIntervieweeSmallcaps{179}{562}{\AliusSmallcapsWord{J}{ENNIFER} \AliusSmallcapsWord{W}{INDT}}
+\AliusRenderIssueCover
 \end{document}

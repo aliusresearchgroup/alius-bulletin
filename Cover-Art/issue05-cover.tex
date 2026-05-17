@@ -1,16 +1,18 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin Issue 5 cover. Compile from the repository root.
-% Built from the empty cover artwork plus an isolated transparent text overlay.
+% !TeX program = xelatex
 \documentclass{article}
-\pagestyle{empty}
+\input{Cover-Art/cover-style.tex}
 \begin{document}
-\pdfximage page 1 {Cover-Art/assets/issue05-background.pdf}
-\setbox0=\hbox{\pdfrefximage\pdflastximage}
-\pdfximage width \wd0 height \ht0 {Cover-Art/assets/issue05-text-overlay.png}
-\setbox2=\hbox{\pdfrefximage\pdflastximage}
-\pdfpagewidth=\wd0
-\pdfpageheight=\ht0
-\hoffset=-1in
-\voffset=-1in
-\shipout\vbox to \ht0{\hbox to \wd0{\rlap{\copy0}\copy2\hss}\vss}
+\AliusUseLateBodyStyle
+\AliusSetIssueNumber{5}
+\AliusSetIssueDateLine{DECEMBER 2021}
+\AliusSetIssueEditors{George Fejer, Daniel Friedman \& Matthieu Koroma (eds.)}
+\AliusClearInterviewees
+\AliusAddIntervieweeSmallcaps{171}{309}{\AliusSmallcapsWord{C}{HARLOTTE} \AliusSmallcapsWord{M}{ARTIAL}}
+\AliusAddIntervieweeSmallcaps{174}{347}{\AliusSmallcapsWord{M}{ADDALENA} \AliusSmallcapsWord{C}{ANNA}}
+\AliusAddIntervieweeSmallcaps{177}{386}{\AliusSmallcapsWord{R}{EBECCA} \AliusSmallcapsWord{S}{ELIGMAN}}
+\AliusAddIntervieweeSmallcaps{171}{425}{\AliusSmallcapsWord{M}{ONIMA} \AliusSmallcapsWord{C}{HADHA}}
+\AliusAddIntervieweeSmallcaps{174}{464}{\AliusSmallcapsWord{D}{AVID} \AliusSmallcapsWord{O}{LSON}}
+\AliusAddIntervieweeSmallcaps{174}{503}{\AliusSmallcapsWord{D}{AVID} \AliusSmallcapsWord{Y}{ADEN}}
+\AliusAddIntervieweeSmallcaps{174}{542}{\AliusSmallcapsWord{T}{IMO} \AliusSmallcapsWord{S}{CHMIDT}}
+\AliusRenderIssueCover
 \end{document}

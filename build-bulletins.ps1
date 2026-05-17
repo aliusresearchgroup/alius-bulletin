@@ -12,7 +12,10 @@ try {
         if (-not (Test-Path $CoverTex)) {
             throw "Missing cover source: $CoverTex"
         }
-        pdflatex -interaction=nonstopmode -halt-on-error -output-directory=Cover-Art $CoverTex
+        # TikZ remember-picture anchors settle on the second pass.
+        1..2 | ForEach-Object {
+            xelatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory=Cover-Art $CoverTex
+        }
     }
 
     foreach ($Issue in $Issues) {
@@ -23,8 +26,6 @@ try {
         pdflatex -interaction=nonstopmode -halt-on-error -output-directory=Bulletins $IssueTex
     }
 
-    $FinalizeArgs = @("Cover-Art/finalize_issue_covers.py", "--root", $RepoRoot, "--issues") + $Issues
-    python @FinalizeArgs
 }
 finally {
     Pop-Location

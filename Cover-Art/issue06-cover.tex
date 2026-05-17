@@ -1,16 +1,18 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin Issue 6 cover. Compile from the repository root.
-% Built from the text-free page artwork plus the exact original PDF text layer.
+% !TeX program = xelatex
 \documentclass{article}
-\pagestyle{empty}
+\input{Cover-Art/cover-style.tex}
 \begin{document}
-\pdfximage page 1 {Cover-Art/assets/issue06-background.pdf}
-\setbox0=\hbox{\pdfrefximage\pdflastximage}
-\pdfximage width \wd0 height \ht0 page 1 {Cover-Art/assets/issue06-text-layer.pdf}
-\setbox2=\hbox{\pdfrefximage\pdflastximage}
-\pdfpagewidth=\wd0
-\pdfpageheight=\ht0
-\hoffset=-1in
-\voffset=-1in
-\shipout\vbox to \ht0{\hbox to \wd0{\rlap{\copy0}\copy2\hss}\vss}
+\AliusUseLateBodyStyle
+\AliusSetIssueNumber{6}
+\AliusSetIssueDateLine{APRIL 2024}
+\AliusSetIssueEditors{Alessio Bucci, Lena Coutrot, George Fejer, Daniel Friedman \& Matthieu Koroma (eds.)}
+\AliusClearInterviewees
+\AliusAddIntervieweeSmallcaps{178}{307}{\AliusSmallcapsWord{A}{NNA} \AliusSmallcapsWord{C}{IAUNICA}}
+\AliusAddIntervieweeSmallcaps{179}{345}{\AliusSmallcapsWord{M}{ANOJ} \AliusSmallcapsWord{D}{OSS}}
+\AliusAddIntervieweeSmallcaps{179}{383}{\AliusSmallcapsWord{J}{UAN} \AliusSmallcapsWord{G}{ONZ\'ALEZ}}
+\AliusAddIntervieweeSmallcaps{179}{421}{\AliusSmallcapsWord{S}{TEVEN} \AliusSmallcapsWord{J}{ILLINGS}}
+\AliusAddIntervieweeSmallcaps{179}{459}{\AliusSmallcapsWord{M}{ATTHIEU} \AliusSmallcapsWord{K}{OROMA}}
+\AliusAddIntervieweeSmallcaps{179}{497}{\AliusSmallcapsWord{R}{OBERT} \AliusSmallcapsWord{S}{APOLSKY}}
+\AliusAddIntervieweeSmallcaps{179}{535}{\AliusSmallcapsWord{J}{EREMY} \AliusSmallcapsWord{S}{KIPPER}}
+\AliusRenderIssueCover
 \end{document}

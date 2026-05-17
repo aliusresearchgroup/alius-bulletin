@@ -1,18 +1,16 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin Issue 3 cover. Compile from the repository root.
-% Built from the text-free cover artwork plus the exact original PDF text layer.
+% !TeX program = xelatex
 \documentclass{article}
-\pagestyle{empty}
+\input{Cover-Art/cover-style.tex}
 \begin{document}
-\pdfximage page 1 {Cover-Art/assets/issue03-background.pdf}
-\setbox0=\hbox{\pdfrefximage\pdflastximage}
-\pdfximage width \wd0 height \ht0 page 1 {Cover-Art/assets/issue03-text-layer.pdf}
-\setbox2=\hbox{\pdfrefximage\pdflastximage}
-\pdfximage width \wd0 height \ht0 {Cover-Art/assets/issue03-visual-correction.png}
-\setbox4=\hbox{\pdfrefximage\pdflastximage}
-\pdfpagewidth=\wd0
-\pdfpageheight=\ht0
-\hoffset=-1in
-\voffset=-1in
-\shipout\vbox to \ht0{\hbox to \wd0{\rlap{\copy0}\rlap{\copy2}\copy4\hss}\vss}
+\AliusUseEarlyBodyStyle
+\AliusSetIssueNumber{3}
+\AliusSetIssueDateLine{AUGUST 2019}
+\AliusSetIssueEditors{Martin Fortier, Matthieu Koroma \& Rojwan Lemoine (eds.)}
+\AliusClearInterviewees
+\AliusAddIntervieweeSmallcaps{187.69}{326.60}{\AliusSmallcapsWord{T}{IM} \AliusSmallcapsWord{B}{AYNE}}
+\AliusAddIntervieweeSmallcaps{176.74}{374.36}{\AliusSmallcapsWord{D}{ANIEL} \AliusSmallcapsWord{D}{ENNETT}}
+\AliusAddIntervieweeSmallcaps{205.31}{422.10}{\AliusSmallcapsWord{Z}{OLTAN} \AliusSmallcapsWord{D}{IENES}}
+\AliusAddIntervieweeSmallcaps{218.20}{468.88}{\AliusSmallcapsWord{K}{ATRIN} \AliusSmallcapsWord{P}{RELLER}}
+\AliusAddIntervieweeSmallcaps{182.45}{515.38}{\AliusSmallcapsWord{M}{ICHAEL} \AliusSmallcapsWord{W}{INKELMAN}}
+\AliusRenderIssueCover
 \end{document}

@@ -1,16 +1,14 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin Issue 7 cover. Compile from the repository root.
-% Built from the text-free page artwork plus the exact original PDF text layer.
+% !TeX program = xelatex
 \documentclass{article}
-\pagestyle{empty}
+\input{Cover-Art/cover-style.tex}
 \begin{document}
-\pdfximage page 1 {Cover-Art/assets/issue07-background.pdf}
-\setbox0=\hbox{\pdfrefximage\pdflastximage}
-\pdfximage width \wd0 height \ht0 page 1 {Cover-Art/assets/issue07-text-layer.pdf}
-\setbox2=\hbox{\pdfrefximage\pdflastximage}
-\pdfpagewidth=\wd0
-\pdfpageheight=\ht0
-\hoffset=-1in
-\voffset=-1in
-\shipout\vbox to \ht0{\hbox to \wd0{\rlap{\copy0}\copy2\hss}\vss}
+\AliusUseLateBodyStyle
+\AliusSetIssueNumber{7}
+\AliusSetIssueDateLine{in progress}
+\AliusSetIssueEditors{George Fejer, Larry Fort \& Matthieu Koroma (eds.)}
+\AliusClearInterviewees
+\AliusAddIntervieweeSmallcaps{176}{307}{\AliusSmallcapsWord{J}{EAN-}\AliusSmallcapsWord{P}{IERRE}}
+\AliusAddIntervieweeSmallcaps{176}{345}{\AliusSmallcapsWord{C}{HANGEUX}}
+\AliusAddIntervieweeSmallcaps{176}{383}{\AliusSmallcapsWord{T}{OM} \AliusSmallcapsWord{F}{ROESE}}
+\AliusRenderIssueCover
 \end{document}

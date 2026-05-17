@@ -1,16 +1,18 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin Issue 2 cover. Compile from the repository root.
-% Built from the empty cover artwork plus an isolated transparent text overlay.
+% !TeX program = xelatex
 \documentclass{article}
-\pagestyle{empty}
+\input{Cover-Art/cover-style.tex}
 \begin{document}
-\pdfximage page 1 {Cover-Art/assets/issue02-background.pdf}
-\setbox0=\hbox{\pdfrefximage\pdflastximage}
-\pdfximage width \wd0 height \ht0 {Cover-Art/assets/issue02-text-overlay.png}
-\setbox2=\hbox{\pdfrefximage\pdflastximage}
-\pdfpagewidth=\wd0
-\pdfpageheight=\ht0
-\hoffset=-1in
-\voffset=-1in
-\shipout\vbox to \ht0{\hbox to \wd0{\rlap{\copy0}\copy2\hss}\vss}
+\AliusUseEarlyBodyStyle
+\AliusSetIssueNumber{2}
+\AliusSetIssueDateLine{FEBRUARY 2018}
+\AliusSetIssueEditors{Martin Fortier, Matthieu Koroma \& Rapha\"el Milli\`ere (eds.)}
+\AliusClearInterviewees
+\AliusAddIntervieweeSmallcaps{183}{322}{\AliusSmallcapsWord{K}{IERAN} \AliusSmallcapsWord{F}{OX}}
+\AliusAddIntervieweeSmallcaps{184}{361}{\AliusSmallcapsWord{K}{ARL} \AliusSmallcapsWord{F}{RISTON}}
+\AliusAddIntervieweeSmallcaps{184}{400}{\AliusSmallcapsWord{T}{HOMAS} \AliusSmallcapsWord{M}{ETZINGER}}
+\AliusAddIntervieweeSmallcaps{183}{439}{\AliusSmallcapsWord{D}{AVID} \AliusSmallcapsWord{N}{ICHOLS}}
+\AliusAddIntervieweeSmallcaps{184}{478}{\AliusSmallcapsWord{K}{EVIN} \AliusSmallcapsWord{O'}{REGAN}}
+\AliusAddIntervieweeSmallcaps{184}{517}{\AliusSmallcapsWord{M}{ATTHEW} \AliusSmallcapsWord{R}{ATCLIFFE}}
+\AliusAddIntervieweeSmallcaps{184}{556}{\AliusSmallcapsWord{A}{NN} \AliusSmallcapsWord{T}{AVES}}
+\AliusRenderIssueCover
 \end{document}

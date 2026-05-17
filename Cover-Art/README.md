@@ -1,20 +1,34 @@
 # Cover Art
 
-This folder contains standalone LaTeX entry points for the ALIUS Bulletin covers, Issues 1-7.
+This folder contains standalone TeX entry points for the ALIUS Bulletin covers, Issues 1-7.
 
-Each `issueXX-cover.tex` builds the cover from layered assets in `assets/`:
+The source artwork is intentionally limited to two shared files in `assets/`:
 
-- `issueXX-background.pdf` is the text-free cover artwork.
-- `issueXX-text-layer.pdf` is the exact original PDF text layer when the reference cover exposed font/text objects.
-- `issueXX-text-overlay.png` is a 600 DPI transparent overlay for raster-only reference covers that did not expose font/text objects.
-- `issueXX-visual-correction.png` preserves exact rendered pixels where PDF text-layer re-embedding introduced renderer-level anti-aliasing differences.
+- `front-cover-empty-no-leaf.pdf`
+- `alius-leaf.svg`
 
-The `reference-covers/` files are QA references only. The build sources no longer include those PDFs directly as cover pages.
+The common cover layer is generated once in `cover-style.tex`:
+
+- the background PDF
+- the ALIUS leaf SVG
+- the shared `ALIUS / BULLETIN / exploring the diversity of consciousness` header block
+
+Each `issueXX-cover.tex` file contains only issue-specific content:
+
+- the editor line under the header
+- the left-side interviewee names, with explicit placements that follow the white area of the background art
+- the issue number, date line, and website values in the footer
+
+All text remains live TeX text; no per-issue raster overlays are used.
+
+The QA references in `reference-covers/` are comparison inputs only; they are not used to build the covers.
 
 Compile one cover from the repository root:
 
 ```powershell
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=Cover-Art Cover-Art/issue01-cover.tex
+1..2 | ForEach-Object {
+  xelatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory=Cover-Art Cover-Art/issue01-cover.tex
+}
 ```
 
 Build all covers and then all issue PDFs:
@@ -23,4 +37,12 @@ Build all covers and then all issue PDFs:
 .\build-bulletins.ps1
 ```
 
-The issue sources in `Bulletins/` include the generated `Cover-Art/issueXX-cover.pdf` as page 1. The build script then finalizes each `Bulletins/issueXX.pdf` by replacing that first page with the exact verified cover PDF object, avoiding renderer-level perturbation from PDF re-embedding.
+Render a reference comparison sheet while tuning the issue-specific text layer:
+
+```powershell
+py Cover-Art\compare_covers.py
+```
+
+`cover-style.tex` prefers the canonical SVG leaf. For local preview work, it also accepts an untracked raster cache at `Cover-Art/.build/alius-leaf-preview.png`; Overleaf can compile directly from the SVG path.
+
+The second XeLaTeX pass is required because the shared renderer uses TikZ page anchors for absolute positioning.
