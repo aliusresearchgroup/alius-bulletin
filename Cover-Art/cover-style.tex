@@ -94,6 +94,7 @@
 
 % Preset state. Coordinates are bp from the top-left page corner and use text baselines.
 \newcommand{\AliusBodyFont}{\AliusEarlyFont}
+\newcommand{\AliusIntervieweeFont}{\AliusEarlyFont}
 \newcommand{\AliusTitleX}{193.93}
 \newcommand{\AliusTitleY}{119.58}
 \newcommand{\AliusTitleSize}{125}
@@ -145,9 +146,15 @@
   \renewcommand{\AliusSubjectRestSize}{17.25}%
 }
 
+\newcommand{\AliusUseClassicIntervieweeStyle}{%
+  \renewcommand{\AliusIntervieweeFont}{\AliusEarlyFont}%
+  \renewcommand{\AliusSubjectInitialSize}{24}%
+  \renewcommand{\AliusSubjectRestSize}{16.88}%
+}
+
 \newcommand{\AliusSmallcapsWord}[2]{%
-  {\AliusBodyFont\fontsize{\AliusSubjectInitialSize}{\AliusSubjectInitialSize}\selectfont #1}%
-  {\AliusBodyFont\fontsize{\AliusSubjectRestSize}{\AliusSubjectRestSize}\selectfont #2}%
+  {\AliusIntervieweeFont\fontsize{\AliusSubjectInitialSize}{\AliusSubjectInitialSize}\selectfont #1}%
+  {\AliusIntervieweeFont\fontsize{\AliusSubjectRestSize}{\AliusSubjectRestSize}\selectfont #2}%
 }
 
 \newcommand{\AliusAddIntervieweeSmallcaps}[3]{%
