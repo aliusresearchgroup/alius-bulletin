@@ -4,6 +4,8 @@
 - [ ] The only committed PDF asset is `Cover-Art/assets/front-cover-empty-no-leaf.pdf`.
 - [ ] Cover leaf artwork is sourced from `Cover-Art/assets/alius-leaf.svg`.
 - [ ] Interview `.tex` files typeset native LaTeX and do not include published/original article PDFs.
+- [ ] Every bulletin interview has either a rendered original abstract or a commented draft/TBA abstract block.
+- [ ] `AI-agents/check_style_uniformity.py` has been run after text-extraction or formatting repairs.
 - [ ] Issue files compile via `build-bulletins.ps1`, which generates local cover/issue PDFs as ignored outputs.
 - [ ] LuaLaTeX remains the faithful build path, and the pdfTeX fallback still avoids `fontspec` failures for direct Overleaf/file compiles.
 - [ ] `AI-agents/formatting-context.md` reflects any new formatting or compile-context lesson from this run.

@@ -85,6 +85,28 @@ def normalize_extracted_text(text: str) -> str:
         "Ã‚Â°": "Â°",
         "Ã‚ ": " ",
         "Ã‚": "",
+        # Issue 6 uses an embedded Word subset font whose ToUnicode map leaks
+        # ligature-like private glyphs. These must be normalized in the source:
+        # LuaLaTeX otherwise faithfully prints the extraction artifact.
+        "\u025c": "q",
+        "\u0278": "t",
+        "\u02ae": "Th",
+        "\u02b0": "ff",
+        "\u02b4": "ffi",
+        "\u02be": "ft",
+        "\u02bf": "fi",
+        "\u02c0": "fl",
+        "\u02c1": "fi",
+        "\u02d9": "Th",
+        "\u02ef": "gy",
+        "\u068d": "-",
+        "\u08bc": "ti",
+        "\u099e": "ti",
+        "ãNEUROSCI": "JNEUROSCI",
+        "'ps://": "ttps://",
+        "'p://doi.org/10.5281/10.5281/": "ttps://doi.org/10.5281/",
+        "bulle\u099en": "bulletin",
+        "bulle\u08bcn": "bulletin",
     }
     for bad, good in manual.items():
         text = text.replace(bad, good)
@@ -97,6 +119,15 @@ def color_name(value: int) -> str:
 
 def color_hex(value: int) -> str:
     return f"{value & 0xFFFFFF:06X}"
+
+
+def normalize_color(value: int) -> int:
+    """Collapse near-black extraction noise into canonical black."""
+
+    value = value & 0xFFFFFF
+    if value <= 0x00000F:
+        return 0
+    return value
 
 
 def drawing_color_name(rgb: tuple[float, float, float] | None) -> str:
@@ -158,11 +189,12 @@ def extract_commented_abstract(path: Path) -> list[str]:
         return []
     block: list[str] = []
     for line in lines[start:]:
+        if line.startswith("% --- End draft abstract"):
+            break
         if line.startswith("%"):
             block.append(line)
             continue
-        if block:
-            break
+        break
     return block
 
 
@@ -216,7 +248,7 @@ def collect_page_elements(page: fitz.Page) -> tuple[list[dict[str, Any]], list[d
                 x0, y0, x1, y1 = [float(v) for v in bbox]
                 width = max(0.2, x1 - x0)
                 size = float(span.get("size", 10.0))
-                color = int(span.get("color", 0)) & 0xFFFFFF
+                color = normalize_color(int(span.get("color", 0)))
                 colors.add(color)
                 flags = int(span.get("flags", 0))
                 fonts_seen.add(flags)
@@ -268,6 +300,24 @@ def rect_commands(page: fitz.Page, color_accumulator: set[int]) -> list[str]:
     return commands
 
 
+def repair_decorative_quote_marks(
+    pages: list[tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]],
+) -> None:
+    """Use typographic marks for oversized pull-quote glyphs.
+
+    PyMuPDF extracts Word's decorative opening/closing quote glyphs as plain
+    ASCII double quotes. Render them as curly quotation marks while leaving
+    normal in-line quotes untouched.
+    """
+
+    open_quote = True
+    for spans, _rects, _images in pages:
+        for span in spans:
+            if span.get("text") == '"' and float(span.get("size", 0.0)) >= 40.0:
+                span["text"] = "\u201c" if open_quote else "\u201d"
+                open_quote = not open_quote
+
+
 def preamble(width: float, height: float, colors: set[int]) -> list[str]:
     lines = [
         r"% !TeX program = lualatex",
@@ -304,24 +354,26 @@ def preamble(width: float, height: float, colors: set[int]) -> list[str]:
         r"    \\DeclareUnicodeCharacter{016B}{\\=u}%",
         r"    \\DeclareUnicodeCharacter{025C}{\\ensuremath{\\epsilon}}%",
         r"    \\DeclareUnicodeCharacter{0278}{\\ensuremath{\\phi}}%",
-        r"    \\DeclareUnicodeCharacter{02AE}{th}%",
-        r"    \\DeclareUnicodeCharacter{02B0}{h}%",
-        r"    \\DeclareUnicodeCharacter{02B4}{r}%",
+        r"    \\DeclareUnicodeCharacter{02AE}{Th}%",
+        r"    \\DeclareUnicodeCharacter{02B0}{ff}%",
+        r"    \\DeclareUnicodeCharacter{02B4}{ffi}%",
         r"    \\DeclareUnicodeCharacter{02BE}{\'}%",
         r"    \\DeclareUnicodeCharacter{02BF}{fi}%",
         r"    \\DeclareUnicodeCharacter{02C0}{fl}%",
-        r"    \\DeclareUnicodeCharacter{02C1}{f}%",
+        r"    \\DeclareUnicodeCharacter{02C1}{fi}%",
         r"    \\DeclareUnicodeCharacter{02D9}{Th}%",
-        r"    \\DeclareUnicodeCharacter{02EF}{-}%",
+        r"    \\DeclareUnicodeCharacter{02EF}{gy}%",
         r"    \\DeclareUnicodeCharacter{0394}{\\ensuremath{\\Delta}}%",
         r"    \\DeclareUnicodeCharacter{03B2}{\\ensuremath{\\beta}}%",
         r"    \\DeclareUnicodeCharacter{03BA}{\\ensuremath{\\kappa}}%",
         r"    \\DeclareUnicodeCharacter{068D}{-}%",
-        r"    \\DeclareUnicodeCharacter{08BC}{I}%",
-        r"    \\DeclareUnicodeCharacter{099E}{i}%",
+        r"    \\DeclareUnicodeCharacter{08BC}{ti}%",
+        r"    \\DeclareUnicodeCharacter{099E}{ti}%",
         r"    \\DeclareUnicodeCharacter{1E43}{\\d{m}}%",
         r"    \\DeclareUnicodeCharacter{1E47}{\\d{n}}%",
         r"    \\DeclareUnicodeCharacter{1E63}{\\d{s}}%",
+        r"    \\DeclareUnicodeCharacter{201C}{``}%",
+        r"    \\DeclareUnicodeCharacter{201D}{''}%",
         r"    \\DeclareUnicodeCharacter{2260}{\\ensuremath{\\neq}}%",
         r"    \\DeclareUnicodeCharacter{25A1}{\\ensuremath{\\square}}%",
         r"  }%",
@@ -416,29 +468,42 @@ def prepare_image_assets(
 def apply_manual_overrides(item: dict[str, Any], pages: list[tuple[list[dict[str, Any]], list[dict[str, Any]], list[str]]]) -> None:
     """Apply editorial corrections that intentionally differ from the reference PDF."""
 
-    if item["tex"] != "Interviews/Issue02/Friston/Friston.tex" or not pages:
+    if not pages:
         return
 
-    spans = pages[0][0]
-    for span in spans:
-        if span["text"] == "Karl Friston" and 70 <= span["x"] <= 80 and 130 <= span["y"] <= 145:
-            span["text"] = "Karl Friston, Martin Fortier, Matthieu Koroma and RaphaÃ«l MilliÃ¨re"
-            span["w"] = 268.0
-        elif span["text"] == "Karl Friston" and 345 <= span["x"] <= 360 and 150 <= span["y"] <= 165:
-            span["text"] = "Karl Friston, Martin Fortier, Matthieu Koroma & RaphaÃ«l MilliÃ¨re"
-            span["w"] = 168.0
-        elif span["text"].startswith("Citation: Friston, K. (2018)."):
-            span["text"] = "Citation: Friston, K., Fortier, M., Koroma, M. & MilliÃ¨re, R. (2018)."
-            span["w"] = 268.941
-        elif span["text"] == "autobiography.":
-            span["text"] = "Am I autistic? An intellectual autobiography."
-            span["w"] = 175.0
-        elif span["text"] == "ALIUS Bulletin":
-            span["x"] = 253.0
-            span["w"] = 57.395
-        elif span["text"] == ", 2, 45-52.":
-            span["x"] = 310.5
-            span["w"] = 42.082
+    if item["tex"] == "Interviews/Issue02/Friston/Friston.tex":
+        spans = pages[0][0]
+        for span in spans:
+            if span["text"] == "Karl Friston" and 70 <= span["x"] <= 80 and 130 <= span["y"] <= 145:
+                span["text"] = "Karl Friston, Martin Fortier, Matthieu Koroma and Rapha\u00ebl Milli\u00e8re"
+                span["w"] = 268.0
+            elif span["text"] == "Karl Friston" and 345 <= span["x"] <= 360 and 150 <= span["y"] <= 165:
+                span["text"] = "Karl Friston, Martin Fortier, Matthieu Koroma & Rapha\u00ebl Milli\u00e8re"
+                span["w"] = 168.0
+            elif span["text"].startswith("Citation: Friston, K. (2018)."):
+                span["text"] = "Citation: Friston, K., Fortier, M., Koroma, M. & Milli\u00e8re, R. (2018)."
+                span["w"] = 268.941
+            elif span["text"] == "autobiography.":
+                span["text"] = "Am I autistic? An intellectual autobiography."
+                span["w"] = 175.0
+            elif span["text"] == "ALIUS Bulletin":
+                span["x"] = 253.0
+                span["w"] = 57.395
+            elif span["text"] == ", 2, 45-52.":
+                span["x"] = 310.5
+                span["w"] = 42.082
+
+    if item["tex"] == "Interviews/Issue05/Canna_Seligman_Koroma/Canna_Seligman_Koroma.tex":
+        for spans, _images, _rects in pages:
+            for span in spans:
+                if span["text"] == "\u2013" and 315 <= span["x"] <= 322 and 30 <= span["y"] <= 42:
+                    span["color"] = 0x767171
+
+    if item["tex"] == "Interviews/Issue07/Changeux_Dumas/Changeux_Dumas.tex":
+        for spans, _images, _rects in pages:
+            for span in spans:
+                if span["text"] == "\u2014" and span["color"] == 0x221E1F and span["y"] >= 235:
+                    span["color"] = 0x000000
 
 
 def generate_tex_for_item(item: dict[str, Any]) -> str:
@@ -458,6 +523,7 @@ def generate_tex_for_item(item: dict[str, Any]) -> str:
         rects = rect_commands(page, colors)
         pages.append((spans, images, rects))
 
+    repair_decorative_quote_marks(pages)
     apply_manual_overrides(item, pages)
 
     lines = preamble(width, height, colors)
