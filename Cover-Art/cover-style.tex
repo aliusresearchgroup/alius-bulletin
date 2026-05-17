@@ -2,8 +2,8 @@
 % Editable source artwork is intentionally limited to:
 %   - assets/front-cover-empty-no-leaf.pdf
 %   - assets/alius-leaf.svg
-% generated/alius-leaf-from-svg.pdf is a committed vector pdfTeX/Overleaf cache
-% derived from assets/alius-leaf.svg.
+% generated/alius-leaf-paths.tex is a TeX path cache derived from the SVG,
+% not a PDF asset.
 \usepackage[
   paperwidth=595.44bp,
   paperheight=841.92bp,
@@ -14,21 +14,9 @@
 \usepackage{iftex}
 \usepackage{tikz}
 \usepackage{xcolor}
+\usetikzlibrary{svg.path}
+\input{Cover-Art/generated/alius-leaf-paths.tex}
 \pagestyle{empty}
-
-\newif\ifAliusUseSvgFallback
-\IfFileExists{Cover-Art/generated/alius-leaf-from-svg.pdf}{%
-  \AliusUseSvgFallbackfalse
-}{%
-  \IfFileExists{Cover-Art/.build/alius-leaf-preview.png}{%
-    \AliusUseSvgFallbackfalse
-  }{%
-    \AliusUseSvgFallbacktrue
-  }%
-}
-\ifAliusUseSvgFallback
-  \usepackage{svg}
-\fi
 
 \definecolor{AliusCoverGreen}{HTML}{83BC25}
 \definecolor{AliusGreenDark}{HTML}{068236}
@@ -81,15 +69,7 @@
 \newcommand{\AliusLeafY}{14.50}
 
 \newcommand{\AliusLeafGraphic}{%
-  \IfFileExists{Cover-Art/generated/alius-leaf-from-svg.pdf}{%
-    \includegraphics[width=\AliusLeafWidth]{Cover-Art/generated/alius-leaf-from-svg.pdf}%
-  }{%
-    \IfFileExists{Cover-Art/.build/alius-leaf-preview.png}{%
-      \includegraphics[width=\AliusLeafWidth]{Cover-Art/.build/alius-leaf-preview.png}%
-    }{%
-      \includesvg[inkscapelatex=false,width=\AliusLeafWidth]{Cover-Art/assets/alius-leaf}%
-    }%
-  }%
+  \resizebox{\AliusLeafWidth}{!}{\AliusRenderLeafPaths}%
 }
 
 % Preset state. Coordinates are bp from the top-left page corner and use text baselines.

@@ -6,3 +6,5 @@ Cover-Art/_fonttest.*
 Cover-Art/_svgtest.*
 Bulletins/*.aux
 Bulletins/*.log
+*.pdf
+!Cover-Art/assets/front-cover-empty-no-leaf.pdf

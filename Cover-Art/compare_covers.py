@@ -20,9 +20,8 @@ def render_pdf(pdf: Path, out_prefix: Path) -> Path:
 
 
 def reference_path(issue: str) -> Path:
-    pdf = REFS / f"issue{issue}-original-cover.pdf"
     png = REFS / f"issue{issue}-original-cover.png"
-    return pdf if pdf.exists() else png
+    return png
 
 
 def make_panel(issue: str, ref: Image.Image, cur: Image.Image, diff: Image.Image) -> Image.Image:
@@ -47,12 +46,17 @@ def compare(issue: str) -> tuple[str, float, float, int, Image.Image]:
     generated_pdf = ROOT / f"issue{issue}-cover.pdf"
     reference = reference_path(issue)
     BUILD.mkdir(parents=True, exist_ok=True)
+    if not generated_pdf.exists():
+        raise FileNotFoundError(
+            f"Missing generated cover PDF: {generated_pdf}. Run .\\build-bulletins.ps1 first."
+        )
+    if not reference.exists():
+        raise FileNotFoundError(
+            f"Missing PNG reference: {reference}. Cover QA no longer accepts PDF references."
+        )
 
     current_png = render_pdf(generated_pdf, BUILD / f"issue{issue}-generated")
-    if reference.suffix.lower() == ".pdf":
-        reference_png = render_pdf(reference, BUILD / f"issue{issue}-reference")
-    else:
-        reference_png = reference
+    reference_png = reference
 
     ref = Image.open(reference_png).convert("RGB")
     cur = Image.open(current_png).convert("RGB").resize(ref.size)

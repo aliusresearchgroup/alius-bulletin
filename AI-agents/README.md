@@ -1,45 +1,13 @@
-# AI Agent Workspace
+﻿# ALIUS Bulletin AI-Agent Notes
 
-This folder is for AI and coding agents maintaining the Overleaf version of the ALIUS Bulletin archive.
+This repository is a source-first reconstruction archive. The goal is to rebuild bulletin pieces and issue PDFs from editable LaTeX, not to wrap or re-include already published article PDFs.
 
-The rest of the repository is the deliverable. Keep agent notes, operating assumptions, and maintenance checklists here so the Overleaf project stays understandable without mixing process notes into interview folders.
+## Directory roles
 
-## What This Repository Contains
+- `Interviews/IssueXX/.../`: standalone LaTeX source for each interview or bulletin piece, with a `.bib` file when applicable.
+- `Bulletins/`: issue-level LaTeX files that assemble native piece sources.
+- `Cover-Art/`: cover sources and the only approved committed PDF asset, `assets/front-cover-empty-no-leaf.pdf`.
+- `Shared-assets/`: metadata and non-build-path shared data.
+- `AI-agents/`: maintenance notes for future agents.
 
-- `Interviews/IssueXX/Interview_Names/`: one standalone `.tex`, one `.bib`, and one generated `.pdf` for each interview or bulletin piece.
-- `Bulletins/`: issue-level `.tex` files and generated `.pdf` files.
-- `Cover-Art/`: standalone cover `.tex` files, generated cover PDFs, and one-page original cover references for Issues 1-7.
-- `Guidelines/`: ALIUS Bulletin guideline/template sources, original DOCX guideline files, and rendered PDFs.
-- `Shared-assets/`: copied source PDFs, QA logs, visual comparison reports, and the project manifest.
-- `AI-agents/`: maintenance guidance for future AI agents.
-
-## Skill Check
-
-Checked on 2026-05-11: no installed Codex skill is specifically dedicated to generating agentic repository documentation.
-
-Closest useful skills:
-
-- `latex-overleaf-writing-ops`: use for LaTeX and Overleaf editing workflows.
-- `latex-compile-qa`: use for compile checks, bibliography checks, and LaTeX QA.
-- `pdf`: use for PDF rendering and visual inspection tasks.
-- `skill-creator`: only relevant if the team wants to create a new reusable Codex skill.
-- `agent-survey-corpus`: useful for LLM-agent survey research, not for maintaining this repository.
-
-## First Things To Read
-
-1. `AI-agents/AGENTS.md`
-2. `AI-agents/maintenance-checklist.md`
-3. `Shared-assets/project-manifest.json`
-4. `Shared-assets/qa/visual-fidelity-report.md`
-
-## Regeneration Note
-
-This repository was exported from the website checkout at:
-
-`C:\Users\cogpsy-vrlab\Documents\GitHub\aliusresearch.org`
-
-The current exporter is:
-
-`Bulletin\overleaf\source\scripts\export_flat_overleaf_project.py`
-
-If you regenerate the project, preserve this `AI-agents` folder and verify that `Shared-assets/project-manifest.json` still lists it as a top-level folder.
+Generated PDFs are local build artifacts and should stay untracked. The canonical cover leaf is `Cover-Art/assets/alius-leaf.svg`; the cover background PDF is tolerated only because it is explicitly the shared cover artwork substrate.

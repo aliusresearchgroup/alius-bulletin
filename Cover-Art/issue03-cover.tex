@@ -1,7 +1,10 @@
 % !TeX program = pdflatex
+\ifdefined\ALIUSIssueBuild
+\else
 \documentclass{article}
 \input{Cover-Art/cover-style.tex}
 \begin{document}
+\fi
 \AliusUseEarlyBodyStyle
 \AliusUseClassicIntervieweeStyle
 \AliusSetIssueNumber{3}
@@ -14,4 +17,8 @@
 \AliusAddIntervieweeArch{\AliusIntervieweeArchSix}{468.88}{\AliusSmallcapsWord{K}{ATRIN} \AliusSmallcapsWord{P}{RELLER}}
 \AliusAddIntervieweeArch{\AliusIntervieweeArchEight}{515.38}{\AliusSmallcapsWord{M}{ICHAEL} \AliusSmallcapsWord{W}{INKELMAN}}
 \AliusRenderIssueCover
+\ifdefined\ALIUSIssueBuild
+\clearpage
+\expandafter\endinput
+\fi
 \end{document}
