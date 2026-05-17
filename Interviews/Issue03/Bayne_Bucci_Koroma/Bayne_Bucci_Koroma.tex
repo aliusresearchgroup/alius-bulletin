@@ -1,38 +1,541 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.2756bp,paperheight=841.8898bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{How to study consciousness as a natural phenomenon}
-\author{Tim Bayne Interviewed by Alessio Bucci and Matthieu Koroma}
-\date{ALIUS Bulletin 3}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC1A1718}{HTML}{1A1718}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSC7F7F7F}{HTML}{7F7F7F}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/jwm7-9t64\par
-\textbf{Keywords:} altered states of consciousness, global state of consciousness, levels of consciousness, multidimensional model, natural kind approach\par
-\section*{Abstract}
-The field of the scientific study of consciousness has seen a flourishing of methodologies and theories. The debate over what defines consciousness and how we should study it is, however, yet to be settled. Philosopher Tim Bayne has proposed the "natural kind" approach, suggesting that consciousness properties should be empirically informed rather than defined a priori. Relying on the cross-talk between philosophy and empirical science, he proposes a cautious and integrative outlook that takes into account the diversity of the conscious phenomenon, defending a multidimensional model of conscious states.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin How to study consciousness as a natural phenomenon An interview with Tim Bayne by Alessio Bucci \& Matthieu Koroma Citation: Bayne, T., Bucci, A. \& Koroma, M. (2019). How to study consciousness as a natural phenomenon. An interview with Tim Bayne. ALIUS Bulletin, 3, 1-9. doi: 10.34700/jwm7-9t64 Tim Bayne timothy.bayne@monash.edu Department of Philosophy Monash University, Melbourne, Australia Alessio Bucci alessio.bucci@unito.it Department of Philosophy University of Turin, Italy Matthieu Koroma mkoroma@ens-paris-saclay.fr Ecole Normale Superieure PSL University, Paris, France Abstract The field of the scientific study of consciousness has seen a flourishing of methodologies and theories. The debate over what defines consciousness and how we should study it is, however, yet to be settled. Philosopher Tim Bayne has proposed the "natural kind" approach, suggesting that consciousness properties should be empirically informed rather than defined a priori. Relying on the cross-talk between philosophy and empirical science, he proposes a cautious and integrative outlook that takes into account the diversity of the conscious phenomenon, defending a multidimensional model of conscious states. keywords: altered states of consciousness, global state of consciousness, levels of consciousness, multidimensional model, natural kind approach. Consciousness remains one of the most puzzling phenomena for both philosophers and scientists. Could you explain what triggered your interest in this topic? What are the questions about consciousness you have been addressing with your research? Do you think that there are questions about consciousness that cannot be answered? My initial interest in consciousness focused on the unity of consciousness. I was struck by the fact that philosophers have traditionally regarded unity as one of the central features of consciousness, whereas many consciousness scientists (and a significant number of philosophers!) seem to assume that consciousness is anything but unified. I began to wonder whether those who were "pro" unity had the same conception of "the unity of consciousness" as those who were against it, and the more I read on the topic the more convinced I became that there were many conceptions of "the" unity of consciousness. One of the first papers that I published34co-written with my PhD supervisor David Chalmers34was largely devoted to distinguishing different conceptions of the unity of consciousness. Since then I've gone on to Tim Bayne - How to study consciousness as a natural phenomenon 2 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin consider the ways in which the various aspects of the unity of consciousness might be explained, and what implications the unity of consciousness has for theories of consciousness. I've also written on various other facets of consciousness, such as the relationship between consciousness and agency and the nature of conscious thought. Are there questions about consciousness that cannot be answered? Quite possibly. Many theorists believe that scientific advances will enable us to bridge the explanatory gap between the physical/functional properties of the brain on the one hand and conscious experience on the other but I have my doubts. I'm sure that there is much about consciousness that we will succeed in understanding, but I suspect that a residue of mystery will always remain. " I'm sure that there is much about consciousness that we will succeed in understanding, but I suspect that a residue of mystery will always remain. In "Modes of Consciousness" (Bayne and Hohwy, 2016), modes of consciousness are defined as global states of consciousness which are mutually exclusive. In previous works, you argued against the possibility for a single creature to have different streams of consciousness at the same time, discussing for example the case of split-brain patients (Bayne, 2008). Is there a link between modes being mutually exclusive and the unity of consciousness you defended previously in Unity of consciousness (2010)? Still, some animals like dolphins or birds exhibit patterns of sleep in some restricted parts of the brain while having other parts awake (Rattenborg et al, 2000). Without falling in the mental error fallacy, which would infer a mental property directly from patterns of neuronal activity, how do you deal with such cases from the perspective of modes of consciousness? Interesting question! Let me start by stepping back a bit. The main point here was to sharpen the contrast between conscious modes (or what I now prefer to call "global states of consciousness") and conscious contents. This contrast is quite intuitive, but few theorists have provided an analysis of it. One of the suggestions that Jakob Hohwy and I made is that one of the things that distinguish modes from contents is that modes tend to exclude each other whereas contents don't. For example, you can hear a trumpet whether or not you are tasting ice-cream, but if you are (say) in the state of alert wakefulness then you can't also be mildly sedated. Now, what should we say about cases in which an organism might seem to be awake in one hemisphere but asleep in another? It's a good question, and one that I'm not entirely sure how to answer. One option would be to resist the idea that modes of " Tim Bayne - How to study consciousness as a natural phenomenon 3 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin consciousness should be ascribed to hemispheres, and to insist that it's only the organism as a whole that is in a particular mode of consciousness. The other option would be to allow that modes can be ascribed to hemispheres, but to insist that no single hemisphere can be in more than one mode at a time. I can see problems with both options. The worry with the first is that it threatens to ignore what we seem to be learning about the neural basis of some modes; the worry with the second is that it threatens to sever the conceptual link between modes and the functional capacities the govern the behavior of the organism as a whole. It's certainly a topic that requires more thought! You proposed multi-dimensional modeling as a tool for the study of consciousness that better accounts for the differences among global states of consciousness (Bayne, Hohwy \& Owen, 2016). What are the specific epistemic merits of this approach that you see for the field of consciousness studies? An issue concerning this approach is that it opens a Pandora's box: the dimensions can vary in number, nature (e.g., they can be functional or content-based) and thus far there are no clear guidelines on how to identify the most relevant dimensions to classify states of consciousness. Do you have a pluralist view on the dimensions that should be used to distinguish states of consciousness or do you think some dimensions would emerge as the most relevant? What would be the significance of one or the other finding for the conceptualization of consciousness? It's true that we didn't propose any clear guidelines on what the relevant dimensions are for characterizing global states of consciousness, but whether that's a bug or a feature seems to me to depend on one's perspective. When it comes to global states, theorizing begins with cases. For example, the vegetative state and the minimally conscious state involve global states that are distinct from the ordinary neurotypical state and from each other. The state of consciousness associated with mild sedation is also a distinct global state, as is the conscious state associated with epileptic absence seizures. Psychedelics induce yet another kind of global state. After this34it's all theory. The main point of Bayne et al. 2016 was to show that the dominant approach to global states34the levels account34won't work. According to that account, consciousness comes in degrees (you can be more or less conscious), and your global state of consciousness just is a matter of how conscious you are. This proposal is pretty obviously hopeless, for it's clear that two people can be in different global states without differing in the degree to which they are conscious. But since the levels account is in effect a unidimensional account, rejecting it requires moving to a multidimensional account. That, of course, doesn't answer the question that you posed about what the dimensions of these global states are and how they might be identified. A good place to begin in addressing these issues is to ask why we assume that (say) the vegetative state and the minimally conscious state are associated with distinct global states of Tim Bayne - How to study consciousness as a natural phenomenon 4 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin consciousness, or why we assume that REM sleep is associated with one global state of consciousness and psychedelics with another. I suspect that any plausible answer to this question will have to consider two things: what cognitive and behavioral capacities are in place, and what kinds of contents are (and are not) permitted by or associated with the global state in question. In a recent article (Bayne, 2018), you argued that the scope of conscious phenomena covered by the axioms of the Information Integration Theory (IIT) (Oizumi et al., 2014) is limited to a restricted set of conscious phenomena or philosophical positions about consciousness. IIT proponents defend the view that axioms should be considered as working hypotheses that allow the theory to be coherent. Presumably, one advantage of such an approach is its explicitness about the assumptions endorsed by the theory. As an alternative, you propose the natural kind approach. What are the respective roles of theoretical thinking and empirical investigation in the natural kind approach? I have no problem with the appeal to working hypotheses when it comes to developing theories of consciousness, but on my reading of IIT that's not the role that they ascribe to the axioms (the label "axioms" here is not an accident34working hypotheses are typically called "hypotheses" rather than "axioms"). As I read them, Tononi and the other advocates of IIT take an axiom to be a self-evident claim about the essential phenomenological features of consciousness. I have doubts about whether there are any axioms in this sense of the term, and even if there are any axioms, I doubt that it's possible to ground a theory of consciousness on the basis of an appeal to them in the way that the advocates of IIT attempt to do. The natural kind approach doesn't start with alleged self-evident truths, but instead begins with defeasible claims about consciousness. These claims need not hold universally (for example, they might apply to human beings but not to the members of other species), and they need not be restricted to the phenomenology of consciousness (for example, they might also include the functional role of consciousness). The idea is to use these defeasible claims34"working hypotheses", if you will34as tools for homing in on the mechanisms that underlie consciousness. " The natural kind approach doesn't start with alleged self-evident truths, but instead begins with defeasible claims about consciousness. When it comes to the natural kind approach theory-building and empirical investigation go hand-in-hand: we need theory for hypotheses formation and we " Tim Bayne - How to study consciousness as a natural phenomenon 5 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin need empirical work in order to test the hypotheses. The situation is the same here as it is for any other domain in which we're looking for natural kinds. In a recent article (Bayne \& Carter, 2018), you argued against the characterization of psychedelic states as higher states of consciousness. The line of argument you develop revolves around cognitive functions associated with conscious processing. You reviewed evidence that some cognitive functions are enhanced during psychedelic experience (e.g. imagery and sensory salience), while others are impaired (e.g., decision making). You conclude that this argues against unidimensional accounts of consciousness that rank consciousness levels on a unique scale. As a consequence, in your view, this provides a challenge to theories like IIT and complexity-based approaches. Nevertheless, in such approaches, consciousness is not ordered according to cognitive or behavioral dimensions, but rather as the amount of integrated information accounting for phenomenal experience (Oizumi et al, 2016). Thus, it seems that your criticism is based on different conceptions about what dimensions are relevant for capturing the conscious phenomenon. In fact, a recent application of the IIT framework to the study of psychedelics suggests that even IIT might contest general claims about psychedelics being 'higher' states of consciousness (Gallimore, 2015). Could you comment on how your critique of the notion of levels of consciousness depends on theoretical assumptions guiding consciousness research? There are a couple of issues here. One point concerns the criticisms that Olivia Carter and I make of the idea that the psychedelic state is a "higher" state of consciousness. Here, it's important to keep in mind that our focus was on the claim that the psychedelic state is a higher state of consciousness in the same sense in which disorders of consciousness (such as the vegetative state or epileptic absence seizures) are lower states of consciousness. We argue that if this were right, then one would expect the psychedelic state to be associated with general improvements in cognitive function, but that seems not to be the case. Denying that the psychedelic state is "higher" in this sense is of course compatible with accepting that it is higher in some other sense of the term. As you suggest, the advocates of IIT propose that an individual's level of consciousness corresponds to the amount of integrated information that it involves. But here we need to ask how this proposal should be understood. If, on the one hand, it is to be understood as a proposal for how the term "level" should be used in consciousness science then that's fine, but it's not clear to me why anyone would use the term in this way unless they were already committed to IIT. If, on the other hand, it is to be understood as an account of levels of consciousness as that term has been used within consciousness science for the last decade or more than it's clearly unsatisfactory, for given current usage an improvement in an individual's level of consciousness requires a concomitant improvement in their general cognitive and behavioral capacities. Tim Bayne - How to study consciousness as a natural phenomenon 6 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin Your article on psychedelics fits within the growing trend of research that has been labeled the "psychedelic renaissance" (Sessa, 2012). How do you see this trend in consciousness studies? More generally, do you see any advantage in incorporating so- called altered states or fringe phenomena (like trance, meditational states, out-of-body experiences, lucid dreaming, etc.) in the study of consciousness? As far as the study of consciousness is concerned, the psychedelic renaissance is part of a wider movement to take altered states of consciousness more seriously. Of course, altered states of consciousness have always had a place within the study of consciousness, but for the most part they've been relegated to the fringes of the discipline, and mainstream consciousness science has been dominated by the study of consciousness as it occurs in adult human beings in the state of ordinary wakefulness. (Indeed, for the most part it's been dominated by the study of visual consciousness as it occurs in the state of ordinary wakefulness!) I see the move towards taking psychedelic experience more seriously as motivated by a more general sense that consciousness really is multifarious in its expression, and that models which account for adult human experience in the state of ordinary alert wakefulness might not apply so well when it comes to other forms of experience. Some recent theoretical papers focused on empirical studies (Gerrans \& Letheby, 2017; Milliere et al., 2018) suggest that through some alterations of consciousness (induced by certain classes of drugs or by meditational techniques) we can achieve a state of "ego dissolution", where consciousness persists without the experience of being or having a self. In the past, you proposed to see the self as a "virtual center of gravity" for the unity of consciousness (Bayne, 2010). In relation to this, what do you think about empirical cases of ego dissolution? More generally, do you think that the study of these kinds of alterations can tell us something new about the structural features of consciousness? In my view this is one of the most interesting aspects of psychedelic experience. It's tempting to suppose that a sense of being a single subject of experience is essential to human experience, and that no matter how seriously impaired consciousness is the "I" is always attached to each and every experience. But ego dissolution tells us that that assumption is false, and that the subjectivity of experience is not a necessary feature of human experience. The multiple metaphysical options on the nature of consciousness discussed in philosophy (e.g. the hard problem of consciousness, the problem of mental causation, etc...) still seem to pose a problem for a unified scientific theory of consciousness. Should science take into account these philosophical debates, or should science rather focus on the "real problem" of the empirical investigation of the conscious phenomenon, as formulated by Anil Seth (2016)? Does consciousness raise, in your opinion, specific conceptual issues regarding its scientific study compared to other mental phenomena? Tim Bayne - How to study consciousness as a natural phenomenon 7 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin It's interesting to note that although philosophers have a fairly limited role when it comes to the study of most phenomena34for example, I suspect that few zoologists are motivated to keep up with developments in the philosophy of biology!34there are other domains in which philosophers and scientists have a great deal to learn from each other, and the study of consciousness is certainly one such domain. Having said that, it seems to me that the value and importance of dialogue between science and philosophy depends very much on the question at issue. I'm not sure that the scientific study of consciousness is likely to be enhanced by engaging with philosophical reflection on the nature of the hard problem or mental causation, but there are a number of other topics on which dialogue really is crucial. For example, there are important questions about what a scientific explanation for consciousness should look like, and whether it should have the notion of a neural correlate of consciousness at its heart. There are also deep and difficult questions about how to measure consciousness, and whether the subjectivity of consciousness poses any kind of principled difficulty for its scientific study. There are important treatments of these issues within both philosophy and the sciences, and it's a shame that all-too- often they are limited by disciplinary boundaries. " I'm not sure that the scientific study of consciousness is likely to be enhanced by engaging with philosophical reflection on the nature of the hard problem or mental causation, but there are a number of other topics on which dialogue really is crucial. Different strategies in consciousness science can be distinguished according to the role they give to phenomenology in their research program. Integrated Information Theory uses phenomenology as a starting point to define consciousness through the formulation of axioms. Neurophenomenological approaches consider phenomenological reports as first-hand empirical data that should be investigated equally along physical processes. Reductionists consider phenomenology as an explanandum that must be accounted for in terms of physical explanations. Would the natural kind approach allow these strategies to be complementary rather than in competition, insofar as it considers definitional properties of consciousness as testable working hypotheses while avoiding metaphysical commitments? What role should phenomenology play in today's consciousness science in your opinion? In a sense, everybody starts with the phenomenal character of consciousness34that's the thing that we want to explain. The question is how far you can get by simply focusing on the phenomenology. My view is: not all that far. One of the problems " Tim Bayne - How to study consciousness as a natural phenomenon 8 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin here is that people often disagree about the phenomenology. For an example of such disagreement take a look at discussions of "cognitive phenomenology". But leaving disagreement about phenomenal character to one side, the problem is that there is an explanatory gap between phenomenal character and neurofunctional structure. Thus, it seems to me, it's difficult to build a conceptual bridge from descriptions of the phenomenology to descriptions of neurofunctional structure. The natural kind approach takes the phenomenology of consciousness seriously, but it doesn't assume that explanations of the phenomenology can be deduced from descriptions of it. You developed a substantial body of work on consciousness that identifies key components of the conscious phenomenon through conceptual analysis of empirical results. How do you consider the current progress on a definition of consciousness? How do you see the development of the field of consciousness studies in the future? Is there any avenue that you deem particularly promising? I'm not sure that the study of consciousness has made much progress with respect to defining "consciousness". Here, it seems to me that we have yet to improve on Tom Nagel's characterization of consciousness34a conscious state is a state that there's "something that it's like" to be in34even though it's generally recognized that this characterization has at best limited utility. But significant progress has been made on other issues, even if that progress has often involved the posing of more questions than answers. I think that the increased attention given to non-visual consciousness has been salutary, and it is good to see burgeoning literatures in both science and philosophy on such topics as agentive awareness, conscious thought, and multisensory integration. It is also good to see lots of activity in the development of theories of consciousness, although I wish that this activity was accompanied by more discussion about how to test theories of consciousness. Looking forward, I suspect that issues relating to the detection of consciousness in machines and non- human animals will loom large in the coming decade. Tim Bayne - How to study consciousness as a natural phenomenon 9 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin References Bayne, T. (2008). The unity of consciousness and the split-brain syndrome. The Journal of Philosophy, 105(6), 277-300. Bayne, T. (2010). The unity of consciousness. Oxford University Press. Bayne, T. (2018). On the axiomatic foundations of the integrated information theory of consciousness. Neuroscience of consciousness, 2018(1), niy007. Bayne, T., \& Carter, O. (2018). Dimensions of consciousness and the psychedelic state. Neuroscience of consciousness, 2018(1), niy008. Bayne, T., \& Hohwy, J. (2016). Modes of consciousness. Finding consciousness: The neuroscience, ethics and law of severe brain damage, 57-80. Bayne, T., Hohwy, J., \& Owen, A. M. (2016). Are there levels of consciousness?. Trends in cognitive sciences, 20(6), 405-413. Gallimore, A. R. (2015). Restructuring consciousness-the psychedelic state in light of integrated information theory. Frontiers in human neuroscience, 9, 346. Letheby, C., \& Gerrans, P. (2017). Self unbound: ego dissolution in psychedelic experience. Neuroscience of Consciousness, 2017(1). McGinn, C. (1999). The mysterious flame: Conscious minds in a material world. Basic Books. Milliere, R., Carhart-Harris, R. L., Roseman, L., Trautwein, F.-M., \& Berkovich-Ohana, A. (2018). Psychedelics, Meditation, and Self-Consciousness. Frontiers in Psychology, 9. Oizumi, M., Albantakis, L., \& Tononi, G. (2014). From the phenomenology to the mechanisms of consciousness: integrated information theory 3.0. PLoS computational biology, 10(5), e1003588. Rattenborg, N. C., Amlaner, C. J., \& Lima, S. L. (2000). Behavioral, neurophysiological and evolutionary perspectives on unihemispheric sleep. Neuroscience \& Biobehavioral Reviews, 24(8), 817-842. Sessa, B. (2012). The psychedelic renaissance: Reassessing the role of psychedelic drugs in 21st century psychiatry and society. Muswell Hill Press. Seth, A. (2016) The hard problem of consciousness is a distraction from the real one. Aeon. https://aeon.co/essays/the-hard-problem-of-consciousness-is-a-distraction-from- the-real-one\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-777.566bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC1F8135] (385.521bp,-147.833bp) rectangle ++(105.189bp,-0.233bp);
+  \fill[ALIUSC1F8135] (385.521bp,-217.803bp) rectangle ++(79.999bp,-0.233bp);
+  \fill[ALIUSC1F8135] (385.521bp,-277.278bp) rectangle ++(110.320bp,-0.233bp);
+  \ALIUSPlacedTextContent{84.552}{81.134}{435.341}{ALIUSC000000}{\ALIUSFontLatoRegular}{18.426}{How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{385.521}{124.428}{55.963}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.662}{Tim Bayne}
+  \ALIUSPlacedTextContent{87.448}{124.480}{121.994}{ALIUSC000000}{\ALIUSFontLatoLight}{15.627}{An interview with}
+  \ALIUSPlacedTextContent{385.521}{138.386}{106.978}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.863}{timothy.bayne@monash.edu}
+  \ALIUSPlacedTextContent{87.448}{143.175}{86.220}{ALIUSC000000}{\ALIUSFontLatoLight}{18.426}{Tim Bayne}
+  \ALIUSPlacedTextContent{385.521}{148.881}{99.522}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Department of Philosophy}
+  \ALIUSPlacedTextContent{385.521}{159.377}{73.927}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Monash University,}
+  \ALIUSPlacedTextContent{385.521}{169.872}{79.918}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Melbourne, Australia}
+  \ALIUSPlacedTextContent{87.448}{175.052}{197.115}{ALIUSC000000}{\ALIUSFontLatoLight}{12.595}{by Alessio Bucci \& Matthieu Koroma}
+  \ALIUSPlacedTextContent{385.521}{194.398}{69.023}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.662}{Alessio Bucci}
+  \ALIUSPlacedTextContent{385.521}{208.356}{81.610}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.863}{alessio.bucci@unito.it}
+  \ALIUSPlacedTextContent{385.521}{218.852}{99.522}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Department of Philosophy}
+  \ALIUSPlacedTextContent{87.448}{225.161}{290.369}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{Citation: Bayne, T., Bucci, A. \& Koroma, M. (2019). How to study}
+  \ALIUSPlacedTextContent{385.521}{229.347}{92.827}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{University of Turin, Italy}
+  \ALIUSPlacedTextContent{87.448}{236.823}{290.449}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{consciousness as a natural phenomenon. An interview with Tim Bayne.}
+  \ALIUSPlacedTextContent{87.448}{248.484}{59.681}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{ALIUS Bulletin,}
+  \ALIUSPlacedTextContent{147.105}{248.484}{23.980}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{3, 1-9}
+  \ALIUSPlacedTextContent{171.040}{248.484}{3.810}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{.}
+  \ALIUSPlacedTextContent{174.835}{248.484}{108.358}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{doi: 10.34700/jwm7-9t64}
+  \ALIUSPlacedTextContent{385.521}{253.873}{93.000}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.662}{Matthieu Koroma}
+  \ALIUSPlacedTextContent{385.521}{267.831}{111.929}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.863}{mkoroma@ens-paris-saclay.fr}
+  \ALIUSPlacedTextContent{385.521}{278.326}{99.230}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Ecole Normale Supérieure}
+  \ALIUSPlacedTextContent{385.521}{288.822}{107.769}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{PSL University, Paris, France}
+  \ALIUSPlacedTextContent{77.652}{337.679}{48.871}{ALIUSC000000}{\ALIUSFontLatoLight}{12.471}{Abstract}
+  \ALIUSPlacedTextContent{77.652}{356.729}{442.783}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{The field of the scientific study of consciousness has seen a flourishing of methodologies}
+  \ALIUSPlacedTextContent{77.652}{370.723}{442.774}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{and theories. The debate over what defines consciousness and how we should study it is,}
+  \ALIUSPlacedTextContent{77.652}{384.718}{442.773}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{however, yet to be settled. Philosopher Tim Bayne has proposed the "natural kind"}
+  \ALIUSPlacedTextContent{77.652}{398.712}{442.777}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{approach, suggesting that consciousness properties should be empirically informed rather}
+  \ALIUSPlacedTextContent{77.652}{412.706}{442.774}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{than defined a priori. Relying on the cross-talk between philosophy and empirical science,}
+  \ALIUSPlacedTextContent{77.652}{426.700}{442.772}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{he proposes a cautious and integrative outlook that takes into account the diversity of the}
+  \ALIUSPlacedTextContent{77.652}{440.694}{398.321}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{conscious phenomenon, defending a multidimensional model of conscious states.}
+  \ALIUSPlacedTextContent{119.909}{472.168}{400.454}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.729}{altered states of consciousness, global state of consciousness, levels of consciousness,}
+  \ALIUSPlacedTextContent{77.652}{472.214}{42.252}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.623}{keywords:}
+  \ALIUSPlacedTextContent{77.652}{484.996}{203.489}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.729}{multidimensional model, natural kind approach.}
+  \ALIUSPlacedTextContent{77.652}{515.335}{442.866}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Consciousness remains one of the most puzzling phenomena for both philosophers and}
+  \ALIUSPlacedTextContent{77.652}{530.029}{442.754}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{scientists. Could you explain what triggered your interest in this topic? What are the}
+  \ALIUSPlacedTextContent{77.652}{544.489}{442.908}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{questions about consciousness you have been addressing with your research? Do you}
+  \ALIUSPlacedTextContent{77.652}{559.183}{396.968}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{think that there are questions about consciousness that cannot be answered?}
+  \ALIUSPlacedTextContent{77.652}{585.476}{443.730}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{My initial interest in consciousness focused on the unity of consciousness. I was}
+  \ALIUSPlacedTextContent{77.652}{601.802}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{struck by the fact that philosophers have traditionally regarded unity as one of the}
+  \ALIUSPlacedTextContent{77.652}{618.362}{443.691}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{central features of consciousness, whereas many consciousness scientists (and a}
+  \ALIUSPlacedTextContent{77.652}{634.688}{443.743}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{significant number of philosophers!) seem to assume that consciousness is anything}
+  \ALIUSPlacedTextContent{77.652}{651.248}{443.681}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{but unified. I began to wonder whether those who were "pro" unity had the same}
+  \ALIUSPlacedTextContent{77.652}{667.807}{443.713}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{conception of "the unity of consciousness" as those who were against it, and the more}
+  \ALIUSPlacedTextContent{77.652}{684.134}{443.624}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I read on the topic the more convinced I became that there were many conceptions}
+  \ALIUSPlacedTextContent{448.261}{700.531}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{701.626}{370.650}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of "the" unity of consciousness. One of the first papers that I published}
+  \ALIUSPlacedTextContent{461.957}{701.626}{59.377}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{co-written}
+  \ALIUSPlacedTextContent{302.490}{718.257}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{719.352}{224.861}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{with my PhD supervisor David Chalmers}
+  \ALIUSPlacedTextContent{316.114}{719.352}{205.255}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{was largely devoted to distinguishing}
+  \ALIUSPlacedTextContent{77.652}{735.912}{443.625}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{different conceptions of the unity of consciousness. Since then I've gone on to}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{301.055}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Tim Bayne - How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{511.973}{46.516}{8.271}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{2}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consider the ways in which the various aspects of the unity of consciousness might}
+  \ALIUSPlacedTextContent{77.652}{97.550}{443.682}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{be explained, and what implications the unity of consciousness has for theories of}
+  \ALIUSPlacedTextContent{77.652}{114.109}{443.602}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness. I've also written on various other facets of consciousness, such as the}
+  \ALIUSPlacedTextContent{77.652}{130.669}{446.870}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{relationship between consciousness and agency and the nature of conscious thought.}
+  \ALIUSPlacedTextContent{77.652}{158.657}{443.644}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Are there questions about consciousness that cannot be answered? Quite possibly.}
+  \ALIUSPlacedTextContent{77.652}{175.217}{443.689}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Many theorists believe that scientific advances will enable us to bridge the}
+  \ALIUSPlacedTextContent{77.652}{191.776}{443.781}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{explanatory gap between the physical/functional properties of the brain on the one}
+  \ALIUSPlacedTextContent{77.652}{208.103}{443.672}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{hand and conscious experience on the other but I have my doubts. I'm sure that there}
+  \ALIUSPlacedTextContent{77.652}{224.662}{443.583}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{is much about consciousness that we will succeed in understanding, but I suspect}
+  \ALIUSPlacedTextContent{77.652}{241.222}{238.356}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that a residue of mystery will always remain.}
+  \ALIUSPlacedTextContent{141.170}{269.395}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{165.348}{286.799}{240.519}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I'm sure that there is much about}
+  \ALIUSPlacedTextContent{165.348}{304.291}{240.519}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{consciousness that we will succeed in}
+  \ALIUSPlacedTextContent{165.348}{321.784}{240.588}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{understanding, but I suspect that a}
+  \ALIUSPlacedTextContent{406.512}{338.665}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{165.348}{339.276}{235.272}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{residue of mystery will always remain.}
+  \ALIUSPlacedTextContent{77.652}{383.091}{442.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{In "Modes of Consciousness" (Bayne and Hohwy, 2016), modes of consciousness are}
+  \ALIUSPlacedTextContent{77.652}{397.552}{442.893}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{defined as global states of consciousness which are mutually exclusive. In previous}
+  \ALIUSPlacedTextContent{77.652}{412.245}{442.866}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{works, you argued against the possibility for a single creature to have different streams}
+  \ALIUSPlacedTextContent{77.652}{426.706}{442.862}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{of consciousness at the same time, discussing for example the case of split-brain}
+  \ALIUSPlacedTextContent{77.652}{441.400}{442.841}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{patients (Bayne, 2008). Is there a link between modes being mutually exclusive and the}
+  \ALIUSPlacedTextContent{77.652}{455.860}{442.823}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{unity of consciousness you defended previously in Unity of consciousness (2010)? Still,}
+  \ALIUSPlacedTextContent{77.652}{470.554}{442.804}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{some animals like dolphins or birds exhibit patterns of sleep in some restricted parts of}
+  \ALIUSPlacedTextContent{77.652}{485.014}{442.908}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{the brain while having other parts awake (Rattenborg et al, 2000). Without falling in the}
+  \ALIUSPlacedTextContent{77.652}{499.708}{442.914}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{mental error fallacy, which would infer a mental property directly from patterns of}
+  \ALIUSPlacedTextContent{77.652}{514.169}{442.978}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{neuronal activity, how do you deal with such cases from the perspective of modes of}
+  \ALIUSPlacedTextContent{77.652}{528.862}{83.085}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness?}
+  \ALIUSPlacedTextContent{77.652}{554.922}{443.635}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Interesting question! Let me start by stepping back a bit. The main point here was}
+  \ALIUSPlacedTextContent{77.652}{571.482}{443.672}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to sharpen the contrast between conscious modes (or what I now prefer to call}
+  \ALIUSPlacedTextContent{77.652}{588.041}{443.678}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{"global states of consciousness") and conscious contents. This contrast is quite}
+  \ALIUSPlacedTextContent{77.652}{604.368}{443.575}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{intuitive, but few theorists have provided an analysis of it. One of the suggestions}
+  \ALIUSPlacedTextContent{77.652}{620.927}{443.689}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that Jakob Hohwy and I made is that one of the things that distinguish modes from}
+  \ALIUSPlacedTextContent{77.652}{637.254}{443.716}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{contents is that modes tend to exclude each other whereas contents don't. For}
+  \ALIUSPlacedTextContent{77.652}{653.813}{443.682}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{example, you can hear a trumpet whether or not you are tasting ice-cream, but if}
+  \ALIUSPlacedTextContent{77.652}{670.373}{443.425}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{you are (say) in the state of alert wakefulness then you can't also be mildly sedated.}
+  \ALIUSPlacedTextContent{77.652}{698.361}{443.648}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Now, what should we say about cases in which an organism might seem to be awake}
+  \ALIUSPlacedTextContent{77.652}{714.921}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{in one hemisphere but asleep in another? It's a good question, and one that I'm not}
+  \ALIUSPlacedTextContent{77.652}{731.480}{443.695}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{entirely sure how to answer. One option would be to resist the idea that modes of}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{301.055}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Tim Bayne - How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{511.973}{46.516}{8.271}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{3}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.588}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness should be ascribed to hemispheres, and to insist that it's only the}
+  \ALIUSPlacedTextContent{77.652}{97.550}{443.615}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{organism as a whole that is in a particular mode of consciousness. The other option}
+  \ALIUSPlacedTextContent{77.652}{114.109}{443.693}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{would be to allow that modes can be ascribed to hemispheres, but to insist that no}
+  \ALIUSPlacedTextContent{77.652}{130.669}{443.663}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{single hemisphere can be in more than one mode at a time. I can see problems with}
+  \ALIUSPlacedTextContent{77.652}{146.995}{443.563}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{both options. The worry with the first is that it threatens to ignore what we seem to}
+  \ALIUSPlacedTextContent{77.652}{163.555}{443.680}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{be learning about the neural basis of some modes; the worry with the second is that}
+  \ALIUSPlacedTextContent{77.652}{180.115}{443.616}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{it threatens to sever the conceptual link between modes and the functional}
+  \ALIUSPlacedTextContent{77.652}{196.441}{443.597}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{capacities the govern the behavior of the organism as a whole. It's certainly a topic}
+  \ALIUSPlacedTextContent{77.652}{213.001}{150.305}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that requires more thought!}
+  \ALIUSPlacedTextContent{77.652}{241.051}{442.866}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{You proposed multi-dimensional modeling as a tool for the study of consciousness that}
+  \ALIUSPlacedTextContent{77.652}{255.745}{442.861}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{better accounts for the differences among global states of consciousness (Bayne,}
+  \ALIUSPlacedTextContent{77.652}{270.206}{442.948}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Hohwy \& Owen, 2016). What are the specific epistemic merits of this approach that}
+  \ALIUSPlacedTextContent{77.652}{284.899}{442.869}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{you see for the field of consciousness studies? An issue concerning this approach is that}
+  \ALIUSPlacedTextContent{77.652}{299.360}{442.866}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{it opens a Pandora's box: the dimensions can vary in number, nature (e.g., they can be}
+  \ALIUSPlacedTextContent{77.652}{314.054}{442.929}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{functional or content-based) and thus far there are no clear guidelines on how to}
+  \ALIUSPlacedTextContent{77.652}{328.514}{442.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{identify the most relevant dimensions to classify states of consciousness. Do you have}
+  \ALIUSPlacedTextContent{77.652}{343.208}{443.112}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{a pluralist view on the dimensions that should be used to distinguish states of}
+  \ALIUSPlacedTextContent{77.652}{357.668}{442.727}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness or do you think some dimensions would emerge as the most relevant?}
+  \ALIUSPlacedTextContent{77.652}{372.362}{442.888}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{What would be the significance of one or the other finding for the conceptualization of}
+  \ALIUSPlacedTextContent{77.652}{387.056}{80.741}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness?}
+  \ALIUSPlacedTextContent{77.652}{413.116}{443.698}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{It's true that we didn't propose any clear guidelines on what the relevant dimensions}
+  \ALIUSPlacedTextContent{77.652}{429.675}{443.618}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{are for characterizing global states of consciousness, but whether that's a bug or a}
+  \ALIUSPlacedTextContent{77.652}{446.002}{443.690}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{feature seems to me to depend on one's perspective. When it comes to global states,}
+  \ALIUSPlacedTextContent{77.652}{462.561}{443.785}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{theorizing begins with cases. For example, the vegetative state and the minimally}
+  \ALIUSPlacedTextContent{77.652}{479.121}{443.575}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{conscious state involve global states that are distinct from the ordinary neurotypical}
+  \ALIUSPlacedTextContent{77.652}{495.447}{443.689}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{state and from each other. The state of consciousness associated with mild sedation}
+  \ALIUSPlacedTextContent{77.652}{512.007}{443.615}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{is also a distinct global state, as is the conscious state associated with epileptic}
+  \ALIUSPlacedTextContent{77.652}{528.567}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{absence seizures. Psychedelics induce yet another kind of global state. After}
+  \ALIUSPlacedTextContent{97.244}{544.964}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{546.059}{19.665}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{this}
+  \ALIUSPlacedTextContent{110.944}{546.059}{410.391}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{it's all theory. The main point of Bayne et al. 2016 was to show that the}
+  \ALIUSPlacedTextContent{263.073}{562.456}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{369.661}{562.456}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{563.552}{185.283}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{dominant approach to global states}
+  \ALIUSPlacedTextContent{276.594}{563.552}{92.979}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the levels account}
+  \ALIUSPlacedTextContent{383.187}{563.552}{138.138}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{won't work. According to}
+  \ALIUSPlacedTextContent{77.652}{580.111}{443.744}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that account, consciousness comes in degrees (you can be more or less conscious),}
+  \ALIUSPlacedTextContent{77.652}{596.671}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and your global state of consciousness just is a matter of how conscious you are. This}
+  \ALIUSPlacedTextContent{77.652}{612.997}{443.638}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{proposal is pretty obviously hopeless, for it's clear that two people can be in different}
+  \ALIUSPlacedTextContent{77.652}{629.557}{443.588}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{global states without differing in the degree to which they are conscious. But since}
+  \ALIUSPlacedTextContent{77.652}{646.117}{443.682}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the levels account is in effect a unidimensional account, rejecting it requires moving}
+  \ALIUSPlacedTextContent{77.652}{662.676}{171.175}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to a multidimensional account.}
+  \ALIUSPlacedTextContent{77.652}{690.664}{443.679}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{That, of course, doesn't answer the question that you posed about what the}
+  \ALIUSPlacedTextContent{77.652}{707.224}{443.673}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{dimensions of these global states are and how they might be identified. A good place}
+  \ALIUSPlacedTextContent{77.652}{723.551}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to begin in addressing these issues is to ask why we assume that (say) the vegetative}
+  \ALIUSPlacedTextContent{77.652}{740.110}{443.760}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{state and the minimally conscious state are associated with distinct global states of}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{301.055}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Tim Bayne - How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{511.973}{46.516}{8.271}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{4}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness, or why we assume that REM sleep is associated with one global state}
+  \ALIUSPlacedTextContent{77.652}{97.550}{443.731}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of consciousness and psychedelics with another. I suspect that any plausible answer}
+  \ALIUSPlacedTextContent{77.652}{114.109}{443.682}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to this question will have to consider two things: what cognitive and behavioral}
+  \ALIUSPlacedTextContent{77.652}{130.669}{443.637}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{capacities are in place, and what kinds of contents are (and are not) permitted by or}
+  \ALIUSPlacedTextContent{77.652}{147.229}{233.418}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{associated with the global state in question.}
+  \ALIUSPlacedTextContent{77.652}{175.279}{442.856}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{In a recent article (Bayne, 2018), you argued that the scope of conscious phenomena}
+  \ALIUSPlacedTextContent{77.652}{189.740}{442.859}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{covered by the axioms of the Information Integration Theory (IIT) (Oizumi et al., 2014)}
+  \ALIUSPlacedTextContent{77.652}{204.433}{442.914}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{is limited to a restricted set of conscious phenomena or philosophical positions about}
+  \ALIUSPlacedTextContent{77.652}{218.894}{442.856}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness. IIT proponents defend the view that axioms should be considered as}
+  \ALIUSPlacedTextContent{77.652}{233.588}{443.035}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{working hypotheses that allow the theory to be coherent. Presumably, one advantage}
+  \ALIUSPlacedTextContent{77.652}{248.048}{442.940}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{of such an approach is its explicitness about the assumptions endorsed by the theory.}
+  \ALIUSPlacedTextContent{77.652}{262.742}{442.851}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{As an alternative, you propose the natural kind approach. What are the respective roles}
+  \ALIUSPlacedTextContent{77.652}{277.436}{405.696}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{of theoretical thinking and empirical investigation in the natural kind approach?}
+  \ALIUSPlacedTextContent{77.652}{303.496}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I have no problem with the appeal to working hypotheses when it comes to}
+  \ALIUSPlacedTextContent{77.652}{320.055}{443.660}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{developing theories of consciousness, but on my reading of IIT that's not the role}
+  \ALIUSPlacedTextContent{460.390}{336.452}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{337.548}{382.661}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that they ascribe to the axioms (the label "axioms" here is not an accident}
+  \ALIUSPlacedTextContent{473.984}{337.548}{47.364}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{working}
+  \ALIUSPlacedTextContent{77.652}{354.107}{443.678}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{hypotheses are typically called "hypotheses" rather than "axioms"). As I read them,}
+  \ALIUSPlacedTextContent{77.652}{370.434}{443.718}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Tononi and the other advocates of IIT take an axiom to be a self-evident claim about}
+  \ALIUSPlacedTextContent{77.652}{386.993}{443.678}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the essential phenomenological features of consciousness. I have doubts about}
+  \ALIUSPlacedTextContent{77.652}{403.553}{443.663}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{whether there are any axioms in this sense of the term, and even if there are any}
+  \ALIUSPlacedTextContent{77.652}{419.879}{443.693}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{axioms, I doubt that it's possible to ground a theory of consciousness on the basis of}
+  \ALIUSPlacedTextContent{77.652}{436.439}{373.305}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{an appeal to them in the way that the advocates of IIT attempt to do.}
+  \ALIUSPlacedTextContent{77.652}{464.660}{443.751}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{The natural kind approach doesn't start with alleged self-evident truths, but instead}
+  \ALIUSPlacedTextContent{77.652}{480.987}{443.657}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{begins with defeasible claims about consciousness. These claims need not hold}
+  \ALIUSPlacedTextContent{77.652}{497.547}{443.666}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{universally (for example, they might apply to human beings but not to the members}
+  \ALIUSPlacedTextContent{77.652}{514.106}{443.667}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of other species), and they need not be restricted to the phenomenology of}
+  \ALIUSPlacedTextContent{77.652}{530.432}{443.632}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness (for example, they might also include the functional role of}
+  \ALIUSPlacedTextContent{376.425}{546.829}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{547.925}{298.706}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness). The idea is to use these defeasible claims}
+  \ALIUSPlacedTextContent{390.065}{547.925}{131.254}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{"working hypotheses", if}
+  \ALIUSPlacedTextContent{119.867}{564.788}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{565.884}{42.253}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{you will}
+  \ALIUSPlacedTextContent{133.542}{565.884}{374.571}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{as tools for homing in on the mechanisms that underlie consciousness.}
+  \ALIUSPlacedTextContent{141.170}{593.824}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{165.348}{611.227}{240.621}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{The natural kind approach doesn't}
+  \ALIUSPlacedTextContent{165.348}{628.720}{240.568}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{start with alleged self-evident truths,}
+  \ALIUSPlacedTextContent{165.348}{646.213}{240.531}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{but instead begins with defeasible}
+  \ALIUSPlacedTextContent{347.504}{662.861}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{165.348}{663.705}{177.366}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{claims about consciousness.}
+  \ALIUSPlacedTextContent{77.652}{707.457}{443.688}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{When it comes to the natural kind approach theory-building and empirical}
+  \ALIUSPlacedTextContent{77.652}{724.017}{443.664}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{investigation go hand-in-hand: we need theory for hypotheses formation and we}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{301.055}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Tim Bayne - How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{511.973}{46.516}{8.271}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{5}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.702}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{need empirical work in order to test the hypotheses. The situation is the same here}
+  \ALIUSPlacedTextContent{77.652}{97.783}{373.985}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{as it is for any other domain in which we're looking for natural kinds.}
+  \ALIUSPlacedTextContent{77.652}{125.834}{442.836}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{In a recent article (Bayne \& Carter, 2018), you argued against the characterization of}
+  \ALIUSPlacedTextContent{77.652}{140.294}{442.850}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{psychedelic states as higher states of consciousness. The line of argument you develop}
+  \ALIUSPlacedTextContent{77.652}{154.988}{442.820}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{revolves around cognitive functions associated with conscious processing. You}
+  \ALIUSPlacedTextContent{77.652}{169.448}{442.768}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{reviewed evidence that some cognitive functions are enhanced during psychedelic}
+  \ALIUSPlacedTextContent{77.652}{184.142}{442.869}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{experience (e.g. imagery and sensory salience), while others are impaired (e.g., decision}
+  \ALIUSPlacedTextContent{77.652}{198.603}{442.992}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{making). You conclude that this argues against unidimensional accounts of}
+  \ALIUSPlacedTextContent{77.652}{213.296}{442.761}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness that rank consciousness levels on a unique scale. As a consequence, in}
+  \ALIUSPlacedTextContent{77.652}{227.757}{442.862}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{your view, this provides a challenge to theories like IIT and complexity-based}
+  \ALIUSPlacedTextContent{77.652}{242.451}{442.833}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{approaches. Nevertheless, in such approaches, consciousness is not ordered according}
+  \ALIUSPlacedTextContent{77.652}{256.911}{443.051}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{to cognitive or behavioral dimensions, but rather as the amount of integrated}
+  \ALIUSPlacedTextContent{77.652}{271.605}{442.964}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{information accounting for phenomenal experience (Oizumi et al, 2016). Thus, it seems}
+  \ALIUSPlacedTextContent{77.652}{286.065}{442.881}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{that your criticism is based on different conceptions about what dimensions are}
+  \ALIUSPlacedTextContent{77.652}{300.759}{442.769}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{relevant for capturing the conscious phenomenon. In fact, a recent application of the IIT}
+  \ALIUSPlacedTextContent{77.652}{315.220}{442.709}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{framework to the study of psychedelics suggests that even IIT might contest general}
+  \ALIUSPlacedTextContent{77.652}{329.914}{442.840}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{claims about psychedelics being 'higher' states of consciousness (Gallimore, 2015).}
+  \ALIUSPlacedTextContent{77.652}{344.374}{442.732}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Could you comment on how your critique of the notion of levels of consciousness}
+  \ALIUSPlacedTextContent{77.652}{359.068}{355.942}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{depends on theoretical assumptions guiding consciousness research?}
+  \ALIUSPlacedTextContent{77.652}{385.361}{443.692}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{There are a couple of issues here. One point concerns the criticisms that Olivia}
+  \ALIUSPlacedTextContent{77.652}{401.687}{443.692}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Carter and I make of the idea that the psychedelic state is a "higher" state of}
+  \ALIUSPlacedTextContent{77.652}{418.247}{443.532}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness. Here, it's important to keep in mind that our focus was on the claim}
+  \ALIUSPlacedTextContent{77.652}{434.806}{443.677}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that the psychedelic state is a higher state of consciousness in the same sense in}
+  \ALIUSPlacedTextContent{77.652}{451.133}{443.594}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{which disorders of consciousness (such as the vegetative state or epileptic absence}
+  \ALIUSPlacedTextContent{77.652}{467.693}{443.696}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{seizures) are lower states of consciousness. We argue that if this were right, then one}
+  \ALIUSPlacedTextContent{77.652}{484.019}{443.704}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{would expect the psychedelic state to be associated with general improvements in}
+  \ALIUSPlacedTextContent{77.652}{500.579}{443.660}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{cognitive function, but that seems not to be the case. Denying that the psychedelic}
+  \ALIUSPlacedTextContent{77.652}{517.138}{443.600}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{state is "higher" in this sense is of course compatible with accepting that it is higher}
+  \ALIUSPlacedTextContent{77.652}{533.698}{175.161}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{in some other sense of the term.}
+  \ALIUSPlacedTextContent{77.652}{561.686}{443.694}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{As you suggest, the advocates of IIT propose that an individual's level of}
+  \ALIUSPlacedTextContent{77.652}{578.246}{443.613}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness corresponds to the amount of integrated information that it involves.}
+  \ALIUSPlacedTextContent{77.652}{594.572}{443.810}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{But here we need to ask how this proposal should be understood. If, on the one hand,}
+  \ALIUSPlacedTextContent{77.652}{611.132}{443.674}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{it is to be understood as a proposal for how the term "level" should be used in}
+  \ALIUSPlacedTextContent{77.652}{627.691}{443.637}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness science then that's fine, but it's not clear to me why anyone would use}
+  \ALIUSPlacedTextContent{77.652}{644.018}{443.718}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the term in this way unless they were already committed to IIT. If, on the other}
+  \ALIUSPlacedTextContent{77.652}{660.577}{443.695}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{hand, it is to be understood as an account of levels of consciousness as that term has}
+  \ALIUSPlacedTextContent{77.652}{677.137}{443.605}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{been used within consciousness science for the last decade or more than it's clearly}
+  \ALIUSPlacedTextContent{77.652}{693.463}{443.781}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{unsatisfactory, for given current usage an improvement in an individual's level of}
+  \ALIUSPlacedTextContent{77.652}{710.023}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness requires a concomitant improvement in their general cognitive and}
+  \ALIUSPlacedTextContent{77.652}{726.583}{116.237}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{behavioral capacities.}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{301.055}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Tim Bayne - How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{511.973}{46.516}{8.271}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{6}
+  \ALIUSPlacedTextContent{77.652}{81.286}{442.691}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Your article on psychedelics fits within the growing trend of research that has been}
+  \ALIUSPlacedTextContent{77.652}{95.746}{442.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{labeled the "psychedelic renaissance" (Sessa, 2012). How do you see this trend in}
+  \ALIUSPlacedTextContent{77.652}{110.440}{440.521}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness studies? More generally, do you see any advantage in incorporating so-}
+  \ALIUSPlacedTextContent{77.652}{124.901}{442.865}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{called altered states or fringe phenomena (like trance, meditational states, out-of-body}
+  \ALIUSPlacedTextContent{77.652}{139.594}{329.745}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{experiences, lucid dreaming, etc.) in the study of consciousness?}
+  \ALIUSPlacedTextContent{77.652}{165.654}{443.690}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{As far as the study of consciousness is concerned, the psychedelic renaissance is part}
+  \ALIUSPlacedTextContent{77.652}{182.214}{443.575}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of a wider movement to take altered states of consciousness more seriously. Of}
+  \ALIUSPlacedTextContent{77.652}{198.773}{443.680}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{course, altered states of consciousness have always had a place within the study of}
+  \ALIUSPlacedTextContent{77.652}{215.100}{443.713}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness, but for the most part they've been relegated to the fringes of the}
+  \ALIUSPlacedTextContent{77.652}{231.659}{443.656}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{discipline, and mainstream consciousness science has been dominated by the study}
+  \ALIUSPlacedTextContent{77.652}{248.219}{443.662}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of consciousness as it occurs in adult human beings in the state of ordinary}
+  \ALIUSPlacedTextContent{77.652}{264.545}{443.717}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{wakefulness. (Indeed, for the most part it's been dominated by the study of visual}
+  \ALIUSPlacedTextContent{77.652}{281.105}{443.711}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness as it occurs in the state of ordinary wakefulness!) I see the move}
+  \ALIUSPlacedTextContent{77.652}{297.431}{443.779}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{towards taking psychedelic experience more seriously as motivated by a more}
+  \ALIUSPlacedTextContent{77.652}{313.991}{443.581}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{general sense that consciousness really is multifarious in its expression, and that}
+  \ALIUSPlacedTextContent{77.652}{330.551}{443.691}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{models which account for adult human experience in the state of ordinary alert}
+  \ALIUSPlacedTextContent{77.652}{347.110}{432.786}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{wakefulness might not apply so well when it comes to other forms of experience.}
+  \ALIUSPlacedTextContent{77.652}{375.161}{443.063}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Some recent theoretical papers focused on empirical studies (Gerrans \& Letheby,}
+  \ALIUSPlacedTextContent{77.652}{389.622}{442.837}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{2017; Millière et al., 2018) suggest that through some alterations of consciousness}
+  \ALIUSPlacedTextContent{77.652}{404.315}{442.715}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{(induced by certain classes of drugs or by meditational techniques) we can achieve a}
+  \ALIUSPlacedTextContent{77.652}{418.776}{442.877}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{state of "ego dissolution", where consciousness persists without the experience of}
+  \ALIUSPlacedTextContent{77.652}{433.470}{442.863}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{being or having a self. In the past, you proposed to see the self as a "virtual center of}
+  \ALIUSPlacedTextContent{77.652}{447.930}{442.876}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{gravity" for the unity of consciousness (Bayne, 2010). In relation to this, what do you}
+  \ALIUSPlacedTextContent{77.652}{462.624}{442.964}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{think about empirical cases of ego dissolution? More generally, do you think that the}
+  \ALIUSPlacedTextContent{77.652}{477.084}{442.816}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{study of these kinds of alterations can tell us something new about the structural}
+  \ALIUSPlacedTextContent{77.652}{491.778}{139.097}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{features of consciousness?}
+  \ALIUSPlacedTextContent{77.652}{518.071}{443.818}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{In my view this is one of the most interesting aspects of psychedelic experience. It's}
+  \ALIUSPlacedTextContent{77.652}{534.397}{443.673}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{tempting to suppose that a sense of being a single subject of experience is essential}
+  \ALIUSPlacedTextContent{77.652}{550.957}{443.736}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to human experience, and that no matter how seriously impaired consciousness is}
+  \ALIUSPlacedTextContent{77.652}{567.284}{443.658}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the "I" is always attached to each and every experience. But ego dissolution tells us}
+  \ALIUSPlacedTextContent{77.652}{583.843}{443.695}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that that assumption is false, and that the subjectivity of experience is not a}
+  \ALIUSPlacedTextContent{77.652}{600.403}{219.064}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{necessary feature of human experience.}
+  \ALIUSPlacedTextContent{77.652}{628.453}{442.955}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{The multiple metaphysical options on the nature of consciousness discussed in}
+  \ALIUSPlacedTextContent{77.652}{643.147}{442.953}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{philosophy (e.g. the hard problem of consciousness, the problem of mental causation,}
+  \ALIUSPlacedTextContent{77.652}{657.608}{442.858}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{etc...) still seem to pose a problem for a unified scientific theory of consciousness.}
+  \ALIUSPlacedTextContent{77.652}{672.302}{443.004}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Should science take into account these philosophical debates, or should science rather}
+  \ALIUSPlacedTextContent{77.652}{686.762}{442.873}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{focus on the "real problem" of the empirical investigation of the conscious phenomenon,}
+  \ALIUSPlacedTextContent{77.652}{701.456}{442.877}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{as formulated by Anil Seth (2016)? Does consciousness raise, in your opinion, specific}
+  \ALIUSPlacedTextContent{77.652}{716.150}{442.862}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{conceptual issues regarding its scientific study compared to other mental phenomena?}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{301.055}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Tim Bayne - How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{511.973}{46.516}{8.271}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{7}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.819}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{It's interesting to note that although philosophers have a fairly limited role when it}
+  \ALIUSPlacedTextContent{285.930}{97.620}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{98.716}{208.284}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{comes to the study of most phenomena}
+  \ALIUSPlacedTextContent{299.586}{98.716}{221.759}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{for example, I suspect that few zoologists}
+  \ALIUSPlacedTextContent{476.949}{115.113}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{116.208}{399.353}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{are motivated to keep up with developments in the philosophy of biology!}
+  \ALIUSPlacedTextContent{490.650}{116.208}{30.674}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{there}
+  \ALIUSPlacedTextContent{77.652}{132.768}{443.778}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{are other domains in which philosophers and scientists have a great deal to learn}
+  \ALIUSPlacedTextContent{77.652}{149.328}{443.672}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{from each other, and the study of consciousness is certainly one such domain.}
+  \ALIUSPlacedTextContent{77.652}{165.887}{443.667}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Having said that, it seems to me that the value and importance of dialogue between}
+  \ALIUSPlacedTextContent{77.652}{182.214}{443.727}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{science and philosophy depends very much on the question at issue. I'm not sure that}
+  \ALIUSPlacedTextContent{77.652}{198.773}{443.700}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the scientific study of consciousness is likely to be enhanced by engaging with}
+  \ALIUSPlacedTextContent{77.652}{215.100}{443.627}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{philosophical reflection on the nature of the hard problem or mental causation, but}
+  \ALIUSPlacedTextContent{77.652}{231.659}{443.754}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{there are a number of other topics on which dialogue really is crucial. For example,}
+  \ALIUSPlacedTextContent{77.652}{248.219}{443.653}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{there are important questions about what a scientific explanation for consciousness}
+  \ALIUSPlacedTextContent{77.652}{264.545}{443.658}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{should look like, and whether it should have the notion of a neural correlate of}
+  \ALIUSPlacedTextContent{77.652}{281.105}{443.564}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness at its heart. There are also deep and difficult questions about how to}
+  \ALIUSPlacedTextContent{77.652}{297.665}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{measure consciousness, and whether the subjectivity of consciousness poses any kind}
+  \ALIUSPlacedTextContent{77.652}{313.991}{443.720}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of principled difficulty for its scientific study. There are important treatments of}
+  \ALIUSPlacedTextContent{77.652}{330.551}{440.496}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{these issues within both philosophy and the sciences, and it's a shame that all-too-}
+  \ALIUSPlacedTextContent{77.652}{347.110}{264.573}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{often they are limited by disciplinary boundaries.}
+  \ALIUSPlacedTextContent{141.170}{375.283}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{165.348}{392.687}{268.085}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I'm not sure that the scientific study of}
+  \ALIUSPlacedTextContent{165.348}{410.180}{268.079}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{consciousness is likely to be enhanced by}
+  \ALIUSPlacedTextContent{165.348}{427.672}{268.189}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{engaging with philosophical reflection on}
+  \ALIUSPlacedTextContent{165.348}{445.165}{268.058}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{the nature of the hard problem or mental}
+  \ALIUSPlacedTextContent{165.348}{462.657}{268.070}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{causation, but there are a number of other}
+  \ALIUSPlacedTextContent{421.906}{479.306}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{165.348}{480.150}{249.806}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{topics on which dialogue really is crucial.}
+  \ALIUSPlacedTextContent{77.652}{523.964}{442.838}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Different strategies in consciousness science can be distinguished according to the role}
+  \ALIUSPlacedTextContent{77.652}{538.425}{442.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{they give to phenomenology in their research program. Integrated Information Theory}
+  \ALIUSPlacedTextContent{77.652}{553.119}{442.856}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{uses phenomenology as a starting point to define consciousness through the}
+  \ALIUSPlacedTextContent{77.652}{567.579}{63.037}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{formulation}
+  \ALIUSPlacedTextContent{158.213}{567.579}{12.829}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{of}
+  \ALIUSPlacedTextContent{188.566}{567.579}{40.585}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{axioms.}
+  \ALIUSPlacedTextContent{246.674}{567.579}{129.924}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Neurophenomenological}
+  \ALIUSPlacedTextContent{394.122}{567.579}{62.084}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{approaches}
+  \ALIUSPlacedTextContent{473.730}{567.579}{46.793}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consider}
+  \ALIUSPlacedTextContent{77.652}{582.273}{442.869}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{phenomenological reports as first-hand empirical data that should be investigated}
+  \ALIUSPlacedTextContent{77.652}{596.734}{442.786}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{equally along physical processes. Reductionists consider phenomenology as an}
+  \ALIUSPlacedTextContent{77.652}{611.427}{67.993}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{explanandum}
+  \ALIUSPlacedTextContent{146.216}{611.427}{374.304}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{that must be accounted for in terms of physical explanations. Would the}
+  \ALIUSPlacedTextContent{77.652}{625.888}{442.898}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{natural kind approach allow these strategies to be complementary rather than in}
+  \ALIUSPlacedTextContent{77.652}{640.582}{442.816}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{competition, insofar as it considers definitional properties of consciousness as testable}
+  \ALIUSPlacedTextContent{77.652}{655.042}{442.835}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{working hypotheses while avoiding metaphysical commitments? What role should}
+  \ALIUSPlacedTextContent{77.652}{669.736}{360.127}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{phenomenology play in today's consciousness science in your opinion?}
+  \ALIUSPlacedTextContent{476.016}{695.866}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{696.962}{398.436}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{In a sense, everybody starts with the phenomenal character of consciousness}
+  \ALIUSPlacedTextContent{489.711}{696.962}{31.633}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that's}
+  \ALIUSPlacedTextContent{77.652}{713.521}{443.721}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the thing that we want to explain. The question is how far you can get by simply}
+  \ALIUSPlacedTextContent{77.652}{729.848}{443.784}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{focusing on the phenomenology. My view is: not all that far. One of the problems}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{301.055}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Tim Bayne - How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{511.973}{46.516}{8.271}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{8}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.554}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{here is that people often disagree about the phenomenology. For an example of such}
+  \ALIUSPlacedTextContent{77.652}{97.550}{443.687}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{disagreement take a look at discussions of "cognitive phenomenology". But leaving}
+  \ALIUSPlacedTextContent{77.652}{114.109}{443.765}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{disagreement about phenomenal character to one side, the problem is that there is}
+  \ALIUSPlacedTextContent{77.652}{130.669}{443.721}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{an explanatory gap between phenomenal character and neurofunctional structure.}
+  \ALIUSPlacedTextContent{77.652}{146.995}{443.605}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Thus, it seems to me, it's difficult to build a conceptual bridge from descriptions of}
+  \ALIUSPlacedTextContent{77.652}{163.555}{443.610}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the phenomenology to descriptions of neurofunctional structure. The natural kind}
+  \ALIUSPlacedTextContent{77.652}{180.115}{443.621}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{approach takes the phenomenology of consciousness seriously, but it doesn't assume}
+  \ALIUSPlacedTextContent{77.652}{196.674}{436.637}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that explanations of the phenomenology can be deduced from descriptions of it.}
+  \ALIUSPlacedTextContent{77.652}{224.725}{442.837}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{You developed a substantial body of work on consciousness that identifies key}
+  \ALIUSPlacedTextContent{77.652}{239.185}{442.767}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{components of the conscious phenomenon through conceptual analysis of empirical}
+  \ALIUSPlacedTextContent{77.652}{253.879}{442.700}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{results. How do you consider the current progress on a definition of consciousness?}
+  \ALIUSPlacedTextContent{77.652}{268.340}{442.917}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{How do you see the development of the field of consciousness studies in the future? Is}
+  \ALIUSPlacedTextContent{77.652}{283.033}{286.299}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{there any avenue that you deem particularly promising?}
+  \ALIUSPlacedTextContent{77.652}{309.093}{443.678}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I'm not sure that the study of consciousness has made much progress with respect}
+  \ALIUSPlacedTextContent{77.652}{325.653}{443.664}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to defining "consciousness". Here, it seems to me that we have yet to improve on}
+  \ALIUSPlacedTextContent{331.178}{342.050}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{343.145}{253.498}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Tom Nagel's characterization of consciousness}
+  \ALIUSPlacedTextContent{344.849}{343.145}{176.375}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{a conscious state is a state that}
+  \ALIUSPlacedTextContent{286.397}{359.775}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{360.871}{208.620}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{there's "something that it's like" to be in}
+  \ALIUSPlacedTextContent{299.949}{360.871}{221.441}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{even though it's generally recognized that}
+  \ALIUSPlacedTextContent{77.652}{377.431}{443.692}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{this characterization has at best limited utility. But significant progress has been}
+  \ALIUSPlacedTextContent{77.652}{393.757}{443.729}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{made on other issues, even if that progress has often involved the posing of more}
+  \ALIUSPlacedTextContent{77.652}{410.317}{443.677}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{questions than answers. I think that the increased attention given to non-visual}
+  \ALIUSPlacedTextContent{77.652}{426.643}{443.688}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness has been salutary, and it is good to see burgeoning literatures in both}
+  \ALIUSPlacedTextContent{77.652}{443.203}{443.696}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{science and philosophy on such topics as agentive awareness, conscious thought, and}
+  \ALIUSPlacedTextContent{77.652}{459.763}{443.418}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{multisensory integration. It is also good to see lots of activity in the development of}
+  \ALIUSPlacedTextContent{77.652}{476.089}{443.692}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{theories of consciousness, although I wish that this activity was accompanied by}
+  \ALIUSPlacedTextContent{77.652}{492.649}{443.617}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{more discussion about how to test theories of consciousness. Looking forward, I}
+  \ALIUSPlacedTextContent{77.652}{509.208}{440.496}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{suspect that issues relating to the detection of consciousness in machines and non-}
+  \ALIUSPlacedTextContent{77.652}{525.768}{288.342}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{human animals will loom large in the coming decade.}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{301.055}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Tim Bayne - How to study consciousness as a natural phenomenon}
+  \ALIUSPlacedTextContent{511.973}{46.516}{8.271}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{9}
+  \ALIUSPlacedTextContent{265.090}{81.376}{68.256}{ALIUSC000000}{\ALIUSFontLatoLight}{13.394}{References}
+  \ALIUSPlacedTextContent{77.652}{109.140}{443.461}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Bayne, T. (2008). The unity of consciousness and the split-brain syndrome. The Journal of}
+  \ALIUSPlacedTextContent{112.103}{124.534}{137.605}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Philosophy, 105(6), 277-300.}
+  \ALIUSPlacedTextContent{77.652}{151.356}{345.321}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Bayne, T. (2010). The unity of consciousness. Oxford University Press.}
+  \ALIUSPlacedTextContent{77.652}{178.411}{443.479}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Bayne, T. (2018). On the axiomatic foundations of the integrated information theory of}
+  \ALIUSPlacedTextContent{112.103}{193.805}{306.309}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{consciousness. Neuroscience of consciousness, 2018(1), niy007.}
+  \ALIUSPlacedTextContent{77.652}{220.626}{443.561}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Bayne, T., \& Carter, O. (2018). Dimensions of consciousness and the psychedelic state.}
+  \ALIUSPlacedTextContent{112.103}{236.020}{233.972}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Neuroscience of consciousness, 2018(1), niy008.}
+  \ALIUSPlacedTextContent{77.652}{262.842}{443.400}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Bayne, T., \& Hohwy, J. (2016). Modes of consciousness. Finding consciousness: The}
+  \ALIUSPlacedTextContent{112.103}{278.235}{293.159}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{neuroscience, ethics and law of severe brain damage, 57-80.}
+  \ALIUSPlacedTextContent{77.652}{305.057}{443.550}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Bayne, T., Hohwy, J., \& Owen, A. M. (2016). Are there levels of consciousness?. Trends in}
+  \ALIUSPlacedTextContent{112.103}{320.451}{165.095}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{cognitive sciences, 20(6), 405-413.}
+  \ALIUSPlacedTextContent{77.652}{347.273}{443.481}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Gallimore, A. R. (2015). Restructuring consciousness–the psychedelic state in light of}
+  \ALIUSPlacedTextContent{112.103}{362.666}{355.631}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{integrated information theory. Frontiers in human neuroscience, 9, 346.}
+  \ALIUSPlacedTextContent{77.652}{389.721}{443.428}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Letheby, C., \& Gerrans, P. (2017). Self unbound: ego dissolution in psychedelic experience.}
+  \ALIUSPlacedTextContent{112.103}{405.115}{197.196}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Neuroscience of Consciousness, 2017(1).}
+  \ALIUSPlacedTextContent{77.652}{431.937}{443.496}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{McGinn, C. (1999). The mysterious flame: Conscious minds in a material world. Basic}
+  \ALIUSPlacedTextContent{112.103}{447.330}{35.225}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Books.}
+  \ALIUSPlacedTextContent{77.652}{474.152}{443.456}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Millière, R., Carhart-Harris, R. L., Roseman, L., Trautwein, F.-M., \& Berkovich-Ohana, A.}
+  \ALIUSPlacedTextContent{112.103}{489.546}{409.016}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{(2018). Psychedelics, Meditation, and Self-Consciousness. Frontiers in Psychology,}
+  \ALIUSPlacedTextContent{112.103}{504.939}{11.336}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{9.}
+  \ALIUSPlacedTextContent{77.652}{531.761}{443.489}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Oizumi, M., Albantakis, L., \& Tononi, G. (2014). From the phenomenology to the}
+  \ALIUSPlacedTextContent{112.103}{546.921}{409.042}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{mechanisms of consciousness: integrated information theory 3.0. PLoS}
+  \ALIUSPlacedTextContent{112.103}{562.315}{195.605}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{computational biology, 10(5), e1003588.}
+  \ALIUSPlacedTextContent{77.652}{589.370}{443.473}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Rattenborg, N. C., Amlaner, C. J., \& Lima, S. L. (2000). Behavioral, neurophysiological and}
+  \ALIUSPlacedTextContent{112.103}{604.530}{408.945}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{evolutionary perspectives on unihemispheric sleep. Neuroscience \& Biobehavioral}
+  \ALIUSPlacedTextContent{112.103}{619.924}{119.186}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Reviews, 24(8), 817-842.}
+  \ALIUSPlacedTextContent{77.652}{646.746}{443.389}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Sessa, B. (2012). The psychedelic renaissance: Reassessing the role of psychedelic drugs in}
+  \ALIUSPlacedTextContent{112.103}{662.139}{273.336}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{21st century psychiatry and society. Muswell Hill Press.}
+  \ALIUSPlacedTextContent{77.652}{688.961}{446.425}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Seth, A. (2016) The hard problem of consciousness is a distraction from the real one. Aeon.}
+  \ALIUSPlacedTextContent{112.103}{704.354}{396.773}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{https://aeon.co/essays/the-hard-problem-of-consciousness-is-a-distraction-from-}
+  \ALIUSPlacedTextContent{112.103}{719.748}{66.869}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{the-real-one □}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

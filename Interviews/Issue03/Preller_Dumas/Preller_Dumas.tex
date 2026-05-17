@@ -1,38 +1,430 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.2756bp,paperheight=841.8898bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{Psychedelics and Sociality: Probing the diversity of cognition beyond individuals}
-\author{Katrin Preller Interviewed by Guillaume Dumas}
-\date{ALIUS Bulletin 3}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC1A1718}{HTML}{1A1718}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSC7F7F7F}{HTML}{7F7F7F}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/88st-vc41\par
-\textbf{Keywords:} neuropharmacology, psychedelic-assisted therapy, psychiatry, social cognition\par
-\section*{Abstract}
-In this interview, we discuss how beyond the tremendous therapeutic opportunities offered by psychedelics, they also provide a unique opportunity to investigate social cognition in a causal way and thus increase our mechanistic understanding of it. We argue this basic research is necessary to understand the underlying mechanisms and assure their clinical efficacy. However, revealing this potential requires a great deal of education for clinicians and researchers. This includes scientific rigor both in terms of how administration of psychedelic substances is completed and how psychedelic-assisted therapy is conducted. We also argue that important synergies of recent tools (VR, hyperscanning) in lab experiments can bring more naturalistic settings and thus increase relevance for real-world applications. We finally review recent results demonstrating how altered state of consciousness induced by psychedelics can result from thalamic gating deficits and alterations in information processing of internal and external stimuli within cortico-striato-thalamo-cortical (CSTC) feedback loops. We finish the exchange on the most important challenges for future research, including funding, sample size, and ethics.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin Psychedelics and Sociality Probing the diversity of cognition beyond individuals An interview with Katrin Preller by Guillaume Dumas Citation: Preller, K. \& Dumas, G. (2019). Psychedelics and sociality: probing the diversity of cognition beyond individuals. An interview with Katrin Preller. ALIUS Bulletin, 3, 37-44. doi: 10.34700/88st-vc41 Katrin Preller preller@bli.uzh.ch University Hospital for Psychiatry Zurich, Zurich, Switzerland Guillaume Dumas gdumas@pasteur.fr Institut Pasteur Paris, France Abstract In this interview, we discuss how beyond the tremendous therapeutic opportunities offered by psychedelics, they also provide a unique opportunity to investigate social cognition in a causal way and thus increase our mechanistic understanding of it. We argue this basic research is necessary to understand the underlying mechanisms and assure their clinical efficacy. However, revealing this potential requires a great deal of education for clinicians and researchers. This includes scientific rigor both in terms of how administration of psychedelic substances is completed and how psychedelic-assisted therapy is conducted. We also argue that important synergies of recent tools (VR, hyperscanning) in lab experiments can bring more naturalistic settings and thus increase relevance for real- world applications. We finally review recent results demonstrating how altered state of consciousness induced by psychedelics can result from thalamic gating deficits and alterations in information processing of internal and external stimuli within cortico-striato- thalamo-cortical (CSTC) feedback loops. We finish the exchange on the most important challenges for future research, including funding, sample size, and ethics. keywords: neuropharmacology, psychedelic-assisted therapy, psychiatry, social cognition. Can you introduce yourself and explain what brought you to psychedelic research? I am a neuropsychologist by training, and received my Msc at University of Konstanz in Germany. I had been fascinated by how neurochemistry shapes our behavior and emotions, as well as by neuroimaging. This interest led me to complete my PhD at University of Zurich in addiction research investigating the long-term neurobiological consequences of substance use. While I consider this research field to be fundamental for improving the treatment and prevention of addiction disorders, I also strived to perform causal inference on the underlying neuropharmacological processes. Conducting pharmacological challenge studies Katrin Preller - Psychedelics and Sociality 38 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin with psychedelics offers a way to investigate a range of phenomena critical for human every-day lives as well as for psychiatric patients. For me, working with psychedelics really opened the doors to create insight into human neuropharmacology and therefore to understanding our brains, their potential, as well as their shortcomings. What can psychedelic research bring to our understanding of the basic mechanisms underlying human sociality? Subjectively, I am sure that a lot of people have experienced that psychedelics acutely (and maybe long-lastingly) change their perception of connection with the environment as well as with other human beings after a psychedelic experience. We have now shown that also in a controlled lab-environment, psychedelics belong to the very small group of pharmacological agents that are able to modulate social perception, interaction, and behavior (Pokorny, Preller, Kometer, Dziobek, \& Vollenweider, 2017; Preller et al., 2016, 2018). For everyone who works in the field of social neuroscience, this has to be exciting! First, we found a compound that modulates34at least certain aspects of34social cognition, second it is a compound which has a rather well-known and circumscribed receptor pharmacology, and third, it can be administered safely. By (temporarily) altering certain social processes, psychedelics render them accessible for investigation. Psychedelics therefore offer the opportunity to investigate social cognition in a causal way and thus increase our mechanistic understanding of social cognition. On the one hand, this information is critical for the rational development of novel therapeutics targeting trans-diagnostic impairments in social cognition in psychiatric and neurological illnesses. On the other hand, these studies are important to fully capture the clinical potential of psychedelics considering that the therapeutic process is in general a social one. My impression is, that we are currently still in the process of discussing the right treatment approach for psychedelic-assisted therapy. To my knowledge, there are no studies currently going on that scientifically investigate the most effective way to treat people before, during, and after the psychedelic session. The results we obtained so far might be adding a puzzle piece to this discussion: We showed that psilocybin increases empathy and decreases the feeling of social rejection and the processing of negative stimuli in general (Pokorny et al., 2017). It might be particularly important to leverage this effect of psilocybin to benefit the patient- therapist relationship. On the other hand, we and others have also shown that LSD also increases suggestibility (at least to opinions which are not too different from the participants' own; Carhart-Harris et al., 2015; Preller, Schilbach, Duerler, Pokorny, \& Vollenweider, 2018). This is something psychedelic therapists and sitters should be aware of. However, there is still a lot that we do not know yet. For Katrin Preller - Psychedelics and Sociality 39 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin example, long-term effects on social perception and, importantly, behavior have not been investigated yet. " To my knowledge, there are no studies currently going on that scientifically investigate the most effective way to treat people before, during, and after the psychedelic session. How can we better operationalize translational efforts in psychiatry? The challenges for psychedelic science are mostly similar to other basic science programs. However, psychedelic science additionally struggles because of the cultural baggage from the 1960's, the resulting taboo surrounding these substances, and the classification as Schedule I drugs. We therefore need to be extra rigorous in our research to be able to produce data that will convince other researchers, clinicians, regulatory authorities, and the public of clinical efficacy (if the data indeed show clinical efficacy). This means, we should collect and analyze our data in the most rigorous and transparent way, utilize sample sizes that allow for proper statistical inferences, build upon theoretical frameworks or integrate results into those, and not oversell our results (be they clinical or preclinical). Furthermore, I do not think that just showing that a particular substance is improving psychiatric symptoms is going to be enough in the future. Psychiatric pharmacological research in the past has made the mistake of testing new compounds for efficacy but at the same time not making enough effort to find out how exactly they work. Considering the stagnation in development of new treatments in psychiatry and the often unsatisfying treatment results, we should learn from this, conduct clinical and mechanistic studies, and create a research and treatment program that is sustainable and enables future innovation regarding pharmacological treatments and their interplay with non-pharmacological approaches. Furthermore, we should educate clinicians and researchers outside the field. But we need to do this based on the results obtained and in a scientific manner. There is still a lot of misconception about the effects of psychedelics, for example regarding addictive potential. But I don't think that selling psychedelics as new miracle drugs will help, if we haven't shown this scientifically. Lastly, as I already mentioned before, beyond the administration of a psychedelic substance, there is still a lot of discussion about how psychedelic-assisted therapy is supposed to be conducted. Considering the effects of psychedelics, I predict that the " Katrin Preller - Psychedelics and Sociality 40 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin non-pharmacological part of the therapeutic process will be key for clinical efficacy. We should intensify our efforts into studying the interplay of non-pharmacological and pharmacological aspects of psychedelic-assisted therapy to increase the clinical potential of these compounds. " We should intensify our efforts into studying the interplay of non-pharmacological and pharmacological aspects of psychedelic- assisted therapy to increase the clinical potential of these compounds. Both social neuroscience and psychedelic research are facing methodological challenges, from data mining and quantified self to laboratory setting, how can we resolve the dialectic between generalization (sample size, ecological setting) and rigor (experimental control)? It will be critical to eventually combine controlled laboratory experiments with "real-life" data. Leveraging technological advancements such as the availability of smartphones or internet data-bases for example puts us in a great position to reach this goal. Both, lab experiments as well as more naturalistic data provide valuable insight34but each with their own strengths and limitations. Both are of course biased, but bringing them together may provide important synergies. Additionally, in particular social neuroscience can benefit a lot from investing more effort into the development of more ecologically valid, preferably two-person approaches. Making use of rather novel techniques and technologies like hyperscanning or VR may help to tackle some of the challenges of lab environments and increase relevance for real-world applications. Right now, it seems like some people as well as funding agencies think that because we are now conducting the first modern clinical trials, that basic science is not necessary anymore. Why is basic research valuable for the field? Psychedelics may indeed represent promising new treatments. However, we should not underestimate the knowledge that can be gained via basic science studies. Two areas are particularly important: First, manipulating emotional and cognitive processes is key for investigating them. Psychedelics are able to manipulate processes such as self-experience which are otherwise almost non-reachable for scientific investigation. Second, clinical trials with psychedelics so far only included a limited number of patients. To fully capture their clinical potential and therefore increase the chances that psychedelics will help more diverse patient groups in larger studies or, if registered as medication, in a non-research setting, I think it is necessary to " Katrin Preller - Psychedelics and Sociality 41 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin understand the biological and psychological mechanisms underlying their clinical efficacy. This will help to optimize therapy and move psychiatry away from the rather unsatisfying trial-and-error approach. There is a current debate between the teams of Vollenweider and Carhart-Harris regarding the hypo- or hyper-activation of anterior neural structures during psychedelic experience, and especially in how this discrepancy may be linked to different imaging modalities. Can you explain the situation? I would not necessarily call it a debate between two teams. We and other groups in Switzerland, the UK, Spain, the Czech Republic, and Brazil have recently published human neuroimaging data collected under the influence of psychedelics. And not all of these results overlap completely. But who would expect that putting a few people in the scanner and giving them a psychedelic will clarify all questions about how psychologically and physiologically complex substances like these work in the brain?! Like in any other scientific discipline, it's highly unlikely to establish a ground truth with just a few studies and therefore limited data points. In particular, since the results of these studies are dependent on the methods used and, most importantly, on the questions asked and hypotheses tested, it would be foolish to expect that when we are using different methods in different samples with different substances and additionally ask different questions, that we'll end up with exactly the same results. On a topic as complex as consciousness and psychedelics, we are all currently just adding puzzle pieces to the picture. This is not a matter of being right or wrong or believing in one theory or another, this a matter of collecting more data, objectively and unbiasedly testing more hypotheses, and integrating the results. That's what the scientific process is like34I don't think there are any shortcuts to this. I am sure that when we collect more samples, analyze them rigorously, communicate about and evolve our methodological approaches, we'll at one point be able to integrate the findings into a coherent, complementary picture. " On a topic as complex as consciousness and psychedelics, we are all currently just adding puzzle pieces to the picture. Which theoretical frameworks are you the most following on the topic of consciousness? The ones making testable empirical and therefore falsifiable predictions and that recognize the importance of mind-environment interaction. " Katrin Preller - Psychedelics and Sociality 42 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin This is a very reasonable and pragmatic perspective! You recently published a paper with Friston's team (Preller et al., 2019), but the collaboration was more at the methodological level (Dynamic Causal Modeling), can you describe how it connect to your previous work and if it has also theoretical insights? In this paper we test the predictions of a model proposed by Vollenweider \& Geyer (2001), which suggests that the altered state of consciousness induced by psychedelics results from thalamic gating deficits and alterations in information processing of internal and external stimuli within cortico-striato-thalamo-cortical (CSTC) feedback loops. This CSTC model is highlighting the thalamus as the structure controlling or gating information to the cortex and thereby being critically involved in the regulation of consciousness. Alterations of thalamic gating capacity are suggested to result in an information overload of the cortex, with excessive exteroceptive and interoceptive stimuli that may ultimately cause the sensory flooding, cognitive disruptions, and ego dissolution present in both naturally occurring psychoses and drug-induced altered states of consciousness. We now tested this model empirically by analyzing our resting-state data collected under the influence of LSD using the spectral Dynamic Causal Modeling approach developed at the The Wellcome Centre for Human Neuroimaging in London. This allowed us to investigate directed (effective) connectivity changes within key regions of the CSTC model, which is key for testing its predictions. We found that LSD does indeed alter connectivity between brain regions mostly in line with the CSTC model: We also found decreased connectivity form the ventral striatum to the thalamus and increased connectivity from the thalamus to the posterior cingulate cortex. However, connectivity to another cortical area, the temporal cortex, was reduced. We therefore conclude that while the thalamus indeed decreases information gating and increases "bottom-up" information flow to certain cortical areas, LSD does not cause an undifferentiated cortical inundation as first hypothesized in the model. This might explain the often reported paradoxical subjective effects in psychedelic-induced altered states of consciousness, e.g., impaired cognition but at the same time reported perceived mental clarity, and psychosis-like effects combined with blissful experiences (Carhart-Harris et al., 2016). What could be the most important challenges for future research? Convincing funding agencies that 1) research on psychedelics is offering important insights into the way our brains work, 2) we need to pursue clinical as well as basic science avenues to make progress, and 3) larger sample sizes are needed. Furthermore, as in every discipline, we need to train people who are entering the field as junior researchers to become good and responsible scientists and clinicians. Katrin Preller - Psychedelics and Sociality 43 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin " As in every discipline, we need to train people who are entering the field as junior researchers to become good and responsible scientists and clinicians. " Katrin Preller - Psychedelics and Sociality 44 ALIUS Bulletin n3 (2019) aliusresearch.org/bulletin References Carhart-Harris, R. L., Kaelen, M., Bolstridge, M., Williams, T. M., Williams, L. T., Underwood, R., ... Nutt, D. J. (2016). The paradoxical psychological effects of lysergic acid diethylamide (LSD). Psychological Medicine, 46(7), 1379-1390. https://doi.org/10.1017/S0033291715002901 Carhart-Harris, R. L., Kaelen, M., Whalley, M. G., Bolstridge, M., Feilding, A., \& Nutt, D. J. (2015). LSD enhances suggestibility in healthy volunteers. Psychopharmacology, 232(4), 785-794. https://doi.org/10.1007/s00213-014-3714-z Pokorny, T., Preller, K. H., Kometer, M., Dziobek, I., \& Vollenweider, F. X. (2017). Effect of Psilocybin on Empathy and Moral Decision-Making. The International Journal of Neuropsychopharmacology, 20(9), 747-757. https://doi.org/10.1093/ijnp/pyx047 Preller, K. H., Pokorny, T., Hock, A., Kraehenmann, R., Stampfli, P., Seifritz, E., ... Vollenweider, F. X. (2016). Effects of serotonin 2A/1A receptor stimulation on social exclusion processing. Proceedings of the National Academy of Sciences of the United States of America, 113(18), 5119-5124. https://doi.org/10.1073/pnas.1524187113 Preller, K. H., Razi, A., Zeidman, P., Stampfli, P., Friston, K. J., \& Vollenweider, F. X. (2019). Effective connectivity changes in LSD-induced altered states of consciousness in humans. Proceedings of the National Academy of Sciences, 201815129. https://doi.org/10.1073/pnas.1815129116 Preller, K. H., Schilbach, L., Pokorny, T., Flemming, J., Seifritz, E., \& Vollenweider, F. X. (2018). Role of the 5-HT2A Receptor in Self- and Other-Initiated Social Interaction in Lysergic Acid Diethylamide-Induced States: A Pharmacological fMRI Study. The Journal of Neuroscience: The Official Journal of the Society for Neuroscience, 38(14), 3603-3611. https://doi.org/10.1523/JNEUROSCI.1939-17.2018 Preller, K., Schilbach, L., Duerler, P., Pokorny, T., \& Vollenweider, F. (2018). LSD Increases Social Adaptation to Opinions Similar to One's Own. Biological Psychiatry, 83(9, Supplement), S198. https://doi.org/10.1016/j.biopsych.2018.02.518 Vollenweider, F. X., \& Geyer, M. A. (2001). A systems model of altered consciousness: integrating natural and drug-induced psychoses. Brain Research Bulletin, 56(5), 495-507.\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-777.566bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC1F8135] (385.521bp,-168.124bp) rectangle ++(66.472bp,-0.233bp);
+  \fill[ALIUSC1F8135] (385.521bp,-227.599bp) rectangle ++(72.536bp,-0.233bp);
+  \ALIUSPlacedTextContent{84.552}{81.134}{212.587}{ALIUSC000000}{\ALIUSFontLatoRegular}{18.426}{Psychedelics and Sociality}
+  \ALIUSPlacedTextContent{84.552}{103.280}{390.551}{ALIUSC000000}{\ALIUSFontLatoLight}{17.493}{Probing the diversity of cognition beyond individuals}
+  \ALIUSPlacedTextContent{385.521}{144.719}{71.589}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.662}{Katrin Preller}
+  \ALIUSPlacedTextContent{87.448}{144.771}{121.994}{ALIUSC000000}{\ALIUSFontLatoLight}{15.627}{An interview with}
+  \ALIUSPlacedTextContent{385.521}{158.677}{68.124}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.863}{preller@bli.uzh.ch}
+  \ALIUSPlacedTextContent{87.448}{163.466}{109.836}{ALIUSC000000}{\ALIUSFontLatoLight}{18.426}{Katrin Preller}
+  \ALIUSPlacedTextContent{385.521}{169.173}{126.856}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{University Hospital for Psychiatry}
+  \ALIUSPlacedTextContent{385.521}{179.668}{101.542}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Zurich, Zurich, Switzerland}
+  \ALIUSPlacedTextContent{87.448}{195.110}{113.200}{ALIUSC000000}{\ALIUSFontLatoLight}{12.595}{by Guillaume Dumas}
+  \ALIUSPlacedTextContent{385.521}{204.194}{92.394}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.662}{Guillaume Dumas}
+  \ALIUSPlacedTextContent{385.521}{218.152}{74.290}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.863}{gdumas@pasteur.fr}
+  \ALIUSPlacedTextContent{385.521}{228.647}{59.666}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Institut Pasteur}
+  \ALIUSPlacedTextContent{385.521}{239.143}{49.792}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Paris, France}
+  \ALIUSPlacedTextContent{87.448}{245.219}{290.412}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{Citation: Preller, K. \& Dumas, G. (2019). Psychedelics and sociality:}
+  \ALIUSPlacedTextContent{87.448}{256.881}{290.331}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{probing the diversity of cognition beyond individuals. An interview with}
+  \ALIUSPlacedTextContent{87.448}{268.543}{59.740}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{Katrin Preller.}
+  \ALIUSPlacedTextContent{147.179}{268.543}{55.904}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{203.042}{268.543}{149.154}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{, 3, 37-44. doi: 10.34700/88st-vc41}
+  \ALIUSPlacedTextContent{77.652}{330.428}{45.118}{ALIUSC000000}{\ALIUSFontLatoLight}{11.547}{Abstract}
+  \ALIUSPlacedTextContent{77.652}{350.199}{442.784}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{In this interview, we discuss how beyond the tremendous therapeutic opportunities}
+  \ALIUSPlacedTextContent{77.652}{364.193}{442.774}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{offered by psychedelics, they also provide a unique opportunity to investigate social}
+  \ALIUSPlacedTextContent{77.652}{378.187}{442.777}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{cognition in a causal way and thus increase our mechanistic understanding of it. We argue}
+  \ALIUSPlacedTextContent{77.652}{392.181}{442.777}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{this basic research is necessary to understand the underlying mechanisms and assure their}
+  \ALIUSPlacedTextContent{77.652}{406.175}{442.780}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{clinical efficacy. However, revealing this potential requires a great deal of education for}
+  \ALIUSPlacedTextContent{77.652}{420.169}{442.775}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{clinicians and researchers. This includes scientific rigor both in terms of how administration}
+  \ALIUSPlacedTextContent{77.652}{434.163}{442.775}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{of psychedelic substances is completed and how psychedelic-assisted therapy is}
+  \ALIUSPlacedTextContent{77.652}{448.157}{442.777}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{conducted. We also argue that important synergies of recent tools (VR, hyperscanning) in}
+  \ALIUSPlacedTextContent{77.652}{462.151}{440.527}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{lab experiments can bring more naturalistic settings and thus increase relevance for real-}
+  \ALIUSPlacedTextContent{77.652}{476.145}{442.777}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{world applications. We finally review recent results demonstrating how altered state of}
+  \ALIUSPlacedTextContent{77.652}{490.139}{442.776}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{consciousness induced by psychedelics can result from thalamic gating deficits and}
+  \ALIUSPlacedTextContent{77.652}{504.134}{440.527}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{alterations in information processing of internal and external stimuli within cortico-striato-}
+  \ALIUSPlacedTextContent{77.652}{518.128}{442.781}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{thalamo-cortical (CSTC) feedback loops. We finish the exchange on the most important}
+  \ALIUSPlacedTextContent{77.652}{532.122}{357.266}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{challenges for future research, including funding, sample size, and ethics.}
+  \ALIUSPlacedTextContent{119.909}{563.596}{333.997}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.729}{neuropharmacology, psychedelic-assisted therapy, psychiatry, social cognition.}
+  \ALIUSPlacedTextContent{77.652}{563.641}{42.252}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.623}{keywords:}
+  \ALIUSPlacedTextContent{77.652}{594.168}{423.341}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Can you introduce yourself and explain what brought you to psychedelic research?}
+  \ALIUSPlacedTextContent{77.652}{620.228}{443.848}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I am a neuropsychologist by training, and received my Msc at University of}
+  \ALIUSPlacedTextContent{77.652}{636.554}{443.778}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Konstanz in Germany. I had been fascinated by how neurochemistry shapes our}
+  \ALIUSPlacedTextContent{77.652}{653.114}{443.728}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{behavior and emotions, as well as by neuroimaging. This interest led me to complete}
+  \ALIUSPlacedTextContent{77.652}{669.673}{443.684}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{my PhD at University of Zurich in addiction research investigating the long-term}
+  \ALIUSPlacedTextContent{77.652}{686.000}{443.676}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{neurobiological consequences of substance use. While I consider this research field}
+  \ALIUSPlacedTextContent{77.652}{702.559}{443.701}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to be fundamental for improving the treatment and prevention of addiction}
+  \ALIUSPlacedTextContent{77.652}{719.119}{443.708}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{disorders, I also strived to perform causal inference on the underlying}
+  \ALIUSPlacedTextContent{77.652}{735.445}{443.684}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{neuropharmacological processes. Conducting pharmacological challenge studies}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{188.385}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Katrin Preller - Psychedelics and Sociality}
+  \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{38}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.666}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{with psychedelics offers a way to investigate a range of phenomena critical for}
+  \ALIUSPlacedTextContent{77.652}{97.550}{443.701}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{human every-day lives as well as for psychiatric patients. For me, working with}
+  \ALIUSPlacedTextContent{77.652}{114.109}{443.604}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{psychedelics really opened the doors to create insight into human}
+  \ALIUSPlacedTextContent{77.652}{130.669}{443.656}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{neuropharmacology and therefore to understanding our brains, their potential, as}
+  \ALIUSPlacedTextContent{77.652}{147.229}{144.713}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{well as their shortcomings.}
+  \ALIUSPlacedTextContent{77.652}{175.279}{442.853}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{What can psychedelic research bring to our understanding of the basic mechanisms}
+  \ALIUSPlacedTextContent{77.652}{189.973}{144.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{underlying human sociality?}
+  \ALIUSPlacedTextContent{77.652}{216.033}{443.659}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Subjectively, I am sure that a lot of people have experienced that psychedelics}
+  \ALIUSPlacedTextContent{77.652}{232.592}{443.683}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{acutely (and maybe long-lastingly) change their perception of connection with the}
+  \ALIUSPlacedTextContent{77.652}{248.919}{443.615}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{environment as well as with other human beings after a psychedelic experience. We}
+  \ALIUSPlacedTextContent{77.652}{265.478}{443.706}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{have now shown that also in a controlled lab-environment, psychedelics belong to}
+  \ALIUSPlacedTextContent{77.652}{282.038}{443.923}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the very small group of pharmacological agents that are able to modulate social}
+  \ALIUSPlacedTextContent{77.652}{298.364}{443.688}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{perception, interaction, and behavior (Pokorny, Preller, Kometer, Dziobek, \&}
+  \ALIUSPlacedTextContent{77.652}{314.924}{443.470}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Vollenweider, 2017; Preller et al., 2016, 2018). For everyone who works in the field of}
+  \ALIUSPlacedTextContent{77.652}{331.484}{443.633}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{social neuroscience, this has to be exciting! First, we found a compound that}
+  \ALIUSPlacedTextContent{132.229}{347.881}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{281.732}{347.881}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{348.976}{54.627}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{modulates}
+  \ALIUSPlacedTextContent{145.936}{348.976}{135.714}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{at least certain aspects of}
+  \ALIUSPlacedTextContent{295.307}{348.976}{226.033}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{social cognition, second it is a compound}
+  \ALIUSPlacedTextContent{77.652}{365.536}{443.722}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{which has a rather well-known and circumscribed receptor pharmacology, and}
+  \ALIUSPlacedTextContent{77.652}{381.862}{443.727}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{third, it can be administered safely. By (temporarily) altering certain social}
+  \ALIUSPlacedTextContent{77.652}{398.422}{443.627}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{processes, psychedelics render them accessible for investigation. Psychedelics}
+  \ALIUSPlacedTextContent{77.652}{414.982}{443.786}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{therefore offer the opportunity to investigate social cognition in a causal way and}
+  \ALIUSPlacedTextContent{77.652}{431.308}{443.688}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{thus increase our mechanistic understanding of social cognition. On the one hand,}
+  \ALIUSPlacedTextContent{77.652}{447.868}{443.841}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{this information is critical for the rational development of novel therapeutics}
+  \ALIUSPlacedTextContent{77.652}{464.194}{443.676}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{targeting trans-diagnostic impairments in social cognition in psychiatric and}
+  \ALIUSPlacedTextContent{77.652}{480.754}{443.728}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{neurological illnesses. On the other hand, these studies are important to fully}
+  \ALIUSPlacedTextContent{77.652}{497.313}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{capture the clinical potential of psychedelics considering that the therapeutic}
+  \ALIUSPlacedTextContent{77.652}{513.873}{179.147}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{process is in general a social one.}
+  \ALIUSPlacedTextContent{77.652}{541.861}{443.654}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{My impression is, that we are currently still in the process of discussing the right}
+  \ALIUSPlacedTextContent{77.652}{558.421}{443.671}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{treatment approach for psychedelic-assisted therapy. To my knowledge, there are}
+  \ALIUSPlacedTextContent{77.652}{574.747}{443.732}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{no studies currently going on that scientifically investigate the most effective way}
+  \ALIUSPlacedTextContent{77.652}{591.307}{443.807}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to treat people before, during, and after the psychedelic session. The results we}
+  \ALIUSPlacedTextContent{77.652}{607.866}{443.572}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{obtained so far might be adding a puzzle piece to this discussion: We showed that}
+  \ALIUSPlacedTextContent{77.652}{624.193}{443.608}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{psilocybin increases empathy and decreases the feeling of social rejection and the}
+  \ALIUSPlacedTextContent{77.652}{640.752}{443.682}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{processing of negative stimuli in general (Pokorny et al., 2017). It might be}
+  \ALIUSPlacedTextContent{77.652}{657.312}{440.496}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{particularly important to leverage this effect of psilocybin to benefit the patient-}
+  \ALIUSPlacedTextContent{77.652}{673.638}{443.663}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{therapist relationship. On the other hand, we and others have also shown that LSD}
+  \ALIUSPlacedTextContent{77.652}{690.198}{443.680}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{also increases suggestibility (at least to opinions which are not too different from}
+  \ALIUSPlacedTextContent{77.652}{706.524}{443.708}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the participants' own; Carhart-Harris et al., 2015; Preller, Schilbach, Duerler,}
+  \ALIUSPlacedTextContent{77.652}{723.084}{443.629}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Pokorny, \& Vollenweider, 2018). This is something psychedelic therapists and sitters}
+  \ALIUSPlacedTextContent{77.652}{739.644}{443.714}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{should be aware of. However, there is still a lot that we do not know yet. For}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{188.385}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Katrin Preller - Psychedelics and Sociality}
+  \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{39}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.719}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{example, long-term effects on social perception and, importantly, behavior have not}
+  \ALIUSPlacedTextContent{77.652}{97.783}{120.659}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{been investigated yet.}
+  \ALIUSPlacedTextContent{134.561}{125.723}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{158.817}{143.126}{254.133}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{To my knowledge, there are no studies}
+  \ALIUSPlacedTextContent{158.817}{160.619}{253.985}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{currently going on that scientifically}
+  \ALIUSPlacedTextContent{158.817}{178.111}{254.027}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{investigate the most effective way to}
+  \ALIUSPlacedTextContent{158.817}{195.604}{254.076}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{treat people before, during, and after the}
+  \ALIUSPlacedTextContent{291.994}{211.786}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{158.817}{213.097}{126.113}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{psychedelic session.}
+  \ALIUSPlacedTextContent{77.652}{257.144}{350.248}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{How can we better operationalize translational efforts in psychiatry?}
+  \ALIUSPlacedTextContent{77.652}{283.204}{443.597}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{The challenges for psychedelic science are mostly similar to other basic science}
+  \ALIUSPlacedTextContent{77.652}{299.764}{443.684}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{programs. However, psychedelic science additionally struggles because of the}
+  \ALIUSPlacedTextContent{77.652}{316.090}{443.712}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{cultural baggage from the 1960's, the resulting taboo surrounding these substances,}
+  \ALIUSPlacedTextContent{77.652}{332.650}{443.588}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and the classification as Schedule I drugs. We therefore need to be extra rigorous in}
+  \ALIUSPlacedTextContent{77.652}{349.210}{443.672}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{our research to be able to produce data that will convince other researchers,}
+  \ALIUSPlacedTextContent{77.652}{365.536}{443.687}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{clinicians, regulatory authorities, and the public of clinical efficacy (if the data}
+  \ALIUSPlacedTextContent{77.652}{382.096}{443.765}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{indeed show clinical efficacy). This means, we should collect and analyze our data}
+  \ALIUSPlacedTextContent{77.652}{398.655}{443.685}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{in the most rigorous and transparent way, utilize sample sizes that allow for proper}
+  \ALIUSPlacedTextContent{77.652}{414.982}{443.644}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{statistical inferences, build upon theoretical frameworks or integrate results into}
+  \ALIUSPlacedTextContent{77.652}{431.541}{443.652}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{those, and not oversell our results (be they clinical or preclinical). Furthermore, I do}
+  \ALIUSPlacedTextContent{77.652}{448.101}{443.691}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{not think that just showing that a particular substance is improving psychiatric}
+  \ALIUSPlacedTextContent{77.652}{464.427}{443.706}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{symptoms is going to be enough in the future. Psychiatric pharmacological research}
+  \ALIUSPlacedTextContent{77.652}{480.987}{443.727}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{in the past has made the mistake of testing new compounds for efficacy but at the}
+  \ALIUSPlacedTextContent{77.652}{497.313}{443.677}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{same time not making enough effort to find out how exactly they work. Considering}
+  \ALIUSPlacedTextContent{77.652}{513.873}{443.725}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the stagnation in development of new treatments in psychiatry and the often}
+  \ALIUSPlacedTextContent{77.652}{530.432}{443.725}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{unsatisfying treatment results, we should learn from this, conduct clinical and}
+  \ALIUSPlacedTextContent{77.652}{546.759}{443.605}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{mechanistic studies, and create a research and treatment program that is sustainable}
+  \ALIUSPlacedTextContent{77.652}{563.319}{443.737}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and enables future innovation regarding pharmacological treatments and their}
+  \ALIUSPlacedTextContent{77.652}{579.878}{262.846}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{interplay with non-pharmacological approaches.}
+  \ALIUSPlacedTextContent{77.652}{607.866}{443.844}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Furthermore, we should educate clinicians and researchers outside the field. But we}
+  \ALIUSPlacedTextContent{77.652}{624.426}{443.664}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{need to do this based on the results obtained and in a scientific manner. There is}
+  \ALIUSPlacedTextContent{77.652}{640.986}{443.695}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{still a lot of misconception about the effects of psychedelics, for example regarding}
+  \ALIUSPlacedTextContent{77.652}{657.312}{443.850}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{addictive potential. But I don't think that selling psychedelics as new miracle drugs}
+  \ALIUSPlacedTextContent{77.652}{673.872}{255.131}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{will help, if we haven't shown this scientifically.}
+  \ALIUSPlacedTextContent{77.652}{702.093}{443.625}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Lastly, as I already mentioned before, beyond the administration of a psychedelic}
+  \ALIUSPlacedTextContent{77.652}{718.419}{443.665}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{substance, there is still a lot of discussion about how psychedelic-assisted therapy is}
+  \ALIUSPlacedTextContent{77.652}{734.979}{443.739}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{supposed to be conducted. Considering the effects of psychedelics, I predict that the}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{188.385}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Katrin Preller - Psychedelics and Sociality}
+  \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{40}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.588}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{non-pharmacological part of the therapeutic process will be key for clinical efficacy.}
+  \ALIUSPlacedTextContent{77.652}{97.550}{443.682}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{We should intensify our efforts into studying the interplay of non-pharmacological}
+  \ALIUSPlacedTextContent{77.652}{114.109}{443.649}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and pharmacological aspects of psychedelic-assisted therapy to increase the clinical}
+  \ALIUSPlacedTextContent{77.652}{130.669}{166.127}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{potential of these compounds.}
+  \ALIUSPlacedTextContent{134.561}{158.842}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{158.817}{176.245}{274.802}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{We should intensify our efforts into studying}
+  \ALIUSPlacedTextContent{158.817}{193.738}{274.710}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{the interplay of non-pharmacological and}
+  \ALIUSPlacedTextContent{158.817}{211.231}{271.910}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{pharmacological aspects of psychedelic-}
+  \ALIUSPlacedTextContent{158.817}{228.723}{274.694}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{assisted therapy to increase the clinical}
+  \ALIUSPlacedTextContent{353.568}{245.838}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{158.817}{246.216}{188.211}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{potential of these compounds.}
+  \ALIUSPlacedTextContent{77.652}{290.030}{442.982}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Both social neuroscience and psychedelic research are facing methodological}
+  \ALIUSPlacedTextContent{77.652}{304.491}{442.841}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{challenges, from data mining and quantified self to laboratory setting, how can we}
+  \ALIUSPlacedTextContent{77.652}{319.185}{442.786}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{resolve the dialectic between generalization (sample size, ecological setting) and rigor}
+  \ALIUSPlacedTextContent{77.652}{333.879}{121.538}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{(experimental control)?}
+  \ALIUSPlacedTextContent{77.652}{359.938}{443.826}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{It will be critical to eventually combine controlled laboratory experiments with}
+  \ALIUSPlacedTextContent{77.652}{376.498}{443.627}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{"real-life" data. Leveraging technological advancements such as the availability of}
+  \ALIUSPlacedTextContent{77.652}{392.824}{443.697}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{smartphones or internet data-bases for example puts us in a great position to reach}
+  \ALIUSPlacedTextContent{77.652}{409.384}{443.823}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{this goal. Both, lab experiments as well as more naturalistic data provide valuable}
+  \ALIUSPlacedTextContent{114.270}{425.781}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{426.877}{36.465}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{insight}
+  \ALIUSPlacedTextContent{127.760}{426.877}{393.726}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{but each with their own strengths and limitations. Both are of course}
+  \ALIUSPlacedTextContent{77.652}{443.436}{443.650}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{biased, but bringing them together may provide important synergies. Additionally,}
+  \ALIUSPlacedTextContent{77.652}{459.996}{443.689}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{in particular social neuroscience can benefit a lot from investing more effort into}
+  \ALIUSPlacedTextContent{77.652}{476.322}{443.645}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the development of more ecologically valid, preferably two-person approaches.}
+  \ALIUSPlacedTextContent{77.652}{492.882}{443.613}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Making use of rather novel techniques and technologies like hyperscanning or VR}
+  \ALIUSPlacedTextContent{77.652}{509.208}{443.632}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{may help to tackle some of the challenges of lab environments and increase relevance}
+  \ALIUSPlacedTextContent{77.652}{525.768}{151.175}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{for real-world applications.}
+  \ALIUSPlacedTextContent{77.652}{554.052}{442.875}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Right now, it seems like some people as well as funding agencies think that because we}
+  \ALIUSPlacedTextContent{77.652}{568.512}{442.910}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{are now conducting the first modern clinical trials, that basic science is not necessary}
+  \ALIUSPlacedTextContent{77.652}{583.206}{275.567}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{anymore. Why is basic research valuable for the field?}
+  \ALIUSPlacedTextContent{77.652}{609.266}{443.646}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Psychedelics may indeed represent promising new treatments. However, we should}
+  \ALIUSPlacedTextContent{77.652}{625.825}{443.678}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{not underestimate the knowledge that can be gained via basic science studies. Two}
+  \ALIUSPlacedTextContent{77.652}{642.385}{443.702}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{areas are particularly important: First, manipulating emotional and cognitive}
+  \ALIUSPlacedTextContent{77.652}{658.711}{443.717}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{processes is key for investigating them. Psychedelics are able to manipulate processes}
+  \ALIUSPlacedTextContent{77.652}{675.271}{443.670}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{such as self-experience which are otherwise almost non-reachable for scientific}
+  \ALIUSPlacedTextContent{77.652}{691.597}{443.708}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{investigation. Second, clinical trials with psychedelics so far only included a limited}
+  \ALIUSPlacedTextContent{77.652}{708.157}{443.691}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{number of patients. To fully capture their clinical potential and therefore increase}
+  \ALIUSPlacedTextContent{77.652}{724.717}{443.685}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the chances that psychedelics will help more diverse patient groups in larger studies}
+  \ALIUSPlacedTextContent{77.652}{741.043}{443.656}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{or, if registered as medication, in a non-research setting, I think it is necessary to}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{188.385}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Katrin Preller - Psychedelics and Sociality}
+  \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{41}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.698}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{understand the biological and psychological mechanisms underlying their clinical}
+  \ALIUSPlacedTextContent{77.652}{97.550}{443.805}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{efficacy. This will help to optimize therapy and move psychiatry away from the}
+  \ALIUSPlacedTextContent{77.652}{114.109}{242.575}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{rather unsatisfying trial-and-error approach.}
+  \ALIUSPlacedTextContent{77.652}{142.393}{442.849}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{There is a current debate between the teams of Vollenweider and Carhart-Harris}
+  \ALIUSPlacedTextContent{77.652}{156.854}{442.842}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{regarding the hypo- or hyper-activation of anterior neural structures during}
+  \ALIUSPlacedTextContent{77.652}{171.547}{442.874}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{psychedelic experience, and especially in how this discrepancy may be linked to}
+  \ALIUSPlacedTextContent{77.652}{186.241}{303.524}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{different imaging modalities. Can you explain the situation?}
+  \ALIUSPlacedTextContent{77.652}{212.301}{443.688}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I would not necessarily call it a debate between two teams. We and other groups in}
+  \ALIUSPlacedTextContent{77.652}{228.627}{443.591}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Switzerland, the UK, Spain, the Czech Republic, and Brazil have recently published}
+  \ALIUSPlacedTextContent{77.652}{245.187}{443.667}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{human neuroimaging data collected under the influence of psychedelics. And not}
+  \ALIUSPlacedTextContent{77.652}{261.747}{443.691}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{all of these results overlap completely. But who would expect that putting a few}
+  \ALIUSPlacedTextContent{77.652}{278.073}{443.592}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{people in the scanner and giving them a psychedelic will clarify all questions about}
+  \ALIUSPlacedTextContent{77.652}{294.633}{443.758}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{how psychologically and physiologically complex substances like these work in the}
+  \ALIUSPlacedTextContent{77.652}{311.192}{443.687}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{brain?! Like in any other scientific discipline, it's highly unlikely to establish a}
+  \ALIUSPlacedTextContent{77.652}{327.519}{443.564}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{ground truth with just a few studies and therefore limited data points. In particular,}
+  \ALIUSPlacedTextContent{77.652}{344.078}{443.694}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{since the results of these studies are dependent on the methods used and, most}
+  \ALIUSPlacedTextContent{77.652}{360.638}{443.659}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{importantly, on the questions asked and hypotheses tested, it would be foolish to}
+  \ALIUSPlacedTextContent{77.652}{376.964}{443.674}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{expect that when we are using different methods in different samples with different}
+  \ALIUSPlacedTextContent{77.652}{393.524}{443.714}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{substances and additionally ask different questions, that we'll end up with exactly}
+  \ALIUSPlacedTextContent{77.652}{409.850}{443.847}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the same results. On a topic as complex as consciousness and psychedelics, we are all}
+  \ALIUSPlacedTextContent{77.652}{426.410}{443.674}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{currently just adding puzzle pieces to the picture. This is not a matter of being right}
+  \ALIUSPlacedTextContent{77.652}{442.970}{443.716}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{or wrong or believing in one theory or another, this a matter of collecting more data,}
+  \ALIUSPlacedTextContent{77.652}{459.296}{443.691}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{objectively and unbiasedly testing more hypotheses, and integrating the results.}
+  \ALIUSPlacedTextContent{292.694}{475.693}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{77.652}{476.789}{215.020}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{That's what the scientific process is like}
+  \ALIUSPlacedTextContent{306.307}{476.789}{215.062}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I don't think there are any shortcuts to}
+  \ALIUSPlacedTextContent{77.652}{493.348}{443.671}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{this. I am sure that when we collect more samples, analyze them rigorously,}
+  \ALIUSPlacedTextContent{77.652}{509.908}{443.708}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{communicate about and evolve our methodological approaches, we'll at one point}
+  \ALIUSPlacedTextContent{77.652}{526.468}{392.828}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{be able to integrate the findings into a coherent, complementary picture.}
+  \ALIUSPlacedTextContent{134.561}{554.640}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{158.817}{572.044}{281.597}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{On a topic as complex as consciousness and}
+  \ALIUSPlacedTextContent{158.817}{589.537}{281.623}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{psychedelics, we are all currently just adding}
+  \ALIUSPlacedTextContent{338.641}{606.185}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{158.817}{607.029}{173.626}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{puzzle pieces to the picture.}
+  \ALIUSPlacedTextContent{77.652}{650.844}{442.759}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Which theoretical frameworks are you the most following on the topic of}
+  \ALIUSPlacedTextContent{77.652}{665.538}{80.741}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness?}
+  \ALIUSPlacedTextContent{77.652}{691.597}{440.391}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{The ones making testable empirical and therefore falsifiable predictions and that}
+  \ALIUSPlacedTextContent{77.652}{708.157}{321.348}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{recognize the importance of mind-environment interaction.}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{188.385}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Katrin Preller - Psychedelics and Sociality}
+  \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{42}
+  \ALIUSPlacedTextContent{77.652}{81.286}{442.878}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{This is a very reasonable and pragmatic perspective! You recently published a paper}
+  \ALIUSPlacedTextContent{77.652}{95.746}{442.906}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{with Friston's team (Preller et al., 2019), but the collaboration was more at the}
+  \ALIUSPlacedTextContent{77.652}{110.440}{442.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{methodological level (Dynamic Causal Modeling), can you describe how it connect to}
+  \ALIUSPlacedTextContent{77.652}{125.134}{290.332}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{your previous work and if it has also theoretical insights?}
+  \ALIUSPlacedTextContent{77.652}{151.194}{443.609}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{In this paper we test the predictions of a model proposed by Vollenweider \& Geyer}
+  \ALIUSPlacedTextContent{77.652}{167.520}{443.629}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{(2001), which suggests that the altered state of consciousness induced by}
+  \ALIUSPlacedTextContent{77.652}{184.080}{443.690}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{psychedelics results from thalamic gating deficits and alterations in information}
+  \ALIUSPlacedTextContent{77.652}{200.639}{443.676}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{processing of internal and external stimuli within cortico–striato–thalamo-cortical}
+  \ALIUSPlacedTextContent{77.652}{216.966}{443.680}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{(CSTC) feedback loops. This CSTC model is highlighting the thalamus as the}
+  \ALIUSPlacedTextContent{77.652}{233.525}{443.725}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{structure controlling or gating information to the cortex and thereby being}
+  \ALIUSPlacedTextContent{77.652}{250.085}{443.683}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{critically involved in the regulation of consciousness. Alterations of thalamic gating}
+  \ALIUSPlacedTextContent{77.652}{266.411}{443.551}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{capacity are suggested to result in an information overload of the cortex, with}
+  \ALIUSPlacedTextContent{77.652}{282.971}{443.728}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{excessive exteroceptive and interoceptive stimuli that may ultimately cause the}
+  \ALIUSPlacedTextContent{77.652}{299.531}{443.702}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{sensory flooding, cognitive disruptions, and ego dissolution present in both}
+  \ALIUSPlacedTextContent{77.652}{316.090}{426.448}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{naturally occurring psychoses and drug-induced altered states of consciousness.}
+  \ALIUSPlacedTextContent{77.652}{344.078}{443.703}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{We now tested this model empirically by analyzing our resting-state data collected}
+  \ALIUSPlacedTextContent{77.652}{360.638}{443.667}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{under the influence of LSD using the spectral Dynamic Causal Modeling approach}
+  \ALIUSPlacedTextContent{77.652}{376.964}{443.617}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{developed at the The Wellcome Centre for Human Neuroimaging in London. This}
+  \ALIUSPlacedTextContent{77.652}{393.524}{443.653}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{allowed us to investigate directed (effective) connectivity changes within key}
+  \ALIUSPlacedTextContent{77.652}{409.850}{443.687}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{regions of the CSTC model, which is key for testing its predictions. We found that}
+  \ALIUSPlacedTextContent{77.652}{426.410}{443.664}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{LSD does indeed alter connectivity between brain regions mostly in line with the}
+  \ALIUSPlacedTextContent{77.652}{442.970}{443.696}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{CSTC model: We also found decreased connectivity form the ventral striatum to}
+  \ALIUSPlacedTextContent{77.652}{459.296}{443.808}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the thalamus and increased connectivity from the thalamus to the posterior}
+  \ALIUSPlacedTextContent{77.652}{475.856}{443.579}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{cingulate cortex. However, connectivity to another cortical area, the temporal}
+  \ALIUSPlacedTextContent{77.652}{492.415}{443.681}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{cortex, was reduced. We therefore conclude that while the thalamus indeed}
+  \ALIUSPlacedTextContent{77.652}{508.742}{443.672}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{decreases information gating and increases "bottom-up" information flow to certain}
+  \ALIUSPlacedTextContent{77.652}{525.301}{443.778}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{cortical areas, LSD does not cause an undifferentiated cortical inundation as first}
+  \ALIUSPlacedTextContent{77.652}{541.861}{443.643}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{hypothesized in the model. This might explain the often reported paradoxical}
+  \ALIUSPlacedTextContent{77.652}{558.187}{443.639}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{subjective effects in psychedelic-induced altered states of consciousness, e.g.,}
+  \ALIUSPlacedTextContent{77.652}{574.747}{443.699}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{impaired cognition but at the same time reported perceived mental clarity, and}
+  \ALIUSPlacedTextContent{77.652}{591.307}{443.681}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{psychosis-like effects combined with blissful experiences (Carhart-Harris et al.,}
+  \ALIUSPlacedTextContent{77.652}{607.866}{32.879}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{2016).}
+  \ALIUSPlacedTextContent{77.652}{635.917}{339.383}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{What could be the most important challenges for future research?}
+  \ALIUSPlacedTextContent{77.652}{661.977}{443.705}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Convincing funding agencies that 1) research on psychedelics is offering important}
+  \ALIUSPlacedTextContent{77.652}{678.536}{443.705}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{insights into the way our brains work, 2) we need to pursue clinical as well as basic}
+  \ALIUSPlacedTextContent{77.652}{695.096}{443.716}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{science avenues to make progress, and 3) larger sample sizes are needed.}
+  \ALIUSPlacedTextContent{77.652}{711.422}{443.758}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Furthermore, as in every discipline, we need to train people who are entering the}
+  \ALIUSPlacedTextContent{77.652}{727.982}{446.174}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{field as junior researchers to become good and responsible scientists and clinicians.}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{188.385}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Katrin Preller - Psychedelics and Sociality}
+  \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{43}
+  \ALIUSPlacedTextContent{134.561}{81.175}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{158.817}{98.578}{329.651}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{As in every discipline, we need to train people who are}
+  \ALIUSPlacedTextContent{158.817}{116.071}{329.801}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{entering the field as junior researchers to become}
+  \ALIUSPlacedTextContent{448.495}{132.253}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{"}
+  \ALIUSPlacedTextContent{158.817}{133.564}{285.563}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{good and responsible scientists and clinicians.}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (76.253bp,-65.268bp) rectangle ++(443.378bp,-0.233bp);
+  \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
+  \ALIUSPlacedTextContent{77.652}{46.516}{188.385}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Katrin Preller - Psychedelics and Sociality}
+  \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{44}
+  \ALIUSPlacedTextContent{265.090}{81.376}{68.256}{ALIUSC000000}{\ALIUSFontLatoLight}{13.394}{References}
+  \ALIUSPlacedTextContent{77.652}{109.140}{443.538}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Carhart-Harris, R. L., Kaelen, M., Bolstridge, M., Williams, T. M., Williams, L. T.,}
+  \ALIUSPlacedTextContent{112.103}{124.301}{408.979}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Underwood, R., … Nutt, D. J. (2016). The paradoxical psychological effects of}
+  \ALIUSPlacedTextContent{112.103}{139.694}{409.021}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{lysergic acid diethylamide (LSD). Psychological Medicine, 46(7), 1379–1390.}
+  \ALIUSPlacedTextContent{112.103}{155.088}{207.088}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{https://doi.org/10.1017/S0033291715002901}
+  \ALIUSPlacedTextContent{77.652}{181.910}{443.413}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Carhart-Harris, R. L., Kaelen, M., Whalley, M. G., Bolstridge, M., Feilding, A., \& Nutt, D.}
+  \ALIUSPlacedTextContent{112.103}{197.303}{409.018}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{J. (2015). LSD enhances suggestibility in healthy volunteers. Psychopharmacology,}
+  \ALIUSPlacedTextContent{112.103}{212.697}{281.776}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{232(4), 785–794. https://doi.org/10.1007/s00213-014-3714-z}
+  \ALIUSPlacedTextContent{77.652}{239.518}{443.479}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Pokorny, T., Preller, K. H., Kometer, M., Dziobek, I., \& Vollenweider, F. X. (2017). Effect}
+  \ALIUSPlacedTextContent{112.103}{254.912}{412.972}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{of Psilocybin on Empathy and Moral Decision-Making. The International Journal}
+  \ALIUSPlacedTextContent{110.874}{270.305}{405.207}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{of Neuropsychopharmacology, 20(9), 747–757. https://doi.org/10.1093/ijnp/pyx047}
+  \ALIUSPlacedTextContent{77.652}{297.127}{443.541}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Preller, K. H., Pokorny, T., Hock, A., Kraehenmann, R., Stämpfli, P., Seifritz, E., …}
+  \ALIUSPlacedTextContent{112.103}{312.288}{409.012}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Vollenweider, F. X. (2016). Effects of serotonin 2A/1A receptor stimulation on social}
+  \ALIUSPlacedTextContent{112.103}{327.681}{413.070}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{exclusion processing. Proceedings of the National Academy of Sciences of the}
+  \ALIUSPlacedTextContent{110.874}{343.074}{410.246}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{United States of America, 113(18), 5119–5124. https://doi.org/10.1073/pnas.1524187113}
+  \ALIUSPlacedTextContent{77.652}{369.896}{443.546}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Preller, K. H., Razi, A., Zeidman, P., Stämpfli, P., Friston, K. J., \& Vollenweider, F. X.}
+  \ALIUSPlacedTextContent{112.103}{385.290}{409.067}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{(2019). Effective connectivity changes in LSD-induced altered states of}
+  \ALIUSPlacedTextContent{112.103}{400.450}{409.018}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{consciousness in humans. Proceedings of the National Academy of Sciences,}
+  \ALIUSPlacedTextContent{112.103}{415.844}{242.209}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{201815129. https://doi.org/10.1073/pnas.1815129116}
+  \ALIUSPlacedTextContent{77.652}{442.899}{443.451}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Preller, K. H., Schilbach, L., Pokorny, T., Flemming, J., Seifritz, E., \& Vollenweider, F. X.}
+  \ALIUSPlacedTextContent{112.103}{458.059}{409.044}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{(2018). Role of the 5-HT2A Receptor in Self- and Other-Initiated Social Interaction}
+  \ALIUSPlacedTextContent{112.103}{473.452}{409.086}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{in Lysergic Acid Diethylamide-Induced States: A Pharmacological fMRI Study.}
+  \ALIUSPlacedTextContent{110.874}{488.613}{410.247}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{The Journal of Neuroscience: The Official Journal of the Society for Neuroscience,}
+  \ALIUSPlacedTextContent{112.103}{504.006}{330.199}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{38(14), 3603–3611. https://doi.org/10.1523/JNEUROSCI.1939-17.2018}
+  \ALIUSPlacedTextContent{77.652}{531.061}{443.531}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Preller, K., Schilbach, L., Duerler, P., Pokorny, T., \& Vollenweider, F. (2018). LSD Increases}
+  \ALIUSPlacedTextContent{112.103}{546.222}{409.033}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Social Adaptation to Opinions Similar to One's Own. Biological Psychiatry, 83(9,}
+  \ALIUSPlacedTextContent{112.103}{561.615}{318.538}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Supplement), S198. https://doi.org/10.1016/j.biopsych.2018.02.518}
+  \ALIUSPlacedTextContent{77.652}{588.437}{443.471}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Vollenweider, F. X., \& Geyer, M. A. (2001). A systems model of altered consciousness:}
+  \ALIUSPlacedTextContent{112.103}{603.830}{409.027}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{integrating natural and drug-induced psychoses. Brain Research Bulletin, 56(5),}
+  \ALIUSPlacedTextContent{112.103}{619.224}{52.103}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{495–507. □}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

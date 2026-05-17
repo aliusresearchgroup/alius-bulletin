@@ -1,38 +1,950 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.2756bp,paperheight=841.8898bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{The use of psychedelics in the treatment of disorders of consciousness}
-\author{Olivia Gosseries Interviewed by Charlotte Martial}
-\date{ALIUS Bulletin 4}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC0000FF}{HTML}{0000FF}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/gv0w-y052\par
-\textbf{Keywords:} psychedelic, disorder of consciousness, treatment, psilocybin, patient\par
-\section*{Abstract}
-In this interview, we discuss the use of psychedelic drugs as a promising treatment in disorders of consciousness. Psilocybin, a classic psychedelic, is currently undergoing substantial clinical investigations in healthy volunteers, but also in clinical populations. Recently, experts in the field of psychedelics have addressed the attractive possibility to use such psychedelics on patients suffering from disorders of consciousness. Building on her empirical and theoretical research on disorders of consciousness, Olivia Gosseries gives us her opinion. Implementing rigorous clinical trials with psychedelics on patients with disorders of consciousness will allow their clinical efficacy to be tested. We finish the interview by briefly addressing the ethical and legal challenges and discussing other related non-pathological modified states of consciousness.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin The Use of Psychedelics in the Treatment of Disorders of Consciousness An interview with Olivia Gosseries by Charlotte Martial Olivia Gosseries ogosseries@uliege.be Coma Science Group, GIGA Consciousness, University of Liege, Belgium Charlotte Martial cmartial@uliege.be Coma Science Group, GIGA Consciousness, University of Liege, Belgium Cite as: Gosseries, O. \& Martial, C. (2020). The use of psychedelics in the treatment of disorders of consciousness. An interview of Olivia Gosseries by Charlotte Martial. ALIUS Bulletin, 4, 50-66, https://doi.org/10.34700/gv0w-y052 Abstract In this interview, we discuss the use of psychedelic drugs as a promising treatment in disorders of consciousness. Psilocybin, a classic psychedelic, is currently undergoing substantial clinical investigations in healthy volunteers, but also in clinical populations. Recently, experts in the field of psychedelics have addressed the attractive possibility to use such psychedelics on patients suffering from disorders of consciousness. Building on her empirical and theoretical research on disorders of consciousness, Olivia Gosseries gives us her opinion. Implementing rigorous clinical trials with psychedelics on patients with disorders of consciousness will allow their clinical efficacy to be tested. We finish the interview by briefly addressing the ethical and legal challenges and discussing other related non-pathological modified states of consciousness. keywords: psychedelic, disorder of consciousness, treatment, psilocybin, patient You are well known for your impressive work on disorders of consciousness (DOC) and you have recently become the co-director of the Coma Science Group (with Dr. Aurore Thibaut), succeeding Prof. Steven Laureys who founded the Coma Science Group. Can you please introduce yourself and explain what brought you to work with patients with DOC? Yes of course. I am a neuropsychologist who pursued a PhD in biomedical and pharmaceutical sciences. Currently I am studying altered states of consciousness, with a focus on diagnosis, prognosis and treatments of brain- injured patients with DOC. Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 51 In 2005, I spent 6 months at the University of Quebec in Montreal as part of the Socrates II program (Erasmus). During this time, I participated in a neuropsychology workshop for which I went to a rehabilitation institute every Wednesday. The aim was to interact with patients and provide a diagnosis, without having access to their medical files. My first patient did not talk and did not respond to me. I was very confused. How can I give a diagnosis in such a situation? The diagnosis of this patient was mixed aphasia: he did not understand me (sensory aphasia) and he was not able to speak (motor aphasia). Meeting with many patients over the weeks, I noticed that they all had previously fallen into a coma. Some patients had vague memories of the coma, some reported dream-like experiences and some had no recollection. I was very intrigued by this peculiar state: what is it like to be in a coma? Where is the mind in such a state? Why do some patients recover while some don't? When I came back to Belgium, I wanted to do my internship and master's thesis on this topic. I contacted Dr. Steven Laureys who openly welcomed me and I started working as an undergrad at the Coma Science Group in 2006. Seeing patients in a coma in the intensive care units was a unique and shattering experience. I was really compelled to find a cure for coma. After completing my master's, I spent 4 months at the Moss Rehabilitation Institute in Philadelphia with Dr. John Whyte to get more familiar with the daily recovery of patients with DOC. I learned that most of these patients (if not all) do not remember their time in rehabilitation, and that a good proportion of them do not recover well. Time post-injury, etiology and the patients' clinical status upon admission were however predictors of early recovery (Whyte et al., 2009). After this enriched experience, I was ready to pursue a PhD with comatose patients. Following the PhD and several postdoctoral positions, I recently became a research associate at F.R.S-FNRS and co-director of the Coma Science Group. After 14 years working in the field, there is still no cure for coma. My aim is to find one (wishful thinking) and to continue improving the care of patients with DOC. I also want to contribute to the understanding of human consciousness and promote public awareness of this fascinating topic. For a review on how to measure consciousness in DOC, see Gosseries et al. (2014a), Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 52 and our video Dance my PhD 2018 - the (un)conscious brain (https://www.youtube.com/watch?v=eYMmVNei2Hc\&t). Recently, you published a review in 'The Lancet Neurology' (Thibaut et al., 2019) highlighting the rarity of effective treatment options for patients with DOC. What are the main reasons that efficient treatments are rare in these situations? In addition, have we observed an increase of interests in the search for treatments over the past few years? Yes indeed, we crucially lack effective therapeutic options for patients with DOC. I think there are four main reasons at play: 1) DOC is considered a rather new and rare disease, 2) it is a challenging patient population, 3) previous work mostly focused on diagnosis and prognosis rather than treatment specifically, and 4) we need to understand the mechanisms of consciousness recovery before developing targeted treatments. Before the 1950's, patients with severe brain injuries would die. With the advent of the ventilators, such patients can now live, and the definition of death changed from cardiac death (now called "clinical death") to brain death (official definition of death). Unfortunately, a proportion of these patients may remain alive but without recovering. DOC is an umbrella term that includes coma (no arousal, no awareness), unresponsive wakefulness syndrome (previously known as vegetative state; wakefulness but reflexive behaviors only), and minimally conscious state (wakefulness and behavioral signs of consciousness without functional communication) (Bodart et al., 2013). Coma is an acute state in which patients will never open their eyes and it lasts more than one hour, up to a few weeks. In contrast, patients with an unresponsive wakefulness syndrome or in a minimally conscious state have their eyes open, and these states can be acute, prolonged (more than a month), or chronic (more than several months, sometimes decades). Chronic DOC is considered a rare disease because it affects between 0.2 and 17 individuals out of 100 000 in Europe and the United-States. DOC are not classified as complications of common diseases but as pathologies per se, because they have specific International Classification of Diseases (ICD) codes. Patients with DOC are sadly often neglected by healthcare systems and private companies have little financial incentive to develop new Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 53 treatments for such rare patients. We consequently have an urgent need to investigate therapies with the support of universities and other organizations. The second reason for the scarcity of treatment options is that management of patients with DOC is very challenging because they cannot communicate, have severe motor disability and are dependent on others for all care. Most current rehabilitation therapies need active participation of the patients, which is not possible with these patients. The third reason is that previous work has mainly investigated diagnostic and prognostic indicators of consciousness. In medicine, before prescribing a treatment, we need to know what the diagnosis is, and in our case an accurate diagnosis of the level of consciousness ("is the person conscious?"). This can be a hard task because we primarily use behavior to infer consciousness, but responsiveness does not always equate consciousness. This may lead to a high rate of misdiagnosis (Stender et al., 2014), which can in turn lead to inadequate medical decisions, such as withdrawal of life-sustaining care. The second difficulty that arises after the diagnosis is the prognosis ("is the patient going to recover?"). With time, the patient may recover spontaneously, however we only think of treatments when patients do not recover. After more than three decades of research, we are slowly moving towards treatments. The last and probably most important reason why we have not yet found a cure is that to treat a condition, we need to understand it. Only when we will comprehend the mechanisms of consciousness recovery, will we be able to develop effective and specific therapies. So far all the tested treatments are repurposed, meaning that they are available on the market for other pathologies and we try them with our patients. Here is an illustration based on our recent review (Thibaut et al., 2019) to show you what has been tested so far with pharmacological and brain stimulation treatments, We consequently have an urgent need to investigate therapies with the support of universities and other organizations " " Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 54 Figure 1. Pharmacological and brain stimulation treatments in patients with DOC. and how we think they act on the damaged brain based on the mesocircuit model (Schiff, 2010). I took the liberty to add the psilocybin as this is the main topic of this interview. To answer your second question, it is clear that recently there is more interest in treatments. There are many new research groups working on coma and related states, and many new clinical trials are being conducted around the world. The interest for DOC treatment was probably pushed forward with the publication of a landmark paper on amantadine in 2012 (Giacino et al., 2012). Very recently, the Curing Coma Campaign has been launched by the Neurocritical Care Society with the aim to develop and implement coma treatment strategies. This is the first global public health initiative created to tackle the unifying concept of coma as a treatable medical entity. I have great hope of success and invite everyone interested to join this campaign (www.curingcoma.org). Only when we will comprehend the mechanisms of consciousness recovery, will we be able to develop effective and specific therapies " " Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 55 Of note, most published treatments studies on DOC are open-label and case reports, which means that results need to be interpreted with caution and cannot be translated into clinical practice. To evaluate the effectiveness of a treatment, we need randomized controlled trials with robust designs on large samples to take into account biases, such as spontaneous recovery. Only a handful of these trials have been published so far but many are on their way (36 are currently registered as pending clinical trials). In 2019, Scott and Carhart-Harris published a paper discussing the potential capacity of classical psychedelic, psilocybin, to increase consciousness in patients with DOC (Scott \& Carhart-Harris, 2019). What was your first thought when learning about this suggestion? This was a great moment! I was very excited and shared the paper with my team. I have been thinking about this possibility in the past but without acting on it. Discussing the paper with you and other colleagues made it clear that we had to give it a try, and that we should collaborate with the authors (which you ended up doing). The use of psilocybin to treat disorders of consciousness is an innovative, auspicious and original idea of treatment but it is certainly challenging ethically and legally. At the Coma Science Group, we have conducted several studies on anesthesia, including administering ketamine to participants who ended up completely unresponsive at the bedside but yet reported psychedelic experiences afterwards (Sarasso et al., 2015). One of my favorite techniques to investigate brain activity is transcranial magnetic stimulation combined with electroencephalography (TMS-EEG) (for review, see Gosseries et al., 2014b). We showed in collaboration with the team of Dr M. Massimini at the University of Milan, that under ketamine, the brain reacts to the stimulation in a complex and widespread manner, like it does in normal wakefulness. In comparison, during propofol or xenon sedation, the brain reacts in a slow, The use of psilocybin to treat disorders of consciousness is an innovative, auspicious and original idea of treatment but it is certainly challenging ethically and legally. " " Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 56 stereotypical and non-complex way and subjects do not recall any subjective experience afterwards. Similarly, unresponsive patients show a local and slow responses to TMS while patients in minimally conscious states show a differentiated, complex and broad responses (Rosanova et al., 2012). Going a step further, we developed the perturbational complexity index (PCI) that uses the normalized Lempel-Ziv complexity to compress the spatio-temporal pattern of cortical activation information into one number, with a threshold for consciousness above 0.31 (Casali et al., 2013, Casarotto et al., 2016). In ketamine, the PCI is high, as in healthy wakefulness, in REM sleep and in patients in minimally conscious states. In propofol and xenon sedation, PCI is low, as in non-rapid eye movement sleep (with no dream reports upon awakening) and in unresponsive patients. These findings highlight that the loss of consciousness is linked to drops in complexity in brain activity. In previous works, we also showed decreases in neural complexity in DOC patients using EEG entropy (Gosseries et al., 2011, Piarulli et al., 2016). On the other hand, studies by other groups showed that psilocybin, a serotonin 2A-receptor agonist (5-HT2A/C), increases brain complexity in healthy subjects (Schartner et al., 2017, Varley et al., 2020). So it is a fair hypothesis that psilocybin may be a plausible awakening drug for DOC patients that would restore the loss of brain complexity and ultimately improve the patients' state and responsiveness. Since then, have you heard some of your colleagues from the DOC field discussing that option? Internally, yes we discussed this option and developed a study protocol that we plan to start in 2021, hopefully in collaboration with experts in the field of psychedelics. I have however not heard much interest in this drug in other groups working with DOC. This may be because of practical and legal reasons, as many institutional review boards would probably not allow the use of illegal drugs in a fragile population. There is also a panoply of other legal drugs (e.g., pitolisant, d-cycloserine) that could be tested to potentially increase patients' responsiveness. Implementing clinical trials with these drugs may be easier and more feasible at this time. Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 57 This is nevertheless an excellent opportunity to bridge the fields of DOC and psychedelics. As of now, these are separated research topics despite both being considered as non-ordinary states of consciousness. In this regard, the Mind \& Life Europe (https://www.mindandlife-europe.org/) organized a workshop with research groups from different fields to start comparing states of consciousness such as meditation, hypnosis, psychedelics and trance from a first- and third-person perspective. This was a very interesting event. What do you think about it now? Do you think the neurocognitive mechanisms sustaining the action of psilocybin could increase consciousness awareness in those patients? This is a complicated question because we know little about the mechanisms of action of psilocybin and even less about the mechanisms of induced recovery of consciousness. It is thus difficult to predict what will be the response at the group level. I would hypothesize that psilocybin will improve the level of consciousness in a majority of patients with DOC along with increased brain complexity. I expect diffuse changes in the brain, especially in the frontal areas (where there are many serotonin receptors), in the default mode network and in the dorsal-attention network, based on previous works (Beliveau et al., 2017, Carhart-Harris and Friston, 2019, Varley et al., 2020). Psilocybin may modulate activity in the cortico-striato-thalamocortical loop, which would reactivate the consciousness network. If no clinical improvement is observed after psilocybin intake, a heightened brain activity may still be noticed. This could reflect an increase in internal awareness that is not possible to assess externally, as this is the case during ketamine sedation. But if patients recover afterwards, we could ask if they remember the experience, and if so, it would suggest disconnected consciousness at the time. Patients have however severe memory impairments so we cannot conclude anything in the absence of such reports. If we observe an increase in brain activity without improvement of responsiveness, a second explanation could be that brain complexity may be independent of consciousness, which would call into question the relationship between consciousness and brain complexity (see also Pal et al., 2019), a key element in consciousness model research (Koch et al., 2016). Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 58 In a recent dream, I gave psilocybin to a woman with DOC, and after severe side effects (I thought she was having a heart attack), she started speaking, which she had not done since her accident. So I do dream psilocybin can become a successful new awakening drug, but if not, as a Cartesian scientist, I would favor the explanation of disconnected consciousness over the brain- mind separation. I would like to take this opportunity to relate the case of zolpidem, to show how hard it can be to predict drug effects. Zolpidem, also known as Stilnox or Ambien, is a non-benzodiazepine hypnotic drug that acts as an agonist of the inhibitory GABA receptor and binds to the GABA-A receptor chloride channel. It is commonly prescribed as a sleep inducer. In 2000, a case of zolpidem-induced awareness was reported for the first time in a patient, who after being diagnosed in an unresponsive wakefulness syndrome for 3 years, suddenly 'awoke' and began speaking 15 minutes after receiving the drug (Clauss et al., 2000). Zolpidem was initially administered to the patient to help him sleep because he was restless at night. Since then, temporary improvements of arousal, awareness and cognitive abilities have been shown in other patients with DOC, sometimes with drastic changes such as the ability to eat and walk, but just for the time of the medication (around 4 hours). This behavioral awakening is accompanied by increased metabolism in frontal regions and decreases in EEG power and coherence in low frequencies (6-10Hz) (Williams et al., 2013, Chatelle et al., 2014). Unfortunately, only 5\% of patients with DOC show such paradoxical responses (Whyte et al., 2014), and it is unknown why them and not others. Increasing our knowledge of physiological processes will help to spur drug discovery, but as in the case of zolpidem, serendipity occasionally leads to important drug discoveries. This phenomenon has also been observed in the discovery of penicillin and played a role in the development of many psychotropic drugs which later helped to shape the field of psychiatry. So it is a fair hypothesis that psilocybin may be a plausible awakening drug for DOC patients that would restore the loss of brain complexity and ultimately improve the patients' state and responsiveness. " " Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 59 While there is currently no effective treatment, there are some promising approaches, particularly for patients in a minimally conscious state (MCS). Do you think psilocybin could be more efficient for patients in a MCS, compared to patients with an unresponsive wakefulness syndrome (UWS)? If so, why? Amantadine is the only treatment that was recommended by the American practice guidelines in 2018 for patients with DOC between 4 and 16 weeks after a traumatic brain injury (Giacino et al., 2018). Zolpidem and brain stimulation techniques may also be good candidates for some patients. For instance, a previous study by Thibaut and colleagues (2014) showed that half of the patients in minimally conscious state responded to transcranial direct current stimulation targeting the prefrontal cortex, whereas only a few unresponsive patients showed new signs of consciousness. This suggests that patients may need to be above some particular threshold of conscious awareness, with a minimum of brain complexity to benefit from brain stimulation. Note that improvements in these cases remain moderate, with responders showing new behaviors such as response to command, visual pursuit or localization to pain. Some patients may benefit from therapeutic interventions even years after the brain injury (Estraneo et al., 2010). Another promising approach that has not yet been tested is to combine different treatments (e.g., amantadine with repetitive TMS). Model-driven treatments should be developed using dynamical whole-brain computational models to understand the fundamental mechanisms of consciousness recovery. Finding biomarkers to predict responsiveness will ultimately help personalized treatment based on patients' individual profile. As of now, for brain stimulation, we know that one should stimulate on (partially) preserved structural brain area to induce brain responses and behavioral outputs (Gosseries et al., 2015, Thibaut et al., 2015). Considering all this, one could speculate that psilocybin would be more beneficial for patients in minimally conscious states, as they have more preserved brains than unresponsive patients. On the other side, psilocybin has been shown to increase brain complexity, so it may work in unresponsive patients who specifically lack complex activity. Psilocybin might reintroduce complexity in their brain and thus responsiveness. It is also possible that a minimum of brain complexity is needed, and patients who are diagnosed at Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 60 the bedside as unresponsive but who show brain activity compatible with the minimally conscious state would be the ones who respond the most to the drug. This category of patients is referred to as being in a non-behavioral minimally conscious state* (aka MCS*) (Gosseries et al., 2014c) or experiencing a cognitive motor dissociation (Schiff, 2015). Only time will tell what will be the results of psilocybin in DOC patients. According to you, what are the two most important challenges inherent in the testing of psychedelics in patients with DOC? The two main challenges are related to ethical and legal issues. Working with DOC patients is already an ethical challenge as they cannot communicate and thus cannot give their informed consent. We consequently rely on their legal guardians to make decisions for them. If patients recover functional communication during psychedelic treatment, they will be able to share their experience, give their consent (or not), and even possibly make their own decisions. One concern with psychedelics is that they can produce psychotropic aversive effects, which may be frightening for the patients. We do not want to induce a negative psychological impact with this intervention, and we have to evaluate the risk-benefit ratio. We have to develop novel treatments that are the most beneficent and the least harmful. The beneficent obligation that professional caregivers have in these situations calls for the creation of a care ethos that reflects the principle of respect of persons for these patients (Blain-Moraes et al., 2018). To avoid "bad trips" with potential harmful effects, paying attention to contextual factors will be crucial to create a relaxing setting (e.g., using decoration in the room, a comforting glow). Giving clear information to the patients and their families, and having them at the bedside during the testing, will also increase the likelihood of a safe and positive experience. Another concern is what do we do next if the patient recovers during treatment? The effects will most probably be temporary and the patients will have to take the drug repeatedly (like with zolpidem, some patients take it three times a day to eat). But psychedelics are currently illegal. It is going to be a long battle before the routine implementation of such drugs in the clinic. The legal aspect of studying psychedelic drugs in DOC patients will also need to be considered and approved by institutional review boards. Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 61 At the University Hospital of Liege, you are in frequent contact with the families of DOC patients. Do you think they might be willing to test this potential treatment on their relatives? Yes, most families want to try everything possible for their loved ones. They might however have concerns about side effects, so we have to evaluate the risk-benefit ratio before proposing treatment. Families have to be fully informed before providing their consent. They should act in the best interest of the patient, and think of what (s)he would have liked. If there were (official or informal) advance directives, families should respect the wishes of the patients. Collaborating with families in such context is paramount and they should participate in the study and provide feedback. Next to your interest in DOC, you have recently published an article about cognitive trance. Do you think there is a link between cognitive trance and psychedelics in terms of phenomenology and/or underlying neurophysiological mechanisms? Great question and the short answer is yes, definitively. With my colleague Dr. Audrey Vanhaudenhuyse and others, we started investigating the effects of trance at the phenomenological and neurophysiological level over a year ago. There are certainly commonalities between trance and psychedelics. Some trance experts report anecdotally that trance is like psychedelic without the ingestion of drugs. Here is an excerpt of a trance experience related by Corine Sombrun who was trained in Mongolia and who came to our laboratory: "I saw a little ant and then I was this ant. I climbed in a tree and I fell from it. After, I had visions of insects and big lizards. I experienced a transformation again, with the feeling of becoming something else, like an iguana. Then my tongue started to come out with the sensation of a turtle's tongue. After, there were the hisses of snakes, I went through all the reptiles. I had a feeling of joy, I wanted to laugh. (...) Then it was pure joy, total happiness and a huge expansion of my perception of self" (Gosseries et al., 2019). Regarding the neurophysiological mechanisms, we have conducted an EEG study on a group of trance experts and the analyses are underway. As in psychedelics, we expect to measure elevated brain activity and complexity, along with an augmented consciousness phenomenology. Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 62 Another link to make is between trance, psychedelic and near-death experience (NDE), as some features of NDE seem to be common, such as the feeling of extrasensory perception and ineffability (Martial et al., under revision; for a recent review see Martial et al., 2020). The ultimate nature of consciousness is still full of mysteries but it is evident that deepening our knowledge of all the possible states of consciousness can only increase our understanding of the human mind and brain. I think trance studies will open a new window of research possibilities, and maybe one day we will be able to use it to cure coma. References Beliveau, V., Ganz, M., Feng, L., Ozenne, B., Hjgaard, L., Fisher, P. M., ... \& Knudsen, G. M. (2017). A high-resolution in vivo atlas of the human brain's serotonin system. Journal of Neuroscience, 37(1), 120-128. https://doi.org/10.1523/JNEUROSCI.2830-16.2016 Blain-Moraes, S., Racine, E., \& Mashour, G. A. (2018). Consciousness and Personhood in Medical Care. Frontiers in human neuroscience, 12, 306. https://doi.org/10.3389/fnhum.2018.00306 Bodart, O., Laureys, S., \& Gosseries, O. (2013). Coma and disorders of consciousness: scientific advances and practical considerations for clinicians. In Seminars in neurology (Vol. 33, pp. 83-90). Thieme Medical Publishing Inc.. https://doi.org/10.1055/s-0033-1348965 Carhart-Harris, R. L., \& Friston, K. J. (2019). REBUS and the anarchic brain: toward a unified model of the brain action of psychedelics. Pharmacological The ultimate nature of consciousness is still full of mysteries but it is evident that deepening our knowledge of all the possible states of consciousness can only increase our understanding of the human mind and brain. I think trance studies will open a new window of research possibilities, and maybe one day we will be able to use it to cure coma. " " Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 63 reviews, 71(3), 316-344. https://doi.org/10.1124/pr.118.017160 Casali, A. G. *, Gosseries, O. *, Rosanova, M., Boly, M., Sarasso, S., Casali, K. R., ... \& Massimini, M. (2013). A theoretically based index of consciousness independent of sensory processing and behavior. Science translational medicine, 5(198), 198ra105-198ra105. https://doi.org/10.1126/scitranslmed.3006294 Casarotto, S., Comanducci, A., Rosanova, M., Sarasso, S., Fecchio, M., Napolitani, M., ... \& Gosseries, O. (2016). Stratification of unresponsive patients by an independently validated index of brain complexity. Annals of neurology, 80(5), 718-729. https://doi.org/10.1002/ana.24779 Chatelle, C. *, Thibaut, A. *, Gosseries, O., Bruno, M. A., Demertzi, A., Bernard, C., ... \& Laureys, S. (2014). Changes in cerebral metabolism in patients with a minimally conscious state responding to zolpidem. Frontiers in Human Neuroscience, 8, 917. https://doi.org/10.3389/fnhum.2014.00917 Clauss, R. P., Guldenpfennig, W. M., Nel, H. W., Sathekge, M. M., \& Venkannagari, R. R. (2000). Extraordinary arousal from semi-comatose state on zolpidem. South African Medical Journal, 90(1), 68-72. https://www.ajol.info/index.php/samj/article/download/140537/130277 Estraneo, A., Moretta, P., Loreto, V., Lanzillo, B., Santoro, L., \& Trojano, L. (2010). Late recovery after traumatic, anoxic, or hemorrhagic long-lasting vegetative state. Neurology, 75(3), 239-245. https://doi.org/10.1212/WNL.0b013e3181e8e8cc Giacino, J. T., Katz, D. I., Schiff, N. D., Whyte, J., Ashman, E. J., Ashwal, S., ... \& Nakase-Richardson, R. (2018). Practice guideline update recommendations summary: disorders of consciousness: report of the Guideline Development, Dissemination, and Implementation Subcommittee of the American Academy of Neurology; the American Congress of Rehabilitation Medicine; and the National Institute on Disability, Independent Living, and Rehabilitation Research. Archives of physical medicine and rehabilitation, 99(9), 1699-1709. https://doi.org/10.1016/j.apmr.2018.07.001 Giacino, J. T. *, Whyte, J. *, Bagiella, E., Kalmar, K., Childs, N., Khademi, A., ... \& Yablon, S. A. (2012). Placebo-controlled trial of amantadine for severe traumatic brain injury. New England Journal of Medicine, 366(9), 819-826. https://doi.org/10.1212/WNL.0b013e3181e8e8cc Gosseries, O., Di, H., Laureys, S., \& Boly, M. (2014). Measuring consciousness in Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 64 severely damaged brains. Annual Review of Neuroscience, 37, 457-478. https://doi.org/10.1146/annurev-neuro-062012-170339 Gosseries, O. *, Fecchio, M. *, Wolff, A., Sanz, L., Sombrun, C., Vanhaudenhuyse, A., \& Laureys, S. (2019). Behavioural and brain responses in cognitive trance: A TMS-EEG case study. Clinical neurophysiology, 131(2), 586-588. https://doi.org/10.1016/j.clinph.2019.11.011 Gosseries, O., Sarasso, S., Casarotto, S., Boly, M., Schnakers, C., Napolitani, M., ... \& Laureys, S. (2015). On the cerebral origin of EEG responses to TMS: insights from severe cortical lesions. Brain stimulation, 8(1), 142-149. https://doi.org/10.1016/j.brs.2014.10.008 Gosseries, O. *, Schnakers, C. *, Ledoux, D., Vanhaudenhuyse, A., Bruno, M. A., Demertzi, A., ... \& Peeters, E. (2011). Automated EEG entropy measurements in coma, vegetative state/unresponsive wakefulness syndrome and minimally conscious state. Functional neurology, 26(1), 25. Gosseries, O., Thibaut, A., Boly, M., Rosanova, M., Massimini, M., \& Laureys, S. (2014, February). Assessing consciousness in coma and related states using transcranial magnetic stimulation combined with electroencephalography. In Annales francaises d'anesthesie et de reanimation (Vol. 33, No. 2, pp. 65- 71). Elsevier Masson. http://doi.org/10.1016/j.annfar.2013.11.002 Gosseries, O., Zasler, N. D., \& Laureys, S. (2014). Recent advances in disorders of consciousness: focus on the diagnosis. Brain injury, 28(9), 1141-1150. https://doi.org/10.3109/02699052.2014.920522 Koch, C., Massimini, M., Boly, M., \& Tononi, G. (2016). Neural correlates of consciousness: progress and problems. Nature Reviews Neuroscience, 17(5), 307-321. https://doi.org/10.1038/nrn.2016.22 Martial, C., Cassol, H., Laureys, S., \& Gosseries, O. (2020). Near-death experience as a probe to explore (disconnected) consciousness. Trends in Cognitive Sciences, 24(3), 173-183. https://doi.org/10.1016/j.tics.2019.12.010 Martial, C., J. Simon, N. Puttaert, O. Gosseries, V. Charland-Verville, B. Greyson, ... H. Cassol (Under revision). The Near-Death Experience Content (NDE- C) scale: development and psychometric validation. Pal, D., Li, D., Dean, J. G., Brito, M. A., Liu, T., Fryzel, A. M., ... \& Mashour, G. A. (2020). Level of consciousness is dissociable from electroencephalographic measures of cortical connectivity, slow oscillations, and complexity. Journal Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 65 of Neuroscience, 40(3), 605-618. https://doi.org/10.1523/JNEUROSCI.1910-19.2019 Piarulli, A., Bergamasco, M., Thibaut, A., Cologan, V., Gosseries, O., \& Laureys, S. (2016). EEG ultradian rhythmicity differences in disorders of consciousness during wakefulness. Journal of neurology, 263(9), 1746-1760. https://doi.org/10.1007/s00415-016-8196-y Rosanova, M. *, Gosseries, O. *, Casarotto, S., Boly, M., Casali, A. G., Bruno, M. A., ... \& Massimini, M. (2012). Recovery of cortical effective connectivity and recovery of consciousness in vegetative patients. Brain, 135(4), 1308-1320. https://doi.org/10.1093/brain/awr340 Sarasso, S. *, Boly, M. *, Napolitani, M., Gosseries, O., Charland-Verville, V., Casarotto, S., ... \& Rex, S. (2015). Consciousness and complexity during unresponsiveness induced by propofol, xenon, and ketamine. Current Biology, 25(23), 3099-3105. https://doi.org/10.1016/j.cub.2015.10.014 Schartner, M. M., Carhart-Harris, R. L., Barrett, A. B., Seth, A. K., \& Muthukumaraswamy, S. D. (2017). Increased spontaneous MEG signal diversity for psychoactive doses of ketamine, LSD and psilocybin. Scientific reports, 7, 46421. https://doi.org/10.1038/srep46421 Schiff, N. D. (2010). Recovery of consciousness after brain injury: a mesocircuit hypothesis. Trends in neurosciences, 33(1), 1-9. https://doi.org/10.1016/j.tins.2009.11.002 Schiff, N. D. (2015). Cognitive motor dissociation following severe brain injuries. JAMA neurology, 72(12), 1413-1415. https://doi.org/10.1001/jamaneurol.2015.2899 Scott, G., \& Carhart-Harris, R. L. (2019). Psychedelics as a treatment for disorders of consciousness. Neuroscience of consciousness, 2019(1), niz003. https://doi.org/10.1093/nc/niz003 Stender, J. *, Gosseries, O. *, Bruno, M. A., Charland-Verville, V., Vanhaudenhuyse, A., Demertzi, A., ... \& Soddu, A. (2014). Diagnostic precision of PET imaging and functional MRI in disorders of consciousness: a clinical validation study. The Lancet, 384(9942), 514-522. https://doi.org/10.1016/S0140-6736(14)60042-8 Thibaut, A., Bruno, M. A., Ledoux, D., Demertzi, A., \& Laureys, S. (2014). tDCS in patients with disorders of consciousness: sham-controlled randomized Olivia Gosseries - Psychedelics in the Treatment of DOC ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 66 double-blind study. Neurology, 82(13), 1112-1118. https://doi.org/10.1212/WNL.0000000000000260 Thibaut, A. *, Di Perri, C. *, Chatelle, C., Bruno, M. A., Bahri, M. A., Wannez, S., ... \& Hustinx, R. (2015). Clinical response to tDCS depends on residual brain metabolism and grey matter integrity in patients with minimally conscious state. Brain Stimulation, 8(6), 1116-1123. https://doi.org/10.1016/j.brs.2015.07.024 Thibaut, A., Schiff, N., Giacino, J., Laureys, S., \& Gosseries, O. (2019). Therapeutic interventions in patients with prolonged disorders of consciousness. The Lancet Neurology, 18(6), 600-614. https://doi.org/10.1016/S1474-4422(19)30031-6 Varley, T. F., Carhart-Harris, R., Roseman, L., Menon, D. K., \& Stamatakis, E. A. (2020). Serotonergic psychedelics LSD \& psilocybin increase the fractal dimension of cortical brain activity in spatial and temporal domains. Neuroimage, 220, 117049. https://doi.org/10.1016/j.neuroimage.2020.117049 Whyte, J. *, Gosseries, O. *, Chervoneva, I., DiPasquale, M. C., Giacino, J., Kalmar, K., ... \& Mercer, W. (2009). Predictors of short-term outcome in brain- injured patients with disorders of consciousness. Progress in brain research, 177, 63-72. https://doi.org/10.1016/S0079-6123(09)17706-3 Whyte, J., Rajan, R., Rosenbaum, A., Katz, D., Kalmar, K., Seel, R., ... \& Kaelin, D. (2014). Zolpidem and restoration of consciousness. American Journal of Physical Medicine \& Rehabilitation, 93(2), 101-113. https://doi.org/10.1097/PHM.0000000000000069 Williams, S. T., Conte, M. M., Goldfine, A. M., Noirhomme, Q., Gosseries, O., Thonnard, M., ... \& Laureys, S. (2013). Common resting brain dynamics indicate a possible mechanism underlying zolpidem response in severe brain injury. Elife, 2, e01157. https://doi.org/10.7554/eLife.01157 * Contributed equally\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC1F8135] (394.071bp,-183.591bp) rectangle ++(82.800bp,-0.240bp);
+  \fill[ALIUSC1F8135] (394.071bp,-254.391bp) rectangle ++(72.480bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-160.551bp) rectangle ++(0.240bp,-69.600bp);
+  \fill[ALIUSC0000FF] (88.791bp,-279.111bp) rectangle ++(167.040bp,-0.480bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-230.151bp) rectangle ++(0.240bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-232.311bp) rectangle ++(0.240bp,-55.440bp);
+  \ALIUSPlacedTextContent{90.951}{72.970}{393.778}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{The Use of Psychedelics in the Treatment of}
+  \ALIUSPlacedTextContent{90.951}{96.970}{247.736}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Disorders of Consciousness}
+  \ALIUSPlacedTextContent{394.071}{160.454}{80.286}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Olivia Gosseries}
+  \ALIUSPlacedTextContent{88.791}{160.520}{130.764}{ALIUSC000000}{\ALIUSFontLatoLight}{16.080}{An interview with}
+  \ALIUSPlacedTextContent{394.071}{173.629}{82.879}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{ogosseries@uliege.be}
+  \ALIUSPlacedTextContent{88.791}{179.757}{136.284}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Olivia Gosseries}
+  \ALIUSPlacedTextContent{394.071}{184.429}{88.856}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Coma Science Group,}
+  \ALIUSPlacedTextContent{394.071}{195.229}{88.024}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{GIGA Consciousness,}
+  \ALIUSPlacedTextContent{394.071}{206.029}{110.874}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{University of Liege, Belgium}
+  \ALIUSPlacedTextContent{88.791}{214.479}{116.103}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Charlotte Martial}
+  \ALIUSPlacedTextContent{394.071}{231.254}{85.456}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Charlotte Martial}
+  \ALIUSPlacedTextContent{88.791}{232.202}{297.105}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Cite as: Gosseries, O. \& Martial, C. (2020). The use of psychedelics in}
+  \ALIUSPlacedTextContent{88.791}{244.202}{297.107}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{the treatment of disorders of consciousness. An interview of Olivia}
+  \ALIUSPlacedTextContent{394.071}{244.429}{72.633}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{cmartial@uliege.be}
+  \ALIUSPlacedTextContent{394.071}{255.229}{88.856}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Coma Science Group,}
+  \ALIUSPlacedTextContent{88.791}{256.202}{160.039}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Gosseries by Charlotte Martial.}
+  \ALIUSPlacedTextContent{256.730}{256.202}{65.954}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{322.638}{256.202}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{335.470}{256.202}{5.846}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{4}
+  \ALIUSPlacedTextContent{341.269}{256.202}{41.939}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{, 50-66,}
+  \ALIUSPlacedTextContent{394.071}{266.029}{88.024}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{GIGA Consciousness,}
+  \ALIUSPlacedTextContent{88.791}{268.202}{167.092}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/gv0w-y052}
+  \ALIUSPlacedTextContent{394.071}{276.829}{110.870}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{University of Liege, Belgium}
+  \ALIUSPlacedTextContent{90.951}{317.932}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
+  \ALIUSPlacedTextContent{90.951}{346.467}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In this interview, we discuss the use of psychedelic drugs as a promising}
+  \ALIUSPlacedTextContent{90.951}{360.867}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{treatment in disorders of consciousness. Psilocybin, a classic psychedelic, is}
+  \ALIUSPlacedTextContent{90.951}{375.267}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{currently undergoing substantial clinical investigations in healthy volunteers, but}
+  \ALIUSPlacedTextContent{90.951}{389.667}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{also in clinical populations. Recently, experts in the field of psychedelics have}
+  \ALIUSPlacedTextContent{90.951}{404.067}{418.275}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{addressed the attractive possibility to use such psychedelics on patients suffering}
+  \ALIUSPlacedTextContent{90.951}{418.467}{418.274}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{from disorders of consciousness. Building on her empirical and theoretical}
+  \ALIUSPlacedTextContent{90.951}{432.867}{418.268}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{research on disorders of consciousness, Olivia Gosseries gives us her opinion.}
+  \ALIUSPlacedTextContent{90.951}{447.267}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{Implementing rigorous clinical trials with psychedelics on patients with disorders}
+  \ALIUSPlacedTextContent{90.951}{461.667}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{of consciousness will allow their clinical efficacy to be tested. We finish the}
+  \ALIUSPlacedTextContent{90.951}{476.067}{418.269}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{interview by briefly addressing the ethical and legal challenges and discussing}
+  \ALIUSPlacedTextContent{90.951}{490.467}{339.501}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{other related non-pathological modified states of consciousness.}
+  \ALIUSPlacedTextContent{90.951}{516.867}{47.340}{ALIUSC000000}{\ALIUSFontLatoItalic}{12.000}{keywords}
+  \ALIUSPlacedTextContent{138.289}{516.867}{343.046}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{: psychedelic, disorder of consciousness, treatment, psilocybin, patient}
+  \ALIUSPlacedTextContent{90.951}{560.853}{418.436}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You are well known for your impressive work on disorders of consciousness}
+  \ALIUSPlacedTextContent{90.951}{578.133}{418.343}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(DOC) and you have recently become the co-director of the Coma Science}
+  \ALIUSPlacedTextContent{90.951}{595.413}{418.412}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Group (with Dr. Aurore Thibaut), succeeding Prof. Steven Laureys who}
+  \ALIUSPlacedTextContent{90.951}{612.453}{418.336}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{founded the Coma Science Group. Can you please introduce yourself and}
+  \ALIUSPlacedTextContent{90.951}{629.733}{319.560}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{explain what brought you to work with patients with DOC?}
+  \ALIUSPlacedTextContent{90.951}{658.889}{418.164}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Yes of course. I am a neuropsychologist who pursued a PhD in biomedical}
+  \ALIUSPlacedTextContent{90.951}{678.328}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and pharmaceutical sciences. Currently I am studying altered states of}
+  \ALIUSPlacedTextContent{90.951}{698.009}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness, with a focus on diagnosis, prognosis and treatments of brain-}
+  \ALIUSPlacedTextContent{90.951}{717.448}{157.576}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{injured patients with DOC.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{495.591}{36.329}{13.631}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{51}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In 2005, I spent 6 months at the University of Quebec in Montreal as part of}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.405}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the Socrates II program (Erasmus). During this time, I participated in a}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuropsychology workshop for which I went to a rehabilitation institute}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{every Wednesday. The aim was to interact with patients and provide a}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{diagnosis, without having access to their medical files. My first patient did}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.310}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not talk and did not respond to me. I was very confused. How can I give a}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{diagnosis in such a situation? The diagnosis of this patient was mixed aphasia:}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{he did not understand me (sensory aphasia) and he was not able to speak}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(motor aphasia). Meeting with many patients over the weeks, I noticed that}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.316}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they all had previously fallen into a coma. Some patients had vague memories}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the coma, some reported dream-like experiences and some had no}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recollection. I was very intrigued by this peculiar state: what is it like to be}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in a coma? Where is the mind in such a state? Why do some patients recover}
+  \ALIUSPlacedTextContent{90.951}{326.488}{103.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{while some don't?}
+  \ALIUSPlacedTextContent{90.951}{357.928}{418.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{When I came back to Belgium, I wanted to do my internship and master's}
+  \ALIUSPlacedTextContent{90.951}{377.608}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thesis on this topic. I contacted Dr. Steven Laureys who openly welcomed me}
+  \ALIUSPlacedTextContent{90.951}{397.048}{418.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and I started working as an undergrad at the Coma Science Group in 2006.}
+  \ALIUSPlacedTextContent{90.951}{416.488}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Seeing patients in a coma in the intensive care units was a unique and}
+  \ALIUSPlacedTextContent{90.951}{435.928}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{shattering experience. I was really compelled to find a cure for coma. After}
+  \ALIUSPlacedTextContent{90.951}{455.608}{418.140}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{completing my master's, I spent 4 months at the Moss Rehabilitation}
+  \ALIUSPlacedTextContent{90.951}{475.048}{418.400}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Institute in Philadelphia with Dr. John Whyte to get more familiar with the}
+  \ALIUSPlacedTextContent{90.951}{494.488}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{daily recovery of patients with DOC. I learned that most of these patients (if}
+  \ALIUSPlacedTextContent{90.951}{513.928}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not all) do not remember their time in rehabilitation, and that a good}
+  \ALIUSPlacedTextContent{90.951}{533.369}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{proportion of them do not recover well. Time post-injury, etiology and the}
+  \ALIUSPlacedTextContent{90.951}{553.049}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients' clinical status upon admission were however predictors of early}
+  \ALIUSPlacedTextContent{90.951}{572.489}{418.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recovery (Whyte et al., 2009). After this enriched experience, I was ready to}
+  \ALIUSPlacedTextContent{90.951}{591.928}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pursue a PhD with comatose patients. Following the PhD and several}
+  \ALIUSPlacedTextContent{90.951}{611.369}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{postdoctoral positions, I recently became a research associate at F.R.S-FNRS}
+  \ALIUSPlacedTextContent{90.951}{631.048}{248.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and co-director of the Coma Science Group.}
+  \ALIUSPlacedTextContent{90.951}{662.489}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{After 14 years working in the field, there is still no cure for coma. My aim is}
+  \ALIUSPlacedTextContent{90.951}{681.928}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to find one (wishful thinking) and to continue improving the care of patients}
+  \ALIUSPlacedTextContent{90.951}{701.369}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with DOC. I also want to contribute to the understanding of human}
+  \ALIUSPlacedTextContent{90.951}{721.049}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness and promote public awareness of this fascinating topic. For a}
+  \ALIUSPlacedTextContent{90.951}{740.489}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{review on how to measure consciousness in DOC, see Gosseries et al. (2014a),}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (95.271bp,-106.311bp) rectangle ++(298.560bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{494.631}{36.329}{14.611}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{52}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and our video Dance my PhD 2018 - the (un)conscious brain}
+  \ALIUSPlacedTextContent{90.951}{92.488}{4.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(}
+  \ALIUSPlacedTextContent{95.276}{92.488}{298.523}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{13.920}{https://www.youtube.com/watch?v=eYMmVNei2Hc\&t}
+  \ALIUSPlacedTextContent{393.835}{92.488}{10.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{).}
+  \ALIUSPlacedTextContent{90.951}{124.053}{418.361}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Recently, you published a review in 'The Lancet Neurology' (Thibaut et al.,}
+  \ALIUSPlacedTextContent{90.951}{141.333}{418.295}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{2019) highlighting the rarity of effective treatment options for patients with}
+  \ALIUSPlacedTextContent{90.951}{158.613}{418.390}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{DOC. What are the main reasons that efficient treatments are rare in these}
+  \ALIUSPlacedTextContent{90.951}{175.893}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{situations? In addition, have we observed an increase of interests in the search}
+  \ALIUSPlacedTextContent{90.951}{193.173}{213.520}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{for treatments over the past few years?}
+  \ALIUSPlacedTextContent{90.951}{222.329}{418.164}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Yes indeed, we crucially lack effective therapeutic options for patients with}
+  \ALIUSPlacedTextContent{90.951}{241.769}{418.209}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{DOC. I think there are four main reasons at play: 1) DOC is considered a}
+  \ALIUSPlacedTextContent{90.951}{261.208}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{rather new and rare disease, 2) it is a challenging patient population, 3)}
+  \ALIUSPlacedTextContent{90.951}{280.888}{418.217}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{previous work mostly focused on diagnosis and prognosis rather than}
+  \ALIUSPlacedTextContent{90.951}{300.328}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatment specifically, and 4) we need to understand the mechanisms of}
+  \ALIUSPlacedTextContent{90.951}{319.768}{341.939}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness recovery before developing targeted treatments.}
+  \ALIUSPlacedTextContent{90.951}{351.208}{418.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Before the 1950's, patients with severe brain injuries would die. With the}
+  \ALIUSPlacedTextContent{90.951}{370.888}{418.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{advent of the ventilators, such patients can now live, and the definition of}
+  \ALIUSPlacedTextContent{90.951}{390.328}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{death changed from cardiac death (now called "clinical death") to brain death}
+  \ALIUSPlacedTextContent{90.951}{409.768}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(official definition of death). Unfortunately, a proportion of these patients}
+  \ALIUSPlacedTextContent{90.951}{429.208}{418.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{may remain alive but without recovering. DOC is an umbrella term that}
+  \ALIUSPlacedTextContent{90.951}{448.648}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{includes coma (no arousal, no awareness), unresponsive wakefulness}
+  \ALIUSPlacedTextContent{90.951}{468.328}{418.191}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{syndrome (previously known as vegetative state; wakefulness but reflexive}
+  \ALIUSPlacedTextContent{90.951}{487.768}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{behaviors only), and minimally conscious state (wakefulness and behavioral}
+  \ALIUSPlacedTextContent{90.951}{507.208}{418.419}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{signs of consciousness without functional communication) (Bodart et al.,}
+  \ALIUSPlacedTextContent{90.951}{526.648}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2013). Coma is an acute state in which patients will never open their eyes and}
+  \ALIUSPlacedTextContent{90.951}{546.328}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it lasts more than one hour, up to a few weeks. In contrast, patients with an}
+  \ALIUSPlacedTextContent{90.951}{565.768}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unresponsive wakefulness syndrome or in a minimally conscious state have}
+  \ALIUSPlacedTextContent{90.951}{585.208}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{their eyes open, and these states can be acute, prolonged (more than a}
+  \ALIUSPlacedTextContent{90.951}{604.648}{374.712}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{month), or chronic (more than several months, sometimes decades).}
+  \ALIUSPlacedTextContent{90.951}{636.328}{418.136}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Chronic DOC is considered a rare disease because it affects between 0.2 and}
+  \ALIUSPlacedTextContent{90.951}{655.768}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{17 individuals out of 100 000 in Europe and the United-States. DOC are not}
+  \ALIUSPlacedTextContent{90.951}{675.208}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{classified as complications of common diseases but as pathologies per se,}
+  \ALIUSPlacedTextContent{90.951}{694.648}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{because they have specific International Classification of Diseases (ICD)}
+  \ALIUSPlacedTextContent{90.951}{714.328}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{codes. Patients with DOC are sadly often neglected by healthcare systems}
+  \ALIUSPlacedTextContent{90.951}{733.768}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and private companies have little financial incentive to develop new}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{494.871}{36.329}{14.429}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{53}
+  \ALIUSPlacedTextContent{110.671}{78.759}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{138.031}{86.827}{322.891}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{We consequently have an urgent need to}
+  \ALIUSPlacedTextContent{138.031}{104.827}{322.800}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{investigate therapies with the support of}
+  \ALIUSPlacedTextContent{469.471}{117.879}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{138.031}{122.827}{229.431}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{universities and other organizations}
+  \ALIUSPlacedTextContent{90.951}{174.568}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatments for such rare patients. We consequently have an urgent need to}
+  \ALIUSPlacedTextContent{90.951}{194.008}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{investigate therapies with the support of universities and other organizations.}
+  \ALIUSPlacedTextContent{90.951}{225.688}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The second reason for the scarcity of treatment options is that management}
+  \ALIUSPlacedTextContent{90.951}{245.128}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of patients with DOC is very challenging because they cannot communicate,}
+  \ALIUSPlacedTextContent{90.951}{264.568}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have severe motor disability and are dependent on others for all care. Most}
+  \ALIUSPlacedTextContent{90.951}{284.008}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{current rehabilitation therapies need active participation of the patients,}
+  \ALIUSPlacedTextContent{90.951}{303.688}{232.796}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which is not possible with these patients.}
+  \ALIUSPlacedTextContent{90.951}{335.128}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The third reason is that previous work has mainly investigated diagnostic and}
+  \ALIUSPlacedTextContent{90.951}{354.568}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{prognostic indicators of consciousness. In medicine, before prescribing a}
+  \ALIUSPlacedTextContent{90.951}{374.008}{418.356}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatment, we need to know what the diagnosis is, and in our case an accurate}
+  \ALIUSPlacedTextContent{90.951}{393.688}{418.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{diagnosis of the level of consciousness ("is the person conscious?"). This can}
+  \ALIUSPlacedTextContent{90.951}{413.128}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be a hard task because we primarily use behavior to infer consciousness, but}
+  \ALIUSPlacedTextContent{90.951}{432.568}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{responsiveness does not always equate consciousness. This may lead to a high}
+  \ALIUSPlacedTextContent{90.951}{452.008}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{rate of misdiagnosis (Stender et al., 2014), which can in turn lead to}
+  \ALIUSPlacedTextContent{90.951}{471.448}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{inadequate medical decisions, such as withdrawal of life-sustaining care. The}
+  \ALIUSPlacedTextContent{90.951}{491.128}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{second difficulty that arises after the diagnosis is the prognosis ("is the}
+  \ALIUSPlacedTextContent{90.951}{510.568}{418.181}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patient going to recover?"). With time, the patient may recover}
+  \ALIUSPlacedTextContent{90.951}{530.009}{418.336}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{spontaneously, however we only think of treatments when patients do not}
+  \ALIUSPlacedTextContent{90.951}{549.448}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recover. After more than three decades of research, we are slowly moving}
+  \ALIUSPlacedTextContent{90.951}{569.129}{115.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{towards treatments.}
+  \ALIUSPlacedTextContent{90.951}{600.568}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The last and probably most important reason why we have not yet found a}
+  \ALIUSPlacedTextContent{90.951}{620.009}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cure is that to treat a condition, we need to understand it. Only when we will}
+  \ALIUSPlacedTextContent{90.951}{639.448}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{comprehend the mechanisms of consciousness recovery, will we be able to}
+  \ALIUSPlacedTextContent{90.951}{659.129}{418.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{develop effective and specific therapies. So far all the tested treatments are}
+  \ALIUSPlacedTextContent{90.951}{678.568}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{repurposed, meaning that they are available on the market for other}
+  \ALIUSPlacedTextContent{90.951}{698.009}{418.316}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pathologies and we try them with our patients. Here is an illustration based}
+  \ALIUSPlacedTextContent{90.951}{717.448}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on our recent review (Thibaut et al., 2019) to show you what has been tested}
+  \ALIUSPlacedTextContent{90.951}{737.128}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{so far with pharmacological and brain stimulation treatments,}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (95.271bp,-656.631bp) rectangle ++(115.680bp,-0.720bp);
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.991bp,-72.991bp) {\includegraphics[width=415.000bp,height=233.450bp]{Interviews/Issue04/Gosseries_Martial/assets/alius-extracted-image-p005-b009.png}};
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{493.911}{36.329}{15.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{54}
+  \ALIUSPlacedTextContent{90.951}{308.968}{43.528}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{Figure 1}
+  \ALIUSPlacedTextContent{134.509}{308.968}{374.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{. Pharmacological and brain stimulation treatments in patients with}
+  \ALIUSPlacedTextContent{90.951}{328.648}{39.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{DOC.}
+  \ALIUSPlacedTextContent{90.951}{377.368}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and how we think they act on the damaged brain based on the mesocircuit}
+  \ALIUSPlacedTextContent{90.951}{396.809}{418.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{model (Schiff, 2010). I took the liberty to add the psilocybin as this is the}
+  \ALIUSPlacedTextContent{90.951}{416.248}{154.474}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{main topic of this interview.}
+  \ALIUSPlacedTextContent{90.951}{447.688}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To answer your second question, it is clear that recently there is more interest}
+  \ALIUSPlacedTextContent{90.951}{467.368}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in treatments. There are many new research groups working on coma and}
+  \ALIUSPlacedTextContent{90.951}{486.808}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{related states, and many new clinical trials are being conducted around the}
+  \ALIUSPlacedTextContent{90.951}{506.249}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{world. The interest for DOC treatment was probably pushed forward with}
+  \ALIUSPlacedTextContent{90.951}{525.688}{418.443}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the publication of a landmark paper on amantadine in 2012 (Giacino et al.,}
+  \ALIUSPlacedTextContent{90.951}{545.369}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2012). Very recently, the Curing Coma Campaign has been launched by the}
+  \ALIUSPlacedTextContent{90.951}{564.808}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Neurocritical Care Society with the aim to develop and implement coma}
+  \ALIUSPlacedTextContent{90.951}{584.249}{418.298}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatment strategies. This is the first global public health initiative created}
+  \ALIUSPlacedTextContent{90.951}{603.688}{418.357}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to tackle the unifying concept of coma as a treatable medical entity. I have}
+  \ALIUSPlacedTextContent{90.951}{623.369}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{great hope of success and invite everyone interested to join this campaign}
+  \ALIUSPlacedTextContent{90.951}{642.808}{4.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(}
+  \ALIUSPlacedTextContent{95.276}{642.808}{115.753}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{13.920}{www.curingcoma.org}
+  \ALIUSPlacedTextContent{211.054}{642.808}{10.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{).}
+  \ALIUSPlacedTextContent{109.711}{688.119}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{137.311}{698.347}{322.844}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Only when we will comprehend the mechanisms}
+  \ALIUSPlacedTextContent{137.311}{716.347}{322.842}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of consciousness recovery, will we be able to}
+  \ALIUSPlacedTextContent{470.911}{724.119}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{137.311}{734.347}{256.168}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{develop effective and specific therapies}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{494.391}{36.329}{14.709}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{55}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Of note, most published treatments studies on DOC are open-label and case}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reports, which means that results need to be interpreted with caution and}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.186}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cannot be translated into clinical practice. To evaluate the effectiveness of a}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.329}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatment, we need randomized controlled trials with robust designs on large}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{samples to take into account biases, such as spontaneous recovery. Only a}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.298}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{handful of these trials have been published so far but many are on their way}
+  \ALIUSPlacedTextContent{90.951}{189.928}{296.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(36 are currently registered as pending clinical trials).}
+  \ALIUSPlacedTextContent{90.951}{221.733}{418.460}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In 2019, Scott and Carhart-Harris published a paper discussing the potential}
+  \ALIUSPlacedTextContent{90.951}{239.013}{418.439}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{capacity of classical psychedelic, psilocybin, to increase consciousness in}
+  \ALIUSPlacedTextContent{90.951}{256.053}{418.426}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{patients with DOC (Scott \& Carhart-Harris, 2019). What was your first}
+  \ALIUSPlacedTextContent{90.951}{273.333}{249.059}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{thought when learning about this suggestion?}
+  \ALIUSPlacedTextContent{90.951}{302.488}{418.187}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This was a great moment! I was very excited and shared the paper with my}
+  \ALIUSPlacedTextContent{90.951}{321.928}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{team. I have been thinking about this possibility in the past but without}
+  \ALIUSPlacedTextContent{90.951}{341.608}{418.146}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{acting on it. Discussing the paper with you and other colleagues made it clear}
+  \ALIUSPlacedTextContent{90.951}{361.048}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that we had to give it a try, and that we should collaborate with the authors}
+  \ALIUSPlacedTextContent{90.951}{380.488}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(which you ended up doing). The use of psilocybin to treat disorders of}
+  \ALIUSPlacedTextContent{90.951}{399.928}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness is an innovative, auspicious and original idea of treatment but}
+  \ALIUSPlacedTextContent{90.951}{419.608}{254.187}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it is certainly challenging ethically and legally.}
+  \ALIUSPlacedTextContent{90.951}{451.048}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{At the Coma Science Group, we have conducted several studies on}
+  \ALIUSPlacedTextContent{90.951}{470.488}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{anesthesia, including administering ketamine to participants who ended up}
+  \ALIUSPlacedTextContent{90.951}{489.928}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{completely unresponsive at the bedside but yet reported psychedelic}
+  \ALIUSPlacedTextContent{90.951}{509.608}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences afterwards (Sarasso et al., 2015). One of my favorite techniques to}
+  \ALIUSPlacedTextContent{90.951}{529.049}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{investigate brain activity is transcranial magnetic stimulation combined with}
+  \ALIUSPlacedTextContent{90.951}{548.489}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{electroencephalography (TMS-EEG) (for review, see Gosseries et al., 2014b).}
+  \ALIUSPlacedTextContent{90.951}{567.928}{418.349}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We showed in collaboration with the team of Dr M. Massimini at the}
+  \ALIUSPlacedTextContent{90.951}{587.609}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{University of Milan, that under ketamine, the brain reacts to the stimulation}
+  \ALIUSPlacedTextContent{90.951}{607.048}{418.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in a complex and widespread manner, like it does in normal wakefulness. In}
+  \ALIUSPlacedTextContent{90.951}{626.489}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{comparison, during propofol or xenon sedation, the brain reacts in a slow,}
+  \ALIUSPlacedTextContent{118.111}{662.679}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{150.031}{682.027}{301.688}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The use of psilocybin to treat disorders of}
+  \ALIUSPlacedTextContent{150.031}{700.027}{301.602}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness is an innovative, auspicious and}
+  \ALIUSPlacedTextContent{150.031}{718.027}{301.713}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{original idea of treatment but it is certainly}
+  \ALIUSPlacedTextContent{150.031}{736.027}{205.142}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{challenging ethically and legally.}
+  \ALIUSPlacedTextContent{467.791}{738.039}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{56}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stereotypical and non-complex way and subjects do not recall any subjective}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.298}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience afterwards. Similarly, unresponsive patients show a local and slow}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{responses to TMS while patients in minimally conscious states show a}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{differentiated, complex and broad responses (Rosanova et al., 2012). Going a}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{step further, we developed the perturbational complexity index (PCI) that}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{uses the normalized Lempel-Ziv complexity to compress the spatio-temporal}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.176}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pattern of cortical activation information into one number, with a threshold}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for consciousness above 0.31 (Casali et al., 2013, Casarotto et al., 2016). In}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ketamine, the PCI is high, as in healthy wakefulness, in REM sleep and in}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients in minimally conscious states. In propofol and xenon sedation, PCI}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is low, as in non-rapid eye movement sleep (with no dream reports upon}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{awakening) and in unresponsive patients. These findings highlight that the}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{loss of consciousness is linked to drops in complexity in brain activity. In}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{previous works, we also showed decreases in neural complexity in DOC}
+  \ALIUSPlacedTextContent{90.951}{345.928}{382.690}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients using EEG entropy (Gosseries et al., 2011, Piarulli et al., 2016).}
+  \ALIUSPlacedTextContent{90.951}{377.608}{418.132}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{On the other hand, studies by other groups showed that psilocybin, a}
+  \ALIUSPlacedTextContent{90.951}{397.048}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{serotonin 2A-receptor agonist (5-HT2A/C), increases brain complexity in}
+  \ALIUSPlacedTextContent{90.951}{416.488}{418.312}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{healthy subjects (Schartner et al., 2017, Varley et al., 2020). So it is a fair}
+  \ALIUSPlacedTextContent{90.951}{435.928}{418.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hypothesis that psilocybin may be a plausible awakening drug for DOC}
+  \ALIUSPlacedTextContent{90.951}{455.608}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients that would restore the loss of brain complexity and ultimately}
+  \ALIUSPlacedTextContent{90.951}{475.048}{259.956}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{improve the patients' state and responsiveness.}
+  \ALIUSPlacedTextContent{90.951}{506.613}{418.321}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Since then, have you heard some of your colleagues from the DOC field}
+  \ALIUSPlacedTextContent{90.951}{523.893}{126.412}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{discussing that option?}
+  \ALIUSPlacedTextContent{90.951}{553.049}{418.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Internally, yes we discussed this option and developed a study protocol that}
+  \ALIUSPlacedTextContent{90.951}{572.489}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we plan to start in 2021, hopefully in collaboration with experts in the field}
+  \ALIUSPlacedTextContent{90.951}{591.928}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of psychedelics. I have however not heard much interest in this drug in other}
+  \ALIUSPlacedTextContent{90.951}{611.369}{418.173}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{groups working with DOC. This may be because of practical and legal}
+  \ALIUSPlacedTextContent{90.951}{631.048}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reasons, as many institutional review boards would probably not allow the}
+  \ALIUSPlacedTextContent{90.951}{650.489}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{use of illegal drugs in a fragile population. There is also a panoply of other}
+  \ALIUSPlacedTextContent{90.951}{669.928}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{legal drugs (e.g., pitolisant, d-cycloserine) that could be tested to potentially}
+  \ALIUSPlacedTextContent{90.951}{689.369}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{increase patients' responsiveness. Implementing clinical trials with these}
+  \ALIUSPlacedTextContent{90.951}{709.048}{283.756}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{drugs may be easier and more feasible at this time.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (219.591bp,-145.431bp) rectangle ++(210.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{494.151}{36.329}{14.989}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{57}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.118}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is nevertheless an excellent opportunity to bridge the fields of DOC and}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.139}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics. As of now, these are separated research topics despite both}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.181}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{being considered as non-ordinary states of consciousness. In this regard, the}
+  \ALIUSPlacedTextContent{90.951}{131.609}{128.696}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Mind \& Life Europe (}
+  \ALIUSPlacedTextContent{430.075}{131.609}{79.147}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{) organized a}
+  \ALIUSPlacedTextContent{219.672}{132.472}{210.362}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{13.920}{https://www.mindandlife-europe.org/}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{workshop with research groups from different fields to start comparing states}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of consciousness such as meditation, hypnosis, psychedelics and trance from}
+  \ALIUSPlacedTextContent{90.951}{189.928}{387.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a first- and third-person perspective. This was a very interesting event.}
+  \ALIUSPlacedTextContent{90.951}{221.733}{418.346}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{What do you think about it now? Do you think the neurocognitive}
+  \ALIUSPlacedTextContent{90.951}{239.013}{418.342}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{mechanisms sustaining the action of psilocybin could increase consciousness}
+  \ALIUSPlacedTextContent{90.951}{256.053}{154.928}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{awareness in those patients?}
+  \ALIUSPlacedTextContent{90.951}{285.208}{418.191}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is a complicated question because we know little about the mechanisms}
+  \ALIUSPlacedTextContent{90.951}{304.888}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of action of psilocybin and even less about the mechanisms of induced}
+  \ALIUSPlacedTextContent{90.951}{324.328}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recovery of consciousness. It is thus difficult to predict what will be the}
+  \ALIUSPlacedTextContent{90.951}{343.768}{418.223}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{response at the group level. I would hypothesize that psilocybin will improve}
+  \ALIUSPlacedTextContent{90.951}{363.208}{418.363}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the level of consciousness in a majority of patients with DOC along with}
+  \ALIUSPlacedTextContent{90.951}{382.648}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{increased brain complexity. I expect diffuse changes in the brain, especially}
+  \ALIUSPlacedTextContent{90.951}{402.328}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in the frontal areas (where there are many serotonin receptors), in the default}
+  \ALIUSPlacedTextContent{90.951}{421.768}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mode network and in the dorsal-attention network, based on previous works}
+  \ALIUSPlacedTextContent{90.951}{441.208}{418.191}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Beliveau et al., 2017, Carhart-Harris and Friston, 2019, Varley et al., 2020).}
+  \ALIUSPlacedTextContent{90.951}{460.648}{418.322}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Psilocybin may modulate activity in the cortico-striato-thalamocortical loop,}
+  \ALIUSPlacedTextContent{90.951}{480.328}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which would reactivate the consciousness network. If no clinical}
+  \ALIUSPlacedTextContent{90.951}{499.769}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{improvement is observed after psilocybin intake, a heightened brain activity}
+  \ALIUSPlacedTextContent{90.951}{519.208}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{may still be noticed. This could reflect an increase in internal awareness that}
+  \ALIUSPlacedTextContent{90.951}{538.648}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is not possible to assess externally, as this is the case during ketamine}
+  \ALIUSPlacedTextContent{90.951}{558.328}{418.359}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sedation. But if patients recover afterwards, we could ask if they remember}
+  \ALIUSPlacedTextContent{90.951}{577.768}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the experience, and if so, it would suggest disconnected consciousness at the}
+  \ALIUSPlacedTextContent{90.951}{597.208}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{time. Patients have however severe memory impairments so we cannot}
+  \ALIUSPlacedTextContent{90.951}{616.648}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conclude anything in the absence of such reports. If we observe an increase}
+  \ALIUSPlacedTextContent{90.951}{636.328}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in brain activity without improvement of responsiveness, a second}
+  \ALIUSPlacedTextContent{90.951}{655.768}{418.340}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{explanation could be that brain complexity may be independent of}
+  \ALIUSPlacedTextContent{90.951}{675.208}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness, which would call into question the relationship between}
+  \ALIUSPlacedTextContent{90.951}{694.648}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness and brain complexity (see also Pal et al., 2019), a key element}
+  \ALIUSPlacedTextContent{90.951}{714.328}{283.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in consciousness model research (Koch et al., 2016).}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{493.431}{36.329}{15.829}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{58}
+  \ALIUSPlacedTextContent{120.031}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{148.351}{86.347}{306.457}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{So it is a fair hypothesis that psilocybin may be}
+  \ALIUSPlacedTextContent{148.351}{104.347}{306.517}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{a plausible awakening drug for DOC patients}
+  \ALIUSPlacedTextContent{148.351}{122.347}{306.484}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{that would restore the loss of brain complexity}
+  \ALIUSPlacedTextContent{148.351}{140.347}{306.491}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{and ultimately improve the patients' state and}
+  \ALIUSPlacedTextContent{465.151}{147.399}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{148.351}{158.347}{105.873}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{responsiveness.}
+  \ALIUSPlacedTextContent{90.951}{194.008}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In a recent dream, I gave psilocybin to a woman with DOC, and after severe}
+  \ALIUSPlacedTextContent{90.951}{213.449}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{side effects (I thought she was having a heart attack), she started speaking,}
+  \ALIUSPlacedTextContent{90.951}{232.889}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which she had not done since her accident. So I do dream psilocybin can}
+  \ALIUSPlacedTextContent{90.951}{252.568}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{become a successful new awakening drug, but if not, as a Cartesian scientist,}
+  \ALIUSPlacedTextContent{90.951}{272.008}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I would favor the explanation of disconnected consciousness over the brain-}
+  \ALIUSPlacedTextContent{90.951}{291.448}{95.123}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind separation.}
+  \ALIUSPlacedTextContent{90.951}{322.888}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I would like to take this opportunity to relate the case of zolpidem, to show}
+  \ALIUSPlacedTextContent{90.951}{342.568}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{how hard it can be to predict drug effects. Zolpidem, also known as Stilnox}
+  \ALIUSPlacedTextContent{90.951}{362.008}{418.162}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or Ambien, is a non-benzodiazepine hypnotic drug that acts as an agonist of}
+  \ALIUSPlacedTextContent{90.951}{381.448}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the inhibitory GABA receptor and binds to the GABA-A receptor chloride}
+  \ALIUSPlacedTextContent{90.951}{400.888}{418.340}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{channel. It is commonly prescribed as a sleep inducer. In 2000, a case of}
+  \ALIUSPlacedTextContent{90.951}{420.568}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{zolpidem-induced awareness was reported for the first time in a patient, who}
+  \ALIUSPlacedTextContent{90.951}{440.008}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{after being diagnosed in an unresponsive wakefulness syndrome for 3 years,}
+  \ALIUSPlacedTextContent{90.951}{459.448}{418.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{suddenly 'awoke' and began speaking 15 minutes after receiving the drug}
+  \ALIUSPlacedTextContent{90.951}{478.888}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Clauss et al., 2000). Zolpidem was initially administered to the patient to}
+  \ALIUSPlacedTextContent{90.951}{498.568}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{help him sleep because he was restless at night. Since then, temporary}
+  \ALIUSPlacedTextContent{90.951}{518.009}{418.322}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{improvements of arousal, awareness and cognitive abilities have been shown}
+  \ALIUSPlacedTextContent{90.951}{537.448}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in other patients with DOC, sometimes with drastic changes such as the}
+  \ALIUSPlacedTextContent{90.951}{556.889}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ability to eat and walk, but just for the time of the medication (around 4}
+  \ALIUSPlacedTextContent{90.951}{576.328}{418.283}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hours). This behavioral awakening is accompanied by increased metabolism}
+  \ALIUSPlacedTextContent{90.951}{596.009}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in frontal regions and decreases in EEG power and coherence in low}
+  \ALIUSPlacedTextContent{90.951}{615.448}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{frequencies (6-10Hz) (Williams et al., 2013, Chatelle et al., 2014).}
+  \ALIUSPlacedTextContent{90.951}{634.889}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Unfortunately, only 5\% of patients with DOC show such paradoxical}
+  \ALIUSPlacedTextContent{90.951}{654.328}{418.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{responses (Whyte et al., 2014), and it is unknown why them and not others.}
+  \ALIUSPlacedTextContent{90.951}{674.009}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Increasing our knowledge of physiological processes will help to spur drug}
+  \ALIUSPlacedTextContent{90.951}{693.448}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{discovery, but as in the case of zolpidem, serendipity occasionally leads to}
+  \ALIUSPlacedTextContent{90.951}{712.888}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{important drug discoveries. This phenomenon has also been observed in the}
+  \ALIUSPlacedTextContent{90.951}{732.328}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{discovery of penicillin and played a role in the development of many}
+  \ALIUSPlacedTextContent{90.951}{752.008}{385.084}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychotropic drugs which later helped to shape the field of psychiatry.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 10
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{59}
+  \ALIUSPlacedTextContent{90.951}{73.173}{418.308}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{While there is currently no effective treatment, there are some promising}
+  \ALIUSPlacedTextContent{90.951}{90.453}{418.423}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{approaches, particularly for patients in a minimally conscious state (MCS). Do}
+  \ALIUSPlacedTextContent{90.951}{107.733}{418.427}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{you think psilocybin could be more efficient for patients in a MCS, compared}
+  \ALIUSPlacedTextContent{90.951}{125.013}{406.942}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{to patients with an unresponsive wakefulness syndrome (UWS)? If so, why?}
+  \ALIUSPlacedTextContent{90.951}{154.169}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Amantadine is the only treatment that was recommended by the American}
+  \ALIUSPlacedTextContent{90.951}{173.609}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{practice guidelines in 2018 for patients with DOC between 4 and 16 weeks}
+  \ALIUSPlacedTextContent{90.951}{193.049}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{after a traumatic brain injury (Giacino et al., 2018). Zolpidem and brain}
+  \ALIUSPlacedTextContent{90.951}{212.488}{418.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stimulation techniques may also be good candidates for some patients. For}
+  \ALIUSPlacedTextContent{90.951}{231.928}{418.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{instance, a previous study by Thibaut and colleagues (2014) showed that half}
+  \ALIUSPlacedTextContent{90.951}{251.609}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the patients in minimally conscious state responded to transcranial direct}
+  \ALIUSPlacedTextContent{90.951}{271.048}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{current stimulation targeting the prefrontal cortex, whereas only a few}
+  \ALIUSPlacedTextContent{90.951}{290.488}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unresponsive patients showed new signs of consciousness. This suggests that}
+  \ALIUSPlacedTextContent{90.951}{309.928}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients may need to be above some particular threshold of conscious}
+  \ALIUSPlacedTextContent{90.951}{329.608}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{awareness, with a minimum of brain complexity to benefit from brain}
+  \ALIUSPlacedTextContent{90.951}{349.048}{418.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stimulation. Note that improvements in these cases remain moderate, with}
+  \ALIUSPlacedTextContent{90.951}{368.488}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{responders showing new behaviors such as response to command, visual}
+  \ALIUSPlacedTextContent{90.951}{387.928}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pursuit or localization to pain. Some patients may benefit from therapeutic}
+  \ALIUSPlacedTextContent{90.951}{407.608}{377.819}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interventions even years after the brain injury (Estraneo et al., 2010).}
+  \ALIUSPlacedTextContent{90.951}{439.048}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Another promising approach that has not yet been tested is to combine}
+  \ALIUSPlacedTextContent{90.951}{458.488}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different treatments (e.g., amantadine with repetitive TMS). Model-driven}
+  \ALIUSPlacedTextContent{90.951}{477.928}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatments should be developed using dynamical whole-brain computational}
+  \ALIUSPlacedTextContent{90.951}{497.608}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{models to understand the fundamental mechanisms of consciousness}
+  \ALIUSPlacedTextContent{90.951}{517.049}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recovery. Finding biomarkers to predict responsiveness will ultimately help}
+  \ALIUSPlacedTextContent{90.951}{536.489}{418.162}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{personalized treatment based on patients' individual profile. As of now, for}
+  \ALIUSPlacedTextContent{90.951}{555.928}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain stimulation, we know that one should stimulate on (partially) preserved}
+  \ALIUSPlacedTextContent{90.951}{575.609}{418.338}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{structural brain area to induce brain responses and behavioral outputs}
+  \ALIUSPlacedTextContent{90.951}{595.048}{236.478}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Gosseries et al., 2015, Thibaut et al., 2015).}
+  \ALIUSPlacedTextContent{90.951}{626.489}{418.309}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Considering all this, one could speculate that psilocybin would be more}
+  \ALIUSPlacedTextContent{90.951}{645.928}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{beneficial for patients in minimally conscious states, as they have more}
+  \ALIUSPlacedTextContent{90.951}{665.369}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{preserved brains than unresponsive patients. On the other side, psilocybin}
+  \ALIUSPlacedTextContent{90.951}{685.048}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{has been shown to increase brain complexity, so it may work in unresponsive}
+  \ALIUSPlacedTextContent{90.951}{704.489}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients who specifically lack complex activity. Psilocybin might reintroduce}
+  \ALIUSPlacedTextContent{90.951}{723.929}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{complexity in their brain and thus responsiveness. It is also possible that a}
+  \ALIUSPlacedTextContent{90.951}{743.369}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimum of brain complexity is needed, and patients who are diagnosed at}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 11
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{492.711}{36.329}{16.445}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{60}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the bedside as unresponsive but who show brain activity compatible with the}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimally conscious state would be the ones who respond the most to the}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{drug. This category of patients is referred to as being in a non-behavioral}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimally conscious state* (aka MCS*) (Gosseries et al., 2014c) or}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.278}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiencing a cognitive motor dissociation (Schiff, 2015). Only time will tell}
+  \ALIUSPlacedTextContent{90.951}{170.488}{300.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{what will be the results of psilocybin in DOC patients.}
+  \ALIUSPlacedTextContent{90.951}{202.053}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{According to you, what are the two most important challenges inherent in the}
+  \ALIUSPlacedTextContent{90.951}{219.333}{245.593}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{testing of psychedelics in patients with DOC?}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.132}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The two main challenges are related to ethical and legal issues. Working with}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.101}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{DOC patients is already an ethical challenge as they cannot communicate}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and thus cannot give their informed consent. We consequently rely on their}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{legal guardians to make decisions for them. If patients recover functional}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{communication during psychedelic treatment, they will be able to share their}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.322}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience, give their consent (or not), and even possibly make their own}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decisions. One concern with psychedelics is that they can produce}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.162}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychotropic aversive effects, which may be frightening for the patients. We}
+  \ALIUSPlacedTextContent{90.951}{404.488}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{do not want to induce a negative psychological impact with this intervention,}
+  \ALIUSPlacedTextContent{90.951}{423.928}{418.283}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and we have to evaluate the risk-benefit ratio. We have to develop novel}
+  \ALIUSPlacedTextContent{90.951}{443.608}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatments that are the most beneficent and the least harmful. The beneficent}
+  \ALIUSPlacedTextContent{90.951}{463.048}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{obligation that professional caregivers have in these situations calls for the}
+  \ALIUSPlacedTextContent{90.951}{482.488}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{creation of a care ethos that reflects the principle of respect of persons for}
+  \ALIUSPlacedTextContent{90.951}{501.928}{225.181}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these patients (Blain-Moraes et al., 2018).}
+  \ALIUSPlacedTextContent{90.951}{533.609}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To avoid "bad trips" with potential harmful effects, paying attention to}
+  \ALIUSPlacedTextContent{90.951}{553.049}{418.176}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contextual factors will be crucial to create a relaxing setting (e.g., using}
+  \ALIUSPlacedTextContent{90.951}{572.489}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decoration in the room, a comforting glow). Giving clear information to the}
+  \ALIUSPlacedTextContent{90.951}{591.928}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients and their families, and having them at the bedside during the testing,}
+  \ALIUSPlacedTextContent{90.951}{611.369}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{will also increase the likelihood of a safe and positive experience. Another}
+  \ALIUSPlacedTextContent{90.951}{631.048}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{concern is what do we do next if the patient recovers during treatment? The}
+  \ALIUSPlacedTextContent{90.951}{650.489}{418.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects will most probably be temporary and the patients will have to take}
+  \ALIUSPlacedTextContent{90.951}{669.928}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the drug repeatedly (like with zolpidem, some patients take it three times a}
+  \ALIUSPlacedTextContent{90.951}{689.369}{418.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{day to eat). But psychedelics are currently illegal. It is going to be a long battle}
+  \ALIUSPlacedTextContent{90.951}{709.048}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{before the routine implementation of such drugs in the clinic. The legal}
+  \ALIUSPlacedTextContent{90.951}{728.489}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{aspect of studying psychedelic drugs in DOC patients will also need to be}
+  \ALIUSPlacedTextContent{90.951}{747.929}{309.683}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{considered and approved by institutional review boards.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 12
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{494.871}{36.329}{14.415}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{61}
+  \ALIUSPlacedTextContent{90.951}{73.173}{418.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{At the University Hospital of Liège, you are in frequent contact with the}
+  \ALIUSPlacedTextContent{90.951}{90.453}{418.398}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{families of DOC patients. Do you think they might be willing to test this}
+  \ALIUSPlacedTextContent{90.951}{107.733}{203.501}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{potential treatment on their relatives?}
+  \ALIUSPlacedTextContent{90.951}{136.889}{418.164}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Yes, most families want to try everything possible for their loved ones. They}
+  \ALIUSPlacedTextContent{90.951}{156.329}{418.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might however have concerns about side effects, so we have to evaluate the}
+  \ALIUSPlacedTextContent{90.951}{175.769}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{risk-benefit ratio before proposing treatment. Families have to be fully}
+  \ALIUSPlacedTextContent{90.951}{195.208}{418.159}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{informed before providing their consent. They should act in the best interest}
+  \ALIUSPlacedTextContent{90.951}{214.889}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the patient, and think of what (s)he would have liked. If there were (official}
+  \ALIUSPlacedTextContent{90.951}{234.329}{418.217}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or informal) advance directives, families should respect the wishes of the}
+  \ALIUSPlacedTextContent{90.951}{253.769}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients. Collaborating with families in such context is paramount and they}
+  \ALIUSPlacedTextContent{90.951}{273.208}{293.373}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{should participate in the study and provide feedback.}
+  \ALIUSPlacedTextContent{90.951}{305.013}{418.454}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Next to your interest in DOC, you have recently published an article about}
+  \ALIUSPlacedTextContent{90.951}{322.053}{418.486}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{cognitive trance. Do you think there is a link between cognitive trance and}
+  \ALIUSPlacedTextContent{90.951}{339.333}{71.371}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{psychedelics}
+  \ALIUSPlacedTextContent{178.107}{339.333}{13.076}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{in}
+  \ALIUSPlacedTextContent{206.965}{339.333}{34.014}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{terms}
+  \ALIUSPlacedTextContent{256.760}{339.333}{14.639}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{of}
+  \ALIUSPlacedTextContent{287.180}{339.333}{90.411}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{phenomenology}
+  \ALIUSPlacedTextContent{393.373}{339.333}{40.073}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and/or}
+  \ALIUSPlacedTextContent{449.227}{339.333}{60.079}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{underlying}
+  \ALIUSPlacedTextContent{90.951}{356.613}{175.052}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{neurophysiological mechanisms?}
+  \ALIUSPlacedTextContent{90.951}{385.768}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Great question and the short answer is yes, definitively. With my colleague}
+  \ALIUSPlacedTextContent{90.951}{405.208}{418.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dr. Audrey Vanhaudenhuyse and others, we started investigating the effects}
+  \ALIUSPlacedTextContent{90.951}{424.888}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of trance at the phenomenological and neurophysiological level over a year}
+  \ALIUSPlacedTextContent{90.951}{444.328}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ago. There are certainly commonalities between trance and psychedelics.}
+  \ALIUSPlacedTextContent{90.951}{463.768}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Some trance experts report anecdotally that trance is like psychedelic}
+  \ALIUSPlacedTextContent{90.951}{483.208}{418.163}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{without the ingestion of drugs. Here is an excerpt of a trance experience}
+  \ALIUSPlacedTextContent{90.951}{502.648}{418.295}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{related by Corine Sombrun who was trained in Mongolia and who came to}
+  \ALIUSPlacedTextContent{90.951}{522.328}{418.197}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{our laboratory: "I saw a little ant and then I was this ant. I climbed in a tree}
+  \ALIUSPlacedTextContent{90.951}{541.768}{418.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and I fell from it. After, I had visions of insects and big lizards. I experienced}
+  \ALIUSPlacedTextContent{90.951}{561.208}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a transformation again, with the feeling of becoming something else, like an}
+  \ALIUSPlacedTextContent{90.951}{580.648}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{iguana. Then my tongue started to come out with the sensation of a turtle's}
+  \ALIUSPlacedTextContent{90.951}{600.328}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{tongue. After, there were the hisses of snakes, I went through all the reptiles.}
+  \ALIUSPlacedTextContent{90.951}{619.768}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I had a feeling of joy, I wanted to laugh. (…) Then it was pure joy, total}
+  \ALIUSPlacedTextContent{90.951}{639.208}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{happiness and a huge expansion of my perception of self" (Gosseries et al.,}
+  \ALIUSPlacedTextContent{90.951}{658.648}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2019). Regarding the neurophysiological mechanisms, we have conducted an}
+  \ALIUSPlacedTextContent{90.951}{678.328}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{EEG study on a group of trance experts and the analyses are underway. As in}
+  \ALIUSPlacedTextContent{90.951}{697.768}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics, we expect to measure elevated brain activity and complexity,}
+  \ALIUSPlacedTextContent{90.951}{717.208}{315.128}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{along with an augmented consciousness phenomenology.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 13
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-578.631bp) rectangle ++(247.680bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-641.511bp) rectangle ++(208.320bp,-0.720bp);
+  \fill[ALIUSC0000FF] (208.311bp,-720.231bp) rectangle ++(191.040bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{62}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Another link to make is between trance, psychedelic and near-death}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.374}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience (NDE), as some features of NDE seem to be common, such as the}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.335}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feeling of extrasensory perception and ineffability (Martial et al., under}
+  \ALIUSPlacedTextContent{90.951}{131.609}{288.683}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{revision; for a recent review see Martial et al., 2020).}
+  \ALIUSPlacedTextContent{90.951}{163.049}{418.082}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The ultimate nature of consciousness is still full of mysteries but it is evident}
+  \ALIUSPlacedTextContent{90.951}{182.488}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that deepening our knowledge of all the possible states of consciousness can}
+  \ALIUSPlacedTextContent{90.951}{201.928}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{only increase our understanding of the human mind and brain. I think trance}
+  \ALIUSPlacedTextContent{90.951}{221.609}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{studies will open a new window of research possibilities, and maybe one day}
+  \ALIUSPlacedTextContent{90.951}{241.049}{204.128}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we will be able to use it to cure coma.}
+  \ALIUSPlacedTextContent{116.191}{276.519}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{144.511}{286.027}{306.452}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The ultimate nature of consciousness is still full}
+  \ALIUSPlacedTextContent{144.511}{304.027}{306.543}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of mysteries but it is evident that deepening}
+  \ALIUSPlacedTextContent{144.511}{322.027}{306.555}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{our knowledge of all the possible states of}
+  \ALIUSPlacedTextContent{144.511}{340.027}{96.460}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness}
+  \ALIUSPlacedTextContent{257.983}{340.027}{26.908}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{can}
+  \ALIUSPlacedTextContent{301.904}{340.027}{31.704}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{only}
+  \ALIUSPlacedTextContent{350.620}{340.027}{57.389}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{increase}
+  \ALIUSPlacedTextContent{425.023}{340.027}{25.940}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{our}
+  \ALIUSPlacedTextContent{144.511}{358.027}{306.519}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{understanding of the human mind and brain. I}
+  \ALIUSPlacedTextContent{144.511}{376.027}{306.470}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{think trance studies will open a new window of}
+  \ALIUSPlacedTextContent{144.511}{394.027}{306.494}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{research possibilities, and maybe one day we}
+  \ALIUSPlacedTextContent{461.071}{405.639}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{144.511}{412.027}{221.440}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{will be able to use it to cure coma.}
+  \ALIUSPlacedTextContent{264.617}{472.732}{71.454}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
+  \ALIUSPlacedTextContent{90.951}{518.416}{418.180}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Beliveau, V., Ganz, M., Feng, L., Ozenne, B., Højgaard, L., Fisher, P. M., ... \&}
+  \ALIUSPlacedTextContent{126.951}{534.256}{382.003}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Knudsen, G. M. (2017). A high-resolution in vivo atlas of the human brain's}
+  \ALIUSPlacedTextContent{126.951}{549.856}{90.979}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{serotonin system.}
+  \ALIUSPlacedTextContent{217.922}{549.856}{137.687}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neuroscience, 37(1),}
+  \ALIUSPlacedTextContent{355.667}{549.856}{44.476}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{120-128.}
+  \ALIUSPlacedTextContent{126.951}{565.695}{247.641}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/JNEUROSCI.2830-16.2016}
+  \ALIUSPlacedTextContent{90.951}{597.136}{418.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Blain-Moraes, S., Racine, E., \& Mashour, G. A. (2018). Consciousness and}
+  \ALIUSPlacedTextContent{126.951}{612.976}{149.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Personhood in Medical Care.}
+  \ALIUSPlacedTextContent{276.902}{612.976}{164.100}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in human neuroscience, 12}
+  \ALIUSPlacedTextContent{441.024}{612.976}{28.824}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 306.}
+  \ALIUSPlacedTextContent{126.951}{628.576}{208.287}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fnhum.2018.00306}
+  \ALIUSPlacedTextContent{90.951}{660.016}{417.986}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bodart, O., Laureys, S., \& Gosseries, O. (2013). Coma and disorders of}
+  \ALIUSPlacedTextContent{126.951}{675.856}{382.010}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness: scientific advances and practical considerations for}
+  \ALIUSPlacedTextContent{126.951}{691.695}{69.883}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{clinicians. In}
+  \ALIUSPlacedTextContent{199.152}{691.695}{107.477}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Seminars in neurology}
+  \ALIUSPlacedTextContent{306.622}{691.695}{202.348}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(Vol. 33, pp. 83-90). Thieme Medical}
+  \ALIUSPlacedTextContent{126.951}{707.296}{78.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Publishing Inc..}
+  \ALIUSPlacedTextContent{208.429}{707.296}{190.845}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1055/s-0033-1348965}
+  \ALIUSPlacedTextContent{90.951}{738.736}{417.964}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R. L., \& Friston, K. J. (2019). REBUS and the anarchic brain: toward}
+  \ALIUSPlacedTextContent{126.951}{754.576}{260.633}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{a unified model of the brain action of psychedelics.}
+  \ALIUSPlacedTextContent{387.697}{754.576}{79.106}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Pharmacological}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 14
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (235.431bp,-85.911bp) rectangle ++(179.280bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-180.231bp) rectangle ++(222.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (199.431bp,-258.951bp) rectangle ++(165.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (225.591bp,-337.671bp) rectangle ++(206.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-416.391bp) rectangle ++(354.240bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-495.111bp) rectangle ++(233.280bp,-0.720bp);
+  \fill[ALIUSC0000FF] (181.431bp,-636.711bp) rectangle ++(207.120bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-715.431bp) rectangle ++(233.280bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{493.911}{36.329}{15.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{63}
+  \ALIUSPlacedTextContent{126.951}{72.976}{63.530}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{reviews, 71(3),}
+  \ALIUSPlacedTextContent{190.480}{72.976}{45.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{316-344.}
+  \ALIUSPlacedTextContent{235.524}{72.976}{179.279}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1124/pr.118.017160}
+  \ALIUSPlacedTextContent{90.951}{104.416}{418.039}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Casali, A. G. *, Gosseries, O. *, Rosanova, M., Boly, M., Sarasso, S., Casali, K. R., ...}
+  \ALIUSPlacedTextContent{126.951}{120.016}{382.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\& Massimini, M. (2013). A theoretically based index of consciousness}
+  \ALIUSPlacedTextContent{126.951}{135.856}{273.386}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{independent of sensory processing and behavior.}
+  \ALIUSPlacedTextContent{405.196}{135.856}{103.815}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Science translational}
+  \ALIUSPlacedTextContent{126.951}{151.696}{40.418}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{medicine}
+  \ALIUSPlacedTextContent{167.380}{151.696}{137.177}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 5(198), 198ra105-198ra105.}
+  \ALIUSPlacedTextContent{126.951}{167.296}{222.704}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1126/scitranslmed.3006294}
+  \ALIUSPlacedTextContent{90.951}{198.736}{417.911}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Casarotto, S., Comanducci, A., Rosanova, M., Sarasso, S., Fecchio, M., Napolitani,}
+  \ALIUSPlacedTextContent{126.951}{214.576}{382.025}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{M., ... \& Gosseries, O. (2016). Stratification of unresponsive patients by an}
+  \ALIUSPlacedTextContent{126.951}{230.416}{275.607}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{independently validated index of brain complexity.}
+  \ALIUSPlacedTextContent{405.188}{230.416}{103.797}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Annals of neurology,}
+  \ALIUSPlacedTextContent{126.951}{246.016}{26.477}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{80(5),}
+  \ALIUSPlacedTextContent{153.418}{246.016}{42.891}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{718-729.}
+  \ALIUSPlacedTextContent{199.317}{246.016}{165.758}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1002/ana.24779}
+  \ALIUSPlacedTextContent{90.951}{277.456}{418.039}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Chatelle, C. *, Thibaut, A. *, Gosseries, O., Bruno, M. A., Demertzi, A., Bernard,}
+  \ALIUSPlacedTextContent{126.951}{293.296}{381.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{C., ... \& Laureys, S. (2014). Changes in cerebral metabolism in patients with}
+  \ALIUSPlacedTextContent{126.951}{309.136}{280.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{a minimally conscious state responding to zolpidem.}
+  \ALIUSPlacedTextContent{409.361}{309.136}{99.624}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Human}
+  \ALIUSPlacedTextContent{126.951}{324.736}{74.196}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience, 8,}
+  \ALIUSPlacedTextContent{201.166}{324.736}{21.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{917.}
+  \ALIUSPlacedTextContent{225.707}{324.736}{206.421}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fnhum.2014.00917}
+  \ALIUSPlacedTextContent{90.951}{356.176}{418.013}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Clauss, R. P., Güldenpfennig, W. M., Nel, H. W., Sathekge, M. M., \& Venkannagari,}
+  \ALIUSPlacedTextContent{126.951}{372.016}{382.030}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{R. R. (2000). Extraordinary arousal from semi-comatose state on zolpidem.}
+  \ALIUSPlacedTextContent{126.951}{387.856}{172.280}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{South African Medical Journal, 90(1),}
+  \ALIUSPlacedTextContent{299.223}{387.856}{46.760}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{68-72.}
+  \ALIUSPlacedTextContent{126.951}{403.456}{354.145}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://www.ajol.info/index.php/samj/article/download/140537/130277}
+  \ALIUSPlacedTextContent{90.951}{434.896}{418.037}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Estraneo, A., Moretta, P., Loreto, V., Lanzillo, B., Santoro, L., \& Trojano, L. (2010).}
+  \ALIUSPlacedTextContent{126.951}{450.736}{382.042}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Late recovery after traumatic, anoxic, or hemorrhagic long-lasting}
+  \ALIUSPlacedTextContent{126.951}{466.336}{83.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{vegetative state.}
+  \ALIUSPlacedTextContent{210.291}{466.336}{77.967}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neurology, 75(3),}
+  \ALIUSPlacedTextContent{288.276}{466.336}{45.568}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{239-245.}
+  \ALIUSPlacedTextContent{126.951}{482.176}{233.222}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1212/WNL.0b013e3181e8e8cc}
+  \ALIUSPlacedTextContent{90.951}{513.616}{417.965}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Giacino, J. T., Katz, D. I., Schiff, N. D., Whyte, J., Ashman, E. J., Ashwal, S., ... \&}
+  \ALIUSPlacedTextContent{126.951}{529.456}{381.931}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nakase-Richardson, R. (2018). Practice guideline update recommendations}
+  \ALIUSPlacedTextContent{126.951}{545.056}{382.020}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{summary: disorders of consciousness: report of the Guideline Development,}
+  \ALIUSPlacedTextContent{126.951}{560.896}{381.934}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dissemination, and Implementation Subcommittee of the American}
+  \ALIUSPlacedTextContent{126.951}{576.736}{381.947}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Academy of Neurology; the American Congress of Rehabilitation Medicine;}
+  \ALIUSPlacedTextContent{126.951}{592.336}{381.938}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and the National Institute on Disability, Independent Living, and}
+  \ALIUSPlacedTextContent{126.951}{608.176}{127.726}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Rehabilitation Research.}
+  \ALIUSPlacedTextContent{254.284}{608.176}{251.567}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Archives of physical medicine and rehabilitation, 99(9),}
+  \ALIUSPlacedTextContent{126.951}{623.776}{54.382}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1699-1709.}
+  \ALIUSPlacedTextContent{181.342}{623.776}{207.133}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.apmr.2018.07.001}
+  \ALIUSPlacedTextContent{90.951}{655.456}{418.123}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Giacino, J. T. *, Whyte, J. *, Bagiella, E., Kalmar, K., Childs, N., Khademi, A., ... \&}
+  \ALIUSPlacedTextContent{126.951}{671.056}{381.997}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Yablon, S. A. (2012). Placebo-controlled trial of amantadine for severe}
+  \ALIUSPlacedTextContent{126.951}{686.896}{124.131}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{traumatic brain injury.}
+  \ALIUSPlacedTextContent{253.747}{686.896}{205.326}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{New England Journal of Medicine, 366(9),}
+  \ALIUSPlacedTextContent{459.139}{686.896}{49.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{819-826.}
+  \ALIUSPlacedTextContent{126.951}{702.496}{233.222}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1212/WNL.0b013e3181e8e8cc}
+  \ALIUSPlacedTextContent{90.951}{734.176}{402.683}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gosseries, O., Di, H., Laureys, S., \& Boly, M. (2014). Measuring consciousness in}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 15
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-101.511bp) rectangle ++(264.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-180.231bp) rectangle ++(207.120bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-258.951bp) rectangle ++(196.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (232.311bp,-432.231bp) rectangle ++(205.680bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-495.111bp) rectangle ++(223.200bp,-0.720bp);
+  \fill[ALIUSC0000FF] (168.231bp,-557.991bp) rectangle ++(172.800bp,-0.720bp);
+  \fill[ALIUSC0000FF] (238.311bp,-621.111bp) rectangle ++(195.600bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{493.191}{36.329}{16.081}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{64}
+  \ALIUSPlacedTextContent{126.951}{72.976}{128.050}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{severely damaged brains.}
+  \ALIUSPlacedTextContent{255.010}{72.976}{145.715}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Annual Review of Neuroscience}
+  \ALIUSPlacedTextContent{400.764}{72.976}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{406.692}{72.976}{12.377}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{37,}
+  \ALIUSPlacedTextContent{419.080}{72.976}{47.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{457-478.}
+  \ALIUSPlacedTextContent{126.951}{88.576}{264.367}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1146/annurev-neuro-062012-170339}
+  \ALIUSPlacedTextContent{90.951}{120.016}{418.059}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gosseries, O. *, Fecchio, M. *, Wolff, A., Sanz, L., Sombrun, C., Vanhaudenhuyse,}
+  \ALIUSPlacedTextContent{126.951}{135.856}{382.117}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{A., \& Laureys, S. (2019). Behavioural and brain responses in cognitive trance:}
+  \ALIUSPlacedTextContent{126.951}{151.696}{124.797}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{A TMS-EEG case study.}
+  \ALIUSPlacedTextContent{251.735}{151.696}{149.533}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Clinical neurophysiology, 131(2),}
+  \ALIUSPlacedTextContent{401.296}{151.696}{45.542}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{586-588.}
+  \ALIUSPlacedTextContent{126.951}{167.296}{207.107}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.clinph.2019.11.011}
+  \ALIUSPlacedTextContent{90.951}{198.736}{417.953}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gosseries, O., Sarasso, S., Casarotto, S., Boly, M., Schnakers, C., Napolitani, M., ...}
+  \ALIUSPlacedTextContent{126.951}{214.576}{382.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\& Laureys, S. (2015). On the cerebral origin of EEG responses to TMS:}
+  \ALIUSPlacedTextContent{126.951}{230.416}{207.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{insights from severe cortical lesions.}
+  \ALIUSPlacedTextContent{340.034}{230.416}{118.828}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain stimulation, 8(1),}
+  \ALIUSPlacedTextContent{458.883}{230.416}{50.101}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{142-149.}
+  \ALIUSPlacedTextContent{126.951}{246.016}{196.409}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.brs.2014.10.008}
+  \ALIUSPlacedTextContent{90.951}{277.456}{418.148}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gosseries, O. *, Schnakers, C. *, Ledoux, D., Vanhaudenhuyse, A., Bruno, M. A.,}
+  \ALIUSPlacedTextContent{126.951}{293.296}{381.975}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Demertzi, A., ... \& Peeters, E. (2011). Automated EEG entropy measurements}
+  \ALIUSPlacedTextContent{126.951}{309.136}{382.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{in coma, vegetative state/unresponsive wakefulness syndrome and}
+  \ALIUSPlacedTextContent{126.951}{324.736}{135.670}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{minimally conscious state.}
+  \ALIUSPlacedTextContent{262.641}{324.736}{128.064}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Functional neurology, 26(1),}
+  \ALIUSPlacedTextContent{390.713}{324.736}{19.178}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{25.}
+  \ALIUSPlacedTextContent{90.951}{356.176}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gosseries, O., Thibaut, A., Boly, M., Rosanova, M., Massimini, M., \& Laureys, S.}
+  \ALIUSPlacedTextContent{126.951}{372.016}{382.004}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2014, February). Assessing consciousness in coma and related states using}
+  \ALIUSPlacedTextContent{126.951}{387.856}{382.087}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{transcranial magnetic stimulation combined with electroencephalography.}
+  \ALIUSPlacedTextContent{126.951}{403.456}{378.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{In Annales françaises d'anesthésie et de réanimation (Vol. 33, No. 2, pp. 65-}
+  \ALIUSPlacedTextContent{126.951}{419.296}{102.424}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{71). Elsevier Masson.}
+  \ALIUSPlacedTextContent{232.375}{419.296}{205.481}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{http://doi.org/10.1016/j.annfar.2013.11.002}
+  \ALIUSPlacedTextContent{90.951}{450.736}{418.020}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gosseries, O., Zasler, N. D., \& Laureys, S. (2014). Recent advances in disorders of}
+  \ALIUSPlacedTextContent{126.951}{466.336}{216.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness: focus on the diagnosis.}
+  \ALIUSPlacedTextContent{349.224}{466.336}{101.871}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain injury, 28(9),}
+  \ALIUSPlacedTextContent{451.122}{466.336}{57.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1141-1150.}
+  \ALIUSPlacedTextContent{126.951}{482.176}{223.255}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3109/02699052.2014.920522}
+  \ALIUSPlacedTextContent{90.951}{513.616}{418.043}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Koch, C., Massimini, M., Boly, M., \& Tononi, G. (2016). Neural correlates of}
+  \ALIUSPlacedTextContent{126.951}{529.456}{202.631}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness: progress and problems.}
+  \ALIUSPlacedTextContent{332.163}{529.456}{173.768}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature Reviews Neuroscience, 17(5),}
+  \ALIUSPlacedTextContent{126.951}{545.056}{38.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{307-321.}
+  \ALIUSPlacedTextContent{168.144}{545.056}{172.809}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/nrn.2016.22}
+  \ALIUSPlacedTextContent{90.951}{576.736}{418.050}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Martial, C., Cassol, H., Laureys, S., \& Gosseries, O. (2020). Near-death experience}
+  \ALIUSPlacedTextContent{126.951}{592.336}{278.683}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{as a probe to explore (disconnected) consciousness.}
+  \ALIUSPlacedTextContent{408.677}{592.336}{100.301}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive}
+  \ALIUSPlacedTextContent{126.951}{608.176}{67.910}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Sciences, 24(3),}
+  \ALIUSPlacedTextContent{194.835}{608.176}{40.477}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{173-183.}
+  \ALIUSPlacedTextContent{238.316}{608.176}{195.598}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.tics.2019.12.010}
+  \ALIUSPlacedTextContent{90.951}{639.616}{418.025}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Martial, C., J. Simon, N. Puttaert, O. Gosseries, V. Charland-Verville, B. Greyson,}
+  \ALIUSPlacedTextContent{126.951}{655.456}{378.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{… H. Cassol (Under revision). The Near-Death Experience Content (NDE-}
+  \ALIUSPlacedTextContent{126.951}{671.056}{263.402}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{C) scale: development and psychometric validation.}
+  \ALIUSPlacedTextContent{90.951}{702.496}{418.111}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Pal, D., Li, D., Dean, J. G., Brito, M. A., Liu, T., Fryzel, A. M., ... \& Mashour, G. A.}
+  \ALIUSPlacedTextContent{126.951}{718.336}{382.017}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2020). Level of consciousness is dissociable from electroencephalographic}
+  \ALIUSPlacedTextContent{126.951}{734.176}{344.874}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{measures of cortical connectivity, slow oscillations, and complexity.}
+  \ALIUSPlacedTextContent{471.904}{734.176}{37.057}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 16
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-101.511bp) rectangle ++(245.760bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-180.231bp) rectangle ++(207.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-258.951bp) rectangle ++(184.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (252.951bp,-337.671bp) rectangle ++(198.000bp,-0.720bp);
+  \fill[ALIUSC0000FF] (208.311bp,-416.391bp) rectangle ++(165.840bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-479.271bp) rectangle ++(198.960bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-542.391bp) rectangle ++(223.200bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-605.271bp) rectangle ++(166.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-699.831bp) rectangle ++(230.400bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{65}
+  \ALIUSPlacedTextContent{126.951}{72.976}{106.086}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of Neuroscience, 40(3),}
+  \ALIUSPlacedTextContent{233.028}{72.976}{38.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{605-618}
+  \ALIUSPlacedTextContent{271.507}{72.976}{2.553}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.951}{88.576}{245.678}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/JNEUROSCI.1910-19.2019}
+  \ALIUSPlacedTextContent{90.951}{120.016}{418.100}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Piarulli, A., Bergamasco, M., Thibaut, A., Cologan, V., Gosseries, O., \& Laureys, S.}
+  \ALIUSPlacedTextContent{126.951}{135.856}{382.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2016). EEG ultradian rhythmicity differences in disorders of consciousness}
+  \ALIUSPlacedTextContent{126.951}{151.696}{102.882}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{during wakefulness.}
+  \ALIUSPlacedTextContent{229.843}{151.696}{129.953}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of neurology, 263(9),}
+  \ALIUSPlacedTextContent{359.866}{151.696}{58.117}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1746-1760.}
+  \ALIUSPlacedTextContent{126.951}{167.296}{207.562}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00415-016-8196-y}
+  \ALIUSPlacedTextContent{90.951}{198.736}{418.058}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Rosanova, M. *, Gosseries, O. *, Casarotto, S., Boly, M., Casali, A. G., Bruno, M. A.,}
+  \ALIUSPlacedTextContent{126.951}{214.576}{382.126}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{... \& Massimini, M. (2012). Recovery of cortical effective connectivity and}
+  \ALIUSPlacedTextContent{126.951}{230.416}{245.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{recovery of consciousness in vegetative patients.}
+  \ALIUSPlacedTextContent{372.189}{230.416}{60.793}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain, 135(4),}
+  \ALIUSPlacedTextContent{433.014}{230.416}{55.565}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1308-1320.}
+  \ALIUSPlacedTextContent{126.951}{246.016}{184.505}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/brain/awr340}
+  \ALIUSPlacedTextContent{90.951}{277.456}{418.038}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Sarasso, S. *, Boly, M. *, Napolitani, M., Gosseries, O., Charland-Verville, V.,}
+  \ALIUSPlacedTextContent{126.951}{293.296}{381.921}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Casarotto, S., ... \& Rex, S. (2015). Consciousness and complexity during}
+  \ALIUSPlacedTextContent{126.951}{309.136}{337.492}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{unresponsiveness induced by propofol, xenon, and ketamine.}
+  \ALIUSPlacedTextContent{469.109}{309.136}{39.873}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current}
+  \ALIUSPlacedTextContent{126.951}{324.736}{68.960}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Biology, 25(23),}
+  \ALIUSPlacedTextContent{195.940}{324.736}{57.073}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{3099-3105.}
+  \ALIUSPlacedTextContent{253.022}{324.736}{199.249}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.cub.2015.10.014}
+  \ALIUSPlacedTextContent{90.951}{356.176}{417.954}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Schartner, M. M., Carhart-Harris, R. L., Barrett, A. B., Seth, A. K., \&}
+  \ALIUSPlacedTextContent{126.951}{372.016}{382.053}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Muthukumaraswamy, S. D. (2017). Increased spontaneous MEG signal}
+  \ALIUSPlacedTextContent{126.951}{387.856}{336.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{diversity for psychoactive doses of ketamine, LSD and psilocybin.}
+  \ALIUSPlacedTextContent{463.598}{387.856}{45.386}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Scientific}
+  \ALIUSPlacedTextContent{126.951}{403.456}{45.412}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{reports, 7,}
+  \ALIUSPlacedTextContent{172.371}{403.456}{35.948}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{46421.}
+  \ALIUSPlacedTextContent{208.328}{403.456}{165.668}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/srep46421}
+  \ALIUSPlacedTextContent{90.951}{434.896}{417.980}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Schiff, N. D. (2010). Recovery of consciousness after brain injury: a mesocircuit}
+  \ALIUSPlacedTextContent{126.951}{450.736}{59.104}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{hypothesis.}
+  \ALIUSPlacedTextContent{186.086}{450.736}{137.052}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in neurosciences, 33(1),}
+  \ALIUSPlacedTextContent{323.194}{450.736}{23.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1-9.}
+  \ALIUSPlacedTextContent{126.951}{466.336}{198.943}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.tins.2009.11.002}
+  \ALIUSPlacedTextContent{90.951}{498.016}{417.954}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Schiff, N. D. (2015). Cognitive motor dissociation following severe brain injuries.}
+  \ALIUSPlacedTextContent{126.951}{513.616}{111.233}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{JAMA neurology, 72(12),}
+  \ALIUSPlacedTextContent{238.228}{513.616}{52.198}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1413-1415.}
+  \ALIUSPlacedTextContent{126.951}{529.456}{223.126}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1001/jamaneurol.2015.2899}
+  \ALIUSPlacedTextContent{90.951}{560.896}{418.086}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Scott, G., \& Carhart-Harris, R. L. (2019). Psychedelics as a treatment for disorders}
+  \ALIUSPlacedTextContent{126.951}{576.736}{13.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of}
+  \ALIUSPlacedTextContent{153.084}{576.736}{74.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness.}
+  \ALIUSPlacedTextContent{241.020}{576.736}{62.649}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
+  \ALIUSPlacedTextContent{316.590}{576.736}{11.612}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of}
+  \ALIUSPlacedTextContent{341.124}{576.736}{66.757}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{consciousness,}
+  \ALIUSPlacedTextContent{420.802}{576.736}{33.618}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{2019(1),}
+  \ALIUSPlacedTextContent{470.396}{576.736}{38.587}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{niz003.}
+  \ALIUSPlacedTextContent{126.951}{592.336}{166.445}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/nc/niz003}
+  \ALIUSPlacedTextContent{90.951}{623.776}{417.994}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Stender, J. *, Gosseries, O. *, Bruno, M. A., Charland-Verville, V., Vanhaudenhuyse,}
+  \ALIUSPlacedTextContent{126.951}{639.616}{381.947}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{A., Demertzi, A., ... \& Soddu, A. (2014). Diagnostic precision of PET imaging}
+  \ALIUSPlacedTextContent{126.951}{655.456}{381.935}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and functional MRI in disorders of consciousness: a clinical validation}
+  \ALIUSPlacedTextContent{126.951}{671.056}{33.113}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{study.}
+  \ALIUSPlacedTextContent{160.060}{671.056}{104.337}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Lancet, 384(9942),}
+  \ALIUSPlacedTextContent{264.397}{671.056}{47.141}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{514-522.}
+  \ALIUSPlacedTextContent{126.951}{686.896}{230.465}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/S0140-6736(14)60042-8}
+  \ALIUSPlacedTextContent{90.951}{718.336}{417.960}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Thibaut, A., Bruno, M. A., Ledoux, D., Demertzi, A., \& Laureys, S. (2014). tDCS in}
+  \ALIUSPlacedTextContent{126.951}{734.176}{381.997}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{patients with disorders of consciousness: sham-controlled randomized}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 17
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-101.511bp) rectangle ++(243.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-196.071bp) rectangle ++(195.840bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-274.791bp) rectangle ++(226.080bp,-0.720bp);
+  \fill[ALIUSC0000FF] (247.431bp,-353.511bp) rectangle ++(241.920bp,-0.720bp);
+  \fill[ALIUSC0000FF] (178.551bp,-432.231bp) rectangle ++(228.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-510.951bp) rectangle ++(246.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (237.111bp,-589.671bp) rectangle ++(170.880bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{327.448}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Gosseries – Psychedelics in the Treatment of DOC}
+  \ALIUSPlacedTextContent{492.951}{36.329}{16.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{66}
+  \ALIUSPlacedTextContent{126.951}{72.976}{68.716}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{double-blind}
+  \ALIUSPlacedTextContent{232.571}{72.976}{33.095}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{study.}
+  \ALIUSPlacedTextContent{302.573}{72.976}{53.434}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neurology,}
+  \ALIUSPlacedTextContent{392.904}{72.976}{28.849}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{82(13),}
+  \ALIUSPlacedTextContent{461.712}{72.976}{47.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1112-1118.}
+  \ALIUSPlacedTextContent{126.951}{88.576}{243.551}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1212/WNL.0000000000000260}
+  \ALIUSPlacedTextContent{90.951}{120.016}{418.028}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Thibaut, A. *, Di Perri, C. *, Chatelle, C., Bruno, M. A., Bahri, M. A., Wannez, S.,}
+  \ALIUSPlacedTextContent{126.951}{135.856}{381.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{... \& Hustinx, R. (2015). Clinical response to tDCS depends on residual brain}
+  \ALIUSPlacedTextContent{126.951}{151.696}{382.077}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{metabolism and grey matter integrity in patients with minimally conscious}
+  \ALIUSPlacedTextContent{126.951}{167.296}{29.523}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{state.}
+  \ALIUSPlacedTextContent{156.485}{167.296}{111.324}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain Stimulation, 8(6),}
+  \ALIUSPlacedTextContent{267.815}{167.296}{50.742}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1116-1123.}
+  \ALIUSPlacedTextContent{126.951}{183.136}{195.810}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.brs.2015.07.024}
+  \ALIUSPlacedTextContent{90.951}{214.576}{417.973}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Thibaut, A., Schiff, N., Giacino, J., Laureys, S., \& Gosseries, O. (2019). Therapeutic}
+  \ALIUSPlacedTextContent{126.951}{230.416}{359.775}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{interventions in patients with prolonged disorders of consciousness.}
+  \ALIUSPlacedTextContent{488.518}{230.416}{20.465}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The}
+  \ALIUSPlacedTextContent{126.951}{246.016}{115.603}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Lancet Neurology, 18(6),}
+  \ALIUSPlacedTextContent{242.557}{246.016}{44.463}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{600-614.}
+  \ALIUSPlacedTextContent{126.951}{261.856}{226.123}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/S1474-4422(19)30031-6}
+  \ALIUSPlacedTextContent{90.951}{293.296}{418.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Varley, T. F., Carhart-Harris, R., Roseman, L., Menon, D. K., \& Stamatakis, E. A.}
+  \ALIUSPlacedTextContent{126.951}{309.136}{382.046}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2020). Serotonergic psychedelics LSD \& psilocybin increase the fractal}
+  \ALIUSPlacedTextContent{126.951}{324.736}{382.089}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dimension of cortical brain activity in spatial and temporal domains.}
+  \ALIUSPlacedTextContent{126.951}{340.576}{79.561}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroimage, 220,}
+  \ALIUSPlacedTextContent{206.535}{340.576}{40.953}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{117049.}
+  \ALIUSPlacedTextContent{247.497}{340.576}{241.801}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.neuroimage.2020.117049}
+  \ALIUSPlacedTextContent{90.951}{372.016}{418.031}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Whyte, J. *, Gosseries, O. *, Chervoneva, I., DiPasquale, M. C., Giacino, J., Kalmar,}
+  \ALIUSPlacedTextContent{126.951}{387.856}{378.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{K., ... \& Mercer, W. (2009). Predictors of short-term outcome in brain-}
+  \ALIUSPlacedTextContent{126.951}{403.456}{253.137}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{injured patients with disorders of consciousness.}
+  \ALIUSPlacedTextContent{381.116}{403.456}{127.831}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Progress in brain research,}
+  \ALIUSPlacedTextContent{126.951}{419.296}{16.740}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{177,}
+  \ALIUSPlacedTextContent{143.707}{419.296}{34.739}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{63-72.}
+  \ALIUSPlacedTextContent{178.455}{419.296}{228.779}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/S0079-6123(09)17706-3}
+  \ALIUSPlacedTextContent{90.951}{450.736}{417.967}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Whyte, J., Rajan, R., Rosenbaum, A., Katz, D., Kalmar, K., Seel, R., ... \& Kaelin, D.}
+  \ALIUSPlacedTextContent{126.951}{466.336}{274.804}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2014). Zolpidem and restoration of consciousness.}
+  \ALIUSPlacedTextContent{405.269}{466.336}{103.696}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{American Journal of}
+  \ALIUSPlacedTextContent{126.951}{482.176}{195.993}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Physical Medicine \& Rehabilitation, 93(2),}
+  \ALIUSPlacedTextContent{322.948}{482.176}{41.356}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{101-113.}
+  \ALIUSPlacedTextContent{126.951}{498.016}{246.739}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1097/PHM.0000000000000069}
+  \ALIUSPlacedTextContent{90.951}{529.456}{418.055}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Williams, S. T., Conte, M. M., Goldfine, A. M., Noirhomme, Q., Gosseries, O.,}
+  \ALIUSPlacedTextContent{126.951}{545.056}{381.905}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Thonnard, M., ... \& Laureys, S. (2013). Common resting brain dynamics}
+  \ALIUSPlacedTextContent{126.951}{560.896}{382.167}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{indicate a possible mechanism underlying zolpidem response in severe brain}
+  \ALIUSPlacedTextContent{126.951}{576.736}{36.011}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{injury.}
+  \ALIUSPlacedTextContent{162.960}{576.736}{34.393}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Elife, 2,}
+  \ALIUSPlacedTextContent{197.383}{576.736}{39.666}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{e01157.}
+  \ALIUSPlacedTextContent{237.058}{576.736}{170.748}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.7554/eLife.01157}
+  \ALIUSPlacedTextContent{90.951}{608.176}{114.739}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{* Contributed equally}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

@@ -1,38 +1,530 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.2756bp,paperheight=841.8898bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{The dimensions of consciousness: From perceptual illusions to psychedelics}
-\author{Olivia Carter Interviewed by Katrin H. Preller}
-\date{ALIUS Bulletin 4}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC0000FF}{HTML}{0000FF}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/mtdv-hb39\par
-\textbf{Keywords:} dimensions of consciousness, psychedelics, visual perception, artificial intelligence, content of consciousness\par
-\section*{Abstract}
-In this interview, the psychologist and neuroscientist Olivia Carter (University of Melbourne, Australia) explains how she became interested in the field of consciousness. We discuss how her work on visual perception has led her to study the effect of psychedelics and how this has inspired a multidimensional model of consciousness. We discuss the potential contents of "higher" states of consciousness and argue that the existence of those is an unresolved question. We finish the exchange on the challenges for successful demonstration of artificial intelligence and by discussing the most important questions that the field needs to ask and answer in order to move forward.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin The Dimensions of Consciousness: From perceptual illusions to psychedelics An interview with Olivia Carter by Katrin H. Preller Olivia Carter ocarter@unimelb.edu.au University of Melbourne, Australia Katrin H. Preller preller@bli.uzh.ch Psychatric Hospital University, Zurich, Switzerland Cite as: Carter, O. \& Preller, K.H. (2020). The Dimensions of Consciousness: From perceptual illusions to psychedelics. An interview with Olivia Carter by Katrin H. Preller. ALIUS Bulletin, 4, 40-48, https://doi.org/10.34700/mtdv-hb39 Abstract In this interview, the psychologist and neuroscientist Olivia Carter (University of Melbourne, Australia) explains how she became interested in the field of consciousness. We discuss how her work on visual perception has led her to study the effect of psychedelics and how this has inspired a multidimensional model of consciousness. We discuss the potential contents of "higher" states of consciousness and argue that the existence of those is an unresolved question. We finish the exchange on the challenges for successful demonstration of artificial intelligence and by discussing the most important questions that the field needs to ask and answer in order to move forward. keywords: dimensions of consciousness, psychedelics, visual perception, artificial intelligence, content of consciousness You are a psychologist and neuroscientist. How did you get interested in studying consciousness? What do you think is fascinating about it and why do you think it is important? Ever since I was a little kid, I had trouble falling asleep at night. So largely out of boredom, I remember playing games in my head trying to imagine unusual things. As I got older, I found it amazing that a brain was able to create so many different experiences. The more I learnt about neurons and the brain, the more I became fascinated by the fact that the lump of jelly in my skull could be creating all of the experiences that make me me. Olivia Carter - The Dimensions of Consciousness ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 41 For medical reasons I think it is important to understand how the brain generates a conscious experience. Either in cases of brain damage and an individual's experiences are drastically reduced or in psychiatric disorders where people can have incorrect experiences that are terrifying or confusing. I hope that the science of consciousness can progress enough to really help the lives of these different patients. A lot of your work is focusing on visual perception. What can we learn from the visual system to understand consciousness? It is true that much of my work has focused on vision. This has particularly involved multi-stable or ambiguous stimuli that can be validly interpreted by the brain in more than one way. These types of stimuli are very popular in consciousness science because an individual's conscious experience will fluctuate despite the stimulus remaining constant. A very striking example is binocular rivalry when two different images are simultaneously presented to the two eyes. During sustained viewing of binocular rivalry stimuli, a person will perceive one eye's image for a few seconds while the other eye's image is completely suppressed from awareness. As the images remain presented the entire time it is possible to distinguish the neural responses associated with the stimulus processing and the conscious awareness of the stimuli. However, as I tell a lot of my students, the focus on vision is not really because vision is more interesting than other sensory modalities. It is mainly a quirk of history and technology that most of the early work in sensation focused on vision because it was possible to use prisms and physically build stimuli that could be used in vision experiments in a way that was much harder for audition and tactile experiments. So while a lot of my work has focused on vision, I share the view of many people that insights gained from vision will likely be relevant to understanding other sensory modalities. In fact, a few years ago I published a paper with some colleagues at MIT that demonstrated the first example of a perceptual illusion (perceptual rivalry) in the tactile domain by creating a tactile stimulus that mimicked the vision example (Carter, Konkle, Wang, Hayward, \& Moore, 2008). From 2002 to 2004, you worked in Zurich and conducted experiments with psilocybin. Why did you move half-way around the world to work with psychedelics? Olivia Carter - The Dimensions of Consciousness ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 42 During my PhD, I travelled to Zurich twice (each time for around 8 months) to conduct two different studies with psychedelics (Carter et al., 2004; Carter, Burr, et al., 2005; Carter, Pettigrew, et al., 2005; Carter et al., 2007; Wittmann et al., 2007). To be honest, a big motivation for the first visit was a desire to do something different and exciting and have an excuse to travel outside of Australia. By the time I completed the first study and was getting ready to head back home back to Australia, I had a better understanding of the types of research questions that could be explored with psychedelics and I could see that there was a real opportunity to do some interesting research. What did you learn from studying psychedelics? I still find it amazing that the majority of the effects of psychedelics are so selectively attributable to activity of the serotonin 2A receptor. It is that specificity that really interests me. As mentioned above, my main interest is in understanding how the brain generates a conscious experience. So to me, the psychedelic research really highlights the activation of this particular receptor in mediating conscious experiences. We still do not have a good understanding of why people typically hallucinate when the serotonin 2A receptor is activated, while typically they do not hallucinate when the other 200+ receptors are activated. Psychedelics are currently being tested in the treatment of various psychiatric disorders (Bogenschutz et al., 2015; Carhart-Harris et al., 2016; Griffiths et al., 2016). However, the mechanism underlying their potential clinical efficacy is still not clear. Specifically, it is unknown whether the psychedelic experience is even necessary for the therapeutic effect. Based on your experimental and theoretical work with these substances, do you think that the alterations in consciousness induced by psychedelics are related to the therapeutic outcome? I am not sure. Again, I think this is a very important question. Given that the drug has clear consistent effects on certain receptors and brain circuits, I definitely consider it plausible that these changes may induce therapeutic effects by themselves. I know a lot of people are suggesting that it is the nature of the experience and the quality of the associated psychotherapy sessions that are critical to the therapeutic effect rather than a direct pharmacological effect of the drug. If this turns out to be true, then it will Olivia Carter - The Dimensions of Consciousness ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 43 obviously be very important to understand which aspects of the experience and the therapy are important. It will also then be necessary to somehow control the use of these drugs to ensure that people have the desired experiences and therapy. I worry that this could be very hard to achieve if the goal is to also treat large numbers of patients with psychedelic therapy. However, I am also aware that there are many groups around the world thinking about these issues. So I will be interested to see how the clinical research unfolds. Your recent article (Bayne \& Carter, 2018) received a lot of attention. Here, you argue against unidimensional theories of consciousness. Could you summarize the idea briefly and tell us how it relates to or conflicts with other theories of consciousness? The article was written in collaboration with the philosopher Tim Bayne who has written a number of different papers arguing against the idea that consciousness is a single thing that can go up or down along a single dimension (Bayne, 2014; Bayne, Hohwy, \& Owen, 2016, 2017). In the past, people had focused on states that are typically considered "lower" like brain trauma or anesthesia. In these cases, as people move towards a state of unconsciousness, it is intuitive to imagine that everything just gets reduced somehow until the person is no-longer conscious. One problem with examples such as anesthesia or brain trauma is that they are very hard to study as the people themselves are typically unable to respond. As a result, much of the past writing has been theoretical or hypothetical. The psychedelic case allowed us to ask a different type of questions. What would it mean for an individual to be more conscious? Very quickly it becomes clear that there are multiple ways in which ways a person could be considered more conscious. An interesting conclusion of our paper was that the psychedelic state seems to lead to increases along some dimensions (such a perceptual intensity) and decreases in other dimensions (particularly those related to cognitive functions). The key message is supposed to be that it is inappropriate or over-simplistic to view consciousness as a single "thing" that can be considered to exist in higher or lower states " " Olivia Carter - The Dimensions of Consciousness ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 44 In your article, you therefore argue that the psychedelic state cannot be described as a "higher" state of consciousness. How was this received? It was interesting that a number of people were angered by our paper. It is possible that people simply did not like the paper, but I think the biggest issue is that we concluded that it would be inappropriate to consider psychedelics to be a higher state of consciousness. Some people interpreted this as an argument to consider psychedelics a lower state of consciousness. That was really not our intention. The key message is supposed to be that it is inappropriate or over-simplistic to view consciousness as a single "thing" that can be considered to exist in higher or lower states. So to anyone asking the question of whether or not psychedelics lead to higher states of consciousness, I would say that this is the wrong question to ask. Psychedelics clearly lead to very unusual states of consciousness and they can be used to better understand consciousness and the underlying neural processes that determine an individual's experience from one moment to the next. Do you think that a state in which consciousness is increased on all dimensions even exists? And if yes, how would it feel like? That is an excellent question. Before I started working on the paper with Tim, I think I probably would have assumed there definitely would be. Now I am not so sure. The question certainly depends on what features you consider relevant to consciousness, but I think most emphasize some aspect of diversity and intensity of sensory experience while also acknowledging the importance of functional use of currently and previously experienced sensory information. For example, simple tasks such as recalling a phone number, writing a letter, or cooking a meal require us to integrate information from both our present and our past experiences. It is unclear to me that these types of tasks that require an element of concentration and focus will be enhanced or increased by increasing the diversity of sensory experience in that moment. Most people turn down music and find quiet places to work when they need to concentrate. So maybe there is an element of push and pull in terms of brain resources or functions. I think consciousness researchers would benefit from more thought given to the question of what it would mean for themselves or any other person to be more conscious than normal. Olivia Carter - The Dimensions of Consciousness ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 45 On your webpage, one of the questions you are asking is "What are the factors that determine the contents of an individual's conscious experience?" What is your current answer to this question? There are a lot of factors! I think this remains an under-explored question. I think the lessons from the paper with Tim Bayne (Bayne \& Carter, 2018) are that we need to understand both the individual factors and the particular dimension of consciousness that they impact. For example, the factors that impact the experience of intense pain will be very different to the factors that enable an architect to construct a mental image of a new house design. In the case of pain, the level is likely to depend on stimulation of the specific receptors and neural pathways involved. Pain is an extremely important experience, but it is relatively simple and reflects events happening in the moment. In the case of complex building designs an individual will likely need to draw on years of educational training and experience with a mix of some creativity and consideration of budgetary factors and other practical constraints. If we want to truly understand the brain processes involved in conscious experiences, then we need to fully understand how different factors contribute to very different types of human experiences. In another recent article (Carter et al., 2018) you ask a different but somewhat related question: "What would constitute successful demonstration of artificial intelligence?" What is your answer to this question? I still do not have a good answer to that question unfortunately. Again, I think the community needs to think more about the different capacities that we would expect to see and consider which capacities are already demonstrated in existing systems. I think an equally important question is which capacities we care more about. It might be the case that we have greater concerns about capacities that are not as complex. For example, concepts like free-will are often considered uniquely human, but there are I think consciousness researchers would benefit from more thought given to the question of what it would mean for themselves or any other person to be more conscious than normal. " " Olivia Carter - The Dimensions of Consciousness ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 46 already artificial intelligence (AI) systems that can formulate their own goals. In the last few years, there has been a lot more discussion around these questions. My guess is that these conversations will advance a lot in the next few years. Speaking of the future, in which direction does the field need to move to make progress in understanding consciousness? I think we need to start focusing on the details. Consciousness is a great umbrella term. I do not think we need a new definition of consciousness, but rather we need to be clearer about which aspects or dimensions of consciousness that individual experiments are testing. Do you have a recommendation for young researchers who want to study consciousness? My advice relates a lot to my answer to the previous question. I think the term consciousness covers a lot of things. It is worth thinking about what aspects of consciousness you are really interested in. There is a lot of research at the moment looking at different brain processes and their relation to consciousness. There are mathematicians and computer scientists trying to understand and simulate the complexity and information integration achieved by the human brain. At the other extreme there are philosophers really trying to understand the experiential side of consciousness. I think all of these areas of research are very important, but they are also very different and require different types of skills and I think they trigger different types of curiosities. So I think if someone believes they would like to study consciousness, I would suggest they start by reflecting more on what aspect of consciousness they would like to better understand. I do not think we need a new definition of consciousness, but rather we need to be clearer about which aspects of dimensions of consciousness that individual experiments are testing. " " Olivia Carter - The Dimensions of Consciousness ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 47 References Bayne, T. (2014). The Unity of Consciousness. Analysis, 74(3), 488-490. https://doi.org/10.1093/analys/anu054 Bayne, T., \& Carter, O. (2018). Dimensions of consciousness and the psychedelic state. Neurosci Conscious, 2018(1), niy008. https://doi.org/10.1093/nc/niy008 Bayne, T., Hohwy, J., \& Owen, A. M. (2016). Are There Levels of Consciousness? Trends in Cognitive Sciences, 20(6), 405-413. https://doi.org/10.1016/j.tics.2016.03.009 Bayne, T., Hohwy, J., \& Owen, A. M. (2017). Reforming the taxonomy in disorders of consciousness. Annals of Neurology, 82(6), 866-872. https://doi.org/10.1002/ana.25088 Bogenschutz, M. P., Forcehimes, A. A., Pommy, J. A., Wilcox, C. E., Barbosa, P. C., \& Strassman, R. J. (2015). Psilocybin-assisted treatment for alcohol dependence: a proof-of-concept study. J Psychopharmacol, 29(3), 289-299. https://doi.org/10.1177/0269881114565144 Carhart-Harris, R. L., Bolstridge, M., Rucker, J., Day, C. M., Erritzoe, D., Kaelen, M., Bloomfield, M., Rickard, J. A., Forbes, B., Feilding, A., Taylor, D., Piling, S., Curran, V. H., Nutt, D. J. (2016). Psilocybin with psychological support for treatment-resistant depression: an open-label feasibility study. Lancet Psychiatry, 3(7), 619-627. https://doi.org/10.1016/S2215-0366(16)30065-7 Carter, O., Hohwy, J., van Boxtel, J., Lamme, V., Block, N., Koch, C., \& Tsuchiya, N. (2018). Conscious machines: Defining questions. Science, 359(6374), 400- 400. https://doi.org/10.1126/science.aar4163 Carter, O., Konkle, T., Wang, Q., Hayward, V., \& Moore, C. (2008). Tactile rivalry demonstrated with an ambiguous apparent-motion quartet. Curr Biol, 18(14), 1050-1054. https://doi.org/10.1016/j.cub.2008.06.027 Carter, O. L., Burr, D. C., Pettigrew, J. D., Wallis, G. M., Hasler, F., \& Vollenweider, F. X. (2005). Using psilocybin to investigate the relationship between attention, working memory, and the serotonin 1A and 2A receptors. Journal of Cognitive Neuroscience, 17(10), 1497-1508. https://doi.org/10.1162/089892905774597191 Carter, O. L., Hasler, F., Pettigrew, J. D., Wallis, G. M., Liu, G. B., \& Vollenweider, F. X. (2007). Psilocybin links binocular rivalry switch rate to attention and Olivia Carter - The Dimensions of Consciousness ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 48 subjective arousal levels in humans. Psychopharmacology (Berl), 195(3), 415-424. https://doi.org/10.1007/s00213-007-0930-9 Carter, O. L., Pettigrew, J. D., Burr, D. C., Alais, D., Hasler, F., \& Vollenweider, F. X. (2004). Psilocybin impairs high-level but not low-level motion perception. Neuroreport, 15(12), 1947-1951. https://doi.org/10.1097/00001756- 200408260-00023 Carter, O. L., Pettigrew, J. D., Hasler, F., Wallis, G. M., Liu, G. B., Hell, D., \& Vollenweider, F. X. (2005). Modulating the rate and rhythmicity of perceptual rivalry alternations with the mixed 5-HT2A and 5-HT1A agonist psilocybin. Neuropsychopharmacology, 30(6), 1154-1162. https://doi.org/10.1038/sj.npp.1300621 Griffiths, R. R., Johnson, M. W., Carducci, M. A., Umbricht, A., Richards, W. A., Richards, B. D., . . . Klinedinst, M. A. (2016). Psilocybin produces substantial and sustained decreases in depression and anxiety in patients with life- threatening cancer: A randomized double-blind trial. Journal of Psychopharmacology, 30(12), 1181-1197. https://doi.org/10.1177/0269881116675513 Wittmann, M., Carter, O., Hasler, F., Cahn, B. R., Grimberg, U., Spring, P., Hell, D., Flohr, H., Vollenweider, F. X. (2007). Effects of psilocybin on time perception and temporal control of behaviour in humans. J Psychopharmacol, 21(1), 50-64. https://doi.org/10.1177/0269881106065859\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC1F8135] (394.071bp,-200.391bp) rectangle ++(94.080bp,-0.240bp);
+  \fill[ALIUSC1F8135] (394.071bp,-260.391bp) rectangle ++(68.400bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-177.351bp) rectangle ++(0.240bp,-69.600bp);
+  \fill[ALIUSC0000FF] (120.471bp,-296.151bp) rectangle ++(165.840bp,-0.480bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-246.951bp) rectangle ++(0.240bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-249.111bp) rectangle ++(0.240bp,-50.640bp);
+  \ALIUSPlacedTextContent{90.951}{72.970}{309.195}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{The Dimensions of Consciousness:}
+  \ALIUSPlacedTextContent{90.951}{108.970}{358.685}{ALIUSC000000}{\ALIUSFontLatoLight}{19.920}{From perceptual illusions to psychedelics}
+  \ALIUSPlacedTextContent{394.071}{177.254}{64.040}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Olivia Carter}
+  \ALIUSPlacedTextContent{88.791}{177.320}{130.764}{ALIUSC000000}{\ALIUSFontLatoLight}{16.080}{An interview with}
+  \ALIUSPlacedTextContent{394.071}{190.429}{99.025}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{ocarter@unimelb.edu.au}
+  \ALIUSPlacedTextContent{88.791}{196.557}{108.620}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Olivia Carter}
+  \ALIUSPlacedTextContent{394.071}{201.229}{99.337}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{University of Melbourne,}
+  \ALIUSPlacedTextContent{394.071}{212.029}{36.117}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Australia}
+  \ALIUSPlacedTextContent{88.791}{231.279}{110.291}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Katrin H. Preller}
+  \ALIUSPlacedTextContent{394.071}{237.254}{80.353}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Katrin H. Preller}
+  \ALIUSPlacedTextContent{88.791}{249.242}{297.196}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Cite as: Carter, O. \& Preller, K.H. (2020). The Dimensions of}
+  \ALIUSPlacedTextContent{394.071}{250.429}{70.861}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{preller@bli.uzh.ch}
+  \ALIUSPlacedTextContent{394.071}{261.229}{120.279}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Psychatric Hospital University,}
+  \ALIUSPlacedTextContent{88.791}{261.242}{297.209}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Consciousness: From perceptual illusions to psychedelics. An}
+  \ALIUSPlacedTextContent{394.071}{272.029}{76.495}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Zürich, Switzerland}
+  \ALIUSPlacedTextContent{88.791}{273.242}{219.113}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{interview with Olivia Carter by Katrin H. Preller.}
+  \ALIUSPlacedTextContent{309.380}{273.242}{59.533}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{368.863}{273.242}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{375.271}{273.242}{7.937}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{4,}
+  \ALIUSPlacedTextContent{88.791}{285.242}{29.107}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{40-48,}
+  \ALIUSPlacedTextContent{120.440}{285.242}{165.875}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/mtdv-hb39}
+  \ALIUSPlacedTextContent{90.951}{345.052}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
+  \ALIUSPlacedTextContent{90.951}{373.587}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In this interview, the psychologist and neuroscientist Olivia Carter (University of}
+  \ALIUSPlacedTextContent{90.951}{387.987}{418.277}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{Melbourne, Australia) explains how she became interested in the field of}
+  \ALIUSPlacedTextContent{90.951}{402.387}{418.269}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{consciousness. We discuss how her work on visual perception has led her to}
+  \ALIUSPlacedTextContent{90.951}{416.787}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{study the effect of psychedelics and how this has inspired a multidimensional}
+  \ALIUSPlacedTextContent{90.951}{431.187}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{model of consciousness. We discuss the potential contents of "higher" states of}
+  \ALIUSPlacedTextContent{90.951}{445.587}{418.275}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{consciousness and argue that the existence of those is an unresolved question.}
+  \ALIUSPlacedTextContent{90.951}{459.987}{418.267}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{We finish the exchange on the challenges for successful demonstration of}
+  \ALIUSPlacedTextContent{90.951}{474.387}{418.269}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{artificial intelligence and by discussing the most important questions that the field}
+  \ALIUSPlacedTextContent{90.951}{488.787}{267.462}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{needs to ask and answer in order to move forward.}
+  \ALIUSPlacedTextContent{90.951}{515.187}{47.340}{ALIUSC000000}{\ALIUSFontLatoItalic}{12.000}{keywords}
+  \ALIUSPlacedTextContent{138.289}{515.187}{370.692}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{: dimensions of consciousness, psychedelics, visual perception, artificial}
+  \ALIUSPlacedTextContent{90.951}{529.587}{185.586}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{intelligence, content of consciousness}
+  \ALIUSPlacedTextContent{90.951}{573.093}{418.340}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You are a psychologist and neuroscientist. How did you get interested in}
+  \ALIUSPlacedTextContent{90.951}{590.373}{418.295}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{studying consciousness? What do you think is fascinating about it and why do}
+  \ALIUSPlacedTextContent{90.951}{607.653}{133.798}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{you think it is important?}
+  \ALIUSPlacedTextContent{90.951}{636.808}{418.101}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Ever since I was a little kid, I had trouble falling asleep at night. So largely}
+  \ALIUSPlacedTextContent{90.951}{656.249}{418.300}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{out of boredom, I remember playing games in my head trying to imagine}
+  \ALIUSPlacedTextContent{90.951}{675.688}{418.310}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unusual things. As I got older, I found it amazing that a brain was able to}
+  \ALIUSPlacedTextContent{90.951}{695.129}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{create so many different experiences. The more I learnt about neurons and}
+  \ALIUSPlacedTextContent{90.951}{714.568}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the brain, the more I became fascinated by the fact that the lump of jelly in}
+  \ALIUSPlacedTextContent{90.951}{734.248}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{my skull could be creating all of the experiences that make me me.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{494.871}{36.329}{14.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{41}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{For medical reasons I think it is important to understand how the brain}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{generates a conscious experience. Either in cases of brain damage and an}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{individual's experiences are drastically reduced or in psychiatric disorders}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{where people can have incorrect experiences that are terrifying or confusing.}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I hope that the science of consciousness can progress enough to really help}
+  \ALIUSPlacedTextContent{90.951}{170.488}{194.633}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the lives of these different patients.}
+  \ALIUSPlacedTextContent{90.951}{202.053}{411.528}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{A lot of your work is focusing on visual perception. What can we learn from}
+  \ALIUSPlacedTextContent{90.951}{219.333}{260.658}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{the visual system to understand consciousness?}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It is true that much of my work has focused on vision. This has particularly}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.397}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{involved multi-stable or ambiguous stimuli that can be validly interpreted by}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the brain in more than one way. These types of stimuli are very popular in}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness science because an individual's conscious experience will}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.309}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fluctuate despite the stimulus remaining constant. A very striking example is}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{binocular rivalry when two different images are simultaneously presented to}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.328}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the two eyes. During sustained viewing of binocular rivalry stimuli, a person}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{will perceive one eye's image for a few seconds while the other eye's image is}
+  \ALIUSPlacedTextContent{90.951}{404.488}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{completely suppressed from awareness. As the images remain presented the}
+  \ALIUSPlacedTextContent{90.951}{423.928}{418.343}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{entire time it is possible to distinguish the neural responses associated with}
+  \ALIUSPlacedTextContent{90.951}{443.608}{367.319}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the stimulus processing and the conscious awareness of the stimuli.}
+  \ALIUSPlacedTextContent{90.951}{475.048}{418.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{However, as I tell a lot of my students, the focus on vision is not really because}
+  \ALIUSPlacedTextContent{90.951}{494.488}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vision is more interesting than other sensory modalities. It is mainly a quirk}
+  \ALIUSPlacedTextContent{90.951}{513.928}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of history and technology that most of the early work in sensation focused on}
+  \ALIUSPlacedTextContent{90.951}{533.609}{418.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vision because it was possible to use prisms and physically build stimuli that}
+  \ALIUSPlacedTextContent{90.951}{553.049}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{could be used in vision experiments in a way that was much harder for}
+  \ALIUSPlacedTextContent{90.951}{572.489}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{audition and tactile experiments. So while a lot of my work has focused on}
+  \ALIUSPlacedTextContent{90.951}{591.928}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vision, I share the view of many people that insights gained from vision will}
+  \ALIUSPlacedTextContent{90.951}{611.369}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{likely be relevant to understanding other sensory modalities. In fact, a few}
+  \ALIUSPlacedTextContent{90.951}{631.048}{418.108}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{years ago I published a paper with some colleagues at MIT that demonstrated}
+  \ALIUSPlacedTextContent{90.951}{650.489}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the first example of a perceptual illusion (perceptual rivalry) in the tactile}
+  \ALIUSPlacedTextContent{90.951}{669.928}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{domain by creating a tactile stimulus that mimicked the vision example}
+  \ALIUSPlacedTextContent{90.951}{689.369}{279.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Carter, Konkle, Wang, Hayward, \& Moore, 2008).}
+  \ALIUSPlacedTextContent{90.951}{721.173}{412.265}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{From 2002 to 2004, you worked in Zurich and conducted experiments with}
+  \ALIUSPlacedTextContent{90.951}{738.453}{384.231}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{psilocybin. Why did you move half-way around the world to work with}
+  \ALIUSPlacedTextContent{90.951}{755.493}{76.793}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{psychedelics?}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{493.911}{36.329}{15.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{42}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{During my PhD, I travelled to Zurich twice (each time for around 8 months)}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to conduct two different studies with psychedelics (Carter et al., 2004;}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Carter, Burr, et al., 2005; Carter, Pettigrew, et al., 2005; Carter et al., 2007;}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Wittmann et al., 2007). To be honest, a big motivation for the first visit was}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a desire to do something different and exciting and have an excuse to travel}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{outside of Australia. By the time I completed the first study and was getting}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ready to head back home back to Australia, I had a better understanding of}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the types of research questions that could be explored with psychedelics and}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I could see that there was a real opportunity to do some interesting research.}
+  \ALIUSPlacedTextContent{90.951}{260.613}{261.939}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{What did you learn from studying psychedelics?}
+  \ALIUSPlacedTextContent{90.951}{289.768}{418.451}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I still find it amazing that the majority of the effects of psychedelics are so}
+  \ALIUSPlacedTextContent{90.951}{309.208}{418.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{selectively attributable to activity of the serotonin 2A receptor. It is that}
+  \ALIUSPlacedTextContent{90.951}{328.888}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{specificity that really interests me. As mentioned above, my main interest is}
+  \ALIUSPlacedTextContent{90.951}{348.328}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in understanding how the brain generates a conscious experience. So to me,}
+  \ALIUSPlacedTextContent{90.951}{367.768}{418.413}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the psychedelic research really highlights the activation of this particular}
+  \ALIUSPlacedTextContent{90.951}{387.208}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptor in mediating conscious experiences. We still do not have a good}
+  \ALIUSPlacedTextContent{90.951}{406.648}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understanding of why people typically hallucinate when the serotonin 2A}
+  \ALIUSPlacedTextContent{90.951}{426.328}{418.181}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptor is activated, while typically they do not hallucinate when the other}
+  \ALIUSPlacedTextContent{90.951}{445.768}{157.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{200+ receptors are activated.}
+  \ALIUSPlacedTextContent{90.951}{477.333}{418.237}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Psychedelics are currently being tested in the treatment of various psychiatric}
+  \ALIUSPlacedTextContent{90.951}{494.613}{418.433}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{disorders (Bogenschutz et al., 2015; Carhart-Harris et al., 2016; Griffiths et}
+  \ALIUSPlacedTextContent{90.951}{511.893}{418.302}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{al., 2016). However, the mechanism underlying their potential clinical efficacy}
+  \ALIUSPlacedTextContent{90.951}{529.173}{418.512}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{is still not clear. Specifically, it is unknown whether the psychedelic experience}
+  \ALIUSPlacedTextContent{90.951}{546.453}{418.377}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{is even necessary for the therapeutic effect. Based on your experimental and}
+  \ALIUSPlacedTextContent{90.951}{563.733}{418.467}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{theoretical work with these substances, do you think that the alterations in}
+  \ALIUSPlacedTextContent{90.951}{580.773}{418.462}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consciousness induced by psychedelics are related to the therapeutic}
+  \ALIUSPlacedTextContent{90.951}{598.053}{56.419}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{outcome?}
+  \ALIUSPlacedTextContent{90.951}{627.208}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I am not sure. Again, I think this is a very important question. Given that the}
+  \ALIUSPlacedTextContent{90.951}{646.648}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{drug has clear consistent effects on certain receptors and brain circuits, I}
+  \ALIUSPlacedTextContent{90.951}{666.328}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{definitely consider it plausible that these changes may induce therapeutic}
+  \ALIUSPlacedTextContent{90.951}{685.768}{418.414}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects by themselves. I know a lot of people are suggesting that it is the}
+  \ALIUSPlacedTextContent{90.951}{705.208}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{nature of the experience and the quality of the associated psychotherapy}
+  \ALIUSPlacedTextContent{90.951}{724.648}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sessions that are critical to the therapeutic effect rather than a direct}
+  \ALIUSPlacedTextContent{90.951}{744.328}{418.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmacological effect of the drug. If this turns out to be true, then it will}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC000000] (179.751bp,-569.751bp) rectangle ++(28.080bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{494.151}{36.329}{15.017}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{43}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{obviously be very important to understand which aspects of the experience}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and the therapy are important. It will also then be necessary to somehow}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{control the use of these drugs to ensure that people have the desired}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.389}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences and therapy. I worry that this could be very hard to achieve if the}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{goal is to also treat large numbers of patients with psychedelic therapy.}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.146}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{However, I am also aware that there are many groups around the world}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thinking about these issues. So I will be interested to see how the clinical}
+  \ALIUSPlacedTextContent{90.951}{209.609}{94.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research unfolds.}
+  \ALIUSPlacedTextContent{90.951}{241.173}{418.412}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Your recent article (Bayne \& Carter, 2018) received a lot of attention. Here,}
+  \ALIUSPlacedTextContent{90.951}{258.453}{418.494}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{you argue against unidimensional theories of consciousness. Could you}
+  \ALIUSPlacedTextContent{90.951}{275.733}{418.330}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{summarize the idea briefly and tell us how it relates to or conflicts with other}
+  \ALIUSPlacedTextContent{90.951}{293.013}{147.561}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{theories of consciousness?}
+  \ALIUSPlacedTextContent{90.951}{321.928}{418.143}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The article was written in collaboration with the philosopher Tim Bayne who}
+  \ALIUSPlacedTextContent{90.951}{341.608}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{has written a number of different papers arguing against the idea that}
+  \ALIUSPlacedTextContent{90.951}{361.048}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness is a single thing that can go up or down along a single}
+  \ALIUSPlacedTextContent{90.951}{380.488}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dimension (Bayne, 2014; Bayne, Hohwy, \& Owen, 2016, 2017). In the past,}
+  \ALIUSPlacedTextContent{90.951}{399.928}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people had focused on states that are typically considered "lower" like brain}
+  \ALIUSPlacedTextContent{90.951}{419.608}{418.336}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{trauma or anesthesia. In these cases, as people move towards a state of}
+  \ALIUSPlacedTextContent{90.951}{439.048}{418.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unconsciousness, it is intuitive to imagine that everything just gets reduced}
+  \ALIUSPlacedTextContent{90.951}{458.488}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{somehow until the person is no-longer conscious. One problem with}
+  \ALIUSPlacedTextContent{90.951}{477.928}{418.417}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{examples such as anesthesia or brain trauma is that they are very hard to study}
+  \ALIUSPlacedTextContent{90.951}{497.608}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as the people themselves are typically unable to respond. As a result, much of}
+  \ALIUSPlacedTextContent{90.951}{517.049}{418.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the past writing has been theoretical or hypothetical. The psychedelic case}
+  \ALIUSPlacedTextContent{90.951}{536.489}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{allowed us to ask a different type of questions. What would it mean for an}
+  \ALIUSPlacedTextContent{90.951}{555.928}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{individual to be more conscious? Very quickly it becomes clear that there are}
+  \ALIUSPlacedTextContent{90.951}{575.609}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{multiple ways in which ways a person could be considered more conscious.}
+  \ALIUSPlacedTextContent{90.951}{595.048}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{An interesting conclusion of our paper was that the psychedelic state seems}
+  \ALIUSPlacedTextContent{90.951}{614.489}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to lead to increases along some dimensions (such a perceptual intensity) and}
+  \ALIUSPlacedTextContent{90.951}{633.928}{418.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decreases in other dimensions (particularly those related to cognitive}
+  \ALIUSPlacedTextContent{90.951}{653.369}{61.734}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{functions).}
+  \ALIUSPlacedTextContent{121.951}{679.479}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{148.831}{691.867}{312.259}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The key message is supposed to be that it is}
+  \ALIUSPlacedTextContent{148.831}{709.867}{90.487}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{inappropriate}
+  \ALIUSPlacedTextContent{252.959}{709.867}{17.787}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{or}
+  \ALIUSPlacedTextContent{284.387}{709.867}{97.306}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{over-simplistic}
+  \ALIUSPlacedTextContent{395.341}{709.867}{17.799}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{to}
+  \ALIUSPlacedTextContent{426.787}{709.867}{34.344}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{view}
+  \ALIUSPlacedTextContent{148.831}{727.867}{312.183}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness as a single "thing" that can be}
+  \ALIUSPlacedTextContent{471.391}{738.039}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{148.831}{745.867}{283.134}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{considered to exist in higher or lower states}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{493.191}{36.329}{15.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{44}
+  \ALIUSPlacedTextContent{90.951}{73.173}{418.361}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In your article, you therefore argue that the psychedelic state cannot be}
+  \ALIUSPlacedTextContent{90.951}{90.453}{384.474}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{described as a "higher" state of consciousness. How was this received?}
+  \ALIUSPlacedTextContent{90.951}{119.608}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It was interesting that a number of people were angered by our paper. It is}
+  \ALIUSPlacedTextContent{90.951}{139.049}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possible that people simply did not like the paper, but I think the biggest}
+  \ALIUSPlacedTextContent{90.951}{158.489}{418.162}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{issue is that we concluded that it would be inappropriate to consider}
+  \ALIUSPlacedTextContent{90.951}{177.928}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics to be a higher state of consciousness. Some people interpreted}
+  \ALIUSPlacedTextContent{90.951}{197.609}{418.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this as an argument to consider psychedelics a lower state of consciousness.}
+  \ALIUSPlacedTextContent{90.951}{217.049}{418.378}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{That was really not our intention. The key message is supposed to be that it}
+  \ALIUSPlacedTextContent{90.951}{236.488}{418.362}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is inappropriate or over-simplistic to view consciousness as a single "thing"}
+  \ALIUSPlacedTextContent{90.951}{255.929}{418.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that can be considered to exist in higher or lower states. So to anyone asking}
+  \ALIUSPlacedTextContent{90.951}{275.608}{418.325}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the question of whether or not psychedelics lead to higher states of}
+  \ALIUSPlacedTextContent{90.951}{295.048}{418.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness, I would say that this is the wrong question to ask. Psychedelics}
+  \ALIUSPlacedTextContent{90.951}{314.488}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{clearly lead to very unusual states of consciousness and they can be used to}
+  \ALIUSPlacedTextContent{90.951}{333.928}{418.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{better understand consciousness and the underlying neural processes that}
+  \ALIUSPlacedTextContent{90.951}{353.608}{369.797}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{determine an individual's experience from one moment to the next.}
+  \ALIUSPlacedTextContent{90.951}{385.173}{418.304}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Do you think that a state in which consciousness is increased on all dimensions}
+  \ALIUSPlacedTextContent{90.951}{402.453}{249.308}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{even exists? And if yes, how would it feel like?}
+  \ALIUSPlacedTextContent{90.951}{431.608}{418.140}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{That is an excellent question. Before I started working on the paper with}
+  \ALIUSPlacedTextContent{90.951}{451.048}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Tim, I think I probably would have assumed there definitely would be. Now}
+  \ALIUSPlacedTextContent{90.951}{470.488}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I am not so sure. The question certainly depends on what features you}
+  \ALIUSPlacedTextContent{90.951}{489.928}{418.308}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consider relevant to consciousness, but I think most emphasize some aspect}
+  \ALIUSPlacedTextContent{90.951}{509.608}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of diversity and intensity of sensory experience while also acknowledging the}
+  \ALIUSPlacedTextContent{90.951}{529.049}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{importance of functional use of currently and previously experienced sensory}
+  \ALIUSPlacedTextContent{90.951}{548.489}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{information. For example, simple tasks such as recalling a phone number,}
+  \ALIUSPlacedTextContent{90.951}{567.928}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{writing a letter, or cooking a meal require us to integrate information from}
+  \ALIUSPlacedTextContent{90.951}{587.609}{418.131}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{both our present and our past experiences. It is unclear to me that these types}
+  \ALIUSPlacedTextContent{90.951}{607.048}{418.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of tasks that require an element of concentration and focus will be enhanced}
+  \ALIUSPlacedTextContent{90.951}{626.489}{418.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or increased by increasing the diversity of sensory experience in that moment.}
+  \ALIUSPlacedTextContent{90.951}{645.928}{418.124}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Most people turn down music and find quiet places to work when they need}
+  \ALIUSPlacedTextContent{90.951}{665.369}{418.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to concentrate. So maybe there is an element of push and pull in terms of}
+  \ALIUSPlacedTextContent{90.951}{685.048}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain resources or functions. I think consciousness researchers would benefit}
+  \ALIUSPlacedTextContent{90.951}{704.489}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{from more thought given to the question of what it would mean for}
+  \ALIUSPlacedTextContent{90.951}{723.929}{202.709}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{themselves or any other person to be}
+  \ALIUSPlacedTextContent{293.722}{723.929}{24.565}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{more}
+  \ALIUSPlacedTextContent{318.319}{723.929}{132.208}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious than normal.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{493.911}{36.329}{15.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{45}
+  \ALIUSPlacedTextContent{117.151}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{144.991}{88.267}{317.354}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I think consciousness researchers would benefit}
+  \ALIUSPlacedTextContent{144.991}{106.267}{317.295}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{from more thought given to the question of what}
+  \ALIUSPlacedTextContent{144.991}{124.267}{317.281}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{it would mean for themselves or any other}
+  \ALIUSPlacedTextContent{469.231}{137.559}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{144.991}{142.267}{86.429}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{person to be}
+  \ALIUSPlacedTextContent{231.391}{142.267}{31.335}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{more}
+  \ALIUSPlacedTextContent{262.831}{142.267}{152.518}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{conscious than normal.}
+  \ALIUSPlacedTextContent{90.951}{187.653}{418.393}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{On your webpage, one of the questions you are asking is "What are the factors}
+  \ALIUSPlacedTextContent{90.951}{204.933}{418.436}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{that determine the contents of an individual's conscious experience?" What is}
+  \ALIUSPlacedTextContent{90.951}{222.213}{205.528}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{your current answer to this question?}
+  \ALIUSPlacedTextContent{90.951}{251.128}{418.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There are a lot of factors! I think this remains an under-explored question. I}
+  \ALIUSPlacedTextContent{90.951}{270.809}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think the lessons from the paper with Tim Bayne (Bayne \& Carter, 2018) are}
+  \ALIUSPlacedTextContent{90.951}{290.248}{418.375}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that we need to understand both the individual factors and the particular}
+  \ALIUSPlacedTextContent{90.951}{309.688}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dimension of consciousness that they impact. For example, the factors that}
+  \ALIUSPlacedTextContent{90.951}{329.128}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{impact the experience of intense pain will be very different to the factors that}
+  \ALIUSPlacedTextContent{90.951}{348.809}{418.316}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{enable an architect to construct a mental image of a new house design. In the}
+  \ALIUSPlacedTextContent{90.951}{368.248}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{case of pain, the level is likely to depend on stimulation of the specific}
+  \ALIUSPlacedTextContent{90.951}{387.688}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptors and neural pathways involved. Pain is an extremely important}
+  \ALIUSPlacedTextContent{90.951}{407.128}{418.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience, but it is relatively simple and reflects events happening in the}
+  \ALIUSPlacedTextContent{90.951}{426.809}{418.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{moment. In the case of complex building designs an individual will likely}
+  \ALIUSPlacedTextContent{90.951}{446.248}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{need to draw on years of educational training and experience with a mix of}
+  \ALIUSPlacedTextContent{90.951}{465.688}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{some creativity and consideration of budgetary factors and other practical}
+  \ALIUSPlacedTextContent{90.951}{485.128}{418.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{constraints. If we want to truly understand the brain processes involved in}
+  \ALIUSPlacedTextContent{90.951}{504.808}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious experiences, then we need to fully understand how different factors}
+  \ALIUSPlacedTextContent{90.951}{524.249}{309.066}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contribute to very different types of human experiences.}
+  \ALIUSPlacedTextContent{90.951}{555.813}{418.441}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In another recent article (Carter et al., 2018) you ask a different but somewhat}
+  \ALIUSPlacedTextContent{90.951}{573.093}{418.477}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{related question: "What would constitute successful demonstration of}
+  \ALIUSPlacedTextContent{90.951}{590.373}{323.739}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{artificial intelligence?" What is your answer to this question?}
+  \ALIUSPlacedTextContent{90.951}{619.529}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I still do not have a good answer to that question unfortunately. Again, I}
+  \ALIUSPlacedTextContent{90.951}{638.969}{418.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think the community needs to think more about the different capacities that}
+  \ALIUSPlacedTextContent{90.951}{658.409}{418.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we would expect to see and consider which capacities are already}
+  \ALIUSPlacedTextContent{90.951}{677.849}{418.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{demonstrated in existing systems. I think an equally important question is}
+  \ALIUSPlacedTextContent{90.951}{697.529}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which capacities we care more about. It might be the case that we have}
+  \ALIUSPlacedTextContent{90.951}{716.969}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{greater concerns about capacities that are not as complex. For example,}
+  \ALIUSPlacedTextContent{90.951}{736.409}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{concepts like free-will are often considered uniquely human, but there are}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{493.191}{36.329}{16.081}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{46}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.310}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{already artificial intelligence (AI) systems that can formulate their own goals.}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In the last few years, there has been a lot more discussion around these}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{questions. My guess is that these conversations will advance a lot in the next}
+  \ALIUSPlacedTextContent{90.951}{131.609}{56.162}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{few years.}
+  \ALIUSPlacedTextContent{90.951}{163.173}{418.332}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Speaking of the future, in which direction does the field need to move to make}
+  \ALIUSPlacedTextContent{90.951}{180.453}{225.515}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{progress in understanding consciousness?}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think we need to start focusing on the details. Consciousness is a great}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{umbrella term. I do not think we need a new definition of consciousness, but}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{rather we need to be clearer about which aspects or dimensions of}
+  \ALIUSPlacedTextContent{90.951}{267.928}{295.571}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness that individual experiments are testing.}
+  \ALIUSPlacedTextContent{90.951}{307.173}{418.462}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Do you have a recommendation for young researchers who want to study}
+  \ALIUSPlacedTextContent{90.951}{324.453}{82.419}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consciousness?}
+  \ALIUSPlacedTextContent{90.951}{358.888}{418.146}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{My advice relates a lot to my answer to the previous question. I think the}
+  \ALIUSPlacedTextContent{90.951}{378.328}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{term consciousness covers a lot of things. It is worth thinking about what}
+  \ALIUSPlacedTextContent{90.951}{397.768}{418.107}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{aspects of consciousness you are really interested in. There is a lot of research}
+  \ALIUSPlacedTextContent{90.951}{417.208}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{at the moment looking at different brain processes and their relation to}
+  \ALIUSPlacedTextContent{90.951}{436.648}{418.146}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness. There are mathematicians and computer scientists trying to}
+  \ALIUSPlacedTextContent{90.951}{456.328}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understand and simulate the complexity and information integration}
+  \ALIUSPlacedTextContent{90.951}{475.768}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{achieved by the human brain. At the other extreme there are philosophers}
+  \ALIUSPlacedTextContent{90.951}{495.208}{418.295}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{really trying to understand the experiential side of consciousness. I think all}
+  \ALIUSPlacedTextContent{90.951}{514.648}{418.356}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of these areas of research are very important, but they are also very different}
+  \ALIUSPlacedTextContent{90.951}{534.328}{418.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and require different types of skills and I think they trigger different types of}
+  \ALIUSPlacedTextContent{90.951}{553.768}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{curiosities. So I think if someone believes they would like to study}
+  \ALIUSPlacedTextContent{90.951}{573.208}{418.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness, I would suggest they start by reflecting more on what aspect}
+  \ALIUSPlacedTextContent{90.951}{592.648}{298.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of consciousness they would like to better understand.}
+  \ALIUSPlacedTextContent{119.311}{642.279}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{149.791}{654.427}{305.636}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I do not think we need a new definition of}
+  \ALIUSPlacedTextContent{149.791}{672.427}{305.466}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness, but rather we need to be}
+  \ALIUSPlacedTextContent{149.791}{690.427}{305.481}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{clearer about which aspects of dimensions of}
+  \ALIUSPlacedTextContent{149.791}{708.427}{305.469}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness that individual experiments are}
+  \ALIUSPlacedTextContent{465.631}{722.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{149.791}{726.427}{47.458}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{testing.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-131.751bp) rectangle ++(188.400bp,-0.720bp);
+  \fill[ALIUSC0000FF] (329.751bp,-179.031bp) rectangle ++(168.240bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-242.151bp) rectangle ++(198.960bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-305.031bp) rectangle ++(167.040bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-383.751bp) rectangle ++(203.040bp,-0.720bp);
+  \fill[ALIUSC0000FF] (249.351bp,-478.311bp) rectangle ++(227.280bp,-0.720bp);
+  \fill[ALIUSC0000FF] (150.711bp,-541.191bp) rectangle ++(190.800bp,-0.720bp);
+  \fill[ALIUSC0000FF] (180.471bp,-604.071bp) rectangle ++(201.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-698.631bp) rectangle ++(217.680bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.577}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{47}
+  \ALIUSPlacedTextContent{264.617}{73.132}{71.454}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
+  \ALIUSPlacedTextContent{90.951}{103.216}{275.355}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bayne, T. (2014). The Unity of Consciousness.}
+  \ALIUSPlacedTextContent{373.408}{103.216}{62.957}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Analysis, 74}
+  \ALIUSPlacedTextContent{436.383}{103.216}{72.596}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 488-490.}
+  \ALIUSPlacedTextContent{126.951}{118.816}{188.442}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/analys/anu054}
+  \ALIUSPlacedTextContent{90.951}{150.496}{418.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bayne, T., \& Carter, O. (2018). Dimensions of consciousness and the psychedelic}
+  \ALIUSPlacedTextContent{126.951}{166.096}{29.523}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{state.}
+  \ALIUSPlacedTextContent{156.485}{166.096}{114.670}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neurosci Conscious, 2018}
+  \ALIUSPlacedTextContent{271.182}{166.096}{58.577}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), niy008.}
+  \ALIUSPlacedTextContent{329.746}{166.096}{168.224}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/nc/niy008}
+  \ALIUSPlacedTextContent{90.951}{197.536}{418.013}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bayne, T., Hohwy, J., \& Owen, A. M. (2016). Are There Levels of Consciousness?}
+  \ALIUSPlacedTextContent{126.951}{213.376}{34.839}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends}
+  \ALIUSPlacedTextContent{196.182}{213.376}{12.291}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{in}
+  \ALIUSPlacedTextContent{242.865}{213.376}{47.114}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Cognitive}
+  \ALIUSPlacedTextContent{324.370}{213.376}{43.005}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Sciences,}
+  \ALIUSPlacedTextContent{401.767}{213.376}{10.390}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{20}
+  \ALIUSPlacedTextContent{412.190}{213.376}{19.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6),}
+  \ALIUSPlacedTextContent{466.564}{213.376}{42.425}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{405-413.}
+  \ALIUSPlacedTextContent{126.951}{229.216}{199.082}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.tics.2016.03.009}
+  \ALIUSPlacedTextContent{90.951}{260.656}{418.025}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bayne, T., Hohwy, J., \& Owen, A. M. (2017). Reforming the taxonomy in disorders}
+  \ALIUSPlacedTextContent{126.951}{276.256}{13.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of}
+  \ALIUSPlacedTextContent{159.720}{276.256}{74.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness.}
+  \ALIUSPlacedTextContent{254.297}{276.256}{35.573}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Annals}
+  \ALIUSPlacedTextContent{309.424}{276.256}{11.607}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of}
+  \ALIUSPlacedTextContent{340.585}{276.256}{53.434}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neurology,}
+  \ALIUSPlacedTextContent{413.573}{276.256}{10.430}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{82}
+  \ALIUSPlacedTextContent{424.031}{276.256}{19.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6),}
+  \ALIUSPlacedTextContent{463.579}{276.256}{45.409}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{866-872.}
+  \ALIUSPlacedTextContent{126.951}{292.096}{167.006}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1002/ana.25088}
+  \ALIUSPlacedTextContent{90.951}{323.536}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bogenschutz, M. P., Forcehimes, A. A., Pommy, J. A., Wilcox, C. E., Barbosa, P. C.,}
+  \ALIUSPlacedTextContent{126.951}{339.376}{382.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\& Strassman, R. J. (2015). Psilocybin-assisted treatment for alcohol}
+  \ALIUSPlacedTextContent{126.951}{354.976}{204.651}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dependence: a proof-of-concept study.}
+  \ALIUSPlacedTextContent{334.325}{354.976}{108.151}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{J Psychopharmacol, 29}
+  \ALIUSPlacedTextContent{442.524}{354.976}{69.502}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 289-299.}
+  \ALIUSPlacedTextContent{126.951}{370.816}{202.931}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881114565144}
+  \ALIUSPlacedTextContent{90.951}{402.256}{418.000}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R. L., Bolstridge, M., Rucker, J., Day, C. M., Erritzoe, D., Kaelen,}
+  \ALIUSPlacedTextContent{126.951}{418.096}{382.104}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{M., Bloomfield, M., Rickard, J. A., Forbes, B., Feilding, A., Taylor, D., Piling,}
+  \ALIUSPlacedTextContent{126.951}{433.696}{381.971}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{S., Curran, V. H., Nutt, D. J. (2016). Psilocybin with psychological support}
+  \ALIUSPlacedTextContent{126.951}{449.536}{346.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{for treatment-resistant depression: an open-label feasibility study.}
+  \ALIUSPlacedTextContent{475.037}{449.536}{33.955}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Lancet}
+  \ALIUSPlacedTextContent{126.951}{465.376}{59.733}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychiatry, 3}
+  \ALIUSPlacedTextContent{186.710}{465.376}{62.585}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(7), 619-627.}
+  \ALIUSPlacedTextContent{249.304}{465.376}{227.282}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/S2215-0366(16)30065-7}
+  \ALIUSPlacedTextContent{90.951}{496.816}{417.937}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carter, O., Hohwy, J., van Boxtel, J., Lamme, V., Block, N., Koch, C., \& Tsuchiya,}
+  \ALIUSPlacedTextContent{126.951}{512.416}{263.736}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{N. (2018). Conscious machines: Defining questions.}
+  \ALIUSPlacedTextContent{391.506}{512.416}{54.670}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Science, 359}
+  \ALIUSPlacedTextContent{446.180}{512.416}{59.758}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6374), 400-}
+  \ALIUSPlacedTextContent{126.951}{528.256}{23.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{400.}
+  \ALIUSPlacedTextContent{150.818}{528.256}{190.727}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1126/science.aar4163}
+  \ALIUSPlacedTextContent{90.951}{559.695}{418.041}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carter, O., Konkle, T., Wang, Q., Hayward, V., \& Moore, C. (2008). Tactile rivalry}
+  \ALIUSPlacedTextContent{126.951}{575.536}{300.903}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{demonstrated with an ambiguous apparent-motion quartet.}
+  \ALIUSPlacedTextContent{427.106}{575.536}{57.719}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Curr Biol, 18}
+  \ALIUSPlacedTextContent{484.852}{575.536}{24.125}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(14),}
+  \ALIUSPlacedTextContent{126.951}{591.136}{53.527}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1050-1054.}
+  \ALIUSPlacedTextContent{180.484}{591.136}{201.503}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.cub.2008.06.027}
+  \ALIUSPlacedTextContent{90.951}{622.576}{418.022}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carter, O. L., Burr, D. C., Pettigrew, J. D., Wallis, G. M., Hasler, F., \& Vollenweider,}
+  \ALIUSPlacedTextContent{126.951}{638.416}{382.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{F. X. (2005). Using psilocybin to investigate the relationship between}
+  \ALIUSPlacedTextContent{126.951}{654.256}{345.131}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{attention, working memory, and the serotonin 1A and 2A receptors.}
+  \ALIUSPlacedTextContent{471.904}{654.256}{37.057}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal}
+  \ALIUSPlacedTextContent{126.951}{669.856}{11.617}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of}
+  \ALIUSPlacedTextContent{181.235}{669.856}{47.132}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Cognitive}
+  \ALIUSPlacedTextContent{271.033}{669.856}{65.585}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience,}
+  \ALIUSPlacedTextContent{379.286}{669.856}{8.802}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{17}
+  \ALIUSPlacedTextContent{388.067}{669.856}{24.475}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(10),}
+  \ALIUSPlacedTextContent{455.205}{669.856}{53.793}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1497-1508.}
+  \ALIUSPlacedTextContent{126.951}{685.695}{217.706}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1162/089892905774597191}
+  \ALIUSPlacedTextContent{90.951}{717.135}{417.995}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carter, O. L., Hasler, F., Pettigrew, J. D., Wallis, G. M., Liu, G. B., \& Vollenweider,}
+  \ALIUSPlacedTextContent{126.951}{732.976}{382.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{F. X. (2007). Psilocybin links binocular rivalry switch rate to attention and}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-101.511bp) rectangle ++(209.280bp,-0.720bp);
+  \fill[ALIUSC0000FF] (338.151bp,-164.631bp) rectangle ++(167.760bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-180.231bp) rectangle ++(86.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-274.791bp) rectangle ++(187.680bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-384.951bp) rectangle ++(202.080bp,-0.720bp);
+  \fill[ALIUSC0000FF] (186.951bp,-463.671bp) rectangle ++(207.600bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{492.711}{36.329}{16.417}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{48}
+  \ALIUSPlacedTextContent{126.951}{72.976}{178.472}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{subjective arousal levels in humans.}
+  \ALIUSPlacedTextContent{304.751}{72.976}{143.616}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychopharmacology (Berl), 195}
+  \ALIUSPlacedTextContent{448.382}{72.976}{60.601}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 415-424.}
+  \ALIUSPlacedTextContent{126.951}{88.576}{209.211}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00213-007-0930-9}
+  \ALIUSPlacedTextContent{90.951}{120.016}{418.025}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carter, O. L., Pettigrew, J. D., Burr, D. C., Alais, D., Hasler, F., \& Vollenweider, F.}
+  \ALIUSPlacedTextContent{126.951}{135.856}{382.062}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{X. (2004). Psilocybin impairs high-level but not low-level motion}
+  \ALIUSPlacedTextContent{126.951}{151.696}{60.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{perception.}
+  \ALIUSPlacedTextContent{188.629}{151.696}{71.954}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroreport, 15}
+  \ALIUSPlacedTextContent{260.604}{151.696}{76.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(12), 1947-1951.}
+  \ALIUSPlacedTextContent{338.138}{151.696}{167.800}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1097/00001756-}
+  \ALIUSPlacedTextContent{126.951}{167.296}{86.594}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{200408260-00023}
+  \ALIUSPlacedTextContent{90.951}{198.736}{418.042}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carter, O. L., Pettigrew, J. D., Hasler, F., Wallis, G. M., Liu, G. B., Hell, D., \&}
+  \ALIUSPlacedTextContent{126.951}{214.576}{381.991}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Vollenweider, F. X. (2005). Modulating the rate and rhythmicity of}
+  \ALIUSPlacedTextContent{126.951}{230.416}{382.049}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{perceptual rivalry alternations with the mixed 5-HT2A and 5-HT1A agonist}
+  \ALIUSPlacedTextContent{126.951}{246.016}{57.654}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{psilocybin.}
+  \ALIUSPlacedTextContent{223.155}{246.016}{129.082}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuropsychopharmacology,}
+  \ALIUSPlacedTextContent{390.783}{246.016}{10.124}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{30}
+  \ALIUSPlacedTextContent{400.932}{246.016}{19.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6),}
+  \ALIUSPlacedTextContent{459.479}{246.016}{49.501}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1154-1162.}
+  \ALIUSPlacedTextContent{126.951}{261.856}{187.613}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/sj.npp.1300621}
+  \ALIUSPlacedTextContent{90.951}{293.296}{417.989}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Griffiths, R. R., Johnson, M. W., Carducci, M. A., Umbricht, A., Richards, W. A.,}
+  \ALIUSPlacedTextContent{126.951}{309.136}{382.002}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Richards, B. D., . . . Klinedinst, M. A. (2016). Psilocybin produces substantial}
+  \ALIUSPlacedTextContent{126.951}{324.736}{378.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and sustained decreases in depression and anxiety in patients with life-}
+  \ALIUSPlacedTextContent{126.951}{340.576}{315.746}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{threatening cancer: A randomized double-blind trial.}
+  \ALIUSPlacedTextContent{451.501}{340.576}{57.452}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of}
+  \ALIUSPlacedTextContent{126.951}{356.176}{101.807}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychopharmacology,}
+  \ALIUSPlacedTextContent{327.390}{356.176}{10.115}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{30}
+  \ALIUSPlacedTextContent{337.503}{356.176}{23.490}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(12),}
+  \ALIUSPlacedTextContent{459.630}{356.176}{49.348}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1181-1197.}
+  \ALIUSPlacedTextContent{126.951}{372.016}{202.024}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881116675513}
+  \ALIUSPlacedTextContent{90.951}{403.456}{418.042}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Wittmann, M., Carter, O., Hasler, F., Cahn, B. R., Grimberg, U., Spring, P., Hell,}
+  \ALIUSPlacedTextContent{126.951}{419.296}{381.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{D., Flohr, H., Vollenweider, F. X. (2007). Effects of psilocybin on time}
+  \ALIUSPlacedTextContent{126.951}{434.896}{290.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{perception and temporal control of behaviour in humans.}
+  \ALIUSPlacedTextContent{416.875}{434.896}{92.128}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{J Psychopharmacol,}
+  \ALIUSPlacedTextContent{126.951}{450.736}{8.490}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{21}
+  \ALIUSPlacedTextContent{135.452}{450.736}{51.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 50-64.}
+  \ALIUSPlacedTextContent{186.957}{450.736}{207.584}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881106065859}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

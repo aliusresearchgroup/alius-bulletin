@@ -1,38 +1,998 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.0000bp,paperheight=842.0000bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{Are the Subjective Effects of Psychedelics Necessary for Their Enduring Therapeutic Effects?}
-\author{A conversation with David E. Olson and David B. Yaden hosted by George Fejer}
-\date{ALIUS Bulletin 5}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC0000FF}{HTML}{0000FF}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} conversation\par
-\textbf{DOI:} 10.34700/0v21-5n82\par
-\textbf{Keywords:} psychedelics, psychoplastogens, subjective effects, therapeutics benefits, treatment ethics\par
-\section*{Abstract}
-ALIUS recently invited Dr. David E. Olson and Dr. David B. Yaden to discuss whether or not the subjective effects of psychedelics are necessary for their enduring therapeutic benefit in an interactive online discussion. The aim of this discussion is to examine their most recent back-to-back publication wherein Yaden \& Griffiths (2021) emphasized the subjective effects of psychedelics, such as mystical experiences, in relation to their long-lasting therapeutic effects, whereas Olson (2021) emphasized that there are certain therapeutic benefits related to the psychoplastogenic properties of these substances that are unrelated to their subjective effects. We invited the authors to clarify the fine points of their arguments and to tease out any point of disagreement between these two perspectives. What follows is an edited transcript of their discussion.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin Are the Subjective Effects of Psychedelics Necessary for Their Enduring Therapeutic Effects? A conversation with David E. Olson and David B. Yaden Hosted by George Fejer David E. Olson deolson@ucdavis.edu Department of Chemistry, Department of Biochemistry \& Molecular Medicine, Center for Neuroscience, UC Davis, USA David B. Yaden dyaden1@jhmi.edu Center for Psychedelic \& Consciousness Research, Johns Hopkins University, USA George Fejer gyorgyf@live.com Team coordinator of the ALIUS research network Cite as: Olson, D.E., Yaden, D.B., Fejer, G. (2021). Are the Subjective Effects of Psychedelics Necessary for Their Enduring Therapeutic Effects? A conversation with David E. Olson and David B. Yaden hosted by George Fejer, ALIUS Bulletin, 5, 40-57, https://doi.org/10.34700/0v21-5n82 Abstract ALIUS recently invited Dr. David E. Olson and Dr. David B. Yaden to discuss whether or not the subjective effects of psychedelics are necessary for their enduring therapeutic benefit in an interactive online discussion. The aim of this discussion is to examine their most recent back-to-back publication wherein Yaden \& Griffiths (2021) emphasized the subjective effects of psychedelics, such as mystical experiences, in relation to their long-lasting therapeutic effects, whereas Olson (2021) emphasized that there are certain therapeutic benefits related to the psychoplastogenic properties of these substances that are unrelated to their subjective effects. We invited the authors to clarify the fine points of their arguments and to tease out any point of disagreement between these two perspectives. What follows is an edited transcript of their discussion. keywords: psychedelics, psychoplastogens, subjective effects, therapeutics benefits, treatment ethics Although you are addressing two sides of the same coin, your back-to-back publications are primarily aimed at questioning whether the subjective effects play a causal role within the therapeutic process, or whether it can be regarded as an epiphenomenon that accompanies therapeutic outcomes, but not a principal mechanism. David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 41 The first question is related to the subject-matter of dualism, and whether the comparison between neuroplasticity alone versus neuroplasticity plus subjective experience implies that there is a dichotomous relationship between subjectivity and the neurobiological substrate. How do you define the subjective experience, in terms of its biological function and embeddedness within a neurobiological substrate? What is its relationship to neuroplasticity? Are these pitted against each other within your scientific framework in a manner that implicitly endorses dualism? D.B. Yaden: I would like to take this one first. If you don't mind David, I think both of us agree on so much and this particular topic of dualism was definitely something that we agreed on from the get-go. My co-author Roland Griffiths and I talked quite a bit about whether to include a discussion of dualism or not at the beginning of our article. We were constrained by word limits, but also we just thought it was so screamingly obvious that we weren't promoting any kind of dualistic notion of consciousness in our viewpoint that it didn't seem like we really needed to cover this point in depth. But several of our colleagues have been worried that people might take away the misconception that we are promoting a kind of mind-matter dualism with our argument, and I think that that's just absolutely not the case. Basically, the question of the nature of consciousness, what it actually consists of is referred to as the "hard problem of consciousness" and it's unclear at this point what any kind of scientific explanation of the nature and origin of consciousness might be. So I think it is best to take that topic and set it aside and leave that for more of a philosophical discussion, at least in my view. When we are talking about subjective effects we are talking about drug effects on what is referred to sometimes as phenomenal consciousness, the "what it feels like" quality of being-as in, we are all looking at a screen, we are all in rooms, we are all listening to my voice at the moment. And this is what we mean by subjective effects, we are absolutely not referring to any kind of sense of consciousness beyond something that is tractable, at least theoretically, in terms of neurobiology. David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 42 D.E. Olson: I actually think maybe it's the other way around, where the plasticity effects are an epiphenomenon arising from subjective experience. I think that the production of the subjective effects will inherently lead to the plasticity effects, but the question of whether or not you can decouple those two is one we are actively pursuing. [When I'm talking about the subjective effects of the drug] I lean on experts like David Yaden and the questionnaires that they have developed, such as the Mystical Experiences Questionnaire. Would you treat these two phenomena of 'the subjective' and 'the neurobiological' according to a micro-level and a macro-level explanation of their causal role? On the one hand, neuroplasticity seems to be specific to events that take place on the level of cells and receptors, whereas subjective experiences seem to describe events that take place on the level of brain states and their corresponding external correlates. Would you argue that there is any privileged level of causation when it comes to investigating what should be regarded as the principal mechanism of therapeutic effects? D.B. Yaden: I want to address at least part of your question, which still seems to take issue with misconceptions around dualism. As we know from the work of Paul Bloom and others, people are intuitive dualists, they think of mind and brain as two separate things. This is also reflected in the way our language is structured. People say things like "my brain is thinking", and it's difficult for people to imagine that their thoughts and feelings have a neurobiological substrate. This is also the kind of thing that psychologists and neuroscientists will take for granted when they are talking, but the vast majority of neuroscientists D.E. Olson: I actually think maybe it's the other way around, where the plasticity effects are an epiphenomenon arising from subjective experience. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 43 believe that even very abstract mental states are ultimately reducible to neurobiological changes. Even if we do not specifically know the complex array of brain changes at a really granular level that instantiate complex feelings, such as the sense of space, time or connectedness-these are all still brain changes. I agree with David Olson about the psychoplastogenic effects of psychedelics and that there would likely be some therapeutic benefit with or without the subjective effects. We also agree that the subjective effects probably are necessary for full and enduring therapeutic effects. Cognitive and affective processes seem to be what is conveying beneficial effects for four months or more, and it is amazing that we see positive effects persisting for so long. That is what makes these compounds so interesting from a clinical standpoint. D.E. Olson: I agree with all of the above and share the opinion that brain states are essentially the emergent properties of circuits, built up on cells, built up on proteins, built up on ligands, etc. More importantly, I want to emphasize that my argument is not that the subjective effects are unimportant for the therapeutic response. In fact, the subjective effects of compounds like psilocybin are probably really important for their maximal effects. But they may not be necessary for certain types of therapeutic responses, and whether or not that leads to maximal efficacy is an entirely different question. I still think that it's possible to get enduring effects, but maybe they do not last quite as long. We just don't know yet, as this is still an open question. D.B. Yaden: Even if we do not specifically know the complex array of brain changes at a really granular level that instantiate complex feelings, such as the sense of space, time or connectedness-these are all still brain changes. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 44 One aspect of the article that many people in the psychedelic community appraised critically was the statement that: "the intense subjective effects of these drugs make it unlikely that they will ever become widespread treatments for disorders such as depression." (Olson, 2020). However, it seems that you agree on nearly every aspect of each other's perspectives. Are there any points of disagreement? D.B. Yaden: I am also wondering whether this portrayal of the subjective experience is intended to depict it as overall challenging and inherently risky. While our psychometric data show that the acute stage after ingesting psychedelics can be quite difficult and challenging, the experiences are overall overwhelmingly positive, reaching a degree of meaning that we rarely see in other contexts. The empirical data from these clinical trials show that these experiences are often among the most meaningful experiences that one can possibly have. But I can imagine there are people who have contraindications, such as some kinds of mental disorders like psychotic disorders or certain family histories, where the psychedelic experience would be inappropriate. Of course, there's risk in any kind of treatment. Therefore, I am also curious to know David Olson's thoughts on this matter. D.B. Yaden: I agree with David Olson about the psychoplastogenic effects of psychedelics and that there would likely be some therapeutic benefit with or without the subjective effects. We also agree that the subjective effects probably are necessary for full and enduring therapeutic effects. " " D.E. Olson: my argument is not that the subjective effects are unimportant for the therapeutic response. In fact, the subjective effects of compounds like psilocybin are probably really important for their maximal effects. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 45 D.E. Olson: I am sorry if it came across this way since it was not my intention to portray the subjective experience as inherently challenging. My statement also did not mean to convey that substances such as psilocybin only produce challenging experiences that are going to be problematic for people. I am certain that psilocybin will ultimately be approved by the Food and Drug Administration (FDA) for some kind of indication, and I have a lot of hope for the patients who are going to benefit from this type of therapy. When I say that it will not be a widespread medication, that has to do with two factors. The first one has to do with the fact that the subjective effects of psilocybin make it hard to administer outside of the confines of a clinical setting. I think that these drugs will always be administered under the care of a physician, and it is not going to be the type of medicine you can take home and put in your medicine cabinet like a Selective Serotonin Reuptake Inhibitor (SSRI). The other reason is related to the healthcare costs associated with that type of model right now. People have to undergo fairly long preparation and integration sessions with the clinicians, which requires a lot of time spent in the presence of a healthcare provider. I think that it is going to be challenging D.B. Yaden: While our psychometric data show that the acute stage after ingesting psychedelics can be quite difficult and challenging, the experiences are overall overwhelmingly positive, reaching a degree of meaning that we rarely see in other contexts. " " D.E. Olson: My statement also did not mean to convey that substances such as psilocybin only produce challenging experiences that are going to be problematic for people. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 46 to treat a large number of patients, and approximately 20\% of the population suffer from some type of neuropsychiatric disorder. I do think that some people, especially those with treatment-resistant depression, are going to benefit greatly from things like psilocybin, and so it will become a regular part of the psychiatrist's arsenal. I just do not think they will become as widespread as SSRIs. From a clinical standpoint, there are certainly some patients for whom the subjective effects of psychedelics may not be appropriate and may thus benefit more from the psychoplastogenic effects. But do you think the goal of decoupling the subjective and the psychoplastogenic effects is scientifically feasible? There are several studies showing that neuroplasticity is also enhanced through exposure to enriched environments, a process that is commonly mediated through the neurotrophic factor BDNF (Cowansage, LeDoux, \& Monfils, 2010). This type of neuroplasticity is also elicited by 5-HT2A agonists and selectively blocked via ketanserin (Vaidya, Marek, Aghajanian, \& Duman, 1997). The natural coupling between plasticity and enriched environments may serve a crucial function in facilitating social adaptation and learning. Do you think there is any inherent risk in disrupting the coupling between the neuroplasticity and the subjective experience of psychedelics? D.E. Olson: One thing I want to emphasize is that pretty much every treatment for depression, from classical antidepressants, exercise, or acute sleep deprivation, to next generation therapeutics like ketamine or transcranial magnetic stimulation-they all seem to promote neuronal growth, particularly in the prefrontal cortex. Psychedelics just seem to be particularly good at this. I take it that this question is asking how the experience is involved in plasticity. People often ask what happens if you are promoting plasticity in a negative context and whether this will have a negative effect on the subjects. Plasticity can mean a lot of different things to different people, and what I am referring to is the ability of psychoplastogenic drugs to promote the David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 47 growth of particular neurons. Our line of work was inspired by research on extinction learning, where the idea is to promote plasticity in order to enhance the extinction of a fearful memory. You might expect that if you promote plasticity, before you do fear conditioning, this might enhance the formation of fear memory. Originally, we thought that might happen, but this turned out to be false, at least in rodents. We would administer psychedelics to rodents in an attempt to enhance fear memory that was formed by conditioning a tone to the expectation of a mild foot shock. But psychedelics did not enhance this fear memory, but instead enhanced the safety memory, or fear extinction memory. The reason we think this is the case is because the specific circuits involved are different. Circuits that mediate the safety memory involve neurons in the prefrontal cortex that tend to grow in response to psychedelic drugs. So when we started, we thought that psychedelic-induced plasticity would amplify all of the subjective effects, but we surprisingly found that it only had antidepressant and anxiolytic properties, regardless of whether the subjective experience was good or bad, in rodents. Do you think that psychedelics should be implemented as a first-line treatment for depression, or should patients first attempt a treatment option that does not carry the risks related to the subjective effects? D.E. Olson: I do not necessarily think that psychedelics should be a first line treatment, like SSRIs currently are. I think that they should rather be used for treatment-resistant populations after something that can be administered more easily, fails, and only then moves on to the psychedelics. But I also think that we need to do everything that we can to just make sure patients are being treated with what they need. Another thing to consider is that psychedelic assisted psychotherapy is contraindicated for people with psychotic illnesses or a history of mental disorders. Psychiatric disorders have a lot of overlap and comorbidity, so there will probably be a subset of patients who will not be able to use these treatments safely. In these particular cases, the non- hallucinogenic version of the drug might have some advantages. David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 48 D.B. Yaden: I think we both agree that for some people, the treatment without subjective effects would be important for contraindications and other safety reasons. On the other hand, we are mostly talking about the ethical concerns around the risks of psychedelics without factoring in the potential benefits. I think the attention to risk is extremely important, since many people are not aware of them in seeking treatment for depression. But in terms of implementing psychedelics as a treatment option, I think the burden of proof lies on the proponents for non-subjective psychedelics, in terms of both risks and benefits. There is a high socioeconomic burden for society from the many people who suffer from a mental illness in addition to the personal suffering. So there is an argument to be made that we don't invest enough in treatments that we know work. Psilocybin appears to be a treatment that works, though more research is still needed, but the cost-benefit analysis may easily show that there is an obligation to provide people with the most effective treatment. Maybe this is a philosophical question, but if you can provide an experience that many people report as being the most meaningful of their entire lives, is it unethical to withhold it from them? There are real risks, but there are also tremendous benefits. I am open to the possibility that psychedelics may actually be a more effective first line treatment than then getting on SSRIs, but I do not think this question can be resolved based on the current state of evidence. Either way, I am open to both possibilities until more research is available. D.E. Olson: I do not necessarily think that psychedelics should be a first-line treatment like SSRIs currently are. I think that they should rather be used for treatment-resistant populations after something that can be administered more easily fails, and only then moves on to the psychedelics. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 49 A major criticism regarding the therapeutic benefits attributed to the subjective experience is that the data are largely correlational. Do you have any suggestions for improvements, from a methodological standpoint? D.B. Yaden: The first thing you learn in any statistics class is that correlation does not equal causation. But actually, correlation can imply causation, in the sense that it indicates there is a possibility of causation. Correlation is often a first step along that path of determining causation, and there are certain features of the subjective experience that do seem to predict therapeutic responses weeks or even months later. In my opinion, this indicates that psychedelics elicit affective or cognitive processes that could potentially go on to have ripple effects. In terms of testing this, it's very difficult. Our article Yaden \& Griffiths (2021) discusses the possibility of administering psychedelics under general anesthesia, where people have little to no awareness or memory of the subjective experience, to see whether there are persisting therapeutic effects. This raises a lot of ethical issues, it is a bit of a risky, and fairly difficult to do practically. But it is a basic science question, so I am actually surprised why there has not been rodent research conducted on this topic yet. I think this study needs to be done, and I'm very curious about the results. My strong suspicion would be that being awake will result in much larger and more enduring therapeutic effects than being heavily sedated. Of course, you have to worry about drug interactions between the kind of anesthetic that's used and the psychedelic. D.B. Yaden: We don't invest enough in treatments that we know work. Psilocybin appears to be a treatment that works, though more research is still needed, but the cost-benefit analysis may easily show that there is an obligation to provide people with the most effective treatment. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 50 D.E. Olson: In order to experimentally determine what causes the most enduring therapeutic effects, I think you either need to find a way to block the subjective effects, while leaving the plasticity promoting effects intact, or vice versa: block the plasticity promoting effects and leave the subjective effects intact. There are a couple of ways to do this, depending on whether you consider ketamine as a psychedelic. The first is to administer psychedelic compounds under anesthesia, and one way to get around the ethical issue is to look at patient populations who are going into surgery anyway. If you count ketamine as a psychedelic, then there are at least three studies where people were given low doses of ketamine while they were under anesthesia. Although this patient population was not being treated for severe depression, they reported long-lasting, profound elevations in mood. Future studies should look into this with treatment resistant patient populations as well. The other thing to consider is the difference between R- and S-Ketamine enantiomers. As you may know, these are left-handed and right-handed versions of the same molecule, and the left-handed S-enantiomer is FDA approved for treatment-resistant depression under the brand name Spravato by Janssen. My understanding is that this version was chosen because it has a higher affinity to the NMDA-receptor and produces stronger subjective effects. So it was assumed that it was going to produce greater antidepressant effects. But it turns out that in rodents that is not the case, and in fact the R- enantiomer which produce fewer subjective effects has a greater antidepressant efficacy. There are actually companies now who are dedicated to using R-ketamine as the better version. Even in clinics, you have anecdotal reports that the racemic combination of the two enantiomers works better than Spravato. This might indicate that some of the subjective effects are less important than the other neurobiological effects, since the R-enantiomer is also a stronger psychoplastogen. These are also just correlations, so in addition to putting people under anesthesia to block out the subjective effects, you can produce David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 51 psychoplastogens without any subjective effects, which is what my lab is currently doing. If we want to understand the importance of plasticity effects relative to the subjective effects, we should also find substances that produce mystical-type experiences in the absence of enhancing neuroplasticity. It would be awesome to find a drug like this, but as we discussed earlier, I believe that plasticity might always result after a mystical type experience, so it is probably difficult to decouple them in this manner. One thing that is potentially doable, is to block growth pathways downstream of the mystical experiences, and our research group is currently also pursuing this. It is also interesting to note that the antidepressant efficacy of ketamine has a very different temporal profile compared to serotonergic tryptamines. Ketamine is fast-acting, but its antidepressant effects often wear off after 1 to 2 weeks. Is there a particular reason why serotonergic tryptamines work longer? D.E. Olson: I have a student in my group who has a hypothesis, which he calls "the shitty fast acting antidepressant hypothesis". The hypothesis is that slow acting antidepressants like SSRIs, are really bad at turning on the same pathways that are triggered by substances such as ketamine. The idea is that ketamine activates these pathways for the duration of one or two weeks, whereas psychedelics seem to activate these pathways for even longer. We found that even if we do a short stimulation with these compounds, it activates an autoregulatory circuit that keeps neuronal growth going for a period of time. D.E. Olson: There are at least three studies where people were given low doses of ketamine while they were under anesthesia. Although this patient population was not being treated for severe depression, they reported long-lasting, profound elevations in mood. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 52 There is also some interesting work with animal models being done by Alex Kwan at Yale around this topic (Phoumthipphavong et al., 2016). Their group found that in rodents, ketamine exposure increases spine density for about a week, which correlates nicely with the antidepressant effects. By comparison, the effects of psilocybin on dendritic spine density lasts for at least a month, which correlates nicely with the fact that the antidepressant effects are also much longer (Shao et al., 2021). D.B. Yaden: Before I studied psychedelics, I studied mystical type experiences and altered states of consciousness caused by non-pharmacological triggers. So I am also curious to know how much more psychoplastogenic psychedelic substances are compared to other psychological experiences. Are these just slight differences or orders of magnitude? Can you give us a sense of the effect size and their scale? [questions directed toward David Olson] D.E. Olson: I would say the difference is orders of magnitude compared to other substances, like traditional SSRIs. You will see the same types of changes in brain structure with an SSRI, but you need to administer them chronically over the course of weeks to months before you start seeing those types of changes. In terms of subjective experiences, I do not have a way to comment on that because research is lacking a way to measure this. We have been focusing on animal models for now, but there are some exciting advances that might open future studies with a new radiotracer that labels pre-synaptic vesicles. That might be a way to "label" synapses in the brain to look for increased synaptogenesis in response to particular experiences or pharmacological interventions. D.B. Yaden: But even in the rodent literature, are there any significant life events, like birth or changing the environment, which produce similar levels of plasticity as psychedelics? [question directed toward David Olson] David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 53 D.E. Olson: Enriched environments, i.e. filling their cages with a bunch of toys for them to play with, produces lots of neuronal growth in the cortex. So does exercise-if you expose mice to a running wheel, this also produces neuronal growth. Nobody has done a head to head analysis on whether these psychoplastogenic effects are comparable in degree to ketamine or psilocybin, but they both produce robust antidepressant effects for the rodents. Psychedelics strongly rely on what has been termed the meaning response (Hartogsohn, 2018), which depends on the whole set and setting in which psychedelic action takes place (Hartogsohn, 2016). There is a recent paper showing psychedelic experience can be induced by placebo effects that strongly rely on contextual factors, prior expectations, and beliefs (Olson et al., 2020). What is your take on this? D.B. Yaden: Based on placebo research, particularly the God-helmet experiment (Maij et al., 2019), it does not surprise me that you could convince someone that they received a psychedelic and see them report all kinds of vivid, subjective experiences in response.I think the study by Roland Griffiths (2006) bears well on this issue, because it compared the effects of psilocybin with high dose methylphenidate among psychedelic naive participants. With a high dose of methylphenidate, you do feel substantially altered, so I think that it is a pretty decent active placebo control for psychedelic naive participants. I hope there will be more studies that use active placebo controls. But this standard might be difficult to achieve for experienced psychedelic users. Something like a high dose of THC might help control these expectancy effects. D.E. Olson: I think the idea of using high dose THC is intriguing because it is unlikely to induce any type of plasticity, in fact it may even have the opposite effect. It would be very interesting to use it as a placebo control, and this is actually something that the FDA would be really interested in, because it might help control for some of the expectations. David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 54 Do you think that microdosing, i.e., using psychedelics on an intermittent schedule within a sub-hallucinogenic dose range, has a therapeutic effect? D.E. Olson: I think that using a sub-hallucinogenic dose is a good way to control for the placebo effect, because it can also trigger the plasticity without inducing subjective effects. We investigated microdosing in rodents (Cameron et al., 2019) and it seemed to produce a similar type of antidepressant and anxiolytic response as a single dose. But it is very unclear whether this is also the case for people because there are no placebo-controlled double-blind clinical trials on psychedelic microdosing to suggest that it is effective. I think the microdosing paradigm is actually more dangerous than a single dose paradigm, because a lot of these drugs engage the 5-HT2B receptor, which can lead to cardiovascular valvopathy if you are using these drugs on a chronic intermittent basis (editor's note: this topic is discussed in detail by Kuypers et al. (2019)). The other thing to keep in mind is that chronically stimulating these growth pathways can actually lead to something that resembles excitotoxicity. The brain has a very set level of excitation that it likes, so if you are constantly exciting its pathways, you will actually see a retraction of dendritic spines in order to lower the input to these neurons. In our study within female rodents, we saw that a single dose of DMT causes a big growth of dendritic spines, whereas if you administer DMT every third day for a month, you actually see retraction of the dendritic spines. It is important to keep this in mind. D.B. Yaden: I also think that the cardiac risks of microdosing are an important issue to raise and wanted to emphasize that we intentionally decided not to cover this topic in our paper because there is just no evidence as of yet to suggest that there's substantial clinical efficacy, or really any efficacy at all. It does appear that a certain dose is required in order to get remarkable clinical effects. David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 55 Thank you very much for your time. Do you have any concluding remarks? D.B. Yaden: Well, I just want to thank you for inviting us and thank you, David, for inviting Roland Griffiths and me to write this companion article it was really a lot of fun to think about this topic and fun to discuss it. My closing thought is that I think there is a lot of creativity that is required in this space, as well as a lot of rigorous testing. And so the kind of work on creating these new compounds that David Olson and his lab are doing is really inspiring and absolutely necessary. There will be individuals who cannot have subjective experiences for various reasons, but I think by and large, we need to remember that the evidence so far has been on psychedelics that do produce subjective effects and that these experiences can be among the most meaningful in one's entire life. So we want to be careful about removing these for reasons such as cost. D.E. Olson: I would also like to thank you all for the discussion and emphasize that it was a lot of fun writing this with David Yaden and Roland Griffiths. D.B. Yaden: I think by and large, we need to remember that the evidence so far has been on psychedelics that do produce subjective effects and that these experiences can be among the most meaningful in one's entire life. So we want to be careful about removing these for reasons such as cost. " " D.B. Yaden: I also think that the cardiac risks of microdosing are an important issue to raise (...) and there is just no evidence as of yet to suggest that there's substantial clinical efficacy, or really any efficacy at all. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 56 What I really want to emphasize is the uniqueness of the community that really cares about psychedelics. We have a lot of really smart, thoughtful people trying to work on this problem, which I think is really critical. And while our two papers might seem like they are at odds with one another, after this conversation it should be clear that we mostly agree on everything. The thing that we definitely all agree on is that we need to do everything in our power to treat as many patients as we can. Neuropsychiatric disorders affect an enormous number of people and are some of the leading causes of disability worldwide. I think we are all aligned on trying to do whatever we can to bring relief to patients. That is why we do this work. So hopefully, there are going to be a lot more of these interesting conversations where we can figure out the best way to make the world a better place. I want to thank both of the speakers for discussing this on-going debate and hopefully we will have more data to address this issue soon. A reminder that interested readers can read the initial exchange here: i) Olson, D. E. (2021). The Subjective Effects of Psychedelics May Not Be Necessary for Their Enduring Therapeutic Effects. ACS Pharmacology \& Translational Science, 4(2), 563-567. https://doi.org/10.1021/acsptsci.0c00192 ii) Yaden, D. B., \& Griffiths, R. R. (2021). The Subjective Effects of Psychedelics Are Necessary for Their Enduring Therapeutic Effects. ACS Pharmacology \& Translational Science, 4(2), 568-572. https://doi.org/10.1021/acsptsci.0c00194 D.E. Olson: Neuropsychiatric disorders affect an enormous number of people and are some of the leading causes of disability worldwide. I think we are all aligned on trying to do whatever we can to bring relief to patients. That is why we do this work. " " David Olson \& David Yaden - Subjective and Therapeutic Effects of Psychedelics ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 57 References Cameron, L. P., Benson, C. J., DeFelice, B. C., Fiehn, O., \& Olson, D. E. (2019). Chronic, intermittent microdoses of the psychedelic N, N- dimethyltryptamine (DMT) produce positive effects on mood and anxiety in rodents. ACS chemical neuroscience, 10(7), 3261-3270. https://doi.org/10.1021/acschemneuro.8b00692 Griffiths, R. R., Richards, W. A., McCann, U., \& Jesse, R. (2006). Psilocybin can occasion mystical-type experiences having substantial and sustained personal meaning and spiritual significance. Psychopharmacology, 187(3), 268-283. https://doi.org/10.1007/s00213-006-0457-5 Hartogsohn, I. (2018). The Meaning-Enhancing Properties of Psychedelics and Their Mediator Role in Psychedelic Therapy, Spirituality, and Creativity [Perspective]. Frontiers in Neuroscience, 12(129). https://doi.org/10.3389/fnins.2018.00129 Hartogsohn, I. J. J. o. P. (2016). Set and setting, psychedelics and the placebo response: An extra-pharmacological perspective on psychopharmacology. 30(12), https://doi.org/10.1177/0269881116677852 1259-1267. Maij, D. L., van Elk, M., Schjoedt, U. J. R., Brain, \& Behavior. (2019). The role of alcohol in expectancy-driven mystical experiences: A pre-registered field study using placebo brain stimulation. 9(2), 108-125. https://doi.org/10.1080/2153599X.2017.1403952 Olson, D. E. (2021). The Subjective Effects of Psychedelics May Not Be Necessary for Their Enduring Therapeutic Effects. ACS Pharmacology \& Translational Science, 4(2), 563-567. https://doi.org/10.1021/acsptsci.0c00192 Olson, J. A., Suissa-Rocheleau, L., Lifshitz, M., Raz, A., \& Veissiere, S. P. (2020). Tripping on nothing: placebo psychedelics and contextual factors. Psychopharmacology, 237(5), https://doi.org/10.1007/s00213-020-05464-5 Phoumthipphavong, V., Barthas, F., Hassett, S., \& Kwan, A. C. (2016). Longitudinal effects of ketamine on dendritic architecture in vivo in the mouse medial frontal cortex. Eneuro, 3(2). https://doi.org/10.1523/ENEURO.0133-15.2016 Shao, L.-X., Liao, C., Gregg, I., Davoudian, P. A., Savalia, N. K., Delagarza, K., \& Kwan, A. C. (2021). Psilocybin induces rapid and persistent growth of dendritic spines in frontal cortex in vivo. bioRxiv. Yaden, D. B., \& Griffiths, R. R. (2021). The Subjective Effects of Psychedelics Are Necessary for Their Enduring Therapeutic Effects. ACS Pharmacology \& Translational Science, 4(2), 568-572. https://doi.org/10.1021/acsptsci.0c00194\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC1F8135] (386.400bp,-237.120bp) rectangle ++(83.520bp,-0.240bp);
+  \fill[ALIUSC1F8135] (386.400bp,-325.920bp) rectangle ++(73.920bp,-0.240bp);
+  \fill[ALIUSC1F8135] (386.400bp,-393.120bp) rectangle ++(68.640bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (380.400bp,-214.080bp) rectangle ++(0.480bp,-71.760bp);
+  \fill[ALIUSC0000FF] (95.760bp,-346.800bp) rectangle ++(166.080bp,-0.480bp);
+  \fill[ALIUSCBFBFBF] (380.400bp,-285.840bp) rectangle ++(0.480bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (380.400bp,-288.000bp) rectangle ++(0.480bp,-127.680bp);
+  \ALIUSPlacedTextContent{90.000}{72.019}{373.368}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Are the Subjective Effects of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{96.019}{371.388}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Necessary for Their Enduring Therapeutic}
+  \ALIUSPlacedTextContent{90.000}{120.019}{75.558}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Effects?}
+  \ALIUSPlacedTextContent{90.000}{156.019}{404.424}{ALIUSC000000}{\ALIUSFontLatoLight}{19.920}{A conversation with David E. Olson and David}
+  \ALIUSPlacedTextContent{90.000}{180.019}{82.188}{ALIUSC000000}{\ALIUSFontLatoLight}{19.920}{B. Yaden}
+  \ALIUSPlacedTextContent{386.400}{213.984}{79.885}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{David E. Olson}
+  \ALIUSPlacedTextContent{386.400}{227.159}{90.827}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{deolson@ucdavis.edu}
+  \ALIUSPlacedTextContent{386.400}{237.959}{106.531}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Department of Chemistry,}
+  \ALIUSPlacedTextContent{386.400}{248.759}{115.432}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Department of Biochemistry}
+  \ALIUSPlacedTextContent{386.400}{259.559}{92.375}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{\& Molecular Medicine,}
+  \ALIUSPlacedTextContent{95.760}{267.768}{142.297}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{Hosted by George Fejer}
+  \ALIUSPlacedTextContent{386.400}{270.359}{103.022}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Center for Neuroscience,}
+  \ALIUSPlacedTextContent{386.400}{281.159}{60.759}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{UC Davis, USA}
+  \ALIUSPlacedTextContent{95.760}{287.891}{281.857}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Cite as: Olson, D.E., Yaden, D.B., Fejer, G. (2021). Are the}
+  \ALIUSPlacedTextContent{95.760}{299.891}{281.919}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Subjective Effects of Psychedelics Necessary for Their Enduring}
+  \ALIUSPlacedTextContent{386.400}{302.784}{79.725}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{David B. Yaden}
+  \ALIUSPlacedTextContent{95.760}{311.891}{281.813}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Therapeutic Effects? A conversation with David E. Olson and}
+  \ALIUSPlacedTextContent{386.400}{315.959}{78.929}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{dyaden1@jhmi.edu}
+  \ALIUSPlacedTextContent{95.760}{323.891}{176.229}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{David B. Yaden hosted by George Fejer,}
+  \ALIUSPlacedTextContent{271.955}{323.891}{58.163}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{330.074}{323.891}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{335.023}{323.891}{5.846}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{5}
+  \ALIUSPlacedTextContent{340.823}{323.891}{34.056}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{, 40-57,}
+  \ALIUSPlacedTextContent{386.400}{326.759}{93.077}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Center for Psychedelic}
+  \ALIUSPlacedTextContent{95.760}{335.891}{166.060}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/0v21-5n82}
+  \ALIUSPlacedTextContent{386.400}{337.559}{108.242}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{\& Consciousness Research,}
+  \ALIUSPlacedTextContent{386.400}{348.359}{122.665}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Johns Hopkins University, USA}
+  \ALIUSPlacedTextContent{386.400}{369.984}{65.734}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{George Fejer}
+  \ALIUSPlacedTextContent{386.400}{383.159}{73.673}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{gyorgyf@live.com}
+  \ALIUSPlacedTextContent{386.400}{393.959}{97.150}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Team coordinator of the}
+  \ALIUSPlacedTextContent{386.400}{404.759}{99.183}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{ALIUS research network}
+  \ALIUSPlacedTextContent{90.000}{430.741}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
+  \ALIUSPlacedTextContent{90.000}{459.276}{418.265}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{ALIUS recently invited Dr. David E. Olson and Dr. David B. Yaden to discuss}
+  \ALIUSPlacedTextContent{90.000}{473.676}{418.267}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{whether or not the subjective effects of psychedelics are necessary for their}
+  \ALIUSPlacedTextContent{90.000}{488.076}{418.278}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{enduring therapeutic benefit in an interactive online discussion. The aim of this}
+  \ALIUSPlacedTextContent{90.000}{502.476}{418.267}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{discussion is to examine their most recent back-to-back publication wherein}
+  \ALIUSPlacedTextContent{90.000}{516.876}{418.274}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{Yaden \& Griffiths (2021) emphasized the subjective effects of psychedelics, such}
+  \ALIUSPlacedTextContent{90.000}{531.276}{418.267}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{as mystical experiences, in relation to their long-lasting therapeutic effects,}
+  \ALIUSPlacedTextContent{90.000}{545.676}{418.274}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{whereas Olson (2021) emphasized that there are certain therapeutic benefits}
+  \ALIUSPlacedTextContent{90.000}{560.076}{418.270}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{related to the psychoplastogenic properties of these substances that are}
+  \ALIUSPlacedTextContent{90.000}{574.476}{418.278}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{unrelated to their subjective effects. We invited the authors to clarify the fine}
+  \ALIUSPlacedTextContent{90.000}{588.876}{418.273}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{points of their arguments and to tease out any point of disagreement between}
+  \ALIUSPlacedTextContent{90.000}{603.276}{413.004}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{these two perspectives. What follows is an edited transcript of their discussion.}
+  \ALIUSPlacedTextContent{90.000}{629.676}{47.340}{ALIUSC000000}{\ALIUSFontLatoItalic}{12.000}{keywords}
+  \ALIUSPlacedTextContent{137.339}{629.676}{2.844}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{:}
+  \ALIUSPlacedTextContent{144.665}{629.676}{363.372}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{psychedelics, psychoplastogens, subjective effects, therapeutics benefits,}
+  \ALIUSPlacedTextContent{90.000}{646.236}{83.661}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{treatment ethics}
+  \ALIUSPlacedTextContent{90.000}{680.383}{418.394}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Although you are addressing two sides of the same coin, your back-to-back}
+  \ALIUSPlacedTextContent{90.000}{697.663}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{publications are primarily aimed at questioning whether the subjective effects}
+  \ALIUSPlacedTextContent{90.000}{714.943}{418.329}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{play a causal role within the therapeutic process, or whether it can be}
+  \ALIUSPlacedTextContent{90.000}{732.223}{418.474}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{regarded as an epiphenomenon that accompanies therapeutic outcomes, but}
+  \ALIUSPlacedTextContent{90.000}{749.503}{150.016}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{not a principal mechanism.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{495.600}{54.432}{12.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{41}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.703}{418.403}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{The first question is related to the subject-matter of dualism, and whether the}
+  \ALIUSPlacedTextContent{90.000}{119.743}{418.524}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{comparison between neuroplasticity alone versus neuroplasticity plus}
+  \ALIUSPlacedTextContent{90.000}{137.023}{418.354}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{subjective experience implies that there is a dichotomous relationship}
+  \ALIUSPlacedTextContent{90.000}{154.303}{418.320}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{between subjectivity and the neurobiological substrate. How do you define}
+  \ALIUSPlacedTextContent{90.000}{171.583}{418.320}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{the subjective experience, in terms of its biological function and}
+  \ALIUSPlacedTextContent{90.000}{188.863}{418.427}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{embeddedness within a neurobiological substrate? What is its relationship to}
+  \ALIUSPlacedTextContent{90.000}{206.143}{418.317}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{neuroplasticity? Are these pitted against each other within your scientific}
+  \ALIUSPlacedTextContent{90.000}{223.423}{305.900}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{framework in a manner that implicitly endorses dualism?}
+  \ALIUSPlacedTextContent{90.000}{252.578}{69.642}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{161.021}{252.578}{347.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I would like to take this one first. If you don't mind David, I}
+  \ALIUSPlacedTextContent{90.000}{272.018}{418.374}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think both of us agree on so much and this particular topic of dualism was}
+  \ALIUSPlacedTextContent{90.000}{291.458}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{definitely something that we agreed on from the get-go. My co-author}
+  \ALIUSPlacedTextContent{90.000}{310.898}{418.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Roland Griffiths and I talked quite a bit about whether to include a}
+  \ALIUSPlacedTextContent{90.000}{330.338}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{discussion of dualism or not at the beginning of our article. We were}
+  \ALIUSPlacedTextContent{90.000}{350.018}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{constrained by word limits, but also we just thought it was so screamingly}
+  \ALIUSPlacedTextContent{90.000}{369.458}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{obvious that we weren't promoting any kind of dualistic notion of}
+  \ALIUSPlacedTextContent{90.000}{388.898}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness in our viewpoint that it didn't seem like we really needed to}
+  \ALIUSPlacedTextContent{90.000}{408.338}{418.137}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cover this point in depth. But several of our colleagues have been worried that}
+  \ALIUSPlacedTextContent{90.000}{428.018}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people might take away the misconception that we are promoting a kind of}
+  \ALIUSPlacedTextContent{90.000}{447.458}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind-matter dualism with our argument, and I think that that's just}
+  \ALIUSPlacedTextContent{90.000}{466.898}{132.390}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{absolutely not the case.}
+  \ALIUSPlacedTextContent{90.000}{498.338}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Basically, the question of the nature of consciousness, what it actually consists}
+  \ALIUSPlacedTextContent{90.000}{518.018}{418.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of is referred to as the "hard problem of consciousness" and it's unclear at this}
+  \ALIUSPlacedTextContent{90.000}{537.458}{418.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{point what any kind of scientific explanation of the nature and origin of}
+  \ALIUSPlacedTextContent{90.000}{556.898}{418.079}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness might be. So I think it is best to take that topic and set it aside}
+  \ALIUSPlacedTextContent{90.000}{576.338}{402.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and leave that for more of a philosophical discussion, at least in my view.}
+  \ALIUSPlacedTextContent{90.000}{608.018}{418.312}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{When we are talking about subjective effects we are talking about drug}
+  \ALIUSPlacedTextContent{90.000}{627.458}{418.309}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects on what is referred to sometimes as phenomenal consciousness, the}
+  \ALIUSPlacedTextContent{90.000}{646.898}{418.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"what it feels like" quality of being—as in, we are all looking at a screen, we}
+  \ALIUSPlacedTextContent{90.000}{666.338}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{are all in rooms, we are all listening to my voice at the moment. And this is}
+  \ALIUSPlacedTextContent{90.000}{686.018}{418.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{what we mean by subjective effects, we are absolutely not referring to any}
+  \ALIUSPlacedTextContent{90.000}{705.458}{418.310}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{kind of sense of consciousness beyond something that is tractable, at least}
+  \ALIUSPlacedTextContent{90.000}{724.898}{215.604}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{theoretically, in terms of neurobiology.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.640}{54.432}{13.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{42}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{68.556}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{160.930}{102.578}{347.417}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I actually think maybe it's the other way around, where the}
+  \ALIUSPlacedTextContent{90.000}{122.018}{418.161}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{plasticity effects are an epiphenomenon arising from subjective experience. I}
+  \ALIUSPlacedTextContent{90.000}{141.458}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think that the production of the subjective effects will inherently lead to the}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{plasticity effects, but the question of whether or not you can decouple those}
+  \ALIUSPlacedTextContent{90.000}{180.338}{199.505}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{two is one we are actively pursuing.}
+  \ALIUSPlacedTextContent{90.000}{212.018}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{[When I'm talking about the subjective effects of the drug] I lean on experts}
+  \ALIUSPlacedTextContent{90.000}{231.458}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{like David Yaden and the questionnaires that they have developed, such as}
+  \ALIUSPlacedTextContent{90.000}{250.898}{219.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the Mystical Experiences Questionnaire.}
+  \ALIUSPlacedTextContent{106.320}{289.008}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.400}{299.717}{72.033}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.E. Olson}
+  \ALIUSPlacedTextContent{206.160}{299.717}{252.531}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{: I actually think maybe it's the other}
+  \ALIUSPlacedTextContent{134.400}{317.717}{324.268}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{way around, where the plasticity effects are an}
+  \ALIUSPlacedTextContent{134.400}{335.717}{109.490}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{epiphenomenon}
+  \ALIUSPlacedTextContent{265.463}{335.717}{45.853}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{arising}
+  \ALIUSPlacedTextContent{333.131}{335.717}{34.582}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{from}
+  \ALIUSPlacedTextContent{389.529}{335.717}{69.129}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{subjective}
+  \ALIUSPlacedTextContent{468.960}{343.488}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.400}{353.717}{74.315}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experience.}
+  \ALIUSPlacedTextContent{90.000}{409.183}{418.322}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Would you treat these two phenomena of 'the subjective' and 'the}
+  \ALIUSPlacedTextContent{90.000}{426.223}{418.415}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{neurobiological' according to a micro-level and a macro-level explanation of}
+  \ALIUSPlacedTextContent{90.000}{443.503}{418.480}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{their causal role? On the one hand, neuroplasticity seems to be specific to}
+  \ALIUSPlacedTextContent{90.000}{460.783}{418.534}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{events that take place on the level of cells and receptors, whereas subjective}
+  \ALIUSPlacedTextContent{90.000}{478.063}{418.484}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{experiences seem to describe events that take place on the level of brain}
+  \ALIUSPlacedTextContent{90.000}{495.343}{418.389}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{states and their corresponding external correlates. Would you argue that}
+  \ALIUSPlacedTextContent{90.000}{512.623}{418.430}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{there is any privileged level of causation when it comes to investigating what}
+  \ALIUSPlacedTextContent{90.000}{529.903}{381.349}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{should be regarded as the principal mechanism of therapeutic effects?}
+  \ALIUSPlacedTextContent{90.000}{559.058}{67.943}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{157.627}{559.058}{350.663}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I want to address at least part of your question, which still seems}
+  \ALIUSPlacedTextContent{90.000}{578.498}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to take issue with misconceptions around dualism. As we know from the}
+  \ALIUSPlacedTextContent{90.000}{597.938}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{work of Paul Bloom and others, people are intuitive dualists, they think of}
+  \ALIUSPlacedTextContent{90.000}{617.378}{418.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind and brain as two separate things. This is also reflected in the way our}
+  \ALIUSPlacedTextContent{90.000}{636.818}{252.933}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{language is structured. People say things like}
+  \ALIUSPlacedTextContent{344.172}{636.818}{113.235}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{"my brain is thinking"}
+  \ALIUSPlacedTextContent{457.392}{636.818}{50.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, and it's}
+  \ALIUSPlacedTextContent{90.000}{656.498}{418.322}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{difficult for people to imagine that their thoughts and feelings have a}
+  \ALIUSPlacedTextContent{90.000}{675.938}{147.132}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neurobiological substrate.}
+  \ALIUSPlacedTextContent{90.000}{714.818}{418.079}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is also the kind of thing that psychologists and neuroscientists will take}
+  \ALIUSPlacedTextContent{90.000}{734.498}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for granted when they are talking, but the vast majority of neuroscientists}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.880}{54.432}{12.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{43}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{418.181}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{believe that even very abstract mental states are ultimately reducible to}
+  \ALIUSPlacedTextContent{90.000}{122.018}{418.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neurobiological changes. Even if we do not specifically know the complex}
+  \ALIUSPlacedTextContent{90.000}{141.458}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{array of brain changes at a really granular level that instantiate complex}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feelings, such as the sense of space, time or connectedness—these are all still}
+  \ALIUSPlacedTextContent{90.000}{180.338}{80.970}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain changes.}
+  \ALIUSPlacedTextContent{90.000}{219.458}{418.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I agree with David Olson about the psychoplastogenic effects of psychedelics}
+  \ALIUSPlacedTextContent{90.000}{238.898}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and that there would likely be some therapeutic benefit with or without the}
+  \ALIUSPlacedTextContent{90.000}{258.338}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subjective effects. We also agree that the subjective effects probably are}
+  \ALIUSPlacedTextContent{90.000}{278.018}{75.516}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{necessary for}
+  \ALIUSPlacedTextContent{167.554}{278.018}{90.215}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{full and enduring}
+  \ALIUSPlacedTextContent{257.790}{278.018}{250.449}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{therapeutic effects. Cognitive and affective}
+  \ALIUSPlacedTextContent{90.000}{297.458}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{processes seem to be what is conveying beneficial effects for four months or}
+  \ALIUSPlacedTextContent{90.000}{316.898}{417.996}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more, and it is amazing that we see positive effects persisting for so long. That}
+  \ALIUSPlacedTextContent{90.000}{336.338}{401.072}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is what makes these compounds so interesting from a clinical standpoint.}
+  \ALIUSPlacedTextContent{103.680}{384.288}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{132.240}{396.437}{76.734}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{208.800}{396.437}{254.679}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Even if we do not specifically know the}
+  \ALIUSPlacedTextContent{132.240}{414.437}{331.252}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{complex array of brain changes at a really granular}
+  \ALIUSPlacedTextContent{132.240}{432.437}{331.149}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{level that instantiate complex feelings, such as the}
+  \ALIUSPlacedTextContent{132.240}{450.437}{331.245}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{sense of space, time or connectedness—these are}
+  \ALIUSPlacedTextContent{474.960}{459.648}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{132.240}{468.437}{136.236}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{all still brain changes.}
+  \ALIUSPlacedTextContent{90.000}{510.098}{67.498}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{158.817}{510.098}{349.529}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I agree with all of the above and share the opinion that brain}
+  \ALIUSPlacedTextContent{90.000}{529.538}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{states are essentially the emergent properties of circuits, built up on cells,}
+  \ALIUSPlacedTextContent{90.000}{548.978}{418.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{built up on proteins, built up on ligands, etc. More importantly, I want to}
+  \ALIUSPlacedTextContent{90.000}{568.658}{198.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{emphasize that my argument is}
+  \ALIUSPlacedTextContent{294.721}{568.658}{16.195}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{not}
+  \ALIUSPlacedTextContent{310.932}{568.658}{197.340}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that the subjective effects are}
+  \ALIUSPlacedTextContent{90.000}{588.098}{235.610}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unimportant for the therapeutic response.}
+  \ALIUSPlacedTextContent{90.000}{626.978}{418.421}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In fact, the subjective effects of compounds like psilocybin are probably really}
+  \ALIUSPlacedTextContent{90.000}{646.658}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{important for their maximal effects. But they may not be necessary for certain}
+  \ALIUSPlacedTextContent{90.000}{666.098}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{types of therapeutic responses, and whether or not that leads to maximal}
+  \ALIUSPlacedTextContent{90.000}{685.538}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{efficacy is an entirely different question. I still think that it's possible to get}
+  \ALIUSPlacedTextContent{90.000}{704.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{enduring effects, but maybe they do not last quite as long. We just don't know}
+  \ALIUSPlacedTextContent{90.000}{724.658}{198.384}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{yet, as this is still an open question.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.160}{54.432}{13.632}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{44}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{105.120}{112.368}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.200}{122.837}{82.826}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{217.440}{122.837}{239.818}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I agree with David Olson about the}
+  \ALIUSPlacedTextContent{133.200}{140.837}{324.052}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{psychoplastogenic effects of psychedelics and}
+  \ALIUSPlacedTextContent{133.200}{158.837}{323.970}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{that there would likely be some therapeutic}
+  \ALIUSPlacedTextContent{133.200}{176.837}{324.067}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{benefit with or without the subjective effects. We}
+  \ALIUSPlacedTextContent{133.200}{194.837}{324.023}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{also agree that the subjective effects probably are}
+  \ALIUSPlacedTextContent{469.920}{205.488}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.200}{212.837}{90.520}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{necessary for}
+  \ALIUSPlacedTextContent{223.200}{212.837}{101.313}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{full and enduring}
+  \ALIUSPlacedTextContent{324.480}{212.837}{128.808}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{therapeutic effects.}
+  \ALIUSPlacedTextContent{106.320}{254.448}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.400}{267.077}{69.629}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.E. Olson}
+  \ALIUSPlacedTextContent{203.760}{267.077}{108.987}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{: my argument is}
+  \ALIUSPlacedTextContent{312.000}{267.077}{24.440}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{not}
+  \ALIUSPlacedTextContent{335.760}{267.077}{122.679}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{that the subjective}
+  \ALIUSPlacedTextContent{134.400}{285.077}{323.952}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{effects are unimportant for the therapeutic}
+  \ALIUSPlacedTextContent{134.400}{303.077}{323.973}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{response. In fact, the subjective effects of}
+  \ALIUSPlacedTextContent{134.400}{321.077}{323.961}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{compounds like psilocybin are probably really}
+  \ALIUSPlacedTextContent{469.680}{330.768}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.400}{339.077}{228.388}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{important for their maximal effects.}
+  \ALIUSPlacedTextContent{90.000}{380.143}{418.233}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{One aspect of the article that many people in the psychedelic community}
+  \ALIUSPlacedTextContent{90.000}{397.183}{236.995}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{appraised critically was the statement that:}
+  \ALIUSPlacedTextContent{90.000}{431.743}{4.256}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{"}
+  \ALIUSPlacedTextContent{94.262}{431.743}{413.862}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{the intense subjective effects of these drugs make it unlikely that they will ever}
+  \ALIUSPlacedTextContent{90.000}{449.023}{335.181}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{become widespread treatments for disorders such as depression."}
+  \ALIUSPlacedTextContent{425.136}{449.023}{83.199}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Olson, 2020).}
+  \ALIUSPlacedTextContent{90.000}{483.583}{418.488}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{However, it seems that you agree on nearly every aspect of each other's}
+  \ALIUSPlacedTextContent{90.000}{500.863}{283.895}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{perspectives. Are there any points of disagreement?}
+  \ALIUSPlacedTextContent{90.000}{537.458}{70.018}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{161.770}{537.458}{346.553}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I am also wondering whether this portrayal of the subjective}
+  \ALIUSPlacedTextContent{90.000}{556.898}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience is intended to depict it as overall challenging and inherently risky.}
+  \ALIUSPlacedTextContent{90.000}{576.338}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{While our psychometric data show that the acute stage after ingesting}
+  \ALIUSPlacedTextContent{90.000}{596.018}{418.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics can be quite difficult and challenging, the experiences are}
+  \ALIUSPlacedTextContent{90.000}{615.458}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{overall overwhelmingly positive, reaching a degree of meaning that we rarely}
+  \ALIUSPlacedTextContent{90.000}{634.898}{418.368}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{see in other contexts. The empirical data from these clinical trials show that}
+  \ALIUSPlacedTextContent{90.000}{654.338}{418.175}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these experiences are often among the most meaningful experiences that one}
+  \ALIUSPlacedTextContent{90.000}{673.778}{418.223}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can possibly have. But I can imagine there are people who have}
+  \ALIUSPlacedTextContent{90.000}{693.458}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contraindications, such as some kinds of mental disorders like psychotic}
+  \ALIUSPlacedTextContent{90.000}{712.898}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{disorders or certain family histories, where the psychedelic experience would}
+  \ALIUSPlacedTextContent{90.000}{732.338}{418.118}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be inappropriate. Of course, there's risk in any kind of treatment. Therefore,}
+  \ALIUSPlacedTextContent{90.000}{751.778}{415.146}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I am also curious to know David Olson's thoughts on this matter.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.640}{54.432}{13.128}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{45}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{106.320}{111.888}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.400}{119.717}{83.552}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{220.080}{119.717}{238.654}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{While our psychometric data show}
+  \ALIUSPlacedTextContent{134.400}{137.717}{324.245}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{that the acute stage after ingesting psychedelics}
+  \ALIUSPlacedTextContent{134.400}{155.717}{324.227}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{can be quite difficult and challenging, the}
+  \ALIUSPlacedTextContent{134.400}{173.717}{324.314}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experiences are overall overwhelmingly positive,}
+  \ALIUSPlacedTextContent{134.400}{191.717}{324.270}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{reaching a degree of meaning that we rarely see}
+  \ALIUSPlacedTextContent{460.800}{202.848}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.400}{209.717}{113.436}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{in other contexts.}
+  \ALIUSPlacedTextContent{106.320}{242.928}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.400}{256.277}{75.781}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.E. Olson:}
+  \ALIUSPlacedTextContent{210.000}{256.277}{248.685}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{My statement also did not mean to}
+  \ALIUSPlacedTextContent{134.400}{274.277}{324.146}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{convey that substances such as psilocybin only}
+  \ALIUSPlacedTextContent{134.400}{292.277}{324.285}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{produce challenging experiences that are going to}
+  \ALIUSPlacedTextContent{463.440}{304.848}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.400}{310.277}{170.841}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{be problematic for people.}
+  \ALIUSPlacedTextContent{90.000}{358.898}{65.730}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{155.287}{358.898}{353.085}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I am sorry if it came across this way since it was not my intention}
+  \ALIUSPlacedTextContent{90.000}{378.338}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to portray the subjective experience as inherently challenging. My statement}
+  \ALIUSPlacedTextContent{90.000}{398.018}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{also did not mean to convey that substances such as psilocybin only produce}
+  \ALIUSPlacedTextContent{90.000}{417.458}{418.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{challenging experiences that are going to be problematic for people. I am}
+  \ALIUSPlacedTextContent{90.000}{436.898}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{certain that psilocybin will ultimately be approved by the Food and Drug}
+  \ALIUSPlacedTextContent{90.000}{456.338}{418.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Administration (FDA) for some kind of indication, and I have a lot of hope}
+  \ALIUSPlacedTextContent{90.000}{475.778}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for the patients who are going to benefit from this type of therapy. When I}
+  \ALIUSPlacedTextContent{90.000}{495.458}{418.419}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{say that it will not be a widespread medication, that has to do with two}
+  \ALIUSPlacedTextContent{90.000}{514.898}{46.446}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{factors.}
+  \ALIUSPlacedTextContent{90.000}{553.778}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The first one has to do with the fact that the subjective effects of psilocybin}
+  \ALIUSPlacedTextContent{90.000}{573.458}{418.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{make it hard to administer outside of the confines of a clinical setting. I think}
+  \ALIUSPlacedTextContent{90.000}{592.898}{418.386}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that these drugs will always be administered under the care of a physician,}
+  \ALIUSPlacedTextContent{90.000}{612.338}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and it is not going to be the type of medicine you can take home and put in}
+  \ALIUSPlacedTextContent{90.000}{631.778}{417.507}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{your medicine cabinet like a Selective Serotonin Reuptake Inhibitor (SSRI).}
+  \ALIUSPlacedTextContent{90.000}{670.898}{418.173}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The other reason is related to the healthcare costs associated with that type}
+  \ALIUSPlacedTextContent{90.000}{690.338}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of model right now. People have to undergo fairly long preparation and}
+  \ALIUSPlacedTextContent{90.000}{709.778}{418.209}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{integration sessions with the clinicians, which requires a lot of time spent in}
+  \ALIUSPlacedTextContent{90.000}{729.458}{418.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the presence of a healthcare provider. I think that it is going to be challenging}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{493.920}{54.432}{13.800}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{46}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{418.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to treat a large number of patients, and approximately 20\% of the population}
+  \ALIUSPlacedTextContent{90.000}{122.018}{286.135}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{suffer from some type of neuropsychiatric disorder.}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I do think that some people, especially those with treatment-resistant}
+  \ALIUSPlacedTextContent{90.000}{180.338}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{depression, are going to benefit greatly from things like psilocybin, and so it}
+  \ALIUSPlacedTextContent{90.000}{200.018}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{will become a regular part of the psychiatrist's arsenal. I just do not think}
+  \ALIUSPlacedTextContent{90.000}{219.458}{226.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they will become as widespread as SSRIs.}
+  \ALIUSPlacedTextContent{90.000}{258.463}{418.337}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{From a clinical standpoint, there are certainly some patients for whom the}
+  \ALIUSPlacedTextContent{90.000}{275.743}{418.354}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{subjective effects of psychedelics may not be appropriate and may thus}
+  \ALIUSPlacedTextContent{90.000}{293.023}{418.380}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{benefit more from the psychoplastogenic effects. But do you think the goal}
+  \ALIUSPlacedTextContent{90.000}{310.303}{418.267}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{of decoupling the subjective and the psychoplastogenic effects is scientifically}
+  \ALIUSPlacedTextContent{90.000}{327.583}{53.337}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{feasible?}
+  \ALIUSPlacedTextContent{90.000}{362.143}{418.385}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{There are several studies showing that neuroplasticity is also enhanced}
+  \ALIUSPlacedTextContent{90.000}{379.423}{418.336}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{through exposure to enriched environments, a process that is commonly}
+  \ALIUSPlacedTextContent{90.000}{396.463}{418.331}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{mediated through the neurotrophic factor BDNF (Cowansage, LeDoux, \&}
+  \ALIUSPlacedTextContent{90.000}{413.743}{418.402}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Monfils, 2010). This type of neuroplasticity is also elicited by 5-HT2A agonists}
+  \ALIUSPlacedTextContent{90.000}{431.023}{418.248}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and selectively blocked via ketanserin (Vaidya, Marek, Aghajanian, \& Duman,}
+  \ALIUSPlacedTextContent{90.000}{448.303}{418.385}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{1997). The natural coupling between plasticity and enriched environments}
+  \ALIUSPlacedTextContent{90.000}{465.583}{418.369}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{may serve a crucial function in facilitating social adaptation and learning. Do}
+  \ALIUSPlacedTextContent{90.000}{482.863}{418.454}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{you think there is any inherent risk in disrupting the coupling between the}
+  \ALIUSPlacedTextContent{90.000}{500.143}{338.050}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{neuroplasticity and the subjective experience of psychedelics?}
+  \ALIUSPlacedTextContent{90.000}{536.738}{69.558}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{162.958}{536.738}{345.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{One thing I want to emphasize is that pretty much every}
+  \ALIUSPlacedTextContent{90.000}{556.178}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatment for depression, from classical antidepressants, exercise, or acute}
+  \ALIUSPlacedTextContent{90.000}{575.618}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sleep deprivation, to next generation therapeutics like ketamine or}
+  \ALIUSPlacedTextContent{90.000}{595.058}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{transcranial magnetic stimulation—they all seem to promote neuronal}
+  \ALIUSPlacedTextContent{90.000}{614.738}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{growth, particularly in the prefrontal cortex. Psychedelics just seem to be}
+  \ALIUSPlacedTextContent{90.000}{634.178}{418.181}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particularly good at this. I take it that this question is asking how the}
+  \ALIUSPlacedTextContent{90.000}{653.618}{418.330}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience is involved in plasticity. People often ask what happens if you are}
+  \ALIUSPlacedTextContent{90.000}{673.058}{418.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{promoting plasticity in a negative context and whether this will have a}
+  \ALIUSPlacedTextContent{90.000}{692.738}{169.587}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{negative effect on the subjects.}
+  \ALIUSPlacedTextContent{90.000}{731.618}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Plasticity can mean a lot of different things to different people, and what I}
+  \ALIUSPlacedTextContent{90.000}{751.058}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{am referring to is the ability of psychoplastogenic drugs to promote the}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.400}{54.432}{13.368}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{47}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{418.065}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{growth of particular neurons. Our line of work was inspired by research on}
+  \ALIUSPlacedTextContent{90.000}{122.018}{418.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{extinction learning, where the idea is to promote plasticity in order to}
+  \ALIUSPlacedTextContent{90.000}{141.458}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{enhance the extinction of a fearful memory. You might expect that if you}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{promote plasticity, before you do fear conditioning, this might enhance the}
+  \ALIUSPlacedTextContent{90.000}{180.338}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{formation of fear memory. Originally, we thought that might happen, but}
+  \ALIUSPlacedTextContent{90.000}{200.018}{418.339}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this turned out to be false, at least in rodents. We would administer}
+  \ALIUSPlacedTextContent{90.000}{219.458}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics to rodents in an attempt to enhance fear memory that was}
+  \ALIUSPlacedTextContent{90.000}{238.898}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{formed by conditioning a tone to the expectation of a mild foot shock. But}
+  \ALIUSPlacedTextContent{90.000}{258.338}{418.309}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics did not enhance this fear memory, but instead enhanced the}
+  \ALIUSPlacedTextContent{90.000}{278.018}{238.760}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{safety memory, or fear extinction memory.}
+  \ALIUSPlacedTextContent{90.000}{316.898}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The reason we think this is the case is because the specific circuits involved}
+  \ALIUSPlacedTextContent{90.000}{336.338}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{are different. Circuits that mediate the safety memory involve neurons in the}
+  \ALIUSPlacedTextContent{90.000}{356.018}{418.200}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{prefrontal cortex that tend to grow in response to psychedelic drugs. So when}
+  \ALIUSPlacedTextContent{90.000}{375.458}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we started, we thought that psychedelic-induced plasticity would amplify all}
+  \ALIUSPlacedTextContent{90.000}{394.898}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the subjective effects, but we surprisingly found that it only had}
+  \ALIUSPlacedTextContent{90.000}{414.338}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{antidepressant and anxiolytic properties, regardless of whether the subjective}
+  \ALIUSPlacedTextContent{90.000}{434.018}{218.055}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience was good or bad, in rodents.}
+  \ALIUSPlacedTextContent{90.000}{473.023}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Do you think that psychedelics should be implemented as a first-line}
+  \ALIUSPlacedTextContent{90.000}{490.303}{418.436}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{treatment for depression, or should patients first attempt a treatment option}
+  \ALIUSPlacedTextContent{90.000}{507.583}{334.456}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{that does not carry the risks related to the subjective effects?}
+  \ALIUSPlacedTextContent{90.000}{544.178}{66.217}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{156.263}{544.178}{352.055}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I do not necessarily think that psychedelics should be a first line}
+  \ALIUSPlacedTextContent{90.000}{563.618}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatment, like SSRIs currently are. I think that they should rather be used}
+  \ALIUSPlacedTextContent{90.000}{583.058}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for treatment-resistant populations after something that can be administered}
+  \ALIUSPlacedTextContent{90.000}{602.738}{418.073}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more easily, fails, and only then moves on to the psychedelics. But I also think}
+  \ALIUSPlacedTextContent{90.000}{622.178}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that we need to do everything that we can to just make sure patients are being}
+  \ALIUSPlacedTextContent{90.000}{641.618}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treated with what they need. Another thing to consider is that psychedelic}
+  \ALIUSPlacedTextContent{90.000}{661.058}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{assisted psychotherapy is contraindicated for people with psychotic illnesses}
+  \ALIUSPlacedTextContent{90.000}{680.738}{418.170}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or a history of mental disorders. Psychiatric disorders have a lot of overlap}
+  \ALIUSPlacedTextContent{90.000}{700.178}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and comorbidity, so there will probably be a subset of patients who will not}
+  \ALIUSPlacedTextContent{90.000}{719.618}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be able to use these treatments safely. In these particular cases, the non-}
+  \ALIUSPlacedTextContent{90.000}{739.058}{349.064}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinogenic version of the drug might have some advantages.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{493.680}{54.432}{14.088}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{48}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{105.120}{105.888}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.200}{118.757}{84.988}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.E. Olson:}
+  \ALIUSPlacedTextContent{225.360}{118.757}{232.137}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I do not necessarily think that}
+  \ALIUSPlacedTextContent{133.200}{136.757}{324.271}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{psychedelics should be a first-line treatment like}
+  \ALIUSPlacedTextContent{133.200}{154.757}{324.278}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{SSRIs currently are. I think that they should rather}
+  \ALIUSPlacedTextContent{133.200}{172.757}{324.205}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{be used for treatment-resistant populations after}
+  \ALIUSPlacedTextContent{133.200}{190.757}{324.303}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{something that can be administered more easily}
+  \ALIUSPlacedTextContent{471.840}{203.808}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.200}{208.757}{320.358}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{fails, and only then moves on to the psychedelics.}
+  \ALIUSPlacedTextContent{90.000}{255.458}{71.062}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{163.859}{255.458}{344.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think we both agree that for some people, the treatment}
+  \ALIUSPlacedTextContent{90.000}{274.898}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{without subjective effects would be important for contraindications and}
+  \ALIUSPlacedTextContent{90.000}{294.578}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other safety reasons. On the other hand, we are mostly talking about the}
+  \ALIUSPlacedTextContent{90.000}{314.018}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ethical concerns around the risks of psychedelics without factoring in the}
+  \ALIUSPlacedTextContent{90.000}{333.458}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{potential benefits. I think the attention to risk is extremely important, since}
+  \ALIUSPlacedTextContent{90.000}{352.898}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{many people are not aware of them in seeking treatment for depression. But}
+  \ALIUSPlacedTextContent{90.000}{372.578}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in terms of implementing psychedelics as a treatment option, I think the}
+  \ALIUSPlacedTextContent{90.000}{392.018}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{burden of proof lies on the proponents for non-subjective psychedelics, in}
+  \ALIUSPlacedTextContent{90.000}{411.458}{182.047}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{terms of both risks and benefits.}
+  \ALIUSPlacedTextContent{90.000}{450.578}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There is a high socioeconomic burden for society from the many people who}
+  \ALIUSPlacedTextContent{90.000}{470.018}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{suffer from a mental illness in addition to the personal suffering. So there is}
+  \ALIUSPlacedTextContent{90.000}{489.458}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{an argument to be made that we don't invest enough in treatments that we}
+  \ALIUSPlacedTextContent{90.000}{508.898}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{know work. Psilocybin appears to be a treatment that works, though more}
+  \ALIUSPlacedTextContent{90.000}{528.578}{418.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research is still needed, but the cost-benefit analysis may easily show that}
+  \ALIUSPlacedTextContent{90.000}{548.018}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there is an obligation to provide people with the most effective treatment.}
+  \ALIUSPlacedTextContent{90.000}{567.458}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Maybe this is a philosophical question, but if you can provide an experience}
+  \ALIUSPlacedTextContent{90.000}{586.898}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that many people report as being the most meaningful of their entire lives, is}
+  \ALIUSPlacedTextContent{90.000}{606.578}{207.661}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it unethical to withhold it from them?}
+  \ALIUSPlacedTextContent{90.000}{645.458}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There are real risks, but there are also tremendous benefits. I am open to the}
+  \ALIUSPlacedTextContent{90.000}{664.898}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possibility that psychedelics may actually be a more effective first line}
+  \ALIUSPlacedTextContent{90.000}{684.338}{418.374}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatment than then getting on SSRIs, but I do not think this question can}
+  \ALIUSPlacedTextContent{90.000}{704.018}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be resolved based on the current state of evidence. Either way, I am open to}
+  \ALIUSPlacedTextContent{90.000}{723.458}{271.351}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{both possibilities until more research is available.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 10
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{493.920}{54.432}{13.800}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{49}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{103.680}{107.808}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{131.760}{117.077}{76.507}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{208.080}{117.077}{247.911}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{We don't invest enough in treatments}
+  \ALIUSPlacedTextContent{131.760}{135.077}{324.203}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{that we know work. Psilocybin appears to be a}
+  \ALIUSPlacedTextContent{131.760}{153.077}{324.191}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{treatment that works, though more research is still}
+  \ALIUSPlacedTextContent{131.760}{171.077}{324.290}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{needed, but the cost-benefit analysis may easily}
+  \ALIUSPlacedTextContent{131.760}{189.077}{324.279}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{show that there is an obligation to provide people}
+  \ALIUSPlacedTextContent{467.520}{200.448}{25.392}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{131.760}{207.077}{221.897}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{with the most effective treatment.}
+  \ALIUSPlacedTextContent{90.000}{250.543}{418.342}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{A major criticism regarding the therapeutic benefits attributed to the}
+  \ALIUSPlacedTextContent{90.000}{267.823}{57.570}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{subjective}
+  \ALIUSPlacedTextContent{157.844}{267.823}{62.263}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{experience}
+  \ALIUSPlacedTextContent{230.380}{267.823}{11.499}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{is}
+  \ALIUSPlacedTextContent{252.153}{267.823}{24.895}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{that}
+  \ALIUSPlacedTextContent{287.321}{267.823}{21.086}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{the}
+  \ALIUSPlacedTextContent{318.681}{267.823}{26.680}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{data}
+  \ALIUSPlacedTextContent{355.634}{267.823}{20.400}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{are}
+  \ALIUSPlacedTextContent{386.308}{267.823}{38.618}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{largely}
+  \ALIUSPlacedTextContent{435.199}{267.823}{76.595}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{correlational.}
+  \ALIUSPlacedTextContent{90.000}{285.103}{418.441}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Do you have any suggestions for improvements, from a methodological}
+  \ALIUSPlacedTextContent{90.000}{302.383}{66.074}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{standpoint?}
+  \ALIUSPlacedTextContent{90.000}{338.978}{68.027}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{157.797}{338.978}{350.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The first thing you learn in any statistics class is that correlation}
+  \ALIUSPlacedTextContent{90.000}{358.418}{294.805}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{does not equal causation. But actually, correlation can}
+  \ALIUSPlacedTextContent{384.600}{358.418}{28.113}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{imply}
+  \ALIUSPlacedTextContent{412.739}{358.418}{95.497}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{causation, in the}
+  \ALIUSPlacedTextContent{90.000}{378.098}{418.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sense that it indicates there is a possibility of causation. Correlation is often}
+  \ALIUSPlacedTextContent{90.000}{397.538}{418.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a first step along that path of determining causation, and there are certain}
+  \ALIUSPlacedTextContent{90.000}{416.978}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{features of the subjective experience that do seem to predict therapeutic}
+  \ALIUSPlacedTextContent{90.000}{436.418}{418.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{responses weeks or even months later. In my opinion, this indicates that}
+  \ALIUSPlacedTextContent{90.000}{456.098}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics elicit affective or cognitive processes that could potentially go}
+  \ALIUSPlacedTextContent{90.000}{475.538}{136.870}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on to have ripple effects.}
+  \ALIUSPlacedTextContent{90.000}{514.418}{418.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In terms of testing this, it's very difficult. Our article Yaden \& Griffiths (2021)}
+  \ALIUSPlacedTextContent{90.000}{534.098}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{discusses the possibility of administering psychedelics under general}
+  \ALIUSPlacedTextContent{90.000}{553.538}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{anesthesia, where people have little to no awareness or memory of the}
+  \ALIUSPlacedTextContent{90.000}{572.978}{418.158}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subjective experience, to see whether there are persisting therapeutic effects.}
+  \ALIUSPlacedTextContent{90.000}{592.418}{418.104}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This raises a lot of ethical issues, it is a bit of a risky, and fairly difficult to do}
+  \ALIUSPlacedTextContent{90.000}{611.858}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{practically. But it is a basic science question, so I am actually surprised why}
+  \ALIUSPlacedTextContent{90.000}{631.538}{350.002}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there has not been rodent research conducted on this topic yet.}
+  \ALIUSPlacedTextContent{90.000}{670.418}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think this study needs to be done, and I'm very curious about the results.}
+  \ALIUSPlacedTextContent{90.000}{689.858}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{My strong suspicion would be that being awake will result in much larger and}
+  \ALIUSPlacedTextContent{90.000}{709.538}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more enduring therapeutic effects than being heavily sedated. Of course, you}
+  \ALIUSPlacedTextContent{90.000}{728.978}{418.150}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have to worry about drug interactions between the kind of anesthetic that's}
+  \ALIUSPlacedTextContent{90.000}{748.418}{140.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{used and the psychedelic.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 11
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.400}{54.432}{13.440}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{50}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{68.946}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{161.733}{102.578}{346.598}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In order to experimentally determine what causes the most}
+  \ALIUSPlacedTextContent{90.000}{122.018}{418.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{enduring therapeutic effects, I think you either need to find a way to block}
+  \ALIUSPlacedTextContent{90.000}{141.458}{418.323}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the subjective effects, while leaving the plasticity promoting effects intact, or}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.136}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vice versa: block the plasticity promoting effects and leave the subjective}
+  \ALIUSPlacedTextContent{90.000}{180.338}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects intact. There are a couple of ways to do this, depending on whether}
+  \ALIUSPlacedTextContent{90.000}{200.018}{217.914}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{you consider ketamine as a psychedelic.}
+  \ALIUSPlacedTextContent{90.000}{238.898}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The first is to administer psychedelic compounds under anesthesia, and one}
+  \ALIUSPlacedTextContent{90.000}{258.338}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{way to get around the ethical issue is to look at patient populations who are}
+  \ALIUSPlacedTextContent{90.000}{278.018}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{going into surgery anyway. If you count ketamine as a psychedelic, then there}
+  \ALIUSPlacedTextContent{90.000}{297.458}{418.187}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{are at least three studies where people were given low doses of ketamine while}
+  \ALIUSPlacedTextContent{90.000}{316.898}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they were under anesthesia. Although this patient population was not being}
+  \ALIUSPlacedTextContent{90.000}{336.338}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treated for severe depression, they reported long-lasting, profound elevations}
+  \ALIUSPlacedTextContent{90.000}{356.018}{418.112}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in mood. Future studies should look into this with treatment resistant patient}
+  \ALIUSPlacedTextContent{90.000}{375.458}{110.116}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{populations as well.}
+  \ALIUSPlacedTextContent{90.000}{414.338}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The other thing to consider is the difference between R- and S-Ketamine}
+  \ALIUSPlacedTextContent{90.000}{434.018}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{enantiomers. As you may know, these are left-handed and right-handed}
+  \ALIUSPlacedTextContent{90.000}{453.458}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{versions of the same molecule, and the left-handed S-enantiomer is FDA}
+  \ALIUSPlacedTextContent{90.000}{472.898}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{approved for treatment-resistant depression under the brand name Spravato}
+  \ALIUSPlacedTextContent{90.000}{492.338}{418.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by Janssen. My understanding is that this version was chosen because it has a}
+  \ALIUSPlacedTextContent{90.000}{512.018}{418.329}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{higher affinity to the NMDA-receptor and produces stronger subjective}
+  \ALIUSPlacedTextContent{90.000}{531.458}{418.427}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects. So it was assumed that it was going to produce greater antidepressant}
+  \ALIUSPlacedTextContent{90.000}{550.898}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects. But it turns out that in rodents that is not the case, and in fact the R-}
+  \ALIUSPlacedTextContent{90.000}{570.338}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{enantiomer which produce fewer subjective effects has a greater}
+  \ALIUSPlacedTextContent{90.000}{589.778}{133.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{antidepressant efficacy.}
+  \ALIUSPlacedTextContent{90.000}{628.898}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There are actually companies now who are dedicated to using R-ketamine as}
+  \ALIUSPlacedTextContent{90.000}{648.338}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the better version. Even in clinics, you have anecdotal reports that the}
+  \ALIUSPlacedTextContent{90.000}{667.778}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{racemic combination of the two enantiomers works better than Spravato.}
+  \ALIUSPlacedTextContent{90.000}{687.458}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This might indicate that some of the subjective effects are less important than}
+  \ALIUSPlacedTextContent{90.000}{706.898}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the other neurobiological effects, since the R-enantiomer is also a stronger}
+  \ALIUSPlacedTextContent{90.000}{726.338}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoplastogen. These are also just correlations, so in addition to putting}
+  \ALIUSPlacedTextContent{90.000}{745.778}{418.325}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people under anesthesia to block out the subjective effects, you can produce}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 12
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{496.080}{54.432}{11.700}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{51}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoplastogens without any subjective effects, which is what my lab is}
+  \ALIUSPlacedTextContent{90.000}{122.018}{90.685}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{currently doing.}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{If we want to understand the importance of plasticity effects relative to the}
+  \ALIUSPlacedTextContent{90.000}{180.338}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subjective effects, we should also find substances that produce mystical-type}
+  \ALIUSPlacedTextContent{90.000}{200.018}{418.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences in the absence of enhancing neuroplasticity. It would be awesome}
+  \ALIUSPlacedTextContent{90.000}{219.458}{434.603}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to find a drug like this, but as we discussed earlier, I believe that plasticity}
+  \ALIUSPlacedTextContent{90.000}{238.898}{418.402}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might always result after a mystical type experience, so it is probably difficult}
+  \ALIUSPlacedTextContent{90.000}{258.338}{418.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to decouple them in this manner. One thing that is potentially doable, is to}
+  \ALIUSPlacedTextContent{90.000}{278.018}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{block growth pathways downstream of the mystical experiences, and our}
+  \ALIUSPlacedTextContent{90.000}{297.458}{250.758}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research group is currently also pursuing this.}
+  \ALIUSPlacedTextContent{102.720}{329.568}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{130.800}{344.117}{73.377}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.E. Olson:}
+  \ALIUSPlacedTextContent{204.240}{344.117}{250.815}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{There are at least three studies where}
+  \ALIUSPlacedTextContent{130.800}{362.117}{324.248}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{people were given low doses of ketamine while}
+  \ALIUSPlacedTextContent{130.800}{380.117}{324.253}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{they were under anesthesia. Although this patient}
+  \ALIUSPlacedTextContent{130.800}{398.117}{324.306}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{population was not being treated for severe}
+  \ALIUSPlacedTextContent{130.800}{416.117}{324.252}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{depression, they reported long-lasting, profound}
+  \ALIUSPlacedTextContent{468.480}{427.488}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{130.800}{434.117}{125.683}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{elevations in mood.}
+  \ALIUSPlacedTextContent{90.000}{485.983}{418.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{It is also interesting to note that the antidepressant efficacy of ketamine has}
+  \ALIUSPlacedTextContent{90.000}{503.263}{418.246}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{a very different temporal profile compared to serotonergic tryptamines.}
+  \ALIUSPlacedTextContent{90.000}{520.543}{418.305}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Ketamine is fast-acting, but its antidepressant effects often wear off after 1}
+  \ALIUSPlacedTextContent{90.000}{537.823}{418.429}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{to 2 weeks. Is there a particular reason why serotonergic tryptamines work}
+  \ALIUSPlacedTextContent{90.000}{554.863}{42.769}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{longer?}
+  \ALIUSPlacedTextContent{90.000}{589.298}{65.772}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{155.363}{589.298}{353.032}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I have a student in my group who has a hypothesis, which he calls}
+  \ALIUSPlacedTextContent{90.000}{608.738}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"the shitty fast acting antidepressant hypothesis". The hypothesis is that slow}
+  \ALIUSPlacedTextContent{90.000}{628.418}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{acting antidepressants like SSRIs, are really bad at turning on the same}
+  \ALIUSPlacedTextContent{90.000}{647.858}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pathways that are triggered by substances such as ketamine. The idea is that}
+  \ALIUSPlacedTextContent{90.000}{667.298}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ketamine activates these pathways for the duration of one or two weeks,}
+  \ALIUSPlacedTextContent{90.000}{686.738}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{whereas psychedelics seem to activate these pathways for even longer. We}
+  \ALIUSPlacedTextContent{90.000}{706.418}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{found that even if we do a short stimulation with these compounds, it}
+  \ALIUSPlacedTextContent{90.000}{725.858}{418.137}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{activates an autoregulatory circuit that keeps neuronal growth going for a}
+  \ALIUSPlacedTextContent{90.000}{745.298}{87.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{period of time.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 13
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{495.360}{54.432}{12.540}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{52}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{418.154}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There is also some interesting work with animal models being done by Alex}
+  \ALIUSPlacedTextContent{90.000}{122.018}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Kwan at Yale around this topic (Phoumthipphavong et al., 2016). Their group}
+  \ALIUSPlacedTextContent{90.000}{141.458}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{found that in rodents, ketamine exposure increases spine density for about a}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{week, which correlates nicely with the antidepressant effects. By comparison,}
+  \ALIUSPlacedTextContent{90.000}{180.338}{418.338}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the effects of psilocybin on dendritic spine density lasts for at least a month,}
+  \ALIUSPlacedTextContent{90.000}{200.018}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which correlates nicely with the fact that the antidepressant effects are also}
+  \ALIUSPlacedTextContent{90.000}{219.458}{167.449}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{much longer (Shao et al., 2021).}
+  \ALIUSPlacedTextContent{90.000}{258.338}{67.637}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{157.012}{258.338}{351.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Before I studied psychedelics, I studied mystical type experiences}
+  \ALIUSPlacedTextContent{90.000}{278.018}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and altered states of consciousness caused by non-pharmacological triggers.}
+  \ALIUSPlacedTextContent{90.000}{297.458}{418.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{So I am also curious to know how much more psychoplastogenic psychedelic}
+  \ALIUSPlacedTextContent{90.000}{316.898}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{substances are compared to other psychological experiences. Are these just}
+  \ALIUSPlacedTextContent{90.000}{336.338}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{slight differences or orders of magnitude? Can you give us a sense of the effect}
+  \ALIUSPlacedTextContent{90.000}{356.018}{335.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{size and their scale? [questions directed toward David Olson]}
+  \ALIUSPlacedTextContent{90.000}{394.898}{67.108}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{158.035}{394.898}{350.309}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I would say the difference is orders of magnitude compared to}
+  \ALIUSPlacedTextContent{90.000}{414.338}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other substances, like traditional SSRIs. You will see the same types of}
+  \ALIUSPlacedTextContent{90.000}{434.018}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{changes in brain structure with an SSRI, but you need to administer      them}
+  \ALIUSPlacedTextContent{90.000}{453.458}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{chronically over the course of weeks to months before you start seeing those}
+  \ALIUSPlacedTextContent{90.000}{472.898}{94.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{types of changes.}
+  \ALIUSPlacedTextContent{90.000}{512.018}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In terms of subjective experiences, I do not have a way to comment on that}
+  \ALIUSPlacedTextContent{90.000}{531.458}{418.094}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{because research is lacking a way to measure this. We have been focusing on}
+  \ALIUSPlacedTextContent{90.000}{550.898}{418.337}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{animal models for now, but there are some exciting advances that might open}
+  \ALIUSPlacedTextContent{90.000}{570.338}{418.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{future studies with a new radiotracer that labels pre-synaptic vesicles. That}
+  \ALIUSPlacedTextContent{90.000}{589.778}{418.138}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might be a way to "label" synapses in the brain to look for increased}
+  \ALIUSPlacedTextContent{90.000}{609.458}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{synaptogenesis in response to particular experiences or pharmacological}
+  \ALIUSPlacedTextContent{90.000}{628.898}{78.869}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interventions.}
+  \ALIUSPlacedTextContent{90.000}{667.778}{69.238}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{160.214}{667.778}{348.056}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{But even in the rodent literature, are there any significant life}
+  \ALIUSPlacedTextContent{90.000}{687.458}{418.349}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{events, like birth or changing the environment, which produce similar levels}
+  \ALIUSPlacedTextContent{90.000}{706.898}{377.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of plasticity as psychedelics? [question directed toward David Olson]}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 14
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{495.360}{54.432}{12.384}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{53}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{67.456}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{158.755}{102.578}{349.410}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Enriched environments, i.e. filling their cages with a bunch of}
+  \ALIUSPlacedTextContent{90.000}{122.018}{418.386}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{toys for them to play with, produces lots of neuronal growth in the cortex.}
+  \ALIUSPlacedTextContent{90.000}{141.458}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{So does exercise—if you expose mice to a running wheel, this also produces}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuronal growth. Nobody has done a head to head analysis on whether these}
+  \ALIUSPlacedTextContent{90.000}{180.338}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoplastogenic effects are comparable in degree to ketamine or}
+  \ALIUSPlacedTextContent{90.000}{200.018}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psilocybin, but they both produce robust antidepressant effects for the}
+  \ALIUSPlacedTextContent{90.000}{219.458}{44.136}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{rodents.}
+  \ALIUSPlacedTextContent{90.000}{258.463}{418.402}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Psychedelics strongly rely on what has been termed the meaning response}
+  \ALIUSPlacedTextContent{90.000}{275.743}{418.266}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Hartogsohn, 2018), which depends on the whole set and setting in which}
+  \ALIUSPlacedTextContent{90.000}{293.023}{418.350}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{psychedelic action takes place (Hartogsohn, 2016). There is a recent paper}
+  \ALIUSPlacedTextContent{90.000}{310.303}{418.390}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{showing psychedelic experience can be induced by placebo effects that}
+  \ALIUSPlacedTextContent{90.000}{327.583}{418.348}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{strongly rely on contextual factors, prior expectations, and beliefs (Olson et}
+  \ALIUSPlacedTextContent{90.000}{344.863}{204.240}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{al., 2020). What is your take on this?}
+  \ALIUSPlacedTextContent{90.000}{379.298}{73.915}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{169.583}{379.298}{338.676}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Based on placebo research, particularly the God-helmet}
+  \ALIUSPlacedTextContent{90.000}{398.738}{418.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiment (Maij et al., 2019), it does not surprise me that you could convince}
+  \ALIUSPlacedTextContent{90.000}{418.178}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{someone that they received a psychedelic and see them report all kinds of}
+  \ALIUSPlacedTextContent{90.000}{437.618}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vivid, subjective experiences in response.I think the study by Roland Griffiths}
+  \ALIUSPlacedTextContent{90.000}{457.058}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(2006) bears well on this issue, because it compared the effects of psilocybin}
+  \ALIUSPlacedTextContent{90.000}{476.738}{391.595}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with high dose methylphenidate among psychedelic naive participants.}
+  \ALIUSPlacedTextContent{90.000}{496.178}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{With a high dose of methylphenidate, you do feel substantially altered, so I}
+  \ALIUSPlacedTextContent{90.000}{515.618}{418.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think that it is a pretty decent active placebo control for psychedelic naive}
+  \ALIUSPlacedTextContent{90.000}{535.058}{418.155}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{participants. I hope there will be more studies that use active placebo}
+  \ALIUSPlacedTextContent{90.000}{554.738}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{controls. But this standard might be difficult to achieve for experienced}
+  \ALIUSPlacedTextContent{90.000}{574.178}{418.194}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelic users. Something like a high dose of THC might help control}
+  \ALIUSPlacedTextContent{90.000}{593.618}{135.779}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these expectancy effects.}
+  \ALIUSPlacedTextContent{90.000}{632.738}{66.482}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{156.781}{632.738}{351.600}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think the idea of using high dose THC is intriguing because it}
+  \ALIUSPlacedTextContent{90.000}{652.178}{418.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is unlikely to induce any type of plasticity, in fact it may even have the}
+  \ALIUSPlacedTextContent{90.000}{671.618}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{opposite effect. It would be very interesting to use it as a placebo control, and}
+  \ALIUSPlacedTextContent{90.000}{691.058}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this is actually something that the FDA would be really interested in, because}
+  \ALIUSPlacedTextContent{90.000}{710.738}{277.147}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it might help control for some of the expectations.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 15
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.640}{54.432}{13.128}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{54}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.703}{418.403}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Do you think that microdosing, i.e., using psychedelics on an intermittent}
+  \ALIUSPlacedTextContent{90.000}{119.743}{402.686}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{schedule within a sub-hallucinogenic dose range, has a therapeutic effect?}
+  \ALIUSPlacedTextContent{90.000}{156.338}{67.776}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{159.390}{156.338}{348.843}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think that using a sub-hallucinogenic dose is a good way to}
+  \ALIUSPlacedTextContent{90.000}{176.018}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{control for the placebo effect, because it can also trigger the plasticity}
+  \ALIUSPlacedTextContent{90.000}{195.458}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{without inducing subjective effects. We investigated microdosing in rodents}
+  \ALIUSPlacedTextContent{90.000}{214.898}{418.198}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Cameron et al., 2019) and it seemed to produce a similar type of}
+  \ALIUSPlacedTextContent{90.000}{234.338}{305.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{antidepressant and anxiolytic response as a single dose.}
+  \ALIUSPlacedTextContent{90.000}{273.458}{418.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{But it is very unclear whether this is also the case for people because there are}
+  \ALIUSPlacedTextContent{90.000}{292.898}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{no placebo-controlled double-blind clinical trials on psychedelic}
+  \ALIUSPlacedTextContent{90.000}{312.338}{418.043}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{microdosing to suggest that it is effective. I think the microdosing paradigm}
+  \ALIUSPlacedTextContent{90.000}{332.018}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is actually more dangerous than a single dose paradigm, because a lot of these}
+  \ALIUSPlacedTextContent{90.000}{351.458}{418.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{drugs engage the 5-HT2B receptor, which can lead to cardiovascular}
+  \ALIUSPlacedTextContent{90.000}{370.898}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{valvopathy if you are using these drugs on a chronic intermittent basis}
+  \ALIUSPlacedTextContent{90.000}{390.338}{4.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(}
+  \ALIUSPlacedTextContent{94.326}{390.338}{333.259}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{editor's note: this topic is discussed in detail by Kuypers et al. (2019)}
+  \ALIUSPlacedTextContent{427.584}{390.338}{4.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{)}
+  \ALIUSPlacedTextContent{431.910}{390.338}{2.742}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{.}
+  \ALIUSPlacedTextContent{90.000}{429.458}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The other thing to keep in mind is that chronically stimulating these growth}
+  \ALIUSPlacedTextContent{90.000}{448.898}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pathways can actually lead to something that resembles excitotoxicity. The}
+  \ALIUSPlacedTextContent{90.000}{468.338}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain has a very set level of excitation that it likes, so if you are constantly}
+  \ALIUSPlacedTextContent{90.000}{488.018}{418.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{exciting its pathways, you will actually see a retraction of dendritic spines in}
+  \ALIUSPlacedTextContent{90.000}{507.458}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{order to lower the input to these neurons. In our study within female rodents,}
+  \ALIUSPlacedTextContent{90.000}{526.898}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we saw that a single dose of DMT causes a big growth of dendritic spines,}
+  \ALIUSPlacedTextContent{90.000}{546.338}{418.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{whereas if you administer DMT every third day for a month, you actually see}
+  \ALIUSPlacedTextContent{90.000}{566.018}{386.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{retraction of the dendritic spines. It is important to keep this in mind.}
+  \ALIUSPlacedTextContent{90.000}{604.898}{72.119}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{165.966}{604.898}{342.436}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I also think that the cardiac risks of microdosing are an}
+  \ALIUSPlacedTextContent{90.000}{624.338}{418.143}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{important issue to raise and wanted to emphasize that we intentionally}
+  \ALIUSPlacedTextContent{90.000}{643.778}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decided not to cover this topic in our paper because there is just no evidence}
+  \ALIUSPlacedTextContent{90.000}{663.458}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as of yet to suggest that there's substantial clinical efficacy, or really any}
+  \ALIUSPlacedTextContent{90.000}{682.898}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{efficacy at all. It does appear that a certain dose is required in order to get}
+  \ALIUSPlacedTextContent{90.000}{702.338}{148.882}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{remarkable clinical effects.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 16
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{495.120}{54.432}{12.624}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{55}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{97.440}{106.128}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{126.000}{117.077}{82.826}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{210.240}{117.077}{240.032}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I also think that the cardiac risks of}
+  \ALIUSPlacedTextContent{126.000}{135.077}{324.332}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{microdosing are an important issue to raise (…) and}
+  \ALIUSPlacedTextContent{126.000}{153.077}{324.191}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{there is just no evidence as of yet to suggest that}
+  \ALIUSPlacedTextContent{126.000}{171.077}{324.194}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{there's substantial clinical efficacy, or really any}
+  \ALIUSPlacedTextContent{456.960}{179.328}{25.392}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{126.000}{189.077}{88.422}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{efficacy at all.}
+  \ALIUSPlacedTextContent{90.000}{232.543}{405.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Thank you very much for your time. Do you have any concluding remarks?}
+  \ALIUSPlacedTextContent{90.000}{265.538}{69.600}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{160.949}{265.538}{347.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Well, I just want to thank you for inviting us and thank you,}
+  \ALIUSPlacedTextContent{90.000}{284.978}{418.324}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{David, for inviting Roland Griffiths and me to write this companion article}
+  \ALIUSPlacedTextContent{90.000}{304.658}{384.649}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it was really a lot of fun to think about this topic and fun to discuss it.}
+  \ALIUSPlacedTextContent{90.000}{339.938}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{My closing thought is that I think there is a lot of creativity that is required}
+  \ALIUSPlacedTextContent{90.000}{359.378}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in this space, as well as a lot of rigorous testing. And so the kind of work on}
+  \ALIUSPlacedTextContent{90.000}{378.818}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{creating these new compounds that David Olson and his lab are doing is}
+  \ALIUSPlacedTextContent{90.000}{398.498}{227.840}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{really inspiring and absolutely necessary.}
+  \ALIUSPlacedTextContent{90.000}{437.378}{418.138}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There will be individuals who cannot have subjective experiences for various}
+  \ALIUSPlacedTextContent{90.000}{456.818}{418.345}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reasons, but I think by and large, we need to remember that the evidence so}
+  \ALIUSPlacedTextContent{90.000}{476.498}{418.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{far has been on psychedelics that do produce subjective effects and that these}
+  \ALIUSPlacedTextContent{90.000}{495.938}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences can be among the most meaningful in one's entire life. So we want}
+  \ALIUSPlacedTextContent{90.000}{515.378}{320.816}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to be careful about removing these for reasons such as cost.}
+  \ALIUSPlacedTextContent{108.000}{543.888}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.560}{556.036}{85.230}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.B. Yaden:}
+  \ALIUSPlacedTextContent{225.600}{556.036}{235.282}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I think by and large, we need to}
+  \ALIUSPlacedTextContent{136.560}{574.036}{324.248}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{remember that the evidence so far has been on}
+  \ALIUSPlacedTextContent{136.560}{592.036}{324.327}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{psychedelics that do produce subjective effects}
+  \ALIUSPlacedTextContent{136.560}{610.036}{324.268}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{and that these experiences can be among the}
+  \ALIUSPlacedTextContent{136.560}{628.036}{324.294}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{most meaningful in one's entire life. So we want}
+  \ALIUSPlacedTextContent{136.560}{646.036}{324.313}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{to be careful about removing these for reasons}
+  \ALIUSPlacedTextContent{470.400}{660.048}{25.392}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.560}{664.036}{82.271}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{such as cost.}
+  \ALIUSPlacedTextContent{90.000}{713.858}{66.635}{ALIUSC000000}{\ALIUSFontCormorantBold}{13.920}{D.E. Olson:}
+  \ALIUSPlacedTextContent{156.667}{713.858}{351.678}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I would also like to thank you all for the discussion and}
+  \ALIUSPlacedTextContent{90.000}{733.298}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{emphasize that it was a lot of fun writing this with David Yaden and Roland}
+  \ALIUSPlacedTextContent{90.000}{752.978}{53.740}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Griffiths.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 17
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (144.000bp,-652.080bp) rectangle ++(231.120bp,-0.480bp);
+  \fill[ALIUSC0000FF] (144.000bp,-738.240bp) rectangle ++(231.120bp,-0.480bp);
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.400}{54.432}{13.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{56}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{102.578}{418.342}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{What I really want to emphasize is the uniqueness of the community that}
+  \ALIUSPlacedTextContent{90.000}{122.018}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{really cares about psychedelics. We have a lot of really smart, thoughtful}
+  \ALIUSPlacedTextContent{90.000}{141.458}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people trying to work on this problem, which I think is really critical. And}
+  \ALIUSPlacedTextContent{90.000}{160.898}{418.096}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{while our two papers might seem like they are at odds with one another, after}
+  \ALIUSPlacedTextContent{90.000}{180.338}{393.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this conversation it should be clear that we mostly agree on everything.}
+  \ALIUSPlacedTextContent{90.000}{219.458}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The thing that we definitely all agree on is that we need to do everything in}
+  \ALIUSPlacedTextContent{90.000}{238.898}{418.172}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{our power to treat as many patients as we can. Neuropsychiatric disorders}
+  \ALIUSPlacedTextContent{90.000}{258.338}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{affect an enormous number of people and are some of the leading causes of}
+  \ALIUSPlacedTextContent{90.000}{278.018}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{disability worldwide. I think we are all aligned on trying to do whatever we}
+  \ALIUSPlacedTextContent{90.000}{297.458}{338.409}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can to bring relief to patients. That is why we do this work.}
+  \ALIUSPlacedTextContent{432.708}{297.458}{75.563}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{So hopefully,}
+  \ALIUSPlacedTextContent{90.000}{316.898}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there are going to be a lot more of these interesting conversations where we}
+  \ALIUSPlacedTextContent{90.000}{336.338}{332.712}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can figure out the best way to make the world a better place.}
+  \ALIUSPlacedTextContent{105.120}{363.408}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.680}{376.277}{71.549}{ALIUSC000000}{\ALIUSFontLatoRegular}{15.120}{D.E. Olson}
+  \ALIUSPlacedTextContent{204.960}{376.277}{252.949}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{: Neuropsychiatric disorders affect an}
+  \ALIUSPlacedTextContent{133.680}{394.277}{324.279}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{enormous number of people and are some of the}
+  \ALIUSPlacedTextContent{133.680}{412.277}{324.203}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{leading causes of disability worldwide. I think we}
+  \ALIUSPlacedTextContent{133.680}{430.277}{324.264}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{are all aligned on trying to do whatever we can to}
+  \ALIUSPlacedTextContent{133.680}{448.277}{324.285}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{bring relief to patients. That is why we do this}
+  \ALIUSPlacedTextContent{472.320}{454.848}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.680}{466.277}{35.934}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{work.}
+  \ALIUSPlacedTextContent{90.000}{517.903}{418.441}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{I want to thank both of the speakers for discussing this on-going debate and}
+  \ALIUSPlacedTextContent{90.000}{535.183}{418.322}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{hopefully we will have more data to address this issue soon. A reminder that}
+  \ALIUSPlacedTextContent{90.000}{552.223}{292.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interested readers can read the initial exchange here:}
+  \ALIUSPlacedTextContent{108.000}{586.783}{6.007}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{i)}
+  \ALIUSPlacedTextContent{144.000}{586.783}{364.230}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Olson, D. E. (2021). The Subjective Effects of Psychedelics May Not}
+  \ALIUSPlacedTextContent{144.000}{604.063}{332.380}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Be Necessary for Their Enduring Therapeutic Effects.}
+  \ALIUSPlacedTextContent{483.288}{604.063}{24.860}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{ACS}
+  \ALIUSPlacedTextContent{144.000}{621.343}{75.402}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{Pharmacology}
+  \ALIUSPlacedTextContent{235.930}{621.343}{11.200}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{\&}
+  \ALIUSPlacedTextContent{263.658}{621.343}{69.017}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{Translational}
+  \ALIUSPlacedTextContent{349.204}{621.343}{38.443}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{Science}
+  \ALIUSPlacedTextContent{387.724}{621.343}{2.733}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{,}
+  \ALIUSPlacedTextContent{410.146}{621.343}{7.238}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{4}
+  \ALIUSPlacedTextContent{417.402}{621.343}{19.851}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(2),}
+  \ALIUSPlacedTextContent{453.899}{621.343}{54.495}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{563-567.}
+  \ALIUSPlacedTextContent{144.000}{638.623}{231.079}{ALIUSC0000FF}{\ALIUSFontLatoLight}{12.357}{https://doi.org/10.1021/acsptsci.0c00192}
+  \ALIUSPlacedTextContent{108.000}{673.183}{8.793}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{ii)}
+  \ALIUSPlacedTextContent{144.000}{673.183}{364.409}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Yaden, D. B., \& Griffiths, R. R. (2021). The Subjective Effects of}
+  \ALIUSPlacedTextContent{144.000}{690.223}{364.296}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Psychedelics Are Necessary for Their Enduring Therapeutic Effects.}
+  \ALIUSPlacedTextContent{144.000}{707.503}{257.500}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{ACS Pharmacology \& Translational Science}
+  \ALIUSPlacedTextContent{401.520}{707.503}{2.733}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{,}
+  \ALIUSPlacedTextContent{404.264}{707.503}{20.018}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{4}
+  \ALIUSPlacedTextContent{424.300}{707.503}{84.094}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(2), 568-572.}
+  \ALIUSPlacedTextContent{144.000}{724.783}{231.069}{ALIUSC0000FF}{\ALIUSFontLatoLight}{12.357}{https://doi.org/10.1021/acsptsci.0c00194}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 18
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (90.000bp,-225.360bp) rectangle ++(232.320bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-294.480bp) rectangle ++(208.320bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-363.360bp) rectangle ++(198.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-416.640bp) rectangle ++(253.920bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-485.520bp) rectangle ++(228.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (262.800bp,-538.800bp) rectangle ++(197.280bp,-0.720bp);
+  \fill[ALIUSC0000FF] (225.120bp,-592.080bp) rectangle ++(214.080bp,-0.720bp);
+  \fill[ALIUSC0000FF] (264.480bp,-645.120bp) rectangle ++(228.000bp,-0.720bp);
+  \fill[ALIUSC0000FF] (263.280bp,-751.680bp) rectangle ++(197.760bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.000}{52.418}{362.637}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{David Olson \& David Yaden – Subjective and Therapeutic Effects}
+  \ALIUSPlacedTextContent{494.880}{54.432}{12.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{57}
+  \ALIUSPlacedTextContent{90.000}{69.218}{88.459}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{of Psychedelics}
+  \ALIUSPlacedTextContent{263.666}{102.661}{71.454}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
+  \ALIUSPlacedTextContent{126.000}{149.305}{382.000}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Cameron, L. P., Benson, C. J., DeFelice, B. C., Fiehn, O., \& Olson, D. E.}
+  \ALIUSPlacedTextContent{90.000}{165.145}{35.411}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2019).}
+  \ALIUSPlacedTextContent{135.790}{165.145}{47.903}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Chronic,}
+  \ALIUSPlacedTextContent{194.073}{165.145}{66.404}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{intermittent}
+  \ALIUSPlacedTextContent{270.857}{165.145}{59.784}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{microdoses}
+  \ALIUSPlacedTextContent{341.021}{165.145}{13.230}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of}
+  \ALIUSPlacedTextContent{364.630}{165.145}{19.216}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{the}
+  \ALIUSPlacedTextContent{394.226}{165.145}{61.053}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{psychedelic}
+  \ALIUSPlacedTextContent{465.658}{165.145}{15.368}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{N,}
+  \ALIUSPlacedTextContent{491.406}{165.145}{13.581}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{N-}
+  \ALIUSPlacedTextContent{90.000}{180.985}{418.002}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dimethyltryptamine (DMT) produce positive effects on mood and anxiety in}
+  \ALIUSPlacedTextContent{90.000}{196.585}{44.023}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{rodents.}
+  \ALIUSPlacedTextContent{166.411}{196.585}{24.461}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{ACS}
+  \ALIUSPlacedTextContent{223.269}{196.585}{42.955}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{chemical}
+  \ALIUSPlacedTextContent{298.621}{196.585}{57.190}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{neuroscience}
+  \ALIUSPlacedTextContent{355.829}{196.585}{2.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{394.139}{196.585}{9.460}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{10}
+  \ALIUSPlacedTextContent{403.616}{196.585}{19.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(7),}
+  \ALIUSPlacedTextContent{455.527}{196.585}{52.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{3261-3270.}
+  \ALIUSPlacedTextContent{90.000}{212.425}{232.302}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1021/acschemneuro.8b00692}
+  \ALIUSPlacedTextContent{126.000}{234.025}{381.937}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Griffiths, R. R., Richards, W. A., McCann, U., \& Jesse, R. (2006). Psilocybin}
+  \ALIUSPlacedTextContent{90.000}{249.865}{418.006}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{can occasion mystical-type experiences having substantial and sustained personal}
+  \ALIUSPlacedTextContent{90.000}{265.705}{208.863}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{meaning and spiritual significance.}
+  \ALIUSPlacedTextContent{308.818}{265.705}{95.846}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychopharmacology}
+  \ALIUSPlacedTextContent{404.651}{265.705}{2.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{407.537}{265.705}{27.475}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{187}
+  \ALIUSPlacedTextContent{435.033}{265.705}{72.990}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 268-283.}
+  \ALIUSPlacedTextContent{90.000}{281.545}{208.408}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00213-006-0457-5}
+  \ALIUSPlacedTextContent{126.000}{303.145}{382.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hartogsohn, I. (2018). The Meaning-Enhancing Properties of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{318.745}{417.931}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and Their Mediator Role in Psychedelic Therapy, Spirituality, and Creativity}
+  \ALIUSPlacedTextContent{90.000}{334.585}{70.414}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{[Perspective].}
+  \ALIUSPlacedTextContent{207.207}{334.585}{44.783}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers}
+  \ALIUSPlacedTextContent{298.821}{334.585}{12.286}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{in}
+  \ALIUSPlacedTextContent{357.926}{334.585}{59.636}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
+  \ALIUSPlacedTextContent{417.574}{334.585}{2.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{470.317}{334.585}{8.487}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{12}
+  \ALIUSPlacedTextContent{478.819}{334.585}{29.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(129).}
+  \ALIUSPlacedTextContent{90.000}{350.425}{198.398}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fnins.2018.00129}
+  \ALIUSPlacedTextContent{126.000}{372.025}{381.959}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hartogsohn, I. J. J. o. P. (2016). Set and setting, psychedelics and the placebo}
+  \ALIUSPlacedTextContent{90.000}{387.865}{379.384}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{response: An extra-pharmacological perspective on psychopharmacology.}
+  \ALIUSPlacedTextContent{469.329}{387.865}{15.192}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{30}
+  \ALIUSPlacedTextContent{484.539}{387.865}{23.490}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(12),}
+  \ALIUSPlacedTextContent{90.000}{403.705}{253.806}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881116677852 1259-1267}
+  \ALIUSPlacedTextContent{343.832}{403.705}{14.719}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.000}{425.305}{381.965}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Maij, D. L., van Elk, M., Schjoedt, U. J. R., Brain, \& Behavior. (2019). The}
+  \ALIUSPlacedTextContent{90.000}{440.905}{418.048}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{role of alcohol in expectancy-driven mystical experiences: A pre-registered field}
+  \ALIUSPlacedTextContent{90.000}{456.745}{30.547}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{study}
+  \ALIUSPlacedTextContent{146.454}{456.745}{29.899}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{using}
+  \ALIUSPlacedTextContent{202.260}{456.745}{41.990}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{placebo}
+  \ALIUSPlacedTextContent{270.157}{456.745}{30.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{brain}
+  \ALIUSPlacedTextContent{326.183}{456.745}{60.925}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{stimulation.}
+  \ALIUSPlacedTextContent{415.969}{456.745}{5.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{9}
+  \ALIUSPlacedTextContent{421.429}{456.745}{19.176}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2),}
+  \ALIUSPlacedTextContent{466.511}{456.745}{41.521}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{108-125.}
+  \ALIUSPlacedTextContent{90.000}{472.585}{228.692}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/2153599X.2017.1403952}
+  \ALIUSPlacedTextContent{126.000}{494.185}{382.048}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Olson, D. E. (2021). The Subjective Effects of Psychedelics May Not Be}
+  \ALIUSPlacedTextContent{90.000}{510.025}{291.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Necessary for Their Enduring Therapeutic Effects.}
+  \ALIUSPlacedTextContent{388.692}{510.025}{119.328}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{ACS Pharmacology \&}
+  \ALIUSPlacedTextContent{90.000}{525.865}{99.116}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Translational Science}
+  \ALIUSPlacedTextContent{189.123}{525.865}{2.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{192.009}{525.865}{8.524}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{4}
+  \ALIUSPlacedTextContent{200.550}{525.865}{62.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 563-567.}
+  \ALIUSPlacedTextContent{262.896}{525.865}{196.973}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1021/acsptsci.0c00192}
+  \ALIUSPlacedTextContent{126.000}{547.465}{382.049}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Olson, J. A., Suissa-Rocheleau, L., Lifshitz, M., Raz, A., \& Veissiere, S. P.}
+  \ALIUSPlacedTextContent{90.000}{563.305}{418.000}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2020). Tripping on nothing: placebo psychedelics and contextual factors.}
+  \ALIUSPlacedTextContent{90.000}{579.145}{95.846}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychopharmacology}
+  \ALIUSPlacedTextContent{185.833}{579.145}{2.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{188.719}{579.145}{17.223}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{237}
+  \ALIUSPlacedTextContent{205.957}{579.145}{19.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5),}
+  \ALIUSPlacedTextContent{225.235}{579.145}{213.919}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00213-020-05464-5}
+  \ALIUSPlacedTextContent{126.000}{600.745}{382.078}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Phoumthipphavong, V., Barthas, F., Hassett, S., \& Kwan, A. C. (2016).}
+  \ALIUSPlacedTextContent{90.000}{616.345}{418.095}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Longitudinal effects of ketamine on dendritic architecture in vivo in the mouse}
+  \ALIUSPlacedTextContent{90.000}{632.185}{112.450}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{medial frontal cortex.}
+  \ALIUSPlacedTextContent{202.460}{632.185}{32.802}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Eneuro}
+  \ALIUSPlacedTextContent{235.284}{632.185}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{241.212}{632.185}{4.432}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{3}
+  \ALIUSPlacedTextContent{245.658}{632.185}{18.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2).}
+  \ALIUSPlacedTextContent{264.520}{632.185}{227.884}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/ENEURO.0133-15.2016}
+  \ALIUSPlacedTextContent{126.000}{654.025}{382.066}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Shao, L.-X., Liao, C., Gregg, I., Davoudian, P. A., Savalia, N. K., Delagarza,}
+  \ALIUSPlacedTextContent{90.000}{669.625}{418.038}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{K., \& Kwan, A. C. (2021). Psilocybin induces rapid and persistent growth of}
+  \ALIUSPlacedTextContent{90.000}{685.465}{209.859}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dendritic spines in frontal cortex in vivo.}
+  \ALIUSPlacedTextContent{299.905}{685.465}{36.285}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{bioRxiv}
+  \ALIUSPlacedTextContent{336.214}{685.465}{8.635}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.000}{707.065}{382.036}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Yaden, D. B., \& Griffiths, R. R. (2021). The Subjective Effects of Psychedelics}
+  \ALIUSPlacedTextContent{90.000}{722.905}{301.496}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Are Necessary for Their Enduring Therapeutic Effects.}
+  \ALIUSPlacedTextContent{395.140}{722.905}{112.874}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{ACS Pharmacology \&}
+  \ALIUSPlacedTextContent{90.000}{738.745}{99.105}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Translational Science}
+  \ALIUSPlacedTextContent{189.123}{738.745}{2.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{192.009}{738.745}{8.524}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{4}
+  \ALIUSPlacedTextContent{200.550}{738.745}{62.816}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 568-572.}
+  \ALIUSPlacedTextContent{263.377}{738.745}{197.608}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1021/acsptsci.0c00194}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

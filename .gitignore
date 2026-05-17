@@ -8,3 +8,9 @@ Bulletins/*.aux
 Bulletins/*.log
 *.pdf
 !Cover-Art/assets/front-cover-empty-no-leaf.pdf
+output/
+tmp/
+*.aux
+*.log
+*.out
+*.toc

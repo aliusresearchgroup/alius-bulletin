@@ -14,7 +14,7 @@ try {
         }
         # TikZ remember-picture anchors settle on the second pass.
         1..2 | ForEach-Object {
-            pdflatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory=Cover-Art $CoverTex
+            lualatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory=Cover-Art $CoverTex
         }
     }
 
@@ -23,7 +23,7 @@ try {
         if (-not (Test-Path $IssueTex)) {
             throw "Missing issue source: $IssueTex"
         }
-        pdflatex -interaction=nonstopmode -halt-on-error -output-directory=Bulletins $IssueTex
+        lualatex -interaction=nonstopmode -halt-on-error -output-directory=Bulletins $IssueTex
     }
 
 }

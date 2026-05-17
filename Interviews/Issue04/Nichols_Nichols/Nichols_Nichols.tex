@@ -1,38 +1,452 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.2756bp,paperheight=841.8898bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{DMT in the mammalian brain: A critical appraisal}
-\author{Charles D. Nichols \& David E. Nichols commentary on Dean et al., 2019}
-\date{ALIUS Bulletin 4}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC0000FF}{HTML}{0000FF}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/a5hm-fs14\par
-\textbf{Keywords:} DMT, near-death experiences, neurotransmission, mammalian\par
-\section*{Abstract}
-Recently, a publication from Dean et al. reported that N,N-dimethyl tryptamine (DMT) is synthesized in the rat brain cortex, present at levels similar to other monoamine neurotransmitters, and significantly increases in concentration at death. They further promoted the theory that DMT may serve as the causative agent for "near death experiences", which have been compared to peak psychedelic experiences. The publication certainly is interesting and suggests additional directions to explore scientifically but does not meet the bar for either claim that DMT is at functional levels in the cortex comparable to serotonin or is the "near death" neurotransmitter.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin DMT in the Mammalian Brain: A Critical Appraisal Abstract Recently, a publication from Dean et al. reported that N,N-dimethyl tryptamine (DMT) is synthesized in the rat brain cortex, present at levels similar to other monoamine neurotransmitters, and significantly increases in concentration at death. They further promoted the theory that DMT may serve as the causative agent for "near death experiences", which have been compared to peak psychedelic experiences. The publication certainly is interesting and suggests additional directions to explore scientifically but does not meet the bar for either claim that DMT is at functional levels in the cortex comparable to serotonin or is the "near death" neurotransmitter. keywords: DMT, near-death experiences, neurotransmission Commentary on: Dean, J. G., Liu, T., Huff, S., Sheler, B., Barker, S. A., Strassman, R. J., Wang, M. M. \& Borjigin, J. (2019). Biosynthesis and extracellular concentrations of N, N-dimethyltryptamine (DMT) in Mammalian Brain. Scientific reports, 9(1), 1-1 https://doi.org/10.1038/s41598-019-45812-w N,N-dimethyl tryptamine (DMT) and the natural product admixture ayahuasca being used in shamanic rituals that contains DMT, is currently a very fashionable topic. Thousands of people worldwide have used DMT or ayahuasca in recent years under shamanic guidance or in a therapeutic setting where it appears to show benefit for antidepressant-like effects and helped with healing psychological trauma. DMT has been a trendy topic both in the scientific literature and the popular press, where several pieces have been published ascribing cure-all properties to the molecule, including proposals that it is the neurotransmitter responsible for mystical experiences in "near by Charles D. Nichols \& David E. Nichols Charles D. Nichols cnich1@lsuhsc.edy LSU Health Sciences Center, New Orleans, USA David E. Nichols drdave@purdue.edu University of North Carolina, Chapel Hill, USA Cite as: Nichols, C. D. \& Nichols, D. E. (2020). DMT in the Mammalian Brain: A Critical Appraisal by Nichols, C. D. and Nichols D. E.. ALIUS Bulletin, 4, 16-22, https://doi.org/10.34700/s66k-9j57 Nichols \& Nichols - DMT in the Mammalian Brain ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 17 death experiences" where the individual has clinically died and been resuscitated. The recent publication by Dean et al. (2019) is the next iteration in attempts by the some of the coauthors of this publication to prove that endogenously produced DMT has important physiological functions, and in particular could be responsible for the mental effects of a near death experience. In this publication, they report that DMT is found in rat brain visual cortex, with slightly elevated levels of DMT in brains of rats that were asphyxiated. Previously, some of these authors had proposed that DMT is produced in significant amounts by the pineal gland (Barker, Borjigin et al. 2013). One of us has reviewed that hypothesis and has pointed out that the pineal gland is not capable of producing physiologically relevant amounts of DMT (Nichols 2018). The present report by Dean et al. showing that DMT could be detected in rat brain in similar amounts, regardless of whether or not the animal had a functioning pineal gland, is consistent with our earlier argument. In a previous publication by some of these coauthors (and prior to their studies focusing on DMT), Li et al. (2015) emphasized that asphyxia generates a "brainstorm" of neurochemicals. To wit, "An immediate and sustained surge of a large set of core neurotransmitters within the cortex occurs in response to asphyxia. In both frontal and occipital cortices, a dramatic and significant surge of neurotransmitter secretion was detected for as long as 20 min of asphyxia for all neurotransmitters tested." They found that cortical levels of serotonin (5-HT) surged more than 20-fold, norepinephrine more than 30- fold, and dopamine more than 12-fold. Additionally, levels of glutamate and other neurotransmitters including acetylcholine, adenosine, aspartate, taurine, histamine, and glycine all surged within minutes after asphyxiation. Thus, it is curious that Dean et al. (2019) focuses only on DMT as an important player in brain death within this context. Activation of brain serotonergic 5-HT2A receptors is the mechanism whereby hallucinogenic drugs such as DMT induce visual hallucinations and mystical experiences in humans (Nichols 2016). One of the metabolic pathways for the endogenous ligand of this receptor, serotonin, is N- Nichols \& Nichols - DMT in the Mammalian Brain ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 18 methylation, catalyzed by the enzyme Indoleamine N-methyltransferase (INMT), for which serotonin was its first identified substrate. Previous work by Schmid and Bohn (2010) showed that high concentrations of serotonin can induce the mouse head twitch response, an animal proxy for hallucinogenic activity, via activation of 5-HT2A receptors. Thus, the surge of serotonin alone following asphyxiation could be responsible for activation of 5-HT2A receptors and production of (the behavioral metric used in laboratory animal studies of) psychoactive effects. In addition, if INMT is responsible for production of DMT, and INMT also N-methylates serotonin (Axelrod 1962), there should be a peak in the HPLC trace for N-methylserotonin, but that is not evident in the presented HPLC traces (and these two molecules do not co-elute in HPLC analysis). Further, N-methylserotonin also activates 5- HT2A receptors to produce behavioral effects (Schmid and Bohn 2010) and this metabolite would be expected also to contribute to potential CNS effects mediated by the 5-HT2A receptor following asphyxiation. It should be mentioned that INMT is not specific for N-methylation of tryptamine, but also N-methylates a variety of other arylethylamines including, tyramine, normetanephrine, metanephrine, 3-methoxytyramine, dopamine, and octopamine (Axelrod 1962), as well as histamine (Herman, Bowsher et al. 1985). Importantly, therefore, INMT cannot be seen strictly as a proxy for DMT production. As for the other neurotransmitters found to be dramatically induced in the cortex by asphyxia in the author's earlier work (Li, Mabrouk et al. 2015), norepinephrine has a central effect on arousal and alertness and also activates adrenergic receptors that are co-expressed on apical dendrites of cortical pyramidal cells, the same anatomic location where 5-HT2A receptors are expressed. Dopamine plays important roles in arousal, attention, cognition, and affective emotion. Increased brain glutamate concentrations can lead to out of body and hallucinogenic experiences (Gouzoulis-Mayfrank, Heekeren et al. 2005, Browne and Lucki 2013), and is a mechanism involved in the out of body experience induced by the anesthetic ketamine. With such a flood of neurochemicals, including those that can significantly impact CNS function and induce out of body experiences, it is not clear why the authors attach such importance to the relatively small increase in the amount of DMT in the Nichols \& Nichols - DMT in the Mammalian Brain ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 19 brain following asphyxiation. Apparently, it is the recurring meme that because exogenous DMT is hallucinogenic, and because it can be produced in the brain, therefore it must be important there, and have some physiological (hallucinogenic?) role. Another explanation for out of body experiences, e.g., at near death, that the authors again fail to consider could be the production of dynorphin (DYN) and other endogenous opioid peptides. DYN and its cognate kappa-opioid receptor (KOR) play an important role in regulating stress responsiveness, motivation, and emotion (Bruchas, Land et al. 2010, Knoll and Carlezon 2010, Van't Veer and Carlezon 2013, Donahue, Landino et al. 2015). DYN 1-13 is an extremely potent kappa receptor agonist, with 0.44 nM affinity at the kappa receptor in rhesus monkey brain (Emmerson, Liu et al. 1994). Readers will appreciate that salvinorin A, the hallucinogenic component of Salvia divinorum, is a selective and extremely potent agonist at the KOR that can produce hallucinogenic and out of body experiences (Roth, Baner et al. 2002). Other endogenous opioid peptides are produced during stress and would activate other classes of opioid receptors. The authors made no attempt in their work to measure production of endorphins. A most critical aspect lacking in the discussion was a practical understanding of receptor pharmacology. 5-HT has a 10-fold higher affinity for the 5-HT2A receptor than DMT (PDSP Ki Database). Even if we accept that DMT is present at half the levels of 5-HT in cortex under normal physiological conditions, the combination of higher 5-HT levels and higher affinity of 5- HT for the target receptor indicate that DMT will not be engaging the receptor to any appreciable degree at baseline conditions. During asphyxiation, as the authors' previous work shows, and as they interpret data here, levels of serotonin increase over 20-fold compared to only a 6-fold increase for DMT (Dean et al. Fig 4A), further widening this gap. At these comparative levels, with the 10-fold higher affinity of serotonin, 5-HT2A receptors would be saturated with serotonin and engagement of receptors by DMT in the presence of that much serotonin (and/or N-methylserotonin) would essentially be zero. Nichols \& Nichols - DMT in the Mammalian Brain ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 20 There are additional issues with experimental design and interpretation of the data presented. For example, why was microdialysis performed in the visual cortex rather than the frontal cortex, where behaviors are mediated? Why was there no validation of RNAScope results with antibodies? mRNA levels do not necessarily correlate with expressed protein levels, and to state conclusively that the enzymes INMT and AADC are co-expressed in the same cells and synthesize DMT requires validation of the presence of the enzyme proteins themselves. The statement that "DMT would be the only monoamine whose biosynthesis takes place within the cerebral cortex where it may directly influence cognitive functions of the brain" is patently false. It has been known for years that monoamine neurotransmitters, including serotonin and N-methyltryptamines, are synthesized locally within the cerebral cortex where they can influence behaviors. Perhaps most curious, in pinealectomized animals, the peak supposedly representing 5-HT is significantly blunted in comparison (Figure 4A \& B). Why is that? The pineal gland does not regulate 5-HT levels in the brain and there is no expectation that the absence of this gland would alter cortical 5- HT levels after cardiac arrest. Further, two other un-identified peaks in the HPLC trace show the most significant increases after cardiac arrest (Figure 4B). What are these peaks? The authors do not address these discrepancies, but rather only compare serotonin to DMT in pinealectomized animals. To be very clear, we are not arguing that DMT is not produced in the cortex of the rat. Rather, even with the production of amounts of DMT indicated by the authors' data, the higher levels of serotonin, and potentially N- methylserotonin, are much more likely to induce a behavioral response through the 5-HT2A receptor. The "brainstorm" of additional neurochemicals may also be relevant to altered consciousness, and in addition, suggests the potential role of dynorphin or other endorphins, which were not measured, cannot be discounted. As Dean et al. wisely conclude, "It is unknown whether the concentrations of DMT reported in our study at cardiac arrest can elicit the effects of an exogenous psychedelic dose of DMT..." And, "the conscious states reported by NDE survivors may involve Nichols \& Nichols - DMT in the Mammalian Brain ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 21 contributions from several of the other neurotransmitters found to surge at cardiac arrest in our prior rodent study." Exactly our point here! Science aside, a real problem with this report is that it is being taken up by the popular culture media and widely spread to a lay audience as now established dogma. Without a critical reading of the publication, advocates for the importance of endogenous DMT in the brain will and are saying, "see, we told you so." Unfortunately, it only serves to propagate a pseudoscience meme. If we take the "politics" of DMT out of the equation, and simply examine the data presented, the publication by Dean et al. certainly is interesting and suggests additional directions to explore scientifically, but does not meet the bar for either claim that DMT is at functional levels in the cortex comparable to serotonin or is the "near death" neurotransmitter. References Axelrod, J. (1962). The enzymatic N-methylation of serotonin and other amines. Journal of Pharmacology and Experimental Therapeutics, 138(1), 28-33. Barker, S. A., Borjigin, J., Lomnicka, I., \& Strassman, R. (2013). LC/MS/MS analysis of the endogenous dimethyltryptamine hallucinogens, their precursors, and major metabolites in rat pineal gland microdialysate. Biomedical Chromatography, 27(12), 1690-1700. https://doi.org/10.1002/bmc.2981 Browne, C. A., \& Lucki, I. (2013). Antidepressant effects of ketamine: mechanisms underlying fast-acting novel antidepressants. Frontiers in pharmacology, 4, 161. https://doi.org/110.3389/fphar.2013.00161 Bruchas, M. R., Land, B. B., \& Chavkin, C. (2010). The dynorphin/kappa opioid system as a modulator of stress-induced and pro-addictive behaviors. Brain research, 1314, 44-55. https://doi.org/ 10.1016/j.brainres.2009.08.062 Dean, J. G., Liu, T., Huff, S., Sheler, B., Barker, S. A., Strassman, R. J., Wang, M. M. \& Borjigin, J. (2019). Biosynthesis and extracellular concentrations of N, N- dimethyltryptamine (DMT) in Mammalian Brain. Scientific reports, 9(1), 1- 11. https://doi.org/10.1038/s41598-019-45812-w Donahue, R. J., Landino, S. M., Golden, S. A., Carroll, F. I., Russo, S. J., \& Carlezon Jr, W. A. (2015). Effects of acute and chronic social defeat stress are differentially mediated by the dynorphin/kappa-opioid receptor system. Behavioural pharmacology, 26(7 0 0), 654. https://doi.org/10.1097/FBP.0000000000000155 Nichols \& Nichols - DMT in the Mammalian Brain ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 22 Emmerson, P. J., Liu, M. R., Woods, J. H., \& Medzihradsky, F. (1994). Binding affinity and selectivity of opioids at mu, delta and kappa receptors in monkey brain membranes. Journal of Pharmacology and Experimental Therapeutics, 271(3), 1630-1637. Gouzoulis-Mayfrank, E., Heekeren, K., Neukirch, A., Stoll, M., Stock, C., Obradovic, M., \& Kovar, K. A. (2005). Psychological effects of (S)-ketamine and N, N-dimethyltryptamine (DMT): a double-blind, cross-over study in healthy volunteers. Pharmacopsychiatry, 38(06), 301-311. https://doi.org/10.1055/s-2005-916185 Herman, K. S., Bowsher, R. R., \& Henry, D. P. (1985). Synthesis of N pi- methylhistamine and N alpha-methylhistamine by purified rabbit lung indolethylamine N-methyltransferase. Journal of Biological Chemistry, 260(22), 12336-12340. Knoll, A. T., \& Carlezon Jr, W. A. (2010). Dynorphin, stress, and depression. Brain research, 1314, 56-73. Li, D., Mabrouk, O. S., Liu, T., Tian, F., Xu, G., Rengifo, S., Choi, S. J., Mathur, A., Crooks, C. P., Kennedy R. T., Wang, M. M., Ghanbari, H \& Borjigin, J. (2015). Asphyxia-activated corticocardiac signaling accelerates onset of cardiac arrest. Proceedings of the National Academy of Sciences, 112(16), E2073- E2082. https://doi.org/10.1073/pnas.1423936112 Nichols, D. E. (2016). Psychedelics. Pharmacological reviews, 68(2), 264-355. Nichols, D. E. (2018). N, N-dimethyltryptamine and the pineal gland: Separating fact from myth. Journal of Psychopharmacology, 32(1), 30-36. https://doi.org/10.1177/0269881117736919 Roth, B. L., Baner, K., Westkaemper, R., Siebert, D., Rice, K. C., Steinberg, S., ... \& Rothman, R. B. (2002). Salvinorin A: a potent naturally occurring nonnitrogenous opioid selective agonist. Proceedings of the National Academy of Sciences, 99(18), 11934-11939. https://doi.org/10.1073/pnas.182234399 Schmid, C. L., \& Bohn, L. M. (2010). Serotonin, but not N-methyltryptamines, activates the serotonin 2A receptor via a -arrestin2/Src/Akt signaling complex in vivo. Journal of Neuroscience, 30(40), 13513-13524. https://doi.org/10.1523/JNEUROSCI.1665-10.2010 Van't Veer, A., \& Carlezon, W. A. (2013). Role of kappa-opioid receptors in stress and anxiety-related behavior. Psychopharmacology, 229(3), 435-452. https://doi.org/10.1007/s00213-013-3195-5\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (266.151bp,-560.151bp) rectangle ++(239.760bp,-0.720bp);
+  \fill[ALIUSC1F8135] (394.071bp,-168.231bp) rectangle ++(73.200bp,-0.240bp);
+  \fill[ALIUSC1F8135] (394.071bp,-228.231bp) rectangle ++(78.480bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-145.191bp) rectangle ++(0.480bp,-34.800bp);
+  \fill[ALIUSC0000FF] (96.231bp,-229.191bp) rectangle ++(161.280bp,-0.480bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-179.991bp) rectangle ++(0.480bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (388.311bp,-182.151bp) rectangle ++(0.480bp,-68.640bp);
+  \ALIUSPlacedTextContent{90.951}{72.970}{269.097}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{DMT in the Mammalian Brain:}
+  \ALIUSPlacedTextContent{90.951}{108.970}{168.226}{ALIUSC000000}{\ALIUSFontLatoLight}{19.920}{A Critical Appraisal}
+  \ALIUSPlacedTextContent{394.071}{145.094}{91.567}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Charles D. Nichols}
+  \ALIUSPlacedTextContent{394.071}{158.269}{80.477}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{cnich1@lsuhsc.edy}
+  \ALIUSPlacedTextContent{96.231}{164.319}{236.037}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Charles D. Nichols \& David E. Nichols}
+  \ALIUSPlacedTextContent{394.071}{169.069}{116.152}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{LSU Health Sciences Center,}
+  \ALIUSPlacedTextContent{394.071}{179.869}{75.082}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{New Orleans, USA}
+  \ALIUSPlacedTextContent{96.231}{182.282}{289.642}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Cite as: Nichols, C. D. \& Nichols, D. E. (2020). DMT in the}
+  \ALIUSPlacedTextContent{96.231}{194.282}{289.657}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Mammalian Brain: A Critical Appraisal by Nichols, C. D. and Nichols}
+  \ALIUSPlacedTextContent{394.071}{205.094}{81.739}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{David E. Nichols}
+  \ALIUSPlacedTextContent{96.231}{206.282}{12.681}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{D.}
+  \ALIUSPlacedTextContent{140.562}{206.282}{13.207}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{E..}
+  \ALIUSPlacedTextContent{185.419}{206.282}{27.503}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{ALIUS}
+  \ALIUSPlacedTextContent{244.480}{206.282}{30.642}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{Bulletin}
+  \ALIUSPlacedTextContent{275.078}{206.282}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{311.660}{206.282}{5.846}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{4}
+  \ALIUSPlacedTextContent{317.459}{206.282}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{354.041}{206.282}{29.107}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{16-22,}
+  \ALIUSPlacedTextContent{394.071}{218.269}{80.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{drdave@purdue.edu}
+  \ALIUSPlacedTextContent{96.231}{218.282}{161.335}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/s66k-9j57}
+  \ALIUSPlacedTextContent{394.071}{229.069}{114.146}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{University of North Carolina,}
+  \ALIUSPlacedTextContent{394.071}{239.869}{64.012}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Chapel Hill, USA}
+  \ALIUSPlacedTextContent{90.951}{280.972}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
+  \ALIUSPlacedTextContent{90.951}{309.507}{418.266}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{Recently, a publication from Dean et al. reported that N,N-dimethyl tryptamine}
+  \ALIUSPlacedTextContent{90.951}{323.907}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{(DMT) is synthesized in the rat brain cortex, present at levels similar to other}
+  \ALIUSPlacedTextContent{90.951}{338.307}{418.274}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{monoamine neurotransmitters, and significantly increases in concentration at}
+  \ALIUSPlacedTextContent{90.951}{352.707}{418.269}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{death. They further promoted the theory that DMT may serve as the causative}
+  \ALIUSPlacedTextContent{90.951}{367.107}{418.266}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{agent for "near death experiences", which have been compared to peak}
+  \ALIUSPlacedTextContent{90.951}{381.507}{418.270}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{psychedelic experiences. The publication certainly is interesting and suggests}
+  \ALIUSPlacedTextContent{90.951}{395.907}{418.264}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{additional directions to explore scientifically but does not meet the bar for either}
+  \ALIUSPlacedTextContent{90.951}{410.307}{418.277}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{claim that DMT is at functional levels in the cortex comparable to serotonin or is}
+  \ALIUSPlacedTextContent{90.951}{424.707}{183.817}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{the "near death" neurotransmitter.}
+  \ALIUSPlacedTextContent{90.951}{451.107}{47.340}{ALIUSC000000}{\ALIUSFontLatoItalic}{12.000}{keywords}
+  \ALIUSPlacedTextContent{138.289}{451.107}{248.118}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{: DMT, near-death experiences, neurotransmission}
+  \ALIUSPlacedTextContent{90.951}{494.613}{418.437}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Commentary on: Dean, J. G., Liu, T., Huff, S., Sheler, B., Barker, S. A.,}
+  \ALIUSPlacedTextContent{90.951}{511.893}{418.338}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Strassman, R. J., Wang, M. M. \& Borjigin, J. (2019). Biosynthesis and}
+  \ALIUSPlacedTextContent{90.951}{529.173}{418.369}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{extracellular concentrations of N, N-dimethyltryptamine (DMT) in Mammalian}
+  \ALIUSPlacedTextContent{266.033}{546.243}{239.922}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.000}{https://doi.org/10.1038/s41598-019-45812-w}
+  \ALIUSPlacedTextContent{90.951}{546.933}{34.382}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Brain.}
+  \ALIUSPlacedTextContent{125.310}{546.933}{98.317}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{Scientific reports, 9}
+  \ALIUSPlacedTextContent{223.669}{546.933}{42.379}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(1), 1-1}
+  \ALIUSPlacedTextContent{90.951}{581.849}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{N,N-dimethyl tryptamine (DMT) and the natural product admixture}
+  \ALIUSPlacedTextContent{90.951}{601.529}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ayahuasca being used in shamanic rituals that contains DMT, is currently a}
+  \ALIUSPlacedTextContent{90.951}{620.969}{418.330}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{very fashionable topic. Thousands of people worldwide have used DMT or}
+  \ALIUSPlacedTextContent{90.951}{640.409}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ayahuasca in recent years under shamanic guidance or in a therapeutic setting}
+  \ALIUSPlacedTextContent{90.951}{659.849}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{where it appears to show benefit for antidepressant-like effects and helped}
+  \ALIUSPlacedTextContent{90.951}{679.529}{418.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with healing psychological trauma. DMT has been a trendy topic both in the}
+  \ALIUSPlacedTextContent{90.951}{698.969}{418.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{scientific literature and the popular press, where several pieces have been}
+  \ALIUSPlacedTextContent{90.951}{718.409}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{published ascribing cure-all properties to the molecule, including proposals}
+  \ALIUSPlacedTextContent{90.951}{737.849}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that it is the neurotransmitter responsible for mystical experiences in "near}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{283.923}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Nichols \& Nichols – DMT in the Mammalian Brain}
+  \ALIUSPlacedTextContent{495.351}{36.329}{13.911}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{17}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{death experiences" where the individual has clinically died and been}
+  \ALIUSPlacedTextContent{90.951}{92.488}{70.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{resuscitated.}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The recent publication by Dean et al. (2019) is the next iteration in attempts}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by the some of the coauthors of this publication to prove that endogenously}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{produced DMT has important physiological functions, and in particular}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{could be responsible for the mental effects of a near death experience. In this}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{publication, they report that DMT is found in rat brain visual cortex, with}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{slightly elevated levels of DMT in brains of rats that were asphyxiated.}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.352}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Previously, some of these authors had proposed that DMT is produced in}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{significant amounts by the pineal gland (Barker, Borjigin et al. 2013). One of}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{us has reviewed that hypothesis and has pointed out that the pineal gland is}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not capable of producing physiologically relevant amounts of DMT (Nichols}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.377}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2018).  The present report by Dean et al. showing that DMT could be detected}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in rat brain in similar amounts, regardless of whether or not the animal had}
+  \ALIUSPlacedTextContent{90.951}{365.608}{366.899}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a functioning pineal gland, is consistent with our earlier argument.}
+  \ALIUSPlacedTextContent{90.951}{404.488}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In a previous publication by some of these coauthors (and prior to their}
+  \ALIUSPlacedTextContent{90.951}{423.928}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{studies focusing on DMT), Li et al. (2015) emphasized that asphyxia generates}
+  \ALIUSPlacedTextContent{90.951}{443.608}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a "brainstorm" of neurochemicals. To wit, "An immediate and sustained surge}
+  \ALIUSPlacedTextContent{90.951}{463.048}{418.197}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of a large set of core neurotransmitters within the cortex occurs in response}
+  \ALIUSPlacedTextContent{90.951}{482.488}{418.478}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to asphyxia. In both frontal and occipital cortices, a dramatic and significant}
+  \ALIUSPlacedTextContent{90.951}{501.928}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{surge of neurotransmitter secretion was detected for as long as 20 min of}
+  \ALIUSPlacedTextContent{90.951}{521.369}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{asphyxia for all neurotransmitters tested." They found that cortical levels of}
+  \ALIUSPlacedTextContent{90.951}{541.049}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{serotonin (5-HT) surged more than 20-fold, norepinephrine more than 30-}
+  \ALIUSPlacedTextContent{90.951}{560.489}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fold, and dopamine more than 12-fold. Additionally, levels of glutamate and}
+  \ALIUSPlacedTextContent{90.951}{579.928}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other neurotransmitters including acetylcholine, adenosine, aspartate,}
+  \ALIUSPlacedTextContent{90.951}{599.369}{418.398}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{taurine, histamine, and glycine all surged within minutes after asphyxiation.}
+  \ALIUSPlacedTextContent{90.951}{619.048}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Thus, it is curious that Dean et al. (2019) focuses only on DMT as an}
+  \ALIUSPlacedTextContent{90.951}{638.489}{286.471}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{important player in brain death within this context.}
+  \ALIUSPlacedTextContent{90.951}{677.369}{418.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Activation of brain serotonergic 5-HT2A receptors is the mechanism}
+  \ALIUSPlacedTextContent{90.951}{697.048}{418.344}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{whereby hallucinogenic drugs such as DMT induce visual hallucinations and}
+  \ALIUSPlacedTextContent{90.951}{716.489}{418.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mystical experiences in humans (Nichols 2016). One of the metabolic}
+  \ALIUSPlacedTextContent{90.951}{735.929}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pathways for the endogenous ligand of this receptor, serotonin, is N-}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{283.923}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Nichols \& Nichols – DMT in the Mammalian Brain}
+  \ALIUSPlacedTextContent{494.391}{36.329}{14.751}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{18}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{methylation, catalyzed by the enzyme Indoleamine N-methyltransferase}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(INMT), for which serotonin was its first identified substrate. Previous work}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by Schmid and Bohn (2010) showed that high concentrations of serotonin can}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.373}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{induce the mouse head twitch response, an animal proxy for hallucinogenic}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{activity, via activation of 5-HT2A receptors. Thus, the surge of serotonin}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{alone following asphyxiation could be responsible for activation of 5-HT2A}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptors and production of (the behavioral metric used in laboratory animal}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.348}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{studies of) psychoactive effects. In addition, if INMT is responsible for}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.211}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{production of DMT, and INMT also N-methylates serotonin (Axelrod 1962),}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there should be a peak in the HPLC trace for N-methylserotonin, but that is}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.181}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not evident in the presented HPLC traces (and these two molecules do not}
+  \ALIUSPlacedTextContent{90.951}{287.608}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{co-elute in HPLC analysis). Further, N-methylserotonin also activates 5-}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.093}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{HT2A receptors to produce behavioral effects (Schmid and Bohn 2010) and}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this metabolite would be expected also to contribute to potential CNS effects}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.124}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mediated by the 5-HT2A receptor following asphyxiation. It should be}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mentioned that INMT is not specific for N-methylation of tryptamine, but}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{also N-methylates a variety of other arylethylamines including, tyramine,}
+  \ALIUSPlacedTextContent{90.951}{404.488}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{normetanephrine, metanephrine, 3-methoxytyramine, dopamine, and}
+  \ALIUSPlacedTextContent{90.951}{423.928}{418.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{octopamine (Axelrod 1962), as well as histamine (Herman, Bowsher et al.}
+  \ALIUSPlacedTextContent{90.951}{443.608}{418.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{1985). Importantly, therefore, INMT cannot be seen strictly as a proxy for}
+  \ALIUSPlacedTextContent{90.951}{463.048}{100.821}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{DMT production.}
+  \ALIUSPlacedTextContent{90.951}{501.928}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{As for the other neurotransmitters found to be dramatically induced in the}
+  \ALIUSPlacedTextContent{90.951}{521.369}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cortex by asphyxia in the author's earlier work (Li, Mabrouk et al. 2015),}
+  \ALIUSPlacedTextContent{90.951}{541.049}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{norepinephrine has a central effect on arousal and alertness and also activates}
+  \ALIUSPlacedTextContent{90.951}{560.489}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{adrenergic receptors that are co-expressed on apical dendrites of cortical}
+  \ALIUSPlacedTextContent{90.951}{579.928}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pyramidal cells, the same anatomic location where 5-HT2A receptors are}
+  \ALIUSPlacedTextContent{90.951}{599.369}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{expressed. Dopamine plays important roles in arousal, attention, cognition,}
+  \ALIUSPlacedTextContent{90.951}{619.048}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and affective emotion. Increased brain glutamate concentrations can lead to}
+  \ALIUSPlacedTextContent{90.951}{638.489}{418.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{out of body and hallucinogenic experiences (Gouzoulis-Mayfrank, Heekeren}
+  \ALIUSPlacedTextContent{90.951}{657.928}{418.373}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{et al. 2005, Browne and Lucki 2013), and is a mechanism involved in the out}
+  \ALIUSPlacedTextContent{90.951}{677.369}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of body experience induced by the anesthetic ketamine. With such a flood of}
+  \ALIUSPlacedTextContent{90.951}{697.048}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neurochemicals, including those that can significantly impact CNS function}
+  \ALIUSPlacedTextContent{90.951}{716.489}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and induce out of body experiences, it is not clear why the authors attach}
+  \ALIUSPlacedTextContent{90.951}{735.929}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{such importance to the relatively small increase in the amount of DMT in the}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{283.923}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Nichols \& Nichols – DMT in the Mammalian Brain}
+  \ALIUSPlacedTextContent{494.871}{36.329}{14.415}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{19}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.211}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain following asphyxiation. Apparently, it is the recurring meme that}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{because exogenous DMT is hallucinogenic, and because it can be produced}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in the brain, therefore it must be important there, and have some}
+  \ALIUSPlacedTextContent{90.951}{131.609}{197.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{physiological (hallucinogenic?) role.}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Another explanation for out of body experiences, e.g., at near death, that the}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{authors again fail to consider could be the production of dynorphin (DYN)}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and other endogenous opioid peptides. DYN and its cognate kappa-opioid}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptor (KOR) play an important role in regulating stress responsiveness,}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{motivation, and emotion (Bruchas, Land et al. 2010, Knoll and Carlezon 2010,}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Van't Veer and Carlezon 2013, Donahue, Landino et al. 2015). DYN 1-13 is an}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{extremely potent kappa receptor agonist, with 0.44 nM affinity at the kappa}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptor in rhesus monkey brain (Emmerson, Liu et al. 1994). Readers will}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{appreciate that salvinorin A, the hallucinogenic component of Salvia}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{divinorum, is a selective and extremely potent agonist at the KOR that can}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{produce hallucinogenic and out of body experiences (Roth, Baner et al. 2002).}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.096}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Other endogenous opioid peptides are produced during stress and would}
+  \ALIUSPlacedTextContent{90.951}{404.488}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{activate other classes of opioid receptors. The authors made no attempt in}
+  \ALIUSPlacedTextContent{90.951}{423.928}{270.329}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{their work to measure production of endorphins.}
+  \ALIUSPlacedTextContent{90.951}{463.048}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{A most critical aspect lacking in the discussion was a practical understanding}
+  \ALIUSPlacedTextContent{90.951}{482.488}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of receptor pharmacology. 5-HT has a 10-fold higher affinity for the 5-HT2A}
+  \ALIUSPlacedTextContent{90.951}{501.928}{418.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptor than DMT (PDSP Ki Database). Even if we accept that DMT is}
+  \ALIUSPlacedTextContent{90.951}{521.369}{418.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{present at half the levels of 5-HT in cortex under normal physiological}
+  \ALIUSPlacedTextContent{90.951}{541.049}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conditions, the combination of higher 5-HT levels and higher affinity of 5-}
+  \ALIUSPlacedTextContent{90.951}{560.489}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{HT for the target receptor indicate that DMT will not be engaging the}
+  \ALIUSPlacedTextContent{90.951}{579.928}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptor to any appreciable degree at baseline conditions. During}
+  \ALIUSPlacedTextContent{90.951}{599.369}{418.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{asphyxiation, as the authors' previous work shows, and as they interpret data}
+  \ALIUSPlacedTextContent{90.951}{619.048}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{here, levels of serotonin increase over 20-fold compared to only a 6-fold}
+  \ALIUSPlacedTextContent{90.951}{638.489}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{increase for DMT (Dean et al. Fig 4A), further widening this gap. At these}
+  \ALIUSPlacedTextContent{90.951}{657.928}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{comparative levels, with the 10-fold higher affinity of serotonin, 5-HT2A}
+  \ALIUSPlacedTextContent{90.951}{677.369}{418.216}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptors would be saturated with serotonin and engagement of receptors by}
+  \ALIUSPlacedTextContent{90.951}{697.048}{418.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{DMT in the presence of that much serotonin (and/or N-methylserotonin)}
+  \ALIUSPlacedTextContent{90.951}{716.489}{141.518}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{would essentially be zero.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{283.923}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Nichols \& Nichols – DMT in the Mammalian Brain}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.563}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{20}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There are additional issues with experimental design and interpretation of}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the data presented. For example, why was microdialysis performed in the}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.178}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{visual cortex rather than the frontal cortex, where behaviors are mediated?}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Why was there no validation of RNAScope results with antibodies? mRNA}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{levels do not necessarily correlate with expressed protein levels, and to state}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conclusively that the enzymes INMT and AADC are co-expressed in the same}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cells and synthesize DMT requires validation of the presence of the enzyme}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{proteins themselves. The statement that "DMT would be the only}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{monoamine whose biosynthesis takes place within the cerebral cortex where}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it may directly influence cognitive functions of the brain" is patently false. It}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{has been known for years that monoamine neurotransmitters, including}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{serotonin and N-methyltryptamines, are synthesized locally within the}
+  \ALIUSPlacedTextContent{90.951}{307.048}{284.749}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cerebral cortex where they can influence behaviors.}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Perhaps most curious, in pinealectomized animals, the peak supposedly}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.145}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{representing 5-HT is significantly blunted in comparison (Figure 4A \& B).}
+  \ALIUSPlacedTextContent{90.951}{385.048}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Why is that? The pineal gland does not regulate 5-HT levels in the brain and}
+  \ALIUSPlacedTextContent{90.951}{404.488}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there is no expectation that the absence of this gland would alter cortical 5-}
+  \ALIUSPlacedTextContent{90.951}{423.928}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{HT levels after cardiac arrest. Further, two other un-identified peaks in the}
+  \ALIUSPlacedTextContent{90.951}{443.608}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{HPLC trace show the most significant increases after cardiac arrest (Figure}
+  \ALIUSPlacedTextContent{90.951}{463.048}{418.134}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{4B). What are these peaks? The authors do not address these discrepancies,}
+  \ALIUSPlacedTextContent{90.951}{482.488}{394.283}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{but rather only compare serotonin to DMT in pinealectomized animals.}
+  \ALIUSPlacedTextContent{90.951}{521.369}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To be very clear, we are not arguing that DMT is not produced in the cortex}
+  \ALIUSPlacedTextContent{90.951}{541.049}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the rat. Rather, even with the production of amounts of DMT indicated}
+  \ALIUSPlacedTextContent{90.951}{560.489}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by the authors' data, the higher levels of serotonin, and potentially N-}
+  \ALIUSPlacedTextContent{90.951}{579.928}{418.152}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{methylserotonin, are much more likely to induce a behavioral response}
+  \ALIUSPlacedTextContent{90.951}{599.369}{46.901}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{through}
+  \ALIUSPlacedTextContent{149.139}{599.369}{20.681}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the}
+  \ALIUSPlacedTextContent{181.108}{599.369}{48.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{5-HT2A}
+  \ALIUSPlacedTextContent{240.876}{599.369}{51.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptor.}
+  \ALIUSPlacedTextContent{304.142}{599.369}{24.822}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The}
+  \ALIUSPlacedTextContent{340.259}{599.369}{72.855}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"brainstorm"}
+  \ALIUSPlacedTextContent{424.408}{599.369}{14.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of}
+  \ALIUSPlacedTextContent{449.926}{599.369}{59.230}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{additional}
+  \ALIUSPlacedTextContent{90.951}{619.048}{418.200}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neurochemicals may also be relevant to altered consciousness, and in}
+  \ALIUSPlacedTextContent{90.951}{638.489}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{addition, suggests the potential role of dynorphin or other endorphins, which}
+  \ALIUSPlacedTextContent{90.951}{657.928}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{were not measured, cannot be discounted. As Dean et al. wisely conclude, "It}
+  \ALIUSPlacedTextContent{90.951}{677.369}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is unknown whether the concentrations of DMT reported in our study at}
+  \ALIUSPlacedTextContent{90.951}{697.048}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cardiac arrest can elicit the effects of an exogenous psychedelic dose of}
+  \ALIUSPlacedTextContent{90.951}{716.489}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{DMT…"  And, "the conscious states reported by NDE survivors may involve}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (299.031bp,-488.391bp) rectangle ++(163.920bp,-0.720bp);
+  \fill[ALIUSC0000FF] (147.111bp,-541.431bp) rectangle ++(202.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (226.071bp,-594.711bp) rectangle ++(228.000bp,-0.720bp);
+  \fill[ALIUSC0000FF] (141.111bp,-663.831bp) rectangle ++(214.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-748.551bp) rectangle ++(236.640bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{283.923}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Nichols \& Nichols – DMT in the Mammalian Brain}
+  \ALIUSPlacedTextContent{495.591}{36.329}{13.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{21}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contributions from several of the other neurotransmitters found to surge at}
+  \ALIUSPlacedTextContent{90.951}{92.488}{352.536}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cardiac arrest in our prior rodent study." Exactly our point here!}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Science aside, a real problem with this report is that it is being taken up by}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the popular culture media and widely spread to a lay audience as now}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{established dogma. Without a critical reading of the publication, advocates}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for the importance of endogenous DMT in the brain will and are saying, "see,}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we told you so." Unfortunately, it only serves to propagate a pseudoscience}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.018}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{meme. If we take the "politics" of DMT out of the equation, and simply}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.389}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{examine the data presented, the publication by Dean et al. certainly is}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interesting and suggests additional directions to explore scientifically, but}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{does not meet the bar for either claim that DMT is at functional levels in the}
+  \ALIUSPlacedTextContent{90.951}{307.048}{394.689}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cortex comparable to serotonin or is the "near death" neurotransmitter.}
+  \ALIUSPlacedTextContent{264.617}{360.412}{71.454}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
+  \ALIUSPlacedTextContent{90.951}{390.496}{418.011}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Axelrod, J. (1962). The enzymatic N-methylation of serotonin and other amines.}
+  \ALIUSPlacedTextContent{126.951}{406.336}{280.614}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Pharmacology and Experimental Therapeutics, 138}
+  \ALIUSPlacedTextContent{407.692}{406.336}{52.808}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 28-33.}
+  \ALIUSPlacedTextContent{90.951}{427.936}{418.021}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Barker, S. A., Borjigin, J., Lomnicka, I., \& Strassman, R. (2013). LC/MS/MS analysis}
+  \ALIUSPlacedTextContent{126.951}{443.776}{381.990}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of the endogenous dimethyltryptamine hallucinogens, their precursors, and}
+  \ALIUSPlacedTextContent{126.951}{459.616}{320.102}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{major metabolites in rat pineal gland microdialysate.}
+  \ALIUSPlacedTextContent{455.356}{459.616}{53.629}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Biomedical}
+  \ALIUSPlacedTextContent{126.951}{475.456}{93.916}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Chromatography, 27}
+  \ALIUSPlacedTextContent{220.912}{475.456}{78.197}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(12), 1690-1700.}
+  \ALIUSPlacedTextContent{299.119}{475.456}{163.691}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1002/bmc.2981}
+  \ALIUSPlacedTextContent{90.951}{497.056}{418.086}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Browne, C. A., \& Lucki, I. (2013). Antidepressant effects of ketamine: mechanisms}
+  \ALIUSPlacedTextContent{126.951}{512.656}{235.124}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{underlying fast-acting novel antidepressants.}
+  \ALIUSPlacedTextContent{364.167}{512.656}{138.886}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in pharmacology, 4}
+  \ALIUSPlacedTextContent{503.064}{512.656}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{126.951}{528.496}{20.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{161.}
+  \ALIUSPlacedTextContent{147.230}{528.496}{202.448}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/110.3389/fphar.2013.00161}
+  \ALIUSPlacedTextContent{90.951}{550.336}{418.011}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bruchas, M. R., Land, B. B., \& Chavkin, C. (2010). The dynorphin/kappa opioid}
+  \ALIUSPlacedTextContent{126.951}{565.935}{352.644}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{system as a modulator of stress-induced and pro-addictive behaviors.}
+  \ALIUSPlacedTextContent{479.860}{565.935}{29.121}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain}
+  \ALIUSPlacedTextContent{126.951}{581.776}{61.055}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{research, 1314}
+  \ALIUSPlacedTextContent{188.010}{581.776}{38.077}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 44-55.}
+  \ALIUSPlacedTextContent{226.099}{581.776}{77.857}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/}
+  \ALIUSPlacedTextContent{307.006}{581.776}{147.226}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{10.1016/j.brainres.2009.08.062}
+  \ALIUSPlacedTextContent{90.951}{603.376}{418.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dean, J. G., Liu, T., Huff, S., Sheler, B., Barker, S. A., Strassman, R. J., Wang, M. M.}
+  \ALIUSPlacedTextContent{126.951}{619.216}{378.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\& Borjigin, J. (2019). Biosynthesis and extracellular concentrations of N, N-}
+  \ALIUSPlacedTextContent{126.951}{635.056}{259.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dimethyltryptamine (DMT) in Mammalian Brain.}
+  \ALIUSPlacedTextContent{387.352}{635.056}{90.668}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Scientific reports, 9}
+  \ALIUSPlacedTextContent{478.000}{635.056}{27.938}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1-}
+  \ALIUSPlacedTextContent{126.951}{650.896}{14.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{11.}
+  \ALIUSPlacedTextContent{141.185}{650.896}{214.572}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/s41598-019-45812-w}
+  \ALIUSPlacedTextContent{90.951}{672.496}{418.005}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Donahue, R. J., Landino, S. M., Golden, S. A., Carroll, F. I., Russo, S. J., \& Carlezon}
+  \ALIUSPlacedTextContent{126.951}{688.096}{382.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Jr, W. A. (2015). Effects of acute and chronic social defeat stress are}
+  \ALIUSPlacedTextContent{126.951}{703.935}{382.020}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{differentially mediated by the dynorphin/kappa-opioid receptor system.}
+  \ALIUSPlacedTextContent{126.951}{719.776}{139.193}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Behavioural pharmacology, 26}
+  \ALIUSPlacedTextContent{266.138}{719.776}{63.884}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(7 0 0), 654.}
+  \ALIUSPlacedTextContent{126.951}{735.616}{236.526}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1097/FBP.0000000000000155}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-217.911bp) rectangle ++(184.800bp,-0.720bp);
+  \fill[ALIUSC0000FF] (162.471bp,-408.951bp) rectangle ++(193.920bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-484.071bp) rectangle ++(203.040bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-569.031bp) rectangle ++(191.520bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-638.391bp) rectangle ++(246.960bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-691.671bp) rectangle ++(203.280bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{283.923}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Nichols \& Nichols – DMT in the Mammalian Brain}
+  \ALIUSPlacedTextContent{494.631}{36.329}{14.513}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{22}
+  \ALIUSPlacedTextContent{90.951}{72.976}{418.114}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Emmerson, P. J., Liu, M. R., Woods, J. H., \& Medzihradsky, F. (1994). Binding}
+  \ALIUSPlacedTextContent{126.951}{88.576}{381.909}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{affinity and selectivity of opioids at mu, delta and kappa receptors in}
+  \ALIUSPlacedTextContent{126.951}{104.416}{149.509}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{monkey brain membranes.}
+  \ALIUSPlacedTextContent{282.553}{104.416}{226.359}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Pharmacology and Experimental}
+  \ALIUSPlacedTextContent{126.951}{120.256}{78.190}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Therapeutics, 271}
+  \ALIUSPlacedTextContent{205.183}{120.256}{74.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 1630-1637.}
+  \ALIUSPlacedTextContent{90.951}{141.856}{418.010}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gouzoulis-Mayfrank, E., Heekeren, K., Neukirch, A., Stoll, M., Stock, C.,}
+  \ALIUSPlacedTextContent{126.951}{157.696}{382.032}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Obradovic, M., \& Kovar, K. A. (2005). Psychological effects of (S)-ketamine}
+  \ALIUSPlacedTextContent{126.951}{173.296}{382.023}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and N, N-dimethyltryptamine (DMT): a double-blind, cross-over study in}
+  \ALIUSPlacedTextContent{126.951}{189.136}{40.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{healthy}
+  \ALIUSPlacedTextContent{194.070}{189.136}{58.067}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{volunteers.}
+  \ALIUSPlacedTextContent{279.109}{189.136}{100.537}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Pharmacopsychiatry,}
+  \ALIUSPlacedTextContent{406.609}{189.136}{10.141}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{38}
+  \ALIUSPlacedTextContent{416.767}{189.136}{26.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(06),}
+  \ALIUSPlacedTextContent{469.934}{189.136}{39.049}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{301-311.}
+  \ALIUSPlacedTextContent{126.951}{204.976}{184.691}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1055/s-2005-916185}
+  \ALIUSPlacedTextContent{90.951}{226.576}{414.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Herman, K. S., Bowsher, R. R., \& Henry, D. P. (1985). Synthesis of N pi-}
+  \ALIUSPlacedTextContent{126.951}{242.416}{382.014}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{methylhistamine and N alpha-methylhistamine by purified rabbit lung}
+  \ALIUSPlacedTextContent{126.951}{258.016}{202.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{indolethylamine N-methyltransferase.}
+  \ALIUSPlacedTextContent{336.589}{258.016}{172.339}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Biological Chemistry,}
+  \ALIUSPlacedTextContent{126.951}{273.856}{15.853}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{260}
+  \ALIUSPlacedTextContent{142.823}{273.856}{89.611}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(22), 12336-12340.}
+  \ALIUSPlacedTextContent{90.951}{295.456}{388.748}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Knoll, A. T., \& Carlezon Jr, W. A. (2010). Dynorphin, stress, and depression.}
+  \ALIUSPlacedTextContent{479.860}{295.456}{29.121}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain}
+  \ALIUSPlacedTextContent{126.951}{311.296}{61.042}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{research, 1314}
+  \ALIUSPlacedTextContent{188.010}{311.296}{40.758}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 56-73.}
+  \ALIUSPlacedTextContent{90.951}{333.136}{418.009}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Li, D., Mabrouk, O. S., Liu, T., Tian, F., Xu, G., Rengifo, S., Choi, S. J., Mathur, A.,}
+  \ALIUSPlacedTextContent{126.951}{348.736}{382.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Crooks, C. P., Kennedy R. T., Wang, M. M., Ghanbari, H \& Borjigin, J.}
+  \ALIUSPlacedTextContent{126.951}{364.576}{381.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2015).  Asphyxia-activated corticocardiac signaling accelerates onset of}
+  \ALIUSPlacedTextContent{126.951}{380.176}{74.682}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{cardiac arrest.}
+  \ALIUSPlacedTextContent{202.165}{380.176}{245.741}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences, 112}
+  \ALIUSPlacedTextContent{447.862}{380.176}{58.076}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(16), E2073-}
+  \ALIUSPlacedTextContent{126.951}{396.016}{32.536}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{E2082.}
+  \ALIUSPlacedTextContent{162.502}{396.016}{193.713}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1073/pnas.1423936112}
+  \ALIUSPlacedTextContent{90.951}{417.856}{175.701}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nichols, D. E. (2016). Psychedelics.}
+  \ALIUSPlacedTextContent{266.718}{417.856}{130.365}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Pharmacological reviews, 68}
+  \ALIUSPlacedTextContent{397.092}{417.856}{61.804}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 264-355.}
+  \ALIUSPlacedTextContent{90.951}{439.456}{418.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nichols, D. E. (2018). N, N-dimethyltryptamine and the pineal gland: Separating}
+  \ALIUSPlacedTextContent{126.951}{455.296}{22.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{fact}
+  \ALIUSPlacedTextContent{161.962}{455.296}{27.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{from}
+  \ALIUSPlacedTextContent{202.689}{455.296}{32.057}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{myth.}
+  \ALIUSPlacedTextContent{247.572}{455.296}{37.057}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal}
+  \ALIUSPlacedTextContent{297.471}{455.296}{11.610}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of}
+  \ALIUSPlacedTextContent{321.922}{455.296}{101.724}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychopharmacology,}
+  \ALIUSPlacedTextContent{436.489}{455.296}{9.148}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{32}
+  \ALIUSPlacedTextContent{445.723}{455.296}{18.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1),}
+  \ALIUSPlacedTextContent{476.834}{455.296}{32.149}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{30-36.}
+  \ALIUSPlacedTextContent{126.951}{471.136}{202.947}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881117736919}
+  \ALIUSPlacedTextContent{90.951}{492.736}{418.091}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Roth, B. L., Baner, K., Westkaemper, R., Siebert, D., Rice, K. C., Steinberg, S., ... \&}
+  \ALIUSPlacedTextContent{126.951}{508.336}{381.873}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Rothman, R. B. (2002). Salvinorin A: a potent naturally occurring}
+  \ALIUSPlacedTextContent{214.623}{524.079}{6.830}{ALIUSC000000}{\ALIUSFontCambria}{12.960}{κ}
+  \ALIUSPlacedTextContent{126.951}{524.416}{83.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{nonnitrogenous}
+  \ALIUSPlacedTextContent{221.473}{524.416}{140.156}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{opioid selective agonist.}
+  \ALIUSPlacedTextContent{366.156}{524.416}{142.865}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National}
+  \ALIUSPlacedTextContent{126.951}{540.256}{45.731}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Academy}
+  \ALIUSPlacedTextContent{218.920}{540.256}{11.607}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of}
+  \ALIUSPlacedTextContent{276.766}{540.256}{43.017}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Sciences,}
+  \ALIUSPlacedTextContent{366.021}{540.256}{10.897}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{99}
+  \ALIUSPlacedTextContent{376.953}{540.256}{24.630}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(18),}
+  \ALIUSPlacedTextContent{447.816}{540.256}{61.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{11934-11939.}
+  \ALIUSPlacedTextContent{126.951}{556.096}{191.452}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1073/pnas.182234399}
+  \ALIUSPlacedTextContent{90.951}{577.695}{418.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Schmid, C. L., \& Bohn, L. M. (2010). Serotonin, but not N-methyltryptamines,}
+  \ALIUSPlacedTextContent{353.622}{593.439}{7.193}{ALIUSC000000}{\ALIUSFontCambria}{12.960}{β}
+  \ALIUSPlacedTextContent{126.951}{593.776}{223.836}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{activates the serotonin 2A receptor via a}
+  \ALIUSPlacedTextContent{360.839}{593.776}{148.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{-arrestin2/Src/Akt signaling}
+  \ALIUSPlacedTextContent{126.951}{609.616}{85.456}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{complex in vivo.}
+  \ALIUSPlacedTextContent{212.462}{609.616}{124.369}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neuroscience, 30}
+  \ALIUSPlacedTextContent{336.895}{609.616}{85.659}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(40), 13513-13524.}
+  \ALIUSPlacedTextContent{126.951}{625.456}{246.847}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/JNEUROSCI.1665-10.2010}
+  \ALIUSPlacedTextContent{90.951}{647.056}{418.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Van't Veer, A., \& Carlezon, W. A. (2013). Role of kappa-opioid receptors in stress}
+  \ALIUSPlacedTextContent{126.951}{662.896}{382.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and anxiety-related behavior. Psychopharmacology, 229(3), 435-452.}
+  \ALIUSPlacedTextContent{126.951}{678.736}{203.312}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00213-013-3195-5}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

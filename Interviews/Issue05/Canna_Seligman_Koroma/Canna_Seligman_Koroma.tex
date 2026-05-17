@@ -1,38 +1,975 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.0000bp,paperheight=842.0000bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{How culture breaks down the mind-body divide}
-\author{An interview with Maddalena Canna \& Rebecca Seligman by Matthieu Koroma}
-\date{ALIUS Bulletin 5}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC0000FF}{HTML}{0000FF}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/mfzk-ve81\par
-\textbf{Keywords:} Functional Neurological Disorder, trance, psychophysiology, interoception, interoceptive affordance, social science, medical ethics\par
-\section*{Abstract}
-In this interview, anthropologists Maddalena Canna and Rebecca Seligman explain their recent research agenda investigating how culture shapes the relationship between the body and mind. After having studied trance, they shift their focus to Functional Neurological Disorder (FND), an illness in which sensory or motor symptoms do not match any identified physiological causes. Their approach relies on a mix of anthropological and psychophysiological methods to unravel the mechanisms by which cultural expectations influence the perception and meaning of bodily sensations, a phenomenon that they call "interoceptive affordance". The cultural contextualization of psychophysiological processes puts into question our conceptions of the body and mind divide, and what we consider as normal or pathological. By emphasizing how social factors such as gender, race and medical categorization impact the symptomatology of FND, they highlight how anthropological research can lead to a more encompassing and humanized vision of treatment and care that replaces the category of patient with a participatory actor of the scientific investigation of conscious states and their modification.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin How culture breaks down the mind-body divide An interview with Maddalena Canna and Rebecca Seligman by Matthieu Koroma Maddalena Canna maddalena.canna@northwestern.edu Department of Anthropology and Global Health Program, Northwestern University, USA Rebecca Seligman r-seligman@northwestern.edu Department of Anthropology and Global Health Program, Northwestern University, USA Matthieu Koroma matthieu.koroma@uliege.be Physiology of Cognition lab, GIGA Consciousness, University of Liege, Belgium Cite as: Canna, M., Seligman, R. \& Koroma, M. (2021). How culture breaks down the mind-body divide. An interview with Maddalena Canna and Rebecca Seligman by Matthieu Koroma. ALIUS Bulletin, 5, 12-27, https://doi.org/10.34700/mfzk-ve81 Abstract In this interview, anthropologists Maddalena Canna and Rebecca Seligman explain their recent research agenda investigating how culture shapes the relationship between the body and mind. After having studied trance, they shift their focus to Functional Neurological Disorder (FND), an illness in which sensory or motor symptoms do not match any identified physiological causes. Their approach relies on a mix of anthropological and psychophysiological methods to unravel the mechanisms by which cultural expectations influence the perception and meaning of bodily sensations, a phenomenon that they call "interoceptive affordance". The cultural contextualization of psychophysiological processes puts into question our conceptions of the body and mind divide, and what we consider as normal or pathological. By emphasizing how social factors such as gender, race and medical categorization impact the symptomatology of FND, they highlight how anthropological research can lead to a more encompassing and humanized vision of treatment and care that replaces the category of patient with a participatory actor of the scientific investigation of conscious states and their modification. keywords: Functional Neurological Disorder, trance, psychophysiology, interoception, interoceptive affordance, social science, medical ethics Dr. Maddalena Canna is a Postdoctoral researcher at Northwestern University and Dr. Rebecca Seligman is an Associate professor of anthropology at Northwestern University. You are both part of the ALIUS research group Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 13 devoted to fostering interdisciplinary research about the diversity of consciousness. What types of conscious phenomena have you been primarily interested in? Could you illustrate how transcultural research has helped you better understand some aspects of consciousness? We both conducted our PhD research on spirit possession; Maddalena Canna on demonic possession in Nicaragua, and Rebecca Seligman on religious possession in Brazilian Candomble. Spirit possession has been frequently exoticized, as something exclusively bounded to localized systems of beliefs. Also, it has been medicalized and conflated with a wide array of psychiatric constructs, from hysteria to conversion disorder. We both reacted to these two lines of misconception-exoticization and pathologization-by deconstructing their underlying implicit assumptions. Both exoticization and pathologization of trance and possession rest on interrelated assumptions about the nature of consciousness and the relationship between mind and body. Possession-in whatever form-is a compelling example of how consciousness cannot be reduced to the mind-body binarism dominating Western lay models of health. Studying the complex physiological, emotional and cognitive underpinnings of possession across cultures requires a model of the interplay between mind and body not relying on an implicit assumption of their ontological separation. As anthropologists, we acknowledge that diverse societies elaborate diverse conceptions of consciousness. This diversity operates not only at the conceptual level, but also in shaping experiences. The subtle line between normal and abnormal, progressive and regressive, healthy and pathological is highly variable not only across societies, but also across different moments and spaces within the same society or individual. The way in which a state of consciousness is appraised (e.g., healthy vs. pathological) and reappraised shapes the core of its phenomenological experience. For example, a trance episode can be lived as pathological before religious initiation but healthy after it. The appraisal shapes the experience of trance, including its physiological components (e.g., hormonal and neuronal correlates) (Seligman 2018). This is why, as anthropologists, we put Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 14 in brackets the term "altered" when talking about states of consciousness. Transcultural research helps us better understand that the relationship between what is deemed normal and what is deemed altered is a matter of continuous negotiation, re-invention and transformation. Questioning the subtle line between normal and abnormal, relativizing the systems of normativity shared by any society, allows for a culturally attuned understanding of the diversity of consciousness. One of the foundations of anthropological practice is familiarizing the unknown and deconstructing the familiar. This paves the way for experimentation with the full range of potentialities of our own consciousness. In your collaboration, you propose to explore how body-mind relationships are shaped by cultural factors. You do so by studying the case of Functional Neurological Disorder (FND), also known as Conversion Disorder (CD), which consists in the presence of sensory or motor symptoms that do not match any identified physiological causes (Canna \& Seligman, 2020). For example, you introduce the case of Alice. Alice is a biomedical doctor who became anxious after being diagnosed with breast cancer. After her tumor was removed and no trace of propagation of cancer was found, she developed a series of symptoms such as an intense chest pain, arm paralysis and non-epileptic seizure despite her physiological state being diagnosed as normal. To account for these phenomena, you propose a framework in which bodily sensations depend on the embodiment of cultural models, explaining how expectations, for example Alice's medical knowledge about the spreading of cancer, are converted into the experience of somatic symptoms. You both have been studying non-pharmacological trance in your research (Canna, 2016; Seligman, 2010). Trance is a conscious state during which physiological alterations are typically induced without apparent physiological cause and occurs within a cultural context, for example a ritual practice (Seligman, 2014). Trance is commonly practiced for healing purposes by shamans (Winkelman, 1989). By working on the way people frame the meaning and live their somatic experiences, body-mind relationships can be The way in which a state of consciousness is appraised (e.g., healthy vs. pathological) and reappraised shapes the core of its phenomenological experience. " " Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 15 altered and allow therapeutic processes to happen. If FND and trance share some commonalities, do you think trance can be relevant in a way to help FND patients? Which continuities and discontinuities do you draw between these two phenomena? The parallel between FND and trance is fascinating. It is fascinating because there are some common processes involved both in trance and in FND. In particular, we think these phenomena may both involve processes associated with what is known as dissociation. FND have been removed from the spectrum of dissociative disorders in the last DSM-5, where they are now listed under the broader category of Somatic Symptom Disorders (APA 2013). Nevertheless, if we adopt a larger, non-biomedically bounded notion of what dissociation is, we can recognize important overlaps. Dissociation, as described cross-culturally by Seligman and Kirmayer, is the dis-integration of processes or components of the persona that are usually integrated (Seligman and Kirmayer, 2008). In this sense, FND symptoms and trance entail both dissociative components, as they rely on the temporary dis- integration of processes that are integrated in a state that is deemed normal. In both cases, the experience seems to be related to a shift in the allocation of attention or regulation of information that is available to the self- conscious mind. For example, during a non-epileptic seizure (a form of FND) a person can lose control of their limb movements, and still remain in a state of conscious awareness. Something similar happens during trance, when bodily movements are perceived to happen beyond personal control, even though the individual conscious awareness is still intact (Seligman 2014; Halloy 2015; Canna 2017). To return to the idea of what is normative and what is pathological, dissociation has typically been interpreted as pathological within the context of Euro-American psychiatry, and people living with FND may reject the connection as a result. But what our research shows is that the dis-integration of aspects of awareness takes place in non-distressing and non-pathological ways all the time, both outside and within Euro-American contexts. For this reason, we don't see any limitation on a potential therapeutic use of trance. Intervening on the dis-integration and re-integration of functions, trance Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 16 and dissociative states can be used for an optimization of the overall health of the persona through the regulation of awareness-for example of pain or other sensations. Such regulation can lead to shifts in response and modulation or even reshaping of neuro-physiological pathways underpinning FND. You argued that, in the case of Alice, her symptoms could arise from an enhanced sensitivity to her bodily signals along with a poor perceptual accuracy, explaining how benign bodily sensations can be amplified and misperceived as signs of the cancer spread (Canna \& Seligman, 2020). To account for this phenomenon, you coined the notion of "interoceptive affordance" describing how "cultural models and exposures create encultured bodies, influencing not only the meanings of bodily symptoms but the very way in which bodily sensations are themselves perceived" (Canna \& Seligman, p. 3). You propose to operationalize the study of interoceptive affordance by: i) characterizing the meaning associated with somatic sensations as expressed through metaphors referring to the bodily experiences ii) measuring the modifications of interoceptive abilities, e.g., the sensitivity and accuracy of heart-beat detection iii) investigating the role of social factors such as gender in shaping the subjective and objective features of mind-body relationships I would like to make the case for this approach by examining the case of anxiety. It has been established that anxiety is associated with altered interoceptive abilities (Paulus \& Stein, 2010). On one hand, it is characterized by an enhanced interoceptive sensitivity, measured at the subjective level by a better heart-beat detection and at the neural level by a stronger heart- Intervening on the dis-integration and re- integration of functions, trance and dissociative states can be used to for an optimization of the overall health of the persona through the regulation of awareness-for example of pain or other sensations. " " Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 17 evoked potential, the cerebral response to heart-beats (Domschke et al., 2010). Moreover, anxiety is more prevalent in women than men, in accordance with the clinical picture that 80\% of FND patients are women, suggesting the role of social factors (Pigott, 1999; Canna \& Seligman, 2020). Do you think that the concept of "interoceptive affordance" is helpful in understanding some aspects of anxiety? Is there a systematic link between anxiety and FND and what would be then the nature of this link? You further refer to Ian Hacking's (1995) concept of "biolooping" to capture the way that social meanings not only affect peoples' behaviors and how they conceptualize themselves, but also how such meanings affect their own bodily states (Hacking, 1995; Seligman, 2018; Canna \& Seligman, 2020). For example, anxiety is not just linked to an increased sensitivity to interoceptive signals, but it also actively alters bodily states since fear from panic attack can lead to an increased heart-beat and ultimately trigger panic attack itself. Such kinds of circular inferential mechanisms have been described in other types of conscious states such as schizophrenia, whereby delusions are created by selective sampling, amplification and reinterpretation of evidence at hand results not just in the misperception of the external world, but also the creation of an alternate worldview (Leptourgos et al., 2017). The notion of inference has been extended to interoception (Seth, 2013). Would you endorse the view that FND could rely on a similar type of circular interoceptive inference? Importantly, schizophrenia is a condition which is differently appraised across cultures (Lin \& Kleinman, 1988). This notably results in considering the apparition of hallucinations either as being symptomatic or not, and to vary in frequency and content depending on cultural contexts (Lari et al., 2014). How do you expect FND and its symptomatology to vary across cultures? We do think culture acts at the level of appraisal-and re-appraisal-in shaping and reinforcing loops of interoceptive inferences. For example, a sensation can be appraised as a symptom and trigger cascades of pathogenic reactions because of the negative meaning associated (Hay 2010, Canna and Seligman 2020). We learn to be afraid of some internal cues, and this red flag associated with specific sensations triggers emotional and physiological reactions, leading to it being experienced as disruptive. The parallel with schizophrenia is interesting. As studied by Luhrmann et al. (2012), some mental events like hearing voices (or auditory hallucination, from a Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 18 pathologizing perspective) can be associated with different moral meanings across cultures. Voice-hearing can be appraised differently, from a stigmatizing sign of "being crazy" in the US, to a positive help received from gods or dead ancestors in other contexts (Ghana and India) (Luhrmann et al. 2015). Processes of socially shaped appraisal (also called cultural scaffolding, or social kindling) are not only a cultural gloss, or a superficial layer of experience, but they are at the very core of how an event is experienced and integrated in individual lives. In this sense, we expect that culture impacts on all key aspects of FND experience, namely the three broad axes that we identified as (a) interiorized cultural models of illness, (b) social stressors, (c) and stigma (Canna and Seligman, 2020). Anxiety plays a key role in FND, even though it is indispensable to avoid the risk of conflation. People with FND have been burdened by medical dismissal for a long time, a dismissal that often came with the implicit moralizing accusation of "paying too much attention" to the symptoms or being overly anxious. Even the current DSM definition of Somatic Symptom Disorder reports the ambiguous criterion of "excessive thinking or worrying about a symptom". A notion of "excessive worries" paves the way for further medical dismissal and the reproduction of the trite stereotype that "It is all in their heads", implicitly entailing a moral responsibility in the reproduction of the symptom. We take a strong stance against the tendency to conflate FND with a by-product of anxiety. If anxiety often plays a role in FND, it is not its necessary nor sufficient cause, nor can it be modeled as functioning in the exact same way. That said, if we go back to the idea that appraisal is a key, socially scaffolded or kindled aspect of interoceptive inference, then negative appraisals of Processes of socially shaped appraisal (also called cultural scaffolding, or social kindling) are not only a cultural gloss, or a superficial layer of experience, but they are at the very core of how an event is experienced and integrated in individual lives " " Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 19 sensations can reinforce interoceptive attention to particular cues as well as increasing anxiety. We refer to the subsequent loops as "bio-looping" because the mechanisms are not only cognitive and affective but can also entail physiological responses that become activated or reinforced through such loops-for example stress hormones and inflammatory processes. In light of such processes, it would be especially productive to consider how gender- specific forms of anxiety-for example the hyper-focus on the control of feminine bodies common in Euro-American societies-may concentrate patterns of sensitization among specific pockets of the population and contribute to the huge gender disparity in FND. You introduce the notion of "self-scape" to describe the set of possibilities that a given society offers to individuals to realize themselves. This allows us to explain how personal history as well as cultural factors such as gender or race shape the models available to FND patients to express and cope with their disorder. Notably, you describe psychogenic non-epileptic seizures (PNES), a form of symptom occurring during FND, "as a complex form of communication, which is not merely a constellation of symptoms distributed across the mind-body divide, but also a complex language for soliciting interactional collaboration in coping" (Canna \& Seligman, 2020, p4). What do you think PNES can tell us about the cultural models available to FND patients to express their symptoms? How do you think gender and race shape not only predispositions but also the way FND patients might express or relate to their bodily symptoms? During the course of our study, we decided to abandon the notion of PNES, for a more neutral NES, in order to avoid the implicit assumption that these seizures are mostly psychogenic. We do think that psychological factors are at play in all FND, but not as the only cause, and not more than in any other health condition. We strongly endorse a non-binary model of mind and body, hence reducing a condition to psychogenic-only or physical-only etiology would be theoretically and pragmatically problematic. Because of this co- constitutive nature of mental and physical aspects of health, the main intersectional variables of sex/gender and race/ethnicity are always at play. Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 20 Concerning gender, we discussed the issue of the hyper-focalization on the control of feminine bodies in the previous answer. We expect that this and other gender constructions, such as gendered models of caregiving, will play important roles in FND. Men may also interiorize gendered models, such as the model of the "tough guy" typical of many masculinities where vulnerability and dependency are morally despised, and this model may interfere with their coping mechanisms and increase risk of FND (Canna, preliminary evidence 2021). Also, race and ethnicity work at multiple levels. In our preliminary study we analyze a case where institutional racism in the US made a FND patient feel treated like a "crackhead" by the healthcare providers because of her skin color (Canna and Seligman, 2020). Medical mistrust generated by structural racism aggravates patterns of dysfunctional interoception that, in turn, may reinforce FND. When we are talking about cultural difference, we should at least disentangle between two main axes: i) cultural diversity as the availability of multiple models to appraise and reappraise symptoms, a process that can be negative, positive or neutral. For example, in Brazilian Candomble individuals who experience loss of control over their bodies and consciousness learn to reappraise and shape the experience as opportunities to connect with gods (Canna and Seligman, 2020). ii) racial and ethnic variables as different positional identities in a single society, often entailing power differentials. In the US, where we are conducting our study, a long history of medical mistrust affects in particular Latinx and African American populations (Sewell, 2015) and this is just one among the manifold variables that count in the modulation of FND. We strongly endorse a non-binary model of mind and body, hence reducing a condition to psychogenic-only or physical-only etiology would be theoretically and pragmatically problematic. " " Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 21 You argued that "although the three dimensions that we presented-the embodiment of cultural meaning, the conversion of chronic stress and the impact of stigma-are particularly evident in PNES, (...) the range of their applicability can be extended to other Functional Neurological Disorders, and other Somatic Symptom Disorders as well" (Canna and Seligman, 2020, p.7). In FND, the conversion of cultural models into symptoms is rendered clear- cut from the fact that the physiological state by definition does not match the symptoms expressed. Do you think these dimensions play a role in a larger spectrum of diseases in which psychological factors play a role in the apparition and expression of somatic symptoms, such as psychosomatic disorders? What features of the patient and environment might be important to measure to study the interactions between somatic symptoms and cultural variables? Coming back to trance, there are cases in which people are possessed and their experience is attributed to the presence of some external force controlling their body and mind. Do you know about any reports of changes in interoceptive abilities in this case? More generally, the contribution of mind- body relationship to consciousness is drawing more and more interest, inasmuch as the integration of the visceral signals into cognitive activity has been proposed as a foundation for the subjective component of conscious experience (Nikolova et al., 2021; Park \& Tallon-Baudry, 2014). How do you think that the study of interoception and its cultural shaping can be a promising avenue of research for the study of the diversity of conscious states? The cultural shaping of interoception is without any doubt a promising avenue for further research not only on FND, but on all the somatic dimensions of any other condition. As mentioned previously, we endorse a strongly non-binary model of health and human experience. What we call "mind" and "body" in Western societies are not separated entities in many other cultures. Hence, we don't see any structural reason-beyond conventional disciplinary boundaries-to consider the physical and the mental as two separate realms. One of the main reasons for our interest in FND is that it is a compelling illustration of the artificiality of the mind/body divide. In the case of FND, the mind/body divide comes to its most nefarious consequences: inadequate healthcare and a long history of mistreatment. Theoretically, this stems from an incapability to conceive of health in holistic Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 22 terms, by taking into account the multiple entanglements of different physiological and psychological processes. Through a cross-cultural perspective, we can question the artificiality of this divide and aim at offering a more encompassing-and humanized-vision of treatment and care. A great illustration of this is our work on trance and possession, in which mind, body and self can be seen to influence one another in powerful ways. In Rebecca Seligman's work on spirit possession, she found that certain interoceptive cues signaled the onset of trance, therefore spirit mediums were particularly tuned into these sensations and typically shifted consciousness away from self-awareness and bodiliness, to a different state. In Maddalena Canna's work a comparable tuning happens when the possession is deemed dangerous-or demonic in spiritual terms. Complex sets of interoceptive cues signal the onset of a state of consciousness where the reconfiguration of perceptive, cognitive and bodily processes is experienced as disruptive (Seligman 2014, 2018; Canna 2017, 2021). Something similar is likely to be happening in FND, but within an entirely different context of meaning-one in which the connection between mind, body, and self is not embraced. Thus, different contexts of meaning can radically shift interoception and the experience of somatic symptoms. These ideas are supported by some interesting recent neuroscience research on the "Material Me" (Seth 2013), which suggests that interoceptive functions-or interoceptive affordances, as we call them-can be at the origin of the most primary sense of self. By closely monitoring this process-in collaboration with the patients as active participants in our investigation- we hope to pave the way not only for a better understanding of FND, but most broadly for a more encompassing model of human health. Through a cross-cultural perspective, we can question the artificiality of this divide and aim at offering a more encompassing-and humanized- vision of treatment and care " " Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 23 The stigma surrounding mental diseases and its internalization by patients plays a primary role in the severity of symptoms, adherence to treatment and the outcome of the disease (Livingston \& Boyd, 2010). In line with this consideration, you argue that "effective treatments of FND must act as "moral laboratories" where individuals' selves are reshaped through innovative social experiments that serve to modify moral appraisals of their symptoms. In the current context of the quality-of-care crisis, effective therapies must be based on the co-construction of a common ground of meaning between patient and therapist." (Canna \& Seligman, 2020, p.5). More generally, I would like to frame this type of approach as part of a bigger movement of "action research", where scientific research is thought as integrated within and accompanying social action. How do you think anthropological research can be incorporated into medical contexts to integrate medical treatments skillfully and appropriately with morality, bioethics, and personal preferences? Anthropological research is action, at many levels. First of all, ethnography, which is the staple of anthropological methodology, is a method based on establishing a qualitative, in-depth exchange with our participants. Maddalena Canna likes to say that, as anthropologists, we don't study people, we study with people. When we conduct our usual 2-3-hour long sessions of dialogue with the participants (also called the one-on-one in-depth interviews) many things happen. Some participants may experience their symptoms, e.g., functional paralysis and blindness, during the interview, monitor them with the researcher in real time, and sometimes identify meaningful connections to what is being discussed in the interview. This is just an example of how qualitative methodology is generative by itself. This verbal and somatic dialogue not only fosters self-reflexivity in the participants, but also offers the empathy and participatory care that many patients can't find in the current healthcare system. In this sense, we aim at offering a first, immediate response to the current quality-of-care-crisis described by many patients, who feel that the healthcare system is more and more compartmentalized and dehumanized (Marcum 2008, Oldani 2014, Eck 2020). Providing the participant with a context for expressing their distress in their own words and being recognized for the specificity of their Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 24 experience can impact on further coping, if not healing. During her ethnography of seizures related to demonic possession in Nicaragua, Maddalena Canna used drawing as a means to establish a non-verbal dialogue with sufferers. Many of them experienced the processes of drawing their demons as a healthy expulsion of pathogenic meanings, a form of assisted self- healing practice (Canna 2017). Even if we won't go as far as considering ethnographic dialogue as a healing process in and of itself, we do consider that the process of recognition intrinsic in qualitative research is likely to have a positive impact on the overall wellbeing of the participants. Also, our methodology includes a practice of self-journaling, providing each participant with a digital platform to monitor symptoms and comment on them in real-time through a phone application (mEMA, mobile Ecological Momentary Assessment). This provides an additional occasion for a participatory analysis of what daily living with FND entails. Our participants are extremely well-informed and aware of the scientific literature, as well as aware of the social representations and misrepresentations circulating on FND. FND are still a mostly unknown and frequently misrecognized condition. Participants/patients are eager to work on furthering awareness and global education about FND, by contributing not as objects, but as active participants of our study. In the long term, trends are emerging in the treatment of FND towards a multi-disciplinary approach, bringing together not only psychologists and neurologists, but also social scientists and workers, towards increasingly integrated care (Bael and al., in press). Our project is a pioneer in this direction, as it is the first federal project on FND lead by social scientists in the US. In addition, we strongly believe that anthropological knowledge can be translational, allowing it to be applied in different kinds of practice. While translation can be challenging, one of things that we excel at in anthropology is understanding the different stakes Anthropological research is action, (...) we don't study people, we study with people. " " Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 25 and stakeholders, social and political dynamics in different contexts. This kind of insight can help us translate the findings of this work on FND in terms that will be meaningful to clinicians. In so doing, we hope to pave the way for a more multi-faceted, multi-disciplinary approach to treatment and care for people living with FND. References Canna, M. (2016). "Dis-lui qu'il n'existe pas". La propagation de la transe grisi siknis chez les Miskitos du Nicaragua. Doctoral thesis. Canna, M. (2017). Modeliser les Configurations d' Etats Alteres de Conscience. Intellectica, 2017/1, 67 : 269-299. Canna, M. (2019). La Contagion Visionnaire. Cahiers d'Anthropologie Sociale 17, David Dupuis \& Maddalena Canna eds., Paris, L'Herne, 2019. Canna, M., \& Seligman, R. (2020). Dealing with the unknown. Functional neurological disorder (FND) and the conversion of cultural meaning. Social Science \& Medicine, 246, 112725. https://doi.org/10.1016/j.socscimed.2019.112725 Canna, M. (2021). Mapping Bodily Empires. Fyssen Foundation Annales 2021. Canna, M. (In Press) Visceral Visions. Rethinking Embodiment and Desire in Global Mental Health. Culture, Medicine and Psychiatry. Domschke, K., Stevens, S., Pfleiderer, B., \& Gerlach, A. L. (2010). Interoceptive sensitivity in anxiety and anxiety disorders: An overview and integration of neurobiological findings. Clinical Psychology Review, 30(1), 1-11. https://doi.org/10.1016/j.cpr.2009.08.008 Hacking, I. (1995). Rewriting the Soul: Multiple Personality and the Sciences of Memory. Princeton University Press. https://doi.org/10.1515/9781400821686 Halloy. (2012). Gods in the Flesh: Learning Emotions in the Xango Possession Cult (Brazil). Ethnos, 77(2), 177-202. https://doi.org/10.1080/00141844.2011.586465 Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 26 Hay. (2008). Reading Sensations: Understanding the Process of Distinguishing `Fine' from `Sick'. Transcultural Psychiatry, 45(2), 198-229. https://doi.org/10.1177/1363461508089765 Lari, F., Luhrmann, T. M., Bell, V., Christian, W. A., Deshpande, S., Fernyhough, C., Jenkins, J., \& Woods, A. (2014). Culture and Hallucinations: Overview and Future Directions. Schizophrenia Bulletin, 40(Suppl\_4), S213-S220. https://doi.org/10.1093/schbul/sbu012 Leptourgos, P., Deneve, S., \& Jardri, R. (2017). Can circular inference relate the neuropathological and behavioral aspects of schizophrenia? Current Opinion in Neurobiology, 46, 154-161. https://doi.org/10.1016/j.conb.2017.08.012 Lin, K.-M., \& Kleinman, A. M. (1988). Psychopathology and Clinical Course of Schizophrenia: A Cross-Cultural Perspective. Schizophrenia Bulletin, 14(4), 555- 567. https://doi.org/10.1093/schbul/14.4.555 Livingston, J. D., \& Boyd, J. E. (2010). Correlates and consequences of internalized stigma for people living with mental illness: A systematic review and meta-analysis. Social Science \& Medicine, 71(12), 2150-2161. https://doi.org/10.1016/j.socscimed.2010.09.030 Luhrmann, Nusbaum, H., \& Thisted, R. (2010). The Absorption Hypothesis: Learning to Hear God in Evangelical Christianity. American Anthropologist, 112(1), 66-78. https://doi.org/10.1111/j.1548-1433.2009.01197.x Luhrmann, Padmavati, R., Tharoor, H., \& Osei, A. (2015). Hearing Voices in Different Cultures: A Social Kindling Hypothesis. Topics in Cognitive Science, 7(4), 646-663. https://doi.org/10.1111/tops.12158 Marcum, J.A., 2008. Humanizing Modern Medicine. Springer, Netherlands. https://doi.org/10.1093/obo/9780195396577- 0216. Nikolova, N., Waade, P. T., Friston, K. J., \& Allen, M. (2021). What Might Interoceptive Inference Reveal about Consciousness? Review of Philosophy and Psychology. https://doi.org/10.1007/s13164-021-00580-3 Oldani, M. (2014). Deep pharma: Psychiatry, anthropology, and pharmaceutical detox. Culture, Medicine, and Psychiatry, 38(2), 255-278. https://doi.org/10.1007/s11013-014-9369-8 Park, H.-D., \& Tallon-Baudry, C. (2014). The neural subjective frame: From bodily signals to perceptual consciousness. Philosophical Transactions of the Royal Maddalena Canna and Rebecca Seligman - How culture breaks down the mind-body divide ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 27 Society B: Biological Sciences, 369(1641), 20130208. https://doi.org/10.1098/rstb.2013.0208 Paulus, M. P., \& Stein, M. B. (2010). Interoception in anxiety and depression. Brain Structure and Function, 214(5-6), 451-463. https://doi.org/10.1007/s00429-010- 0258-9 Pigott, T. A. (1999). Gender differences in the epidemiology and treatment of anxiety disorders. The Journal of Clinical Psychiatry, 60 Suppl 18, 4-15. Seligman, R. (2010). The Unmaking and Making of Self: Embodied Suffering and Mind-Body Healing in Brazilian Candomble: UNMAKING AND MAKING THE SELF. Ethos, 38(3), 297-320. https://doi.org/10.1111/j.1548-1352.2010.01146.x Seligman, R. (2014). Looking Inside: Biological Mechanisms and Embodiment in Candomble Trance and Possession. In R. Seligman, Possessing Spirits and Healing Selves (pp. 111-134). Palgrave Macmillan US. https://doi.org/10.1057/9781137409607\_4 Seligman, R. (2018). "Bio-looping" and the Psychophysiological in Religious Belief and Practice: Mechanisms of Embodiment in Candomble Trance and Possession. In M. Meloni, J. Cromby, D. Fitzgerald, \& S. Lloyd (Eds.), The Palgrave Handbook of Biology and Society (pp. 417-439). Palgrave Macmillan UK. https://doi.org/10.1057/978-1-137-52879-7\_18 Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self. Trends in Cognitive Sciences, 17(11), 565-573. https://doi.org/10.1016/j.tics.2013.09.007 Sewell. (2015). Disaggregating ethnoracial disparities in physician trust. Social Science Research, 54, 1-20. https://doi.org/10.1016/j.ssresearch.2015.06.020 Winkelman, M. (1989). A Cross-cultural Study of Shamanistic Healers. Journal of Psychoactive Drugs, 21(1), 17-24. https://doi.org/10.1080/02791072.1989.10472139\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC1F8135] (364.800bp,-167.040bp) rectangle ++(143.520bp,-0.240bp);
+  \fill[ALIUSC1F8135] (364.800bp,-237.840bp) rectangle ++(116.880bp,-0.240bp);
+  \fill[ALIUSC1F8135] (364.800bp,-305.040bp) rectangle ++(107.760bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (359.040bp,-144.000bp) rectangle ++(0.240bp,-96.000bp);
+  \fill[ALIUSC0000FF] (192.960bp,-300.960bp) rectangle ++(161.040bp,-0.480bp);
+  \fill[ALIUSCBFBFBF] (359.040bp,-240.000bp) rectangle ++(0.240bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (359.040bp,-242.160bp) rectangle ++(0.240bp,-96.240bp);
+  \ALIUSPlacedTextContent{90.000}{72.019}{365.775}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{How culture breaks down the mind-body}
+  \ALIUSPlacedTextContent{90.000}{96.019}{52.848}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{divide}
+  \ALIUSPlacedTextContent{364.800}{143.904}{92.491}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Maddalena Canna}
+  \ALIUSPlacedTextContent{364.800}{157.079}{143.489}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{maddalena.canna@northwestern.edu}
+  \ALIUSPlacedTextContent{214.230}{163.206}{95.485}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Maddalena}
+  \ALIUSPlacedTextContent{87.840}{166.049}{126.427}{ALIUSC000000}{\ALIUSFontLatoLight}{16.080}{An interview with}
+  \ALIUSPlacedTextContent{364.800}{167.879}{115.729}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Department of Anthropology}
+  \ALIUSPlacedTextContent{364.800}{178.679}{112.067}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{and Global Health Program,}
+  \ALIUSPlacedTextContent{87.840}{186.007}{239.781}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{364.800}{189.479}{122.682}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Northwestern University, USA}
+  \ALIUSPlacedTextContent{364.800}{214.704}{92.480}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Rebecca Seligman}
+  \ALIUSPlacedTextContent{87.840}{224.328}{119.346}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Matthieu Koroma}
+  \ALIUSPlacedTextContent{364.800}{227.879}{116.850}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{r-seligman@northwestern.edu}
+  \ALIUSPlacedTextContent{364.800}{238.679}{115.729}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Department of Anthropology}
+  \ALIUSPlacedTextContent{364.800}{249.479}{112.067}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{and Global Health Program,}
+  \ALIUSPlacedTextContent{87.840}{254.051}{268.792}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Cite as: Canna, M., Seligman, R. \& Koroma, M. (2021). How}
+  \ALIUSPlacedTextContent{364.800}{260.279}{122.682}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Northwestern University, USA}
+  \ALIUSPlacedTextContent{87.840}{266.051}{268.796}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{culture breaks down the mind-body divide. An interview with}
+  \ALIUSPlacedTextContent{87.840}{278.051}{268.792}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Maddalena Canna and Rebecca Seligman by Matthieu Koroma.}
+  \ALIUSPlacedTextContent{364.800}{281.904}{88.206}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Matthieu Koroma}
+  \ALIUSPlacedTextContent{87.840}{290.051}{58.052}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{145.844}{290.051}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{150.668}{290.051}{5.846}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{5}
+  \ALIUSPlacedTextContent{156.468}{290.051}{36.655}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{, 12-27,}
+  \ALIUSPlacedTextContent{193.015}{290.051}{160.925}{ALIUSC0000FF}{\ALIUSFontLatoLight}{10.080}{https://doi.org/10.34700/mfzk-ve81}
+  \ALIUSPlacedTextContent{364.800}{295.079}{107.740}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{matthieu.koroma@uliege.be}
+  \ALIUSPlacedTextContent{364.800}{305.879}{110.514}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Physiology of Cognition lab,}
+  \ALIUSPlacedTextContent{364.800}{316.679}{88.024}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{GIGA Consciousness,}
+  \ALIUSPlacedTextContent{364.800}{327.479}{108.490}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{University of Liege, Belgium}
+  \ALIUSPlacedTextContent{90.000}{372.181}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
+  \ALIUSPlacedTextContent{90.000}{400.716}{418.273}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In this interview, anthropologists Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{90.000}{415.116}{418.274}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{explain their recent research agenda investigating how culture shapes the}
+  \ALIUSPlacedTextContent{90.000}{429.516}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{relationship between the body and mind. After having studied trance, they shift}
+  \ALIUSPlacedTextContent{90.000}{443.916}{418.265}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{their focus to Functional Neurological Disorder (FND), an illness in which sensory}
+  \ALIUSPlacedTextContent{90.000}{458.316}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{or motor symptoms do not match any identified physiological causes. Their}
+  \ALIUSPlacedTextContent{90.000}{472.716}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{approach relies on a mix of anthropological and psychophysiological methods to}
+  \ALIUSPlacedTextContent{90.000}{487.116}{418.267}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{unravel the mechanisms by which cultural expectations influence the perception}
+  \ALIUSPlacedTextContent{90.000}{501.516}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{and meaning of bodily sensations, a phenomenon that they call "interoceptive}
+  \ALIUSPlacedTextContent{90.000}{515.916}{418.274}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{affordance". The cultural contextualization of psychophysiological processes puts}
+  \ALIUSPlacedTextContent{90.000}{530.316}{418.265}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{into question our conceptions of the body and mind divide, and what we consider}
+  \ALIUSPlacedTextContent{90.000}{544.716}{418.265}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{as normal or pathological. By emphasizing how social factors such as gender, race}
+  \ALIUSPlacedTextContent{90.000}{559.116}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{and medical categorization impact the symptomatology of FND, they highlight}
+  \ALIUSPlacedTextContent{90.000}{573.516}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{how anthropological research can lead to a more encompassing and humanized}
+  \ALIUSPlacedTextContent{90.000}{587.916}{418.264}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{vision of treatment and care that replaces the category of patient with a}
+  \ALIUSPlacedTextContent{90.000}{602.316}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{participatory actor of the scientific investigation of conscious states and their}
+  \ALIUSPlacedTextContent{90.000}{616.716}{70.000}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{modification.}
+  \ALIUSPlacedTextContent{90.000}{645.516}{47.340}{ALIUSC000000}{\ALIUSFontLatoItalic}{12.000}{keywords}
+  \ALIUSPlacedTextContent{137.339}{645.516}{369.988}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{: Functional Neurological Disorder, trance, psychophysiology, interoception,}
+  \ALIUSPlacedTextContent{90.000}{659.916}{269.062}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{interoceptive affordance, social science, medical ethics}
+  \ALIUSPlacedTextContent{90.000}{703.903}{418.436}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Dr. Maddalena Canna is a Postdoctoral researcher at Northwestern University}
+  \ALIUSPlacedTextContent{90.000}{721.183}{418.288}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and Dr. Rebecca Seligman is an Associate professor of anthropology at}
+  \ALIUSPlacedTextContent{90.000}{738.463}{418.492}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Northwestern University. You are both part of the ALIUS research group}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{496.320}{35.472}{8.652}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{13}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.663}{418.414}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{devoted to fostering interdisciplinary research about the diversity of}
+  \ALIUSPlacedTextContent{90.000}{102.943}{418.472}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consciousness. What types of conscious phenomena have you been primarily}
+  \ALIUSPlacedTextContent{90.000}{120.223}{418.468}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interested in? Could you illustrate how transcultural research has helped you}
+  \ALIUSPlacedTextContent{90.000}{137.263}{277.208}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{better understand some aspects of consciousness?}
+  \ALIUSPlacedTextContent{90.000}{166.418}{418.198}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We both conducted our PhD research on spirit possession; Maddalena Canna}
+  \ALIUSPlacedTextContent{90.000}{186.098}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on demonic possession in Nicaragua, and Rebecca Seligman on religious}
+  \ALIUSPlacedTextContent{90.000}{205.538}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possession in Brazilian Candomblé. Spirit possession has been frequently}
+  \ALIUSPlacedTextContent{90.000}{224.978}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{exoticized, as something exclusively bounded to localized systems of beliefs.}
+  \ALIUSPlacedTextContent{90.000}{244.418}{418.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Also, it has been medicalized and conflated with a wide array of psychiatric}
+  \ALIUSPlacedTextContent{90.000}{264.098}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{constructs, from hysteria to conversion disorder. We both reacted to these}
+  \ALIUSPlacedTextContent{90.000}{283.538}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{two lines of misconception—exoticization and pathologization—by}
+  \ALIUSPlacedTextContent{90.000}{302.978}{418.198}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{deconstructing their underlying implicit assumptions. Both exoticization}
+  \ALIUSPlacedTextContent{90.000}{322.418}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and pathologization of trance and possession rest on interrelated}
+  \ALIUSPlacedTextContent{90.000}{342.098}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{assumptions about the nature of consciousness and the relationship between}
+  \ALIUSPlacedTextContent{90.000}{361.538}{95.403}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind and body.}
+  \ALIUSPlacedTextContent{90.000}{392.978}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Possession—in whatever form—is a compelling example of how}
+  \ALIUSPlacedTextContent{90.000}{412.418}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness cannot be reduced to the mind-body binarism dominating}
+  \ALIUSPlacedTextContent{90.000}{431.858}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Western lay models of health. Studying the complex physiological, emotional}
+  \ALIUSPlacedTextContent{90.000}{451.538}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and cognitive underpinnings of possession across cultures requires a model}
+  \ALIUSPlacedTextContent{90.000}{470.978}{418.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the interplay between mind and body not relying on an implicit}
+  \ALIUSPlacedTextContent{90.000}{490.418}{418.176}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{assumption of their ontological separation. As anthropologists, we}
+  \ALIUSPlacedTextContent{90.000}{509.858}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{acknowledge that diverse societies elaborate diverse conceptions of}
+  \ALIUSPlacedTextContent{90.000}{529.538}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness. This diversity operates not only at the conceptual level, but}
+  \ALIUSPlacedTextContent{90.000}{548.978}{418.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{also in shaping experiences. The subtle line between normal and abnormal,}
+  \ALIUSPlacedTextContent{90.000}{568.418}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{progressive and regressive, healthy and pathological is highly variable not}
+  \ALIUSPlacedTextContent{90.000}{587.858}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{only across societies, but also across different moments and spaces within the}
+  \ALIUSPlacedTextContent{90.000}{607.538}{150.954}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{same society or individual.}
+  \ALIUSPlacedTextContent{90.000}{638.978}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The way in which a state of consciousness is appraised (e.g., healthy vs.}
+  \ALIUSPlacedTextContent{90.000}{658.418}{418.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pathological) and reappraised shapes the core of its phenomenological}
+  \ALIUSPlacedTextContent{90.000}{677.858}{384.944}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience. For example, a trance episode can be lived as pathological}
+  \ALIUSPlacedTextContent{475.321}{677.858}{29.643}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{before}
+  \ALIUSPlacedTextContent{90.000}{697.538}{172.917}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{religious initiation but healthy}
+  \ALIUSPlacedTextContent{263.850}{697.538}{26.693}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{after}
+  \ALIUSPlacedTextContent{291.451}{697.538}{216.823}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it. The appraisal shapes the experience}
+  \ALIUSPlacedTextContent{90.000}{716.978}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of trance, including its physiological components (e.g., hormonal and}
+  \ALIUSPlacedTextContent{90.000}{736.418}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuronal correlates) (Seligman 2018). This is why, as anthropologists, we put}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.600}{35.472}{9.396}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{14}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{107.040}{91.488}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.360}{103.157}{324.161}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The way in which a state of consciousness is}
+  \ALIUSPlacedTextContent{135.360}{121.157}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{appraised (e.g., healthy vs. pathological) and}
+  \ALIUSPlacedTextContent{135.360}{139.157}{79.701}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{reappraised}
+  \ALIUSPlacedTextContent{235.188}{139.157}{48.493}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{shapes}
+  \ALIUSPlacedTextContent{304.051}{139.157}{25.471}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the}
+  \ALIUSPlacedTextContent{349.650}{139.157}{32.671}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{core}
+  \ALIUSPlacedTextContent{402.691}{139.157}{17.545}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of}
+  \ALIUSPlacedTextContent{440.606}{139.157}{18.985}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{its}
+  \ALIUSPlacedTextContent{469.680}{147.648}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.360}{157.157}{196.034}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{phenomenological experience.}
+  \ALIUSPlacedTextContent{90.000}{190.658}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in brackets the term "altered" when talking about states of consciousness.}
+  \ALIUSPlacedTextContent{90.000}{210.098}{418.137}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Transcultural research helps us better understand that the relationship}
+  \ALIUSPlacedTextContent{90.000}{229.538}{418.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{between what is deemed normal and what is deemed altered is a matter of}
+  \ALIUSPlacedTextContent{90.000}{249.218}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{continuous negotiation, re-invention and transformation. Questioning the}
+  \ALIUSPlacedTextContent{90.000}{268.658}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subtle line between normal and abnormal, relativizing the systems of}
+  \ALIUSPlacedTextContent{90.000}{288.098}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{normativity shared by any society, allows for a culturally attuned}
+  \ALIUSPlacedTextContent{90.000}{307.538}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understanding of the diversity of consciousness. One of the foundations of}
+  \ALIUSPlacedTextContent{90.000}{327.218}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{anthropological practice is familiarizing the unknown and deconstructing}
+  \ALIUSPlacedTextContent{90.000}{346.658}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the familiar. This paves the way for experimentation with the full range of}
+  \ALIUSPlacedTextContent{90.000}{366.098}{219.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{potentialities of our own consciousness.}
+  \ALIUSPlacedTextContent{90.000}{397.663}{418.396}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In your collaboration, you propose to explore how body-mind relationships}
+  \ALIUSPlacedTextContent{90.000}{414.943}{418.227}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{are shaped by cultural factors. You do so by studying the case of Functional}
+  \ALIUSPlacedTextContent{90.000}{432.223}{418.439}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Neurological Disorder (FND), also known as Conversion Disorder (CD), which}
+  \ALIUSPlacedTextContent{90.000}{449.503}{418.347}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consists in the presence of sensory or motor symptoms that do not match any}
+  \ALIUSPlacedTextContent{90.000}{466.783}{418.507}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{identified physiological causes (Canna \& Seligman, 2020). For example, you}
+  \ALIUSPlacedTextContent{90.000}{484.063}{418.427}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{introduce the case of Alice. Alice is a biomedical doctor who became anxious}
+  \ALIUSPlacedTextContent{90.000}{501.343}{418.402}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{after being diagnosed with breast cancer. After her tumor was removed and}
+  \ALIUSPlacedTextContent{90.000}{518.623}{418.405}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{no trace of propagation of cancer was found, she developed a series of}
+  \ALIUSPlacedTextContent{90.000}{535.663}{418.382}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{symptoms such as an intense chest pain, arm paralysis and non-epileptic}
+  \ALIUSPlacedTextContent{90.000}{552.943}{418.347}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{seizure despite her physiological state being diagnosed as normal. To account}
+  \ALIUSPlacedTextContent{90.000}{570.223}{418.465}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{for these phenomena, you propose a framework in which bodily sensations}
+  \ALIUSPlacedTextContent{90.000}{587.503}{418.320}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{depend on the embodiment of cultural models, explaining how expectations,}
+  \ALIUSPlacedTextContent{90.000}{604.783}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{for example Alice's medical knowledge about the spreading of cancer, are}
+  \ALIUSPlacedTextContent{90.000}{622.063}{290.164}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{converted into the experience of somatic symptoms.}
+  \ALIUSPlacedTextContent{90.000}{651.343}{418.379}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You both have been studying non-pharmacological trance in your research}
+  \ALIUSPlacedTextContent{90.000}{668.623}{418.179}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Canna, 2016; Seligman, 2010). Trance is a conscious state during which}
+  \ALIUSPlacedTextContent{90.000}{685.663}{418.307}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{physiological alterations are typically induced without apparent physiological}
+  \ALIUSPlacedTextContent{90.000}{702.943}{418.388}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{cause and occurs within a cultural context, for example a ritual practice}
+  \ALIUSPlacedTextContent{90.000}{720.223}{418.344}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Seligman, 2014). Trance is commonly practiced for healing purposes by}
+  \ALIUSPlacedTextContent{90.000}{737.503}{418.442}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{shamans (Winkelman, 1989). By working on the way people frame the}
+  \ALIUSPlacedTextContent{90.000}{754.783}{418.393}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{meaning and live their somatic experiences, body-mind relationships can be}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{496.080}{35.472}{8.892}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{15}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.663}{418.365}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{altered and allow therapeutic processes to happen. If FND and trance share}
+  \ALIUSPlacedTextContent{90.000}{102.943}{418.410}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{some commonalities, do you think trance can be relevant in a way to help}
+  \ALIUSPlacedTextContent{90.000}{120.223}{418.290}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{FND patients? Which continuities and discontinuities do you draw between}
+  \ALIUSPlacedTextContent{90.000}{137.263}{129.668}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{these two phenomena?}
+  \ALIUSPlacedTextContent{90.000}{166.418}{418.147}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The parallel between FND and trance is fascinating. It is fascinating because}
+  \ALIUSPlacedTextContent{90.000}{186.098}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there are some common processes involved both in trance and in FND. In}
+  \ALIUSPlacedTextContent{90.000}{205.538}{418.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particular, we think these phenomena may both involve processes associated}
+  \ALIUSPlacedTextContent{90.000}{224.978}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with what is known as dissociation. FND have been removed from the}
+  \ALIUSPlacedTextContent{90.000}{244.418}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{spectrum of dissociative disorders in the last DSM-5, where they are now}
+  \ALIUSPlacedTextContent{90.000}{264.098}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{listed under the broader category of Somatic Symptom Disorders (APA 2013).}
+  \ALIUSPlacedTextContent{90.000}{283.538}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Nevertheless, if we adopt a larger, non-biomedically bounded notion of what}
+  \ALIUSPlacedTextContent{90.000}{302.978}{295.865}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dissociation is, we can recognize important overlaps.}
+  \ALIUSPlacedTextContent{90.000}{334.418}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dissociation, as described cross-culturally by Seligman and Kirmayer, is the}
+  \ALIUSPlacedTextContent{90.000}{354.098}{418.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dis-integration of processes or components of the persona that are usually}
+  \ALIUSPlacedTextContent{90.000}{373.538}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{integrated (Seligman and Kirmayer, 2008). In this sense, FND symptoms and}
+  \ALIUSPlacedTextContent{90.000}{392.978}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{trance entail both dissociative components, as they rely on the temporary dis-}
+  \ALIUSPlacedTextContent{90.000}{412.418}{418.223}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{integration of processes that are integrated in a state that is deemed normal.}
+  \ALIUSPlacedTextContent{90.000}{431.858}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In both cases, the experience seems to be related to a shift in the allocation}
+  \ALIUSPlacedTextContent{90.000}{451.538}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of attention or regulation of information that is available to the self-}
+  \ALIUSPlacedTextContent{90.000}{470.978}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious mind. For example, during a non-epileptic seizure (a form of FND)}
+  \ALIUSPlacedTextContent{90.000}{490.418}{418.187}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a person can lose control of their limb movements, and still remain in a state}
+  \ALIUSPlacedTextContent{90.000}{509.858}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of conscious awareness. Something similar happens during trance, when}
+  \ALIUSPlacedTextContent{90.000}{529.538}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{bodily movements are perceived to happen beyond personal control, even}
+  \ALIUSPlacedTextContent{90.000}{548.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{though the individual conscious awareness is still intact (Seligman 2014;}
+  \ALIUSPlacedTextContent{90.000}{568.418}{144.542}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Halloy 2015; Canna 2017).}
+  \ALIUSPlacedTextContent{90.000}{599.858}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To return to the idea of what is normative and what is pathological,}
+  \ALIUSPlacedTextContent{90.000}{619.538}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dissociation has typically been interpreted as pathological within the context}
+  \ALIUSPlacedTextContent{90.000}{638.978}{418.148}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of Euro-American psychiatry, and people living with FND may reject the}
+  \ALIUSPlacedTextContent{90.000}{658.418}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{connection as a result. But what our research shows is that the dis-integration}
+  \ALIUSPlacedTextContent{90.000}{677.858}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of aspects of awareness takes place in non-distressing and non-pathological}
+  \ALIUSPlacedTextContent{90.000}{697.538}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ways all the time, both outside and within Euro-American contexts. For this}
+  \ALIUSPlacedTextContent{90.000}{716.978}{418.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reason, we don't see any limitation on a potential therapeutic use of trance.}
+  \ALIUSPlacedTextContent{90.000}{736.418}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Intervening on the dis-integration and re-integration of functions, trance}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.360}{35.472}{9.564}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{16}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.538}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and dissociative states can be used for an optimization of the overall health}
+  \ALIUSPlacedTextContent{90.000}{104.978}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the persona through the regulation of awareness—for example of pain or}
+  \ALIUSPlacedTextContent{90.000}{124.418}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other sensations. Such regulation can lead to shifts in response and}
+  \ALIUSPlacedTextContent{90.000}{144.098}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modulation or even reshaping of neuro-physiological pathways underpinning}
+  \ALIUSPlacedTextContent{90.000}{163.538}{36.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{FND.}
+  \ALIUSPlacedTextContent{104.400}{198.528}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{132.480}{209.717}{320.234}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Intervening on the dis-integration and re-}
+  \ALIUSPlacedTextContent{132.480}{227.717}{324.303}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{integration of functions, trance and dissociative}
+  \ALIUSPlacedTextContent{132.480}{245.717}{324.427}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{states can be used to for an optimization of the}
+  \ALIUSPlacedTextContent{132.480}{263.717}{324.363}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{overall health of the persona through the}
+  \ALIUSPlacedTextContent{132.480}{281.717}{324.289}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{regulation of awareness—for example of pain or}
+  \ALIUSPlacedTextContent{466.800}{289.488}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{132.480}{299.717}{110.113}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{other sensations.}
+  \ALIUSPlacedTextContent{90.000}{349.663}{418.335}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You argued that, in the case of Alice, her symptoms could arise from an}
+  \ALIUSPlacedTextContent{90.000}{366.943}{418.464}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{enhanced sensitivity to her bodily signals along with a poor perceptual}
+  \ALIUSPlacedTextContent{90.000}{384.223}{418.267}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{accuracy, explaining how benign bodily sensations can be amplified and}
+  \ALIUSPlacedTextContent{90.000}{401.503}{418.340}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{misperceived as signs of the cancer spread (Canna \& Seligman, 2020). To}
+  \ALIUSPlacedTextContent{90.000}{418.783}{418.374}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{account for this phenomenon, you coined the notion of "interoceptive}
+  \ALIUSPlacedTextContent{90.000}{436.063}{418.286}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{affordance" describing how "cultural models and exposures create encultured}
+  \ALIUSPlacedTextContent{90.000}{453.343}{418.382}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{bodies, influencing not only the meanings of bodily symptoms but the very}
+  \ALIUSPlacedTextContent{90.000}{470.623}{418.379}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{way in which bodily sensations are themselves perceived" (Canna \& Seligman,}
+  \ALIUSPlacedTextContent{90.000}{487.663}{418.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{p. 3). You propose to operationalize the study of interoceptive affordance by:}
+  \ALIUSPlacedTextContent{126.000}{516.943}{382.376}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{i) characterizing the meaning associated with somatic sensations as}
+  \ALIUSPlacedTextContent{126.000}{534.223}{382.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{expressed through  metaphors referring to the bodily experiences}
+  \ALIUSPlacedTextContent{126.000}{568.783}{329.139}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{ii) measuring the modifications of interoceptive abilities,}
+  \ALIUSPlacedTextContent{459.487}{568.783}{20.053}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{e.g.,}
+  \ALIUSPlacedTextContent{479.537}{568.783}{28.855}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{the}
+  \ALIUSPlacedTextContent{126.000}{586.063}{263.420}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{sensitivity and accuracy of heart-beat detection}
+  \ALIUSPlacedTextContent{126.000}{620.623}{382.393}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{iii) investigating the role of social factors such as gender in shaping the}
+  \ALIUSPlacedTextContent{126.000}{637.663}{331.900}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{subjective and objective features of mind-body relationships}
+  \ALIUSPlacedTextContent{90.000}{672.223}{418.440}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{I would like to make the case for this approach by examining the case of}
+  \ALIUSPlacedTextContent{90.000}{689.503}{418.225}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{anxiety. It has been established that anxiety is associated with altered}
+  \ALIUSPlacedTextContent{90.000}{706.783}{418.388}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interoceptive abilities (Paulus \& Stein, 2010). On one hand, it is characterized}
+  \ALIUSPlacedTextContent{90.000}{724.063}{418.340}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{by an enhanced interoceptive sensitivity, measured at the subjective level by}
+  \ALIUSPlacedTextContent{90.000}{741.343}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{a better heart-beat detection and at the neural level by a stronger heart-}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.840}{35.472}{9.132}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{17}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.663}{418.399}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{evoked potential, the cerebral response to heart-beats (Domschke et al.,}
+  \ALIUSPlacedTextContent{90.000}{102.943}{418.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{2010). Moreover, anxiety is more prevalent in women than men, in}
+  \ALIUSPlacedTextContent{90.000}{120.223}{418.287}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{accordance with the clinical picture that 80\% of FND patients are women,}
+  \ALIUSPlacedTextContent{90.000}{137.263}{418.360}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{suggesting the role of social factors (Pigott, 1999; Canna \& Seligman, 2020).}
+  \ALIUSPlacedTextContent{90.000}{154.543}{418.351}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Do you think that the concept of "interoceptive affordance" is helpful in}
+  \ALIUSPlacedTextContent{90.000}{171.823}{418.276}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{understanding some aspects of anxiety? Is there a systematic link between}
+  \ALIUSPlacedTextContent{90.000}{189.103}{356.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{anxiety and FND and what would be then the nature of this link?}
+  \ALIUSPlacedTextContent{90.000}{218.383}{418.322}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You further refer to Ian Hacking's (1995) concept of "biolooping" to capture}
+  \ALIUSPlacedTextContent{90.000}{235.663}{418.480}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{the way that social meanings not only affect peoples' behaviors and how they}
+  \ALIUSPlacedTextContent{90.000}{252.943}{418.569}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{conceptualize themselves, but also how such meanings affect their own bodily}
+  \ALIUSPlacedTextContent{90.000}{270.223}{418.347}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{states (Hacking, 1995; Seligman, 2018; Canna \& Seligman, 2020). For}
+  \ALIUSPlacedTextContent{90.000}{287.263}{418.398}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{example, anxiety is not just linked to an increased sensitivity to interoceptive}
+  \ALIUSPlacedTextContent{90.000}{304.543}{418.400}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{signals, but it also actively alters bodily states since fear from panic attack can}
+  \ALIUSPlacedTextContent{90.000}{321.823}{418.310}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{lead to an increased heart-beat and ultimately trigger panic attack itself. Such}
+  \ALIUSPlacedTextContent{90.000}{339.103}{418.350}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{kinds of circular inferential mechanisms have been described in other types of}
+  \ALIUSPlacedTextContent{90.000}{356.383}{418.522}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{conscious states such as schizophrenia, whereby delusions are created by}
+  \ALIUSPlacedTextContent{90.000}{373.663}{418.390}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{selective sampling, amplification and reinterpretation of evidence at hand}
+  \ALIUSPlacedTextContent{90.000}{390.943}{418.414}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{results not just in the misperception of the external world, but also the}
+  \ALIUSPlacedTextContent{90.000}{408.223}{418.469}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{creation of an alternate worldview (Leptourgos et al., 2017). The notion of}
+  \ALIUSPlacedTextContent{90.000}{425.263}{418.459}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{inference has been extended to interoception (Seth, 2013). Would you}
+  \ALIUSPlacedTextContent{90.000}{442.543}{418.439}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{endorse the view that FND could rely on a similar type of circular}
+  \ALIUSPlacedTextContent{90.000}{459.823}{137.398}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interoceptive inference?}
+  \ALIUSPlacedTextContent{90.000}{489.103}{418.256}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Importantly, schizophrenia is a condition which is differently appraised across}
+  \ALIUSPlacedTextContent{90.000}{506.383}{418.547}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{cultures (Lin \& Kleinman, 1988). This notably results in considering the}
+  \ALIUSPlacedTextContent{90.000}{523.663}{418.276}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{apparition of hallucinations either as being symptomatic or not, and to vary in}
+  \ALIUSPlacedTextContent{90.000}{540.943}{418.437}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{frequency and content depending on cultural contexts (Larøi et al., 2014).}
+  \ALIUSPlacedTextContent{90.000}{558.223}{404.743}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{How do you expect FND and its symptomatology to vary across cultures?}
+  \ALIUSPlacedTextContent{90.000}{587.138}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We do think culture acts at the level of appraisal—and re-appraisal—in}
+  \ALIUSPlacedTextContent{90.000}{606.818}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{shaping and reinforcing loops of interoceptive inferences. For example, a}
+  \ALIUSPlacedTextContent{90.000}{626.258}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sensation can be appraised as a symptom and trigger cascades of pathogenic}
+  \ALIUSPlacedTextContent{90.000}{645.698}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reactions because of the negative meaning associated (Hay 2010, Canna and}
+  \ALIUSPlacedTextContent{90.000}{665.138}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Seligman 2020). We learn to be afraid of some internal cues, and this red flag}
+  \ALIUSPlacedTextContent{90.000}{684.818}{418.223}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{associated with specific sensations triggers emotional and physiological}
+  \ALIUSPlacedTextContent{90.000}{704.258}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reactions, leading to it being experienced as disruptive. The parallel with}
+  \ALIUSPlacedTextContent{90.000}{723.698}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{schizophrenia is interesting. As studied by Luhrmann et al. (2012), some}
+  \ALIUSPlacedTextContent{90.000}{743.138}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mental events like hearing voices (or auditory hallucination, from a}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.120}{35.472}{9.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{18}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.538}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pathologizing perspective) can be associated with different moral meanings}
+  \ALIUSPlacedTextContent{90.000}{104.978}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{across cultures. Voice-hearing can be appraised differently, from a}
+  \ALIUSPlacedTextContent{90.000}{124.418}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stigmatizing sign of "being crazy" in the US, to a positive help received from}
+  \ALIUSPlacedTextContent{90.000}{144.098}{418.073}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{gods or dead ancestors in other contexts (Ghana and India) (Luhrmann et al.}
+  \ALIUSPlacedTextContent{90.000}{163.538}{418.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2015). Processes of socially shaped appraisal (also called cultural scaffolding,}
+  \ALIUSPlacedTextContent{90.000}{182.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or social kindling) are not only a cultural gloss, or a superficial layer of}
+  \ALIUSPlacedTextContent{90.000}{202.418}{418.349}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience, but they are at the very core of how an event is experienced and}
+  \ALIUSPlacedTextContent{90.000}{222.098}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{integrated in individual lives. In this sense, we expect that culture impacts on}
+  \ALIUSPlacedTextContent{90.000}{241.538}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{all key aspects of FND experience, namely the three broad axes that we}
+  \ALIUSPlacedTextContent{90.000}{260.978}{418.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{identified as (a) interiorized cultural models of illness, (b) social stressors, (c)}
+  \ALIUSPlacedTextContent{90.000}{280.418}{224.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and stigma (Canna and Seligman, 2020).}
+  \ALIUSPlacedTextContent{90.000}{311.858}{418.129}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Anxiety plays a key role in FND, even though it is indispensable to avoid the}
+  \ALIUSPlacedTextContent{90.000}{331.538}{418.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{risk of conflation. People with FND have been burdened by medical dismissal}
+  \ALIUSPlacedTextContent{90.000}{350.978}{418.367}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for a long time, a dismissal that often came with the implicit moralizing}
+  \ALIUSPlacedTextContent{90.000}{370.418}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{accusation of "paying too much attention" to the symptoms or being overly}
+  \ALIUSPlacedTextContent{90.000}{389.858}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{anxious. Even the current DSM definition of Somatic Symptom Disorder}
+  \ALIUSPlacedTextContent{90.000}{409.538}{418.300}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reports the ambiguous criterion of "excessive thinking or worrying about a}
+  \ALIUSPlacedTextContent{90.000}{428.978}{418.359}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{symptom". A notion of "excessive worries" paves the way for further medical}
+  \ALIUSPlacedTextContent{90.000}{448.418}{418.158}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dismissal and the reproduction of the trite stereotype that "It is all in their}
+  \ALIUSPlacedTextContent{90.000}{467.858}{418.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{heads", implicitly entailing a moral responsibility in the reproduction of the}
+  \ALIUSPlacedTextContent{90.000}{487.538}{418.380}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{symptom.  We take a strong stance against the tendency to conflate FND}
+  \ALIUSPlacedTextContent{90.000}{506.978}{418.152}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with a by-product of anxiety. If anxiety often plays a role in FND, it is not its}
+  \ALIUSPlacedTextContent{90.000}{526.418}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{necessary nor sufficient cause, nor can it be modeled as functioning in the}
+  \ALIUSPlacedTextContent{90.000}{545.858}{92.394}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{exact same way.}
+  \ALIUSPlacedTextContent{90.000}{577.538}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{That said, if we go back to the idea that appraisal is a key, socially scaffolded}
+  \ALIUSPlacedTextContent{90.000}{596.978}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or kindled aspect of interoceptive inference, then negative appraisals of}
+  \ALIUSPlacedTextContent{108.240}{639.888}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.320}{649.396}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Processes of socially shaped appraisal (also called}
+  \ALIUSPlacedTextContent{136.320}{667.396}{324.200}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{cultural scaffolding, or social kindling) are not only}
+  \ALIUSPlacedTextContent{136.320}{685.396}{324.180}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{a cultural gloss, or a superficial layer of experience,}
+  \ALIUSPlacedTextContent{136.320}{703.396}{324.336}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{but they are at the very core of how an event is}
+  \ALIUSPlacedTextContent{470.880}{711.648}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.320}{721.396}{290.329}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experienced and integrated in individual lives}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.360}{35.472}{9.564}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{19}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.538}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sensations can reinforce interoceptive attention to particular cues as well as}
+  \ALIUSPlacedTextContent{90.000}{104.978}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{increasing anxiety. We refer to the subsequent loops as "bio-looping" because}
+  \ALIUSPlacedTextContent{90.000}{124.418}{418.392}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the mechanisms are not only cognitive and affective but can also entail}
+  \ALIUSPlacedTextContent{90.000}{144.098}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{physiological responses that become activated or reinforced through such}
+  \ALIUSPlacedTextContent{90.000}{163.538}{418.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{loops—for example stress hormones and inflammatory processes.  In light of}
+  \ALIUSPlacedTextContent{90.000}{182.978}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{such processes, it would be especially productive to consider how gender-}
+  \ALIUSPlacedTextContent{90.000}{202.418}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{specific forms of anxiety—for example the hyper-focus on the control of}
+  \ALIUSPlacedTextContent{90.000}{222.098}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feminine bodies common in Euro-American societies—may concentrate}
+  \ALIUSPlacedTextContent{90.000}{241.538}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patterns of sensitization among specific pockets of the population and}
+  \ALIUSPlacedTextContent{90.000}{260.978}{265.150}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contribute to the huge gender disparity in FND.}
+  \ALIUSPlacedTextContent{90.000}{292.543}{418.357}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You introduce the notion of "self-scape" to describe the set of possibilities}
+  \ALIUSPlacedTextContent{90.000}{309.823}{418.404}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{that a given society offers to individuals to realize themselves. This allows us}
+  \ALIUSPlacedTextContent{90.000}{327.103}{418.408}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{to explain how personal history as well as cultural factors such as gender or}
+  \ALIUSPlacedTextContent{90.000}{344.383}{418.394}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{race shape the models available to FND patients to express and cope with}
+  \ALIUSPlacedTextContent{90.000}{361.663}{418.369}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{their disorder. Notably, you describe psychogenic non-epileptic seizures}
+  \ALIUSPlacedTextContent{90.000}{378.943}{418.422}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(PNES), a form of symptom occurring during FND, "as a complex form of}
+  \ALIUSPlacedTextContent{90.000}{395.983}{418.527}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{communication, which is not merely a constellation of symptoms distributed}
+  \ALIUSPlacedTextContent{90.000}{413.263}{418.311}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{across the mind-body divide, but also a complex language for soliciting}
+  \ALIUSPlacedTextContent{90.000}{430.543}{418.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interactional collaboration in coping" (Canna \& Seligman, 2020, p4). What do}
+  \ALIUSPlacedTextContent{90.000}{447.823}{418.547}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{you think PNES can tell us about the cultural models available to FND patients}
+  \ALIUSPlacedTextContent{90.000}{465.103}{418.355}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{to express their symptoms? How do you think gender and race shape not only}
+  \ALIUSPlacedTextContent{90.000}{482.383}{418.370}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{predispositions but also the way FND patients might express or relate to their}
+  \ALIUSPlacedTextContent{90.000}{499.663}{106.817}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{bodily symptoms?}
+  \ALIUSPlacedTextContent{90.000}{528.818}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{During the course of our study, we decided to abandon the notion of PNES,}
+  \ALIUSPlacedTextContent{90.000}{548.258}{418.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for a more neutral NES, in order to avoid the implicit assumption that these}
+  \ALIUSPlacedTextContent{90.000}{567.698}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{seizures are mostly psychogenic. We do think that psychological factors are}
+  \ALIUSPlacedTextContent{90.000}{587.138}{418.335}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{at play in all FND, but not as the only cause, and not more than in any other}
+  \ALIUSPlacedTextContent{90.000}{606.818}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{health condition. We strongly endorse a non-binary model of mind and body,}
+  \ALIUSPlacedTextContent{90.000}{626.258}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hence reducing a condition to psychogenic-only or physical-only etiology}
+  \ALIUSPlacedTextContent{90.000}{645.698}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{would be theoretically and pragmatically problematic. Because of this co-}
+  \ALIUSPlacedTextContent{90.000}{665.138}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{constitutive nature of mental and physical aspects of health, the main}
+  \ALIUSPlacedTextContent{90.000}{684.818}{412.875}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{intersectional variables of sex/gender and race/ethnicity are always at play.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{494.400}{35.472}{10.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{20}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.538}{418.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Concerning gender, we discussed the issue of the hyper-focalization on the}
+  \ALIUSPlacedTextContent{90.000}{104.978}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{control of feminine bodies in the previous answer. We expect that this and}
+  \ALIUSPlacedTextContent{90.000}{124.418}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other gender constructions, such as gendered models of caregiving, will play}
+  \ALIUSPlacedTextContent{90.000}{144.098}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{important roles in FND. Men may also interiorize gendered models, such as}
+  \ALIUSPlacedTextContent{90.000}{163.538}{418.374}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the model of the "tough guy" typical of many masculinities where}
+  \ALIUSPlacedTextContent{90.000}{182.978}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vulnerability and dependency are morally despised, and this model may}
+  \ALIUSPlacedTextContent{90.000}{202.418}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interfere with their coping mechanisms and increase risk of FND (Canna,}
+  \ALIUSPlacedTextContent{90.000}{222.098}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{preliminary evidence 2021). Also, race and ethnicity work at multiple levels.}
+  \ALIUSPlacedTextContent{90.000}{241.538}{418.371}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In our preliminary study we analyze a case where institutional racism in the}
+  \ALIUSPlacedTextContent{90.000}{260.978}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{US made a FND patient feel treated like a "crackhead" by the healthcare}
+  \ALIUSPlacedTextContent{90.000}{280.418}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{providers because of her skin color (Canna and Seligman, 2020). Medical}
+  \ALIUSPlacedTextContent{90.000}{299.858}{418.149}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mistrust generated by structural racism aggravates patterns of dysfunctional}
+  \ALIUSPlacedTextContent{90.000}{319.538}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interoception that, in turn, may reinforce FND. When we are talking about}
+  \ALIUSPlacedTextContent{90.000}{338.978}{407.442}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cultural difference, we should at least disentangle between two main axes:}
+  \ALIUSPlacedTextContent{126.000}{370.418}{382.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{i) cultural diversity as the availability of multiple models to appraise}
+  \ALIUSPlacedTextContent{126.000}{389.858}{382.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and reappraise symptoms, a process that can be negative, positive or}
+  \ALIUSPlacedTextContent{126.000}{409.538}{382.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neutral. For example, in Brazilian Candomblé individuals who}
+  \ALIUSPlacedTextContent{126.000}{428.978}{382.220}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience loss of control over their bodies and consciousness learn to}
+  \ALIUSPlacedTextContent{126.000}{448.418}{382.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reappraise and shape the experience as opportunities to connect with}
+  \ALIUSPlacedTextContent{126.000}{467.858}{186.444}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{gods (Canna and Seligman, 2020).}
+  \ALIUSPlacedTextContent{126.000}{506.978}{382.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ii) racial and ethnic variables as different positional identities in a}
+  \ALIUSPlacedTextContent{126.000}{526.418}{382.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{single society, often entailing power differentials. In the US, where we}
+  \ALIUSPlacedTextContent{126.000}{545.858}{382.096}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{are conducting our study, a long history of medical mistrust affects in}
+  \ALIUSPlacedTextContent{126.000}{565.538}{382.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particular Latinx and African American populations (Sewell, 2015)}
+  \ALIUSPlacedTextContent{126.000}{584.978}{382.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and this is just one among the manifold variables that count in the}
+  \ALIUSPlacedTextContent{126.000}{604.418}{120.505}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modulation of FND.}
+  \ALIUSPlacedTextContent{105.840}{651.648}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.320}{663.797}{324.288}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{We strongly endorse a non-binary model of mind}
+  \ALIUSPlacedTextContent{136.320}{681.797}{324.232}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{and body, hence reducing a condition to}
+  \ALIUSPlacedTextContent{136.320}{699.797}{324.299}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{psychogenic-only or physical-only etiology would}
+  \ALIUSPlacedTextContent{470.880}{713.568}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.320}{717.797}{300.504}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{be theoretically and pragmatically problematic.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 10
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{496.080}{35.472}{8.808}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{21}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.663}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You argued that "although the three dimensions that we presented—the}
+  \ALIUSPlacedTextContent{90.000}{102.943}{418.394}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{embodiment of cultural meaning, the conversion of chronic stress and the}
+  \ALIUSPlacedTextContent{90.000}{120.223}{418.260}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{impact of stigma—are particularly evident in PNES, (…) the range of their}
+  \ALIUSPlacedTextContent{90.000}{137.263}{418.256}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{applicability can be extended to other Functional Neurological Disorders, and}
+  \ALIUSPlacedTextContent{90.000}{154.543}{418.364}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{other Somatic Symptom Disorders as well" (Canna and Seligman, 2020, p.7).}
+  \ALIUSPlacedTextContent{90.000}{171.823}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In FND, the conversion of cultural models into symptoms is rendered clear-}
+  \ALIUSPlacedTextContent{90.000}{189.103}{418.520}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{cut from the fact that the physiological state by definition does not match the}
+  \ALIUSPlacedTextContent{90.000}{206.383}{122.636}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{symptoms expressed.}
+  \ALIUSPlacedTextContent{90.000}{235.663}{418.466}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Do you think these dimensions play a role in a larger spectrum of diseases in}
+  \ALIUSPlacedTextContent{90.000}{252.943}{418.411}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{which psychological factors play a role in the apparition and expression of}
+  \ALIUSPlacedTextContent{90.000}{270.223}{418.320}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{somatic symptoms, such as psychosomatic disorders? What features of the}
+  \ALIUSPlacedTextContent{90.000}{287.263}{418.322}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{patient and environment might be important to measure to study the}
+  \ALIUSPlacedTextContent{90.000}{304.543}{346.425}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interactions between somatic symptoms and cultural variables?}
+  \ALIUSPlacedTextContent{90.000}{333.823}{418.404}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Coming back to trance, there are cases in which people are possessed and}
+  \ALIUSPlacedTextContent{90.000}{351.103}{418.373}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{their experience is attributed to the presence of some external force}
+  \ALIUSPlacedTextContent{90.000}{368.383}{418.518}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{controlling their body and mind. Do you know about any reports of changes}
+  \ALIUSPlacedTextContent{90.000}{385.663}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{in interoceptive abilities in this case? More generally, the contribution of mind-}
+  \ALIUSPlacedTextContent{90.000}{402.943}{418.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{body relationship to consciousness is drawing more and more interest,}
+  \ALIUSPlacedTextContent{90.000}{420.223}{418.475}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{inasmuch as the integration of the visceral signals into cognitive activity has}
+  \ALIUSPlacedTextContent{90.000}{437.263}{418.404}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{been proposed as a foundation for the subjective component of conscious}
+  \ALIUSPlacedTextContent{90.000}{454.543}{418.375}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{experience (Nikolova et al., 2021; Park \& Tallon-Baudry, 2014). How do you}
+  \ALIUSPlacedTextContent{90.000}{471.823}{418.373}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{think that the study of interoception and its cultural shaping can be a}
+  \ALIUSPlacedTextContent{90.000}{489.103}{418.377}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{promising avenue of research for the study of the diversity of conscious}
+  \ALIUSPlacedTextContent{90.000}{506.383}{40.594}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{states?}
+  \ALIUSPlacedTextContent{90.000}{535.538}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The cultural shaping of interoception is without any doubt a promising}
+  \ALIUSPlacedTextContent{90.000}{554.978}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{avenue for further research not only on FND, but on all the somatic}
+  \ALIUSPlacedTextContent{90.000}{574.418}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dimensions of any other condition. As mentioned previously, we endorse a}
+  \ALIUSPlacedTextContent{90.000}{594.098}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{strongly non-binary model of health and human experience. What we call}
+  \ALIUSPlacedTextContent{90.000}{613.538}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"mind" and "body" in Western societies are not separated entities in many}
+  \ALIUSPlacedTextContent{90.000}{632.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other cultures. Hence, we don't see any structural reason—beyond}
+  \ALIUSPlacedTextContent{90.000}{652.418}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conventional disciplinary boundaries—to consider the physical and the}
+  \ALIUSPlacedTextContent{90.000}{672.098}{418.298}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mental as two separate realms. One of the main reasons for our interest in}
+  \ALIUSPlacedTextContent{90.000}{691.538}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{FND is that it is a compelling illustration of the artificiality of the mind/body}
+  \ALIUSPlacedTextContent{90.000}{710.978}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{divide. In the case of FND, the mind/body divide comes to its most nefarious}
+  \ALIUSPlacedTextContent{90.000}{730.418}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consequences: inadequate healthcare and a long history of mistreatment.}
+  \ALIUSPlacedTextContent{90.000}{749.858}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Theoretically, this stems from an incapability to conceive of health in holistic}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 11
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.360}{35.472}{9.648}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{22}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.538}{418.283}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{terms, by taking into account the multiple entanglements of different}
+  \ALIUSPlacedTextContent{90.000}{104.978}{418.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{physiological and psychological processes. Through a cross-cultural}
+  \ALIUSPlacedTextContent{90.000}{124.418}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perspective, we can question the artificiality of this divide and aim at offering}
+  \ALIUSPlacedTextContent{90.000}{144.098}{386.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a more encompassing—and humanized—vision of treatment and care.}
+  \ALIUSPlacedTextContent{90.000}{175.538}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{A great illustration of this is our work on trance and possession, in which}
+  \ALIUSPlacedTextContent{90.000}{194.978}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind, body and self can be seen to influence one another in powerful ways.}
+  \ALIUSPlacedTextContent{90.000}{214.418}{418.336}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In Rebecca Seligman's work on spirit possession, she found that certain}
+  \ALIUSPlacedTextContent{90.000}{234.098}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interoceptive cues signaled the onset of trance, therefore spirit mediums were}
+  \ALIUSPlacedTextContent{90.000}{253.538}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particularly tuned into these sensations and typically shifted consciousness}
+  \ALIUSPlacedTextContent{90.000}{272.978}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{away from self-awareness and bodiliness, to a different state. In Maddalena}
+  \ALIUSPlacedTextContent{90.000}{292.418}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Canna's work a comparable tuning happens when the possession is deemed}
+  \ALIUSPlacedTextContent{90.000}{311.858}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dangerous—or demonic in spiritual terms. Complex sets of interoceptive cues}
+  \ALIUSPlacedTextContent{90.000}{331.538}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{signal the onset of a state of consciousness where the reconfiguration of}
+  \ALIUSPlacedTextContent{90.000}{350.978}{418.183}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perceptive, cognitive and bodily processes is experienced as disruptive}
+  \ALIUSPlacedTextContent{90.000}{370.418}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Seligman 2014, 2018; Canna 2017, 2021). Something similar is likely to be}
+  \ALIUSPlacedTextContent{90.000}{389.858}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{happening in FND, but within an entirely different context of meaning—one}
+  \ALIUSPlacedTextContent{90.000}{409.538}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in which the connection between mind, body, and self is not embraced. Thus,}
+  \ALIUSPlacedTextContent{90.000}{428.978}{418.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different contexts of meaning can radically shift interoception and the}
+  \ALIUSPlacedTextContent{90.000}{448.418}{182.677}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience of somatic symptoms.}
+  \ALIUSPlacedTextContent{90.000}{479.858}{418.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{These ideas are supported by some interesting recent neuroscience research}
+  \ALIUSPlacedTextContent{90.000}{499.538}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on the "Material Me" (Seth 2013), which suggests that interoceptive}
+  \ALIUSPlacedTextContent{90.000}{518.978}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{functions—or interoceptive affordances, as we call them—can be at the origin}
+  \ALIUSPlacedTextContent{90.000}{538.418}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the most primary sense of self. By closely monitoring this process—in}
+  \ALIUSPlacedTextContent{90.000}{557.858}{414.934}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{collaboration with the patients as active participants in our investigation—}
+  \ALIUSPlacedTextContent{90.000}{577.538}{418.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we hope to pave the way not only for a better understanding of FND, but}
+  \ALIUSPlacedTextContent{90.000}{596.978}{349.722}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{most broadly for a more encompassing model of human health.}
+  \ALIUSPlacedTextContent{102.960}{646.608}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.440}{657.797}{324.279}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Through a cross-cultural perspective, we can}
+  \ALIUSPlacedTextContent{133.440}{675.797}{324.181}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{question the artificiality of this divide and aim at}
+  \ALIUSPlacedTextContent{133.440}{693.797}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{offering a more encompassing—and humanized—}
+  \ALIUSPlacedTextContent{468.000}{700.608}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.440}{711.797}{182.352}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{vision of treatment and care}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 12
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.600}{35.472}{9.492}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{23}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.663}{418.375}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{The stigma surrounding mental diseases and its internalization by patients}
+  \ALIUSPlacedTextContent{90.000}{102.943}{418.471}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{plays a primary role in the severity of symptoms, adherence to treatment and}
+  \ALIUSPlacedTextContent{90.000}{120.223}{418.436}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{the outcome of the disease (Livingston \& Boyd, 2010). In line with this}
+  \ALIUSPlacedTextContent{90.000}{137.263}{418.528}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consideration, you argue that "effective treatments of FND must act as "moral}
+  \ALIUSPlacedTextContent{90.000}{154.543}{418.394}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{laboratories" where individuals' selves are reshaped through innovative social}
+  \ALIUSPlacedTextContent{90.000}{171.823}{418.442}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{experiments that serve to modify moral appraisals of their symptoms. In the}
+  \ALIUSPlacedTextContent{90.000}{189.103}{418.464}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{current context of the quality-of-care crisis, effective therapies must be based}
+  \ALIUSPlacedTextContent{90.000}{206.383}{418.562}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{on the co-construction of a common ground of meaning between patient and}
+  \ALIUSPlacedTextContent{90.000}{223.663}{227.252}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{therapist." (Canna \& Seligman, 2020, p.5).}
+  \ALIUSPlacedTextContent{90.000}{252.943}{418.354}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{More generally, I would like to frame this type of approach as part of a bigger}
+  \ALIUSPlacedTextContent{90.000}{270.223}{418.417}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{movement of "action research", where scientific research is thought as}
+  \ALIUSPlacedTextContent{90.000}{287.263}{418.377}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{integrated within and accompanying social action. How do you think}
+  \ALIUSPlacedTextContent{90.000}{304.543}{418.505}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{anthropological research can be incorporated into medical contexts to}
+  \ALIUSPlacedTextContent{90.000}{321.823}{418.512}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{integrate medical treatments skillfully and appropriately with morality,}
+  \ALIUSPlacedTextContent{90.000}{339.103}{200.003}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{bioethics, and personal preferences?}
+  \ALIUSPlacedTextContent{90.000}{368.258}{138.727}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Anthropological research}
+  \ALIUSPlacedTextContent{228.781}{368.258}{14.720}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{is}
+  \ALIUSPlacedTextContent{244.031}{368.258}{264.188}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{action, at many levels. First of all, ethnography,}
+  \ALIUSPlacedTextContent{90.000}{387.698}{418.223}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which is the staple of anthropological methodology, is a method based on}
+  \ALIUSPlacedTextContent{90.000}{407.138}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{establishing a qualitative, in-depth exchange with our participants.}
+  \ALIUSPlacedTextContent{90.000}{426.818}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna likes to say that, as anthropologists, we don't study people,}
+  \ALIUSPlacedTextContent{90.000}{446.258}{51.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we study}
+  \ALIUSPlacedTextContent{142.558}{446.258}{22.432}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{with}
+  \ALIUSPlacedTextContent{165.028}{446.258}{343.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people. When we conduct our usual 2-3-hour long sessions of}
+  \ALIUSPlacedTextContent{90.000}{465.698}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dialogue with the participants (also called the one-on-one in-depth}
+  \ALIUSPlacedTextContent{90.000}{485.138}{418.198}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interviews) many things happen. Some participants may experience their}
+  \ALIUSPlacedTextContent{90.000}{504.818}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{symptoms, e.g., functional paralysis and blindness, during the interview,}
+  \ALIUSPlacedTextContent{90.000}{524.258}{418.209}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{monitor them with the researcher in real time, and sometimes identify}
+  \ALIUSPlacedTextContent{90.000}{543.698}{373.898}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{meaningful connections to what is being discussed in the interview.}
+  \ALIUSPlacedTextContent{90.000}{575.138}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is just an example of how qualitative methodology is generative by itself.}
+  \ALIUSPlacedTextContent{90.000}{594.818}{68.147}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This verbal}
+  \ALIUSPlacedTextContent{161.873}{594.818}{63.503}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{and somatic}
+  \ALIUSPlacedTextContent{225.410}{594.818}{282.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dialogue not only fosters self-reflexivity in the}
+  \ALIUSPlacedTextContent{90.000}{614.258}{418.137}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{participants, but also offers the empathy and participatory care that many}
+  \ALIUSPlacedTextContent{90.000}{633.698}{418.146}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patients can't find in the current healthcare system. In this sense, we aim at}
+  \ALIUSPlacedTextContent{90.000}{653.138}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{offering a first, immediate response to the current quality-of-care-crisis}
+  \ALIUSPlacedTextContent{90.000}{672.818}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{described by many patients, who feel that the healthcare system is more and}
+  \ALIUSPlacedTextContent{90.000}{692.258}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more compartmentalized and dehumanized (Marcum 2008, Oldani 2014, Eck}
+  \ALIUSPlacedTextContent{90.000}{711.698}{418.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2020).  Providing the participant with a context for expressing their distress}
+  \ALIUSPlacedTextContent{90.000}{731.138}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in their own words and being recognized for the specificity of their}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 13
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{494.640}{35.472}{10.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{24}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{105.120}{102.048}{25.392}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{137.760}{111.557}{164.285}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Anthropological research}
+  \ALIUSPlacedTextContent{301.920}{111.557}{19.417}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{is}
+  \ALIUSPlacedTextContent{323.760}{111.557}{138.296}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{action, (…) we don't}
+  \ALIUSPlacedTextContent{472.320}{123.168}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{137.760}{129.557}{154.091}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{study people, we study}
+  \ALIUSPlacedTextContent{291.840}{129.557}{26.523}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{with}
+  \ALIUSPlacedTextContent{318.480}{129.557}{51.296}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{people.}
+  \ALIUSPlacedTextContent{90.000}{187.298}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience can impact on further coping, if not healing. During her}
+  \ALIUSPlacedTextContent{90.000}{206.738}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ethnography of seizures related to demonic possession in Nicaragua,}
+  \ALIUSPlacedTextContent{90.000}{226.418}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna used drawing as a means to establish a non-verbal dialogue}
+  \ALIUSPlacedTextContent{90.000}{245.858}{418.140}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with sufferers. Many of them experienced the processes of drawing their}
+  \ALIUSPlacedTextContent{90.000}{265.298}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{demons as a healthy expulsion of pathogenic meanings, a form of assisted self-}
+  \ALIUSPlacedTextContent{90.000}{284.738}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{healing practice (Canna 2017). Even if we won't go as far as considering}
+  \ALIUSPlacedTextContent{90.000}{304.418}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ethnographic dialogue as a healing process in and of itself, we do consider}
+  \ALIUSPlacedTextContent{90.000}{323.858}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that the process of recognition intrinsic in qualitative research is likely to}
+  \ALIUSPlacedTextContent{90.000}{343.298}{368.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have a positive impact on the overall wellbeing of the participants.}
+  \ALIUSPlacedTextContent{90.000}{374.738}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Also, our methodology includes a practice of self-journaling, providing each}
+  \ALIUSPlacedTextContent{90.000}{394.418}{418.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{participant with a digital platform to monitor symptoms and comment on}
+  \ALIUSPlacedTextContent{90.000}{413.858}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{them in real-time through a phone application (mEMA, mobile Ecological}
+  \ALIUSPlacedTextContent{90.000}{433.298}{418.310}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Momentary Assessment). This provides an additional occasion for a}
+  \ALIUSPlacedTextContent{90.000}{452.738}{418.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{participatory analysis of what daily living with FND entails. Our participants}
+  \ALIUSPlacedTextContent{90.000}{472.418}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{are extremely well-informed and aware of the scientific literature, as well as}
+  \ALIUSPlacedTextContent{90.000}{491.858}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{aware of the social representations and misrepresentations circulating on}
+  \ALIUSPlacedTextContent{90.000}{511.298}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{FND. FND are still a mostly unknown and frequently misrecognized}
+  \ALIUSPlacedTextContent{90.000}{530.738}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{condition. Participants/patients are eager to work on furthering awareness}
+  \ALIUSPlacedTextContent{90.000}{550.418}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and global education about FND, by contributing not as objects, but as active}
+  \ALIUSPlacedTextContent{90.000}{569.858}{418.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{participants of our study. In the long term, trends are emerging in the}
+  \ALIUSPlacedTextContent{90.000}{589.298}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{treatment of FND towards a multi-disciplinary approach, bringing together}
+  \ALIUSPlacedTextContent{90.000}{608.738}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not only psychologists and neurologists, but also social scientists and}
+  \ALIUSPlacedTextContent{90.000}{628.178}{378.883}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{workers, towards increasingly integrated care (Bael and al., in press).}
+  \ALIUSPlacedTextContent{90.000}{659.858}{418.065}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Our project is a pioneer in this direction, as it is the first federal project on}
+  \ALIUSPlacedTextContent{90.000}{679.298}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{FND lead by social scientists in the US. In addition, we strongly believe that}
+  \ALIUSPlacedTextContent{90.000}{698.738}{418.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{anthropological knowledge can be translational, allowing it to be applied in}
+  \ALIUSPlacedTextContent{90.000}{718.178}{418.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different kinds of practice.  While translation can be challenging, one of}
+  \ALIUSPlacedTextContent{90.000}{737.858}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{things that we excel at in anthropology is understanding the different stakes}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 14
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (207.120bp,-447.360bp) rectangle ++(230.160bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-604.800bp) rectangle ++(201.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (274.320bp,-652.080bp) rectangle ++(189.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-714.960bp) rectangle ++(223.680bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.360}{35.472}{9.732}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{25}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.538}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and stakeholders, social and political dynamics in different contexts. This}
+  \ALIUSPlacedTextContent{90.000}{104.978}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{kind of insight can help us translate the findings of this work on FND in}
+  \ALIUSPlacedTextContent{90.000}{124.418}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{terms that will be meaningful to clinicians.  In so doing, we hope to pave the}
+  \ALIUSPlacedTextContent{90.000}{144.098}{418.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{way for a more multi-faceted, multi-disciplinary approach to treatment and}
+  \ALIUSPlacedTextContent{90.000}{163.538}{182.929}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{care for people living with FND.}
+  \ALIUSPlacedTextContent{263.666}{214.501}{67.644}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
+  \ALIUSPlacedTextContent{126.000}{261.145}{93.982}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M. (2016).}
+  \ALIUSPlacedTextContent{221.485}{261.145}{286.558}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{"Dis-lui qu'il n'existe pas". La propagation de la transe grisi}
+  \ALIUSPlacedTextContent{90.000}{276.985}{170.053}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{siknis chez les Miskitos du Nicaragua}
+  \ALIUSPlacedTextContent{260.127}{276.985}{87.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Doctoral thesis.}
+  \ALIUSPlacedTextContent{126.000}{308.425}{381.991}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M. (2017). Modéliser les Configurations d' Etats Altérés de}
+  \ALIUSPlacedTextContent{90.000}{324.265}{63.389}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Conscience.}
+  \ALIUSPlacedTextContent{153.426}{324.265}{103.001}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Intellectica, 2017/1, 67}
+  \ALIUSPlacedTextContent{256.461}{324.265}{50.027}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{: 269-299.}
+  \ALIUSPlacedTextContent{126.000}{355.705}{90.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M. (2019).}
+  \ALIUSPlacedTextContent{216.947}{355.705}{118.785}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{La Contagion Visionnaire}
+  \ALIUSPlacedTextContent{335.757}{355.705}{172.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Cahiers d'Anthropologie Sociale}
+  \ALIUSPlacedTextContent{90.000}{371.305}{328.884}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{17, David Dupuis \& Maddalena Canna éds., Paris, L'Herne, 2019.}
+  \ALIUSPlacedTextContent{126.000}{402.985}{381.931}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M., \& Seligman, R. (2020). Dealing with the unknown. Functional}
+  \ALIUSPlacedTextContent{90.000}{418.585}{351.063}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{neurological disorder (FND) and the conversion of cultural meaning.}
+  \ALIUSPlacedTextContent{441.156}{418.585}{66.894}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Social Science}
+  \ALIUSPlacedTextContent{90.000}{434.425}{53.962}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{\& Medicine}
+  \ALIUSPlacedTextContent{143.962}{434.425}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{149.890}{434.425}{15.658}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{246}
+  \ALIUSPlacedTextContent{165.568}{434.425}{41.515}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 112725.}
+  \ALIUSPlacedTextContent{207.076}{434.425}{230.144}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.socscimed.2019.112725}
+  \ALIUSPlacedTextContent{126.000}{465.865}{221.786}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M. (2021). Mapping Bodily Empires.}
+  \ALIUSPlacedTextContent{347.814}{465.865}{126.684}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Fyssen Foundation Annales}
+  \ALIUSPlacedTextContent{474.509}{465.865}{32.646}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2021.}
+  \ALIUSPlacedTextContent{126.000}{497.305}{381.933}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M. (In Press) Visceral Visions. Rethinking Embodiment and Desire}
+  \ALIUSPlacedTextContent{90.000}{513.145}{130.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{in Global Mental Health.}
+  \ALIUSPlacedTextContent{220.231}{513.145}{155.505}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Culture, Medicine and Psychiatry}
+  \ALIUSPlacedTextContent{375.747}{513.145}{8.635}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.000}{544.585}{382.123}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Domschke, K., Stevens, S., Pfleiderer, B., \& Gerlach, A. L. (2010).}
+  \ALIUSPlacedTextContent{90.000}{560.425}{418.025}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Interoceptive sensitivity in anxiety and anxiety disorders: An overview and}
+  \ALIUSPlacedTextContent{90.000}{576.025}{211.611}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{integration of neurobiological findings.}
+  \ALIUSPlacedTextContent{304.734}{576.025}{133.190}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Clinical Psychology Review}
+  \ALIUSPlacedTextContent{437.958}{576.025}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{447.085}{576.025}{10.122}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{30}
+  \ALIUSPlacedTextContent{457.224}{576.025}{50.813}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1—11.}
+  \ALIUSPlacedTextContent{90.000}{591.865}{201.502}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.cpr.2009.08.008}
+  \ALIUSPlacedTextContent{126.000}{623.305}{96.017}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hacking, I. (1995).}
+  \ALIUSPlacedTextContent{222.889}{623.305}{284.991}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Rewriting the Soul: Multiple Personality and the Sciences of}
+  \ALIUSPlacedTextContent{90.000}{639.145}{38.102}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Memory}
+  \ALIUSPlacedTextContent{128.115}{639.145}{146.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Princeton University Press.}
+  \ALIUSPlacedTextContent{274.349}{639.145}{189.574}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1515/9781400821686}
+  \ALIUSPlacedTextContent{126.000}{670.585}{382.016}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Halloy. (2012). Gods in the Flesh: Learning Emotions in the Xangô}
+  \ALIUSPlacedTextContent{90.000}{686.185}{55.689}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Possession}
+  \ALIUSPlacedTextContent{181.053}{686.185}{26.099}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Cult}
+  \ALIUSPlacedTextContent{242.516}{686.185}{43.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(Brazil).}
+  \ALIUSPlacedTextContent{321.109}{686.185}{31.441}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Ethnos}
+  \ALIUSPlacedTextContent{352.556}{686.185}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{393.838}{686.185}{30.342}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{77(2),}
+  \ALIUSPlacedTextContent{459.544}{686.185}{48.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{177—202.}
+  \ALIUSPlacedTextContent{90.000}{702.025}{223.502}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/00141844.2011.586465}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 15
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (90.000bp,-129.840bp) rectangle ++(205.200bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-208.560bp) rectangle ++(187.200bp,-0.720bp);
+  \fill[ALIUSC0000FF] (220.800bp,-271.440bp) rectangle ++(204.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (112.560bp,-334.320bp) rectangle ++(191.280bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-397.440bp) rectangle ++(232.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (130.320bp,-460.320bp) rectangle ++(228.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (141.600bp,-523.440bp) rectangle ++(162.240bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-570.480bp) rectangle ++(243.120bp,-0.720bp);
+  \fill[ALIUSC0000FF] (146.160bp,-633.600bp) rectangle ++(211.440bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-696.480bp) rectangle ++(204.720bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{494.640}{35.472}{10.404}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{26}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{126.000}{85.225}{382.013}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hay. (2008). Reading Sensations: Understanding the Process of}
+  \ALIUSPlacedTextContent{90.000}{101.065}{188.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Distinguishing `Fine' from `Sick'.}
+  \ALIUSPlacedTextContent{285.507}{101.065}{146.693}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Transcultural Psychiatry, 45}
+  \ALIUSPlacedTextContent{432.191}{101.065}{75.833}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 198—229.}
+  \ALIUSPlacedTextContent{90.000}{116.905}{205.241}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/1363461508089765}
+  \ALIUSPlacedTextContent{126.000}{148.345}{382.087}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Larøi, F., Luhrmann, T. M., Bell, V., Christian, W. A., Deshpande, S.,}
+  \ALIUSPlacedTextContent{90.000}{163.945}{418.072}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fernyhough, C., Jenkins, J., \& Woods, A. (2014). Culture and Hallucinations:}
+  \ALIUSPlacedTextContent{90.000}{179.785}{175.069}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Overview and Future Directions.}
+  \ALIUSPlacedTextContent{266.928}{179.785}{105.409}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Schizophrenia Bulletin}
+  \ALIUSPlacedTextContent{372.350}{179.785}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{380.144}{179.785}{11.175}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{40}
+  \ALIUSPlacedTextContent{391.337}{179.785}{116.702}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(Suppl\_4), S213—S220.}
+  \ALIUSPlacedTextContent{90.000}{195.625}{187.155}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/schbul/sbu012}
+  \ALIUSPlacedTextContent{126.000}{227.065}{382.004}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Leptourgos, P., Denève, S., \& Jardri, R. (2017). Can circular inference relate}
+  \ALIUSPlacedTextContent{90.000}{242.665}{324.104}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{the neuropathological and behavioral aspects of schizophrenia?}
+  \ALIUSPlacedTextContent{414.472}{242.665}{93.564}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current Opinion in}
+  \ALIUSPlacedTextContent{90.000}{258.505}{61.495}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neurobiology}
+  \ALIUSPlacedTextContent{151.527}{258.505}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{157.455}{258.505}{10.942}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{46}
+  \ALIUSPlacedTextContent{168.414}{258.505}{52.483}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 154—161.}
+  \ALIUSPlacedTextContent{220.907}{258.505}{204.359}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.conb.2017.08.012}
+  \ALIUSPlacedTextContent{126.000}{289.945}{382.021}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Lin, K.-M., \& Kleinman, A. M. (1988). Psychopathology and Clinical Course}
+  \ALIUSPlacedTextContent{90.000}{305.785}{247.480}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of Schizophrenia: A Cross-Cultural Perspective.}
+  \ALIUSPlacedTextContent{338.042}{305.785}{104.087}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Schizophrenia Bulletin}
+  \ALIUSPlacedTextContent{442.140}{305.785}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{448.611}{305.785}{9.265}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{14}
+  \ALIUSPlacedTextContent{457.893}{305.785}{47.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 555—}
+  \ALIUSPlacedTextContent{90.000}{321.385}{22.527}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{567.}
+  \ALIUSPlacedTextContent{112.541}{321.385}{191.232}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/schbul/14.4.555}
+  \ALIUSPlacedTextContent{126.000}{337.225}{382.004}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Livingston, J. D., \& Boyd, J. E. (2010). Correlates and consequences of}
+  \ALIUSPlacedTextContent{90.000}{353.065}{418.162}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{internalized stigma for people living with mental illness: A systematic review and}
+  \ALIUSPlacedTextContent{90.000}{368.665}{73.802}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{meta-analysis.}
+  \ALIUSPlacedTextContent{185.128}{368.665}{30.630}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Social}
+  \ALIUSPlacedTextContent{237.070}{368.665}{36.195}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Science}
+  \ALIUSPlacedTextContent{294.576}{368.665}{12.797}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{\&}
+  \ALIUSPlacedTextContent{328.684}{368.665}{41.145}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Medicine}
+  \ALIUSPlacedTextContent{369.834}{368.665}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{397.066}{368.665}{8.802}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{71}
+  \ALIUSPlacedTextContent{405.880}{368.665}{23.490}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(12),}
+  \ALIUSPlacedTextContent{450.688}{368.665}{57.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2150—2161.}
+  \ALIUSPlacedTextContent{90.000}{384.505}{232.554}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.socscimed.2010.09.030}
+  \ALIUSPlacedTextContent{126.000}{415.945}{382.030}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Luhrmann, Nusbaum, H., \& Thisted, R. (2010). The Absorption Hypothesis:}
+  \ALIUSPlacedTextContent{90.000}{431.785}{262.679}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Learning to Hear God in Evangelical Christianity.}
+  \ALIUSPlacedTextContent{353.781}{431.785}{135.932}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{American Anthropologist, 112}
+  \ALIUSPlacedTextContent{489.764}{431.785}{18.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1),}
+  \ALIUSPlacedTextContent{90.000}{447.385}{40.400}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{66—78.}
+  \ALIUSPlacedTextContent{130.416}{447.385}{228.433}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/j.1548-1433.2009.01197.x}
+  \ALIUSPlacedTextContent{126.000}{478.825}{382.056}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Luhrmann, Padmavati, R., Tharoor, H., \& Osei, A. (2015). Hearing Voices}
+  \ALIUSPlacedTextContent{90.000}{494.665}{265.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{in Different Cultures: A Social Kindling Hypothesis.}
+  \ALIUSPlacedTextContent{354.625}{494.665}{133.544}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Topics in Cognitive Science, 7}
+  \ALIUSPlacedTextContent{488.218}{494.665}{19.811}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4),}
+  \ALIUSPlacedTextContent{90.000}{510.505}{51.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{646—663.}
+  \ALIUSPlacedTextContent{141.492}{510.505}{162.361}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/tops.12158}
+  \ALIUSPlacedTextContent{126.000}{541.945}{107.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Marcum, J.A., 2008.}
+  \ALIUSPlacedTextContent{235.661}{541.945}{146.974}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Humanizing Modern Medicine.}
+  \ALIUSPlacedTextContent{382.668}{541.945}{125.368}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Springer, Netherlands.}
+  \ALIUSPlacedTextContent{90.000}{557.545}{243.034}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/obo/9780195396577- 0216}
+  \ALIUSPlacedTextContent{333.055}{557.545}{8.635}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.000}{589.225}{382.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nikolova, N., Waade, P. T., Friston, K. J., \& Allen, M. (2021). What Might}
+  \ALIUSPlacedTextContent{90.000}{604.825}{283.694}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Interoceptive Inference Reveal about Consciousness?}
+  \ALIUSPlacedTextContent{376.832}{604.825}{131.163}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Review of Philosophy and}
+  \ALIUSPlacedTextContent{90.000}{620.665}{50.602}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychology}
+  \ALIUSPlacedTextContent{140.607}{620.665}{5.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{146.210}{620.665}{211.359}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s13164-021-00580-3}
+  \ALIUSPlacedTextContent{126.000}{652.105}{382.013}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Oldani, M. (2014). Deep pharma: Psychiatry, anthropology, and}
+  \ALIUSPlacedTextContent{90.000}{667.705}{124.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{pharmaceutical detox.}
+  \ALIUSPlacedTextContent{223.823}{667.705}{187.034}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Culture, Medicine, and Psychiatry}
+  \ALIUSPlacedTextContent{410.864}{667.705}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{426.330}{667.705}{10.148}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{38}
+  \ALIUSPlacedTextContent{436.496}{667.705}{71.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 255-278.}
+  \ALIUSPlacedTextContent{90.000}{683.545}{204.816}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s11013-014-9369-8}
+  \ALIUSPlacedTextContent{126.000}{714.985}{381.968}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Park, H.-D., \& Tallon-Baudry, C. (2014). The neural subjective frame: From}
+  \ALIUSPlacedTextContent{90.000}{730.825}{223.959}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{bodily signals to perceptual consciousness.}
+  \ALIUSPlacedTextContent{315.716}{730.825}{192.294}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Philosophical Transactions of the Royal}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 16
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (90.000bp,-114.000bp) rectangle ++(188.400bp,-0.720bp);
+  \fill[ALIUSC0000FF] (328.320bp,-161.280bp) rectangle ++(176.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-176.880bp) rectangle ++(33.360bp,-0.720bp);
+  \fill[ALIUSC0000FF] (260.880bp,-287.280bp) rectangle ++(226.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-366.000bp) rectangle ++(201.120bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-460.320bp) rectangle ++(220.800bp,-0.720bp);
+  \fill[ALIUSC0000FF] (306.480bp,-507.600bp) rectangle ++(198.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (252.480bp,-554.880bp) rectangle ++(231.120bp,-0.720bp);
+  \fill[ALIUSC0000FF] (90.000bp,-617.760bp) rectangle ++(233.280bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
+  \ALIUSPlacedTextContent{495.120}{35.472}{9.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{27}
+  \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
+  \ALIUSPlacedTextContent{90.000}{85.225}{35.974}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Society}
+  \ALIUSPlacedTextContent{161.710}{85.225}{12.361}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{B:}
+  \ALIUSPlacedTextContent{209.807}{85.225}{47.784}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Biological}
+  \ALIUSPlacedTextContent{293.327}{85.225}{37.076}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Sciences}
+  \ALIUSPlacedTextContent{330.404}{85.225}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{372.060}{85.225}{15.345}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{369}
+  \ALIUSPlacedTextContent{387.426}{85.225}{34.478}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1641),}
+  \ALIUSPlacedTextContent{457.646}{85.225}{50.387}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{20130208.}
+  \ALIUSPlacedTextContent{90.000}{101.065}{188.302}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1098/rstb.2013.0208}
+  \ALIUSPlacedTextContent{126.000}{132.505}{382.078}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Paulus, M. P., \& Stein, M. B. (2010). Interoception in anxiety and depression.}
+  \ALIUSPlacedTextContent{90.000}{148.345}{135.318}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain Structure and Function}
+  \ALIUSPlacedTextContent{225.346}{148.345}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{230.608}{148.345}{13.986}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{214}
+  \ALIUSPlacedTextContent{244.609}{148.345}{84.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5—6), 451—463.}
+  \ALIUSPlacedTextContent{328.244}{148.345}{176.743}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00429-010-}
+  \ALIUSPlacedTextContent{90.000}{163.945}{33.326}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{0258-9}
+  \ALIUSPlacedTextContent{126.000}{195.625}{382.071}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Pigott, T. A. (1999). Gender differences in the epidemiology and treatment}
+  \ALIUSPlacedTextContent{90.000}{211.225}{105.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of anxiety disorders.}
+  \ALIUSPlacedTextContent{195.297}{211.225}{157.932}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Clinical Psychiatry}
+  \ALIUSPlacedTextContent{353.256}{211.225}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{359.184}{211.225}{52.423}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{60 Suppl 18}
+  \ALIUSPlacedTextContent{411.638}{211.225}{37.807}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 4—15.}
+  \ALIUSPlacedTextContent{126.000}{242.665}{381.980}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Seligman, R. (2010). The Unmaking and Making of Self: Embodied Suffering}
+  \ALIUSPlacedTextContent{90.000}{258.505}{418.149}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and Mind-Body Healing in Brazilian Candomblé: UNMAKING AND MAKING}
+  \ALIUSPlacedTextContent{90.000}{274.345}{60.653}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{THE SELF.}
+  \ALIUSPlacedTextContent{150.644}{274.345}{25.394}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Ethos}
+  \ALIUSPlacedTextContent{176.046}{274.345}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{181.974}{274.345}{10.148}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{38}
+  \ALIUSPlacedTextContent{192.139}{274.345}{68.724}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 297—320.}
+  \ALIUSPlacedTextContent{260.882}{274.345}{226.618}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/j.1548-1352.2010.01146.x}
+  \ALIUSPlacedTextContent{126.000}{305.785}{382.009}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Seligman, R. (2014). Looking Inside: Biological Mechanisms and}
+  \ALIUSPlacedTextContent{90.000}{321.385}{366.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Embodiment in Candomblé Trance and Possession. In R. Seligman,}
+  \ALIUSPlacedTextContent{458.943}{321.385}{49.080}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Possessing}
+  \ALIUSPlacedTextContent{90.000}{337.225}{32.942}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Spirits}
+  \ALIUSPlacedTextContent{135.389}{337.225}{20.492}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{and}
+  \ALIUSPlacedTextContent{168.328}{337.225}{39.124}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Healing}
+  \ALIUSPlacedTextContent{219.898}{337.225}{27.540}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Selves}
+  \ALIUSPlacedTextContent{262.895}{337.225}{22.908}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp.}
+  \ALIUSPlacedTextContent{298.244}{337.225}{48.573}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{111—134).}
+  \ALIUSPlacedTextContent{359.258}{337.225}{45.788}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Palgrave}
+  \ALIUSPlacedTextContent{417.487}{337.225}{57.037}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Macmillan}
+  \ALIUSPlacedTextContent{486.966}{337.225}{21.060}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{US.}
+  \ALIUSPlacedTextContent{90.000}{353.065}{200.971}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1057/9781137409607\_4}
+  \ALIUSPlacedTextContent{126.000}{384.505}{382.145}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Seligman, R. (2018). "Bio-looping" and the Psychophysiological in Religious}
+  \ALIUSPlacedTextContent{90.000}{400.105}{418.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Belief and Practice: Mechanisms of Embodiment in Candomblé Trance and}
+  \ALIUSPlacedTextContent{90.000}{415.945}{353.666}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Possession. In M. Meloni, J. Cromby, D. Fitzgerald, \& S. Lloyd (Eds.),}
+  \ALIUSPlacedTextContent{443.929}{415.945}{64.105}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Palgrave}
+  \ALIUSPlacedTextContent{90.000}{431.785}{179.553}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Handbook of Biology and Society}
+  \ALIUSPlacedTextContent{269.562}{431.785}{238.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp. 417—439). Palgrave Macmillan UK.}
+  \ALIUSPlacedTextContent{90.000}{447.385}{220.798}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1057/978-1-137-52879-7\_18}
+  \ALIUSPlacedTextContent{126.000}{478.825}{381.983}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self.}
+  \ALIUSPlacedTextContent{90.000}{494.665}{130.701}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
+  \ALIUSPlacedTextContent{220.712}{494.665}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{226.423}{494.665}{8.799}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{17}
+  \ALIUSPlacedTextContent{235.237}{494.665}{71.387}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(11), 565—573.}
+  \ALIUSPlacedTextContent{306.418}{494.665}{198.476}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.tics.2013.09.007}
+  \ALIUSPlacedTextContent{126.000}{526.105}{381.958}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Sewell. (2015). Disaggregating ethnoracial disparities in physician trust.}
+  \ALIUSPlacedTextContent{90.000}{541.945}{124.318}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Social Science Research, 54}
+  \ALIUSPlacedTextContent{214.303}{541.945}{38.045}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 1—20.}
+  \ALIUSPlacedTextContent{252.366}{541.945}{231.252}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.ssresearch.2015.06.020}
+  \ALIUSPlacedTextContent{126.000}{573.385}{382.026}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Winkelman, M. (1989). A Cross-cultural Study of Shamanistic Healers.}
+  \ALIUSPlacedTextContent{90.000}{589.225}{37.057}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal}
+  \ALIUSPlacedTextContent{169.072}{589.225}{11.610}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of}
+  \ALIUSPlacedTextContent{222.696}{589.225}{61.920}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychoactive}
+  \ALIUSPlacedTextContent{326.631}{589.225}{27.250}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Drugs}
+  \ALIUSPlacedTextContent{353.952}{589.225}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{401.884}{589.225}{8.490}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{21}
+  \ALIUSPlacedTextContent{410.386}{589.225}{18.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1),}
+  \ALIUSPlacedTextContent{470.670}{589.225}{37.363}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{17—24.}
+  \ALIUSPlacedTextContent{90.000}{604.825}{233.261}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/02791072.1989.10472139}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

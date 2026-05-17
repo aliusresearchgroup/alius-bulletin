@@ -1,38 +1,996 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.0000bp,paperheight=842.0000bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{Consciousness and psychedelics}
-\author{Robin Carhart-Harris Interviewed by Martin Fortier \& Raphael Milliere}
-\date{ALIUS Bulletin 1}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSC7F7F7F}{HTML}{7F7F7F}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/m5ky-6w96\par
-\textbf{Keywords:} default mode network, ego-dissolution, entropic brain hypothesis, neuroscience of consciousness, psychedelics\par
-\section*{Abstract}
-In this interview, Robin Carhart-Harris discusses empirical and theoretical issues related to the current renaissance of scientific research on states of consciousness induced by psychedelic drugs. In particular, he talks about the limitations of neuroimaging techniques to measure the effects of psychedelic drugs on the human brain, the reliability of self-report questionnaires to assess the subjective effects of psychedelic drugs, the nature of the phenomenon known as drug-induced ego-dissolution, the role of the default mode network, the scientific credibility of recent attempts to bring insights from psychoanalysis into neuroscience research, and the entropic brain hypothesis.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent 1 ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin Psychedelics and consciousness An interview with Robin Carhart-Harris by Martin Fortier and Raphael Milliere Robin Carhart-Harris r.carhart-harris@imperial.ac.uk Centre for Neuropsychopharmacology Imperial College, London, UK Martin Fortier martin.fortier@ens.fr Institut Jean Nicod ENS/EHESS, Paris, France Raphael Milliere raphael.milliere@philosophy.ox.ac.uk Faculty of Philosophy University of Oxford, UK Citation: Carhart-Harris, R., Fortier, M., \& Milliere, R. (2017). Psychedelics and consciousness. An interview with Robin Carhart- Harris. ALIUS Bulletin, 1, 1-16. What got you interested in the topic of psychedelics? It was an interest in the mind. At the time (about 12 years ago), I felt that my curiosity about the mind could be best satisfied by a study of psychoanalysis, so I was studying psychoanalysis for a master's degree. Someway in, I began to realize that the main methods of psychoanalysis to access the 'unconscious mind' are unreliable. The existence of the unconscious mind is a cornerstone of psychoanalytic theory - yet its existence is largely denied or at least neglected by mainstream psychology and psychiatry. Dreaming is perhaps psychoanalysis' most valued window in on 'the unconscious' but dreaming happens during sleep and it is easy to forget or confabulate our dream material. Free association also seemed vague and unreliable, so I felt compelled to ask whether anything else had been considered as a way of altering the structure of the mind in such a way that access to 'the unconscious' could be facilitated. At the time, I was somewhat ambivalent about psychoanalysis. It felt like its main tenets had substance but there was also a lot of philosophical noise getting in the way of what I saw as a much more fundamental problem, namely testing and potentially demonstrating that the basic constructs of psychoanalysis, such as repression, the ego, and the unconscious mind 'exist' and have substance in both a psychological and biological sense. I felt psychoanalysis needed to get its act together and better demonstrate these things otherwise it could make no real scientific progress and would instead remain insular and somewhat disconnected from mainstream science. I entertained the idea that a drug might exist that could alter the topography of the mind to aid access to the unconscious and then I discovered Stanislav Grof's book, Realms of the Human Unconscious: R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 2 Observations from LSD Research, and I thought - here it is! The most logical thing from there seemed to be to take this to brain imaging and measure what's going on in the brain as the unconscious mind is accessed under LSD or a similar drug - and that's basically the idea I took to David Nutt, then Professor of Psychopharmacology at the University of Bristol, as a PhD proposal. Although I've never managed to work on that specific project, I'm a lot closer than I was 12 years ago. In addition to neuroscience, you studied psychoanalysis. Do you think some of the hypotheses of psychoanalysis on the human mind are relevant for scientific research? Yes. It seems fair to say that you are one of the proponents of neuropsychoanalysis (e.g., Carhart-Harris \& Friston, 2010). In a sense, yes. Some authors (e.g., Ramus, 2013) have worried that the neuropsychoanalytic research program might be a nonstarter, because it amounts to projecting neuroscientific discoveries onto psychoanalytic concepts (but not the other way around). The relationship should be circular to be healthiest. Arguably, psychoanalysis hasn't made any discoveries for quite some time though. Perhaps what psychoanalysis had to tell us, has already been told, and mostly just by a very select number of people (e.g. Freud, Jung and Klein). The worry, then, is that in neuropsychoanalysis, neuroscience does inform psychoanalysis, but psychoanalysis hardly ever informs neuroscience. It may inform or even replace cognitive explanations however. I suppose the point is, psychoanalysis isn't discovering in the same way as neuroscience is, because its 'discoveries' were made many years ago, and through observation but not in a controlled and systematic way (unlike neuroscience). Sceptics might nonetheless argue that the two domains are not mutually enriching. Do you think this is true? Not necessarily. I think psychoanalysis can provide enriching explanations for things that cognitive psychology and neuroscience struggle with. In the same line of skepticism, do you agree that only neuroscience (owing to its scientific research methods) brings new findings on the table? R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 3 Yes, these days only neuroscience brings new findings to the table but because I believe psychoanalysis can offer a richer (arguably the richest) account of the human mind and condition, I think it has useful things to say about certain neuroscientific discoveries. I accept it doesn't bring anything new but what it brings that is 'old' is still deeply resonant and informative. Let's take the example of the 'discovery' of the default-mode network (DMN) for example, around the turn of the millennia. Cognitive neuroscientists have struggled with this system as they can't easily identify what its main function is. It seems to be involved in either too much or nothing specific at all. Some have even challenged whether the approach of studying 'resting-state' brain activity (the approach that helped develop the notion of a 'default-mode') is really meaningful at all or even consistent with what cognitive neuroscience is 'meant to be doing' (Morcom and Fletcher, 2007). Terms like 'stimulus independent thought' been used in reference to the network and its functioning, which are telling more about the priorities of cognitive psychology and its behaviorist counterpart than about the phenomena in question. I think it's more interesting to speculate about and endeavor to sample the nature and content of spontaneous cognition, and tools such as 'experience sampling' (Csikszentmihalyi and Larson, 1987), psychedelics, and neuroimaging may prove to be a powerful combination in this respect. True, the DMN may serve some essential physiological functions (Leech et al., 2014), and granted, rudimentary prototypes of the adult human DMN may be observable in lower species (Mantini et al., 2011) and infants (Doria et al., 2010) but laying the emphasis here seems more about evading the problem than tackling it - and moreover, these things needn't be inconsistent with psychoanalytic conceptions of mind-function - such as the idea that the ego offers a reserve of energy that can be 'invested' in 'objects' of interest (Carhart-Harris et al., 2008). In 2008 (Carhart-Harris et al., 2008) and later in 2010 (Carhart-Harris \& Friston, 2010) and more recently (Carhart-Harris et al., 2014), I proposed that the default-mode network may relate to 'the ego' system, as described by Sigmund Freud. That hypothesis seems to have been quite popular (e.g. the 2010 paper with Karl Friston has been cited over 250 times) and I still feel relatively comfortable about having proposed it. All I would want to do now to qualify it, would be to say that in Freudian theory, in health, 'the unconscious' is largely continuous with the If you want to look for 'the unconscious' in the brain, you probably needn't look far from the DMN and particularly its subcortical/paralimbic components, such as the extended hippocampus. " " R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 4 ego and the ego can contain much that is of 'the unconscious', just as the unconscious contains much of the ego, i.e. they are not so clearly differentiable from each other and exist instead, in relative harmony. It is in ill health that the systems are in conflict. The point I'd like to make here, is that if you want to look for 'the unconscious' in the brain, you probably needn't look far from the DMN and particularly its subcortical/paralimbic component/s, such as the extended hippocampus. If you'd rather stick to cognitive or non-psychoanalytic terms when talking about these systems, e.g. proposing that the DMN is related to 'the narrative self' - then that's fine, I wouldn't want to argue with that - but at least know that psychoanalysis has talked about these systems in depth for over a century (Freud, 1927; Freud, Strachey, \& Freud, 2001) and may offer a level of explanation that you might find surprisingly useful and informative. Also, if you're going to judge psychoanalysis and particularly Freudian theory, judge it directly by going to his original work and not to interpretations of it. How do you think psychedelics research can contribute to the search for the neural correlates of consciousness? Psychedelics alter 'consciousness' in a marked and novel way. Most studies of consciousness address the problem of consciousness via looking at states of reduced consciousness, e.g. anesthesia, sleep, brain injury and/or illness. Psychedelics do not really reduce the level of wakefulness or alertness but they do fundamentally alter the quality of consciousness. Psychedelics can also help motivate a more nuanced version of the question, 'what are the neural correlates of consciousness?' Because if you look at that question critically, it's pretty vague, i.e. the definition of consciousness is pretty vague. The dominant one is 'consciousness is that which is lost when we fall into dreamless sleep and returns when we wake' but I would challenge that and say instead that what is lost and returns either side of dreamless sleep is actually more or less the whole of the mind, and the whole of the mind is not just consciousness. What is your general view on the topic of consciousness? It needs to better define its terms. If the field of 'consciousness research' clarified that the reason we're really interested in consciousness is because we're wonderstruck about the complex nature of human consciousness and want to better understand its basis in the brain, then that would be a good start, because then we could focus on humans and how they differ from other animals and perhaps realize that the existence of 'the ego' is quite a fundamental difference. After that, we might realize that rather than aimlessly studying 'consciousness' and approaching it from the same old vantage of reduced states of consciousness, we might better focus on self-consciousness and its neural correlates. A stronger focus on self-consciousness R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 5 and the nature of the self as a system (i.e. 'the ego' in psychoanalytic terminology) would help along the initiative of trying to better understand the brain basis of human consciousness - and why human consciousness is special. I think the endeavor to better understand the brain basis of 'consciousness' is too vague a question/problem, and unless I'm missing something (which I may be), I don't think it's going to come to much. It may sound anthropocentric but I think we need to better admit/acknowledge that the real motivator driving enthusiasm for 'consciousness research' is the promise of understanding why and how the human mind is different to that of other animals - and why/how we can reflect on our own thought and behavior. I'm actually open to the idea that it is something relatively recently learned or acquired though, as was argued by Julian Jaynes (1990). Jaynes' stuff about the breakdown of hemispheric separation, I'm less convinced about however, but the idea that (reflective) consciousness is a relatively recent acquisition of the human mind, is a fascinating one - and has some intuitive appeal. Do you endorse any of the following approaches to consciousness: a topological approach (claiming that there is an area of consciousness), an electrophysiological approach (claiming that consciousness consists of a specific rhythm of neural activity), or a reticular approach (claiming that consciousness consists of a specific connectivity between and within networks)? If any of those, it would be the last one, but like I said, I think you need to start with a clearer definition of what the problem is, i.e. 'what is consciousness'? Are we talking about the reflective capacity of healthy adult humans? If yes, then I vote for focusing on the DMN and how it interacts with the rest of the brain. DMN- parahippocampal interactions are of particular interest to me in this regard. I wouldn't want to say that the DMN as an object in isolation is consciousness or indeed 'the ego', but I would advise that we study its behavior, and how it develops, how its constituent parts combine to form a gestalt - and how this gestalt interacts with others in the brain, and how the interaction of these gestalts relates to subjective phenomena that we feel and can (mostly) be conscious of, and report. How do you interpret the seeming discrepancy between Vollenweider et al.'s study (1997) and your own study (Carhart-Harris et al., 2012) regarding the effect of psilocybin on frontal cortex activity? This is covered in our more recent PNAS paper on LSD (Carhart-Harris et al., 2016). In your seminal paper you pinpoint the difference in recording techniques (PET vs. fMRI) as possibly explaining why one observes such a discrepancy between your findings and Vollenweider's: "this discrepancy relates to the fact that the radiotracer used to measure glucose metabolism (18F-fluorodeoxyglucose) has a long half-life (110 R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 6 min). Thus, the effects of psilocybin, as measured by PET, are over much greater timescales than indexed by our fMRI measures" (Carhart-Harris et al. 2012, p. 2141). This hypothesis is corroborated by a recent fMRI study of ayahuasca which also detects a decrease in frontal activity (Palhano-Fontes et al., 2015). Not really, as that mPFC decrease was task-related I think. A team working at Kings College London replicated our arterial spin labeled (ASL) intravenous psilocybin study and found decreased blood flow however. As I say in the 2016 PNAS paper, I think the discrepancy is due to the methods. Unless you are au fait with the methods, it's easy to think brain imaging literally reads-out 'brain activity', but that isn't at all the case. The process of recording to analysis to brain images, involves a number of assumptions, e.g. people often assume that the BOLD signal of fMRI is measuring brain activity and similarly that the ASL signal represents brain activity - but that's not always the case. For example, a direct vascular action of a drug can interfere with the BOLD and ASL signal and give you a read-out that you misinterpret as being a change in 'brain activity'. I think in the case of the cerebral blood flow (CBF) reductions that have been seen with intravenous psilocybin, it may represent an initial vasoconstriction in the brain but it could also represent an initial change (reduction) in brain activity (when I say 'brain activity', I really mean neuronal activity). The overlap between location of the CBF reductions and changes in oscillatory power seen with intravenous psilocybin and MEG was quite remarkable however (Muthukumaraswamy et al., 2013) - and importantly, the latter is a much more reliable and direct measure of brain activity. Basically, if you want this matter to be comprehensively resolved, you need to do a bit more work, perhaps in animals, looking at vascular action of intravenous psilocybin. But I'm not sure it's a problem that is that important to worry about however, as the field has moved on, as have our techniques, and we're now using better measures that more directly sample neuronal activity, and these are yielding reliable results across drugs and study teams. I would basically advise someone worried about this matter, not to worry, as consistent principles about the acute action of psychedelics on the brain are emerging and will be shown to be quite reliable. Our 2016 PNAS paper on LSD in the most comprehensive in the sense. In brief, look to the present and future for the answer/s. Increased PFC metabolism is not a good explanation for how psychedelics work to produce their characteristic effects. " " R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 7 In addition to the recording technique, do you think that the mode of administration could also explain the discrepancy: i.e., oral administration in Vollenweider's study vs. intravenous administration in your own? Possibly. I feel pretty confident that increased PFC metabolism is not a good explanation for how psychedelics work in the human brain to produce their characteristic psychological effects however. On a related note, what are the potential limitations of fMRI imaging to study psychedelics? More generally, what are the benefits and downsides of each available monitoring techniques to study the activity of the brain on psychedelics? fMRI doesn't measure brain activity directly. Psychedelics may well have a direct vascular action and this could confound interpretations of some fMRI findings with psychedelics, such as CBF measures. Fludeoxyglucose PET has very poor to no temporal resolution and so provides little/no information about brain dynamics. Simultaneous EEG-fMRI is an important way forward and we're embracing that. Other techniques will likely also emerge in time. For example, the temporal resolution of fMRI is improving - something we might also try to make the most of. Dynamic EEG-fMRI measures twinned with experience sampling may be a powerful way forward. Similarly, decoding methods could prove useful. Psychedelics researchers have emphasized the importance of set and setting, that is the participant's state of mind and environment when the drug is administered. How do you think set and setting could be modeled and controlled with more precision within experimental studies, given the influence they have on the participant's experience? It's a challenge because you want to test 'set and setting' as variables but you also want to maintain safety and certain ethical standards. Music offers a good means of modulating 'setting' and 'set' requires that we sample 'where people are at' psychologically prior to the trip itself. This hasn't really been done properly yet - at least by us. You could also try and manipulate expectations to manipulate set - and I suppose we've done that to an extent when looking at suggestibility - but far more work could and should be done here. What are the difficulties of gathering reliable data about the subjective effects of psychedelics, and how can they be overcome? Reports are given in retrospect and so can be unreliable and sensitive to biases. Subjective reports are difficult to obtain in real time however, as collecting them will affect the experience and also language skills may be impaired under a potent drug. One potential solution is 'experience sampling'. I'm quite keen to incorporate this into our work. I'm also aware of more sophisticated interviewing techniques R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 8 that are being developed - which may be particularly useful. Video and audio recording of sessions and interviews would also be useful. In order to chart the neurophenomenology of psychedelic experience, the questionnaires you use resort to concepts such as "looking strange" or "having a supernatural quality" and correlations are subsequently made between subjective reports (the feeling that an experience was strange or supernatural) and neurophysiological data (a certain pattern of neural activity). Now, concepts such as that of strangeness or supernaturalness are notoriously ambiguous and likely to be interpreted in various ways by subjects. Thus, when correlations are made between subjective reports and neural patterns, what is being correlated may be extremely different in one case and in another. To elaborate a little on the example of supernaturalness, it has been shown that this property is variably ascribed (depending on one's personality, one's culture and one's level of expertise) to experiences characterized as: (i) being highly fluent, (ii) being highly disfluent, (iii) being sensorially vivid, (iv) being numinous, (v) being non-dual, (vi) featuring extraordinary beings, (vii) involving a loss of the sense of agency, etc. (see for example: Shanon, 2002; Taves, 2009; Laughlin, 2011; Luhrmann, 2012; Halloy, 2015). This diversity of meanings lying behind the concept of supernaturalness is highly problematic. Do you think when they are dealing with such polysemous words, neuroscientists should finesse the concepts they use in their questionnaires by consulting anthropologists and phenomenologists who have extensively studied the underlying polysemy of these terms? I do think we need to better define our terms, yes. Words are certainly vulnerable to interpretation and biases, but language is a difficult prison-house to escape from, however you might try. Words that are especially vulnerable to different interpretations can be problematic and if you want them to be interpreted in a particular way, then you could provide participants with some kind of briefing about what is meant by the term/s in question but then that could bias/prime people to see things 'how you want them to see things', thus causing a confirmation bias. Words are certainly vulnerable to interpretation and biases, but language is a difficult prison-house to escape from. " " R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 9 You have investigated a phenomenon known as drug-induced ego dissolution (DIED), which is usually described as a breakdown of one's 'sense of self' and a feeling of unity with one's environment (Lebedev et al., 2015). You have suggested that DIED might be explained as a breakdown of the so-called narrative self, that is the network of beliefs, thoughts and autobiographical memories associated with being the particular person one self-identifies with. This is consistent with subjects reporting feeling as if they were not a person anymore when undergoing DIED during psychedelics use. However, there is room for debate about whether DIED is merely a disruption of the narrative self, and not also of lower-level self-specifying processes, related to the so-called minimal or bodily self. There is a long tradition in philosophy of discussing the idea of the minimal self (also called sense of mineness ) as the pre-reflective, nonconceptual feature of consciousness in virtue of which my experiences feel mine (Zahavi, 2014). This notion has also come under investigation in cognitive science and psychiatry. According to neurocognitive accounts of the minimal self, especially in a predictive coding framework, it is crucially linked to multisensory integration (particularly of visuotactile and vestibular input), interoception and homeostatic regulation (Christoff et al., 2011; Limanowski \& Blankenburg, 2013; Apps \& Tsakiris, 2014). From a phenomenological point of view, it might be reducible to body ownership, self-location, and the experienced direction of the first-person perspective (Blanke \& Metzinger, 2009). The minimal self does not depend on high level cognitive processes such as self- related beliefs and first-person thoughts, but rather on low-level bodily/perceptual processes. In this framework, the minimal self is a necessary condition for reflective self-consciousness (self-related thoughts), which in turns enables self-related beliefs (narrative self). If this is right, one could expect the narrative self to break down if the minimal self is disrupted, and this is indeed what appears to be the case to some extent in schizophrenia. The idea that DIED is primarily a disruption of the minimal self seems consistent with the fact that classical psychedelics induce hallucinations and not delusions. In a predictive coding framework, given that drug-induced hallucinations presumably stem from impaired bottom-up processing coupled with relatively preserved top-down processing, it seems reasonable to expect excessive prediction error signaling to yield aberrant predictions and a disruption of multisensory integration, ultimately leading to the breakdown of the minimal self. In other words, DIED would primarily be about a perceptual/bodily anomalous processing that leads to the feeling to being selfless, rather than a cognitive anomaly leading to delusions impairing self-narratives. Do you think that such an account of DIED has any plausibility? How might further studies bear on this debate? R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 10 The ego, in the Freudian sense, incorporates the narrative and bodily self. I understand the differences between these different aspects of 'self' but I'm not sure how important it is that we chop them up in order to understand DIED. I tend to think when people rate DIED they are recognizing that it is 'the ego' in the Freudian sense that is compromised, i.e. the self as a system. Generally speaking, the way people understand and use the term 'the ego' in everyday parlance, is more or less consistent with Freud's account of it. Our ego-dissolution inventory puts emphasis on reduced 'self-importance' and a sense of connectedness or oneness (e.g. to self, others and nature), which naturally accompanies DIED. I suppose what's happening is that boundaries necessary for the existence of the ego, breakdown and the sense of connectedness is the inevitable result. People can fight DIED but then they won't feel the connectedness. The DMN is usually associated with mind-wandering, self-reflection and introspection while the Task Positive Network (TPN) is associated with the orientation of the mind towards the external world. Elaborating on this distinction, you notice that these two networks are anti-correlated in order to guarantee the functionally important distinction between the internal world and the external one. Now, with your colleagues, you have shown that the DMN/TPN anti-correlation is significantly decreased after psilocybin intake. You have proposed that the diminution of the orthogonality between the DMN and the TPN was a very plausible explanation as to why psychedelic experiences are characterized by a "collapse of dualities" and by the "disturbance in one's sense of self, and particularly one's sense of existing apart from one's environment" (Carhart-Harris et al., 2014, p. 16). Your proposal seems very intuitive indeed: if the DMN and the TPN stop being strongly anti-correlated this should result in a loss of neat distinction between the internal and the external. However, there is good evidence suggesting that the loss of the internal/external dichotomy is to be explained by something different from the disturbance of the DMN/TPN anti-correlation. Indeed, the "collapse of dualities" and the "disturbance in one's sense of self" seem to characterize the phenomenology of both psilocybin- induced experiences and ayahuasca-induced ones. Now, given that ayahuasca experiences also involve some confusion between the internal and the external, we would expect to find a clear decrease of the DMN/TPN anti-correlation after ayahuasca I tend to think when people rate DIED they are recognizing that it is 'the ego' in the Freudian sense that is compromised. " " R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 11 intake. Remarkably enough, this doesn't seem to be the case (Palhano-Fontes et al., 2015). How do you interpret these findings? The specifics of the data processing and statistical thresholds can explain Palhano- Fontes's alleged negative result. If you look closer at the method they used however, I think they did find this effect (i.e. reduced DMN-TPN orthogonality) - and I'm very confident others will in the future. Do you think that it can still be maintained that the loss of a clear dichotomy between the internal and the external is to be explained by the decrease of the DMN/TPN anti- correlation? Yes. Although we don't need to be too specific about the TPN, as there are a few "TPNs". "Task positive network" is a bit of a vague term for a network to be honest. On a more methodological note, there has been some intense debate as to whether regressing out the global signal is a sound way of measuring anti-correlation between networks (Fox et al., 2009; Murphy et al., 2009). If regressing out the global signal turns out not to be valid, then the DMN/TPN anti-correlation could simply be an artefact. What is your take on this methodological issue? We did our most recent analysis (PNAS 2016) with and without global signal regression and found the same result. This is discussed in our paper. You just have to be careful about the terms you use and, for example, go with "orthogonality" instead of "anti-correlation". I think this is discussed in Leor Roseman's Human Brain Mapping paper (2016). In your 2014 Frontiers paper you sketch a general model of Altered States of Consciousness (ASCs) which aims at theorizing not only psychedelic states but more broadly any kind of altered or anomalous state (such as psychosis, coma, dreaming, etc.). Your proposal is that entropy is a spectrum which can take different values: for example, early psychosis is characterized by high entropy whereas coma or sedation are characterized by low entropy. Your model is also based on another dimension: that of criticality (i.e., the ability of the brain to reach certain critical thresholds beyond which new complex properties emerge, notably through cascade-like processes) (e.g., Beggs \& Plenz, 2003; Chialvo, Balenzuela, \& Fraiman, 2008). Interestingly, in your model, you defend the view that entropy and criticality are closely correlated: the highest the entropy, the highest the criticality; conversely, the lowest the entropy, the lowest the criticality. Did I say that? Criticality is just one thing, i.e. it's a critical point, so you can't really have low or high criticality - but you can be above or below it. Being super-critical, R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 12 in the sense of being above a critical point, would be most consistent with a more entropic (random) state. Don't you think that there are cases in which entropy can vary independently of criticality? For example, it has been proposed that certain altered states can involve plenty of prediction errors while the weight (or the accuracy) ascribed to these predictions errors remains abnormally low; conversely, predictions errors can be low while the accuracy ascribed to these limited predictions errors is very high. As Fletcher and Frith put it, "a relatively small prediction error might be given undue weight (if the uncertainty is underestimated), leading to a false inference. Alternatively, excessive noise might dilute the effects of even a large prediction-error signal, leading to a reluctance to accept an inference as adequately explaining the input." (Fletcher \& Frith 2009, p. 55) Let's take the example of a state characterized by high prediction errors and low accuracy. In such a case, priors couldn't be revised and updated as they should and they would end up being abnormally steady (e.g., Fletcher \& Frith, 2009; Adams, Brown, \& Friston, 2015). The brain would thus combine both high entropy (there are plenty of prediction errors) and sub-criticality (high-level mental states are not malleable). This seems to contradict the idea that high entropy and high criticality always go hand in hand. They don't, as you can't have high criticality, but you have "super-criticality" - and generally speaking, though perhaps not absolutely, super-criticality would be consistent with high entropy. In your work, you have occasionally pondered upon what your findings suggest as to what the broad structure of the brain is. You have notably advanced that two models of the brain can shed very interesting light on psychedelics: the "free-energy principle" put forth by Karl Friston (2010; 2006) and the "reducing valve" model proposed by Aldous Huxley (1954). In your seminal study you seem to suggest that these two models are in fact almost identical (Carhart-Harris et al. 2012, p. 2142). Huxley's model was explicitly inspired by Charlie D. Broad (1953, chap. 1), and Broad himself borrowed the "reducing valve" metaphor from Henri Bergson (1994 [1896]). Now, if we look at it closely enough, the model endorsed by Bergson, Broad and Huxley is arguably quite different from that defended by Friston. Bergson's key idea is that the default state of the brain is that of being overwhelmed by sensory data coming from the world; the brain's function is thus to diminish the amount of sensory data reaching consciousness. This view straightforwardly contradicts Kant's transcendental idealism: by and large, Kant says that the data coming from the world are poor and that the brain later enrich them; on the contrary, Huxley, Broad and Bergson claim that the data coming from the world are too rich to be processed by a normal brain and that the brain is precisely there to filter the massive surge of data coming from the world. R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 13 In this regard, Friston's model seems to fundamentally differ from that advanced by Bergson and his followers. The free-energy and predictive coding framework has it that prediction comes first and prediction errors (sensory data coming from the world) come next to rectify and update top-down predictions. While in Bergson's model the brain is simply a filter which cannot by itself generate any conscious representation (the richness of representations is to be found in the world), in Friston's model, the brain is notoriously able to generate conscious representation and it is even able to do so before getting any sensory feedback. In other words, the free-energy and predictive view contends that the role of the world is corrective and that the role of the brain is constitutive whereas Bergson, Broad and Huxley hold exactly the opposite view: for them, the world is constitutive and the brain is simply corrective. Do you agree with the distinctions drawn here between Bergson's model and Friston's model? Five years after your seminal study, do you tend to think that the "reducing valve" model provides the best account of psychedelics or that the "predictive" model does a better job? Friston is a leading contemporary neuroscientist whose free-energy principle is an elegant, empirically-informed model of how the brain works. Huxley was a brilliant author and philosopher but not a neuroscientist. The reducing valve idea is quite nice as a metaphor but I think people take it too literally and sometimes even want to use it in a sort of pseudo-scientific way, to suggest that there is a filter that stops us seeing what's really "out-there" in a matrix-esque kind of way. If the metaphor is useful however, it's useful because it proposes that "the brain, in main, is eliminative rather than productive". That idea is consistent with the free- energy principle because top-down inferences work to explain bottom-up sensory information - so there's some functional suppression going on but suppression in the sense of predictive processing. Basically, I wouldn't worry too much about Bergson, Broad and Huxley or indeed Kant when it comes to a contemporary account of how the brain works. It's best to see where the field is now, and Friston's free-energy model is one of the best the field has. In your opinion, what are the next steps for psychedelics research? There's so much but better predicting response to the psychedelics is a good example of one potentially fruitful area. R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 14 References Adams, R., Brown, H., \& Friston, K. (2015). Bayesian inference, predictive coding and delusions. Avant: Trends in Interdisciplinary Studies, 5(3). Apps, M. A. J., \& Tsakiris, M. (2014). The free-energy self: a predictive coding account of self-recognition. Neuroscience and Biobehavioral Reviews, 41, 85-97. Beggs, J. M., \& Plenz, D. (2003). Neuronal avalanches in neocortical circuits. The Journal of Neuroscience, 23(35), 11167-11177. Bergson, H. (1994 [1896]). Matter and memory. New York: Zone Books. Blanke, O., \& Metzinger, T. (2009). Full-body illusions and minimal phenomenal selfhood. Trends in Cognitive Sciences, 13(1), 7-13. Broad, C. D. (1953). Religion, Philosophy and Psychical Research. London: Routledge / Kegan Paul. Carhart-Harris, R., Erritzoe, D., Williams, T., Stone, J. M., Reed, L. J., Colasanti, A., ... Nutt, D. J. (2012). Neural correlates of the psychedelic state as determined by fMRI studies with psilocybin. Proceedings of the National Academy of Sciences, 109(6), 2138- 2143. Carhart-Harris, R., \& Friston, K. (2010). The default-mode, ego-functions and free-energy: a neurobiological account of Freudian ideas. Brain: A Journal of Neurology, 133, 1265- 1283. Carhart-Harris, R., Leech, R., Hellyer, P., Shanahan, M., Feilding, A., Tagliazucchi, E., ... Nutt, D. (2014). The entropic brain: A theory of conscious states informed by neuroimaging research with psychedelic drugs. Frontiers in Human Neuroscience, 8. Carhart-Harris, R., Mayberg, H., Malizia, A., \& Nutt, D. (2008). Mourning and melancholia revisited: correspondences between principles of Freudian metapsychology and empirical findings in neuropsychiatry. Annals of General Psychiatry, 7, 9. 9 Carhart-Harris, R., Muthukumaraswamy, S., Roseman, L., Kaelen, M., Droog, W., Murphy, K., ... Nutt, D. (2016). Neural correlates of the LSD experience revealed by multimodal neuroimaging. Proceedings of the National Academy of Sciences, 113(17), 4853-4858. Chialvo, D., Balenzuela, P., \& Fraiman, D. (2008). The brain: What is critical about it? Conf. Proc. Am. Inst. Phys., 1028, 28-45. Christoff, K., Cosmelli, D., Legrand, D., \& Thompson, E. (2011). Specifying the self for cognitive neuroscience. Trends in Cognitive Sciences, 15(3), 104-112. Csikszentmihalyi, M., \& Larson, R. (1987). Validity and reliability of the experience- sampling method. The Journal of Nervous and Mental Disease, 175(9), 526-536. Doria, V., Beckmann, C., Arichi, T., Merchant, N., Groppo, M., Turkheimer, F., ... Edwards, D. (2010). Emergence of resting state networks in the preterm human brain. R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 15 Proceedings of the National Academy of Sciences of the United States of America, 107(46), 20015-20020. Fletcher, P., \& Frith, C. (2009). Perceiving is believing: a Bayesian approach to explaining the positive symptoms of schizophrenia. Nature Reviews Neuroscience, 10(1), 48-58. Fox, M. D., Zhang, D., Snyder, A. Z., \& Raichle, M. E. (2009). The global signal and observed anticorrelated resting state brain networks. Journal of Neurophysiology, 101(6), 3270- 3283. Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127-138. Friston, K., Kilner, J., \& Harrison, L. (2006). A free energy principle for the brain. Journal of Physiology - Paris, 100(1-3), 70-87. Halloy, A. (2015). Divinites incarnees: L'apprentissage de la possession dans un culte afro-bresilien. Paris: PETRA. Huxley, A. (1954). The Doors of Perception and Heaven and Hell. London: Harper \& Brothers. Jaynes, J. (1990). The origin of consciousness in the breakdown of the bicameral mind. New York: Houghton Mifflin. Laughlin, C. D. (2011). Communing with the Gods: Consciousness, culture and the dreaming brain. Brisbane: Daily Grail. Lebedev, A. V., Lovden, M., Rosenthal, G., Feilding, A., Nutt, D. J., \& Carhart-Harris, R. L. (2015). Finding the self by losing the self: Neural correlates of ego-dissolution under psilocybin. Human Brain Mapping, 36(8), 3137-3153. Leech, R., Scott, G., Carhart-Harris, R., Turkheimer, F., Taylor-Robinson, S., \& Sharp, D. (2014). Spatial Dependencies between large-scale brain networks. PLOS ONE, 9(6). Limanowski, J., \& Blankenburg, F. (2013). Minimal self-models and the free energy principle. Frontiers in Human Neuroscience, 7. Luhrmann, T. (2012). When God talks back: Understanding the American evangelical relationship with God. New York: Alfred Knopf. Mantini, D., Gerits, A., Nelissen, K., Durand, J.-B., Joly, O., Simone, L., ... Vanduffel, W. (2011). Default Mode of Brain Function in Monkeys. The Journal of Neuroscience : The Official Journal of the Society for Neuroscience, 31(36), 12954-12962. Morcom, A., \& Fletcher, P. (2007). Does the brain have a baseline? Why we should be resisting a rest. NeuroImage, 37(4), 1073-1082. Murphy, K., Birn, R. M., Handwerker, D. A., Jones, T. B., \& Bandettini, P. A. (2009). The impact of global signal regression on resting state correlations: Are anti-correlated networks introduced? NeuroImage, 44(3), 893-905. Muthukumaraswamy, S., Carhart-Harris, R., Moran, R., Brookes, M., Williams, T., Errtizoe, D., ... Nutt, D. (2013). Broadband cortical desynchronization underlies the human psychedelic state. Journal of Neuroscience, 33(38), 15171-15183. R. Carhart-Harris - Psychedelics and Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 16 Palhano-Fontes, F., Andrade, K. C., Tofoli, L. F., Santos, A. C., Crippa, J. A. S., Hallak, J. E. C., ... Araujo, D. B. de. (2015). The psychedelic state induced by ayahuasca modulates the activity and connectivity of the default mode network. PLOS ONE, 10(2), e0118143. Ramus, F. (2013). What's the point of neuropsychoanalysis? The British Journal of Psychiatry, 203, 70-71. Roseman, L., Sereno, M., Leech, R., Kaelen, M., Orban, C., McGonigle, J., ... Carhart- Harris, R. (2016). LSD alters eyes-closed functional connectivity within the early visual cortex in a retinotopic fashion. Human Brain Mapping, 37(8), 3031-3040. Shanon, B. (2002). The antipodes of the mind: Charting the phenomenology of the ayahuasca experience. New York: Oxford University Press. Taves, A. (2009). Religious experience reconsidered: A building-block approach to the study of religion and other special things. Princeton NJ/Oxford: Princeton University Press. Vollenweider, F., Leenders, K., Scharfetter, C., Maguire, P., Stadelmann, O., \& Angst, J. (1997). Positron Emission Tomography and Fluorodeoxyglucose Studies of Metabolic Hyperfrontality and Psychopathology in the Psilocybin Model of Psychosis. Neuropsychopharmacology, 16(5), 357-372. Zahavi, D. (2014). Self and Other: Exploring Subjectivity, Empathy, and Shame. Oxford University Press.\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \fill[ALIUSC1F8135] (376.840bp,-154.120bp) rectangle ++(118.560bp,-0.240bp);
+  \fill[ALIUSC1F8135] (376.840bp,-214.120bp) rectangle ++(80.880bp,-0.240bp);
+  \fill[ALIUSC1F8135] (376.840bp,-274.120bp) rectangle ++(140.160bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (371.080bp,-130.840bp) rectangle ++(0.240bp,-126.240bp);
+  \fill[ALIUSCBFBFBF] (371.080bp,-257.080bp) rectangle ++(0.240bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (371.080bp,-259.240bp) rectangle ++(0.240bp,-37.200bp);
+  \ALIUSPlacedTextContent{517.900}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{1}
+  \ALIUSPlacedTextContent{71.080}{71.099}{280.602}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Psychedelics and consciousness}
+  \ALIUSPlacedTextContent{376.840}{130.740}{104.426}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Robin Carhart-Harris}
+  \ALIUSPlacedTextContent{69.160}{130.806}{125.486}{ALIUSC000000}{\ALIUSFontLatoLight}{15.840}{An interview with}
+  \ALIUSPlacedTextContent{376.840}{144.155}{121.925}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{r.carhart-harris@imperial.ac.uk}
+  \ALIUSPlacedTextContent{69.160}{150.046}{176.443}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Robin Carhart-Harris}
+  \ALIUSPlacedTextContent{376.840}{154.955}{151.124}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Centre for Neuropsychopharmacology}
+  \ALIUSPlacedTextContent{376.840}{165.755}{112.717}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Imperial College, London, UK}
+  \ALIUSPlacedTextContent{69.160}{184.768}{213.324}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Martin Fortier and Raphaël Millière}
+  \ALIUSPlacedTextContent{376.840}{190.740}{71.262}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Martin Fortier}
+  \ALIUSPlacedTextContent{376.840}{204.155}{82.654}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{martin.fortier@ens.fr}
+  \ALIUSPlacedTextContent{376.840}{214.955}{74.000}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Institut Jean Nicod}
+  \ALIUSPlacedTextContent{376.840}{225.755}{101.584}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{ENS/EHESS, Paris, France}
+  \ALIUSPlacedTextContent{376.840}{250.740}{80.557}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Raphaël Millière}
+  \ALIUSPlacedTextContent{69.160}{259.608}{298.866}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{Citation: Carhart-Harris, R., Fortier, M., \& Millière, R. (2017).}
+  \ALIUSPlacedTextContent{376.840}{264.155}{141.863}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{raphael.milliere@philosophy.ox.ac.uk}
+  \ALIUSPlacedTextContent{69.160}{271.608}{296.952}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{Psychedelics and consciousness. An interview with Robin Carhart-}
+  \ALIUSPlacedTextContent{376.840}{274.955}{83.333}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Faculty of Philosophy}
+  \ALIUSPlacedTextContent{69.160}{283.608}{30.908}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{Harris.}
+  \ALIUSPlacedTextContent{100.104}{283.608}{57.395}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.840}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{157.588}{283.608}{3.874}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{,}
+  \ALIUSPlacedTextContent{161.492}{283.608}{5.707}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.840}{1}
+  \ALIUSPlacedTextContent{167.292}{283.608}{26.577}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{, 1-16.}
+  \ALIUSPlacedTextContent{376.840}{285.755}{96.346}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{University of Oxford, UK}
+  \ALIUSPlacedTextContent{71.080}{357.727}{277.545}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What got you interested in the topic of psychedelics?}
+  \ALIUSPlacedTextContent{71.080}{387.498}{456.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It was an interest in the mind. At the time (about 12 years ago), I felt that my}
+  \ALIUSPlacedTextContent{71.080}{404.538}{456.426}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{curiosity about the mind could be best satisfied by a study of psychoanalysis, so I}
+  \ALIUSPlacedTextContent{71.080}{421.578}{456.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{was studying psychoanalysis for a master's degree. Someway in, I began to realize}
+  \ALIUSPlacedTextContent{71.080}{438.378}{456.596}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that the main methods of psychoanalysis to access the 'unconscious mind' are}
+  \ALIUSPlacedTextContent{71.080}{455.418}{456.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unreliable. The existence of the unconscious mind is a cornerstone of psychoanalytic}
+  \ALIUSPlacedTextContent{71.080}{472.458}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{theory - yet its existence is largely denied or at least neglected by mainstream}
+  \ALIUSPlacedTextContent{71.080}{489.258}{456.502}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychology and psychiatry. Dreaming is perhaps psychoanalysis' most valued}
+  \ALIUSPlacedTextContent{71.080}{506.298}{456.376}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{window in on 'the unconscious' but dreaming happens during sleep and it is easy to}
+  \ALIUSPlacedTextContent{71.080}{523.338}{456.437}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{forget or confabulate our dream material. Free association also seemed vague and}
+  \ALIUSPlacedTextContent{71.080}{540.138}{456.416}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unreliable, so I felt compelled to ask whether anything else had been considered as}
+  \ALIUSPlacedTextContent{71.080}{557.178}{456.434}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a way of altering the structure of the mind in such a way that access to 'the}
+  \ALIUSPlacedTextContent{71.080}{574.218}{456.537}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unconscious' could be facilitated. At the time, I was somewhat ambivalent about}
+  \ALIUSPlacedTextContent{71.080}{591.018}{456.505}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoanalysis. It felt like its main tenets had substance but there was also a lot of}
+  \ALIUSPlacedTextContent{71.080}{608.058}{456.508}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{philosophical noise getting in the way of what I saw as a much more fundamental}
+  \ALIUSPlacedTextContent{71.080}{624.858}{456.476}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{problem, namely testing and potentially demonstrating that the basic constructs of}
+  \ALIUSPlacedTextContent{71.080}{641.898}{129.925}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoanalysis, such as}
+  \ALIUSPlacedTextContent{202.363}{641.898}{48.791}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{repression}
+  \ALIUSPlacedTextContent{251.207}{641.898}{6.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{,}
+  \ALIUSPlacedTextContent{258.919}{641.898}{35.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{the ego}
+  \ALIUSPlacedTextContent{294.392}{641.898}{31.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, and}
+  \ALIUSPlacedTextContent{326.993}{641.898}{108.872}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{the unconscious mind}
+  \ALIUSPlacedTextContent{435.892}{641.898}{91.659}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'exist' and have}
+  \ALIUSPlacedTextContent{71.080}{658.938}{456.570}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{substance in both a psychological and biological sense. I felt psychoanalysis needed}
+  \ALIUSPlacedTextContent{71.080}{675.738}{456.391}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to get its act together and better demonstrate these things otherwise it could make}
+  \ALIUSPlacedTextContent{71.080}{692.778}{456.445}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{no real scientific progress and would instead remain insular and somewhat}
+  \ALIUSPlacedTextContent{71.080}{709.818}{456.417}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{disconnected from mainstream science. I entertained the idea that a drug might exist}
+  \ALIUSPlacedTextContent{71.080}{726.618}{456.632}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that could alter the topography of the mind to aid access to the unconscious and}
+  \ALIUSPlacedTextContent{71.080}{743.658}{248.402}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{then I discovered Stanislav Grof's book,}
+  \ALIUSPlacedTextContent{325.271}{743.658}{205.525}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Realms of the Human Unconscious:}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{2}
+  \ALIUSPlacedTextContent{71.080}{70.938}{168.826}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Observations from LSD Research}
+  \ALIUSPlacedTextContent{239.929}{70.938}{287.649}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, and I thought - here it is! The most logical thing}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.405}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{from there seemed to be to take this to brain imaging and measure what's going on}
+  \ALIUSPlacedTextContent{71.080}{105.018}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in the brain as the unconscious mind is accessed under LSD or a similar drug - and}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.543}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that's basically the idea I took to David Nutt, then Professor of Psychopharmacology}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{at the University of Bristol, as a PhD proposal. Although I've never managed to work}
+  \ALIUSPlacedTextContent{71.080}{155.898}{343.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on that specific project, I'm a lot closer than I was 12 years ago.}
+  \ALIUSPlacedTextContent{71.080}{184.927}{455.654}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In addition to neuroscience, you studied psychoanalysis. Do you think some of the}
+  \ALIUSPlacedTextContent{71.080}{202.206}{447.167}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{hypotheses of psychoanalysis on the human mind are relevant for scientific research?}
+  \ALIUSPlacedTextContent{71.080}{231.258}{24.985}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Yes.}
+  \ALIUSPlacedTextContent{71.080}{260.527}{455.596}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{It seems fair to say that you are one of the proponents of neuropsychoanalysis (e.g.,}
+  \ALIUSPlacedTextContent{71.080}{277.807}{169.584}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Carhart-Harris \& Friston, 2010)}
+  \ALIUSPlacedTextContent{240.671}{279.202}{3.245}{ALIUSC1F8135}{\ALIUSFontCormorantRegular}{12.480}{.}
+  \ALIUSPlacedTextContent{71.080}{307.338}{81.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In a sense, yes.}
+  \ALIUSPlacedTextContent{71.080}{336.607}{455.615}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Some authors (e.g., Ramus, 2013) have worried that the neuropsychoanalytic research}
+  \ALIUSPlacedTextContent{71.080}{353.887}{455.584}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{program might be a nonstarter, because it amounts to projecting neuroscientific}
+  \ALIUSPlacedTextContent{71.080}{370.927}{387.402}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{discoveries onto psychoanalytic concepts (but not the other way around).}
+  \ALIUSPlacedTextContent{71.080}{399.978}{456.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The relationship should be circular to be healthiest. Arguably, psychoanalysis hasn't}
+  \ALIUSPlacedTextContent{71.080}{417.018}{456.298}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{made any discoveries for quite some time though. Perhaps what psychoanalysis had}
+  \ALIUSPlacedTextContent{71.080}{434.058}{456.422}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to tell us, has already been told, and mostly just by a very select number of people}
+  \ALIUSPlacedTextContent{71.080}{450.858}{158.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(e.g. Freud, Jung and Klein).}
+  \ALIUSPlacedTextContent{71.080}{480.127}{455.585}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{The worry, then, is that in neuropsychoanalysis, neuroscience does inform}
+  \ALIUSPlacedTextContent{71.080}{497.407}{364.807}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{psychoanalysis, but psychoanalysis hardly ever informs neuroscience.}
+  \ALIUSPlacedTextContent{71.080}{526.458}{456.447}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It may inform or even replace cognitive explanations however. I suppose the point}
+  \ALIUSPlacedTextContent{71.080}{543.258}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is, psychoanalysis isn't discovering in the same way as neuroscience is, because its}
+  \ALIUSPlacedTextContent{71.080}{560.298}{456.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'discoveries' were made many years ago, and through observation but not in a}
+  \ALIUSPlacedTextContent{71.080}{577.338}{296.958}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{controlled and systematic way (unlike neuroscience).}
+  \ALIUSPlacedTextContent{71.080}{606.367}{455.599}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Sceptics might nonetheless argue that the two domains are not mutually enriching. Do}
+  \ALIUSPlacedTextContent{71.080}{623.646}{111.429}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{you think this is true?}
+  \ALIUSPlacedTextContent{71.080}{652.698}{456.451}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Not necessarily. I think psychoanalysis can provide enriching explanations for things}
+  \ALIUSPlacedTextContent{71.080}{669.738}{320.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that cognitive psychology and neuroscience struggle with.}
+  \ALIUSPlacedTextContent{71.080}{698.766}{455.585}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In the same line of skepticism, do you agree that only neuroscience (owing to its}
+  \ALIUSPlacedTextContent{71.080}{716.047}{323.490}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{scientific research methods) brings new findings on the table?}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{3}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Yes, these days only neuroscience brings new findings to the table but because I}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.464}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{believe psychoanalysis can offer a richer (arguably the richest) account of the human}
+  \ALIUSPlacedTextContent{71.080}{105.018}{456.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind and condition, I think it has useful things to say about certain neuroscientific}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.469}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{discoveries. I accept it doesn't bring anything new but what it brings that is 'old' is}
+  \ALIUSPlacedTextContent{71.080}{138.858}{206.716}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{still deeply resonant and informative.}
+  \ALIUSPlacedTextContent{99.430}{167.898}{428.066}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Let's take the example of the 'discovery' of the default-mode network (DMN)}
+  \ALIUSPlacedTextContent{71.080}{184.698}{456.463}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for example, around the turn of the millennia. Cognitive neuroscientists have}
+  \ALIUSPlacedTextContent{71.080}{201.738}{456.610}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{struggled with this system as they can't easily identify what its main function is. It}
+  \ALIUSPlacedTextContent{71.080}{218.778}{456.450}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{seems to be involved in either too much or nothing specific at all. Some have even}
+  \ALIUSPlacedTextContent{71.080}{235.578}{456.487}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{challenged whether the approach of studying 'resting-state' brain activity (the}
+  \ALIUSPlacedTextContent{71.080}{252.618}{456.485}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{approach that helped develop the notion of a 'default-mode') is really meaningful at}
+  \ALIUSPlacedTextContent{71.080}{269.418}{456.424}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{all or even consistent with what cognitive neuroscience is 'meant to be doing'}
+  \ALIUSPlacedTextContent{71.080}{286.458}{456.486}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Morcom and Fletcher, 2007). Terms like 'stimulus independent thought' been used}
+  \ALIUSPlacedTextContent{71.080}{303.498}{456.403}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in reference to the network and its functioning, which are telling more about the}
+  \ALIUSPlacedTextContent{71.080}{320.298}{456.419}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{priorities of cognitive psychology and its behaviorist counterpart than about the}
+  \ALIUSPlacedTextContent{71.080}{337.338}{456.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{phenomena in question. I think it's more interesting to speculate about and endeavor}
+  \ALIUSPlacedTextContent{71.080}{354.378}{456.581}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to sample the nature and content of spontaneous cognition, and tools such as}
+  \ALIUSPlacedTextContent{71.080}{371.178}{456.454}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'experience sampling' (Csikszentmihalyi and Larson, 1987), psychedelics, and}
+  \ALIUSPlacedTextContent{71.080}{388.218}{456.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroimaging may prove to be a powerful combination in this respect. True, the}
+  \ALIUSPlacedTextContent{71.080}{405.258}{456.469}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{DMN may serve some essential physiological functions (Leech et al., 2014), and}
+  \ALIUSPlacedTextContent{71.080}{422.058}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{granted, rudimentary prototypes of the adult human DMN may be observable in}
+  \ALIUSPlacedTextContent{71.080}{439.098}{456.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lower species (Mantini et al., 2011) and infants (Doria et al., 2010) but laying the}
+  \ALIUSPlacedTextContent{71.080}{456.138}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{emphasis here seems more about evading the problem than tackling it – and}
+  \ALIUSPlacedTextContent{71.080}{472.938}{456.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{moreover, these things needn't be inconsistent with psychoanalytic conceptions of}
+  \ALIUSPlacedTextContent{71.080}{489.978}{456.358}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind-function – such as the idea that the ego offers a reserve of energy that can be}
+  \ALIUSPlacedTextContent{71.080}{506.778}{335.164}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'invested' in 'objects' of interest (Carhart-Harris et al., 2008).}
+  \ALIUSPlacedTextContent{122.440}{532.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{140.200}{550.793}{291.812}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{If you want to look for 'the unconscious' in the}
+  \ALIUSPlacedTextContent{140.200}{568.793}{284.386}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{brain, you probably needn't look far from the}
+  \ALIUSPlacedTextContent{140.200}{586.793}{304.107}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{DMN and particularly its subcortical/paralimbic}
+  \ALIUSPlacedTextContent{140.200}{604.313}{310.552}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{components, such as the extended hippocampus.}
+  \ALIUSPlacedTextContent{449.320}{604.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{99.430}{651.738}{428.107}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In 2008 (Carhart-Harris et al., 2008) and later in 2010 (Carhart-Harris \&}
+  \ALIUSPlacedTextContent{71.080}{668.538}{456.520}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Friston, 2010) and more recently (Carhart-Harris et al., 2014), I proposed that the}
+  \ALIUSPlacedTextContent{71.080}{685.578}{456.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{default-mode network may relate to 'the ego' system, as described by Sigmund}
+  \ALIUSPlacedTextContent{71.080}{702.618}{456.449}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Freud. That hypothesis seems to have been quite popular (e.g. the 2010 paper with}
+  \ALIUSPlacedTextContent{71.080}{719.418}{456.498}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Karl Friston has been cited over 250 times) and I still feel relatively comfortable}
+  \ALIUSPlacedTextContent{71.080}{736.458}{456.370}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about having proposed it. All I would want to do now to qualify it, would be to say}
+  \ALIUSPlacedTextContent{71.080}{753.498}{456.515}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that in Freudian theory, in health, 'the unconscious' is largely continuous with the}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{4}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.460}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ego and the ego can contain much that is of 'the unconscious', just as the unconscious}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.520}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contains much of the ego, i.e. they are not so clearly differentiable from each other}
+  \ALIUSPlacedTextContent{71.080}{105.018}{456.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and exist instead, in relative harmony. It is in ill health that the systems are in}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conflict. The point I'd like to make here, is that if you want to look for 'the}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.498}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unconscious' in the brain, you probably needn't look far from the DMN and}
+  \ALIUSPlacedTextContent{71.080}{155.898}{456.419}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particularly its subcortical/paralimbic component/s, such as the extended}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.441}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hippocampus. If you'd rather stick to cognitive or non-psychoanalytic terms when}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{talking about these systems, e.g. proposing that the DMN is related to 'the narrative}
+  \ALIUSPlacedTextContent{71.080}{206.778}{456.429}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{self' – then that's fine, I wouldn't want to argue with that – but at least know that}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoanalysis has talked about these systems in depth for over a century (Freud,}
+  \ALIUSPlacedTextContent{71.080}{240.618}{456.480}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{1927; Freud, Strachey, \& Freud, 2001) and may offer a level of explanation that you}
+  \ALIUSPlacedTextContent{71.080}{257.418}{456.398}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might find surprisingly useful and informative. Also, if you're going to judge}
+  \ALIUSPlacedTextContent{71.080}{274.458}{456.406}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoanalysis and particularly Freudian theory, judge it directly by going to his}
+  \ALIUSPlacedTextContent{71.080}{291.498}{251.753}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{original work and not to interpretations of it.}
+  \ALIUSPlacedTextContent{71.080}{320.527}{455.675}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{How do you think psychedelics research can contribute to the search for the neural}
+  \ALIUSPlacedTextContent{71.080}{337.807}{155.138}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{correlates of consciousness?}
+  \ALIUSPlacedTextContent{71.080}{366.858}{456.419}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Psychedelics alter 'consciousness' in a marked and novel way. Most studies of}
+  \ALIUSPlacedTextContent{71.080}{383.898}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness address the problem of consciousness via looking at states of reduced}
+  \ALIUSPlacedTextContent{71.080}{400.698}{456.476}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness, e.g. anesthesia, sleep, brain injury and/or illness. Psychedelics do not}
+  \ALIUSPlacedTextContent{71.080}{417.738}{456.441}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{really reduce the level of wakefulness or alertness but they do fundamentally alter}
+  \ALIUSPlacedTextContent{71.080}{434.778}{456.417}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the quality of consciousness. Psychedelics can also help motivate a more nuanced}
+  \ALIUSPlacedTextContent{71.080}{451.578}{456.367}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{version of the question, 'what are the neural correlates of consciousness?' Because if}
+  \ALIUSPlacedTextContent{71.080}{468.618}{456.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{you look at that question critically, it's pretty vague, i.e. the definition of}
+  \ALIUSPlacedTextContent{71.080}{485.658}{456.551}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness is pretty vague. The dominant one is 'consciousness is that which is}
+  \ALIUSPlacedTextContent{71.080}{502.458}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lost when we fall into dreamless sleep and returns when we wake' but I would}
+  \ALIUSPlacedTextContent{71.080}{519.498}{456.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{challenge that and say instead that what is lost and returns either side of dreamless}
+  \ALIUSPlacedTextContent{71.080}{536.538}{456.454}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sleep is actually more or less the whole of the mind, and the whole of the mind is not}
+  \ALIUSPlacedTextContent{71.080}{553.338}{107.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{just consciousness.}
+  \ALIUSPlacedTextContent{71.080}{582.607}{297.873}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What is your general view on the topic of consciousness?}
+  \ALIUSPlacedTextContent{71.080}{611.658}{456.483}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It needs to better define its terms. If the field of 'consciousness research' clarified}
+  \ALIUSPlacedTextContent{71.080}{628.458}{456.440}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that the reason we're really interested in consciousness is because we're}
+  \ALIUSPlacedTextContent{71.080}{645.498}{235.652}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{wonderstruck about the complex nature of}
+  \ALIUSPlacedTextContent{306.709}{645.498}{34.778}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{human}
+  \ALIUSPlacedTextContent{341.526}{645.498}{185.984}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness and want to better}
+  \ALIUSPlacedTextContent{71.080}{662.538}{456.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understand its basis in the brain, then that would be a good start, because then we}
+  \ALIUSPlacedTextContent{71.080}{679.338}{456.432}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{could focus on humans and how they differ from other animals and perhaps realize}
+  \ALIUSPlacedTextContent{71.080}{696.378}{456.427}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that the existence of 'the ego' is quite a fundamental difference. After that, we might}
+  \ALIUSPlacedTextContent{71.080}{713.418}{456.483}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{realize that rather than aimlessly studying 'consciousness' and approaching it from}
+  \ALIUSPlacedTextContent{71.080}{730.218}{456.460}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the same old vantage of reduced states of consciousness, we might better focus on}
+  \ALIUSPlacedTextContent{71.080}{747.258}{456.424}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{self-consciousness and its neural correlates. A stronger focus on self-consciousness}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{5}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and the nature of the self as a system (i.e. 'the ego' in psychoanalytic terminology)}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{would help along the initiative of trying to better understand the brain basis of}
+  \ALIUSPlacedTextContent{71.080}{105.018}{456.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{human consciousness – and why human consciousness is special. I think the}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.600}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{endeavor to better understand the brain basis of 'consciousness' is too vague a}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.515}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{question/problem, and unless I'm missing something (which I may be), I don't think}
+  \ALIUSPlacedTextContent{71.080}{155.898}{456.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it's going to come to much. It may sound anthropocentric but I think we need to}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.463}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{better admit/acknowledge that the real motivator driving enthusiasm for}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'consciousness research' is the promise of understanding why and how the human}
+  \ALIUSPlacedTextContent{71.080}{206.778}{456.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind is different to that of other animals – and why/how we can reflect on our own}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.530}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thought and behavior. I'm actually open to the idea that it is something relatively}
+  \ALIUSPlacedTextContent{71.080}{240.618}{456.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recently learned or acquired though, as was argued by Julian Jaynes (1990). Jaynes'}
+  \ALIUSPlacedTextContent{71.080}{257.418}{456.441}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stuff about the breakdown of hemispheric separation, I'm less convinced about}
+  \ALIUSPlacedTextContent{71.080}{274.458}{456.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{however, but the idea that (reflective) consciousness is a relatively recent acquisition}
+  \ALIUSPlacedTextContent{71.080}{291.498}{401.997}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the human mind, is a fascinating one – and has some intuitive appeal.}
+  \ALIUSPlacedTextContent{71.080}{320.527}{455.585}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Do you endorse any of the following approaches to consciousness: a topological}
+  \ALIUSPlacedTextContent{71.080}{337.807}{455.706}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{approach (claiming that there is an area of consciousness), an electrophysiological}
+  \ALIUSPlacedTextContent{71.080}{355.087}{455.700}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{approach (claiming that consciousness consists of a specific rhythm of neural activity),}
+  \ALIUSPlacedTextContent{71.080}{372.367}{455.668}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{or a reticular approach (claiming that consciousness consists of a specific connectivity}
+  \ALIUSPlacedTextContent{71.080}{389.647}{164.888}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{between and within networks)?}
+  \ALIUSPlacedTextContent{71.080}{418.698}{456.576}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{If any of those, it would be the last one, but like I said, I think you need to start with}
+  \ALIUSPlacedTextContent{71.080}{435.498}{456.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a clearer definition of what the problem is, i.e. 'what is consciousness'? Are we}
+  \ALIUSPlacedTextContent{71.080}{452.538}{456.364}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{talking about the reflective capacity of healthy adult humans? If yes, then I vote for}
+  \ALIUSPlacedTextContent{71.080}{469.578}{453.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{focusing on the DMN and how it interacts with the rest of the brain. DMN-}
+  \ALIUSPlacedTextContent{71.080}{486.378}{456.369}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{parahippocampal interactions are of particular interest to me in this regard. I}
+  \ALIUSPlacedTextContent{71.080}{503.418}{456.416}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{wouldn't want to say that the DMN as an object in isolation is consciousness or}
+  \ALIUSPlacedTextContent{71.080}{520.458}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{indeed 'the ego', but I would advise that we study its behavior, and how it develops,}
+  \ALIUSPlacedTextContent{71.080}{537.258}{456.422}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{how its constituent parts combine to form a gestalt – and how this gestalt interacts}
+  \ALIUSPlacedTextContent{71.080}{554.298}{456.445}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with others in the brain, and how the interaction of these gestalts relates to}
+  \ALIUSPlacedTextContent{71.080}{571.338}{444.460}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subjective phenomena that we feel and can (mostly) be conscious of, and report.}
+  \ALIUSPlacedTextContent{71.080}{600.367}{455.744}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{How do you interpret the seeming discrepancy between Vollenweider et al.'s study}
+  \ALIUSPlacedTextContent{71.080}{617.646}{455.639}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{(1997) and your own study (Carhart-Harris et al., 2012) regarding the effect of}
+  \ALIUSPlacedTextContent{71.080}{634.927}{189.712}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{psilocybin on frontal cortex activity?}
+  \ALIUSPlacedTextContent{71.080}{663.978}{188.663}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is covered in our more recent}
+  \ALIUSPlacedTextContent{259.545}{663.978}{30.996}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{PNAS}
+  \ALIUSPlacedTextContent{290.568}{663.978}{240.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{paper on LSD (Carhart-Harris et al., 2016).}
+  \ALIUSPlacedTextContent{71.080}{693.007}{455.383}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In your seminal paper you pinpoint the difference in recording techniques (PET vs.}
+  \ALIUSPlacedTextContent{71.080}{710.286}{455.663}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{fMRI) as possibly explaining why one observes such a discrepancy between your}
+  \ALIUSPlacedTextContent{71.080}{727.566}{455.622}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{findings and Vollenweider's: "this discrepancy relates to the fact that the radiotracer}
+  \ALIUSPlacedTextContent{71.080}{744.846}{455.619}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{used to measure glucose metabolism (18F-fluorodeoxyglucose) has a long half-life (110}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{6}
+  \ALIUSPlacedTextContent{71.080}{71.167}{455.618}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{min). Thus, the effects of psilocybin, as measured by PET, are over much greater}
+  \ALIUSPlacedTextContent{71.080}{88.446}{455.608}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{timescales than indexed by our fMRI measures" (Carhart-Harris et al. 2012, p. 2141).}
+  \ALIUSPlacedTextContent{71.080}{105.727}{455.575}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{This hypothesis is corroborated by a recent fMRI study of ayahuasca which also detects}
+  \ALIUSPlacedTextContent{71.080}{123.006}{305.704}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{a decrease in frontal activity (Palhano-Fontes et al., 2015).}
+  \ALIUSPlacedTextContent{71.080}{152.058}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Not really, as that mPFC decrease was task-related I think. A team working at Kings}
+  \ALIUSPlacedTextContent{71.080}{169.098}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{College London replicated our arterial spin labeled (ASL) intravenous psilocybin}
+  \ALIUSPlacedTextContent{71.080}{185.898}{375.376}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{study and found decreased blood flow however. As I say in the 2016}
+  \ALIUSPlacedTextContent{446.977}{185.898}{30.996}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{PNAS}
+  \ALIUSPlacedTextContent{478.000}{185.898}{49.522}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{paper, I}
+  \ALIUSPlacedTextContent{71.080}{202.938}{320.788}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think the discrepancy is due to the methods. Unless you are}
+  \ALIUSPlacedTextContent{391.306}{202.938}{32.601}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{au fait}
+  \ALIUSPlacedTextContent{423.930}{202.938}{103.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with the methods,}
+  \ALIUSPlacedTextContent{71.080}{219.738}{456.494}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it's easy to think brain imaging literally reads-out 'brain activity', but that isn't at all}
+  \ALIUSPlacedTextContent{71.080}{236.778}{456.450}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the case. The process of recording to analysis to brain images, involves a number of}
+  \ALIUSPlacedTextContent{71.080}{253.818}{456.362}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{assumptions, e.g. people often assume that the BOLD signal of fMRI is measuring}
+  \ALIUSPlacedTextContent{71.080}{270.618}{456.449}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain activity and similarly that the ASL signal represents brain activity – but that's}
+  \ALIUSPlacedTextContent{71.080}{287.658}{456.443}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not always the case. For example, a direct vascular action of a drug can interfere with}
+  \ALIUSPlacedTextContent{71.080}{304.698}{456.415}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the BOLD and ASL signal and give you a read-out that you misinterpret as being a}
+  \ALIUSPlacedTextContent{71.080}{321.498}{456.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{change in 'brain activity'. I think in the case of the cerebral blood flow (CBF)}
+  \ALIUSPlacedTextContent{71.080}{338.538}{456.472}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reductions that have been seen with intravenous psilocybin, it may represent an}
+  \ALIUSPlacedTextContent{71.080}{355.578}{456.490}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{initial vasoconstriction in the brain but it could also represent an initial change}
+  \ALIUSPlacedTextContent{71.080}{372.378}{406.567}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(reduction) in brain activity (when I say 'brain activity', I really mean}
+  \ALIUSPlacedTextContent{480.181}{372.378}{47.364}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{neuronal}
+  \ALIUSPlacedTextContent{71.080}{389.418}{38.287}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{activity}
+  \ALIUSPlacedTextContent{109.411}{389.418}{418.134}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{). The overlap between location of the CBF reductions and changes in}
+  \ALIUSPlacedTextContent{71.080}{406.458}{456.487}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{oscillatory power seen with intravenous psilocybin and MEG was quite remarkable}
+  \ALIUSPlacedTextContent{71.080}{423.258}{456.486}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{however (Muthukumaraswamy et al., 2013) – and importantly, the latter is a much}
+  \ALIUSPlacedTextContent{71.080}{440.298}{456.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more reliable and direct measure of brain activity. Basically, if you want this matter}
+  \ALIUSPlacedTextContent{71.080}{457.098}{456.359}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to be comprehensively resolved, you need to do a bit more work, perhaps in animals,}
+  \ALIUSPlacedTextContent{71.080}{474.138}{456.416}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{looking at vascular action of intravenous psilocybin. But I'm not sure it's a problem}
+  \ALIUSPlacedTextContent{71.080}{491.178}{456.505}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that is that important to worry about however, as the field has moved on, as have}
+  \ALIUSPlacedTextContent{71.080}{507.978}{456.468}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{our techniques, and we're now using better measures that more directly sample}
+  \ALIUSPlacedTextContent{71.080}{525.018}{456.451}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuronal activity, and these are yielding reliable results across drugs and study}
+  \ALIUSPlacedTextContent{71.080}{542.058}{456.572}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{teams. I would basically advise someone worried about this matter, not to worry, as}
+  \ALIUSPlacedTextContent{71.080}{558.858}{456.500}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consistent principles about the acute action of psychedelics on the brain are}
+  \ALIUSPlacedTextContent{71.080}{575.898}{325.117}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{emerging and will be shown to be quite reliable. Our 2016}
+  \ALIUSPlacedTextContent{396.984}{575.898}{30.996}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{PNAS}
+  \ALIUSPlacedTextContent{428.008}{575.898}{99.529}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{paper on LSD in}
+  \ALIUSPlacedTextContent{71.080}{592.938}{456.469}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the most comprehensive in the sense. In brief, look to the present and future for the}
+  \ALIUSPlacedTextContent{71.080}{609.738}{53.572}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{answer/s.}
+  \ALIUSPlacedTextContent{153.160}{625.048}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{170.680}{644.393}{255.802}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Increased PFC metabolism is not a good}
+  \ALIUSPlacedTextContent{170.680}{662.393}{247.599}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{explanation for how psychedelics work}
+  \ALIUSPlacedTextContent{415.240}{678.328}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{170.680}{679.913}{245.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{to produce their characteristic effects.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{7}
+  \ALIUSPlacedTextContent{71.080}{71.167}{455.845}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In addition to the recording technique, do you think that the mode of administration}
+  \ALIUSPlacedTextContent{71.080}{88.446}{455.499}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{could also explain the discrepancy: i.e., oral administration in Vollenweider's study vs.}
+  \ALIUSPlacedTextContent{71.080}{105.727}{212.050}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{intravenous administration in your own?}
+  \ALIUSPlacedTextContent{71.080}{134.778}{456.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Possibly. I feel pretty confident that increased PFC metabolism is not a good}
+  \ALIUSPlacedTextContent{71.080}{151.818}{456.616}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{explanation for how psychedelics work in the human brain to produce their}
+  \ALIUSPlacedTextContent{71.080}{168.618}{246.713}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characteristic psychological effects however.}
+  \ALIUSPlacedTextContent{71.080}{197.886}{455.450}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{On a related note, what are the potential limitations of fMRI imaging to study}
+  \ALIUSPlacedTextContent{71.080}{215.167}{455.566}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{psychedelics? More generally, what are the benefits and downsides of each available}
+  \ALIUSPlacedTextContent{71.080}{232.446}{379.512}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{monitoring techniques to study the activity of the brain on psychedelics?}
+  \ALIUSPlacedTextContent{71.080}{261.498}{456.572}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fMRI doesn't measure brain activity directly. Psychedelics may well have a direct}
+  \ALIUSPlacedTextContent{71.080}{278.298}{456.484}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vascular action and this could confound interpretations of some fMRI findings with}
+  \ALIUSPlacedTextContent{71.080}{295.338}{456.359}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics, such as CBF measures.  Fludeoxyglucose PET has very poor to no}
+  \ALIUSPlacedTextContent{71.080}{312.378}{459.805}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{temporal resolution and so provides little/no information about brain dynamics.}
+  \ALIUSPlacedTextContent{71.080}{329.178}{459.699}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Simultaneous EEG-fMRI is an important way forward and we're embracing that.}
+  \ALIUSPlacedTextContent{71.080}{346.218}{456.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Other techniques will likely also emerge in time.  For example, the temporal}
+  \ALIUSPlacedTextContent{71.080}{363.018}{320.770}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{resolution of fMRI is improving – something we might also}
+  \ALIUSPlacedTextContent{394.989}{363.018}{132.582}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{try to make the most of.}
+  \ALIUSPlacedTextContent{71.080}{380.058}{456.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dynamic EEG-fMRI measures twinned with experience sampling may be a powerful}
+  \ALIUSPlacedTextContent{71.080}{397.098}{335.636}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{way forward. Similarly, decoding methods could prove useful.}
+  \ALIUSPlacedTextContent{71.080}{426.127}{455.598}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Psychedelics researchers have emphasized the importance of set and setting, that is}
+  \ALIUSPlacedTextContent{71.080}{443.407}{455.763}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{the participant's state of mind and environment when the drug is administered. How do}
+  \ALIUSPlacedTextContent{71.080}{460.687}{455.712}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{you think set and setting could be modeled and controlled with more precision within}
+  \ALIUSPlacedTextContent{71.080}{477.967}{438.278}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{experimental studies, given the influence they have on the participant's experience?}
+  \ALIUSPlacedTextContent{71.080}{507.018}{456.527}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It's a challenge because you want to test 'set and setting' as variables but you also}
+  \ALIUSPlacedTextContent{71.080}{524.058}{456.529}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{want to maintain safety and certain ethical standards. Music offers a good means of}
+  \ALIUSPlacedTextContent{71.080}{540.858}{456.345}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modulating 'setting' and 'set' requires that we sample 'where people are at'}
+  \ALIUSPlacedTextContent{71.080}{557.898}{456.450}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychologically prior to the trip itself. This hasn't really been done properly yet – at}
+  \ALIUSPlacedTextContent{71.080}{574.698}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{least by us.  You could also try and manipulate expectations to manipulate set – and}
+  \ALIUSPlacedTextContent{71.080}{591.738}{456.436}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I suppose we've done that to an extent when looking at suggestibility – but far more}
+  \ALIUSPlacedTextContent{71.080}{608.778}{203.524}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{work could and should be done here.}
+  \ALIUSPlacedTextContent{71.080}{637.807}{455.438}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What are the difficulties of gathering reliable data about the subjective effects of}
+  \ALIUSPlacedTextContent{71.080}{655.086}{239.680}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{psychedelics, and how can they be overcome?}
+  \ALIUSPlacedTextContent{71.080}{684.138}{456.394}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Reports are given in retrospect and so can be unreliable and sensitive to biases.}
+  \ALIUSPlacedTextContent{71.080}{701.178}{456.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Subjective reports are difficult to obtain in real time however, as collecting them}
+  \ALIUSPlacedTextContent{71.080}{717.978}{456.437}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{will affect the experience and also language skills may be impaired under a potent}
+  \ALIUSPlacedTextContent{71.080}{735.018}{456.515}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{drug. One potential solution is 'experience sampling'. I'm quite keen to incorporate}
+  \ALIUSPlacedTextContent{71.080}{752.058}{456.576}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this into our work. I'm also aware of more sophisticated interviewing techniques}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{8}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that are being developed - which may be particularly useful.  Video and audio}
+  \ALIUSPlacedTextContent{71.080}{87.978}{318.014}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recording of sessions and interviews would also be useful.}
+  \ALIUSPlacedTextContent{71.080}{117.247}{455.451}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In order to chart the neurophenomenology of psychedelic experience, the}
+  \ALIUSPlacedTextContent{71.080}{134.526}{455.616}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{questionnaires you use resort to concepts such as "looking strange" or "having a}
+  \ALIUSPlacedTextContent{71.080}{151.566}{455.731}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{supernatural quality" and correlations are subsequently made between subjective}
+  \ALIUSPlacedTextContent{71.080}{168.846}{455.485}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{reports (the feeling that an experience was strange or supernatural) and}
+  \ALIUSPlacedTextContent{71.080}{186.127}{455.589}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{neurophysiological data (a certain pattern of neural activity). Now, concepts such as}
+  \ALIUSPlacedTextContent{71.080}{203.406}{455.585}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{that of strangeness or supernaturalness are notoriously ambiguous and likely to be}
+  \ALIUSPlacedTextContent{71.080}{220.687}{455.656}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{interpreted in various ways by subjects. Thus, when correlations are made between}
+  \ALIUSPlacedTextContent{71.080}{237.966}{455.516}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{subjective reports and neural patterns, what is being correlated may be extremely}
+  \ALIUSPlacedTextContent{71.080}{255.247}{188.478}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{different in one case and in another.}
+  \ALIUSPlacedTextContent{71.080}{284.527}{455.606}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{To elaborate a little on the example of supernaturalness, it has been shown that this}
+  \ALIUSPlacedTextContent{71.080}{301.566}{455.625}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{property is variably ascribed (depending on one's personality, one's culture and one's}
+  \ALIUSPlacedTextContent{71.080}{318.847}{455.597}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{level of expertise) to experiences characterized as: (i) being highly fluent, (ii) being}
+  \ALIUSPlacedTextContent{71.080}{336.127}{455.615}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{highly disfluent, (iii) being sensorially vivid, (iv) being numinous, (v) being non-dual, (vi)}
+  \ALIUSPlacedTextContent{71.080}{353.407}{455.445}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{featuring extraordinary beings, (vii) involving a loss of the sense of agency, etc. (see for}
+  \ALIUSPlacedTextContent{71.080}{370.687}{455.609}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{example: Shanon, 2002; Taves, 2009; Laughlin, 2011; Luhrmann, 2012; Halloy, 2015).}
+  \ALIUSPlacedTextContent{71.080}{387.967}{455.650}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{This diversity of meanings lying behind the concept of supernaturalness is highly}
+  \ALIUSPlacedTextContent{71.080}{405.247}{68.608}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{problematic.}
+  \ALIUSPlacedTextContent{71.080}{434.527}{455.777}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Do you think when they are dealing with such polysemous words, neuroscientists}
+  \ALIUSPlacedTextContent{71.080}{451.567}{455.580}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{should finesse the concepts they use in their questionnaires by consulting}
+  \ALIUSPlacedTextContent{71.080}{468.847}{455.584}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{anthropologists and phenomenologists who have extensively studied the underlying}
+  \ALIUSPlacedTextContent{71.080}{486.127}{133.457}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{polysemy of these terms?}
+  \ALIUSPlacedTextContent{71.080}{515.178}{456.434}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I do think we need to better define our terms, yes. Words are certainly vulnerable}
+  \ALIUSPlacedTextContent{71.080}{532.218}{456.463}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to interpretation and biases, but language is a difficult prison-house to escape from,}
+  \ALIUSPlacedTextContent{71.080}{549.018}{456.419}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{however you might try.  Words that are especially vulnerable to different}
+  \ALIUSPlacedTextContent{71.080}{566.058}{456.420}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interpretations can be problematic and if you want them to be interpreted in a}
+  \ALIUSPlacedTextContent{71.080}{583.098}{456.440}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particular way, then you could provide participants with some kind of briefing}
+  \ALIUSPlacedTextContent{71.080}{599.898}{456.420}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about what is meant by the term/s in question but then that could bias/prime people}
+  \ALIUSPlacedTextContent{71.080}{616.938}{446.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to see things 'how you want them to see things', thus causing a confirmation bias.}
+  \ALIUSPlacedTextContent{152.920}{651.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{170.440}{667.673}{215.324}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Words are certainly vulnerable to}
+  \ALIUSPlacedTextContent{170.440}{685.673}{262.509}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{interpretation and biases, but language is}
+  \ALIUSPlacedTextContent{170.440}{703.193}{248.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{a difficult prison-house to escape from.}
+  \ALIUSPlacedTextContent{419.320}{703.768}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{9}
+  \ALIUSPlacedTextContent{71.080}{71.167}{455.609}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{You have investigated a phenomenon known as drug-induced ego dissolution (DIED),}
+  \ALIUSPlacedTextContent{71.080}{88.446}{455.634}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{which is usually described as a breakdown of one's 'sense of self' and a feeling of unity}
+  \ALIUSPlacedTextContent{71.080}{105.727}{455.632}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{with one's environment (Lebedev et al., 2015). You have suggested that DIED might be}
+  \ALIUSPlacedTextContent{71.080}{123.006}{455.598}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{explained as a breakdown of the so-called narrative self, that is the network of beliefs,}
+  \ALIUSPlacedTextContent{71.080}{140.286}{455.569}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{thoughts and autobiographical memories associated with being the particular person}
+  \ALIUSPlacedTextContent{71.080}{157.566}{455.623}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{one self-identifies with. This is consistent with subjects reporting feeling as if they were}
+  \ALIUSPlacedTextContent{71.080}{174.846}{455.609}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{not a person anymore when undergoing DIED during psychedelics use. However, there}
+  \ALIUSPlacedTextContent{71.080}{192.127}{455.649}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{is room for debate about whether DIED is merely a disruption of the narrative self, and}
+  \ALIUSPlacedTextContent{71.080}{209.167}{455.617}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{not also of lower-level self-specifying processes, related to the so-called « minimal » or}
+  \ALIUSPlacedTextContent{71.080}{226.446}{455.602}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{« bodily » self. There is a long tradition in philosophy of discussing the idea of the}
+  \ALIUSPlacedTextContent{71.080}{243.727}{455.544}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{minimal self (also called « sense of mineness ») as the pre-reflective, nonconceptual}
+  \ALIUSPlacedTextContent{71.080}{261.007}{455.608}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{feature of consciousness in virtue of which my experiences feel mine (Zahavi, 2014).}
+  \ALIUSPlacedTextContent{71.080}{278.287}{455.603}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{This notion has also come under investigation in cognitive science and psychiatry.}
+  \ALIUSPlacedTextContent{71.080}{295.566}{455.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{According to neurocognitive accounts of the minimal self, especially in a predictive}
+  \ALIUSPlacedTextContent{71.080}{312.847}{455.539}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{coding framework, it is crucially linked to multisensory integration (particularly of}
+  \ALIUSPlacedTextContent{71.080}{330.127}{455.595}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{visuotactile and vestibular input), interoception and homeostatic regulation (Christoff}
+  \ALIUSPlacedTextContent{71.080}{347.167}{455.616}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{et al., 2011; Limanowski \& Blankenburg, 2013; Apps \& Tsakiris, 2014). From a}
+  \ALIUSPlacedTextContent{71.080}{364.447}{455.607}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{phenomenological point of view, it might be reducible to body ownership, self-location,}
+  \ALIUSPlacedTextContent{71.080}{381.727}{455.609}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{and the experienced direction of the first-person perspective (Blanke \& Metzinger,}
+  \ALIUSPlacedTextContent{71.080}{399.007}{453.200}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{2009). The minimal self does not depend on high level cognitive processes such as self-}
+  \ALIUSPlacedTextContent{71.080}{416.287}{455.622}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{related beliefs and first-person thoughts, but rather on low-level bodily/perceptual}
+  \ALIUSPlacedTextContent{71.080}{433.567}{455.605}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{processes. In this framework, the minimal self is a necessary condition for reflective}
+  \ALIUSPlacedTextContent{71.080}{450.847}{455.580}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{self-consciousness (self-related thoughts), which in turns enables self-related beliefs}
+  \ALIUSPlacedTextContent{71.080}{468.127}{455.545}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{(narrative self). If this is right, one could expect the narrative self to break down if the}
+  \ALIUSPlacedTextContent{71.080}{485.167}{455.612}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{minimal self is disrupted, and this is indeed what appears to be the case to some extent}
+  \ALIUSPlacedTextContent{71.080}{502.447}{93.251}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{in schizophrenia.}
+  \ALIUSPlacedTextContent{71.080}{531.727}{455.525}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{The idea that DIED is primarily a disruption of the minimal self seems consistent with}
+  \ALIUSPlacedTextContent{71.080}{549.007}{455.785}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{the fact that classical psychedelics induce hallucinations and not delusions. In a}
+  \ALIUSPlacedTextContent{71.080}{566.286}{455.641}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{predictive coding framework, given that drug-induced hallucinations presumably stem}
+  \ALIUSPlacedTextContent{71.080}{583.566}{455.606}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{from impaired bottom-up processing coupled with relatively preserved top-down}
+  \ALIUSPlacedTextContent{71.080}{600.846}{455.686}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{processing, it seems reasonable to expect excessive prediction error signaling to yield}
+  \ALIUSPlacedTextContent{71.080}{618.127}{455.571}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{aberrant predictions and a disruption of multisensory integration, ultimately leading to}
+  \ALIUSPlacedTextContent{71.080}{635.167}{455.697}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{the breakdown of the minimal self. In other words, DIED would primarily be about a}
+  \ALIUSPlacedTextContent{71.080}{652.446}{455.641}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{perceptual/bodily anomalous processing that leads to the feeling to being selfless,}
+  \ALIUSPlacedTextContent{71.080}{669.727}{412.221}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{rather than a cognitive anomaly leading to delusions impairing self-narratives.}
+  \ALIUSPlacedTextContent{71.080}{699.007}{455.759}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Do you think that such an account of DIED has any plausibility? How might further}
+  \ALIUSPlacedTextContent{71.080}{716.286}{149.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{studies bear on this debate?}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 10
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{10}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.300}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The ego, in the Freudian sense, incorporates the narrative and bodily self. I}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understand the differences between these different aspects of 'self' but I'm not sure}
+  \ALIUSPlacedTextContent{71.080}{105.018}{456.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{how important it is that we chop them up in order to understand DIED. I tend to}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.514}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think when people rate DIED they are recognizing that it is 'the ego' in the Freudian}
+  \ALIUSPlacedTextContent{71.080}{138.858}{227.027}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sense that is compromised, i.e. the self as a}
+  \ALIUSPlacedTextContent{297.384}{138.858}{32.983}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{system}
+  \ALIUSPlacedTextContent{330.423}{138.858}{197.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{. Generally speaking, the way people}
+  \ALIUSPlacedTextContent{71.080}{155.898}{456.462}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understand and use the term 'the ego' in everyday parlance, is more or less consistent}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with Freud's account of it. Our ego-dissolution inventory puts emphasis on reduced}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.400}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'self-importance' and a sense of connectedness or oneness (e.g. to self, others and}
+  \ALIUSPlacedTextContent{71.080}{206.778}{456.464}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{nature), which naturally accompanies DIED. I suppose what's happening is that}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{boundaries necessary for the existence of the ego, breakdown and the sense of}
+  \ALIUSPlacedTextContent{71.080}{240.618}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{connectedness is the inevitable result. People can fight DIED but then they won't}
+  \ALIUSPlacedTextContent{71.080}{257.418}{130.977}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feel the connectedness.}
+  \ALIUSPlacedTextContent{150.280}{282.568}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{168.280}{302.633}{243.132}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I tend to think when people rate DIED}
+  \ALIUSPlacedTextContent{168.280}{320.633}{256.341}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{they are recognizing that it is 'the ego' in}
+  \ALIUSPlacedTextContent{428.440}{333.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{168.280}{338.153}{257.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the Freudian sense that is compromised.}
+  \ALIUSPlacedTextContent{71.080}{402.847}{455.535}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{The DMN is usually associated with mind-wandering, self-reflection and introspection}
+  \ALIUSPlacedTextContent{71.080}{420.127}{455.792}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{while the Task Positive Network (TPN) is associated with the orientation of the mind}
+  \ALIUSPlacedTextContent{71.080}{437.407}{455.645}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{towards the external world. Elaborating on this distinction, you notice that these two}
+  \ALIUSPlacedTextContent{71.080}{454.687}{455.581}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{networks are anti-correlated in order to guarantee the functionally important}
+  \ALIUSPlacedTextContent{71.080}{471.727}{455.586}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{distinction between the internal world and the external one. Now, with your colleagues,}
+  \ALIUSPlacedTextContent{71.080}{489.007}{455.576}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{you have shown that the DMN/TPN anti-correlation is significantly decreased after}
+  \ALIUSPlacedTextContent{71.080}{506.287}{455.589}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{psilocybin intake. You have proposed that the diminution of the orthogonality between}
+  \ALIUSPlacedTextContent{71.080}{523.566}{455.800}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{the DMN and the TPN was a very plausible explanation as to why psychedelic}
+  \ALIUSPlacedTextContent{71.080}{540.846}{455.612}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{experiences are characterized by a "collapse of dualities" and by the "disturbance in}
+  \ALIUSPlacedTextContent{71.080}{558.127}{455.722}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{one's sense of self, and particularly one's sense of existing apart from one's}
+  \ALIUSPlacedTextContent{71.080}{575.406}{455.606}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{environment" (Carhart-Harris et al., 2014, p. 16). Your proposal seems very intuitive}
+  \ALIUSPlacedTextContent{71.080}{592.686}{455.568}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{indeed: if the DMN and the TPN stop being strongly anti-correlated this should result}
+  \ALIUSPlacedTextContent{71.080}{609.727}{344.584}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{in a loss of neat distinction between the internal and the external.}
+  \ALIUSPlacedTextContent{71.080}{639.007}{455.722}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{However, there is good evidence suggesting that the loss of the internal/external}
+  \ALIUSPlacedTextContent{71.080}{656.286}{455.623}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{dichotomy is to be explained by something different from the disturbance of the}
+  \ALIUSPlacedTextContent{71.080}{673.566}{455.622}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{DMN/TPN anti-correlation. Indeed, the "collapse of dualities" and the "disturbance in}
+  \ALIUSPlacedTextContent{71.080}{690.846}{453.200}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{one's sense of self" seem to characterize the phenomenology of both psilocybin-}
+  \ALIUSPlacedTextContent{71.080}{708.127}{455.600}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{induced experiences and ayahuasca-induced ones. Now, given that ayahuasca}
+  \ALIUSPlacedTextContent{71.080}{725.406}{455.432}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{experiences also involve some confusion between the internal and the external, we}
+  \ALIUSPlacedTextContent{71.080}{742.686}{455.620}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{would expect to find a clear decrease of the DMN/TPN anti-correlation after ayahuasca}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 11
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{11}
+  \ALIUSPlacedTextContent{71.080}{71.167}{455.609}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{intake. Remarkably enough, this doesn't seem to be the case (Palhano-Fontes et al.,}
+  \ALIUSPlacedTextContent{71.080}{88.446}{232.329}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{2015). How do you interpret these findings?}
+  \ALIUSPlacedTextContent{71.080}{117.498}{453.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The specifics of the data processing and statistical thresholds can explain Palhano-}
+  \ALIUSPlacedTextContent{71.080}{134.538}{456.430}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Fontes's alleged negative result. If you look closer at the method they used however,}
+  \ALIUSPlacedTextContent{71.080}{151.338}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think they did find this effect (i.e. reduced DMN-TPN orthogonality) – and I'm}
+  \ALIUSPlacedTextContent{71.080}{168.378}{221.037}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{very confident others will in the future.}
+  \ALIUSPlacedTextContent{71.080}{197.646}{455.687}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Do you think that it can still be maintained that the loss of a clear dichotomy between}
+  \ALIUSPlacedTextContent{71.080}{214.927}{453.200}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{the internal and the external is to be explained by the decrease of the DMN/TPN anti-}
+  \ALIUSPlacedTextContent{71.080}{231.966}{63.393}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{correlation?}
+  \ALIUSPlacedTextContent{71.080}{261.018}{456.339}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Yes. Although we don't need to be too specific about the TPN, as there are a few}
+  \ALIUSPlacedTextContent{71.080}{278.058}{459.733}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"TPNs". "Task positive network" is a bit of a vague term for a network to be honest.}
+  \ALIUSPlacedTextContent{71.080}{307.327}{455.510}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{On a more methodological note, there has been some intense debate as to whether}
+  \ALIUSPlacedTextContent{71.080}{324.607}{455.587}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{regressing out the global signal is a sound way of measuring anti-correlation between}
+  \ALIUSPlacedTextContent{71.080}{341.647}{455.678}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{networks (Fox et al., 2009; Murphy et al., 2009). If regressing out the global signal turns}
+  \ALIUSPlacedTextContent{71.080}{358.927}{455.608}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{out not to be valid, then the DMN/TPN anti-correlation could simply be an artefact.}
+  \ALIUSPlacedTextContent{71.080}{376.207}{251.155}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What is your take on this methodological issue?}
+  \ALIUSPlacedTextContent{71.080}{405.258}{202.099}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We did our most recent analysis (}
+  \ALIUSPlacedTextContent{273.173}{405.258}{30.996}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{PNAS}
+  \ALIUSPlacedTextContent{304.197}{405.258}{223.414}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2016) with and without global signal}
+  \ALIUSPlacedTextContent{71.080}{422.298}{456.500}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{regression and found the same result.  This is discussed in our paper.  You just have}
+  \ALIUSPlacedTextContent{71.080}{439.098}{456.456}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to be careful about the terms you use and, for example, go with "orthogonality"}
+  \ALIUSPlacedTextContent{71.080}{456.138}{385.018}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{instead of "anti-correlation". I think this is discussed in Leor Roseman's}
+  \ALIUSPlacedTextContent{455.539}{456.138}{72.005}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Human Brain}
+  \ALIUSPlacedTextContent{71.080}{473.178}{42.960}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Mapping}
+  \ALIUSPlacedTextContent{114.087}{473.178}{72.391}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{paper (2016).}
+  \ALIUSPlacedTextContent{71.080}{502.207}{455.482}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In your 2014 Frontiers paper you sketch a general model of Altered States of}
+  \ALIUSPlacedTextContent{71.080}{519.487}{455.758}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Consciousness (ASCs) which aims at theorizing not only psychedelic states but more}
+  \ALIUSPlacedTextContent{71.080}{536.767}{455.634}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{broadly any kind of altered or anomalous state (such as psychosis, coma, dreaming, etc.).}
+  \ALIUSPlacedTextContent{71.080}{554.047}{455.408}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Your proposal is that entropy is a spectrum which can take different values: for}
+  \ALIUSPlacedTextContent{71.080}{571.326}{455.663}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{example, early psychosis is characterized by high entropy whereas coma or sedation}
+  \ALIUSPlacedTextContent{71.080}{588.607}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{are characterized by low entropy. Your model is also based on another dimension: that}
+  \ALIUSPlacedTextContent{71.080}{605.646}{455.583}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{of criticality (i.e., the ability of the brain to reach certain critical thresholds beyond}
+  \ALIUSPlacedTextContent{71.080}{622.927}{455.596}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{which new complex properties emerge, notably through cascade-like processes) (e.g.,}
+  \ALIUSPlacedTextContent{71.080}{640.206}{455.623}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Beggs \& Plenz, 2003; Chialvo, Balenzuela, \& Fraiman, 2008). Interestingly, in your}
+  \ALIUSPlacedTextContent{71.080}{657.487}{455.612}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{model, you defend the view that entropy and criticality are closely correlated: the}
+  \ALIUSPlacedTextContent{71.080}{674.766}{455.494}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{highest the entropy, the highest the criticality; conversely, the lowest the entropy, the}
+  \ALIUSPlacedTextContent{71.080}{692.047}{109.347}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{lowest the criticality.}
+  \ALIUSPlacedTextContent{71.080}{721.098}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Did I say that? Criticality is just one thing, i.e. it's a critical point, so you can't really}
+  \ALIUSPlacedTextContent{71.080}{737.898}{456.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have low or high criticality – but you can be above or below it. Being super-critical,}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 12
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{12}
+  \ALIUSPlacedTextContent{71.080}{70.938}{117.410}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in the sense of being}
+  \ALIUSPlacedTextContent{189.396}{70.938}{28.578}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{above}
+  \ALIUSPlacedTextContent{217.998}{70.938}{309.433}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a critical point, would be most consistent with a more}
+  \ALIUSPlacedTextContent{71.080}{87.978}{139.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{entropic (random) state.}
+  \ALIUSPlacedTextContent{71.080}{117.247}{455.817}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Don't you think that there are cases in which entropy can vary independently of}
+  \ALIUSPlacedTextContent{71.080}{134.526}{455.601}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{criticality? For example, it has been proposed that certain altered states can involve}
+  \ALIUSPlacedTextContent{71.080}{151.566}{455.657}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{plenty of prediction errors while the weight (or the accuracy) ascribed to these}
+  \ALIUSPlacedTextContent{71.080}{168.846}{455.627}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{predictions errors remains abnormally low; conversely, predictions errors can be low}
+  \ALIUSPlacedTextContent{71.080}{186.127}{455.612}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{while the accuracy ascribed to these limited predictions errors is very high. As Fletcher}
+  \ALIUSPlacedTextContent{71.080}{203.406}{455.623}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{and Frith put it, "a relatively small prediction error might be given undue weight (if the}
+  \ALIUSPlacedTextContent{71.080}{220.687}{455.662}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{uncertainty is underestimated), leading to a false inference. Alternatively, excessive}
+  \ALIUSPlacedTextContent{71.080}{237.966}{455.586}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{noise might dilute the effects of even a large prediction-error signal, leading to a}
+  \ALIUSPlacedTextContent{71.080}{255.247}{455.611}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{reluctance to accept an inference as adequately explaining the input." (Fletcher \& Frith}
+  \ALIUSPlacedTextContent{71.080}{272.527}{455.757}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{2009, p. 55) Let's take the example of a state characterized by high prediction errors}
+  \ALIUSPlacedTextContent{71.080}{289.566}{455.591}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{and low accuracy. In such a case, priors couldn't be revised and updated as they should}
+  \ALIUSPlacedTextContent{71.080}{306.847}{455.618}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{and they would end up being abnormally steady (e.g., Fletcher \& Frith, 2009; Adams,}
+  \ALIUSPlacedTextContent{71.080}{324.127}{455.651}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Brown, \& Friston, 2015). The brain would thus combine both high entropy (there are}
+  \ALIUSPlacedTextContent{71.080}{341.407}{455.627}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{plenty of prediction errors) and sub-criticality (high-level mental states are not}
+  \ALIUSPlacedTextContent{71.080}{358.687}{455.472}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{malleable). This seems to contradict the idea that high entropy and high criticality}
+  \ALIUSPlacedTextContent{71.080}{375.967}{123.647}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{always go hand in hand.}
+  \ALIUSPlacedTextContent{71.080}{405.018}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{They don't, as you can't have high criticality, but you have "super-criticality" – and}
+  \ALIUSPlacedTextContent{71.080}{421.818}{456.432}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{generally speaking, though perhaps not absolutely, super-criticality would be}
+  \ALIUSPlacedTextContent{71.080}{438.858}{166.186}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consistent with high entropy.}
+  \ALIUSPlacedTextContent{71.080}{468.127}{455.507}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In your work, you have occasionally pondered upon what your findings suggest as to}
+  \ALIUSPlacedTextContent{71.080}{485.407}{455.772}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{what the broad structure of the brain is. You have notably advanced that two models of}
+  \ALIUSPlacedTextContent{71.080}{502.447}{455.612}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{the brain can shed very interesting light on psychedelics: the "free-energy principle" put}
+  \ALIUSPlacedTextContent{71.080}{519.727}{455.620}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{forth by Karl Friston (2010; 2006) and the "reducing valve" model proposed by Aldous}
+  \ALIUSPlacedTextContent{71.080}{537.007}{455.525}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Huxley (1954). In your seminal study you seem to suggest that these two models are in}
+  \ALIUSPlacedTextContent{71.080}{554.286}{304.660}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{fact almost identical (Carhart-Harris et al. 2012, p. 2142).}
+  \ALIUSPlacedTextContent{71.080}{583.566}{455.620}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Huxley's model was explicitly inspired by Charlie D. Broad (1953, chap. 1), and Broad}
+  \ALIUSPlacedTextContent{71.080}{600.846}{455.608}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{himself borrowed the "reducing valve" metaphor from Henri Bergson (1994 [1896]).}
+  \ALIUSPlacedTextContent{71.080}{618.127}{455.605}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Now, if we look at it closely enough, the model endorsed by Bergson, Broad and Huxley}
+  \ALIUSPlacedTextContent{71.080}{635.406}{455.708}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{is arguably quite different from that defended by Friston. Bergson's key idea is that the}
+  \ALIUSPlacedTextContent{71.080}{652.446}{455.611}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{default state of the brain is that of being overwhelmed by sensory data coming from the}
+  \ALIUSPlacedTextContent{71.080}{669.727}{455.591}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{world; the brain's function is thus to diminish the amount of sensory data reaching}
+  \ALIUSPlacedTextContent{71.080}{687.007}{455.535}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{consciousness. This view straightforwardly contradicts Kant's transcendental idealism:}
+  \ALIUSPlacedTextContent{71.080}{704.286}{455.486}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{by and large, Kant says that the data coming from the world are poor and that the brain}
+  \ALIUSPlacedTextContent{71.080}{721.566}{455.608}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{later enrich them; on the contrary, Huxley, Broad and Bergson claim that the data}
+  \ALIUSPlacedTextContent{71.080}{738.846}{455.568}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{coming from the world are too rich to be processed by a normal brain and that the brain}
+  \ALIUSPlacedTextContent{71.080}{756.127}{394.346}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{is precisely there to filter the massive surge of data coming from the world.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 13
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{13}
+  \ALIUSPlacedTextContent{71.080}{71.167}{455.583}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In this regard, Friston's model seems to fundamentally differ from that advanced by}
+  \ALIUSPlacedTextContent{71.080}{88.446}{455.541}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Bergson and his followers. The free-energy and predictive coding framework has it that}
+  \ALIUSPlacedTextContent{71.080}{105.727}{455.644}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{prediction comes first and prediction errors (sensory data coming from the world)}
+  \ALIUSPlacedTextContent{71.080}{123.006}{455.643}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{come next to rectify and update top-down predictions. While in Bergson's model the}
+  \ALIUSPlacedTextContent{71.080}{140.286}{455.632}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{brain is simply a filter which cannot by itself generate any conscious representation (the}
+  \ALIUSPlacedTextContent{71.080}{157.566}{455.358}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{richness of representations is to be found in the world), in Friston's model, the brain is}
+  \ALIUSPlacedTextContent{71.080}{174.846}{455.790}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{notoriously able to generate conscious representation and it is even able to do so}
+  \ALIUSPlacedTextContent{71.080}{192.127}{455.592}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{before getting any sensory feedback. In other words, the free-energy and predictive}
+  \ALIUSPlacedTextContent{71.080}{209.167}{455.512}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{view contends that the role of the world is corrective and that the role of the brain is}
+  \ALIUSPlacedTextContent{71.080}{226.446}{455.569}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{constitutive whereas Bergson, Broad and Huxley hold exactly the opposite view: for}
+  \ALIUSPlacedTextContent{71.080}{243.727}{340.428}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{them, the world is constitutive and the brain is simply corrective.}
+  \ALIUSPlacedTextContent{71.080}{273.007}{455.702}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Do you agree with the distinctions drawn here between Bergson's model and Friston's}
+  \ALIUSPlacedTextContent{71.080}{290.287}{455.622}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{model? Five years after your seminal study, do you tend to think that the "reducing}
+  \ALIUSPlacedTextContent{71.080}{307.566}{455.621}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{valve" model provides the best account of psychedelics or that the "predictive" model}
+  \ALIUSPlacedTextContent{71.080}{324.847}{93.292}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{does a better job?}
+  \ALIUSPlacedTextContent{71.080}{353.898}{456.489}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Friston is a leading contemporary neuroscientist whose free-energy principle is an}
+  \ALIUSPlacedTextContent{71.080}{370.698}{456.483}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{elegant, empirically-informed model of how the brain works.  Huxley was a brilliant}
+  \ALIUSPlacedTextContent{71.080}{387.738}{456.373}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{author and philosopher but not a neuroscientist. The reducing valve idea is quite}
+  \ALIUSPlacedTextContent{71.080}{404.538}{456.298}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{nice as a metaphor but I think people take it too literally and sometimes even want}
+  \ALIUSPlacedTextContent{71.080}{421.578}{456.558}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to use it in a sort of pseudo-scientific way, to suggest that there is a filter that stops}
+  \ALIUSPlacedTextContent{71.080}{438.618}{126.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{us seeing what's really "}
+  \ALIUSPlacedTextContent{197.400}{438.618}{49.247}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{out-there"}
+  \ALIUSPlacedTextContent{246.678}{438.618}{170.764}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in a matrix-esque kind of way.}
+  \ALIUSPlacedTextContent{99.430}{467.418}{428.147}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{If the metaphor is useful however, it's useful because it proposes that "the brain,}
+  \ALIUSPlacedTextContent{71.080}{484.458}{453.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in main, is eliminative rather than productive". That idea is consistent with the free-}
+  \ALIUSPlacedTextContent{71.080}{501.498}{456.440}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{energy principle because top-down inferences work to explain bottom-up sensory}
+  \ALIUSPlacedTextContent{71.080}{518.298}{456.517}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{information – so there's some functional suppression going on but suppression in}
+  \ALIUSPlacedTextContent{71.080}{535.338}{456.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the sense of predictive processing.  Basically, I wouldn't worry too much about}
+  \ALIUSPlacedTextContent{71.080}{552.378}{456.568}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Bergson, Broad and Huxley or indeed Kant when it comes to a contemporary}
+  \ALIUSPlacedTextContent{71.080}{569.178}{456.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{account of how the brain works. It's best to see where the field is now, and Friston's}
+  \ALIUSPlacedTextContent{71.080}{586.218}{272.529}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{free-energy model is one of the best the field has.}
+  \ALIUSPlacedTextContent{71.080}{615.487}{353.541}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In your opinion, what are the next steps for psychedelics research?}
+  \ALIUSPlacedTextContent{71.080}{644.298}{456.400}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There's so much but better predicting response to the psychedelics is a good example}
+  \ALIUSPlacedTextContent{71.080}{661.338}{174.504}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of one potentially fruitful area.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 14
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{14}
+  \ALIUSPlacedTextContent{263.991}{71.444}{70.165}{ALIUSC000000}{\ALIUSFontLatoLight}{13.731}{References}
+  \ALIUSPlacedTextContent{71.080}{101.105}{456.344}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Adams, R., Brown, H., \& Friston, K. (2015). Bayesian inference, predictive coding and}
+  \ALIUSPlacedTextContent{107.080}{116.945}{52.618}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{delusions.}
+  \ALIUSPlacedTextContent{159.716}{116.945}{194.916}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Avant: Trends in Interdisciplinary Studies}
+  \ALIUSPlacedTextContent{354.634}{116.945}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{360.562}{116.945}{4.847}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{5}
+  \ALIUSPlacedTextContent{365.424}{116.945}{18.710}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3).}
+  \ALIUSPlacedTextContent{71.080}{138.785}{456.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Apps, M. A. J., \& Tsakiris, M. (2014). The free-energy self: a predictive coding account of}
+  \ALIUSPlacedTextContent{107.080}{154.385}{85.370}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{self-recognition.}
+  \ALIUSPlacedTextContent{192.462}{154.385}{187.829}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience and Biobehavioral Reviews}
+  \ALIUSPlacedTextContent{380.334}{154.385}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{386.262}{154.385}{9.270}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{41}
+  \ALIUSPlacedTextContent{395.544}{154.385}{44.567}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 85–97.}
+  \ALIUSPlacedTextContent{71.080}{176.225}{386.432}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Beggs, J. M., \& Plenz, D. (2003). Neuronal avalanches in neocortical circuits.}
+  \ALIUSPlacedTextContent{457.732}{176.225}{69.683}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of}
+  \ALIUSPlacedTextContent{107.080}{191.825}{59.655}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
+  \ALIUSPlacedTextContent{166.762}{191.825}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{172.690}{191.825}{9.151}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{23}
+  \ALIUSPlacedTextContent{181.854}{191.825}{85.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(35), 11167–11177.}
+  \ALIUSPlacedTextContent{71.080}{213.665}{130.678}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bergson, H. (1994 [1896]).}
+  \ALIUSPlacedTextContent{201.766}{213.665}{92.641}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Matter and memory}
+  \ALIUSPlacedTextContent{294.429}{213.665}{128.156}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. New York: Zone Books.}
+  \ALIUSPlacedTextContent{71.080}{235.505}{456.316}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Blanke, O., \& Metzinger, T. (2009). Full-body illusions and minimal phenomenal selfhood.}
+  \ALIUSPlacedTextContent{107.080}{251.105}{131.426}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
+  \ALIUSPlacedTextContent{238.546}{251.105}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{244.474}{251.105}{8.215}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{13}
+  \ALIUSPlacedTextContent{252.703}{251.105}{48.584}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 7–13.}
+  \ALIUSPlacedTextContent{71.080}{272.945}{100.699}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Broad, C. D. (1953).}
+  \ALIUSPlacedTextContent{172.114}{272.945}{205.737}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Religion, Philosophy and Psychical Research}
+  \ALIUSPlacedTextContent{377.937}{272.945}{149.483}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. London: Routledge / Kegan}
+  \ALIUSPlacedTextContent{107.080}{288.545}{27.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Paul.}
+  \ALIUSPlacedTextContent{71.080}{310.385}{456.391}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R., Erritzoe, D., Williams, T., Stone, J. M., Reed, L. J., Colasanti, A., …}
+  \ALIUSPlacedTextContent{107.080}{326.225}{420.337}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nutt, D. J. (2012). Neural correlates of the psychedelic state as determined by fMRI}
+  \ALIUSPlacedTextContent{107.080}{341.825}{122.537}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{studies with psilocybin.}
+  \ALIUSPlacedTextContent{229.835}{341.825}{225.504}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences}
+  \ALIUSPlacedTextContent{455.313}{341.825}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{461.501}{341.825}{14.927}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{109}
+  \ALIUSPlacedTextContent{476.450}{341.825}{47.909}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 2138–}
+  \ALIUSPlacedTextContent{107.080}{357.665}{26.081}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2143.}
+  \ALIUSPlacedTextContent{71.080}{379.265}{456.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R., \& Friston, K. (2010). The default-mode, ego-functions and free-energy:}
+  \ALIUSPlacedTextContent{107.080}{395.105}{226.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{a neurobiological account of Freudian ideas.}
+  \ALIUSPlacedTextContent{333.267}{395.105}{138.903}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain: A Journal of Neurology}
+  \ALIUSPlacedTextContent{472.197}{395.105}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{478.152}{395.105}{12.659}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{133}
+  \ALIUSPlacedTextContent{490.827}{395.105}{33.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 1265–}
+  \ALIUSPlacedTextContent{107.080}{410.945}{29.617}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1283.}
+  \ALIUSPlacedTextContent{71.080}{432.545}{456.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R., Leech, R., Hellyer, P., Shanahan, M., Feilding, A., Tagliazucchi, E., …}
+  \ALIUSPlacedTextContent{107.080}{448.385}{420.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nutt, D. (2014). The entropic brain: A theory of conscious states informed by}
+  \ALIUSPlacedTextContent{107.080}{463.985}{238.814}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{neuroimaging research with psychedelic drugs.}
+  \ALIUSPlacedTextContent{345.897}{463.985}{155.131}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Human Neuroscience}
+  \ALIUSPlacedTextContent{501.036}{463.985}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{506.964}{463.985}{5.702}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{8}
+  \ALIUSPlacedTextContent{512.684}{463.985}{5.607}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{71.080}{485.825}{456.383}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R., Mayberg, H., Malizia, A., \& Nutt, D. (2008). Mourning and melancholia}
+  \ALIUSPlacedTextContent{107.080}{501.665}{420.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{revisited: correspondences between principles of Freudian metapsychology and}
+  \ALIUSPlacedTextContent{107.080}{517.265}{195.795}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{empirical findings in neuropsychiatry.}
+  \ALIUSPlacedTextContent{302.920}{517.265}{135.919}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Annals of General Psychiatry}
+  \ALIUSPlacedTextContent{438.871}{517.265}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{444.799}{517.265}{5.016}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{7}
+  \ALIUSPlacedTextContent{449.829}{517.265}{26.666}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 9. 9}
+  \ALIUSPlacedTextContent{71.080}{539.105}{456.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R., Muthukumaraswamy, S., Roseman, L., Kaelen, M., Droog, W., Murphy,}
+  \ALIUSPlacedTextContent{107.080}{554.705}{420.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{K., … Nutt, D. (2016). Neural correlates of the LSD experience revealed by}
+  \ALIUSPlacedTextContent{107.080}{570.545}{139.925}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{multimodal neuroimaging.}
+  \ALIUSPlacedTextContent{248.860}{570.545}{234.991}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences}
+  \ALIUSPlacedTextContent{483.792}{570.545}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{491.556}{570.545}{11.998}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{113}
+  \ALIUSPlacedTextContent{503.568}{570.545}{23.840}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(17),}
+  \ALIUSPlacedTextContent{107.080}{586.385}{58.801}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{4853–4858.}
+  \ALIUSPlacedTextContent{71.080}{607.985}{428.870}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Chialvo, D., Balenzuela, P., \& Fraiman, D. (2008). The brain: What is critical about it?}
+  \ALIUSPlacedTextContent{499.551}{607.985}{27.864}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Conf.}
+  \ALIUSPlacedTextContent{107.080}{623.825}{96.448}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proc. Am. Inst. Phys.}
+  \ALIUSPlacedTextContent{203.564}{623.825}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{209.492}{623.825}{19.903}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{1028}
+  \ALIUSPlacedTextContent{229.420}{623.825}{40.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 28–45.}
+  \ALIUSPlacedTextContent{71.080}{645.425}{456.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Christoff, K., Cosmelli, D., Legrand, D., \& Thompson, E. (2011). Specifying the self for}
+  \ALIUSPlacedTextContent{107.080}{661.265}{120.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{cognitive neuroscience.}
+  \ALIUSPlacedTextContent{227.548}{661.265}{131.426}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
+  \ALIUSPlacedTextContent{359.014}{661.265}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{364.942}{661.265}{8.630}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{15}
+  \ALIUSPlacedTextContent{373.587}{661.265}{64.612}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 104–112.}
+  \ALIUSPlacedTextContent{71.080}{683.105}{453.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Csikszentmihalyi, M., \& Larson, R. (1987). Validity and reliability of the experience-}
+  \ALIUSPlacedTextContent{107.080}{698.705}{93.519}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{sampling method.}
+  \ALIUSPlacedTextContent{200.587}{698.705}{200.122}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Nervous and Mental Disease}
+  \ALIUSPlacedTextContent{400.718}{698.705}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{406.646}{698.705}{13.657}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{175}
+  \ALIUSPlacedTextContent{420.321}{698.705}{65.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(9), 526–536.}
+  \ALIUSPlacedTextContent{71.080}{720.545}{456.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Doria, V., Beckmann, C., Arichi, T., Merchant, N., Groppo, M., Turkheimer, F., … Edwards,}
+  \ALIUSPlacedTextContent{107.080}{736.145}{420.194}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{D. (2010). Emergence of resting state networks in the preterm human brain.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 15
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{15}
+  \ALIUSPlacedTextContent{107.080}{70.865}{373.828}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences of the United States of America}
+  \ALIUSPlacedTextContent{480.896}{70.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{487.032}{70.865}{14.500}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{107}
+  \ALIUSPlacedTextContent{501.553}{70.865}{25.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(46),}
+  \ALIUSPlacedTextContent{107.080}{86.705}{71.658}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{20015–20020.}
+  \ALIUSPlacedTextContent{71.080}{108.305}{456.376}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fletcher, P., \& Frith, C. (2009). Perceiving is believing: a Bayesian approach to explaining}
+  \ALIUSPlacedTextContent{107.080}{124.145}{205.584}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{the positive symptoms of schizophrenia.}
+  \ALIUSPlacedTextContent{312.618}{124.145}{136.300}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature Reviews Neuroscience}
+  \ALIUSPlacedTextContent{448.947}{124.145}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{454.874}{124.145}{9.472}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{10}
+  \ALIUSPlacedTextContent{464.364}{124.145}{54.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 48–58.}
+  \ALIUSPlacedTextContent{71.080}{145.985}{456.335}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fox, M. D., Zhang, D., Snyder, A. Z., \& Raichle, M. E. (2009). The global signal and observed}
+  \ALIUSPlacedTextContent{107.080}{161.585}{222.889}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{anticorrelated resting state brain networks.}
+  \ALIUSPlacedTextContent{330.182}{161.585}{125.731}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neurophysiology}
+  \ALIUSPlacedTextContent{456.003}{161.585}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{462.132}{161.585}{13.255}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{101}
+  \ALIUSPlacedTextContent{475.404}{161.585}{48.955}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 3270–}
+  \ALIUSPlacedTextContent{107.080}{177.425}{30.371}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{3283.}
+  \ALIUSPlacedTextContent{71.080}{199.025}{373.963}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Friston, K. (2010). The free-energy principle: A unified brain theory?}
+  \ALIUSPlacedTextContent{447.920}{199.025}{79.484}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature Reviews}
+  \ALIUSPlacedTextContent{107.080}{214.865}{59.655}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
+  \ALIUSPlacedTextContent{166.762}{214.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{172.690}{214.865}{7.554}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{11}
+  \ALIUSPlacedTextContent{180.255}{214.865}{62.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 127–138.}
+  \ALIUSPlacedTextContent{71.080}{236.705}{418.707}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Friston, K., Kilner, J., \& Harrison, L. (2006). A free energy principle for the brain.}
+  \ALIUSPlacedTextContent{490.295}{236.705}{37.095}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal}
+  \ALIUSPlacedTextContent{107.080}{252.305}{94.733}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of Physiology - Paris}
+  \ALIUSPlacedTextContent{201.834}{252.305}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{207.762}{252.305}{15.174}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{100}
+  \ALIUSPlacedTextContent{222.958}{252.305}{63.560}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1-3), 70–87.}
+  \ALIUSPlacedTextContent{71.080}{274.145}{88.872}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Halloy, A. (2015).}
+  \ALIUSPlacedTextContent{159.716}{274.145}{362.069}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Divinités incarnées: L'apprentissage de la possession dans un culte afro-brésilien}
+  \ALIUSPlacedTextContent{521.806}{274.145}{5.607}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{107.080}{289.745}{76.546}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Paris: PETRA.}
+  \ALIUSPlacedTextContent{71.080}{311.585}{92.128}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Huxley, A. (1954).}
+  \ALIUSPlacedTextContent{163.235}{311.585}{211.163}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Doors of Perception and Heaven and Hell}
+  \ALIUSPlacedTextContent{374.455}{311.585}{151.737}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. London: Harper \& Brothers.}
+  \ALIUSPlacedTextContent{71.080}{333.425}{83.579}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Jaynes, J. (1990).}
+  \ALIUSPlacedTextContent{154.632}{333.425}{309.815}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The origin of consciousness in the breakdown of the bicameral mind}
+  \ALIUSPlacedTextContent{464.497}{333.425}{62.942}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. New York:}
+  \ALIUSPlacedTextContent{107.080}{349.025}{96.761}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Houghton Mifflin.}
+  \ALIUSPlacedTextContent{71.080}{370.865}{111.920}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Laughlin, C. D. (2011).}
+  \ALIUSPlacedTextContent{182.493}{370.865}{339.160}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Communing with the Gods: Consciousness, culture and the dreaming brain}
+  \ALIUSPlacedTextContent{521.806}{370.865}{5.607}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{107.080}{386.465}{111.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Brisbane: Daily Grail.}
+  \ALIUSPlacedTextContent{71.080}{408.305}{456.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Lebedev, A. V., Lövdén, M., Rosenthal, G., Feilding, A., Nutt, D. J., \& Carhart-Harris, R.}
+  \ALIUSPlacedTextContent{107.080}{424.145}{420.312}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{L. (2015). Finding the self by losing the self: Neural correlates of ego-dissolution}
+  \ALIUSPlacedTextContent{107.080}{439.745}{90.518}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{under psilocybin.}
+  \ALIUSPlacedTextContent{197.610}{439.745}{107.345}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Human Brain Mapping}
+  \ALIUSPlacedTextContent{304.988}{439.745}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{310.916}{439.745}{9.888}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{36}
+  \ALIUSPlacedTextContent{320.822}{439.745}{75.467}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(8), 3137–3153.}
+  \ALIUSPlacedTextContent{71.080}{461.585}{456.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Leech, R., Scott, G., Carhart-Harris, R., Turkheimer, F., Taylor-Robinson, S., \& Sharp, D.}
+  \ALIUSPlacedTextContent{107.080}{477.185}{330.415}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2014). Spatial Dependencies between large-scale brain networks.}
+  \ALIUSPlacedTextContent{437.480}{477.185}{54.102}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{PLOS ONE}
+  \ALIUSPlacedTextContent{491.585}{477.185}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{497.513}{477.185}{5.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{9}
+  \ALIUSPlacedTextContent{502.973}{477.185}{22.727}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6).}
+  \ALIUSPlacedTextContent{71.080}{499.025}{456.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Limanowski, J., \& Blankenburg, F. (2013). Minimal self-models and the free energy}
+  \ALIUSPlacedTextContent{107.080}{514.865}{51.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{principle.}
+  \ALIUSPlacedTextContent{158.507}{514.865}{155.131}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Human Neuroscience}
+  \ALIUSPlacedTextContent{313.646}{514.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{319.574}{514.865}{5.016}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{7}
+  \ALIUSPlacedTextContent{324.604}{514.865}{8.649}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{71.080}{536.465}{107.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Luhrmann, T. (2012).}
+  \ALIUSPlacedTextContent{178.145}{536.465}{349.311}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{When God talks back: Understanding the American evangelical relationship}
+  \ALIUSPlacedTextContent{107.080}{552.305}{43.083}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{with God}
+  \ALIUSPlacedTextContent{150.187}{552.305}{136.827}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. New York: Alfred Knopf.}
+  \ALIUSPlacedTextContent{71.080}{573.905}{456.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Mantini, D., Gerits, A., Nelissen, K., Durand, J.-B., Joly, O., Simone, L., … Vanduffel, W.}
+  \ALIUSPlacedTextContent{107.080}{589.745}{263.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2011). Default Mode of Brain Function in Monkeys.}
+  \ALIUSPlacedTextContent{370.292}{589.745}{157.134}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Neuroscience : The}
+  \ALIUSPlacedTextContent{107.080}{605.345}{215.499}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Official Journal of the Society for Neuroscience}
+  \ALIUSPlacedTextContent{322.602}{605.345}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{328.529}{605.345}{8.217}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{31}
+  \ALIUSPlacedTextContent{336.758}{605.345}{94.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(36), 12954–12962.}
+  \ALIUSPlacedTextContent{71.080}{627.185}{456.389}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Morcom, A., \& Fletcher, P. (2007). Does the brain have a baseline? Why we should be}
+  \ALIUSPlacedTextContent{107.080}{643.025}{78.754}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{resisting a rest.}
+  \ALIUSPlacedTextContent{185.832}{643.025}{56.363}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{NeuroImage}
+  \ALIUSPlacedTextContent{242.225}{643.025}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{248.152}{643.025}{9.461}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{37}
+  \ALIUSPlacedTextContent{257.629}{643.025}{78.431}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 1073–1082.}
+  \ALIUSPlacedTextContent{71.080}{664.625}{456.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Murphy, K., Birn, R. M., Handwerker, D. A., Jones, T. B., \& Bandettini, P. A. (2009). The}
+  \ALIUSPlacedTextContent{107.080}{680.465}{420.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{impact of global signal regression on resting state correlations: Are anti-correlated}
+  \ALIUSPlacedTextContent{107.080}{696.065}{113.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{networks introduced?}
+  \ALIUSPlacedTextContent{220.334}{696.065}{56.363}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{NeuroImage}
+  \ALIUSPlacedTextContent{276.727}{696.065}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{282.655}{696.065}{10.981}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{44}
+  \ALIUSPlacedTextContent{293.652}{696.065}{69.409}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 893–905.}
+  \ALIUSPlacedTextContent{71.080}{717.905}{456.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Muthukumaraswamy, S., Carhart-Harris, R., Moran, R., Brookes, M., Williams, T.,}
+  \ALIUSPlacedTextContent{107.080}{733.745}{420.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Errtizoe, D., … Nutt, D. (2013). Broadband cortical desynchronization underlies the}
+  \ALIUSPlacedTextContent{107.080}{749.345}{128.602}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{human psychedelic state.}
+  \ALIUSPlacedTextContent{235.711}{749.345}{108.430}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neuroscience}
+  \ALIUSPlacedTextContent{344.142}{749.345}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{350.069}{749.345}{8.878}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{33}
+  \ALIUSPlacedTextContent{358.961}{749.345}{89.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(38), 15171–15183.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 16
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{16}
+  \ALIUSPlacedTextContent{71.080}{70.865}{456.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Palhano-Fontes, F., Andrade, K. C., Tofoli, L. F., Santos, A. C., Crippa, J. A. S., Hallak, J.}
+  \ALIUSPlacedTextContent{107.080}{86.705}{420.408}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{E. C., … Araujo, D. B. de. (2015). The psychedelic state induced by ayahuasca}
+  \ALIUSPlacedTextContent{107.080}{102.305}{359.086}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{modulates the activity and connectivity of the default mode network.}
+  \ALIUSPlacedTextContent{466.764}{102.305}{54.724}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{PLOS ONE}
+  \ALIUSPlacedTextContent{521.494}{102.305}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{107.080}{118.145}{9.472}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{10}
+  \ALIUSPlacedTextContent{116.570}{118.145}{66.523}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), e0118143.}
+  \ALIUSPlacedTextContent{71.080}{139.985}{298.064}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Ramus, F. (2013). What's the point of neuropsychoanalysis?}
+  \ALIUSPlacedTextContent{369.133}{139.985}{152.311}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The British Journal of Psychiatry}
+  \ALIUSPlacedTextContent{521.494}{139.985}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{107.080}{155.585}{14.855}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{203}
+  \ALIUSPlacedTextContent{121.952}{155.585}{42.942}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 70–71.}
+  \ALIUSPlacedTextContent{71.080}{177.425}{453.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Roseman, L., Sereno, M., Leech, R., Kaelen, M., Orban, C., McGonigle, J., … Carhart-}
+  \ALIUSPlacedTextContent{107.080}{193.025}{420.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Harris, R. (2016). LSD alters eyes-closed functional connectivity within the early}
+  \ALIUSPlacedTextContent{107.080}{208.865}{190.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{visual cortex in a retinotopic fashion.}
+  \ALIUSPlacedTextContent{297.967}{208.865}{107.345}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Human Brain Mapping}
+  \ALIUSPlacedTextContent{405.345}{208.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{411.273}{208.865}{9.461}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{37}
+  \ALIUSPlacedTextContent{420.750}{208.865}{79.653}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(8), 3031–3040.}
+  \ALIUSPlacedTextContent{71.080}{230.705}{96.746}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Shanon, B. (2002).}
+  \ALIUSPlacedTextContent{169.590}{230.705}{357.774}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The antipodes of the mind: Charting the phenomenology of the ayahuasca}
+  \ALIUSPlacedTextContent{107.080}{246.305}{46.771}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{experience}
+  \ALIUSPlacedTextContent{153.866}{246.305}{190.814}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. New York: Oxford University Press.}
+  \ALIUSPlacedTextContent{71.080}{268.145}{90.072}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Taves, A. (2009).}
+  \ALIUSPlacedTextContent{162.712}{268.145}{364.698}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Religious experience reconsidered: A building-block approach to the study of}
+  \ALIUSPlacedTextContent{107.080}{283.745}{145.735}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{religion and other special things}
+  \ALIUSPlacedTextContent{252.845}{283.745}{260.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Princeton NJ/Oxford: Princeton University Press.}
+  \ALIUSPlacedTextContent{71.080}{305.585}{456.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Vollenweider, F., Leenders, K., Scharfetter, C., Maguire, P., Stadelmann, O., \& Angst, J.}
+  \ALIUSPlacedTextContent{107.080}{321.425}{420.371}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1997). Positron Emission Tomography and Fluorodeoxyglucose Studies of}
+  \ALIUSPlacedTextContent{107.080}{337.025}{420.373}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Metabolic Hyperfrontality and Psychopathology in the Psilocybin Model of}
+  \ALIUSPlacedTextContent{107.080}{352.865}{53.110}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Psychosis.}
+  \ALIUSPlacedTextContent{160.197}{352.865}{123.159}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuropsychopharmacology}
+  \ALIUSPlacedTextContent{283.420}{352.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{289.348}{352.865}{9.226}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{16}
+  \ALIUSPlacedTextContent{298.591}{352.865}{66.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5), 357–372.}
+  \ALIUSPlacedTextContent{71.080}{374.465}{97.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Zahavi, D. (2014).}
+  \ALIUSPlacedTextContent{171.982}{374.465}{305.944}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Self and Other: Exploring Subjectivity, Empathy, and Shame}
+  \ALIUSPlacedTextContent{477.884}{374.465}{49.544}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Oxford}
+  \ALIUSPlacedTextContent{106.530}{390.305}{87.491}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{University Press.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

@@ -1,38 +1,641 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.0000bp,paperheight=842.0000bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{Psychedelics: From pharmacology to phenomenology}
-\author{David Nichols Interviewed by Leor Roseman \& Christopher Timmermann}
-\date{ALIUS Bulletin 2}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC161413}{HTML}{161413}
+\definecolor{ALIUSC1A1718}{HTML}{1A1718}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSC7F7F7F}{HTML}{7F7F7F}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\definecolor{ALIUSCFFFFFF}{HTML}{FFFFFF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
+
+% --- Draft abstract retained as comments; not rendered in reconstruction. ---
+% \section*{Abstract}
+% This interview with David Nichols moves from the medicinal chemistry of psychedelics to their pharmacology, mechanisms, and place in current research. Nichols argues that brain imaging combined with existing knowledge of neurotransmitter systems will be central to correlating subjective effects with brain activity, and that brain science is still at an early stage. He explains why tryptamines and phenethylamines, though both serotonin 2A agonists, produce different effects through functional selectivity and ligand bias, recruiting different intracellular signalling pathways. He describes his work designing analogues to define the conformations of side chains and methoxy groups, and discusses the most selective 5-HT2A agonists synthesised to date. The conversation turns to the crystal structure work of Daniel Wacker and colleagues, which shows that extracellular loop 2 traps LSD in the receptor and that prolonged occupancy yields time-dependent beta-arrestin recruitment. Further sections take up the hydrogen-bond proposal of Solomon Snyder, which Nichols regards as no longer tenable, the differences between classic psychedelics and ketamine, salvinorin A, and scopolamine, and endogenous DMT, where Nichols disagrees with Rick Strassman's account of spontaneous experiences and argues that tissue concentrations are below the threshold for receptor activation. He sets the active and passive coping framework of Robin Carhart-Harris and David Nutt aside as insufficient to account for the diversity of serotonin receptor subtypes, raises concerns about methodological standards in the psychedelic renaissance, and argues against microdosing on dose-response grounds and the cardiac valvulopathy risk from 5-HT2B stimulation. The interview closes on his hope that psychedelics will be approved for emotional and psychiatric disorders in the early 2020s and that national agencies will provide sustained funding for the field.\par
+% --- End draft abstract. ---
+% --- End draft abstract. ---
+% --- End draft abstract. ---
+% --- End draft abstract. ---
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/ezb7-sq10\par
-\textbf{Keywords:} 5-HT2A receptor, ligand bias, LSD binding kinetics, endogenous DMT, psychedelic renaissance\par
-\section*{Abstract}
-This interview with David Nichols moves from the medicinal chemistry of psychedelics to their pharmacology, mechanisms, and place in current research. Nichols argues that brain imaging combined with existing knowledge of neurotransmitter systems will be central to correlating subjective effects with brain activity, and that brain science is still at an early stage. He explains why tryptamines and phenethylamines, though both serotonin 2A agonists, produce different effects through functional selectivity and ligand bias, recruiting different intracellular signalling pathways. He describes his work designing analogues to define the conformations of side chains and methoxy groups, and discusses the most selective 5-HT2A agonists synthesised to date. The conversation turns to the crystal structure work of Daniel Wacker and colleagues, which shows that extracellular loop 2 traps LSD in the receptor and that prolonged occupancy yields time-dependent beta-arrestin recruitment. Further sections take up the hydrogen-bond proposal of Solomon Snyder, which Nichols regards as no longer tenable, the differences between classic psychedelics and ketamine, salvinorin A, and scopolamine, and endogenous DMT, where Nichols disagrees with Rick Strassman's account of spontaneous experiences and argues that tissue concentrations are below the threshold for receptor activation. He sets the active and passive coping framework of Robin Carhart-Harris and David Nutt aside as insufficient to account for the diversity of serotonin receptor subtypes, raises concerns about methodological standards in the psychedelic renaissance, and argues against microdosing on dose-response grounds and the cardiac valvulopathy risk from 5-HT2B stimulation. The interview closes on his hope that psychedelics will be approved for emotional and psychiatric disorders in the early 2020s and that national agencies will provide sustained funding for the field.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent 75 ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin Psychedelics From pharmacology to phenomenology An interview with David Nichols By Leor Roseman \& Christopher Timmermann David Nichols denichol@email.unc.edu Eshelman School of Pharmacy University of North Carolina, Chapel Hill, USA Leor Roseman leor.roseman13@imperial.ac.uk Department of Medicine Imperial College London, UK Christopher Timmermann c.timmermann-slater15@imperial.ac.uk Department of Medicine Imperial College London, UK Citation: Nichols, D., Roseman, L. \& Timmermann, C. (2018). Psychedelics: from pharmacology to phenomenology. An interview with David Nichols. ALIUS Bulletin, 2, 75-85. L.R. and C.T. would like to thank Tobias Buchborn for suggesting two questions used in this interview. The relationship between the pharmacology of psychedelics and their effects on consciousness are usually obscured by a complex myriad of interactions, extra and intracellular mechanisms, etc. What do you think is the correct approach to bridge mechanisms stemming from the molecular level to complex human behavior? In what way do you think psychedelic drugs can provide insights into these mechanisms? I think modern brain imaging technologies are going to be playing an increasingly important role. Correlating subjective effects with functional effects in specific brain areas should be very revealing. We already know a lot about the neurotransmitter systems that operate in the various anatomical areas of the brain, so coupling all that with brain imaging will be important. We still need to know a lot more about what intracellular signaling cascades are important, and how they affect behavioral endpoints. We are really in the infancy of brain science, and a hundred years from now people will look back and think that the things we did were very primitive. But I believe that psychedelics will prove to be crucial tools to help us understand consciousness. Tryptamines (e.g., LSD, psilocybin, DMT) and some phenethylamines (e.g., mescaline, 2C-B) are both serotonin 2A agonists and classic psychedelics (see fig. 1 below). However, they have different chemical structures. Could you please explain how they differ chemically and how this difference accounts for the distinct behavioral and phenomenological effects they each produce? D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 76 " Although several classes of molecules are 5-HT2A agonists, what happens after they interact with the receptor is probably different. The concept of functional selectivity, or ligand bias has been an evolving pharmacological concept for more than 15 years. The way the ligand engages the receptor, that is, the way it docks into the receptor and the amino acid residues it engages, allows the receptor to adopt different shapes, or conformations. These different conformations produce different conformations in the intracellular connecting loops of the receptor, and these different conformations can engage different signaling components. For example, a G protein coupled receptor (GPCR) of which the 5-HT2A receptor is one, can couple to various G proteins within the neuron; Gq, Gi, Gs, etc. In addition, serine and threonine residues in the intracellular receptor loops can be phosphorylated by G protein receptor kinases, and then the phosphorylated fragments can recruit beta- arrestin. Different 5-HT2A agonists, can recruit different intracellular pathways to different extents, and those different signaling pathways undoubtedly lead to subtle differences in the behavioral effects. Fig. 1 - A few well-known psychedelic molecules You are an expert in designing new analogues for different psychedelics. Could you tell us what the rationale behind designing successful analogue is? Is it hypothesis driven, luck (trying lots of different chemical structures) or both? As an academic, my work had to involve hypothesis testing. On occasion, we might ask "I wonder what this structure would do?" and then we would prepare it to find out. Most often, however, we had a specific hypothesis we tested. Our hypotheses Psilocybin LSD DMT Mescaline 2C-B Different 5-HT2A agonists, can recruit different intracellular pathways to different extents, and those different signalling pathways undoubtedly lead to subtle differences in the behavioural effects. " D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 77 mostly centered on defining the shape, or conformation of the side chain in tryptamines or phenethylamines, as well as defining the shapes of the methoxy groups in the phenethylamines. For example, that led us to synthesize complex and rigid phenethylamines such as 2-aminotetralins, benzocyclobutenes, and aminomethylindans. The original impetus for most of these studies was an attempt to understand how the 5-HT2A receptor could accommodate different chemotypes, i.e., ergolines, tryptamines, and phenethylamines. What is the most selective serotonin 2A agonist? What is the subjective experience of this drug? The most selective 5-HT2A agonists to date have never been tested in humans. One was developed in Denmark, and is a 2,5-dimethoxy-4-cyano-N-(2-hydroxybenzyl) phenethylamine (25CN-NBOH). The other is a three-ring 25B-NBMOMe type structure, where the ethylamine side chain has been tethered into a piperidine ring. The latter structure was crystallized and we published the x-ray crystallographic structure of it, and that gave us an idea of how the side chain of the NBOMe compounds must bind to the receptor. I would love to see clinical tests of a very selective 5-HT2A agonist, because all known psychedelics are both 5-HT2A and 5- HT2C agonists, and in the brain these two receptors generally are functionally opposed to each other. In a recent study that you were involved in (Wacker, 2017), you demonstrated that the serotonin 2B receptor (very similar to 2A) has a lid-shaped structural extension that stays closed for longer periods every time LSD is attached to the receptor, and that this "lid" traps the LSD inside, which ultimately accounts for its prolonged duration of action. Could you please expand on this finding? What would you hypothesize that other classic psychedelics are doing to the "lid"? What is special about the structure of LSD that closes the "lid"? The piece of the receptor that does that is called extracellular loop 2, or EL2. Before I retired from Purdue, my last graduate student had mutated all of the residues in EL2 for the 5-HT2A receptor. We did binding studies in each mutant and compared LSD with some LSD analogues known as azetidides, where the diethyl group of LSD had been tethered into a four-membered azetidine ring with appended methyl groups. We had compared the pharmacology of the three stereoisomers, where the 2,4-dimethylazetidine ring had a cis stereochemistry, or an R,R or an S,S configuration (McCorvy, 2012). We found that the S,S configuration gave a compound closest in pharmacology to LSD itself. (That structure has appeared on the "research chemical" market as LSZ). Mutations of the residues in EL2 showed that mutation of leucine 229 to an alanine had an effect that was similar for LSD and the S,S-azetidide, but different for the R,R and cis stereoisomers. Later, working in Bryan Roth's laboratory, it was found that the S,S azetidide had pharmacology D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 78 similar to LSD in the 5-HT2B receptor, but the key residue in EL2 in that case was Leucine 209 (Wacker 2017). In examining the receptor kinetics of LSD in the wild type 5-HT2A and wild type 5-HT2B receptors, compared to the L229A and L209A mutant receptor, respectively, it was discovered by John McCorvy, a postdoc in the lab there, who was my last graduate student at Purdue, that in both of the wild type receptors, LSD had a very slow association rate, and an extremely slow dissociation rate. In the Leucine to alanine mutant receptors, LSD had very fast association and dissociation kinetics (Wacker, 2017). In the x-ray crystal structure of LSD in the 5- HT2B receptor, that loop could be seen laying over LSD within the receptor, and Leucine 209 sort of wedged down between the LSD molecule and the receptor. In essence, EL2 was able to "lock" LSD into the receptor. There are now attempts to obtain the crystal structure of LSD bound into the 5-HT2A receptor, but based on the kinetics studies done by John McCorvy, we expect to see a similar "locking" mechanism with EL2. With respect to other 5-HT2A ligands, I suspect that we will see faster on and off kinetics. We think that the ability of the receptor to sequester the LSD may be a key to its high potency and profound psychopharmacology. Numerous LSD analogues have been made and tested, where the diethylamide was modified, and we have no indication that they have the type of activity seen with LSD. So it seems likely that the diethylamide is just the right size and shape and adopts a unique conformation to keep LSD in the receptor. Except for mescaline, most of the other psychedelics have a shorter duration of action, and that may reflect, to some extent, their receptor kinetics. We also found that the 5-HT2A and 5-HT2B receptors recruit beta-arrestin2 in a time-dependent manner; the longer the LSD remains in the receptor, the more robust is the arrestin signaling. That phenomenon may also be an important feature that contributes to the potent effects of LSD. In the same work (Wacker, 2017), you showed that ergotamine (a non-psychedelic 5-HT2A agonist) and LSD-likely due to differences in conformational receptor change-differentially recruit cascades downstream of 5-HT2 activation. Might these differences account for the lack of psychoactivity of ergotamine? What is the current understanding of Gq-PLC/PLA/PLD, Gi, and arrestin dependent signalling as to their significance for the behavioural and psychedelic effects of 5-HT2A agonists? I touched on this point earlier. We believe that arrestin recruitment may be very important, but many active molecules seem to have some selectivity for G protein signaling. So that is an important area that needs detailed research. Sadly, the lack of government funding has meant that few people are interested in studies like these, which would be time-consuming and very comprehensive. D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 79 In terms of structure-activity relationship, early ideas suggest that certain tryptamines (e.g., psilocin) as well as certain phenethylamines (e.g., mescaline) are able to form intramolecular hydrogen bonds so to mimic ring C and B of LSD, respectively (Snyder \& Richelson, 1968). Based on your research, what is the current understanding/evidence about these bonds being of vivo relevance? What might be the relevance of these bonds for fitting the binding pocket of 5-HT2A and/or the drugs' vulnerability to enzymatic degradation? That idea was proposed early on by Solomon Snyder, but it has been thoroughly discredited by now. It never really made sense to me, as a chemist, but we had to generate the proof. We have some ideas about how psilocin might bind to the receptor, and its orientation is probably not too different from that of bound LSD. However, other than the conserved aspartate in helix 3, LSD does not engage other polar residues except perhaps a serine in helix 5. Psilocin likely engages that same serine, but also it appears to interact with one or two other polar residues. By contrast, we really have no idea how mescaline or other phenethylamines bind, but our mutagenesis studies of the receptor did demonstrate that the phenethylamines engage residues different from those that interact with tryptamines. Besides classic psychedelics (5-HT2A agonists), there are other drugs that can create a psychedelic experience (e.g., Ketamine (NMDA antagonist), Salvinorin A (- opioid receptor agonist), Scopolamine (anticholinergic)). Do you believe that there is a common mechanism shared by these drugs? and if so what is it? Salvinorin A I think is very different, and is a very selective agonist at the kappa opioid receptor. Users generally find the experience very different from an LSD trip and often very unpleasant. Scopolamine and other anticholinergics produce true hallucinations and a sort of psychotomimetic experience. They also produce amnesia for the experience, which is very different from the 5-HT2A type of agonists. Ketamine is an interesting example, because it leads to increased release of neuronal glutamate (Abdallah, 2016). Classic 5-HT2A agonists also lead to increased brain glutamate, and if co-administered to animals along with ketamine, they can give a potentiated response. Glutamate appears essential to the actions of classic 5-HT2A agonists (Nichols, 2016), so there may be some overlap mechanistically between 5- HT2A agonists and ketamine. Again, we need a lot more research. In a recent talk you gave at Breaking Convention (https://youtu.be/YeeqHUiC8Io) you argued that endogenous production of DMT (a naturally-occurring psychedelic which is also found in the Ayahuasca brew) is not associated with spontaneous experiences, which may resemble the ones experienced under psychedelic states (e.g., near-death experiences, mystical/peak experiences, etc.). This is contrary to Rick Strassman's argument that endogenous production of DMT might be responsible for these experiences (Strassman, 2001). Could you outline the D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 80 strongest points for your argument and what may be the correct experimental approach to the study of biological mechanisms which may be underlying such experiences? Rick Strassman kind of backed off of his statement by saying it was just "speculation" (Strassman, 2001). The talk I gave there has just appeared in the Journal of Psychopharmacology, and the arguments are a bit too detailed to review here, but there are several important points in the paper (Nichols, 2017). It has also been proposed that DMT may have a neuro-protective function in life- threatening situations (i.e., under oxidative stress) (Szabo \& Frescka, 2016). What is your view on this hypothesis? Does the current evidence on endogenous production of DMT support this view in your opinion? No, essentially the affinity of DMT for sigma receptors is too low for it to be consequential. There is no known mechanism for the production of DMT that would lead to in vivo concentrations high enough to excite any of the known receptors. DMT has only been detected in very trace amounts using very sensitive LC-MS methods. The function of the serotonin system has remained an elusive subject. You have argued that the discovery of LSD (and its similarity to serotonin) was an important player in unveiling the relationship between brain chemistry and behavior. Recently, Carhart-Harris \& Nutt (2017) have proposed a general framework for this system based on work with psychedelics. They have argued that the complexity of the serotonin system may be related to the ability of the organism to flexibly adapt to the demands of the environment, with 5-HT1A and 5-HT2A receptors mediating passive and active coping to stressful stimuli respectively. Do you agree with this hypothesis? I think their hypothesis is somewhat superficial and fails to account for the wide diversity and expression of the other subtypes of receptors. Certainly 5-HT2A receptors are excitatory, and 5-HT1A receptors are inhibitory, but I don't feel that the contrasting pharmacology of those two subtypes is really sufficient as a comprehensive explanation. We are experiencing the so called psychedelic renaissance. A renaissance which includes psychedelic science and therapy (Nichols \& Johnson, 2017). What is the new knowledge that we have discovered during the current renaissance? " There is no known mechanism for the production of DMT that would lead to in vivo concentrations high enough to excite any of the known receptors. " D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 81 I think we are learning a lot more about how the brain generates mind. We are also learning that psychedelics seem to have tremendous healing potential, which might also be connected with the brain-mind connection. I believe we are just at the beginning of a revolution in thinking about brain, behavior, and emotional disorders, and that the future will be really interesting, once major institutional funders get on board. There are many young scientists interested in this field of research, but if you are an academic, you have no future without major funding. Once agencies begin to recognize the profound importance of understanding psychedelics and how they affect the brain, I believe we will see knowledge enter an exponential phase of grown. What important knowledge about psychedelic is lacking? And when do you think we will gain it? That is a question that I cannot begin to answer. Like any new field of investigation, there are things we will discover that we had probably never thought about before. A central question that everyone in this field thinks about (I hope) is "who is man?" Philosophers used to debate the nature of man, and still debate the nature of consciousness. Who are we, and why are we here? Is man just a complex biomachine that evolved through random natural selection, or does he have some connection to other beings, organisms, and to life in general? Unfortunately, those debates do not earn any money, so in the modern money-driven world, people seem to have forgotten them. Psychedelics force us to rethink these questions. They force us to think about the nature of mind, and of memory. A recent finding was that people who use psychedelics tend to be more altruistic. Why is that? Their personality trait of openness is also increased. How and why does that happen? I don't want to go too far out on a limb, but perhaps some people who use psychedelics actually become better people. It would be interesting to know how that happens and if it could generally be applied to improve personality. Science can be quite confusing, as many labs show contradicting results which are sometimes serving a certain agenda. Is there anything that we are sure about in psychedelic research? This field in general is loaded with the potential for all kinds of magical thinking. There are modern scientific studies now published that involve very poor science. " I believe we are just at the beginning of a revolution in thinking about brain, behavior, and emotional disorders, and that the future will be really interesting, once major institutional funders get on board. " D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 82 Part of that may be due to poor reviewing at the journals. Part of it may result from wishful thinking; the investigator wants to prove their hypothesis so badly that they misinterpret their data. There was a lot of that in the early research. Hopefully, the majority of scientists in this field today are aware of the great need to do things right this time around. As a high-profile speaker said at a recent MAPS conference, "Don't screw it up this time". The field of psychedelic research is noticeable for its interdisciplinary nature. Conferences on psychedelics substances usually have contributions stemming from anthropology, chemistry, neuroscience, psychology, biology and philosophy. Many times, however there is a lack of conversation between fields which may greatly benefit from some of this cross-talk. In your opinion, in what way should this multidisciplinary aspect find expression so that the field benefits most from it? I think if the scientists are good, and well-trained, they can speak to each other. What often happens, however, is someone with a modicum of training in, for example, anthropology comes up with a poorly documented idea that they are able to sell to the uninformed. And then their myth begins to spread. A lot of well- trained "scientists" come up with dubious ideas, but they rely on people to accept their ideas because they have a PhD, or an MD, and write a book. Well-trained scientists can generally see through that sort of hokum. More often, however, it is the less well trained who are susceptible to half-baked urban legends about psychedelics. I really resent "scientists" who use their credentials to gain prestige with less well-informed masses who are simply hungry for knowledge. As a chemist, I have enjoyed conversations with scientists in many other fields, so I think the key is that the people in the different fields have to be well trained and have integrity. Psychotomimetic is a term that was applied in psychedelic research when psychedelics were considered as mimicking psychosis. Most psychedelic researchers today would avoid using this term, however there is still insight we might gain about psychosis using psychedelics. What are these insights in your opinion? I think very early onset schizophrenia might have some resemblance to psychedelic actions, where you find hypermetabolic effects. Remember, the atypical antipsychotic drugs are antagonists at the 5-HT2A receptor, the target for classic psychedelics. And activation of the 5-HT2A receptor also can enhance dopaminergic brain function (Nichols, 2016), another monoamine that seems key to psychosis. " A lot of well-trained "scientists" come up with dubious ideas, but they rely on people to accept their ideas because they have a PhD, or an MD, and write a book. " D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 83 Microdosing has become quite fashionable in the past few years. It is quite different than the regular psychedelic use in which the emphasis is the psychedelic experience. What is your view on the mechanism of microdosing? What is your opinion about a chronic administration of a psychedelic? I think it is a bad idea. There is no controlled study to show that it actually does anything, and there are no studies comparing it with a prescription psychostimulant such as Modafinil or Ritalin. It seems theoretically possible that a low dose of LSD might do something, because it gets trapped in the receptor, but LSD also stimulates the 5-HT2B receptor, which can lead to cardiac valvulopathy. But there has been no well-controlled study to show that LSD actually enhances creativity. And if you think about a dose-response curve, even if you enhanced creativity at an effective dose of LSD, what pharmacological reason is there to expect that you will enhance creativity at a low dose? So I don't think it is a good idea. I think it is a fad that will die off at some point. In the 1997 MAPS bulletin you wrote "If you do psychedelic research, and that is all you do (I have some other more mainstream research in addition to the psychedelic work), you have perhaps half-a-dozen people world-wide who share your research interests. Perhaps not surprisingly, you may develop a sort of cult following, but that kind of adoration is not particularly fulfilling. People occasionally tell me that my name is known all over the world in the 'psychedelic community'. While that may be true, it doesn't get recognition within the scientific community, which is my workplace, comprised of my peers. What you want is recognition from them that you are doing good work. You are unlikely to get it, so your rewards must come from within yourself, and you must believe that someday the value of your work will become clear to other people, because that is unlikely to occur in your own lifetime. It will help if you are the sort of person who can deal easily with delayed gratification". Is it different now? I think that is still the case. Most of the researchers I know are doing it because of a personal drive that tells them it is important work. I have often thought that if I had gone into a different area of research, cancer, heart disease, etc., that I might have gained recognition for my work in mainstream circles. Among the bulk of mainstream medicinal chemists I believe I am largely unknown, despite publishing hundreds of research publications and giving seminars all over the world. It is frustrating, but I believe that what I have done is very important, and it is gratifying to see it gaining more traction today. What are your hopes and concerns about mainstreaming psychedelics? I hope we are witnessing a paradigm shift in the treatment of all kinds of emotional and psychiatric disorders. I used to think I would be dead before any of that happened, but now I see potential approval for these medicines in the early 2020s, D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 84 while I hope to still be alive! And before that, I believe that national agencies, the NIMH in the U.S. for example, will start funding research in this field at the level it should have been for all these past several decades. Then we will know that the field is maturing as lots of new young scientists will be attracted to study psychedelics. D. Nichols - Psychedelics ALIUS Bulletin n2 (2018) aliusresearch.org/bulletin 85 References Abdallah, C. G., Adams, T. G., Kelmendi, B., Esterlis, I., Sanacora, G., \& Krystal, J. H. (2016). Ketamine's mechanism of action: a path to rapid-acting antidepressants. Depression and anxiety, 33(8), 689-697. Carhart-Harris, R. L., \& Nutt, D. J. (2017). Serotonin and brain function: a tale of two receptors. Journal of Psychopharmacology, 31(9), 1091-1120. McCorvy, J. D. (2012). Mapping the binding site of the 5-HT2A receptor using mutagenesis and ligand libraries: insights into the molecular actions of psychedelics. Nichols, D. E. (2016). Psychedelics. Pharmacological reviews, 68(2), 264-355. Nichols, D. E. (2017). N, N-dimethyltryptamine and the pineal gland: Separating fact from myth. Journal of Psychopharmacology, 0269881117736919. Nichols, D. E., Johnson, M. W., \& Nichols, C. D. (2017). Psychedelics as medicines: an emerging new paradigm. Clinical Pharmacology \& Therapeutics, 101(2), 209-219. Snyder, S. H., \& Richelson, E. (1968). Psychedelic drugs: steric factors that predict psychotropic activity. Proceedings of the National Academy of Sciences, 60(1), 206-213. Strassman, R. (2001). DMT: The Spirit Molecule. Rochester, VT: Park Street Press. Szabo, A., \& Frecska, E. (2016). Dimethyltryptamine (DMT): a biochemical Swiss Army knife in neuroinflammation and neuroprotection? Neural regeneration research, 11(3), 396. Wacker, D., Wang, S., McCorvy, J. D., Betz, R. M., Venkatakrishnan, A. J., Levit, A., ... \& Shoichet, B. K. (2017). Crystal structure of an LSD-bound human serotonin receptor. Cell, 168(3), 377-389\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \fill[ALIUSC1F8135] (348.280bp,-163.000bp) rectangle ++(92.160bp,-0.240bp);
+  \fill[ALIUSC1F8135] (348.280bp,-224.200bp) rectangle ++(120.480bp,-0.240bp);
+  \fill[ALIUSC1F8135] (348.280bp,-281.800bp) rectangle ++(149.760bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (342.520bp,-138.520bp) rectangle ++(0.240bp,-85.200bp);
+  \fill[ALIUSCBFBFBF] (342.520bp,-223.720bp) rectangle ++(0.240bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (342.520bp,-225.880bp) rectangle ++(0.240bp,-78.240bp);
+  \ALIUSPlacedTextContent{512.600}{35.694}{14.172}{ALIUSC767171}{\ALIUSFontLatoLight}{10.320}{75}
+  \ALIUSPlacedTextContent{71.080}{71.099}{119.703}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Psychedelics}
+  \ALIUSPlacedTextContent{71.080}{95.311}{306.049}{ALIUSC000000}{\ALIUSFontLatoLight}{17.755}{From pharmacology to phenomenology}
+  \ALIUSPlacedTextContent{348.280}{138.196}{75.046}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{David Nichols}
+  \ALIUSPlacedTextContent{74.920}{138.486}{125.486}{ALIUSC000000}{\ALIUSFontLatoLight}{15.840}{An interview with}
+  \ALIUSPlacedTextContent{348.280}{153.035}{93.777}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{denichol@email.unc.edu}
+  \ALIUSPlacedTextContent{74.920}{157.726}{115.910}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{David Nichols}
+  \ALIUSPlacedTextContent{348.280}{163.835}{115.611}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Eshelman School of Pharmacy}
+  \ALIUSPlacedTextContent{348.280}{174.635}{176.665}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{University of North Carolina, Chapel Hill, USA}
+  \ALIUSPlacedTextContent{74.920}{192.448}{254.257}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{By Leor Roseman \& Christopher Timmermann}
+  \ALIUSPlacedTextContent{348.280}{199.396}{74.784}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{Leor Roseman}
+  \ALIUSPlacedTextContent{348.280}{214.235}{122.082}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{leor.roseman13@imperial.ac.uk}
+  \ALIUSPlacedTextContent{348.280}{225.035}{95.735}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Medicine}
+  \ALIUSPlacedTextContent{348.280}{235.835}{110.939}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Imperial College London, UK}
+  \ALIUSPlacedTextContent{348.280}{256.996}{136.151}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{Christopher Timmermann}
+  \ALIUSPlacedTextContent{74.920}{266.334}{264.344}{ALIUSC000000}{\ALIUSFontLatoLight}{10.320}{Citation: Nichols, D., Roseman, L. \& Timmermann, C. (2018).}
+  \ALIUSPlacedTextContent{348.280}{271.835}{151.552}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{c.timmermann-slater15@imperial.ac.uk}
+  \ALIUSPlacedTextContent{74.920}{279.054}{264.346}{ALIUSC000000}{\ALIUSFontLatoLight}{10.320}{Psychedelics: from pharmacology to phenomenology. An}
+  \ALIUSPlacedTextContent{348.280}{282.635}{95.735}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Medicine}
+  \ALIUSPlacedTextContent{74.920}{291.534}{131.968}{ALIUSC000000}{\ALIUSFontLatoLight}{10.320}{interview with David Nichols.}
+  \ALIUSPlacedTextContent{206.923}{291.534}{60.257}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.320}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{267.281}{291.534}{44.184}{ALIUSC000000}{\ALIUSFontLatoLight}{10.320}{, 2, 75-85.}
+  \ALIUSPlacedTextContent{348.280}{293.435}{110.939}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Imperial College London, UK}
+  \ALIUSPlacedTextContent{71.080}{339.352}{243.383}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.000}{L.R. and C.T. would like to thank Tobias Buchborn}
+  \ALIUSPlacedTextContent{71.080}{353.992}{241.060}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.000}{for suggesting two questions used in this interview.}
+  \ALIUSPlacedTextContent{71.080}{394.288}{455.796}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{The relationship between the pharmacology of psychedelics and their effects on}
+  \ALIUSPlacedTextContent{71.080}{409.888}{455.847}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{consciousness are usually obscured by a complex myriad of interactions, extra and}
+  \ALIUSPlacedTextContent{71.080}{425.488}{455.925}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{intracellular mechanisms, etc. What do you think is the correct approach to bridge}
+  \ALIUSPlacedTextContent{71.080}{441.088}{455.798}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{mechanisms stemming from the molecular level to complex human behavior? In}
+  \ALIUSPlacedTextContent{71.080}{456.688}{455.729}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{what way do you think psychedelic drugs can provide insights into these}
+  \ALIUSPlacedTextContent{71.080}{472.288}{75.215}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{mechanisms?}
+  \ALIUSPlacedTextContent{71.080}{499.818}{456.728}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think modern brain imaging technologies are going to be playing an increasingly}
+  \ALIUSPlacedTextContent{71.080}{516.618}{456.481}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{important role. Correlating subjective effects with functional effects in specific}
+  \ALIUSPlacedTextContent{71.080}{533.658}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{brain areas should be very revealing. We already know a lot about the}
+  \ALIUSPlacedTextContent{71.080}{550.698}{456.437}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{neurotransmitter systems that operate in the various anatomical areas of the brain,}
+  \ALIUSPlacedTextContent{71.080}{567.498}{456.521}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{so coupling all that with brain imaging will be important. We still need to know a}
+  \ALIUSPlacedTextContent{71.080}{584.538}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{lot more about what intracellular signaling cascades are important, and how they}
+  \ALIUSPlacedTextContent{71.080}{601.578}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{affect behavioral endpoints. We are really in the infancy of brain science, and a}
+  \ALIUSPlacedTextContent{71.080}{618.378}{456.497}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{hundred years from now people will look back and think that the things we did were}
+  \ALIUSPlacedTextContent{71.080}{635.418}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{very primitive. But I believe that psychedelics will prove to be crucial tools to help}
+  \ALIUSPlacedTextContent{71.080}{652.218}{160.839}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{us understand consciousness.}
+  \ALIUSPlacedTextContent{71.080}{681.328}{455.831}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Tryptamines (e.g., LSD, psilocybin, DMT) and some phenethylamines (e.g.,}
+  \ALIUSPlacedTextContent{71.080}{696.928}{455.809}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{mescaline, 2C-B) are both serotonin 2A agonists and classic psychedelics (see fig. 1}
+  \ALIUSPlacedTextContent{71.080}{712.529}{455.850}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{below). However, they have different chemical structures. Could you please explain}
+  \ALIUSPlacedTextContent{71.080}{728.128}{455.845}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{how they differ chemically and how this difference accounts for the distinct}
+  \ALIUSPlacedTextContent{71.080}{743.729}{335.976}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{behavioral and phenomenological effects they each produce?}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \fill[ALIUSCFFFFFF] (170.680bp,-426.280bp) rectangle ++(254.160bp,-188.880bp);
+  \fill[ALIUSCFFFFFF] (170.680bp,-426.280bp) rectangle ++(254.160bp,-188.880bp);
+  \fill[ALIUSCFFFFFF] (178.785bp,-439.606bp) rectangle ++(72.948bp,-75.320bp);
+  \fill[ALIUSCFFFFFF] (271.418bp,-434.391bp) rectangle ++(56.737bp,-80.535bp);
+  \fill[ALIUSCFFFFFF] (351.892bp,-470.313bp) rectangle ++(64.843bp,-37.660bp);
+  \fill[ALIUSCFFFFFF] (207.733bp,-546.792bp) rectangle ++(81.632bp,-42.875bp);
+  \fill[ALIUSC161413] (320.670bp,-561.415bp) rectangle ++(0.383bp,-9.446bp);
+  \fill[ALIUSC161413] (322.347bp,-562.499bp) rectangle ++(0.383bp,-7.384bp);
+  \fill[ALIUSC161413] (320.862bp,-570.746bp) rectangle ++(8.078bp,-4.891bp);
+  \fill[ALIUSC161413] (328.940bp,-570.746bp) rectangle ++(8.260bp,-4.891bp);
+  \fill[ALIUSC161413] (328.834bp,-569.720bp) rectangle ++(6.593bp,-4.028bp);
+  \fill[ALIUSC161413] (336.817bp,-561.530bp) rectangle ++(0.383bp,-9.436bp);
+  \fill[ALIUSC161413] (328.940bp,-556.755bp) rectangle ++(8.069bp,-4.881bp);
+  \fill[ALIUSC161413] (328.834bp,-558.634bp) rectangle ++(6.593bp,-4.028bp);
+  \fill[ALIUSC161413] (320.670bp,-556.755bp) rectangle ++(8.270bp,-4.881bp);
+  \fill[ALIUSC161413] (337.008bp,-556.639bp) rectangle ++(8.069bp,-4.996bp);
+  \fill[ALIUSC161413] (345.077bp,-556.639bp) rectangle ++(8.069bp,-5.111bp);
+  \fill[ALIUSC161413] (359.377bp,-554.692bp) rectangle ++(3.687bp,-4.719bp);
+  \fill[ALIUSC161413] (364.070bp,-554.692bp) rectangle ++(3.629bp,-4.719bp);
+  \fill[ALIUSC161413] (368.394bp,-557.167bp) rectangle ++(2.314bp,-3.442bp);
+  \fill[ALIUSC161413] (353.146bp,-558.634bp) rectangle ++(4.811bp,-3.117bp);
+  \fill[ALIUSC161413] (326.646bp,-545.312bp) rectangle ++(4.554bp,-4.946bp);
+  \fill[ALIUSC161413] (328.739bp,-551.202bp) rectangle ++(0.393bp,-5.658bp);
+  \fill[ALIUSC161413] (320.775bp,-542.715bp) rectangle ++(5.462bp,-3.376bp);
+  \fill[ALIUSC161413] (326.646bp,-582.569bp) rectangle ++(4.554bp,-4.946bp);
+  \fill[ALIUSC161413] (328.739bp,-575.522bp) rectangle ++(0.393bp,-6.118bp);
+  \fill[ALIUSC161413] (331.843bp,-586.416bp) rectangle ++(5.251bp,-3.251bp);
+  \fill[ALIUSC161413] (307.602bp,-573.344bp) rectangle ++(3.519bp,-4.719bp);
+  \fill[ALIUSC161413] (311.850bp,-574.574bp) rectangle ++(1.630bp,-3.489bp);
+  \fill[ALIUSC161413] (314.499bp,-570.746bp) rectangle ++(6.363bp,-3.903bp);
+  \draw[ALIUSC000000,line width=0.720bp] (170.320bp,-425.920bp) rectangle ++(254.880bp,-189.600bp);
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (271.418bp,-434.391bp) {\includegraphics[width=56.737bp,height=80.535bp]{Interviews/Issue02/Nichols_Roseman_Timmermann/assets/alius-extracted-image-p002-b016.png}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (178.785bp,-439.606bp) {\includegraphics[width=72.948bp,height=75.320bp]{Interviews/Issue02/Nichols_Roseman_Timmermann/assets/alius-extracted-image-p002-b014.png}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (351.892bp,-470.313bp) {\includegraphics[width=64.843bp,height=37.660bp]{Interviews/Issue02/Nichols_Roseman_Timmermann/assets/alius-extracted-image-p002-b018.png}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (207.733bp,-546.792bp) {\includegraphics[width=81.632bp,height=42.875bp]{Interviews/Issue02/Nichols_Roseman_Timmermann/assets/alius-extracted-image-p002-b020.png}};
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{76}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Although several classes of molecules are 5-HT2A agonists, what happens after they}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.526}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{interact with the receptor is probably different. The concept of functional}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.769}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{selectivity, or ligand bias has been an evolving pharmacological concept for more}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.519}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{than 15 years. The way the ligand engages the receptor, that is, the way it docks into}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.644}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the receptor and the amino acid residues it engages, allows the receptor to adopt}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.477}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{different shapes, or conformations. These different conformations produce different}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{conformations in the intracellular connecting loops of the receptor, and these}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.541}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{different conformations can engage different signaling components. For example, a}
+  \ALIUSPlacedTextContent{71.080}{206.538}{456.571}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{G protein coupled receptor (GPCR) of which the 5-HT2A receptor is one, can}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{couple to various G proteins within the neuron; Gq, Gi, Gs, etc. In addition, serine}
+  \ALIUSPlacedTextContent{71.080}{240.618}{456.594}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and threonine residues in the intracellular receptor loops can be phosphorylated by}
+  \ALIUSPlacedTextContent{71.080}{257.418}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{G protein receptor kinases, and then the phosphorylated fragments can recruit beta-}
+  \ALIUSPlacedTextContent{71.080}{274.458}{456.465}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{arrestin. Different 5-HT2A agonists, can recruit different intracellular pathways to}
+  \ALIUSPlacedTextContent{71.080}{291.498}{456.595}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{different extents, and those different signaling pathways undoubtedly lead to subtle}
+  \ALIUSPlacedTextContent{71.080}{308.298}{199.058}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{differences in the behavioral effects.}
+  \ALIUSPlacedTextContent{128.200}{319.048}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{146.680}{335.513}{306.385}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Different 5-HT2A agonists, can recruit different}
+  \ALIUSPlacedTextContent{146.680}{353.513}{337.279}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{intracellular pathways to different extents, and those}
+  \ALIUSPlacedTextContent{146.680}{371.513}{314.617}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{different signalling pathways undoubtedly lead to}
+  \ALIUSPlacedTextContent{146.680}{389.033}{282.952}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{subtle differences in the behavioural effects.}
+  \ALIUSPlacedTextContent{434.680}{391.048}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{193.296}{517.661}{43.926}{ALIUSC000000}{\ALIUSFontLatoRegular}{9.846}{Psilocybin}
+  \ALIUSPlacedTextContent{290.943}{517.661}{17.686}{ALIUSC000000}{\ALIUSFontLatoRegular}{9.846}{LSD}
+  \ALIUSPlacedTextContent{373.177}{517.661}{22.273}{ALIUSC000000}{\ALIUSFontLatoRegular}{9.846}{DMT}
+  \ALIUSPlacedTextContent{226.680}{592.402}{43.739}{ALIUSC000000}{\ALIUSFontLatoRegular}{9.846}{Mescaline}
+  \ALIUSPlacedTextContent{328.407}{592.402}{21.495}{ALIUSC000000}{\ALIUSFontLatoRegular}{9.846}{2C-B}
+  \ALIUSPlacedTextContent{172.051}{622.036}{253.673}{ALIUSC1A1718}{\ALIUSFontLatoRegular}{12.000}{Fig. 1 – A few well-known psychedelic molecules}
+  \ALIUSPlacedTextContent{71.080}{648.688}{455.746}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{You are an expert in designing new analogues for different psychedelics. Could you}
+  \ALIUSPlacedTextContent{71.080}{664.289}{455.909}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{tell us what the rationale behind designing successful analogue is? Is it hypothesis}
+  \ALIUSPlacedTextContent{71.080}{679.888}{357.327}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{driven, luck (trying lots of different chemical structures) or both?}
+  \ALIUSPlacedTextContent{71.080}{707.418}{456.531}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{As an academic, my work had to involve hypothesis testing. On occasion, we might}
+  \ALIUSPlacedTextContent{71.080}{724.218}{456.525}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{ask "I wonder what this structure would do?" and then we would prepare it to find}
+  \ALIUSPlacedTextContent{71.080}{741.258}{456.503}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{out. Most often, however, we had a specific hypothesis we tested. Our hypotheses}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{77}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.520}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mostly centered on defining the shape, or conformation of the side chain in}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{tryptamines or phenethylamines, as well as defining the shapes of the methoxy}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.591}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{groups in the phenethylamines. For example, that led us to synthesize complex and}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{rigid phenethylamines such as 2-aminotetralins, benzocyclobutenes, and}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{aminomethylindans. The original impetus for most of these studies was an attempt}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.478}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to understand how the 5-HT2A receptor could accommodate different chemotypes,}
+  \ALIUSPlacedTextContent{71.080}{172.698}{270.736}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{i.e., ergolines, tryptamines, and phenethylamines.}
+  \ALIUSPlacedTextContent{71.080}{201.808}{455.855}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{What is the most selective serotonin 2A agonist? What is the subjective experience}
+  \ALIUSPlacedTextContent{71.080}{217.408}{72.257}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of this drug?}
+  \ALIUSPlacedTextContent{71.080}{244.938}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The most selective 5-HT2A agonists to date have never been tested in humans. One}
+  \ALIUSPlacedTextContent{71.080}{261.738}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{was developed in Denmark, and is a 2,5-dimethoxy-4-cyano-N-(2-hydroxybenzyl)}
+  \ALIUSPlacedTextContent{71.080}{278.778}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenethylamine (25CN-NBOH). The other is a three-ring 25B-NBMOMe type}
+  \ALIUSPlacedTextContent{71.080}{295.818}{456.630}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{structure, where the ethylamine side chain has been tethered into a piperidine ring.}
+  \ALIUSPlacedTextContent{71.080}{312.618}{456.529}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The latter structure was crystallized and we published the x-ray crystallographic}
+  \ALIUSPlacedTextContent{71.080}{329.658}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{structure of it, and that gave us an idea of how the side chain of the NBOMe}
+  \ALIUSPlacedTextContent{71.080}{346.698}{456.516}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{compounds must bind to the receptor. I would love to see clinical tests of a very}
+  \ALIUSPlacedTextContent{71.080}{363.498}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{selective 5-HT2A agonist, because all known psychedelics are both 5-HT2A and 5-}
+  \ALIUSPlacedTextContent{71.080}{380.538}{456.398}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{HT2C agonists, and in the brain these two receptors generally are functionally}
+  \ALIUSPlacedTextContent{71.080}{397.338}{126.204}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{opposed to each other.}
+  \ALIUSPlacedTextContent{71.080}{426.448}{455.832}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{In a recent study that you were involved in (Wacker, 2017), you demonstrated that}
+  \ALIUSPlacedTextContent{71.080}{442.048}{455.748}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{the serotonin 2B receptor (very similar to 2A) has a lid-shaped structural extension}
+  \ALIUSPlacedTextContent{71.080}{457.648}{455.886}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{that stays closed for longer periods every time LSD is attached to the receptor, and}
+  \ALIUSPlacedTextContent{71.080}{473.248}{455.806}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{that this "lid" traps the LSD inside, which ultimately accounts for its prolonged}
+  \ALIUSPlacedTextContent{71.080}{488.848}{455.771}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{duration of action. Could you please expand on this finding? What would you}
+  \ALIUSPlacedTextContent{71.080}{504.448}{455.830}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{hypothesize that other classic psychedelics are doing to the "lid"? What is special}
+  \ALIUSPlacedTextContent{71.080}{520.048}{260.876}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{about the structure of LSD that closes the "lid"?}
+  \ALIUSPlacedTextContent{71.080}{547.578}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The piece of the receptor that does that is called extracellular loop 2, or EL2. Before}
+  \ALIUSPlacedTextContent{71.080}{564.618}{456.643}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I retired from Purdue, my last graduate student had mutated all of the residues in}
+  \ALIUSPlacedTextContent{71.080}{581.418}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{EL2 for the 5-HT2A receptor. We did binding studies in each mutant and compared}
+  \ALIUSPlacedTextContent{71.080}{598.458}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{LSD with some LSD analogues known as azetidides, where the diethyl group of LSD}
+  \ALIUSPlacedTextContent{71.080}{615.498}{456.483}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{had been tethered into a four-membered azetidine ring with appended methyl}
+  \ALIUSPlacedTextContent{71.080}{632.298}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{groups. We had compared the pharmacology of the three stereoisomers, where the}
+  \ALIUSPlacedTextContent{71.080}{649.338}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{2,4-dimethylazetidine ring had a cis stereochemistry, or an R,R or an S,S}
+  \ALIUSPlacedTextContent{71.080}{666.378}{456.513}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{configuration (McCorvy, 2012). We found that the S,S configuration gave a}
+  \ALIUSPlacedTextContent{71.080}{683.178}{456.563}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{compound closest in pharmacology to LSD itself. (That structure has appeared on}
+  \ALIUSPlacedTextContent{71.080}{700.218}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the "research chemical" market as LSZ). Mutations of the residues in EL2 showed}
+  \ALIUSPlacedTextContent{71.080}{717.258}{456.597}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that mutation of leucine 229 to an alanine had an effect that was similar for LSD and}
+  \ALIUSPlacedTextContent{71.080}{734.058}{456.538}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the S,S-azetidide, but different for the R,R and cis stereoisomers. Later, working in}
+  \ALIUSPlacedTextContent{71.080}{751.098}{456.693}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Bryan Roth's laboratory, it was found that the S,S azetidide had pharmacology}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{78}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.438}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{similar to LSD in the 5-HT2B receptor, but the key residue in EL2 in that case was}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Leucine 209 (Wacker 2017). In examining the receptor kinetics of LSD in the wild}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.518}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{type 5-HT2A and wild type 5-HT2B receptors, compared to the L229A and L209A}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.647}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mutant receptor, respectively, it was discovered by John McCorvy, a postdoc in the}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.353}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{lab there, who was my last graduate student at Purdue, that in both of the wild type}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.525}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{receptors, LSD had a very slow association rate, and an extremely slow dissociation}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{rate. In the Leucine to alanine mutant receptors, LSD had very fast association and}
+  \ALIUSPlacedTextContent{71.080}{189.738}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{dissociation kinetics (Wacker, 2017). In the x-ray crystal structure of LSD in the 5-}
+  \ALIUSPlacedTextContent{71.080}{206.538}{456.515}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{HT2B receptor, that loop could be seen laying over LSD within the receptor, and}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Leucine 209 sort of wedged down between the LSD molecule and the receptor. In}
+  \ALIUSPlacedTextContent{71.080}{240.618}{456.509}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{essence, EL2 was able to "lock" LSD into the receptor. There are now attempts to}
+  \ALIUSPlacedTextContent{71.080}{257.418}{456.491}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{obtain the crystal structure of LSD bound into the 5-HT2A receptor, but based on}
+  \ALIUSPlacedTextContent{71.080}{274.458}{456.569}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the kinetics studies done by John McCorvy, we expect to see a similar "locking"}
+  \ALIUSPlacedTextContent{71.080}{291.498}{456.478}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mechanism with EL2. With respect to other 5-HT2A ligands, I suspect that we will}
+  \ALIUSPlacedTextContent{71.080}{308.298}{456.656}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{see faster on and off kinetics. We think that the ability of the receptor to sequester}
+  \ALIUSPlacedTextContent{71.080}{325.338}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the LSD may be a key to its high potency and profound psychopharmacology.}
+  \ALIUSPlacedTextContent{71.080}{342.138}{456.607}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Numerous LSD analogues have been made and tested, where the diethylamide was}
+  \ALIUSPlacedTextContent{71.080}{359.178}{456.471}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{modified, and we have no indication that they have the type of activity seen with}
+  \ALIUSPlacedTextContent{71.080}{376.218}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{LSD. So it seems likely that the diethylamide is just the right size and shape and}
+  \ALIUSPlacedTextContent{71.080}{393.018}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{adopts a unique conformation to keep LSD in the receptor. Except for mescaline,}
+  \ALIUSPlacedTextContent{71.080}{410.058}{456.384}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{most of the other psychedelics have a shorter duration of action, and that may}
+  \ALIUSPlacedTextContent{71.080}{427.098}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{reflect, to some extent, their receptor kinetics. We also found that the 5-HT2A and}
+  \ALIUSPlacedTextContent{71.080}{443.898}{456.509}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{5-HT2B receptors recruit beta-arrestin2 in a time-dependent manner; the longer the}
+  \ALIUSPlacedTextContent{71.080}{460.938}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{LSD remains in the receptor, the more robust is the arrestin signaling. That}
+  \ALIUSPlacedTextContent{71.080}{477.978}{456.434}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenon may also be an important feature that contributes to the potent effects}
+  \ALIUSPlacedTextContent{71.080}{494.778}{44.304}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of LSD.}
+  \ALIUSPlacedTextContent{71.080}{523.888}{455.820}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{In the same work (Wacker, 2017), you showed that ergotamine (a non-psychedelic}
+  \ALIUSPlacedTextContent{71.080}{539.489}{455.858}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{5-HT2A agonist) and LSD—likely due to differences in conformational receptor}
+  \ALIUSPlacedTextContent{71.080}{555.089}{455.795}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{change—differentially recruit cascades downstream of 5-HT2 activation. Might}
+  \ALIUSPlacedTextContent{71.080}{570.688}{455.777}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{these differences account for the lack of psychoactivity of ergotamine? What is the}
+  \ALIUSPlacedTextContent{71.080}{586.289}{455.738}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{current understanding of Gq-PLC/PLA/PLD, Gi, and arrestin dependent signalling}
+  \ALIUSPlacedTextContent{71.080}{601.888}{455.806}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{as to their significance for the behavioural and psychedelic effects of 5-HT2A}
+  \ALIUSPlacedTextContent{71.080}{617.489}{53.168}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{agonists?}
+  \ALIUSPlacedTextContent{71.080}{645.018}{456.550}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I touched on this point earlier. We believe that arrestin recruitment may be very}
+  \ALIUSPlacedTextContent{71.080}{662.058}{456.492}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{important, but many active molecules seem to have some selectivity for G protein}
+  \ALIUSPlacedTextContent{71.080}{678.858}{456.587}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{signaling. So that is an important area that needs detailed research. Sadly, the lack}
+  \ALIUSPlacedTextContent{71.080}{695.898}{456.518}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of government funding has meant that few people are interested in studies like these,}
+  \ALIUSPlacedTextContent{71.080}{712.698}{318.644}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{which would be time-consuming and very comprehensive.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \fill[ALIUSC1F8135] (348.040bp,-661.720bp) rectangle ++(172.560bp,-0.240bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{79}
+  \ALIUSPlacedTextContent{71.080}{71.008}{455.827}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{In terms of structure-activity relationship, early ideas suggest that certain}
+  \ALIUSPlacedTextContent{71.080}{86.609}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{tryptamines (e.g., psilocin) as well as certain phenethylamines (e.g., mescaline) are}
+  \ALIUSPlacedTextContent{71.080}{102.208}{455.881}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{able to form intramolecular hydrogen bonds so to mimic ring C and B of LSD,}
+  \ALIUSPlacedTextContent{71.080}{117.808}{455.753}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{respectively (Snyder \& Richelson, 1968). Based on your research, what is the}
+  \ALIUSPlacedTextContent{71.080}{133.408}{455.715}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{current understanding/evidence about these bonds being of vivo relevance? What}
+  \ALIUSPlacedTextContent{71.080}{149.008}{455.806}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{might be the relevance of these bonds for fitting the binding pocket of 5-HT2A}
+  \ALIUSPlacedTextContent{71.080}{164.609}{315.755}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{and/or the drugs' vulnerability to enzymatic degradation?}
+  \ALIUSPlacedTextContent{71.080}{192.138}{456.426}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{That idea was proposed early on by Solomon Snyder, but it has been thoroughly}
+  \ALIUSPlacedTextContent{71.080}{209.178}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{discredited by now. It never really made sense to me, as a chemist, but we had to}
+  \ALIUSPlacedTextContent{71.080}{225.978}{456.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{generate the proof. We have some ideas about how psilocin might bind to the}
+  \ALIUSPlacedTextContent{71.080}{243.018}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{receptor, and its orientation is probably not too different from that of bound LSD.}
+  \ALIUSPlacedTextContent{71.080}{260.058}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{However, other than the conserved aspartate in helix 3, LSD does not engage other}
+  \ALIUSPlacedTextContent{71.080}{276.858}{456.518}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{polar residues except perhaps a serine in helix 5. Psilocin likely engages that same}
+  \ALIUSPlacedTextContent{71.080}{293.898}{456.553}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{serine, but also it appears to interact with one or two other polar residues. By}
+  \ALIUSPlacedTextContent{71.080}{310.938}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{contrast, we really have no idea how mescaline or other phenethylamines bind, but}
+  \ALIUSPlacedTextContent{71.080}{327.738}{456.463}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{our mutagenesis studies of the receptor did demonstrate that the phenethylamines}
+  \ALIUSPlacedTextContent{71.080}{344.778}{372.711}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{engage residues different from those that interact with tryptamines.}
+  \ALIUSPlacedTextContent{71.080}{373.888}{455.726}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Besides classic psychedelics (5-HT2A agonists), there are other drugs that can}
+  \ALIUSPlacedTextContent{71.080}{389.488}{443.041}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{create a psychedelic experience (e.g., Ketamine (NMDA antagonist), Salvinorin A (}
+  \ALIUSPlacedTextContent{520.058}{389.488}{4.316}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{-}
+  \ALIUSPlacedTextContent{514.148}{389.942}{5.897}{ALIUSC1F8135}{\ALIUSFontCalibri}{12.960}{κ}
+  \ALIUSPlacedTextContent{71.080}{405.808}{455.727}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{opioid receptor agonist), Scopolamine (anticholinergic)). Do you believe that there}
+  \ALIUSPlacedTextContent{71.080}{421.408}{367.337}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{is a common mechanism shared by these drugs? and if so what is it?}
+  \ALIUSPlacedTextContent{71.080}{448.938}{456.620}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Salvinorin A I think is very different, and is a very selective agonist at the kappa}
+  \ALIUSPlacedTextContent{71.080}{465.738}{456.523}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{opioid receptor. Users generally find the experience very different from an LSD trip}
+  \ALIUSPlacedTextContent{71.080}{482.778}{456.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and often very unpleasant. Scopolamine and other anticholinergics produce true}
+  \ALIUSPlacedTextContent{71.080}{499.818}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{hallucinations and a sort of psychotomimetic experience. They also produce amnesia}
+  \ALIUSPlacedTextContent{71.080}{516.618}{456.520}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{for the experience, which is very different from the 5-HT2A type of agonists.}
+  \ALIUSPlacedTextContent{71.080}{533.658}{456.569}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Ketamine is an interesting example, because it leads to increased release of neuronal}
+  \ALIUSPlacedTextContent{71.080}{550.458}{456.507}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{glutamate (Abdallah, 2016). Classic 5-HT2A agonists also lead to increased brain}
+  \ALIUSPlacedTextContent{71.080}{567.498}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{glutamate, and if co-administered to animals along with ketamine, they can give a}
+  \ALIUSPlacedTextContent{71.080}{584.538}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{potentiated response. Glutamate appears essential to the actions of classic 5-HT2A}
+  \ALIUSPlacedTextContent{71.080}{601.338}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{agonists (Nichols, 2016), so there may be some overlap mechanistically between 5-}
+  \ALIUSPlacedTextContent{71.080}{618.378}{362.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{HT2A agonists and ketamine. Again, we need a lot more research.}
+  \ALIUSPlacedTextContent{71.080}{647.489}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{In a recent talk you gave at Breaking Convention (https://youtu.be/YeeqHUiC8Io)}
+  \ALIUSPlacedTextContent{71.080}{663.089}{455.797}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{you argued that endogenous production of DMT (a naturally-occurring psychedelic}
+  \ALIUSPlacedTextContent{71.080}{678.688}{455.850}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{which is also found in the Ayahuasca brew) is not associated with spontaneous}
+  \ALIUSPlacedTextContent{71.080}{694.289}{455.845}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{experiences, which may resemble the ones experienced under psychedelic states}
+  \ALIUSPlacedTextContent{71.080}{709.888}{455.741}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{(e.g., near-death experiences, mystical/peak experiences, etc.). This is contrary to}
+  \ALIUSPlacedTextContent{71.080}{725.489}{455.815}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Rick Strassman's argument that endogenous production of DMT might be}
+  \ALIUSPlacedTextContent{71.080}{741.089}{455.891}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{responsible for these experiences (Strassman, 2001). Could you outline the}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{80}
+  \ALIUSPlacedTextContent{71.080}{71.008}{455.719}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{strongest points for your argument and what may be the correct experimental}
+  \ALIUSPlacedTextContent{71.080}{86.609}{455.855}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{approach to the study of biological mechanisms which may be underlying such}
+  \ALIUSPlacedTextContent{71.080}{102.208}{73.616}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{experiences?}
+  \ALIUSPlacedTextContent{71.080}{129.738}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Rick Strassman kind of backed off of his statement by saying it was just "speculation"}
+  \ALIUSPlacedTextContent{71.080}{146.778}{395.423}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(Strassman, 2001). The talk I gave there has just appeared in the}
+  \ALIUSPlacedTextContent{470.876}{146.778}{56.766}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{Journal of}
+  \ALIUSPlacedTextContent{71.080}{163.578}{103.235}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{Psychopharmacology}
+  \ALIUSPlacedTextContent{174.357}{163.578}{353.381}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{, and the arguments are a bit too detailed to review here, but}
+  \ALIUSPlacedTextContent{71.080}{180.618}{343.550}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{there are several important points in the paper (Nichols, 2017).}
+  \ALIUSPlacedTextContent{71.080}{209.729}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{It has also been proposed that DMT may have a neuro-protective function in life-}
+  \ALIUSPlacedTextContent{71.080}{225.328}{455.720}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{threatening situations (i.e., under oxidative stress) (Szabo \& Frescka, 2016). What is}
+  \ALIUSPlacedTextContent{71.080}{240.928}{455.805}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{your view on this hypothesis? Does the current evidence on endogenous production}
+  \ALIUSPlacedTextContent{71.080}{256.528}{231.679}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of DMT support this view in your opinion?}
+  \ALIUSPlacedTextContent{71.080}{284.058}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{No, essentially the affinity of DMT for sigma receptors is too low for it to be}
+  \ALIUSPlacedTextContent{71.080}{300.858}{456.410}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{consequential. There is no known mechanism for the production of DMT that would}
+  \ALIUSPlacedTextContent{71.080}{317.898}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{lead to in vivo concentrations high enough to excite any of the known receptors.}
+  \ALIUSPlacedTextContent{71.080}{334.938}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{DMT has only been detected in very trace amounts using very sensitive LC-MS}
+  \ALIUSPlacedTextContent{71.080}{351.738}{52.775}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{methods.}
+  \ALIUSPlacedTextContent{116.440}{373.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{134.920}{390.473}{328.393}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{There is no known mechanism for the production of}
+  \ALIUSPlacedTextContent{134.920}{408.473}{326.065}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{DMT that would lead to in vivo concentrations high}
+  \ALIUSPlacedTextContent{134.920}{426.233}{286.552}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{enough to excite any of the known receptors.}
+  \ALIUSPlacedTextContent{422.920}{427.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{71.080}{467.728}{455.731}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{The function of the serotonin system has remained an elusive subject. You have}
+  \ALIUSPlacedTextContent{71.080}{483.328}{455.805}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{argued that the discovery of LSD (and its similarity to serotonin) was an important}
+  \ALIUSPlacedTextContent{71.080}{498.928}{455.834}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{player in unveiling the relationship between brain chemistry and behavior. Recently,}
+  \ALIUSPlacedTextContent{71.080}{514.529}{455.763}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Carhart-Harris \& Nutt (2017) have proposed a general framework for this system}
+  \ALIUSPlacedTextContent{71.080}{530.129}{455.776}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{based on work with psychedelics. They have argued that the complexity of the}
+  \ALIUSPlacedTextContent{71.080}{545.729}{455.711}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{serotonin system may be related to the ability of the organism to flexibly adapt to}
+  \ALIUSPlacedTextContent{71.080}{561.328}{455.776}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{the demands of the environment, with 5-HT1A and 5-HT2A receptors mediating}
+  \ALIUSPlacedTextContent{71.080}{576.928}{455.789}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{passive and active coping to stressful stimuli respectively. Do you agree with this}
+  \ALIUSPlacedTextContent{71.080}{592.529}{67.246}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{hypothesis?}
+  \ALIUSPlacedTextContent{71.080}{620.058}{456.685}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think their hypothesis is somewhat superficial and fails to account for the wide}
+  \ALIUSPlacedTextContent{71.080}{637.098}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{diversity and expression of the other subtypes of receptors. Certainly 5-HT2A}
+  \ALIUSPlacedTextContent{71.080}{653.898}{456.523}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{receptors are excitatory, and 5-HT1A receptors are inhibitory, but I don't feel that}
+  \ALIUSPlacedTextContent{71.080}{670.938}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the contrasting pharmacology of those two subtypes is really sufficient as a}
+  \ALIUSPlacedTextContent{71.080}{687.738}{154.749}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{comprehensive explanation.}
+  \ALIUSPlacedTextContent{71.080}{716.849}{455.829}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{We are experiencing the so called psychedelic renaissance. A renaissance which}
+  \ALIUSPlacedTextContent{71.080}{732.448}{455.790}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{includes psychedelic science and therapy (Nichols \& Johnson, 2017). What is the}
+  \ALIUSPlacedTextContent{71.080}{748.048}{400.208}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{new knowledge that we have discovered during the current renaissance?}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{81}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.555}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think we are learning a lot more about how the brain generates mind. We are also}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{learning that psychedelics seem to have tremendous healing potential, which might}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.592}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{also be connected with the brain-mind connection. I believe we are just at the}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.612}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{beginning of a revolution in thinking about brain, behavior, and emotional}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{disorders, and that the future will be really interesting, once major institutional}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.504}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{funders get on board. There are many young scientists interested in this field of}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{research, but if you are an academic, you have no future without major funding.}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Once agencies begin to recognize the profound importance of understanding}
+  \ALIUSPlacedTextContent{71.080}{206.538}{456.587}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychedelics and how they affect the brain, I believe we will see knowledge enter an}
+  \ALIUSPlacedTextContent{71.080}{223.578}{155.897}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{exponential phase of grown.}
+  \ALIUSPlacedTextContent{116.680}{251.368}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.640}{263.993}{341.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I believe we are just at the beginning of a revolution in}
+  \ALIUSPlacedTextContent{135.640}{281.993}{288.715}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{thinking about brain, behavior, and emotional}
+  \ALIUSPlacedTextContent{135.640}{299.993}{345.368}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{disorders, and that the future will be really interesting,}
+  \ALIUSPlacedTextContent{428.920}{314.008}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.640}{317.513}{291.112}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{once major institutional funders get on board.}
+  \ALIUSPlacedTextContent{71.080}{365.728}{455.933}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{What important knowledge about psychedelic is lacking? And when do you think we}
+  \ALIUSPlacedTextContent{71.080}{381.328}{61.903}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{will gain it?}
+  \ALIUSPlacedTextContent{71.080}{408.858}{456.526}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{That is a question that I cannot begin to answer. Like any new field of investigation,}
+  \ALIUSPlacedTextContent{71.080}{425.898}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{there are things we will discover that we had probably never thought about before.}
+  \ALIUSPlacedTextContent{71.080}{442.698}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{A central question that everyone in this field thinks about (I hope) is "who is man?"}
+  \ALIUSPlacedTextContent{71.080}{459.738}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Philosophers used to debate the nature of man, and still debate the nature of}
+  \ALIUSPlacedTextContent{71.080}{476.538}{456.626}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{consciousness. Who are we, and why are we here? Is man just a complex biomachine}
+  \ALIUSPlacedTextContent{71.080}{493.578}{456.672}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that evolved through random natural selection, or does he have some connection to}
+  \ALIUSPlacedTextContent{71.080}{510.618}{456.546}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{other beings, organisms, and to life in general? Unfortunately, those debates do not}
+  \ALIUSPlacedTextContent{71.080}{527.418}{456.547}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{earn any money, so in the modern money-driven world, people seem to have}
+  \ALIUSPlacedTextContent{71.080}{544.458}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{forgotten them. Psychedelics force us to rethink these questions. They force us to}
+  \ALIUSPlacedTextContent{71.080}{561.498}{456.563}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{think about the nature of mind, and of memory. A recent finding was that people}
+  \ALIUSPlacedTextContent{71.080}{578.298}{456.509}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{who use psychedelics tend to be more altruistic. Why is that? Their personality trait}
+  \ALIUSPlacedTextContent{71.080}{595.338}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of openness is also increased. How and why does that happen? I don't want to go too}
+  \ALIUSPlacedTextContent{71.080}{612.378}{456.622}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{far out on a limb, but perhaps some people who use psychedelics actually become}
+  \ALIUSPlacedTextContent{71.080}{629.178}{456.662}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{better people. It would be interesting to know how that happens and if it could}
+  \ALIUSPlacedTextContent{71.080}{646.218}{242.360}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{generally be applied to improve personality.}
+  \ALIUSPlacedTextContent{71.080}{675.328}{455.882}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Science can be quite confusing, as many labs show contradicting results which are}
+  \ALIUSPlacedTextContent{71.080}{690.928}{455.795}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{sometimes serving a certain agenda. Is there anything that we are sure about in}
+  \ALIUSPlacedTextContent{71.080}{706.529}{122.592}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{psychedelic research?}
+  \ALIUSPlacedTextContent{71.080}{734.058}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This field in general is loaded with the potential for all kinds of magical thinking.}
+  \ALIUSPlacedTextContent{71.080}{750.858}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{There are modern scientific studies now published that involve very poor science.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{82}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Part of that may be due to poor reviewing at the journals. Part of it may result from}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.493}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{wishful thinking; the investigator wants to prove their hypothesis so badly that they}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.515}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{misinterpret their data. There was a lot of that in the early research. Hopefully, the}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{majority of scientists in this field today are aware of the great need to do things right}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{this time around. As a high-profile speaker said at a recent MAPS conference, "Don't}
+  \ALIUSPlacedTextContent{71.080}{155.658}{121.849}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{screw it up this time".}
+  \ALIUSPlacedTextContent{71.080}{184.768}{455.742}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{The field of psychedelic research is noticeable for its interdisciplinary nature.}
+  \ALIUSPlacedTextContent{71.080}{200.368}{455.794}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Conferences on psychedelics substances usually have contributions stemming from}
+  \ALIUSPlacedTextContent{71.080}{215.968}{455.920}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{anthropology, chemistry, neuroscience, psychology, biology and philosophy. Many}
+  \ALIUSPlacedTextContent{71.080}{231.568}{455.912}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{times, however there is a lack of conversation between fields which may greatly}
+  \ALIUSPlacedTextContent{71.080}{247.169}{455.853}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{benefit from some of this cross-talk. In your opinion, in what way should this}
+  \ALIUSPlacedTextContent{71.080}{262.768}{427.655}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{multidisciplinary aspect find expression so that the field benefits most from it?}
+  \ALIUSPlacedTextContent{71.080}{290.298}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think if the scientists are good, and well-trained, they can speak to each other.}
+  \ALIUSPlacedTextContent{71.080}{307.338}{456.619}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{What often happens, however, is someone with a modicum of training in, for}
+  \ALIUSPlacedTextContent{71.080}{324.138}{456.725}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{example, anthropology comes up with a poorly documented idea that they are able}
+  \ALIUSPlacedTextContent{71.080}{341.178}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to sell to the uninformed. And then their myth begins to spread. A lot of well-}
+  \ALIUSPlacedTextContent{71.080}{358.218}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{trained "scientists" come up with dubious ideas, but they rely on people to accept}
+  \ALIUSPlacedTextContent{71.080}{375.018}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{their ideas because they have a PhD, or an MD, and write a book. Well-trained}
+  \ALIUSPlacedTextContent{71.080}{392.058}{456.522}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{scientists can generally see through that sort of hokum. More often, however, it is}
+  \ALIUSPlacedTextContent{71.080}{409.098}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the less well trained who are susceptible to half-baked urban legends about}
+  \ALIUSPlacedTextContent{71.080}{425.898}{456.645}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychedelics. I really resent "scientists" who use their credentials to gain prestige}
+  \ALIUSPlacedTextContent{71.080}{442.938}{456.528}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{with less well-informed masses who are simply hungry for knowledge. As a chemist,}
+  \ALIUSPlacedTextContent{71.080}{459.738}{456.625}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I have enjoyed conversations with scientists in many other fields, so I think the key}
+  \ALIUSPlacedTextContent{71.080}{476.778}{448.477}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is that the people in the different fields have to be well trained and have integrity.}
+  \ALIUSPlacedTextContent{104.440}{502.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{122.440}{514.793}{342.052}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{A lot of well-trained "scientists" come up with dubious}
+  \ALIUSPlacedTextContent{122.440}{532.793}{317.961}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{ideas, but they rely on people to accept their ideas}
+  \ALIUSPlacedTextContent{464.440}{547.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{122.440}{550.313}{341.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{because they have a PhD, or an MD, and write a book.}
+  \ALIUSPlacedTextContent{71.080}{592.768}{455.690}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Psychotomimetic is a term that was applied in psychedelic research when}
+  \ALIUSPlacedTextContent{71.080}{608.369}{455.873}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{psychedelics were considered as mimicking psychosis. Most psychedelic}
+  \ALIUSPlacedTextContent{71.080}{623.969}{455.855}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{researchers today would avoid using this term, however there is still insight we}
+  \ALIUSPlacedTextContent{71.080}{639.568}{455.806}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{might gain about psychosis using psychedelics. What are these insights in your}
+  \ALIUSPlacedTextContent{71.080}{655.169}{51.088}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{opinion?}
+  \ALIUSPlacedTextContent{71.080}{682.698}{456.700}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think very early onset schizophrenia might have some resemblance to psychedelic}
+  \ALIUSPlacedTextContent{71.080}{699.498}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{actions, where you find hypermetabolic effects. Remember, the atypical}
+  \ALIUSPlacedTextContent{71.080}{716.538}{456.490}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{antipsychotic drugs are antagonists at the 5-HT2A receptor, the target for classic}
+  \ALIUSPlacedTextContent{71.080}{733.578}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychedelics. And activation of the 5-HT2A receptor also can enhance dopaminergic}
+  \ALIUSPlacedTextContent{71.080}{750.378}{436.423}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{brain function (Nichols, 2016), another monoamine that seems key to psychosis.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{83}
+  \ALIUSPlacedTextContent{71.080}{71.008}{455.777}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Microdosing has become quite fashionable in the past few years. It is quite different}
+  \ALIUSPlacedTextContent{71.080}{86.609}{455.839}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{than the regular psychedelic use in which the emphasis is the psychedelic}
+  \ALIUSPlacedTextContent{71.080}{102.208}{455.804}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{experience. What is your view on the mechanism of microdosing? What is your}
+  \ALIUSPlacedTextContent{71.080}{117.808}{310.581}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{opinion about a chronic administration of a psychedelic?}
+  \ALIUSPlacedTextContent{71.080}{145.338}{456.494}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think it is a bad idea. There is no controlled study to show that it actually does}
+  \ALIUSPlacedTextContent{71.080}{162.378}{456.481}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{anything, and there are no studies comparing it with a prescription psychostimulant}
+  \ALIUSPlacedTextContent{71.080}{179.178}{456.622}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{such as Modafinil or Ritalin. It seems theoretically possible that a low dose of LSD}
+  \ALIUSPlacedTextContent{71.080}{196.218}{456.278}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{might do something, because it gets trapped in the receptor, but LSD also stimulates}
+  \ALIUSPlacedTextContent{71.080}{213.258}{456.603}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the 5-HT2B receptor, which can lead to cardiac valvulopathy. But there has been no}
+  \ALIUSPlacedTextContent{71.080}{230.058}{456.567}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{well-controlled study to show that LSD actually enhances creativity. And if you}
+  \ALIUSPlacedTextContent{71.080}{247.098}{456.452}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{think about a dose-response curve, even if you enhanced creativity at an effective}
+  \ALIUSPlacedTextContent{71.080}{264.138}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{dose of LSD, what pharmacological reason is there to expect that you will enhance}
+  \ALIUSPlacedTextContent{71.080}{280.938}{456.610}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{creativity at a low dose? So I don't think it is a good idea. I think it is a fad that will}
+  \ALIUSPlacedTextContent{71.080}{297.978}{119.175}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{die off at some point.}
+  \ALIUSPlacedTextContent{71.080}{327.088}{455.881}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{In the 1997 MAPS bulletin you wrote "If you do psychedelic research, and that is all}
+  \ALIUSPlacedTextContent{71.080}{342.688}{455.693}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{you do (I have some other more mainstream research in addition to the psychedelic}
+  \ALIUSPlacedTextContent{71.080}{358.288}{455.775}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{work), you have perhaps half-a-dozen people world-wide who share your research}
+  \ALIUSPlacedTextContent{71.080}{373.888}{455.783}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{interests. Perhaps not surprisingly, you may develop a sort of cult following, but that}
+  \ALIUSPlacedTextContent{71.080}{389.488}{455.823}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{kind of adoration is not particularly fulfilling. People occasionally tell me that my}
+  \ALIUSPlacedTextContent{71.080}{405.088}{455.741}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{name is known all over the world in the 'psychedelic community'. While that may be}
+  \ALIUSPlacedTextContent{71.080}{420.688}{455.857}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{true, it doesn't get recognition within the scientific community, which is my}
+  \ALIUSPlacedTextContent{71.080}{436.288}{455.756}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{workplace, comprised of my peers. What you want is recognition from them that you}
+  \ALIUSPlacedTextContent{71.080}{451.888}{455.847}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{are doing good work. You are unlikely to get it, so your rewards must come from}
+  \ALIUSPlacedTextContent{71.080}{467.488}{455.666}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{within yourself, and you must believe that someday the value of your work will}
+  \ALIUSPlacedTextContent{71.080}{483.088}{455.667}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{become clear to other people, because that is unlikely to occur in your own lifetime.}
+  \ALIUSPlacedTextContent{71.080}{498.688}{455.839}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{It will help if you are the sort of person who can deal easily with delayed}
+  \ALIUSPlacedTextContent{71.080}{514.288}{180.824}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{gratification". Is it different now?}
+  \ALIUSPlacedTextContent{71.080}{541.818}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think that is still the case. Most of the researchers I know are doing it because of a}
+  \ALIUSPlacedTextContent{71.080}{558.618}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{personal drive that tells them it is important work. I have often thought that if I had}
+  \ALIUSPlacedTextContent{71.080}{575.658}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{gone into a different area of research, cancer, heart disease, etc., that I might have}
+  \ALIUSPlacedTextContent{71.080}{592.698}{456.549}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{gained recognition for my work in mainstream circles. Among the bulk of}
+  \ALIUSPlacedTextContent{71.080}{609.498}{456.479}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mainstream medicinal chemists I believe I am largely unknown, despite publishing}
+  \ALIUSPlacedTextContent{71.080}{626.538}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{hundreds of research publications and giving seminars all over the world. It is}
+  \ALIUSPlacedTextContent{71.080}{643.338}{456.598}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{frustrating, but I believe that what I have done is very important, and it is gratifying}
+  \ALIUSPlacedTextContent{71.080}{660.378}{204.994}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to see it gaining more traction today.}
+  \ALIUSPlacedTextContent{71.080}{689.489}{390.094}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{What are your hopes and concerns about mainstreaming psychedelics?}
+  \ALIUSPlacedTextContent{71.080}{717.018}{456.584}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I hope we are witnessing a paradigm shift in the treatment of all kinds of emotional}
+  \ALIUSPlacedTextContent{71.080}{733.818}{456.642}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and psychiatric disorders. I used to think I would be dead before any of that}
+  \ALIUSPlacedTextContent{71.080}{750.858}{456.490}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{happened, but now I see potential approval for these medicines in the early 2020s,}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 10
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{84}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{while I hope to still be alive! And before that, I believe that national agencies, the}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{NIMH in the U.S. for example, will start funding research in this field at the level it}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.528}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{should have been for all these past several decades. Then we will know that the field}
+  \ALIUSPlacedTextContent{71.080}{121.818}{445.859}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is maturing as lots of new young scientists will be attracted to study psychedelics.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 11
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.891}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{D. Nichols – Psychedelics}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{85}
+  \ALIUSPlacedTextContent{263.991}{71.444}{70.165}{ALIUSC000000}{\ALIUSFontLatoLight}{13.731}{References}
+  \ALIUSPlacedTextContent{71.080}{101.585}{456.177}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Abdallah, C. G., Adams, T. G., Kelmendi, B., Esterlis, I., Sanacora, G., \& Krystal, J. H.}
+  \ALIUSPlacedTextContent{106.530}{117.185}{420.882}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2016). Ketamine's mechanism of action: a path to rapid-acting antidepressants.}
+  \ALIUSPlacedTextContent{106.530}{133.025}{106.815}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Depression and anxiety}
+  \ALIUSPlacedTextContent{213.413}{133.025}{82.305}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 33(8), 689-697.}
+  \ALIUSPlacedTextContent{71.080}{160.625}{456.405}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R. L., \& Nutt, D. J. (2017). Serotonin and brain function: a tale of two}
+  \ALIUSPlacedTextContent{106.530}{176.465}{52.656}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{receptors.}
+  \ALIUSPlacedTextContent{159.204}{176.465}{144.558}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Journal of Psychopharmacology}
+  \ALIUSPlacedTextContent{303.851}{176.465}{86.062}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 31(9), 1091-1120.}
+  \ALIUSPlacedTextContent{71.080}{204.305}{456.350}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{McCorvy, J. D. (2012). Mapping the binding site of the 5-HT2A receptor using mutagenesis}
+  \ALIUSPlacedTextContent{106.530}{219.905}{362.721}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{and ligand libraries: insights into the molecular actions of psychedelics.}
+  \ALIUSPlacedTextContent{71.080}{247.745}{175.753}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Nichols, D. E. (2016). Psychedelics.}
+  \ALIUSPlacedTextContent{246.901}{247.745}{113.322}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Pharmacological reviews}
+  \ALIUSPlacedTextContent{360.219}{247.745}{80.160}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 68(2), 264-355.}
+  \ALIUSPlacedTextContent{71.080}{275.345}{456.331}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Nichols, D. E. (2017). N, N-dimethyltryptamine and the pineal gland: Separating fact from}
+  \ALIUSPlacedTextContent{106.530}{291.185}{32.070}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{myth.}
+  \ALIUSPlacedTextContent{138.613}{291.185}{144.558}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Journal of Psychopharmacology}
+  \ALIUSPlacedTextContent{283.259}{291.185}{99.387}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 0269881117736919.}
+  \ALIUSPlacedTextContent{71.080}{319.025}{456.169}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Nichols, D. E., Johnson, M. W., \& Nichols, C. D. (2017). Psychedelics as medicines: an}
+  \ALIUSPlacedTextContent{106.530}{334.625}{127.687}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{emerging new paradigm.}
+  \ALIUSPlacedTextContent{234.265}{334.625}{179.457}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Clinical Pharmacology \& Therapeutics}
+  \ALIUSPlacedTextContent{413.778}{334.625}{82.812}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 101(2), 209-219.}
+  \ALIUSPlacedTextContent{71.080}{362.465}{456.267}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Snyder, S. H., \& Richelson, E. (1968). Psychedelic drugs: steric factors that predict}
+  \ALIUSPlacedTextContent{106.530}{378.065}{112.236}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{psychotropic activity.}
+  \ALIUSPlacedTextContent{218.782}{378.065}{223.949}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences}
+  \ALIUSPlacedTextContent{442.701}{378.065}{78.340}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 60(1), 206-213.}
+  \ALIUSPlacedTextContent{71.080}{405.905}{107.691}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Strassman, R. (2001).}
+  \ALIUSPlacedTextContent{178.809}{405.905}{120.071}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{DMT: The Spirit Molecule}
+  \ALIUSPlacedTextContent{298.913}{405.905}{176.630}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{. Rochester, VT: Park Street Press.}
+  \ALIUSPlacedTextContent{71.080}{433.745}{456.336}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Szabo, A., \& Frecska, E. (2016). Dimethyltryptamine (DMT): a biochemical Swiss Army}
+  \ALIUSPlacedTextContent{106.530}{449.345}{255.111}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{knife in neuroinflammation and neuroprotection?}
+  \ALIUSPlacedTextContent{361.492}{449.345}{135.393}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neural regeneration research,}
+  \ALIUSPlacedTextContent{496.933}{449.345}{30.482}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{11(3),}
+  \ALIUSPlacedTextContent{106.530}{465.185}{22.766}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{396.}
+  \ALIUSPlacedTextContent{71.080}{492.785}{456.307}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Wacker, D., Wang, S., McCorvy, J. D., Betz, R. M., Venkatakrishnan, A. J., Levit, A., ... \&}
+  \ALIUSPlacedTextContent{106.530}{508.625}{420.897}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Shoichet, B. K. (2017). Crystal structure of an LSD-bound human serotonin}
+  \ALIUSPlacedTextContent{106.530}{524.465}{48.262}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{receptor.}
+  \ALIUSPlacedTextContent{154.811}{524.465}{18.227}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Cell}
+  \ALIUSPlacedTextContent{173.049}{524.465}{82.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 168(3), 377-389}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

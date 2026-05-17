@@ -1,38 +1,734 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.2756bp,paperheight=841.8898bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{The neuroscience of decision making}
-\author{Timothy Hanks Interviewed by Alexandra Mikhailova \& Daniel A. Friedman}
-\date{ALIUS Bulletin 4}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC0000FF}{HTML}{0000FF}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/8pg4-0h12\par
-\textbf{Keywords:} decision making, Bayesian, free will, mental health, attention\par
-\section*{Abstract}
-In this interview, Professor Tim Hanks discusses topics related to neuroscience, decision making, philosophy, and science as a career. Hanks explores how ideas from computational neuroscience have helped him set his own research agenda and also navigate everyday situations. The way the brain makes decisions is deeply intertwined with topics such as free will, conscious awareness, and mental health. In order to productively study such diverse topics related to decision making, Hanks recommends an integrative approach that draws on multiple types of experiments and model systems, with an eye towards clinical deployment. His approach builds on various scientific frameworks, while also reminding us to stay open-minded about what the future of neuroscience may look like or bring.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin The Neuroscience of Decision Making An interview with Timothy Hanks by Alexandra Mikhailova \& Daniel A. Friedman Timothy Hanks thanks@ucdavis.edu Center for Neuroscience, UC Davis, CA, USA Alexandra Mikhailova amikhailova@ucdavis.edu Center for Neuroscience, UC Davis, CA, USA Daniel A. Friedman dafriedman@ucdavis.edu Department of Entomology \& Nematology, UC Davis, CA, USA Cite as: Hanks, T., Mikhailova, A., \& Friedman, D.A. (2020). The Neuroscience of Decision Making. An interview with Timothy Hanks by Alexandra Mikhailova and Daniel A. Friedman. ALIUS Bulletin, 4, 68-80, https://doi.org/10.34700/8pg4-0h12 Abstract In this interview, Professor Tim Hanks discusses topics related to neuroscience, decision making, philosophy, and science as a career. Hanks explores how ideas from computational neuroscience have helped him set his own research agenda and also navigate everyday situations. The way the brain makes decisions is deeply intertwined with topics such as free will, conscious awareness, and mental health. In order to productively study such diverse topics related to decision making, Hanks recommends an integrative approach that draws on multiple types of experiments and model systems, with an eye towards clinical deployment. His approach builds on various scientific frameworks, while also reminding us to stay open-minded about what the future of neuroscience may look like or bring. keywords: decision making, Bayesian, free will, mental health, attention To quote your book chapter from 'Neurobiology of Decision Making': "Thus looking for the right questions is just another kind of decision" (Shadlen et al., 2008). This quote resonates with folk sayings such as "the answer is in the question", and also with computational perspectives on decision making that highlight the role of (beliefs about) prior beliefs in controlling how evidential stimuli play a role in decision making. As a scientist, how did you come to study decision making? What decision making rules or heuristics were helpful for you during your development as a professional and researcher? I was always drawn to the questions that I found most mysterious, with those of mental experience among the top of the list. These are the questions that I find most engaging, that keep me thinking at night. What Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 69 provided the final push in the direction of neuroscience was the belief that these questions were ripe for finding answers. For decision making in particular, I was drawn in by a fascination with the specific research being conducted in that area that I learned about as an undergraduate student. That's what led me to do pre- and post-doctoral research in the labs of Mike Shadlen and Carlos Brody. I was enthusiastic enough about both of their research programs that I can still recall in vivid detail the joy of positive email correspondence with both before joining their labs. So, I followed the path of my strongest interests. The most important advice I can give is to follow a path that results in sustained day-to-day internal satisfaction, and to take efforts to be honest with yourself about what that involves. Along my path, I have also carefully considered what would be most beneficial in the long term to allow me to continue to follow my interests. That's a lot harder to determine. I think the most helpful decision-making advice I have applied in my life and career is to consider every choice in a Bayesian sense by trying to use evidence to estimate probabilities or at the very least, to explicitly consider uncertainty. This can obviously help to avoid overconfidence, but it can also help to overcome paralyzing doubt. Most importantly, it gives a principled foundation for choosing courses of action. And that's ultimately why we have a brain, to shape our actions. Every day we are consciously aware of deliberative decisions that we make (e.g. which clothes to wear, what to write in an email to a colleague), rising like islands of awareness from a vast ocean of subconscious decisions (e.g. physiological decisions related to blood pressure, heart rate, oculomotor tracking, postural balance). There are also situations where subconsciously- decided preferences can apparently be steered by conscious input, for example in the case of a deliberative pacific response to an aggressive stimulus. How do you think about the role of conscious awareness in decision making across these domains, and especially in the case of decisions where phenomenologically we seem to "have a say" in the output? The most helpful decision-making advice I have applied in my life and career is to consider every choice in a Bayesian sense " " Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 70 What neural events might distinguish the awareness of a decision from ones made subconsciously? Is conscious awareness necessary, sufficient, or differentially associated with decision making tasks (Ganupuru et al., 2019) or meta-cognitive assessments? How do we coherently generate research agendas that try to bridge the experience of conscious awareness, with neural or molecular measurements? Let me start with the "have a say" component of the question because that is where I think we have the best opportunity for scientific leverage. This relates to the question of free will, which I think is often posed in a way that stifles progress on finding answers. If the question is, "Do we have free will?", the answer depends on how we define free will. I think a better starting point is to ask the question, "To what extent do we have free will?" This promotes inquiry of what it is that we actually have. As a scientist studying decision making, I can see a clear roadmap towards answering this by describing the neural mechanisms that underlie our decisions. It's my belief that when that description is complete, it will provide a satisfying and compelling answer to the question of free will much in the way that our current understanding of biology, including genetics and evolutionary theory, provide a satisfying and compelling answer to the question of life. To make this more concrete, let me give some examples of what I think these types of explanations could look like. Through the work of many researchers across our field, we have found that commitment to a decision in many situations can be described as occurring through the accumulation of evidence to a threshold level or bound (Gold \& Shadlen, 2007; Hanks \& Summerfield, 2017). The evidence is represented in neural activity and the bound has been hypothesized to be applied to the level of neural activity. A higher bound would require more evidence for decision commitment and a lower bound would require less evidence. In other words, a person could respond differently to the same evidence depending on the level of the Perhaps in following this roadmap, we will find aspects of decision making that defy explanation based on our current scientific understanding, or that are better explained through new scientific conceptual frameworks " " Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 71 decision bound. The bound is one mechanism for exerting will. Understanding the factors that go into how a person sets their decision bound then tells us something about how that person's will can be set. This is just one example. There are many other neural mechanisms for exerting will in decision making. I think that when we have discovered and understood those mechanisms, that will provide a compelling account of the extent to which we have free will. In reading this, one might think I am describing an approach aimed at yielding a deterministic account that will be reducible to our current understanding of physical laws, but I don't think this is guaranteed. Perhaps in following this roadmap, we will find aspects of decision making that defy explanation based on our current scientific understanding, or that are better explained through new scientific conceptual frameworks. This is where I suspect consciousness will come to the fore. Currently, we have no satisfying and compelling scientific explanation of consciousness. Yet, as your question suggests, our internal experience gives us the impression that consciousness matters for our decisions. If that impression is correct, then in trying to fully explain the mechanisms of our decisions, I suspect that eventually we will hit that wall. The hope is that how we hit the wall will reveal how our current scientific conceptions need to be refined to better understand consciousness. As we pursue this scientific path, I think it is important to keep in mind that consciousness is not a singular type. In this respect, I find it useful to consider the evolutionary history of consciousness. Are different types of consciousness (e.g., visual, auditory, volitional) the product of divergent or convergent evolution? It seems possible that different forms of consciousness derived from convergent evolution with distinct types of relationships with neural or molecular measurements. Even if they derived from something more akin to divergent evolution from a common proto-consciousness, I would still not be surprised if there were distinct types of relationships with neural or molecular measurements for different forms of consciousness. That could prove very helpful in our quest for deeper understanding because the commonalities between these relationships would potentially reveal principles of a more general nature. Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 72 Your work on the speed vs. accuracy trade-off in the brains of macaques was testing the hypothesis that fast decisions require a lower threshold of evidence (Hanks et al., 2014). Your findings suggested that control of speed vs. accuracy may be exerted through changes in decision related neural activity itself, rather than through changes in the threshold applied to such neural activity to terminate a decision. This is consistent with Bayesian frameworks of decision making in the brain - i.e. that variation in internal neural states or priors can weigh on the outcome of decisions, given the same task stimuli. How do you think about the statistical or computational perspectives on decision making, in regard to decision processes that can be measured in the lab, as well as in the context of the complex long-term decisions that humans have to make? Yes, that is very nicely put, and connects directly to the point I was making above. We studied the neural mechanisms that govern the tradeoff between the speed and accuracy of decision making because we hope that they provide more general insight into flexible control of decision commitment. In theory, control over the speed vs. accuracy trade-off could occur in a variety of ways. A lower "bound" for decision commitment might be implemented directly through less neural activity being needed to trigger a choice. Alternatively, it might be implemented with the same level of neural activity needed to trigger a choice, but additional internally-generated drive to this neural activity. In the both cases, there is less external drive needed, and therefore decisions are made more hastily. We found the mechanism to be more internal drive, what is sometimes referred to as an "urgency" signal to respond separate from the evidence. One thing that I really like about this result is that it seems to be a fairly general mechanism for cognitive control of the brain. For decision making, it has been replicated in multiple other studies from different labs and different decision tasks (Heitz et al., 2014; Thura \& Cisek, 2016). There are other situations where neuroscientists have described boosted neural activity As we pursue this scientific path, I think it is important to keep in mind that consciousness is not a singular type " " Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 73 associated with cognitive control, perhaps the most prominent being with selective attention (Squire et al., 2013). In that case, attention to a particular part or feature of one's environment can boost activity of neurons selective for that part or feature. While we don't know exactly how this activity is boosted for attention or decision making, it's intriguing to consider that they may be related mechanisms. Studying these mechanisms will help us know more about what can be controlled through cognition and how. For example, let's say that after it is started, the boosting can't be suppressed for some period of time due to a limitation of the mechanism. In that case, we could truly say that a person does not have the free will to reduce their decision bound and increase it again within that time limiting span. I pose that merely as an example. I do not expect things to be so clear cut. Instead, we will probably find greater flexibility in cognitive control than this example, but it may be the case that some forms of it are easier to achieve than others. To address the final part of your question, the Bayesian framework provides a theoretical foundation for understanding decision making, and we relate much of our work to it (Beck et al., 2008). This "computational" perspective is often contrasted with the brain's "implementation" within neural circuits. When considering this distinction, it is important to realize that the boundary may not always be clear cut and that knowledge of either can be helpful for understanding both. In other words, even if you only care about the computational type of understanding or only care about the implementation type of understanding, studying both will probably help you more effectively understand either alone. Your lab developed a new change detection task based on a stream of auditory clicks generated by a stochastic Poisson process (Johnson et al., 2017), which allows you to measure the temporal weighting of sensory evidence when subjects employ different decision-making rules (thus Even if you only care about the computational type of understanding or only care about the implementation type of understanding, studying both will probably help you more effectively understand either alone " " Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 74 finessing the trade-off between false-positives and false-negatives). The article concluded that "changes in decision stopping rules did not alter the temporal weighting of sensory evidence on the decision in a systematic way. Instead, it altered the magnitude of evidence needed to trigger a choice." Unlike a forced-choice task, where participants have a window of time to make a selection, your task allows subjects to "decide when to decide". What other applications of this task would like to explore? What do you think is gained or lost when we isolate decision making outcomes (e.g. bets) from the time required to make such decisions? How do you think the methodological tension between fixed-time and free-time decision making tasks could be retrospectively or prospectively integrated? We began to study change detection tasks because it allowed us to address an important set of questions neglected by much of the previous work in the field, including my own previous work. For many of the most common tasks used to study the neural mechanisms of decision making, evidence should be weighted equally across time. One of the major questions has been to understand how that consistent weighting of new evidence can be achieved, and tremendous progress has been made with answering that (Brody \& Hanks, 2016). However, there are many situations where consistent weighting of evidence across time is detrimental. In any situation with change or instability, recent evidence is more informative than evidence from the more distant past. So, there can actually be an advantage to "forgetting" - or at least, not relying as much on information gathered further in the past (Glaze et al., 2015; Radillo et al., 2017; Piet et al., 2018). In trying to take the next step to understand how our brain weighs evidence across time, we have been systematically exploring and characterizing our capacity to evaluate evidence on different timescales. Clearly, people are capable of changing the timescale of evidence evaluation for decision making. But what are the limits of this flexibility? This is what we are trying to determine. We have been using tasks that push this flexibility to see if people can simultaneously evaluate the same sources of evidence across different timescales. If you are making a quick decision about one aspect of something, does it limit your ability to combine information simultaneously over longer periods of time to make a more careful decision about some other aspect of the same thing? Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 75 These questions seem most important in situations where we must determine when to decide, but I would argue that many "forced-choice" decision- making tasks satisfy similar conditions. When you are "forced" to decide at a fixed cue, this can be thought of as driving a very strong urgency signal to respond, similar to what I described previously. In this light, perhaps we should not have been surprised to find the mechanism for changing the speed vs. accuracy tradeoff that we discussed above involved boosting neural responses rather than reducing the level of neural activity needed for commitment, because no such reduction is seen for cued responses in forced- choice tasks. Likewise, when a cue to respond comes relatively late, decision commitment may have occurred already (Kiani et al., 2008). One of the advantages of the cognitive nature of decision making is that it does not have to be tied directly to the outside world, what one of my former advisors (Mike Shadlen) would often describe as "freedom from immediacy". Although it would stand to reason that the dynamics of the environment dictate the optimal timescale (Ossmy et al., 2013; Glaze et al., 2015; Radillo et al., 2017; Piet et al., 2018), you find that the brain represents and utilizes multiple timescales of evidence evaluation during deliberation (Ganpuru et al., 2019). What implications does this finding have for cellular mechanisms of decision making? Does this imply a brain region involved in the task can have heterogenous evidence weighting, or that multiple brain regions are responsible for heterogeneous timescales? We believe this speaks to the architecture of neural circuits that support decision making. It establishes minimum capacities for information processing that any neural mechanism of evidence evaluation must support. Many existing models of decision processing have relied on precisely tuned circuits that can effectively evaluate evidence over a set timescale (Wong \& Wang, 2006). Changing the timescales can often be achieved by altering the tuning of these circuits, but that is not enough to support multiple timescales simultaneously. Intriguingly, alternative models already exist that can support this. One such class of models uses a processing cascade with progressively longer timescales of evaluation for later nodes in the network (Goldman, 2009; Scott et al., 2017). Under this scheme, different timescales are represented by different network nodes without requiring any alterations in tuning, so it could naturally support simultaneous deliberation across Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 76 multiple timescales. We have not yet shown this to be the case, but we think it is a good hypothesis. In theory, these nodes could be distributed across different brain regions or be distinct subcomponents within brain regions related to decision making, and this is also a question we are pursuing. Disease states can influence evidence accumulation, resulting in too much or too little exploration in various domains. How is decision making affected in schizophrenia and depression? Does this point to underlying mechanistic etiological similarities among disease states, or computational attractor states that can be induced by a variety of causes? What are promising cellular mechanisms or affected circuits to investigate in relationship to decision- making deficits? Impaired decision making is observed in almost all mental disorders, including schizophrenia and depression, as you mention. Furthermore, these impairments can often severely impact quality of life, and some of the largest negative impacts from many mental disorders come from poor decision making. I saw this firsthand with my dad, who suffered from an atypical variant of Alzheimer's disease that presented as frontal-temporal dementia. The biggest impacts on his life early on in the disease progression were with decision making. While decision making can be impaired in a variety of ways with different disorders, there do seem to be common modes of impairment that can occur across disorders. What we are trying to do now is exactly in line with what you propose of applying our computational models to describe these modes of impairment and link them to underlying neural mechanisms. We have begun to collaborate with UC Davis Conte Center led by Drs. Cameron Carter and Kimberly McAllister to apply this to schizophrenia patients and animal models aimed at figuring out neural mechanisms involved. We believe that corticostriatal circuits may play a central role in the impairments to decision making that come about with schizophrenia. With Dr. Randy O'Reilly, we have developed a computational model for impaired decision making in schizophrenia that makes specific predictions for neural mechanisms impacted in corticostriatal circuits, and we are beginning to test those predictions. Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 77 We have also been collaborating with Dr. Johannes Hell to study neural mechanisms of attentional control that might be affected in ADHD. One of the most interesting aspects of ADHD is that it results in impairments to not only attention, but it also leads to more impulsivity. What is the connection between the two? Through our work on decision commitment, we have a good handle on mechanisms that may be involved for impulsivity, and again, corticostriatal circuits are implicated. I believe that similar circuit mechanisms may also underlie attentional deficits. In particular, individuals with ADHD are often able to reap the benefits of attention when they are attending to something, but the problem is that they are more easily distracted. It isn't so much a problem with attentional enhancement of perception, but rather one of allocating those attentional resources. Attentional allocation can be viewed as a decision process, and a reduced bound that would explain impulsivity would also explain lower thresholds for changing attentional focus - the distractibility that affects those with ADHD. We think that corticostriatal circuit mechanisms may explain both. With Dr. Hell, we are trying to determine specific cellular mechanisms that may be involved. What is the minimal number of neurons required to 'make a decision'? More generally, do neurons as a cell type participate in a special type of decision making relative to non-neuronal cells or perhaps even non-cells? In other words, how should we study the "decision making" processes of bacteria, computers, neural and non-neural cell types? I take an inclusive view on what it means to "make a decision", but with the caveat that there are important differences among the class of processes considered as such. Under this view, a single neuron is certainly capable of making a decision, but without the same range of complexity as a large network of neurons. Likewise, while neurons and neural networks participate in a variety of types of decision making, they do not do so in a necessarily Attentional allocation can be viewed as a decision process, and a reduced bound that would explain impulsivity would also explain lower thresholds for changing attentional focus " " Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 78 unique way. Non-neural cell types, computers, etc. may also participate in similar types of decision making, but this needs to be considered on a case- by-case basis. For instance, we can describe accumulating information to a threshold over a flexible timescale from milliseconds to minutes as a specific type of decision making. Human brains can do this, but it is not known what minimal architecture of brain tissue is needed to accomplish it. Computers can easily be programmed to do it, but it becomes more challenging as we expand the domain that we are considering to more complex types of decision making. It would also be interesting to know the capacity of other systems like bacteria. Intriguingly, for this example, there are suggestions that non-neuronal cells could play a role. In particular, the glial cells (non- neuronal cells of the nervous system that actually outnumber neurons) known as astrocytes have been shown to accumulate information over 10s of seconds for decision making in zebrafish, with some indications of flexibility in that timescale. In that circuit, the astrocytes seem to work in concert with neurons by accumulating evidence from neural input over a longer timescale and then influencing other neurons. I believe one of the keys for studying decision making in any setting is striving for a clear description of what type of decision process one is studying. This is one of the more important benefits of using a computational approach because it gives a framework for rigorous description. This has a parallel to the discussions above about free will. Rather than asking, "Is [X] making a decision?", I think it is better to ask, "In what way is [X] making a decision?" Reflexive movements may still be considered decisions in some sense, but they are very different types of decisions than those involving reflective deliberation. They invoke different forms of computation and different complexity of neural circuit processing. References Beck J. M., Ma W. J., Kiani R., Hanks T., Churchland A. K., Roitman J., Shadlen, M. N., \& Pouget, A. (2008) Probabilistic population codes for Bayesian decision making. Neuron, 60. 1142-1152. https://doi.org/10.1016/j.neuron.2008.09.021 Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 79 Brody C. D., Hanks T. D. (2016). Neural underpinnings of the evidence accumulator. Current Opinion Neurobiology. 37. 149-157. https://doi.org/10.1016/j.conb.2016.01.003 Ganupuru P., Goldring A. B., Harun R., Hanks T. D. (2019). Flexibility of Timescales of Evidence Evaluation for Decision Making. Current Biology. 29: 2091-2097.e4. https://doi.org/10.1016/j.cub.2019.05.037 Glaze C. M., Kable J. W., Gold J. I. (2015). Normative evidence accumulation in unpredictable environments. eLife. 4. https://doi.org/10.7554/eLife.08825 Gold J. I., Shadlen M. N. (2007). The neural basis of decision making. Annual Review Neuroscience. 30. 535-574. https://doi.org/10.1146/annurev.neuro.29.051605.113038 Goldman M. S. (2009). Memory without feedback in a neural network. Neuron. 61. 621-634. https://doi.org/10.1016/j.neuron.2008.12.012 Hanks T., Kiani R., Shadlen M. N. (2014). A neural mechanism of speed-accuracy tradeoff in macaque area LIP. eLife. 3. https://doi.org/10.7554/eLife.02260 Hanks T. D., Summerfield C. (2017). Perceptual Decision Making in Rodents, Monkeys, and Humans. Neuron. 93. 15-31. https://doi.org/10.1016/j.neuron.2016.12.003 Heitz R. P., Schall J. D. (2012). Neural mechanisms of speed-accuracy tradeoff. Neuron. 76. 616-628. https://doi.org/10.1016/j.neuron.2012.08.030 Johnson B., Verma R., Sun M., Hanks T. D. (2017). Characterization of decision commitment rule alterations during an auditory change detection task. Journal of Neurophysiology. 118. 2526-2536. https://doi.org/10.1152/jn.00071.2017 Kiani R., Hanks T. D., Shadlen M. N. (2008). Bounded integration in parietal cortex underlies decisions even when viewing duration is dictated by the environment. Journal of Neuroscience. 28. 3017-3029 https://doi.org/10.1523/JNEUROSCI.4761-07.2008 Ossmy O., Moran R., Pfeffer T., Tsetsos K., Usher M., Donner T. H. (2013). The timescale of perceptual evidence integration can be adapted to the environment. Current Biology. 23. 981-986. https://doi.org/10.1016/j.cub.2013.04.039 Timothy Hanks - The Neuroscience of Decision Making ALIUS Bulletin n4 (2020) aliusresearch.org/bulletin 80 Piet A. T., El Hady A., Brody C. D. (2018). Rats adopt the optimal timescale for evidence integration in a dynamic environment. Nature Communications. 9. 4265. https://doi.org/10.1038/s41467-018-06561-y Radillo A. E., Veliz-Cuba A., Josic K., Kilpatrick Z. P. (2017). Evidence Accumulation and Change Rate Inference in Dynamic Environments. Neural Computation. 29. 1561-1610. https://doi.org/10.1162/NECO\_a\_00957 Scott B. B., Constantinople C. M., Akrami A., Hanks T. D., Brody C. D., Tank D. W. (2017) . Fronto-parietal Cortical Circuits Encode Accumulated Evidence with a Diversity of Timescales. Neuron. 95. 385-398.e5. https://doi.org/10.1016/j.neuron.2017.06.013 Shadlen M. N, Kiani R, Hanks TD, Churchland A. K. (2008). An intentional framework. Better than conscious.; 71-101. Available: https://books.google.com/books?hl=en\&lr=\&id=JQLg7L- Qto4C\&oi=fnd\&pg=PA71\&dq=shandlen+decision+making+2008\&ots=Hwh RIR764A\&sig=BxKVCixK6nd5prL0sh81RSt\_sPM Squire R. F, Noudoost B, Schafer R. J, Moore T. (2013). Prefrontal contributions to visual selective attention. Annual Review Neuroscience. 36. 451-466. https://doi.org/10.1146/annurev-neuro-062111-150439 Thura D, Cisek P. (2016). Modulation of Premotor and Primary Motor Cortical Activity during Volitional Adjustments of Speed-Accuracy Trade-Offs. Journal of Neuroscience. 36. 938-956. https://doi.org/10.1523/JNEUROSCI.2230-15.2016 Wong K-F, Wang X-J. (2006). A recurrent network mechanism of time integration in perceptual decisions. Journal of Neuroscience. 26. 1314-1328. https://doi.org/10.1523/JNEUROSCI.3733-05.2006\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC1F8135] (372.711bp,-159.591bp) rectangle ++(78.480bp,-0.240bp);
+  \fill[ALIUSC1F8135] (372.711bp,-219.591bp) rectangle ++(98.160bp,-0.240bp);
+  \fill[ALIUSC1F8135] (372.711bp,-275.991bp) rectangle ++(96.720bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (367.191bp,-136.551bp) rectangle ++(0.240bp,-88.800bp);
+  \fill[ALIUSC0000FF] (88.791bp,-286.311bp) rectangle ++(165.840bp,-0.480bp);
+  \fill[ALIUSCBFBFBF] (367.191bp,-225.351bp) rectangle ++(0.240bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (367.191bp,-227.511bp) rectangle ++(0.240bp,-71.040bp);
+  \ALIUSPlacedTextContent{90.951}{72.970}{339.004}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{372.711}{136.454}{76.167}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Timothy Hanks}
+  \ALIUSPlacedTextContent{372.711}{149.629}{83.371}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{thanks@ucdavis.edu}
+  \ALIUSPlacedTextContent{88.791}{155.720}{130.764}{ALIUSC000000}{\ALIUSFontLatoLight}{16.080}{An interview with}
+  \ALIUSPlacedTextContent{372.711}{160.429}{100.578}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Center for Neuroscience,}
+  \ALIUSPlacedTextContent{372.711}{171.229}{77.157}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{UC Davis, CA, USA}
+  \ALIUSPlacedTextContent{88.791}{174.957}{129.036}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Timothy Hanks}
+  \ALIUSPlacedTextContent{372.711}{196.454}{106.867}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Alexandra Mikhailova}
+  \ALIUSPlacedTextContent{372.711}{209.629}{100.556}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{amikhailova@ucdavis.edu}
+  \ALIUSPlacedTextContent{88.791}{209.679}{263.481}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Alexandra Mikhailova \& Daniel A. Friedman}
+  \ALIUSPlacedTextContent{372.711}{220.429}{100.578}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Center for Neuroscience,}
+  \ALIUSPlacedTextContent{88.791}{227.402}{278.607}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Cite as: Hanks, T., Mikhailova, A., \& Friedman, D.A. (2020).}
+  \ALIUSPlacedTextContent{372.711}{231.229}{77.157}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{UC Davis, CA, USA}
+  \ALIUSPlacedTextContent{88.791}{239.402}{275.870}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{The Neuroscience of Decision Making. An interview with}
+  \ALIUSPlacedTextContent{88.791}{251.402}{275.894}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Timothy Hanks by Alexandra Mikhailova and Daniel A.}
+  \ALIUSPlacedTextContent{372.711}{252.854}{94.999}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Daniel A. Friedman}
+  \ALIUSPlacedTextContent{88.791}{263.402}{45.596}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Friedman.}
+  \ALIUSPlacedTextContent{165.602}{263.402}{27.503}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{ALIUS}
+  \ALIUSPlacedTextContent{224.229}{263.402}{30.642}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{Bulletin}
+  \ALIUSPlacedTextContent{254.826}{263.402}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{290.974}{263.402}{7.937}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{4,}
+  \ALIUSPlacedTextContent{332.851}{263.402}{29.107}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{68-80,}
+  \ALIUSPlacedTextContent{372.711}{266.029}{99.247}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{dafriedman@ucdavis.edu}
+  \ALIUSPlacedTextContent{88.791}{275.402}{165.906}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/8pg4-0h12}
+  \ALIUSPlacedTextContent{372.711}{276.829}{111.643}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Department of Entomology}
+  \ALIUSPlacedTextContent{372.711}{287.629}{137.613}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{\& Nematology, UC Davis, CA, USA}
+  \ALIUSPlacedTextContent{90.951}{328.732}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
+  \ALIUSPlacedTextContent{90.951}{357.267}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In this interview, Professor Tim Hanks discusses topics related to neuroscience,}
+  \ALIUSPlacedTextContent{90.951}{371.667}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{decision making, philosophy, and science as a career. Hanks explores how ideas}
+  \ALIUSPlacedTextContent{90.951}{386.067}{418.278}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{from computational neuroscience have helped him set his own research agenda}
+  \ALIUSPlacedTextContent{90.951}{400.467}{418.270}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{and also navigate everyday situations. The way the brain makes decisions is}
+  \ALIUSPlacedTextContent{90.951}{414.867}{418.270}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{deeply intertwined with topics such as free will, conscious awareness, and mental}
+  \ALIUSPlacedTextContent{90.951}{429.267}{418.268}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{health. In order to productively study such diverse topics related to decision}
+  \ALIUSPlacedTextContent{90.951}{443.667}{418.268}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{making, Hanks recommends an integrative approach that draws on multiple types}
+  \ALIUSPlacedTextContent{90.951}{458.067}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{of experiments and model systems, with an eye towards clinical deployment. His}
+  \ALIUSPlacedTextContent{90.951}{472.467}{418.270}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{approach builds on various scientific frameworks, while also reminding us to stay}
+  \ALIUSPlacedTextContent{90.951}{486.867}{395.636}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{open-minded about what the future of neuroscience may look like or bring.}
+  \ALIUSPlacedTextContent{90.951}{513.267}{47.340}{ALIUSC000000}{\ALIUSFontLatoItalic}{12.000}{keywords}
+  \ALIUSPlacedTextContent{138.289}{513.267}{302.416}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{: decision making, Bayesian, free will, mental health, attention}
+  \ALIUSPlacedTextContent{90.951}{554.373}{418.377}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{To quote your book chapter from 'Neurobiology of Decision Making': "Thus}
+  \ALIUSPlacedTextContent{90.951}{571.653}{418.354}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{looking for the right questions is just another kind of decision" (Shadlen et al.,}
+  \ALIUSPlacedTextContent{90.951}{588.933}{418.362}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{2008). This quote resonates with folk sayings such as "the answer is in the}
+  \ALIUSPlacedTextContent{90.951}{606.213}{418.299}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{question", and also with computational perspectives on decision making that}
+  \ALIUSPlacedTextContent{90.951}{623.253}{418.400}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{highlight the role of (beliefs about) prior beliefs in controlling how evidential}
+  \ALIUSPlacedTextContent{90.951}{640.533}{418.307}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{stimuli play a role in decision making. As a scientist, how did you come to study}
+  \ALIUSPlacedTextContent{90.951}{657.813}{418.337}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{decision making? What decision making rules or heuristics were helpful for}
+  \ALIUSPlacedTextContent{90.951}{675.093}{341.628}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{you during your development as a professional and researcher?}
+  \ALIUSPlacedTextContent{90.951}{704.249}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I was always drawn to the questions that I found most mysterious, with those}
+  \ALIUSPlacedTextContent{90.951}{723.688}{418.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of mental experience among the top of the list. These are the questions that}
+  \ALIUSPlacedTextContent{90.951}{743.128}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I find most engaging, that keep me thinking at night. What}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{492.951}{36.329}{16.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{69}
+  \ALIUSPlacedTextContent{107.791}{83.799}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.151}{91.867}{322.809}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The most helpful decision-making advice I have}
+  \ALIUSPlacedTextContent{135.151}{109.867}{322.791}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{applied in my life and career is to consider every}
+  \ALIUSPlacedTextContent{466.591}{122.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.151}{127.867}{171.083}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{choice in a Bayesian sense}
+  \ALIUSPlacedTextContent{90.951}{179.609}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{provided the final push in the direction of neuroscience was the belief that}
+  \ALIUSPlacedTextContent{90.951}{199.049}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these questions were ripe for finding answers. For decision making in}
+  \ALIUSPlacedTextContent{90.951}{218.488}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particular, I was drawn in by a fascination with the specific research being}
+  \ALIUSPlacedTextContent{90.951}{238.169}{418.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conducted in that area that I learned about as an undergraduate student.}
+  \ALIUSPlacedTextContent{90.951}{257.608}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{That's what led me to do pre- and post-doctoral research in the labs of Mike}
+  \ALIUSPlacedTextContent{90.951}{277.048}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Shadlen and Carlos Brody. I was enthusiastic enough about both of their}
+  \ALIUSPlacedTextContent{90.951}{296.488}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research programs that I can still recall in vivid detail the joy of positive email}
+  \ALIUSPlacedTextContent{90.951}{316.168}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{correspondence with both before joining their labs. So, I followed the path}
+  \ALIUSPlacedTextContent{90.951}{335.608}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of my strongest interests. The most important advice I can give is to follow a}
+  \ALIUSPlacedTextContent{90.951}{355.048}{418.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{path that results in sustained day-to-day internal satisfaction, and to take}
+  \ALIUSPlacedTextContent{90.951}{374.488}{327.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{efforts to be honest with yourself about what that involves.}
+  \ALIUSPlacedTextContent{90.951}{406.168}{418.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Along my path, I have also carefully considered what would be most}
+  \ALIUSPlacedTextContent{90.951}{425.608}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{beneficial in the long term to allow me to continue to follow my interests.}
+  \ALIUSPlacedTextContent{90.951}{445.048}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{That's a lot harder to determine. I think the most helpful decision-making}
+  \ALIUSPlacedTextContent{90.951}{464.488}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{advice I have applied in my life and career is to consider every choice in a}
+  \ALIUSPlacedTextContent{90.951}{484.168}{418.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Bayesian sense by trying to use evidence to estimate probabilities or at the}
+  \ALIUSPlacedTextContent{90.951}{503.608}{418.143}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{very least, to explicitly consider uncertainty. This can obviously help to avoid}
+  \ALIUSPlacedTextContent{90.951}{523.049}{418.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{overconfidence, but it can also help to overcome paralyzing doubt. Most}
+  \ALIUSPlacedTextContent{90.951}{542.489}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{importantly, it gives a principled foundation for choosing courses of action.}
+  \ALIUSPlacedTextContent{90.951}{561.928}{354.342}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{And that's ultimately why we have a brain, to shape our actions.}
+  \ALIUSPlacedTextContent{90.951}{593.733}{418.343}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Every day we are consciously aware of deliberative decisions that we make}
+  \ALIUSPlacedTextContent{90.951}{611.013}{418.226}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(e.g. which clothes to wear, what to write in an email to a colleague), rising like}
+  \ALIUSPlacedTextContent{90.951}{628.053}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{islands of awareness from a vast ocean of subconscious decisions (e.g.}
+  \ALIUSPlacedTextContent{90.951}{645.333}{418.388}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{physiological decisions related to blood pressure, heart rate, oculomotor}
+  \ALIUSPlacedTextContent{90.951}{662.613}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{tracking, postural balance). There are also situations where subconsciously-}
+  \ALIUSPlacedTextContent{90.951}{679.893}{418.362}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{decided preferences can apparently be steered by conscious input, for}
+  \ALIUSPlacedTextContent{90.951}{697.173}{418.452}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{example in the case of a deliberative pacific response to an aggressive}
+  \ALIUSPlacedTextContent{90.951}{714.453}{418.375}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{stimulus. How do you think about the role of conscious awareness in decision}
+  \ALIUSPlacedTextContent{90.951}{731.733}{418.432}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{making across these domains, and especially in the case of decisions where}
+  \ALIUSPlacedTextContent{90.951}{749.013}{324.032}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{phenomenologically we seem to "have a say" in the output?}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{493.191}{36.329}{15.941}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{70}
+  \ALIUSPlacedTextContent{90.951}{73.173}{418.310}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{What neural events might distinguish the awareness of a decision from ones}
+  \ALIUSPlacedTextContent{90.951}{90.453}{418.369}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{made subconsciously? Is conscious awareness necessary, sufficient, or}
+  \ALIUSPlacedTextContent{90.951}{107.733}{418.393}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{differentially associated with decision making tasks (Ganupuru et al., 2019) or}
+  \ALIUSPlacedTextContent{90.951}{125.013}{418.482}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{meta-cognitive assessments? How do we coherently generate research}
+  \ALIUSPlacedTextContent{90.951}{142.293}{418.452}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{agendas that try to bridge the experience of conscious awareness, with neural}
+  \ALIUSPlacedTextContent{90.951}{159.333}{158.248}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{or molecular measurements?}
+  \ALIUSPlacedTextContent{90.951}{188.488}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Let me start with the "have a say" component of the question because that is}
+  \ALIUSPlacedTextContent{90.951}{207.928}{418.115}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{where I think we have the best opportunity for scientific leverage. This relates}
+  \ALIUSPlacedTextContent{90.951}{227.609}{418.200}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to the question of free will, which I think is often posed in a way that stifles}
+  \ALIUSPlacedTextContent{90.951}{247.049}{418.272}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{progress on finding answers. If the question is, "Do we have free will?", the}
+  \ALIUSPlacedTextContent{90.951}{266.488}{418.154}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{answer depends on how we define free will. I think a better starting point is}
+  \ALIUSPlacedTextContent{90.951}{285.928}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to ask the question, "To what extent do we have free will?" This promotes}
+  \ALIUSPlacedTextContent{90.951}{305.608}{418.159}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{inquiry of what it is that we actually have. As a scientist studying decision}
+  \ALIUSPlacedTextContent{90.951}{325.048}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{making, I can see a clear roadmap towards answering this by describing the}
+  \ALIUSPlacedTextContent{90.951}{344.488}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neural mechanisms that underlie our decisions. It's my belief that when that}
+  \ALIUSPlacedTextContent{90.951}{363.928}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{description is complete, it will provide a satisfying and compelling answer to}
+  \ALIUSPlacedTextContent{90.951}{383.608}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the question of free will much in the way that our current understanding of}
+  \ALIUSPlacedTextContent{90.951}{403.048}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{biology, including genetics and evolutionary theory, provide a satisfying and}
+  \ALIUSPlacedTextContent{90.951}{422.488}{228.161}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{compelling answer to the question of life.}
+  \ALIUSPlacedTextContent{90.951}{453.928}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To make this more concrete, let me give some examples of what I think these}
+  \ALIUSPlacedTextContent{90.951}{473.608}{418.345}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{types of explanations could look like. Through the work of many researchers}
+  \ALIUSPlacedTextContent{90.951}{493.048}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{across our field, we have found that commitment to a decision in many}
+  \ALIUSPlacedTextContent{90.951}{512.489}{418.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{situations can be described as occurring through the accumulation of}
+  \ALIUSPlacedTextContent{90.951}{531.928}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{evidence to a threshold level or bound (Gold \& Shadlen, 2007; Hanks \&}
+  \ALIUSPlacedTextContent{90.951}{551.609}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Summerfield, 2017). The evidence is represented in neural activity and the}
+  \ALIUSPlacedTextContent{90.951}{571.048}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{bound has been hypothesized to be applied to the level of neural activity. A}
+  \ALIUSPlacedTextContent{90.951}{590.489}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{higher bound would require more evidence for decision commitment and a}
+  \ALIUSPlacedTextContent{90.951}{609.928}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lower bound would require less evidence. In other words, a person could}
+  \ALIUSPlacedTextContent{90.951}{629.609}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{respond differently to the same evidence depending on the level of the}
+  \ALIUSPlacedTextContent{117.151}{662.679}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{149.071}{673.147}{301.717}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Perhaps in following this roadmap, we will find}
+  \ALIUSPlacedTextContent{149.071}{691.147}{52.583}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{aspects}
+  \ALIUSPlacedTextContent{214.099}{691.147}{17.542}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of}
+  \ALIUSPlacedTextContent{244.086}{691.147}{56.909}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{decision}
+  \ALIUSPlacedTextContent{313.440}{691.147}{49.950}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{making}
+  \ALIUSPlacedTextContent{375.594}{691.147}{30.034}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{that}
+  \ALIUSPlacedTextContent{417.832}{691.147}{32.907}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{defy}
+  \ALIUSPlacedTextContent{149.071}{709.147}{301.650}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{explanation based on our current scientific}
+  \ALIUSPlacedTextContent{149.071}{727.147}{301.777}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{understanding, or that are better explained}
+  \ALIUSPlacedTextContent{466.831}{738.039}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{149.071}{745.147}{297.737}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{through new scientific conceptual frameworks}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{495.351}{36.329}{13.911}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{71}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decision bound. The bound is one mechanism for exerting will.}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Understanding the factors that go into how a person sets their decision}
+  \ALIUSPlacedTextContent{90.951}{111.928}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{bound then tells us something about how that person's will can be set.}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is just one example. There are many other neural mechanisms for}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{exerting will in decision making. I think that when we have discovered and}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understood those mechanisms, that will provide a compelling account of the}
+  \ALIUSPlacedTextContent{90.951}{189.928}{185.295}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{extent to which we have free will.}
+  \ALIUSPlacedTextContent{90.951}{221.609}{418.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In reading this, one might think I am describing an approach aimed at}
+  \ALIUSPlacedTextContent{90.951}{241.049}{418.181}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{yielding a deterministic account that will be reducible to our current}
+  \ALIUSPlacedTextContent{90.951}{260.488}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understanding of physical laws, but I don't think this is guaranteed. Perhaps}
+  \ALIUSPlacedTextContent{90.951}{279.928}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in following this roadmap, we will find aspects of decision making that defy}
+  \ALIUSPlacedTextContent{90.951}{299.608}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{explanation based on our current scientific understanding, or that are better}
+  \ALIUSPlacedTextContent{90.951}{319.048}{314.316}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{explained through new scientific conceptual frameworks.}
+  \ALIUSPlacedTextContent{90.951}{350.488}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is where I suspect consciousness will come to the fore. Currently, we}
+  \ALIUSPlacedTextContent{90.951}{369.928}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have no satisfying and compelling scientific explanation of consciousness.}
+  \ALIUSPlacedTextContent{90.951}{389.608}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Yet, as your question suggests, our internal experience gives us the impression}
+  \ALIUSPlacedTextContent{90.951}{409.048}{418.330}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that consciousness matters for our decisions. If that impression is correct,}
+  \ALIUSPlacedTextContent{90.951}{428.488}{418.339}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{then in trying to fully explain the mechanisms of our decisions, I suspect that}
+  \ALIUSPlacedTextContent{90.951}{447.928}{418.325}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{eventually we will hit that wall. The hope is that how we hit the wall will}
+  \ALIUSPlacedTextContent{90.951}{467.608}{418.316}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reveal how our current scientific conceptions need to be refined to better}
+  \ALIUSPlacedTextContent{90.951}{487.048}{145.900}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understand consciousness.}
+  \ALIUSPlacedTextContent{90.951}{518.489}{418.324}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{As we pursue this scientific path, I think it is important to keep in mind that}
+  \ALIUSPlacedTextContent{90.951}{537.928}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness is not a singular type. In this respect, I find it useful to consider}
+  \ALIUSPlacedTextContent{90.951}{557.369}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the evolutionary history of consciousness. Are different types of}
+  \ALIUSPlacedTextContent{90.951}{577.048}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness (e.g., visual, auditory, volitional) the product of divergent or}
+  \ALIUSPlacedTextContent{90.951}{596.489}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{convergent evolution? It seems possible that different forms of consciousness}
+  \ALIUSPlacedTextContent{90.951}{615.928}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{derived from convergent evolution with distinct types of relationships with}
+  \ALIUSPlacedTextContent{90.951}{635.369}{418.143}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neural or molecular measurements. Even if they derived from something}
+  \ALIUSPlacedTextContent{90.951}{655.048}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more akin to divergent evolution from a common proto-consciousness, I}
+  \ALIUSPlacedTextContent{90.951}{674.489}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{would still not be surprised if there were distinct types of relationships with}
+  \ALIUSPlacedTextContent{90.951}{693.928}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neural or molecular measurements for different forms of consciousness. That}
+  \ALIUSPlacedTextContent{90.951}{713.369}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{could prove very helpful in our quest for deeper understanding because the}
+  \ALIUSPlacedTextContent{90.951}{733.049}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{commonalities between these relationships would potentially reveal}
+  \ALIUSPlacedTextContent{90.951}{752.489}{193.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{principles of a more general nature.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{494.391}{36.329}{14.891}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{72}
+  \ALIUSPlacedTextContent{109.711}{77.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{137.311}{87.547}{322.773}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{As we pursue this scientific path, I think it is}
+  \ALIUSPlacedTextContent{137.311}{105.547}{322.727}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{important to keep in mind that consciousness is}
+  \ALIUSPlacedTextContent{470.911}{113.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{137.311}{123.547}{119.989}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{not a singular type}
+  \ALIUSPlacedTextContent{90.951}{175.413}{418.363}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Your work on the speed vs. accuracy trade-off in the brains of macaques was}
+  \ALIUSPlacedTextContent{90.951}{192.693}{418.461}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{testing the hypothesis that fast decisions require a lower threshold of}
+  \ALIUSPlacedTextContent{90.951}{209.973}{418.356}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{evidence (Hanks et al., 2014). Your findings suggested that control of speed}
+  \ALIUSPlacedTextContent{90.951}{227.013}{418.368}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{vs. accuracy may be exerted through changes in decision related neural}
+  \ALIUSPlacedTextContent{90.951}{244.293}{418.206}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{activity itself, rather than through changes in the threshold applied to such}
+  \ALIUSPlacedTextContent{90.951}{261.573}{418.345}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{neural activity to terminate a decision. This is consistent with Bayesian}
+  \ALIUSPlacedTextContent{90.951}{278.853}{418.401}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{frameworks of decision making in the brain - i.e. that variation in internal}
+  \ALIUSPlacedTextContent{90.951}{296.133}{418.277}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{neural states or priors can weigh on the outcome of decisions, given the same}
+  \ALIUSPlacedTextContent{90.951}{313.413}{418.436}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{task stimuli. How do you think about the statistical or computational}
+  \ALIUSPlacedTextContent{90.951}{330.693}{418.335}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{perspectives on decision making, in regard to decision processes that can be}
+  \ALIUSPlacedTextContent{90.951}{347.973}{418.386}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{measured in the lab, as well as in the context of the complex long-term}
+  \ALIUSPlacedTextContent{90.951}{365.013}{200.973}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{decisions that humans have to make?}
+  \ALIUSPlacedTextContent{90.951}{394.168}{418.122}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Yes, that is very nicely put, and connects directly to the point I was making}
+  \ALIUSPlacedTextContent{90.951}{413.848}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{above. We studied the neural mechanisms that govern the tradeoff between}
+  \ALIUSPlacedTextContent{90.951}{433.288}{418.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the speed and accuracy of decision making because we hope that they provide}
+  \ALIUSPlacedTextContent{90.951}{452.728}{418.113}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more general insight into flexible control of decision commitment. In theory,}
+  \ALIUSPlacedTextContent{90.951}{472.168}{418.230}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{control over the speed vs. accuracy trade-off could occur in a variety of ways.}
+  \ALIUSPlacedTextContent{90.951}{491.848}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{A lower "bound" for decision commitment might be implemented directly}
+  \ALIUSPlacedTextContent{90.951}{511.288}{418.324}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{through less neural activity being needed to trigger a choice. Alternatively, it}
+  \ALIUSPlacedTextContent{90.951}{530.729}{418.057}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might be implemented with the same level of neural activity needed to trigger}
+  \ALIUSPlacedTextContent{90.951}{550.169}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a choice, but additional internally-generated drive to this neural activity. In}
+  \ALIUSPlacedTextContent{90.951}{569.609}{418.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the both cases, there is less external drive needed, and therefore decisions are}
+  \ALIUSPlacedTextContent{90.951}{589.289}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{made more hastily. We found the mechanism to be more internal drive, what}
+  \ALIUSPlacedTextContent{90.951}{608.729}{418.346}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is sometimes referred to as an "urgency" signal to respond separate from the}
+  \ALIUSPlacedTextContent{90.951}{628.169}{53.208}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{evidence.}
+  \ALIUSPlacedTextContent{90.951}{659.609}{418.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{One thing that I really like about this result is that it seems to be a fairly}
+  \ALIUSPlacedTextContent{90.951}{679.289}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{general mechanism for cognitive control of the brain. For decision making,}
+  \ALIUSPlacedTextContent{90.951}{698.729}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it has been replicated in multiple other studies from different labs and}
+  \ALIUSPlacedTextContent{90.951}{718.169}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different decision tasks (Heitz et al., 2014; Thura \& Cisek, 2016). There are}
+  \ALIUSPlacedTextContent{90.951}{737.609}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other situations where neuroscientists have described boosted neural activity}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{494.391}{36.329}{14.709}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{73}
+  \ALIUSPlacedTextContent{117.151}{77.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{145.471}{88.747}{306.659}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Even if you only care about the computational}
+  \ALIUSPlacedTextContent{145.471}{106.747}{306.464}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{type of understanding or only care about the}
+  \ALIUSPlacedTextContent{145.471}{124.747}{104.643}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{implementation}
+  \ALIUSPlacedTextContent{267.368}{124.747}{32.913}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{type}
+  \ALIUSPlacedTextContent{317.536}{124.747}{17.545}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of}
+  \ALIUSPlacedTextContent{352.094}{124.747}{99.888}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{understanding,}
+  \ALIUSPlacedTextContent{145.471}{142.747}{306.567}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{studying both will probably help you more}
+  \ALIUSPlacedTextContent{462.271}{155.559}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{145.471}{160.747}{225.730}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{effectively understand either alone}
+  \ALIUSPlacedTextContent{90.951}{209.848}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{associated with cognitive control, perhaps the most prominent being with}
+  \ALIUSPlacedTextContent{90.951}{229.288}{418.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{selective attention (Squire et al., 2013). In that case, attention to a particular}
+  \ALIUSPlacedTextContent{90.951}{248.729}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{part or feature of one's environment can boost activity of neurons selective}
+  \ALIUSPlacedTextContent{90.951}{268.168}{418.196}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for that part or feature. While we don't know exactly how this activity is}
+  \ALIUSPlacedTextContent{90.951}{287.848}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{boosted for attention or decision making, it's intriguing to consider that they}
+  \ALIUSPlacedTextContent{90.951}{307.288}{418.115}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{may be related mechanisms. Studying these mechanisms will help us know}
+  \ALIUSPlacedTextContent{90.951}{326.728}{418.062}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more about what can be controlled through cognition and how. For example,}
+  \ALIUSPlacedTextContent{90.951}{346.168}{418.080}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{let's say that after it is started, the boosting can't be suppressed for some}
+  \ALIUSPlacedTextContent{90.951}{365.848}{418.357}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{period of time due to a limitation of the mechanism. In that case, we could}
+  \ALIUSPlacedTextContent{90.951}{385.288}{418.357}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{truly say that a person does not have the free will to reduce their decision}
+  \ALIUSPlacedTextContent{90.951}{404.728}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{bound and increase it again within that time limiting span. I pose that merely}
+  \ALIUSPlacedTextContent{90.951}{424.168}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as an example. I do not expect things to be so clear cut. Instead, we will}
+  \ALIUSPlacedTextContent{90.951}{443.848}{418.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{probably find greater flexibility in cognitive control than this example, but}
+  \ALIUSPlacedTextContent{90.951}{463.288}{397.615}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it may be the case that some forms of it are easier to achieve than others.}
+  \ALIUSPlacedTextContent{90.951}{494.728}{418.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To address the final part of your question, the Bayesian framework provides}
+  \ALIUSPlacedTextContent{90.951}{514.169}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a theoretical foundation for understanding decision making, and we relate}
+  \ALIUSPlacedTextContent{90.951}{533.849}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{much of our work to it (Beck et al., 2008). This "computational" perspective}
+  \ALIUSPlacedTextContent{90.951}{553.289}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is often contrasted with the brain's "implementation" within neural circuits.}
+  \ALIUSPlacedTextContent{90.951}{572.729}{418.393}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{When considering this distinction, it is important to realize that the}
+  \ALIUSPlacedTextContent{90.951}{592.169}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{boundary may not always be clear cut and that knowledge of either can be}
+  \ALIUSPlacedTextContent{90.951}{611.849}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{helpful for understanding both. In other words, even if you only care about}
+  \ALIUSPlacedTextContent{90.951}{631.289}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the computational type of understanding or only care about the}
+  \ALIUSPlacedTextContent{90.951}{650.729}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{implementation type of understanding, studying both will probably help you}
+  \ALIUSPlacedTextContent{90.951}{670.169}{226.118}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more effectively understand either alone.}
+  \ALIUSPlacedTextContent{90.951}{701.973}{418.403}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Your lab developed a new change detection task based on a stream of}
+  \ALIUSPlacedTextContent{90.951}{719.013}{418.374}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{auditory clicks generated by a stochastic Poisson process (Johnson et al.,}
+  \ALIUSPlacedTextContent{90.951}{736.293}{418.504}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{2017), which allows you to measure the temporal weighting of sensory}
+  \ALIUSPlacedTextContent{90.951}{753.573}{418.388}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{evidence when subjects employ different decision-making rules (thus}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{493.671}{36.329}{15.577}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{74}
+  \ALIUSPlacedTextContent{90.951}{73.173}{418.389}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{finessing the trade-off between false-positives and false-negatives). The}
+  \ALIUSPlacedTextContent{90.951}{90.453}{418.327}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{article concluded that "changes in decision stopping rules did not alter the}
+  \ALIUSPlacedTextContent{90.951}{107.733}{418.448}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{temporal weighting of sensory evidence on the decision in a systematic way.}
+  \ALIUSPlacedTextContent{90.951}{125.013}{418.384}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Instead, it altered the magnitude of evidence needed to trigger a choice."}
+  \ALIUSPlacedTextContent{90.951}{142.293}{418.534}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Unlike a forced-choice task, where participants have a window of time to}
+  \ALIUSPlacedTextContent{90.951}{159.333}{418.427}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{make a selection, your task allows subjects to "decide when to decide". What}
+  \ALIUSPlacedTextContent{90.951}{176.613}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{other applications of this task would like to explore? What do you think is}
+  \ALIUSPlacedTextContent{90.951}{193.893}{418.452}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{gained or lost when we isolate decision making outcomes (e.g. bets) from the}
+  \ALIUSPlacedTextContent{90.951}{211.173}{418.386}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{time required to make such decisions? How do you think the methodological}
+  \ALIUSPlacedTextContent{90.951}{228.453}{418.375}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{tension between fixed-time and free-time decision making tasks could be}
+  \ALIUSPlacedTextContent{90.951}{245.733}{234.122}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{retrospectively or prospectively integrated?}
+  \ALIUSPlacedTextContent{90.951}{274.888}{418.363}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We began to study change detection tasks because it allowed us to address an}
+  \ALIUSPlacedTextContent{90.951}{294.328}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{important set of questions neglected by much of the previous work in the}
+  \ALIUSPlacedTextContent{90.951}{313.768}{418.329}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{field, including my own previous work. For many of the most common tasks}
+  \ALIUSPlacedTextContent{90.951}{333.208}{418.163}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{used to study the neural mechanisms of decision making, evidence should be}
+  \ALIUSPlacedTextContent{90.951}{352.888}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{weighted equally across time. One of the major questions has been to}
+  \ALIUSPlacedTextContent{90.951}{372.328}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understand how that consistent weighting of new evidence can be achieved,}
+  \ALIUSPlacedTextContent{90.951}{391.768}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and tremendous progress has been made with answering that (Brody \&}
+  \ALIUSPlacedTextContent{90.951}{411.208}{418.329}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Hanks, 2016). However, there are many situations where consistent weighting}
+  \ALIUSPlacedTextContent{90.951}{430.888}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of evidence across time is detrimental. In any situation with change or}
+  \ALIUSPlacedTextContent{90.951}{450.328}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{instability, recent evidence is more informative than evidence from the more}
+  \ALIUSPlacedTextContent{90.951}{469.768}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{distant past. So, there can actually be an advantage to "forgetting" – or at}
+  \ALIUSPlacedTextContent{90.951}{489.208}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{least, not relying as much on information gathered further in the past (Glaze}
+  \ALIUSPlacedTextContent{90.951}{508.648}{258.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{et al., 2015; Radillo et al., 2017; Piet et al., 2018).}
+  \ALIUSPlacedTextContent{90.951}{540.328}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In trying to take the next step to understand how our brain weighs evidence}
+  \ALIUSPlacedTextContent{90.951}{559.768}{418.403}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{across time, we have been systematically exploring and characterizing our}
+  \ALIUSPlacedTextContent{90.951}{579.208}{418.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{capacity to evaluate evidence on different timescales. Clearly, people are}
+  \ALIUSPlacedTextContent{90.951}{598.648}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{capable of changing the timescale of evidence evaluation for decision making.}
+  \ALIUSPlacedTextContent{90.951}{618.328}{418.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{But what are the limits of this flexibility? This is what we are trying to}
+  \ALIUSPlacedTextContent{90.951}{637.768}{418.312}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{determine. We have been using tasks that push this flexibility to see if people}
+  \ALIUSPlacedTextContent{90.951}{657.208}{418.132}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can simultaneously evaluate the same sources of evidence across different}
+  \ALIUSPlacedTextContent{90.951}{676.648}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{timescales. If you are making a quick decision about one aspect of something,}
+  \ALIUSPlacedTextContent{90.951}{696.328}{418.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{does it limit your ability to combine information simultaneously over longer}
+  \ALIUSPlacedTextContent{90.951}{715.768}{418.137}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{periods of time to make a more careful decision about some other aspect of}
+  \ALIUSPlacedTextContent{90.951}{735.208}{87.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the same thing?}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{494.151}{36.329}{14.989}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{75}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{These questions seem most important in situations where we must determine}
+  \ALIUSPlacedTextContent{90.951}{92.488}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{when to decide, but I would argue that many "forced-choice" decision-}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.085}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{making tasks satisfy similar conditions. When you are "forced" to decide at a}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fixed cue, this can be thought of as driving a very strong urgency signal to}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.299}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{respond, similar to what I described previously. In this light, perhaps we}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{should not have been surprised to find the mechanism for changing the speed}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.143}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vs. accuracy tradeoff that we discussed above involved boosting neural}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{responses rather than reducing the level of neural activity needed for}
+  \ALIUSPlacedTextContent{90.951}{229.049}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{commitment, because no such reduction is seen for cued responses in forced-}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{choice tasks. Likewise, when a cue to respond comes relatively late, decision}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{commitment may have occurred already (Kiani et al., 2008). One of the}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{advantages of the cognitive nature of decision making is that it does not have}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to be tied directly to the outside world, what one of my former advisors (Mike}
+  \ALIUSPlacedTextContent{90.951}{326.488}{335.106}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Shadlen) would often describe as "freedom from immediacy".}
+  \ALIUSPlacedTextContent{90.951}{358.053}{418.399}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Although it would stand to reason that the dynamics of the environment}
+  \ALIUSPlacedTextContent{90.951}{375.333}{418.363}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{dictate the optimal timescale (Ossmy et al., 2013; Glaze et al., 2015; Radillo}
+  \ALIUSPlacedTextContent{90.951}{392.613}{418.463}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{et al., 2017; Piet et al., 2018), you find that the brain represents and utilizes}
+  \ALIUSPlacedTextContent{90.951}{409.893}{418.390}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{multiple timescales of evidence evaluation during deliberation (Ganpuru et al.,}
+  \ALIUSPlacedTextContent{90.951}{427.173}{418.382}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{2019). What implications does this finding have for cellular mechanisms of}
+  \ALIUSPlacedTextContent{90.951}{444.453}{418.413}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{decision making? Does this imply a brain region involved in the task can have}
+  \ALIUSPlacedTextContent{90.951}{461.733}{418.315}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{heterogenous evidence weighting, or that multiple brain regions are}
+  \ALIUSPlacedTextContent{90.951}{478.773}{232.665}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{responsible for heterogeneous timescales?}
+  \ALIUSPlacedTextContent{90.951}{507.928}{418.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We believe this speaks to the architecture of neural circuits that support}
+  \ALIUSPlacedTextContent{90.951}{527.609}{418.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decision making. It establishes minimum capacities for information}
+  \ALIUSPlacedTextContent{90.951}{547.049}{418.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{processing that any neural mechanism of evidence evaluation must support.}
+  \ALIUSPlacedTextContent{90.951}{566.489}{418.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Many existing models of decision processing have relied on precisely tuned}
+  \ALIUSPlacedTextContent{90.951}{585.928}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{circuits that can effectively evaluate evidence over a set timescale (Wong \&}
+  \ALIUSPlacedTextContent{90.951}{605.609}{418.347}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Wang, 2006). Changing the timescales can often be achieved by altering the}
+  \ALIUSPlacedTextContent{90.951}{625.048}{418.367}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{tuning of these circuits, but that is not enough to support multiple timescales}
+  \ALIUSPlacedTextContent{90.951}{644.489}{418.364}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{simultaneously. Intriguingly, alternative models already exist that can}
+  \ALIUSPlacedTextContent{90.951}{663.928}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{support this. One such class of models uses a processing cascade with}
+  \ALIUSPlacedTextContent{90.951}{683.369}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{progressively longer timescales of evaluation for later nodes in the network}
+  \ALIUSPlacedTextContent{90.951}{703.048}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Goldman, 2009; Scott et al., 2017). Under this scheme, different timescales}
+  \ALIUSPlacedTextContent{90.951}{722.489}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{are represented by different network nodes without requiring any alterations}
+  \ALIUSPlacedTextContent{90.951}{741.929}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in tuning, so it could naturally support simultaneous deliberation across}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{493.431}{36.329}{15.773}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{76}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.024}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{multiple timescales. We have not yet shown this to be the case, but we think}
+  \ALIUSPlacedTextContent{90.951}{92.488}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it is a good hypothesis. In theory, these nodes could be distributed across}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.344}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different brain regions or be distinct subcomponents within brain regions}
+  \ALIUSPlacedTextContent{90.951}{131.609}{385.841}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{related to decision making, and this is also a question we are pursuing.}
+  \ALIUSPlacedTextContent{90.951}{163.173}{418.469}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Disease states can influence evidence accumulation, resulting in too much or}
+  \ALIUSPlacedTextContent{90.951}{180.453}{418.375}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{too little exploration in various domains. How is decision making affected in}
+  \ALIUSPlacedTextContent{90.951}{197.733}{418.357}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{schizophrenia and depression? Does this point to underlying mechanistic}
+  \ALIUSPlacedTextContent{90.951}{215.013}{418.517}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{etiological similarities among disease states, or computational attractor states}
+  \ALIUSPlacedTextContent{90.951}{232.053}{418.373}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{that can be induced by a variety of causes? What are promising cellular}
+  \ALIUSPlacedTextContent{90.951}{249.333}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{mechanisms or affected circuits to investigate in relationship to decision-}
+  \ALIUSPlacedTextContent{90.951}{266.613}{89.099}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{making deficits?}
+  \ALIUSPlacedTextContent{90.951}{295.768}{418.355}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Impaired decision making is observed in almost all mental disorders,}
+  \ALIUSPlacedTextContent{90.951}{315.208}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{including schizophrenia and depression, as you mention. Furthermore, these}
+  \ALIUSPlacedTextContent{90.951}{334.888}{418.356}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{impairments can often severely impact quality of life, and some of the largest}
+  \ALIUSPlacedTextContent{90.951}{354.328}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{negative impacts from many mental disorders come from poor decision}
+  \ALIUSPlacedTextContent{90.951}{373.768}{418.135}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{making. I saw this firsthand with my dad, who suffered from an atypical}
+  \ALIUSPlacedTextContent{90.951}{393.208}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{variant of Alzheimer's disease that presented as frontal-temporal dementia.}
+  \ALIUSPlacedTextContent{90.951}{412.888}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The biggest impacts on his life early on in the disease progression were with}
+  \ALIUSPlacedTextContent{90.951}{432.328}{94.955}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decision making.}
+  \ALIUSPlacedTextContent{90.951}{463.768}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{While decision making can be impaired in a variety of ways with different}
+  \ALIUSPlacedTextContent{90.951}{483.208}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{disorders, there do seem to be common modes of impairment that can occur}
+  \ALIUSPlacedTextContent{90.951}{502.648}{418.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{across disorders. What we are trying to do now is exactly in line with what}
+  \ALIUSPlacedTextContent{90.951}{522.328}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{you propose of applying our computational models to describe these modes}
+  \ALIUSPlacedTextContent{90.951}{541.768}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of impairment and link them to underlying neural mechanisms. We have}
+  \ALIUSPlacedTextContent{90.951}{561.208}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{begun to collaborate with UC Davis Conte Center led by Drs. Cameron}
+  \ALIUSPlacedTextContent{90.951}{580.648}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Carter and Kimberly McAllister to apply this to schizophrenia patients and}
+  \ALIUSPlacedTextContent{90.951}{600.328}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{animal models aimed at figuring out neural mechanisms involved. We believe}
+  \ALIUSPlacedTextContent{90.951}{619.768}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that corticostriatal circuits may play a central role in the impairments to}
+  \ALIUSPlacedTextContent{90.951}{639.208}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decision making that come about with schizophrenia. With Dr. Randy}
+  \ALIUSPlacedTextContent{90.951}{658.648}{418.176}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{O'Reilly, we have developed a computational model for impaired decision}
+  \ALIUSPlacedTextContent{90.951}{678.328}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{making in schizophrenia that makes specific predictions for neural}
+  \ALIUSPlacedTextContent{90.951}{697.768}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanisms impacted in corticostriatal circuits, and we are beginning to test}
+  \ALIUSPlacedTextContent{90.951}{717.208}{100.093}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{those predictions.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 10
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{493.911}{36.329}{15.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{77}
+  \ALIUSPlacedTextContent{98.191}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.951}{89.947}{322.721}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Attentional allocation can be viewed as a decision}
+  \ALIUSPlacedTextContent{133.951}{107.947}{322.875}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{process, and a reduced bound that would explain}
+  \ALIUSPlacedTextContent{133.951}{125.947}{322.742}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{impulsivity would also explain lower thresholds}
+  \ALIUSPlacedTextContent{469.951}{140.679}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{133.951}{143.947}{193.377}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{for changing attentional focus}
+  \ALIUSPlacedTextContent{90.951}{193.049}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We have also been collaborating with Dr. Johannes Hell to study neural}
+  \ALIUSPlacedTextContent{90.951}{212.488}{418.154}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanisms of attentional control that might be affected in ADHD. One of}
+  \ALIUSPlacedTextContent{90.951}{231.928}{418.300}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the most interesting aspects of ADHD is that it results in impairments to not}
+  \ALIUSPlacedTextContent{90.951}{251.609}{418.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{only attention, but it also leads to more impulsivity. What is the connection}
+  \ALIUSPlacedTextContent{90.951}{271.048}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{between the two? Through our work on decision commitment, we have a}
+  \ALIUSPlacedTextContent{90.951}{290.488}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{good handle on mechanisms that may be involved for impulsivity, and again,}
+  \ALIUSPlacedTextContent{90.951}{309.928}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{corticostriatal circuits are implicated. I believe that similar circuit}
+  \ALIUSPlacedTextContent{90.951}{329.608}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanisms may also underlie attentional deficits. In particular, individuals}
+  \ALIUSPlacedTextContent{90.951}{349.048}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with ADHD are often able to reap the benefits of attention when they are}
+  \ALIUSPlacedTextContent{90.951}{368.488}{418.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{attending to something, but the problem is that they are more easily}
+  \ALIUSPlacedTextContent{90.951}{387.928}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{distracted. It isn't so much a problem with attentional enhancement of}
+  \ALIUSPlacedTextContent{90.951}{407.608}{418.172}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perception, but rather one of allocating those attentional resources.}
+  \ALIUSPlacedTextContent{90.951}{427.048}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Attentional allocation can be viewed as a decision process, and a reduced}
+  \ALIUSPlacedTextContent{90.951}{446.488}{418.363}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{bound that would explain impulsivity would also explain lower thresholds}
+  \ALIUSPlacedTextContent{90.951}{465.928}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for changing attentional focus – the distractibility that affects those with}
+  \ALIUSPlacedTextContent{90.951}{485.608}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ADHD. We think that corticostriatal circuit mechanisms may explain both.}
+  \ALIUSPlacedTextContent{90.951}{505.048}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{With Dr. Hell, we are trying to determine specific cellular mechanisms that}
+  \ALIUSPlacedTextContent{90.951}{524.489}{94.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{may be involved.}
+  \ALIUSPlacedTextContent{90.951}{556.053}{418.391}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{What is the minimal number of neurons required to 'make a decision'? More}
+  \ALIUSPlacedTextContent{90.951}{573.333}{418.522}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{generally, do neurons as a cell type participate in a special type of decision}
+  \ALIUSPlacedTextContent{90.951}{590.613}{418.424}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{making relative to non-neuronal cells or perhaps even non-cells? In other}
+  \ALIUSPlacedTextContent{90.951}{607.893}{418.383}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{words, how should we study the "decision making" processes of bacteria,}
+  \ALIUSPlacedTextContent{90.951}{625.173}{241.921}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{computers, neural and non-neural cell types?}
+  \ALIUSPlacedTextContent{90.951}{654.328}{418.441}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I take an inclusive view on what it means to "make a decision", but with the}
+  \ALIUSPlacedTextContent{90.951}{673.768}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{caveat that there are important differences among the class of processes}
+  \ALIUSPlacedTextContent{90.951}{693.208}{418.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{considered as such. Under this view, a single neuron is certainly capable of}
+  \ALIUSPlacedTextContent{90.951}{712.648}{418.374}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{making a decision, but without the same range of complexity as a large}
+  \ALIUSPlacedTextContent{90.951}{732.328}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{network of neurons. Likewise, while neurons and neural networks participate}
+  \ALIUSPlacedTextContent{90.951}{751.768}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in a variety of types of decision making, they do not do so in a necessarily}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 11
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-749.031bp) rectangle ++(217.920bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{493.191}{36.329}{16.109}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{78}
+  \ALIUSPlacedTextContent{90.951}{73.048}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unique way. Non-neural cell types, computers, etc. may also participate in}
+  \ALIUSPlacedTextContent{90.951}{92.488}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{similar types of decision making, but this needs to be considered on a case-}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by-case basis. For instance, we can describe accumulating information to a}
+  \ALIUSPlacedTextContent{90.951}{131.609}{418.410}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{threshold over a flexible timescale from milliseconds to minutes as a specific}
+  \ALIUSPlacedTextContent{90.951}{151.049}{418.409}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{type of decision making. Human brains can do this, but it is not known what}
+  \ALIUSPlacedTextContent{90.951}{170.488}{418.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimal architecture of brain tissue is needed to accomplish it. Computers}
+  \ALIUSPlacedTextContent{90.951}{189.928}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can easily be programmed to do it, but it becomes more challenging as we}
+  \ALIUSPlacedTextContent{90.951}{209.609}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{expand the domain that we are considering to more complex types of}
+  \ALIUSPlacedTextContent{90.951}{229.049}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decision making. It would also be interesting to know the capacity of other}
+  \ALIUSPlacedTextContent{90.951}{248.489}{418.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{systems like bacteria. Intriguingly, for this example, there are suggestions that}
+  \ALIUSPlacedTextContent{90.951}{267.928}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{non-neuronal cells could play a role. In particular, the glial cells (non-}
+  \ALIUSPlacedTextContent{90.951}{287.608}{418.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuronal cells of the nervous system that actually outnumber neurons)}
+  \ALIUSPlacedTextContent{90.951}{307.048}{418.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{known as astrocytes have been shown to accumulate information over 10s of}
+  \ALIUSPlacedTextContent{90.951}{326.488}{418.355}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{seconds for decision making in zebrafish, with some indications of flexibility}
+  \ALIUSPlacedTextContent{90.951}{345.928}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in that timescale. In that circuit, the astrocytes seem to work in concert with}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neurons by accumulating evidence from neural input over a longer timescale}
+  \ALIUSPlacedTextContent{90.951}{385.048}{198.749}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and then influencing other neurons.}
+  \ALIUSPlacedTextContent{90.951}{416.488}{418.309}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I believe one of the keys for studying decision making in any setting is striving}
+  \ALIUSPlacedTextContent{90.951}{435.928}{418.178}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for a clear description of what type of decision process one is studying. This}
+  \ALIUSPlacedTextContent{90.951}{455.608}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is one of the more important benefits of using a computational approach}
+  \ALIUSPlacedTextContent{90.951}{475.048}{418.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{because it gives a framework for rigorous description. This has a parallel to}
+  \ALIUSPlacedTextContent{90.951}{494.488}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the discussions above about free will. Rather than asking, "Is [X] making a}
+  \ALIUSPlacedTextContent{90.951}{513.928}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decision?", I think it is better to ask, "In what way is [X] making a decision?"}
+  \ALIUSPlacedTextContent{90.951}{533.369}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Reflexive movements may still be considered decisions in some sense, but}
+  \ALIUSPlacedTextContent{90.951}{553.049}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they are very different types of decisions than those involving reflective}
+  \ALIUSPlacedTextContent{90.951}{572.489}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{deliberation. They invoke different forms of computation and different}
+  \ALIUSPlacedTextContent{90.951}{591.928}{217.984}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{complexity of neural circuit processing.}
+  \ALIUSPlacedTextContent{264.617}{643.132}{71.454}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
+  \ALIUSPlacedTextContent{90.951}{688.815}{418.030}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Beck J. M., Ma W. J., Kiani R., Hanks T., Churchland A. K., Roitman J., Shadlen,}
+  \ALIUSPlacedTextContent{126.951}{704.656}{382.046}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{M. N., \& Pouget, A. (2008) Probabilistic population codes for Bayesian}
+  \ALIUSPlacedTextContent{126.951}{720.256}{44.774}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{decision}
+  \ALIUSPlacedTextContent{218.077}{720.256}{43.406}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{making.}
+  \ALIUSPlacedTextContent{307.825}{720.256}{34.577}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuron}
+  \ALIUSPlacedTextContent{342.431}{720.256}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{394.701}{720.256}{13.707}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{60.}
+  \ALIUSPlacedTextContent{457.800}{720.256}{51.183}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1142–1152.}
+  \ALIUSPlacedTextContent{126.951}{736.096}{218.030}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.neuron.2008.09.021}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 12
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (126.951bp,-117.351bp) rectangle ++(204.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (197.751bp,-180.231bp) rectangle ++(198.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (300.471bp,-227.511bp) rectangle ++(174.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-285.831bp) rectangle ++(272.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (171.831bp,-332.871bp) rectangle ++(215.280bp,-0.720bp);
+  \fill[ALIUSC0000FF] (316.791bp,-380.151bp) rectangle ++(174.000bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-443.271bp) rectangle ++(214.800bp,-0.720bp);
+  \fill[ALIUSC0000FF] (229.671bp,-490.311bp) rectangle ++(216.960bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-569.031bp) rectangle ++(179.520bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-647.751bp) rectangle ++(250.320bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-726.471bp) rectangle ++(198.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{493.431}{36.329}{15.773}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{79}
+  \ALIUSPlacedTextContent{90.951}{72.976}{418.009}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Brody C. D., Hanks T. D. (2016). Neural underpinnings of the evidence}
+  \ALIUSPlacedTextContent{126.951}{88.576}{68.605}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{accumulator.}
+  \ALIUSPlacedTextContent{195.576}{88.576}{141.875}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current Opinion Neurobiology}
+  \ALIUSPlacedTextContent{337.468}{88.576}{5.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{343.070}{88.576}{9.461}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{37}
+  \ALIUSPlacedTextContent{352.547}{88.576}{49.324}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 149–157.}
+  \ALIUSPlacedTextContent{126.951}{104.416}{204.616}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.conb.2016.01.003}
+  \ALIUSPlacedTextContent{90.951}{135.856}{418.023}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Ganupuru P., Goldring A. B., Harun R., Hanks T. D. (2019). Flexibility of}
+  \ALIUSPlacedTextContent{126.951}{151.696}{286.611}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Timescales of Evidence Evaluation for Decision Making.}
+  \ALIUSPlacedTextContent{413.634}{151.696}{89.739}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current Biology. 29}
+  \ALIUSPlacedTextContent{503.390}{151.696}{5.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{:}
+  \ALIUSPlacedTextContent{126.951}{167.296}{70.831}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2091–2097.e4.}
+  \ALIUSPlacedTextContent{197.812}{167.296}{198.434}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.cub.2019.05.037}
+  \ALIUSPlacedTextContent{90.951}{198.736}{400.575}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Glaze C. M., Kable J. W., Gold J. I. (2015). Normative evidence accumulation in}
+  \ALIUSPlacedTextContent{112.951}{214.576}{148.735}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{unpredictable environments.}
+  \ALIUSPlacedTextContent{261.706}{214.576}{21.969}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{eLife}
+  \ALIUSPlacedTextContent{283.689}{214.576}{5.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{289.292}{214.576}{5.482}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{4}
+  \ALIUSPlacedTextContent{294.791}{214.576}{5.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{300.393}{214.576}{174.562}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.7554/eLife.08825}
+  \ALIUSPlacedTextContent{90.951}{241.216}{344.430}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gold J. I., Shadlen M. N. (2007). The neural basis of decision making.}
+  \ALIUSPlacedTextContent{434.943}{241.216}{74.036}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Annual Review}
+  \ALIUSPlacedTextContent{126.951}{257.056}{75.354}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience. 30}
+  \ALIUSPlacedTextContent{202.323}{257.056}{50.338}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 535–574.}
+  \ALIUSPlacedTextContent{126.951}{272.896}{272.553}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1146/annurev.neuro.29.051605.113038}
+  \ALIUSPlacedTextContent{90.951}{304.336}{362.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Goldman M. S. (2009). Memory without feedback in a neural network.}
+  \ALIUSPlacedTextContent{453.552}{304.336}{49.818}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuron. 61}
+  \ALIUSPlacedTextContent{503.390}{304.336}{5.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.951}{319.936}{44.840}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{621–634.}
+  \ALIUSPlacedTextContent{171.799}{319.936}{215.321}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.neuron.2008.12.012}
+  \ALIUSPlacedTextContent{90.951}{351.616}{418.034}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hanks T., Kiani R., Shadlen M. N. (2014). A neural mechanism of speed-accuracy}
+  \ALIUSPlacedTextContent{126.951}{367.216}{152.128}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{tradeoff in macaque area LIP.}
+  \ALIUSPlacedTextContent{279.125}{367.216}{32.018}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{eLife. 3}
+  \ALIUSPlacedTextContent{311.156}{367.216}{5.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{316.759}{367.216}{173.979}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.7554/eLife.02260}
+  \ALIUSPlacedTextContent{90.951}{398.656}{418.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hanks T. D., Summerfield C. (2017). Perceptual Decision Making in Rodents,}
+  \ALIUSPlacedTextContent{126.951}{414.496}{121.707}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Monkeys, and Humans.}
+  \ALIUSPlacedTextContent{248.654}{414.496}{50.101}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuron. 93}
+  \ALIUSPlacedTextContent{298.768}{414.496}{47.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 15–31.}
+  \ALIUSPlacedTextContent{126.951}{430.336}{214.689}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.neuron.2016.12.003}
+  \ALIUSPlacedTextContent{90.951}{461.776}{418.043}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Heitz R. P., Schall J. D. (2012). Neural mechanisms of speed-accuracy tradeoff.}
+  \ALIUSPlacedTextContent{126.951}{477.376}{50.674}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuron. 76}
+  \ALIUSPlacedTextContent{177.650}{477.376}{51.923}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 616–628.}
+  \ALIUSPlacedTextContent{229.583}{477.376}{217.032}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.neuron.2012.08.030}
+  \ALIUSPlacedTextContent{90.951}{509.056}{418.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Johnson B., Verma R., Sun M., Hanks T. D. (2017). Characterization of decision}
+  \ALIUSPlacedTextContent{126.951}{524.656}{382.054}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{commitment rule alterations during an auditory change detection task.}
+  \ALIUSPlacedTextContent{126.951}{540.496}{144.227}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neurophysiology. 118}
+  \ALIUSPlacedTextContent{271.195}{540.496}{61.349}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 2526–2536.}
+  \ALIUSPlacedTextContent{126.951}{556.096}{179.616}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1152/jn.00071.2017}
+  \ALIUSPlacedTextContent{90.951}{587.536}{418.071}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Kiani R., Hanks T. D., Shadlen M. N. (2008). Bounded integration in parietal cortex}
+  \ALIUSPlacedTextContent{126.951}{603.376}{382.029}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{underlies decisions even when viewing duration is dictated by the}
+  \ALIUSPlacedTextContent{126.951}{619.216}{70.808}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{environment.}
+  \ALIUSPlacedTextContent{197.786}{619.216}{124.364}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neuroscience. 28}
+  \ALIUSPlacedTextContent{322.168}{619.216}{59.010}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 3017–3029}
+  \ALIUSPlacedTextContent{126.951}{634.815}{250.217}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/JNEUROSCI.4761-07.2008}
+  \ALIUSPlacedTextContent{90.951}{666.256}{418.023}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Ossmy O., Moran R., Pfeffer T., Tsetsos K., Usher M., Donner T. H. (2013). The}
+  \ALIUSPlacedTextContent{126.951}{682.096}{382.061}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{timescale of perceptual evidence integration can be adapted to the}
+  \ALIUSPlacedTextContent{126.951}{697.935}{70.808}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{environment.}
+  \ALIUSPlacedTextContent{197.786}{697.935}{88.740}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current Biology. 23}
+  \ALIUSPlacedTextContent{286.535}{697.935}{59.448}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 981–986.}
+  \ALIUSPlacedTextContent{126.951}{713.536}{198.460}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.cub.2013.04.039}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 13
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (155.031bp,-117.351bp) rectangle ++(212.400bp,-0.720bp);
+  \fill[ALIUSC0000FF] (297.351bp,-180.231bp) rectangle ++(195.840bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-258.951bp) rectangle ++(215.040bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-322.071bp) rectangle ++(285.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-337.671bp) rectangle ++(378.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-353.511bp) rectangle ++(251.760bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-416.391bp) rectangle ++(262.080bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-495.111bp) rectangle ++(245.760bp,-0.720bp);
+  \fill[ALIUSC0000FF] (126.951bp,-557.991bp) rectangle ++(248.640bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
+  \ALIUSPlacedTextContent{492.471}{36.329}{16.781}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{80}
+  \ALIUSPlacedTextContent{90.951}{72.976}{417.971}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Piet A. T., El Hady A., Brody C. D. (2018). Rats adopt the optimal timescale for}
+  \ALIUSPlacedTextContent{126.951}{88.576}{249.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{evidence integration in a dynamic environment.}
+  \ALIUSPlacedTextContent{376.988}{88.576}{126.385}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature Communications. 9}
+  \ALIUSPlacedTextContent{503.390}{88.576}{5.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{126.951}{104.416}{28.045}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{4265.}
+  \ALIUSPlacedTextContent{155.004}{104.416}{212.436}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/s41467-018-06561-y}
+  \ALIUSPlacedTextContent{90.951}{135.856}{418.057}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Radillo A. E., Veliz-Cuba A., Josić K., Kilpatrick Z. P. (2017). Evidence}
+  \ALIUSPlacedTextContent{126.951}{151.696}{381.965}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Accumulation and Change Rate Inference in Dynamic Environments.}
+  \ALIUSPlacedTextContent{126.951}{167.296}{111.578}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neural Computation. 29}
+  \ALIUSPlacedTextContent{238.540}{167.296}{58.768}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 1561–1610.}
+  \ALIUSPlacedTextContent{297.312}{167.296}{195.738}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1162/NECO\_a\_00957}
+  \ALIUSPlacedTextContent{90.951}{198.736}{418.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Scott B. B., Constantinople C. M., Akrami A., Hanks T. D., Brody C. D., Tank D.}
+  \ALIUSPlacedTextContent{126.951}{214.576}{382.089}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{W. (2017) . Fronto-parietal Cortical Circuits Encode Accumulated Evidence}
+  \ALIUSPlacedTextContent{126.951}{230.416}{158.010}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{with a Diversity of Timescales.}
+  \ALIUSPlacedTextContent{284.961}{230.416}{50.515}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuron. 95}
+  \ALIUSPlacedTextContent{335.491}{230.416}{65.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 385–398.e5.}
+  \ALIUSPlacedTextContent{126.951}{246.016}{215.179}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.neuron.2017.06.013}
+  \ALIUSPlacedTextContent{90.951}{277.456}{418.031}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Shadlen M. N, Kiani R, Hanks TD, Churchland A. K. (2008). An intentional}
+  \ALIUSPlacedTextContent{126.951}{293.296}{61.029}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{framework.}
+  \ALIUSPlacedTextContent{210.567}{293.296}{34.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Better}
+  \ALIUSPlacedTextContent{267.556}{293.296}{26.083}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{than}
+  \ALIUSPlacedTextContent{316.227}{293.296}{57.126}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{conscious.;}
+  \ALIUSPlacedTextContent{395.942}{293.296}{37.019}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{71–101.}
+  \ALIUSPlacedTextContent{455.538}{293.296}{53.447}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Available:}
+  \ALIUSPlacedTextContent{126.951}{309.136}{285.537}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://books.google.com/books?hl=en\&lr=\&id=JQLg7L-}
+  \ALIUSPlacedTextContent{126.951}{324.736}{378.769}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{Qto4C\&oi=fnd\&pg=PA71\&dq=shandlen+decision+making+2008\&ots=Hwh}
+  \ALIUSPlacedTextContent{126.951}{340.576}{251.720}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{RIR764A\&sig=BxKVCixK6nd5prL0sh81RSt\_sPM}
+  \ALIUSPlacedTextContent{90.951}{372.016}{418.019}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Squire R. F, Noudoost B, Schafer R. J, Moore T. (2013). Prefrontal contributions to}
+  \ALIUSPlacedTextContent{126.951}{387.856}{144.713}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{visual selective attention.}
+  \ALIUSPlacedTextContent{278.954}{387.856}{171.412}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Annual Review Neuroscience. 36}
+  \ALIUSPlacedTextContent{450.382}{387.856}{58.599}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 451–466.}
+  \ALIUSPlacedTextContent{126.951}{403.456}{262.117}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1146/annurev-neuro-062111-150439}
+  \ALIUSPlacedTextContent{90.951}{434.896}{418.047}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Thura D, Cisek P. (2016). Modulation of Premotor and Primary Motor Cortical}
+  \ALIUSPlacedTextContent{126.951}{450.736}{382.041}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Activity during Volitional Adjustments of Speed-Accuracy Trade-Offs.}
+  \ALIUSPlacedTextContent{126.951}{466.336}{108.278}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neuroscience}
+  \ALIUSPlacedTextContent{235.290}{466.336}{5.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{240.893}{466.336}{9.888}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{36}
+  \ALIUSPlacedTextContent{250.799}{466.336}{59.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 938–956.}
+  \ALIUSPlacedTextContent{126.951}{482.176}{245.785}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/JNEUROSCI.2230-15.2016}
+  \ALIUSPlacedTextContent{90.951}{513.616}{417.985}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Wong K-F, Wang X-J. (2006). A recurrent network mechanism of time integration}
+  \ALIUSPlacedTextContent{126.951}{529.456}{121.710}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{in perceptual decisions.}
+  \ALIUSPlacedTextContent{248.614}{529.456}{124.104}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neuroscience. 26}
+  \ALIUSPlacedTextContent{372.736}{529.456}{58.398}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. 1314–1328.}
+  \ALIUSPlacedTextContent{126.951}{545.056}{248.594}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/JNEUROSCI.3733-05.2006}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

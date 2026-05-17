@@ -1,38 +1,951 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.0000bp,paperheight=842.0000bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{Phenomenoconnectomics and the Neural Correlates of Altered Consciousness}
-\author{An interview with Timo Torsten Schmidt by George Fejer}
-\date{ALIUS Bulletin 5}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC0000FF}{HTML}{0000FF}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC212121}{HTML}{212121}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\definecolor{ALIUSCFFFFFF}{HTML}{FFFFFF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/wb76-w666\par
-\textbf{Keywords:} Altered States of Consciousness, non-pharmacologic induction methods, flicker light stimulation, Ganzfeld, psychedelics, psilocybin\par
-\section*{Abstract}
-In this interview, Timo Torsten Schmidt provides details about his efforts to compile a comprehensive database of all psychometric measures gathered from controlled experiments investigating altered states of consciousness (ASCs) induced by pharmacological and non-pharmacological methods. He also introduces the paradigm of Phenomenoconnectomics which aims to systematically investigate the phenomenology and functional connectivity of ASCs to identify commonalities and differences, to ultimately identify the necessary neuronal correlates of specific experiences as they occur during ASCs. He explains some key findings of his own neuroscientific research on the neural correlates of consciousness under the influence of non-pharmacological manipulations, such as Ganzfeld exposure and flicker light stimulation-induced visual illusory percepts. Finally, we touch upon the current limitations of psychometric methods in their ability to capture the full diversity of the phenomenal space and future plans to overcome these caveats through Open Science initiatives that support harm reduction efforts.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin Phenomenoconnectomics and the Neural Correlates of Altered Consciousness An interview with Timo Torsten Schmidt By George Fejer Timo Torsten Schmidt timo.t.schmidt@fu-berlin.de Department of Education and Psychology, Freie Universitat Berlin, Germany George Fejer gyorgyf@live.com Team coordinator of the ALIUS research network Cite as: Schmidt, T.T., Fejer, G. (2021). Phenomenoconnectomics and the Neural Correlates of Altered Consciousness. An interview with Timo Torsten Schmidt by George Fejer, ALIUS Bulletin, 5, 59- 74, https://doi.org/10.34700/wb76-w666 Abstract In this interview, Timo Torsten Schmidt provides details about his efforts to compile a comprehensive database of all psychometric measures gathered from controlled experiments investigating altered states of consciousness (ASCs) induced by pharmacological and non-pharmacological methods. He also introduces the paradigm of Phenomenoconnectomics which aims to systematically investigate the phenomenology and functional connectivity of ASCs to identify commonalities and differences, to ultimately identify the necessary neuronal correlates of specific experiences as they occur during ASCs. He explains some key findings of his own neuroscientific research on the neural correlates of consciousness under the influence of non-pharmacological manipulations, such as Ganzfeld exposure and flicker light stimulation-induced visual illusory percepts. Finally, we touch upon the current limitations of psychometric methods in their ability to capture the full diversity of the phenomenal space and future plans to overcome these caveats through Open Science initiatives that support harm reduction efforts. keywords: Altered States of Consciousness, non-pharmacologic induction methods, flicker light stimulation, Ganzfeld, psychedelics, psilocybin The Altered States Database (Schmidt \& Berkemeyer, 2018, http://www.asdb.info/) is by far the most ambitious attempt to systematically catalog psychometric data on both pharmacologically and non- pharmacologically induced altered states of consciousness, up to date. How did you become interested in Altered States of Consciousness (ASC) and what was your motivation to embark on this project? Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 60 I am passionate about contributing to the empirical work investigating the neural correlates of human consciousness (NCC). The idea of compiling the database was born at a time when I discovered the existing literature about the diverse methods of inducing ASCs and their effects. I felt that it might have been a missed chance in the history of science, that after their discovery psychedelics were not used further to elucidate the relevant neuronal mechanisms that correlate with their effects on consciousness. I felt such drugs would be a great experimental tool for consciousness research. This is because they allow induction of a substantial deviation from normal conscious functioning for a short amount of time in healthy people and their use was reported to be mostly safe under controlled laboratory conditions. I, therefore, thought that such induced deviations from average conscious experiences could be used as experimental tools with multiple advantages over studying ASCs that occur in psychopathologies. Let's take the example of hallucinations. Such phenomena typically do not occur spontaneously in healthy study participants. Therefore, it is not possible to directly compare a normal (non-hallucinating) state with a hallucinating state. Of course, there are some patients who suffer from hallucinations, such as during psychosis. However, it is very challenging to study the neuronal correlates of hallucinations in such patient groups, as their brains might have already undergone substantial long-term changes, including structural alterations. An on-off within-subject design rendered possible with the experimental induction of ASCs has much more power to reveal the relevant neural correlates of hallucinations. With this motivation in mind, I was curious what type of effects could be induced with different methods and which of these methods could be safely used in scientific experiments. I did find some resources on this subject, such as erowid.org and other web platforms where people share subjective reports about their drug experiences. However, upon reading them, it was clear that there is a major bias in these reports, as people tend to report either the most challenging or the particularly meaningful experiences, but little in between these two extremes. Unfortunately, I did not find a systematic collection of scientific data that covers the whole spectrum in an unbiased manner. Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 61 Thus, the idea was born to create a database to unify all data that was acquired via standardized measures. At the same time, I am a neuroscientist and not a drug researcher. I was interested in the neural correlates of consciousness alterations, and not in the drug effects per se. Nor was I majorly interested in potential therapeutic applications. In my research, I was moving to work with human fMRI-so I was thinking of how to conduct meaningful experiments with fMRI in combination with psychedelics to identify NCCs. There are multiple methodological challenges when combining fMRI with pharmacological interventions, which makes it very hard to develop meaningful task-based fMRI studies. Currently, it appears that resting-state fMRI is a method well suited to characterize brain states in terms of network properties, e.g., functional brain connectivity. I am convinced that the systematic study of brain connectivity across diversely induced ASCs can reveal correlates of specific subjective experiences. Across studies, different features of experiences will be more or less pronounced depending on the applied induction methods. there is a major bias in these [first-person] reports, as people tend to report either the most challenging or the particularly meaningful experiences, but little in between these two extremes. " " There are multiple methodological challenges when combining fMRI with pharmacological interventions, which makes it very hard to develop meaningful task-based fMRI studies. Currently, it appears that resting-state fMRI is a method well suited to characterize brain states in terms of network properties, e.g., functional brain connectivity. " " Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 62 This will allow researchers to establish correlations between specific ASC phenomena and accompanying brain connectivity patterns (e.g., the pattern of connectivity increases and decreases that accompany an out-of-body experience). Ultimately, the identification of such connectivity patterns might contribute to the formulation of NCCs of specific subjective experiences. It must have been a lot of effort to compile this database! Are you still actively updating it? Indeed, it was a lot of work to build the database, and I have not done this work alone-it was a group of students at the University of Osnabruck who were working with me on the Altered States Database. I was very happy that students were interested in supporting the vision to have a database that allows us to compare the types of experiences that people have when using diverse methods to induce ASCs. I am also happy that this project still attracts students to work with me, and currently, we are upgrading the Database to conform to Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) standards for systematic literature reviews. A preprint will be online in the upcoming weeks. Befitting of the lengthy effort, you designated this paradigm with the lengthy title of "Phenomenoconnectomics", which aims to jointly investigate the correlations between brain connectivity and phenomenology. What are the aims of this framework? I thought it is fun to introduce a complicated term such as "Phenomenoconnectomics" that people will at least remember the challenge to pronounce it. With this term, I want to refer to the joint study of the phenomenology of ASC experiences and changes in resting-state connectivity, which co-occur during these experiences. This is my research goal up to this day. I want to contribute to the systematic study of what type of subjective experiences occur under what conditions. To promote this goal, I make data on the phenomenology of ASC accessible, and I acquire fMRI data on changes in functional connectivity that accompany ASC experiences. However, contrary to my initial fascination for psychedelic substances, I have turned my focus to the non-pharmacological methods of inducing ASCs. Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 63 What are the main advantages of using pharmacological versus non- pharmacological methods? Is there any non-pharmacological method that has been understudied? Pharmacologic human studies are very demanding to be carried out. This is for good reasons, as we all want that participants in studies can rely on the highest degree of safety and researchers stick to good scientific practice. Such research is therefore enormously expensive and takes a lot of resources. I want to emphasize that this is not due to any "discrimination" to research on psychedelics-as some people suspected-it is simply the case that experimental basic research needs to stick to the same safety rules as the pharmaceutical industry. When exploring the safety and efficacy of new substances, one wants to make sure that the principle of safety-first is applied. Furthermore, there are always some remaining risks that come with pharmacological studies inducing ASCs, and plenty of considerations that have to be made. But beyond all that, there are also limitations in the interpretation of the data. If you have a pharmacologic agent in the system, it will typically not only act on the brain. Complex physiological reactions take place-simply consider changes in blood pressure, heartbeat, and changes in neurovascular coupling as potential confounders for fMRI studies. Given the possibility to induce similar effects with non-pharmacologic methods, this might be preferred as a much safer option that produces data that is less confounded by such factors. One advantage is that typically you can terminate a non-pharmacologically induced ASC within seconds or at least minutes, which is not easily possible for many pharmacologically induced ASCs. Also, several physiologic confounders will not apply, If you have a pharmacologic agent in the system, it will typically not only act on the brain. Complex physiological reactions play a role-simply consider changes in blood pressure, heartbeat, and potential changes in neurovascular coupling as potential confounders for fMRI studies. " " Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 64 and it will be much more straightforward to implement well-controlled on- off within-subject designs. Stroboscopic light in different forms of presentation has been used in various ways, e.g., with so-called "Dream machines" (Ter Meulen et al., 2009) to induce deep relaxing, immersed, "hypnagogic" states. The first time people sit with closed eyes in front of a stroboscopic white light, most of them are surprised how colorful, dynamic, and immersive the visual effects are. At the moment, I am working with flicker light stimulation as a method with which one can induce very fascinating visual effects, which are often called Flicker-induced Hallucinations (Bartossek et al. 2020). We show that the visual effects are reported to reach an intensity that can otherwise only be reached with psychedelics. I think it is an important step for research to see what neural mechanisms are shared between psychedelic- induced and flicker-induced hallucinations. In particular, Cortico-Thalamo- Cortical interactions seem to play a role here. It is interesting to experimentally test on what hierarchical level of processing there is a divergence from normal everyday perceptual processing. In particular, it has to be investigated where bottom-up (perceptual stimulation) and top-down effects (brain's internally generated signals/expectations) mismatch. As an effect of this mismatch, multimodal integration failures are produced, which come with altered subjective experiences. For the future, I also find it fascinating to systematically explore how multimodal stimulation can influence those aspects of conscious experiences and compare it to the effects of hallucinogenic drugs. I find this type of comparison very interesting because some drugs can produce ASC effects, but some of these effects can also be induced by non-pharmacological methods. The mechanisms that lead to subjective experiences are fundamentally different, although there are also some similarities. I think this is exactly what we need in research to identify the necessary NCC for subjective experiences. Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 65 From what we know by now, I think it is fair to say that it is not the stimulation of a specific receptor type (e.g., the stimulation of 5-HT2A receptors), which is the necessary NCC of the effects of psychedelics on consciousness. I think it makes more sense to look at the downstream effects of such a receptor stimulation. One possibility for this is to look at changes in network interactions as a consequence of drug intake. But most importantly, we require more studies on non-pharmacological methods that can induce ASCs. Such techniques are much easier to apply, typically safer, and will ultimately contribute important data which reveals what needs to happen in the brain in order to experience a specific phenomenon. Your previous work investigated ASCs via the Ganzfeld induction method (Schmidt et al., 2020). This is a relatively simple procedure, whereby the visual field is masked by halved ping-pong balls and exposed to red light, which generates unstructured homogenous input, while participants listen to white noise via headphones. The fMRI results indicated decreased thalamo-cortical coupling and an increase of Default Mode Network centrality in relation to the hypnagogic state induced by this procedure. By contrast, psychedelic states exhibit an opposite trend, with increased thalamo-cortical coupling (Preller et al., 2019) and decreased connectivity of the Default Mode Network (Carhart-Harris et al., 2016). According to the relaxed beliefs under psychedelics (REBUS) model by Carhart-Harris and Friston (2019), psychedelic substances relax top-down expectations and liberate the flow of bottom-up information. But your data suggests that similar experiences can also be elicited by depriving bottom-up input of sensory structure, and this has the opposite effect on the Default Mode Network compared to psychedelics. Do you think this discrepancy reflects differences between the phenomenology of these different states of consciousness? Indeed, there are relevant differences in the phenomenology of Ganzfeld- induced hallucinations and hallucinations that are experienced under psychedelics, not to mention those experienced during psychosis. In the end, it might be that the neural mechanisms from which hallucinations result are also distinct. This is exactly what I am interested in: looking at different Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 66 the REBUS model does not emphasize the potential contributions of the Cortico-Striato-Thalamo- Cortical feedback mechanisms enough. I think particularly our work with non- pharmacological methods emphasizes that future work should not forget about subcortical mechanisms as potential NCCs of ASC experiences. " " induction methods that lead to somewhat similar phenomena. The next step will be to stringently characterize the differences and elucidate what neuronal mechanisms relate to the differences and what neuronal mechanisms are shared. The REBUS model focuses on predictive cortical processing. In this context, I can also recommend the formulation of predictive mechanisms that contribute to the emergence of ASCs in the context of psychosis by Phillip Corlett (2009, 2019), which also contains links to pharmacological and non- pharmacological induction methods of such phenomena. He is speculating about how bottom-up and top-down influences could be imbalanced in different ways so that they ultimately converge to similar phenomenology. What I like in his suggestion is that it considers different modulations of predictive processes on different levels of the cortical hierarchy. The REBUS model is rather formulated in the context of psychedelics, where effects on all levels of cortical hierarchical processing are assumed, while overall I consider the model as somewhat too simplistic and too much focused on cortical processing, neglecting important subcortical circuitries. I think our work formulates the demand to focus on thalamo-cortical interactions as an important mechanism that contributes to ASC experiences. In my view, the REBUS model does not emphasize the potential contributions of the Cortico-Striato-Thalamo-Cortical feedback mechanisms enough. I think particularly our work with non-pharmacological methods emphasizes that future research should not forget about subcortical mechanisms as potential NCCs of ASC experiences. Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 67 From a conceptual standpoint, what do you think about the construct validity of psychometric tools that are currently at our disposal? Most of the data represented in the ASC database stems from studies that used the 5D/11- Altered States of Consciousness questionnaire (Dittrich et al., 2010; Studerus et al., 2010), the Mystical Experience Questionnaire (MacLean et al., 2012), and the Hallucinogen Rating Scale (Riba et al., 2001). Whereas the Mystical Experience Questionnaire and the Hallucinogen Rating Scale seem to be designed for measuring specific types of experience, the ASC questionnaire seems to cover a wider spectrum of experience. Do you think this questionnaire captures the full diversity of experience, or do you see some room for improvement? Adolf Dittrich, who developed the 5D-ASC questionnaire, pursued the goal that this questionnaire allows the comparison of the subjective effects induced by pharmacological and non-pharmacological methods. He described the goal to identify etiology-invariant structures of consciousness alterations. This is a big vision, and it basically aims to map the entire space of possible consciousness states that people can experience. Even though this is a big vision, I like it and share his ambitions. Dittrich's questionnaire, however, had a focus on those effects that people experience after the intake of psychedelics. As of now, it is still the best tool to achieve comparability between studies, as it is the most widely used questionnaire. But this does not mean that the questionnaire would provide a full description of the subjective experiences. It certainly does not. There is a lot of work ahead of us to find proper questionnaire items and psychological constructs that capture the whole phenomenal state space. For now, I would consider these questionnaires suitable for comparing data collected in clinical studies. The comparison of any new clinical datasets with the existing ones allows us to detect if for any reason participants had majorly different experiences. However, the development and application of additional measures are important for future research. There is lots of work ahead of us to find proper questionnaire items and psychological constructs that capture the whole phenomenal state space. " " Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 68 In our studies on non-pharmacological induction methods for ASCs, we use these standardized questionnaires to characterize the phenomenology of the experience in order to allow a comparison between experiences induced by pharmacological means. However, the questionnaires mainly provide a quantitative approximation of the intensity of such phenomena, and they do not provide a detailed description of the experiences as such. I think it is important to put more effort into research within this domain and obtain more detailed descriptions of experiences-qualitative work is of importance here as well. Unfortunately, I am not an expert on that, but I am curious about the work of others in this research. One major challenge is that much of the vocabulary used in the description of experiences is very metaphoric, as it is designed to capture specific qualities of experiences that are very difficult to put into words. There are experiences that are beyond the previously experienced epistemic range, and there may be no appropriate vocabulary to describe them at the moment. I am curious about what qualitative research might contribute to this challenge in future work. A key assumption of your approach (as well as Dittrich's) is that ASCs have certain invariant attributes that can be measured via psychometric tools. Your most recent meta-analysis (Hirschfeld \& Schmidt, 2021) utilized the altered states database to examine the dose-response relationship of psilocybin- induced subjective experiences. Based on the regression analyses, all of the above questionnaires (MEQ, HRS, ASC) exhibited a fairly robust and linear dose-response relationship for most of their factors and subscales. This seems to confirm that there are indeed invariant features of psychedelic experiences and that their intensity can be quantified in a dose-dependent manner. However, other studies implicate that contextual factors and prior expectations play a significant role in how people score on these reports. For instance, Olson et al. (2020) demonstrated that certain individuals will even report stronger alterations of consciousness under the influence of a convincing placebo manipulation than others under the influence of psilocybin (Studerus et al., 2011). This also raises concern for controlled clinical trials, where it is difficult (if not impossible) to maintain placebo-blinding, and the effect sizes of subjective measures are likely to be overestimated (Muthukumaraswamy et al., 2021). Do you see this as a major caveat in Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 69 comparing the intensity of different experiences to each other across different samples and environmental conditions? This is indeed an important point. The dose-response relationships that we present ignore other factors that contribute to the ASC experience, except for the dosage. Also, the data we used, mainly stems from well-controlled laboratory studies. It would not be appropriate to directly generalize these data to recreational drug consumption. Strong effects of set and setting, which are not systematically reported in the literature, are known and could have huge influences. I believe our analysis is helpful to determine the dosage for studies carried out under laboratory settings. Alternatively, our results can be used as a reference when carrying out a field study and comparing if the observed effects are stronger or weaker than under laboratory conditions. The given data can show a specific profile of experiences. It can inform researchers if a specific drug or non-pharmacological method produces specific effects, e.g., hallucinations or out-of-body experiences, or anxiety. With more available standardized data, it will become increasingly feasible to compare the experiences across different induction methods. In controlled clinical trials, one can control for such placebo effects very well. Other research, in which there is no control condition for placebo effects (many field studies) might overestimate the effects or suffer from a huge variability in the data. I was involved in online surveys where we wanted to investigate the subjective effects induced by Kambo, the skin secretions of frog species (Schmidt et al., 2020; Majic et al., 2021). The relationship between pharmacology and subjective experiences is far from clear. The dose-response relationships that we present [from well-controlled laboratory studies] ignore factors that contribute to the ASC experience, except for the dosage. (...) It would not be appropriate to directly generalize these data to recreational drug consumption. " " Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 70 We were interested in how people score on the standardized questionnaires, and whether this would provide supporting evidence alluding to potential psychoactive effects of Kambo. But as you pointed out, in the end, it is not possible to separate which of the reported effects emerge from psychoactive properties, and which effects are related to other mechanisms of action. One clue for this could be the variability you see in the data-the less variability, the more of a causal pharmacologic effect on subjective experiences should be present. To nail these down, we need more data and innovative research approaches. The utility of the database also seems dependent on the amount of data covering the spectrum of the phenomenal space that can currently be measured via pharmacological and non-pharmacological methods. It seems that the currently available data still does not reach this order of magnitude, and this puts certain limitations on what kind of insights can be generated. Do you have any suggestions on addressing this issue? In order to address such shortcomings of the current data, as well as to improve the amount of available data, we plan to develop the ASDB into an Open Science Citizen Science platform. The idea would be that everyone can report their experiences and compare them with the experiences of thousands of other people. At the same time, one could collect anonymous data on potential factors that influence the experiences and potentially also long- term effects. The basic idea is to collect Big Data. Something that is not possible in laboratory experiments, where each study is limited to a few participants. A website or app where you can compare your experience with the experiences of thousands of other users would make it possible to collect hundreds of thousands of data points from users around the world. However, Citizen Science also has its very own limitations. When doing Citizen Science one needs to think about the user experience-the users need to have fun with such an app and see their own benefit from using it. Therefore, you can not apply long and detailed questionnaires, but only short sets of questions. On the other hand, one can obtain bigger amounts of data, if you involve a whole community of users. Big data will solve multiple problems in the validation of questionnaires, but also comes with new Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 71 challenges. I have high hopes that it will be an important step to address some of the biases in the literature, which I mentioned earlier. I am confident that acting transparent and according to the highest standards of Open Science will also motivate users to contribute to such a project. In this light, my motivation to further develop the Altered States Database is twofold. On the one hand, the ASDB provides a reference for the subjective experiences that can be expected when performing neurophysiologic experiments and enables a direct comparison of new datasets. It allows researchers to ask under what conditions a specific experience does or does not occur. I believe that this knowledge in combination with human neuroimaging studies can contribute to real advances in the identification of the relevant neural correlates of specific subjective experiences. My second motivation is that the ASDB could be developed to contribute to the identification of predictors for specific experiences. In other words, it could be extended to incorporate measures of special biophysical or personality factors that might predict what is going to be experienced if somebody takes a drug or applies a non-pharmacological method to induce an ASC. I also hope that the transparent presentation and the summarizing and sharing of scientific data, in the sense of Open Science, can contribute to harm reduction. Currently, there is a huge enthusiasm for the potential positive effects of psychedelics. Often, enthusiasm comes with some neglect of risks. I feel it is important that within the research community there is more discussion and research on the identification of risk factors. I hope that further development of my database can also contribute to this. Could you reflect on some of the negative risks of psychedelics and why the current era of research has shifted towards a one-sided positive reporting of their effects? All clinical studies are highly selective with regard to the included participants. This is of course for very good reasons-it would be terrible if a clinical study harmed a patient-as said before: safety-first. At the same time, Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 72 this produces a bias in the literature. One mostly hears about positive/helpful/beneficial effects of psychedelics because negative side effects seem to rarely occur in controlled studies. There are diverse potential side effects that can result from the consumption of psychedelics, however, by now only a few predictors for such have been identified. It seems that most side effects are relatively rare. But it is obviously a problem if one does not have good knowledge about their predictors. It seems to me that there is not enough attention being paid to these questions in current research. References Bartossek, M. T., Kemmerer, J., \& Schmidt, T. T. (2020, May 26). Altered states phenomena induced by visual flicker light stimulation. https://doi.org/10.31234/osf.io/825nc Carhart-Harris, R. L., \& Friston, K. J. P. (2019). REBUS and the anarchic brain: toward a unified model of the brain action of psychedelics. 71(3), 316-344. https://doi.org/10.1124/pr.118.017160 Carhart-Harris, R. L., Muthukumaraswamy, S., Roseman, L., Kaelen, M., Droog, W., Murphy, K., Tagliazucchi, E., Schenberg, E. E., Nest, T., Orban, C. et al (2016). Neural correlates of the LSD experience revealed by multimodal neuroimaging. 113(17), 4853-4858. https://doi.org/10.1073/pnas.1518377113 Corlett, P. R., Frith, C. D., \& Fletcher, P. C. (2009). From drugs to deprivation: a Bayesian framework for understanding models of psychosis. Psychopharmacology, 206(4), 515-530. https://doi.org/10.1007/s00213-009-1561-0 Corlett, P. R., Horga, G., Fletcher, P. C., Alderson-Day, B., Schmack, K., \& Powers III, A. R. (2019). Hallucinations and strong priors. Trends in cognitive sciences, 23(2), 114-127. https://doi.org/10.1016/j.tics.2018.12.001 Dittrich, A., Lamparter, D., \& Maurer, M. (2010). 5D-ASC: Questionnaire for the assessment of altered states of consciousness. A short introduction. Zurich, Switzerland: PSIN PLUS. Gonzalez-Castillo, J., Kam, J. W., Hoy, C. W., \& Bandettini, P. A. J. J. o. N. (2021). How to Interpret Resting-State fMRI: Ask Your Participants. 41(6), 1130-1141. https://doi.org/10.1523/JNEUROSCI.1786-20.2020 Hashkes, S., van Rooij, I., \& Kwisthout, J. Perception is in the Details: A Predictive Coding Account of the Psychedelic Phenomenon. Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 73 Hirschfeld, T., \& Schmidt, T. T. J. J. o. P. (2021). Dose-response relationships of psilocybin-induced subjective experiences in humans. 35(4), 384-397. https://doi.org/10.1177/0269881121992676 MacLean, K. A., Leoutsakos, J.-M. S., Johnson, M. W., \& Griffiths, R. R. (2012). Factor Analysis of the Mystical Experience Questionnaire: A Study of Experiences Occasioned by the Hallucinogen Psilocybin. 51(4), 721-737. https://doi.org/10.1111/j.1468-5906.2012.01685.x Majic, Tomislav et al. "Connected to the spirit of the frog: An Internet-based survey on Kambo, the secretion of the Amazonian Giant Maki Frog (Phyllomedusa bicolor): Motivations for use, settings and subjective experiences." Journal of psychopharmacology (Oxford, England) vol. 35,4 (2021): 421-436. https://doi.org/10.1177/0269881121991554 Muthukumaraswamy, S. (2021). Blinding and Expectancy Confounds in Psychedelic Randomised Controlled Trials. https://doi.org/10.1080/17512433.2021.1933434 Muthukumaraswamy, S. D., Carhart-Harris, R. L., Moran, R. J., Brookes, M. J., Williams, T. M., Errtizoe, D., Sessa, B., Papadopoulos, A., Bolstridge, M., Singh, K. D. (2013). Broadband cortical desynchronization underlies the human psychedelic state. 33(38), 15171-15183. https://doi.org/10.1523/JNEUROSCI.2063- 13.2013 Olson, J. A., Suissa-Rocheleau, L., Lifshitz, M., Raz, A., \& Veissiere, S. P. (2020). Tripping on nothing: placebo psychedelics and contextual factors. 237(5), 1371- 1382. https://doi.org/10.1007/s00213-020-05464-5 Preller, K. H., Razi, A., Zeidman, P., Stampfli, P., Friston, K. J., \& Vollenweider, F. X. (2019). Effective connectivity changes in LSD-induced altered states of consciousness in humans. Proceedings of the National Academy of Sciences, 116(7), 2743-2748. https://doi.org/10.1073/pnas.1815129116 Riba, J., Rodrguez-Fornells, A., Strassman, R. J., Barbanoj, M. J. J. D., \& Dependence, A. (2001). Psychometric assessment of the hallucinogen rating scale. 62(3), 215-223. https://doi.org/10.1073/pnas.1815129116 Schmidt, T. T., \& Berkemeyer, H. (2018). The Altered States Database: Psychometric Data of Altered States of Consciousness. 9(1028). https://doi.org/10.3389/fpsyg.2018.01028 Schmidt, T. T., Jagannathan, N., Ljubljanac, M., Xavier, A., \& Nierhaus, T. (2020). The multimodal Ganzfeld-induced altered state of consciousness induces decreased thalamo-cortical coupling. Scientific Reports, 10(1), 1-10. https://doi.org/10.1038/s41598-020-75019-3 Schmidt, T.T., Reiche, S., Hage, C.L.C. et al. Acute and subacute psychoactive effects of Kambo, the secretion of the Amazonian Giant Maki Frog (Phyllomedusa bicolor): retrospective reports. Sci Rep 10, 21544 (2020). https://doi.org/10.1038/s41598-020-78527-4 Timo Torsten Schmidt - Phenomenoconnectomics and ASCs ALIUS Bulletin n5 (2021) aliusresearch.org/bulletin 74 Studerus, E., Gamma, A., \& Vollenweider, F. X. (2010). Psychometric evaluation of the altered states of consciousness rating scale (OAV). PloS one, 5(8), e12412. https://doi.org/10.1371/journal.pone.0012412 Studerus, E., Kometer, M., Hasler, F., \& Vollenweider, F. X. (2011). Acute, subacute and long-term subjective effects of psilocybin in healthy humans: a pooled analysis of experimental studies. Journal of psychopharmacology, 25(11), 1434-1452. https://doi.org/10.1177/0269881110382466 Ter Meulen, B. C., Tavy, D., \& Jacobs, B. C. (2009). From stroboscope to dream machine: a history of flicker-induced hallucinations. European neurology, 62(5), 316-320. https://doi.org/10.1159/000235945 Wackermann, J., Putz, P., \& Allefeld, C. (2008). Ganzfeld-induced hallucinatory experience, its phenomenology and cerebral electrophysiology. Cortex, 44(10), 1364-1378. https://doi.org/10.1016/j.cortex.2007.05.003\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC1F8135] (392.400bp,-216.480bp) rectangle ++(107.280bp,-0.240bp);
+  \fill[ALIUSC1F8135] (392.400bp,-294.480bp) rectangle ++(68.640bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (387.360bp,-193.440bp) rectangle ++(0.480bp,-35.760bp);
+  \fill[ALIUSC0000FF] (106.560bp,-278.400bp) rectangle ++(168.240bp,-0.480bp);
+  \fill[ALIUSCBFBFBF] (387.360bp,-229.200bp) rectangle ++(0.480bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (387.360bp,-231.360bp) rectangle ++(0.480bp,-85.680bp);
+  \fill[ALIUSC0000FF] (90.000bp,-694.080bp) rectangle ++(122.400bp,-0.480bp);
+  \ALIUSPlacedTextContent{90.000}{72.019}{367.472}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Phenomenoconnectomics and the Neural}
+  \ALIUSPlacedTextContent{90.000}{99.619}{323.765}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Correlates of Altered Consciousness}
+  \ALIUSPlacedTextContent{90.000}{139.219}{359.124}{ALIUSC000000}{\ALIUSFontLatoLight}{19.920}{An interview with Timo Torsten Schmidt}
+  \ALIUSPlacedTextContent{392.340}{193.344}{109.414}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Timo Torsten Schmidt}
+  \ALIUSPlacedTextContent{392.340}{206.519}{109.749}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{timo.t.schmidt@fu-berlin.de}
+  \ALIUSPlacedTextContent{90.000}{211.128}{98.832}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{By George Fejer}
+  \ALIUSPlacedTextContent{392.340}{217.319}{118.059}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Department of Education and}
+  \ALIUSPlacedTextContent{392.340}{228.119}{115.100}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Psychology, Freie Universität}
+  \ALIUSPlacedTextContent{90.000}{231.491}{290.493}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{Cite as: Schmidt, T.T., Fejer, G. (2021). Phenomenoconnectomics}
+  \ALIUSPlacedTextContent{392.340}{238.919}{64.953}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Berlin, Germany}
+  \ALIUSPlacedTextContent{90.000}{243.491}{290.449}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{and the Neural Correlates of Altered Consciousness. An interview}
+  \ALIUSPlacedTextContent{90.000}{255.491}{196.820}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{with Timo Torsten Schmidt by George Fejer,}
+  \ALIUSPlacedTextContent{287.340}{255.491}{58.566}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{345.853}{255.491}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
+  \ALIUSPlacedTextContent{351.227}{255.491}{5.846}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{5}
+  \ALIUSPlacedTextContent{357.027}{255.491}{20.703}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{, 59-}
+  \ALIUSPlacedTextContent{90.000}{267.491}{16.531}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{74,}
+  \ALIUSPlacedTextContent{106.504}{267.491}{168.242}{ALIUSC0000FF}{\ALIUSFontLatoLight}{10.080}{https://doi.org/10.34700/wb76-w666}
+  \ALIUSPlacedTextContent{392.340}{271.344}{65.734}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{George Fejer}
+  \ALIUSPlacedTextContent{392.340}{284.519}{73.674}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{gyorgyf@live.com}
+  \ALIUSPlacedTextContent{392.340}{295.319}{97.150}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Team coordinator of the}
+  \ALIUSPlacedTextContent{392.340}{306.119}{99.184}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{ALIUS research network}
+  \ALIUSPlacedTextContent{90.000}{353.701}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
+  \ALIUSPlacedTextContent{90.000}{384.876}{418.268}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In this interview, Timo Torsten Schmidt provides details about his efforts to}
+  \ALIUSPlacedTextContent{90.000}{399.276}{418.275}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{compile a comprehensive database of all psychometric measures gathered from}
+  \ALIUSPlacedTextContent{90.000}{413.676}{418.273}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{controlled experiments investigating altered states of consciousness (ASCs)}
+  \ALIUSPlacedTextContent{90.000}{428.076}{418.267}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{induced by pharmacological and non-pharmacological methods. He also}
+  \ALIUSPlacedTextContent{90.000}{442.476}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{introduces the paradigm of Phenomenoconnectomics which aims to}
+  \ALIUSPlacedTextContent{90.000}{456.876}{418.276}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{systematically investigate the phenomenology and functional connectivity of}
+  \ALIUSPlacedTextContent{90.000}{471.276}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{ASCs to identify commonalities and differences, to ultimately identify the}
+  \ALIUSPlacedTextContent{90.000}{485.676}{418.274}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{necessary neuronal correlates of specific experiences as they occur during ASCs.}
+  \ALIUSPlacedTextContent{90.000}{500.076}{418.278}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{He explains some key findings of his own neuroscientific research on the neural}
+  \ALIUSPlacedTextContent{90.000}{514.476}{418.266}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{correlates of consciousness under the influence of non-pharmacological}
+  \ALIUSPlacedTextContent{90.000}{528.876}{418.265}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{manipulations, such as Ganzfeld exposure and flicker light stimulation-induced}
+  \ALIUSPlacedTextContent{90.000}{543.276}{418.271}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{visual illusory percepts. Finally, we touch upon the current limitations of}
+  \ALIUSPlacedTextContent{90.000}{557.676}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{psychometric methods in their ability to capture the full diversity of the}
+  \ALIUSPlacedTextContent{90.000}{572.076}{418.268}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{phenomenal space and future plans to overcome these caveats through Open}
+  \ALIUSPlacedTextContent{90.000}{586.476}{284.747}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{Science initiatives that support harm reduction efforts.}
+  \ALIUSPlacedTextContent{90.000}{612.876}{47.340}{ALIUSC000000}{\ALIUSFontLatoItalic}{12.000}{keywords}
+  \ALIUSPlacedTextContent{137.339}{612.876}{2.844}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{:}
+  \ALIUSPlacedTextContent{144.580}{612.876}{363.449}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{Altered States of Consciousness, non-pharmacologic induction methods,}
+  \ALIUSPlacedTextContent{90.000}{629.436}{291.024}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{flicker light stimulation, Ganzfeld, psychedelics, psilocybin}
+  \ALIUSPlacedTextContent{90.000}{663.343}{24.039}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{The}
+  \ALIUSPlacedTextContent{127.173}{663.343}{43.004}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Altered}
+  \ALIUSPlacedTextContent{183.310}{663.343}{36.559}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{States}
+  \ALIUSPlacedTextContent{233.003}{663.343}{54.091}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Database}
+  \ALIUSPlacedTextContent{300.228}{663.343}{50.166}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Schmidt}
+  \ALIUSPlacedTextContent{363.528}{663.343}{12.136}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{\&}
+  \ALIUSPlacedTextContent{388.798}{663.343}{71.253}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Berkemeyer,}
+  \ALIUSPlacedTextContent{473.185}{663.343}{38.556}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{2018,}
+  \ALIUSPlacedTextContent{90.000}{680.623}{122.292}{ALIUSC0000FF}{\ALIUSFontLatoLight}{12.357}{http://www.asdb.info/}
+  \ALIUSPlacedTextContent{212.285}{680.623}{296.018}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{) is by far the most ambitious attempt to systematically}
+  \ALIUSPlacedTextContent{90.000}{697.903}{41.844}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{catalog}
+  \ALIUSPlacedTextContent{142.873}{697.903}{75.659}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{psychometric}
+  \ALIUSPlacedTextContent{229.560}{697.903}{26.705}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{data}
+  \ALIUSPlacedTextContent{267.293}{697.903}{17.265}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{on}
+  \ALIUSPlacedTextContent{295.587}{697.903}{28.452}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{both}
+  \ALIUSPlacedTextContent{335.067}{697.903}{99.377}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{pharmacologically}
+  \ALIUSPlacedTextContent{445.473}{697.903}{23.239}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and}
+  \ALIUSPlacedTextContent{479.740}{697.903}{25.246}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{non-}
+  \ALIUSPlacedTextContent{90.000}{715.183}{421.794}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{pharmacologically induced altered states of consciousness, up to date.}
+  \ALIUSPlacedTextContent{90.000}{732.463}{418.390}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{How did you become interested in Altered States of Consciousness (ASC) and}
+  \ALIUSPlacedTextContent{90.000}{749.743}{287.807}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{what was your motivation to embark on this project?}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{11.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{60}
+  \ALIUSPlacedTextContent{90.000}{72.098}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I am passionate about contributing to the empirical work investigating the}
+  \ALIUSPlacedTextContent{90.000}{91.538}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neural correlates of human consciousness (NCC). The idea of compiling the}
+  \ALIUSPlacedTextContent{90.000}{110.978}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{database was born at a time when I discovered the existing literature about}
+  \ALIUSPlacedTextContent{90.000}{130.658}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the diverse methods of inducing ASCs and their effects. I felt that it might}
+  \ALIUSPlacedTextContent{90.000}{150.098}{418.200}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have been a missed chance in the history of science, that after their discovery}
+  \ALIUSPlacedTextContent{90.000}{169.538}{418.130}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics were not used further to elucidate the relevant neuronal}
+  \ALIUSPlacedTextContent{90.000}{188.978}{418.124}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanisms that correlate with their effects on consciousness. I felt such}
+  \ALIUSPlacedTextContent{90.000}{208.658}{378.058}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{drugs would be a great experimental tool for consciousness research.}
+  \ALIUSPlacedTextContent{90.000}{240.098}{418.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is because they allow induction of a substantial deviation from normal}
+  \ALIUSPlacedTextContent{90.000}{259.538}{418.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious functioning for a short amount of time in healthy people and their}
+  \ALIUSPlacedTextContent{90.000}{278.978}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{use was reported to be mostly safe under controlled laboratory conditions.}
+  \ALIUSPlacedTextContent{90.000}{298.658}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I, therefore, thought that such induced deviations from average conscious}
+  \ALIUSPlacedTextContent{90.000}{318.098}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences could be used as experimental tools with multiple advantages}
+  \ALIUSPlacedTextContent{90.000}{337.538}{293.751}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{over studying ASCs that occur in psychopathologies.}
+  \ALIUSPlacedTextContent{90.000}{368.978}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Let's take the example of hallucinations. Such phenomena typically do not}
+  \ALIUSPlacedTextContent{90.000}{388.658}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{occur spontaneously in healthy study participants. Therefore, it is not}
+  \ALIUSPlacedTextContent{90.000}{408.098}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possible to directly compare a normal (non-hallucinating) state with a}
+  \ALIUSPlacedTextContent{90.000}{427.538}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinating state. Of course, there are some patients who suffer from}
+  \ALIUSPlacedTextContent{90.000}{446.978}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinations, such as during psychosis. However, it is very challenging to}
+  \ALIUSPlacedTextContent{90.000}{466.658}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{study the neuronal correlates of hallucinations in such patient groups, as their}
+  \ALIUSPlacedTextContent{90.000}{486.098}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brains might have already undergone substantial long-term changes,}
+  \ALIUSPlacedTextContent{90.000}{505.538}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{including structural alterations. An on-off within-subject design rendered}
+  \ALIUSPlacedTextContent{90.000}{524.978}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possible with the experimental induction of ASCs has much more power to}
+  \ALIUSPlacedTextContent{90.000}{544.418}{297.797}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reveal the relevant neural correlates of hallucinations.}
+  \ALIUSPlacedTextContent{90.000}{576.098}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{With this motivation in mind, I was curious what type of effects could be}
+  \ALIUSPlacedTextContent{90.000}{595.538}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{induced with different methods and which of these methods could be safely}
+  \ALIUSPlacedTextContent{90.000}{614.978}{418.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{used in scientific experiments. I did find some resources on this subject, such}
+  \ALIUSPlacedTextContent{90.000}{634.418}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as erowid.org and other web platforms where people share subjective reports}
+  \ALIUSPlacedTextContent{90.000}{654.098}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about their drug experiences. However, upon reading them, it was clear that}
+  \ALIUSPlacedTextContent{90.000}{673.538}{418.170}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there is a major bias in these reports, as people tend to report either the most}
+  \ALIUSPlacedTextContent{90.000}{692.978}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{challenging or the particularly meaningful experiences, but little in between}
+  \ALIUSPlacedTextContent{90.000}{712.418}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these two extremes.  Unfortunately, I did not find a systematic collection of}
+  \ALIUSPlacedTextContent{90.000}{732.098}{386.905}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{scientific data that covers the whole spectrum in an unbiased manner.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{9.564}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{61}
+  \ALIUSPlacedTextContent{106.560}{78.288}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.800}{89.477}{324.296}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{there is a major bias in these [first-person] reports,}
+  \ALIUSPlacedTextContent{136.800}{107.477}{324.233}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{as people tend to report either the most}
+  \ALIUSPlacedTextContent{136.800}{125.477}{76.586}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{challenging}
+  \ALIUSPlacedTextContent{226.800}{125.477}{17.787}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{or}
+  \ALIUSPlacedTextContent{258.002}{125.477}{25.471}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the}
+  \ALIUSPlacedTextContent{296.646}{125.477}{75.379}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{particularly}
+  \ALIUSPlacedTextContent{385.439}{125.477}{75.615}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{meaningful}
+  \ALIUSPlacedTextContent{136.800}{143.477}{324.206}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experiences, but little in between these two}
+  \ALIUSPlacedTextContent{471.360}{151.488}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{136.800}{161.477}{63.041}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{extremes.}
+  \ALIUSPlacedTextContent{90.000}{203.378}{418.376}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Thus, the idea was born to create a database to unify all data that was}
+  \ALIUSPlacedTextContent{90.000}{223.058}{201.704}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{acquired via standardized measures.}
+  \ALIUSPlacedTextContent{90.000}{254.498}{418.143}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{At the same time, I am a neuroscientist and not a drug researcher. I was}
+  \ALIUSPlacedTextContent{90.000}{273.938}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interested in the neural correlates of consciousness alterations, and not in the}
+  \ALIUSPlacedTextContent{90.000}{293.378}{418.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{drug effects per se. Nor was I majorly interested in potential therapeutic}
+  \ALIUSPlacedTextContent{90.000}{312.818}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{applications. In my research, I was moving to work with human fMRI—so I}
+  \ALIUSPlacedTextContent{90.000}{332.498}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{was thinking of how to conduct meaningful experiments with fMRI in}
+  \ALIUSPlacedTextContent{90.000}{351.938}{418.218}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{combination with psychedelics to identify NCCs. There are multiple}
+  \ALIUSPlacedTextContent{90.000}{371.378}{418.149}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{methodological challenges when combining fMRI with pharmacological}
+  \ALIUSPlacedTextContent{90.000}{390.818}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interventions, which makes it very hard to develop meaningful task-based}
+  \ALIUSPlacedTextContent{90.000}{410.498}{80.410}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fMRI studies.}
+  \ALIUSPlacedTextContent{90.000}{441.938}{418.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Currently, it appears that resting-state fMRI is a method well suited to}
+  \ALIUSPlacedTextContent{90.000}{461.378}{305.959}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characterize brain states in terms of network properties,}
+  \ALIUSPlacedTextContent{395.452}{461.378}{18.741}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{e.g.,}
+  \ALIUSPlacedTextContent{414.211}{461.378}{94.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{functional brain}
+  \ALIUSPlacedTextContent{90.000}{480.818}{418.217}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{connectivity. I am convinced that the systematic study of brain connectivity}
+  \ALIUSPlacedTextContent{90.000}{500.498}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{across diversely induced ASCs can reveal correlates of specific subjective}
+  \ALIUSPlacedTextContent{90.000}{519.938}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences. Across studies, different features of experiences will be more or}
+  \ALIUSPlacedTextContent{90.000}{539.378}{346.081}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{less pronounced depending on the applied induction methods.}
+  \ALIUSPlacedTextContent{107.760}{584.688}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.840}{595.877}{324.221}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{There are multiple methodological challenges}
+  \ALIUSPlacedTextContent{135.840}{613.877}{324.248}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{when combining fMRI with pharmacological}
+  \ALIUSPlacedTextContent{135.840}{631.877}{324.203}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{interventions, which makes it very hard to develop}
+  \ALIUSPlacedTextContent{135.840}{649.877}{324.354}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{meaningful task-based fMRI studies. Currently, it}
+  \ALIUSPlacedTextContent{135.840}{667.877}{324.317}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{appears that resting-state fMRI is a method well}
+  \ALIUSPlacedTextContent{135.840}{685.877}{324.307}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{suited to characterize brain states in terms of}
+  \ALIUSPlacedTextContent{135.840}{703.877}{57.882}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{network}
+  \ALIUSPlacedTextContent{208.564}{703.877}{73.734}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{properties,}
+  \ALIUSPlacedTextContent{297.120}{703.877}{27.806}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{e.g.,}
+  \ALIUSPlacedTextContent{340.080}{703.877}{68.418}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{functional}
+  \ALIUSPlacedTextContent{423.592}{703.877}{36.507}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{brain}
+  \ALIUSPlacedTextContent{473.520}{715.008}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.840}{721.877}{82.486}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{connectivity.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{10.404}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{62}
+  \ALIUSPlacedTextContent{90.000}{72.098}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This will allow researchers to establish correlations between specific ASC}
+  \ALIUSPlacedTextContent{90.000}{91.538}{330.774}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{phenomena and accompanying brain connectivity patterns (}
+  \ALIUSPlacedTextContent{420.808}{91.538}{18.741}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{e.g.,}
+  \ALIUSPlacedTextContent{439.567}{91.538}{68.686}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the pattern}
+  \ALIUSPlacedTextContent{90.000}{110.978}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of connectivity increases and decreases that accompany an out-of-body}
+  \ALIUSPlacedTextContent{90.000}{130.658}{418.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience). Ultimately, the identification of such connectivity patterns}
+  \ALIUSPlacedTextContent{90.000}{150.098}{418.107}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might contribute to the formulation of NCCs of specific subjective}
+  \ALIUSPlacedTextContent{90.000}{169.538}{72.080}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences.}
+  \ALIUSPlacedTextContent{90.000}{201.103}{418.327}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{It must have been a lot of effort to compile this database! Are you still actively}
+  \ALIUSPlacedTextContent{90.000}{218.383}{66.343}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{updating it?}
+  \ALIUSPlacedTextContent{90.000}{247.538}{418.371}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Indeed, it was a lot of work to build the database, and I have not done this}
+  \ALIUSPlacedTextContent{90.000}{266.978}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{work alone—it was a group of students at the University of Osnabrück}
+  \ALIUSPlacedTextContent{90.000}{286.658}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{who were working with me on the Altered States Database.}
+  \ALIUSPlacedTextContent{90.000}{306.098}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I was very happy that students were interested in supporting the vision to}
+  \ALIUSPlacedTextContent{90.000}{325.538}{418.104}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have a database that allows us to compare the types of experiences that people}
+  \ALIUSPlacedTextContent{90.000}{344.978}{418.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have when using diverse methods to induce ASCs. I am also happy that this}
+  \ALIUSPlacedTextContent{90.000}{364.658}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{project still attracts students to work with me, and currently, we are}
+  \ALIUSPlacedTextContent{90.000}{384.098}{418.154}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{upgrading the Database to conform to Preferred Reporting Items for}
+  \ALIUSPlacedTextContent{90.000}{403.538}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Systematic Reviews and Meta-Analyses (PRISMA) standards for systematic}
+  \ALIUSPlacedTextContent{90.000}{422.978}{368.893}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{literature reviews. A preprint will be online in the upcoming weeks.}
+  \ALIUSPlacedTextContent{90.000}{454.783}{418.330}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Befitting of the lengthy effort, you designated this paradigm with the lengthy}
+  \ALIUSPlacedTextContent{90.000}{471.823}{418.405}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{title of "Phenomenoconnectomics", which aims to jointly investigate the}
+  \ALIUSPlacedTextContent{90.000}{489.103}{418.433}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{correlations between brain connectivity and phenomenology. What are the}
+  \ALIUSPlacedTextContent{90.000}{506.383}{128.589}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{aims of this framework?}
+  \ALIUSPlacedTextContent{90.000}{535.538}{418.409}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I thought it is fun to introduce a complicated term such as}
+  \ALIUSPlacedTextContent{90.000}{554.978}{418.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"Phenomenoconnectomics" that people will at least remember the challenge}
+  \ALIUSPlacedTextContent{90.000}{574.658}{418.360}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to pronounce it. With this term, I want to refer to the joint study of the}
+  \ALIUSPlacedTextContent{90.000}{594.098}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{phenomenology of ASC experiences and changes in resting-state}
+  \ALIUSPlacedTextContent{90.000}{613.538}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{connectivity, which co-occur during these experiences. This is my research}
+  \ALIUSPlacedTextContent{90.000}{632.978}{418.300}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{goal up to this day. I want to contribute to the systematic study of what type}
+  \ALIUSPlacedTextContent{90.000}{652.658}{418.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of subjective experiences occur under what conditions. To promote this goal,}
+  \ALIUSPlacedTextContent{90.000}{672.098}{418.324}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I make data on the phenomenology of ASC accessible, and I acquire fMRI}
+  \ALIUSPlacedTextContent{90.000}{691.538}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{data on changes in functional connectivity that accompany ASC experiences.}
+  \ALIUSPlacedTextContent{90.000}{710.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{However, contrary to my initial fascination for psychedelic substances, I have}
+  \ALIUSPlacedTextContent{90.000}{730.418}{398.664}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{turned my focus to the non-pharmacological methods of inducing ASCs.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{10.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{63}
+  \ALIUSPlacedTextContent{90.000}{72.223}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{What are the main advantages of using pharmacological versus non-}
+  \ALIUSPlacedTextContent{90.000}{89.503}{418.329}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{pharmacological methods? Is there any non-pharmacological method that has}
+  \ALIUSPlacedTextContent{90.000}{106.783}{110.205}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{been understudied?}
+  \ALIUSPlacedTextContent{90.000}{141.218}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Pharmacologic human studies are very demanding to be carried out. This is}
+  \ALIUSPlacedTextContent{90.000}{160.658}{418.309}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for good reasons, as we all want that participants in studies can rely on the}
+  \ALIUSPlacedTextContent{90.000}{180.098}{418.115}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{highest degree of safety and researchers stick to good scientific practice. Such}
+  \ALIUSPlacedTextContent{90.000}{199.538}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research is therefore enormously expensive and takes a lot of resources. I want}
+  \ALIUSPlacedTextContent{90.000}{218.978}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to emphasize that this is not due to any "discrimination" to research on}
+  \ALIUSPlacedTextContent{90.000}{238.658}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics—as some people suspected—it is simply the case that}
+  \ALIUSPlacedTextContent{90.000}{258.098}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experimental basic research needs to stick to the same safety rules as the}
+  \ALIUSPlacedTextContent{90.000}{277.538}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmaceutical industry. When exploring the safety and efficacy of new}
+  \ALIUSPlacedTextContent{90.000}{296.978}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{substances, one wants to make sure that the principle of safety-first is}
+  \ALIUSPlacedTextContent{90.000}{316.658}{46.502}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{applied.}
+  \ALIUSPlacedTextContent{90.000}{355.538}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Furthermore, there are always some remaining risks that come with}
+  \ALIUSPlacedTextContent{90.000}{374.978}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmacological studies inducing ASCs, and plenty of considerations that}
+  \ALIUSPlacedTextContent{90.000}{394.658}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have to be made. But beyond all that, there are also limitations in the}
+  \ALIUSPlacedTextContent{90.000}{414.098}{418.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interpretation of the data. If you have a pharmacologic agent in the system,}
+  \ALIUSPlacedTextContent{90.000}{433.538}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it will typically not only act on the brain. Complex physiological reactions}
+  \ALIUSPlacedTextContent{90.000}{452.978}{418.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{take place—simply consider changes in blood pressure, heartbeat, and}
+  \ALIUSPlacedTextContent{90.000}{472.658}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{changes in neurovascular coupling as potential confounders for fMRI studies.}
+  \ALIUSPlacedTextContent{90.000}{511.538}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Given the possibility to induce similar effects with non-pharmacologic}
+  \ALIUSPlacedTextContent{90.000}{530.978}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{methods, this might be preferred as a much safer option that produces data}
+  \ALIUSPlacedTextContent{90.000}{550.658}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that is less confounded by such factors.  One advantage is that typically you}
+  \ALIUSPlacedTextContent{90.000}{570.098}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can terminate a non-pharmacologically induced ASC within seconds or at}
+  \ALIUSPlacedTextContent{90.000}{589.538}{418.368}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{least minutes, which is not easily possible for many pharmacologically}
+  \ALIUSPlacedTextContent{90.000}{608.978}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{induced ASCs. Also, several physiologic confounders will not apply,}
+  \ALIUSPlacedTextContent{109.440}{637.008}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{138.240}{648.677}{324.369}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{If you have a pharmacologic agent in the system,}
+  \ALIUSPlacedTextContent{138.240}{666.677}{324.220}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{it will typically not only act on the brain. Complex}
+  \ALIUSPlacedTextContent{138.240}{684.437}{86.695}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{physiological}
+  \ALIUSPlacedTextContent{237.857}{684.437}{62.936}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{reactions}
+  \ALIUSPlacedTextContent{313.714}{684.437}{30.276}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{play}
+  \ALIUSPlacedTextContent{356.911}{684.437}{11.319}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{a}
+  \ALIUSPlacedTextContent{380.925}{684.437}{24.945}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{role}
+  \ALIUSPlacedTextContent{417.360}{684.437}{45.157}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{simply}
+  \ALIUSPlacedTextContent{405.840}{686.498}{11.554}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{—}
+  \ALIUSPlacedTextContent{138.240}{703.396}{324.221}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consider changes in blood pressure, heartbeat,}
+  \ALIUSPlacedTextContent{138.240}{721.396}{324.259}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{and potential changes in neurovascular coupling}
+  \ALIUSPlacedTextContent{476.400}{736.128}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{138.240}{739.397}{272.056}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{as potential confounders for fMRI studies.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{10.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{64}
+  \ALIUSPlacedTextContent{90.000}{72.098}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and it will be much more straightforward to implement well-controlled on-}
+  \ALIUSPlacedTextContent{90.000}{91.538}{149.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{off within-subject designs.}
+  \ALIUSPlacedTextContent{90.000}{130.658}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Stroboscopic light in different forms of presentation has been used in various}
+  \ALIUSPlacedTextContent{90.000}{150.098}{32.448}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ways,}
+  \ALIUSPlacedTextContent{121.654}{150.098}{18.741}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{e.g.,}
+  \ALIUSPlacedTextContent{140.413}{150.098}{367.870}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with so-called "Dream machines" (Ter Meulen et al., 2009) to induce}
+  \ALIUSPlacedTextContent{90.000}{169.538}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{deep relaxing, immersed, "hypnagogic" states. The first time people sit with}
+  \ALIUSPlacedTextContent{90.000}{188.978}{418.118}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{closed eyes in front of a stroboscopic white light, most of them are surprised}
+  \ALIUSPlacedTextContent{90.000}{208.658}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{how colorful, dynamic, and immersive the visual effects are. At the moment,}
+  \ALIUSPlacedTextContent{90.000}{228.098}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I am working with flicker light stimulation as a method with which one can}
+  \ALIUSPlacedTextContent{90.000}{247.538}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{induce very fascinating visual effects, which are often called Flicker-induced}
+  \ALIUSPlacedTextContent{90.000}{266.978}{211.125}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Hallucinations (Bartossek et al. 2020).}
+  \ALIUSPlacedTextContent{90.000}{306.098}{418.359}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We show that the visual effects are reported to reach an intensity that can}
+  \ALIUSPlacedTextContent{90.000}{325.538}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{otherwise only be reached with psychedelics. I think it is an important step}
+  \ALIUSPlacedTextContent{90.000}{344.978}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for research to see what neural mechanisms are shared between psychedelic-}
+  \ALIUSPlacedTextContent{90.000}{364.658}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{induced and flicker-induced hallucinations. In particular, Cortico-Thalamo-}
+  \ALIUSPlacedTextContent{90.000}{384.098}{251.080}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Cortical interactions seem to play a role here.}
+  \ALIUSPlacedTextContent{90.000}{422.978}{418.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It is interesting to experimentally test on what hierarchical level of processing}
+  \ALIUSPlacedTextContent{90.000}{442.658}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{there is a divergence from normal everyday perceptual processing.}
+  \ALIUSPlacedTextContent{90.000}{462.098}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In particular, it has to be investigated where bottom-up (perceptual}
+  \ALIUSPlacedTextContent{90.000}{481.538}{70.460}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stimulation)}
+  \ALIUSPlacedTextContent{172.514}{481.538}{23.535}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and}
+  \ALIUSPlacedTextContent{208.101}{481.538}{56.843}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{top-down}
+  \ALIUSPlacedTextContent{276.998}{481.538}{38.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects}
+  \ALIUSPlacedTextContent{327.474}{481.538}{43.677}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(brain's}
+  \ALIUSPlacedTextContent{383.206}{481.538}{56.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{internally}
+  \ALIUSPlacedTextContent{451.534}{481.538}{56.730}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{generated}
+  \ALIUSPlacedTextContent{90.000}{500.978}{418.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{signals/expectations) mismatch. As an effect of this mismatch, multimodal}
+  \ALIUSPlacedTextContent{90.000}{520.418}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{integration failures are produced, which come with altered subjective}
+  \ALIUSPlacedTextContent{90.000}{540.098}{72.080}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences.}
+  \ALIUSPlacedTextContent{90.000}{578.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{For the future, I also find it fascinating to systematically explore how}
+  \ALIUSPlacedTextContent{90.000}{598.418}{418.060}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{multimodal stimulation can influence those aspects of conscious experiences}
+  \ALIUSPlacedTextContent{90.000}{618.098}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and compare it to the effects of hallucinogenic drugs. I find this type of}
+  \ALIUSPlacedTextContent{90.000}{637.538}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{comparison very interesting because some drugs can produce ASC effects,}
+  \ALIUSPlacedTextContent{90.000}{656.978}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{but some of these effects can also be induced by non-pharmacological}
+  \ALIUSPlacedTextContent{90.000}{676.418}{418.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{methods. The mechanisms that lead to subjective experiences are}
+  \ALIUSPlacedTextContent{90.000}{696.098}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fundamentally different, although there are also some similarities. I think this}
+  \ALIUSPlacedTextContent{90.000}{715.538}{418.323}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is exactly what we need in research to identify the necessary NCC for}
+  \ALIUSPlacedTextContent{90.000}{734.978}{129.535}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subjective experiences.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 7
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{10.488}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{65}
+  \ALIUSPlacedTextContent{90.000}{72.098}{418.324}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{From what we know by now, I think it is fair to say that it is not the}
+  \ALIUSPlacedTextContent{90.000}{91.538}{233.786}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stimulation of a specific receptor type (}
+  \ALIUSPlacedTextContent{323.743}{91.538}{18.741}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{e.g.,}
+  \ALIUSPlacedTextContent{342.502}{91.538}{165.759}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the stimulation of 5-HT2A}
+  \ALIUSPlacedTextContent{90.000}{110.978}{418.163}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{receptors), which is the necessary NCC of the effects of psychedelics on}
+  \ALIUSPlacedTextContent{90.000}{130.658}{418.079}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness. I think it makes more sense to look at the downstream effects}
+  \ALIUSPlacedTextContent{90.000}{150.098}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of such a receptor stimulation. One possibility for this is to look at changes}
+  \ALIUSPlacedTextContent{90.000}{169.538}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in network interactions as a consequence of drug intake. But most}
+  \ALIUSPlacedTextContent{90.000}{188.978}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{importantly, we require more studies on non-pharmacological methods that}
+  \ALIUSPlacedTextContent{90.000}{208.658}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can induce ASCs. Such techniques are much easier to apply, typically safer,}
+  \ALIUSPlacedTextContent{90.000}{228.098}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and will ultimately contribute important data which reveals what needs to}
+  \ALIUSPlacedTextContent{90.000}{247.538}{365.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{happen in the brain in order to experience a specific phenomenon.}
+  \ALIUSPlacedTextContent{90.000}{286.783}{418.317}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Your previous work investigated ASCs via the Ganzfeld induction method}
+  \ALIUSPlacedTextContent{90.000}{304.063}{418.353}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Schmidt et al., 2020). This is a relatively simple procedure, whereby the visual}
+  \ALIUSPlacedTextContent{90.000}{321.103}{418.352}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{field is masked by halved ping-pong balls and exposed to red light, which}
+  \ALIUSPlacedTextContent{90.000}{338.383}{418.417}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{generates unstructured homogenous input, while participants listen to white}
+  \ALIUSPlacedTextContent{90.000}{355.663}{122.573}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{noise via headphones.}
+  \ALIUSPlacedTextContent{90.000}{390.223}{418.424}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{The fMRI results indicated decreased thalamo-cortical coupling and an}
+  \ALIUSPlacedTextContent{90.000}{407.503}{418.490}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{increase of Default Mode Network centrality in relation to the hypnagogic}
+  \ALIUSPlacedTextContent{90.000}{424.783}{418.330}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{state induced by this procedure. By contrast, psychedelic states exhibit an}
+  \ALIUSPlacedTextContent{90.000}{442.063}{418.452}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{opposite trend, with increased thalamo-cortical coupling (Preller et al., 2019)}
+  \ALIUSPlacedTextContent{90.000}{459.103}{418.400}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and decreased connectivity of the Default Mode Network (Carhart-Harris et}
+  \ALIUSPlacedTextContent{90.000}{476.383}{59.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{al., 2016).}
+  \ALIUSPlacedTextContent{90.000}{510.943}{418.317}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{According to the relaxed beliefs under psychedelics (REBUS) model by}
+  \ALIUSPlacedTextContent{90.000}{528.223}{418.398}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Carhart-Harris and Friston (2019), psychedelic substances relax top-down}
+  \ALIUSPlacedTextContent{90.000}{545.503}{418.360}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{expectations and liberate the flow of bottom-up information. But your data}
+  \ALIUSPlacedTextContent{90.000}{562.783}{418.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{suggests that similar experiences can also be elicited by depriving bottom-up}
+  \ALIUSPlacedTextContent{90.000}{580.063}{418.373}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{input of sensory structure, and this has the opposite effect on the Default}
+  \ALIUSPlacedTextContent{90.000}{597.103}{418.398}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Mode Network compared to psychedelics. Do you think this discrepancy}
+  \ALIUSPlacedTextContent{90.000}{614.383}{418.417}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{reflects differences between the phenomenology of these different states of}
+  \ALIUSPlacedTextContent{90.000}{631.663}{85.787}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consciousness?}
+  \ALIUSPlacedTextContent{90.000}{668.258}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Indeed, there are relevant differences in the phenomenology of Ganzfeld-}
+  \ALIUSPlacedTextContent{90.000}{687.698}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{induced hallucinations and hallucinations that are experienced under}
+  \ALIUSPlacedTextContent{90.000}{707.378}{418.204}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychedelics, not to mention those experienced during psychosis. In the end,}
+  \ALIUSPlacedTextContent{90.000}{726.818}{418.198}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it might be that the neural mechanisms from which hallucinations result are}
+  \ALIUSPlacedTextContent{90.000}{746.258}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{also distinct. This is exactly what I am interested in: looking at different}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 8
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{11.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{66}
+  \ALIUSPlacedTextContent{90.000}{72.098}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{induction methods that lead to somewhat similar phenomena. The next step}
+  \ALIUSPlacedTextContent{90.000}{91.538}{418.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{will be to stringently characterize the differences and elucidate what}
+  \ALIUSPlacedTextContent{90.000}{110.978}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuronal mechanisms relate to the differences and what neuronal}
+  \ALIUSPlacedTextContent{90.000}{130.658}{131.005}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanisms are shared.}
+  \ALIUSPlacedTextContent{90.000}{169.538}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The REBUS model focuses on predictive cortical processing. In this context,}
+  \ALIUSPlacedTextContent{90.000}{188.978}{418.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I can also recommend the formulation of predictive mechanisms that}
+  \ALIUSPlacedTextContent{90.000}{208.658}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contribute to the emergence of ASCs in the context of psychosis by Phillip}
+  \ALIUSPlacedTextContent{90.000}{228.098}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Corlett (2009, 2019), which also contains links to pharmacological and non-}
+  \ALIUSPlacedTextContent{90.000}{247.538}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmacological induction methods of such phenomena. He is speculating}
+  \ALIUSPlacedTextContent{90.000}{266.978}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about how bottom-up and top-down influences could be imbalanced in}
+  \ALIUSPlacedTextContent{90.000}{286.658}{410.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different ways so that they ultimately converge to similar phenomenology.}
+  \ALIUSPlacedTextContent{90.000}{325.538}{418.393}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{What I like in his suggestion is that it considers different modulations of}
+  \ALIUSPlacedTextContent{90.000}{344.978}{418.175}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{predictive processes on different levels of the cortical hierarchy. The REBUS}
+  \ALIUSPlacedTextContent{90.000}{364.658}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{model is rather formulated in the context of psychedelics, where effects on}
+  \ALIUSPlacedTextContent{90.000}{384.098}{418.283}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{all levels of cortical hierarchical processing are assumed, while overall I}
+  \ALIUSPlacedTextContent{90.000}{403.538}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consider the model as somewhat too simplistic and too much focused on}
+  \ALIUSPlacedTextContent{90.000}{422.978}{351.681}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cortical processing, neglecting important subcortical circuitries.}
+  \ALIUSPlacedTextContent{90.000}{462.098}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think our work formulates the demand to focus on thalamo-cortical}
+  \ALIUSPlacedTextContent{90.000}{481.538}{418.166}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interactions as an important mechanism that contributes to ASC}
+  \ALIUSPlacedTextContent{90.000}{500.978}{418.267}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences. In my view, the REBUS model does not emphasize the potential}
+  \ALIUSPlacedTextContent{90.000}{520.418}{77.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contributions}
+  \ALIUSPlacedTextContent{183.579}{520.418}{14.223}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of}
+  \ALIUSPlacedTextContent{213.523}{520.418}{20.688}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the}
+  \ALIUSPlacedTextContent{249.932}{520.418}{190.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Cortico-Striato-Thalamo-Cortical}
+  \ALIUSPlacedTextContent{456.501}{520.418}{51.730}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feedback}
+  \ALIUSPlacedTextContent{90.000}{540.098}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanisms enough. I think particularly our work with non-pharmacological}
+  \ALIUSPlacedTextContent{90.000}{559.538}{418.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{methods emphasizes that future research should not forget about subcortical}
+  \ALIUSPlacedTextContent{90.000}{578.978}{286.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanisms as potential NCCs of ASC experiences.}
+  \ALIUSPlacedTextContent{100.800}{615.648}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{129.360}{626.117}{338.621}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the REBUS model does not emphasize the potential}
+  \ALIUSPlacedTextContent{129.360}{644.117}{89.746}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{contributions}
+  \ALIUSPlacedTextContent{232.279}{644.117}{17.545}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of}
+  \ALIUSPlacedTextContent{263.239}{644.117}{25.229}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the}
+  \ALIUSPlacedTextContent{301.640}{644.117}{162.594}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Cortico-Striato-Thalamo-}
+  \ALIUSPlacedTextContent{129.360}{662.117}{54.296}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Cortical}
+  \ALIUSPlacedTextContent{211.227}{662.117}{62.644}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{feedback}
+  \ALIUSPlacedTextContent{301.438}{662.117}{82.797}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{mechanisms}
+  \ALIUSPlacedTextContent{411.802}{662.117}{60.071}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{enough.}
+  \ALIUSPlacedTextContent{129.360}{680.117}{7.953}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I}
+  \ALIUSPlacedTextContent{152.161}{680.117}{36.515}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{think}
+  \ALIUSPlacedTextContent{203.524}{680.117}{75.615}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{particularly}
+  \ALIUSPlacedTextContent{293.987}{680.117}{26.203}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{our}
+  \ALIUSPlacedTextContent{335.037}{680.117}{36.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{work}
+  \ALIUSPlacedTextContent{386.158}{680.117}{32.674}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{with}
+  \ALIUSPlacedTextContent{433.680}{680.117}{30.554}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{non-}
+  \ALIUSPlacedTextContent{129.360}{698.117}{338.758}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{pharmacological methods emphasizes that future}
+  \ALIUSPlacedTextContent{129.360}{716.117}{36.509}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{work}
+  \ALIUSPlacedTextContent{179.989}{716.117}{47.090}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{should}
+  \ALIUSPlacedTextContent{240.973}{716.117}{26.198}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{not}
+  \ALIUSPlacedTextContent{281.292}{716.117}{43.461}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{forget}
+  \ALIUSPlacedTextContent{338.646}{716.117}{41.557}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{about}
+  \ALIUSPlacedTextContent{394.324}{716.117}{73.693}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{subcortical}
+  \ALIUSPlacedTextContent{469.680}{733.248}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{129.360}{734.117}{333.721}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{mechanisms as potential NCCs of ASC experiences.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 9
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{10.728}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{67}
+  \ALIUSPlacedTextContent{90.000}{72.223}{418.364}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{From a conceptual standpoint, what do you think about the construct validity}
+  \ALIUSPlacedTextContent{90.000}{89.503}{418.312}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{of psychometric tools that are currently at our disposal? Most of the data}
+  \ALIUSPlacedTextContent{90.000}{106.783}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{represented in the ASC database stems from studies that used the 5D/11-}
+  \ALIUSPlacedTextContent{90.000}{124.063}{418.390}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Altered States of Consciousness questionnaire (Dittrich et al., 2010; Studerus}
+  \ALIUSPlacedTextContent{90.000}{141.343}{418.489}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{et al., 2010), the Mystical Experience Questionnaire (MacLean et al., 2012),}
+  \ALIUSPlacedTextContent{90.000}{158.383}{418.311}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and the Hallucinogen Rating Scale (Riba et al., 2001). Whereas the Mystical}
+  \ALIUSPlacedTextContent{90.000}{175.663}{418.300}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Experience Questionnaire and the Hallucinogen Rating Scale seem to be}
+  \ALIUSPlacedTextContent{90.000}{192.943}{418.369}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{designed for measuring specific types of experience, the ASC questionnaire}
+  \ALIUSPlacedTextContent{90.000}{210.223}{418.415}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{seems to cover a wider spectrum of experience. Do you think this}
+  \ALIUSPlacedTextContent{90.000}{227.503}{418.398}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{questionnaire captures the full diversity of experience, or do you see some}
+  \ALIUSPlacedTextContent{90.000}{244.783}{128.045}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{room for improvement?}
+  \ALIUSPlacedTextContent{90.000}{281.378}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Adolf Dittrich, who developed the 5D-ASC questionnaire, pursued the goal}
+  \ALIUSPlacedTextContent{90.000}{300.818}{418.323}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that this questionnaire allows the comparison of the subjective effects}
+  \ALIUSPlacedTextContent{90.000}{320.258}{47.011}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{induced}
+  \ALIUSPlacedTextContent{150.382}{320.258}{16.484}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by}
+  \ALIUSPlacedTextContent{180.238}{320.258}{92.986}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmacological}
+  \ALIUSPlacedTextContent{286.595}{320.258}{23.522}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and}
+  \ALIUSPlacedTextContent{323.488}{320.258}{118.664}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{non-pharmacological}
+  \ALIUSPlacedTextContent{455.528}{320.258}{56.005}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{methods.}
+  \ALIUSPlacedTextContent{90.000}{339.938}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{He described the goal to identify etiology-invariant structures of}
+  \ALIUSPlacedTextContent{90.000}{359.378}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness alterations. This is a big vision, and it basically aims to map}
+  \ALIUSPlacedTextContent{90.000}{378.818}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the entire space of possible consciousness states that people can experience.}
+  \ALIUSPlacedTextContent{90.000}{398.258}{353.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Even though this is a big vision, I like it and share his ambitions.}
+  \ALIUSPlacedTextContent{90.000}{437.378}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dittrich's questionnaire, however, had a focus on those effects that people}
+  \ALIUSPlacedTextContent{90.000}{456.818}{418.384}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience after the intake of psychedelics. As of now, it is still the best tool}
+  \ALIUSPlacedTextContent{90.000}{476.258}{418.295}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to achieve comparability between studies, as it is the most widely used}
+  \ALIUSPlacedTextContent{90.000}{495.698}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{questionnaire. But this does not mean that the questionnaire would provide}
+  \ALIUSPlacedTextContent{90.000}{515.378}{373.394}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a full description of the subjective experiences. It certainly does not.}
+  \ALIUSPlacedTextContent{90.000}{554.258}{418.085}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There is a lot of work ahead of us to find proper questionnaire items and}
+  \ALIUSPlacedTextContent{90.000}{573.698}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychological constructs that capture the whole phenomenal state space. For}
+  \ALIUSPlacedTextContent{90.000}{593.378}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{now, I would consider these questionnaires suitable for comparing data}
+  \ALIUSPlacedTextContent{90.000}{612.818}{418.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{collected in clinical studies. The comparison of any new clinical datasets with}
+  \ALIUSPlacedTextContent{90.000}{632.258}{418.393}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the existing ones allows us to detect if for any reason participants had majorly}
+  \ALIUSPlacedTextContent{90.000}{651.698}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different experiences. However, the development and application of}
+  \ALIUSPlacedTextContent{90.000}{671.378}{301.717}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{additional measures are important for future research.}
+  \ALIUSPlacedTextContent{99.120}{697.008}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{128.160}{708.677}{339.556}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{There is lots of work ahead of us to find proper}
+  \ALIUSPlacedTextContent{128.160}{726.677}{339.728}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{questionnaire items and psychological constructs}
+  \ALIUSPlacedTextContent{478.080}{740.928}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{128.160}{744.677}{311.706}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{that capture the whole phenomenal state space.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 10
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{11.448}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{68}
+  \ALIUSPlacedTextContent{90.000}{72.098}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In our studies on non-pharmacological induction methods for ASCs, we use}
+  \ALIUSPlacedTextContent{90.000}{91.538}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these standardized questionnaires to characterize the phenomenology of the}
+  \ALIUSPlacedTextContent{90.000}{110.978}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience in order to allow a comparison between experiences induced by}
+  \ALIUSPlacedTextContent{90.000}{130.658}{418.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmacological means. However, the questionnaires mainly provide a}
+  \ALIUSPlacedTextContent{90.000}{150.098}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{quantitative approximation of the intensity of such phenomena, and they do}
+  \ALIUSPlacedTextContent{90.000}{169.538}{336.940}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not provide a detailed description of the experiences as such.}
+  \ALIUSPlacedTextContent{90.000}{208.658}{418.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think it is important to put more effort into research within this domain}
+  \ALIUSPlacedTextContent{90.000}{228.098}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and obtain more detailed descriptions of experiences—qualitative work is of}
+  \ALIUSPlacedTextContent{90.000}{247.538}{418.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{importance here as well. Unfortunately, I am not an expert on that, but I am}
+  \ALIUSPlacedTextContent{90.000}{266.978}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{curious about the work of others in this research. One major challenge is that}
+  \ALIUSPlacedTextContent{90.000}{286.658}{418.124}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{much of the vocabulary used in the description of experiences is very}
+  \ALIUSPlacedTextContent{90.000}{306.098}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{metaphoric, as it is designed to capture specific qualities of experiences that}
+  \ALIUSPlacedTextContent{90.000}{325.538}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{are very difficult to put into words. There are experiences that are beyond}
+  \ALIUSPlacedTextContent{90.000}{344.978}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the previously experienced epistemic range, and there may be no appropriate}
+  \ALIUSPlacedTextContent{90.000}{364.658}{418.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{vocabulary to describe them at the moment. I am curious about what}
+  \ALIUSPlacedTextContent{90.000}{384.098}{390.432}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{qualitative research might contribute to this challenge in future work.}
+  \ALIUSPlacedTextContent{90.000}{423.103}{418.354}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{A key assumption of your approach (as well as Dittrich's) is that ASCs have}
+  \ALIUSPlacedTextContent{90.000}{440.383}{418.562}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{certain invariant attributes that can be measured via psychometric tools. Your}
+  \ALIUSPlacedTextContent{90.000}{457.663}{418.323}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{most recent meta-analysis (Hirschfeld \& Schmidt, 2021) utilized the altered}
+  \ALIUSPlacedTextContent{90.000}{474.943}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{states database to examine the dose-response relationship of psilocybin-}
+  \ALIUSPlacedTextContent{90.000}{492.223}{418.539}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{induced subjective experiences. Based on the regression analyses, all of the}
+  \ALIUSPlacedTextContent{90.000}{509.503}{418.328}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{above questionnaires (MEQ, HRS, ASC) exhibited a fairly robust and linear}
+  \ALIUSPlacedTextContent{90.000}{526.783}{418.338}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{dose-response relationship for most of their factors and subscales. This seems}
+  \ALIUSPlacedTextContent{90.000}{543.823}{418.292}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{to confirm that there are indeed invariant features of psychedelic experiences}
+  \ALIUSPlacedTextContent{90.000}{561.103}{387.717}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and that their intensity can be quantified in a dose-dependent manner.}
+  \ALIUSPlacedTextContent{90.000}{595.663}{418.469}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{However, other studies implicate that contextual factors and prior}
+  \ALIUSPlacedTextContent{90.000}{612.943}{418.506}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{expectations play a significant role in how people score on these reports. For}
+  \ALIUSPlacedTextContent{90.000}{630.223}{418.505}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{instance, Olson et al. (2020) demonstrated that certain individuals will even}
+  \ALIUSPlacedTextContent{90.000}{647.503}{418.484}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{report stronger alterations of consciousness under the influence of a}
+  \ALIUSPlacedTextContent{90.000}{664.783}{418.337}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{convincing placebo manipulation than others under the influence of psilocybin}
+  \ALIUSPlacedTextContent{90.000}{681.823}{418.216}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Studerus et al., 2011). This also raises concern for controlled clinical trials,}
+  \ALIUSPlacedTextContent{90.000}{699.103}{418.388}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{where it is difficult (if not impossible) to maintain placebo-blinding, and the}
+  \ALIUSPlacedTextContent{90.000}{716.383}{418.397}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{effect sizes of subjective measures are likely to be overestimated}
+  \ALIUSPlacedTextContent{90.000}{733.663}{418.343}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Muthukumaraswamy et al., 2021). Do you see this as a major caveat in}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 11
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{11.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{69}
+  \ALIUSPlacedTextContent{90.000}{72.223}{418.546}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{comparing the intensity of different experiences to each other across different}
+  \ALIUSPlacedTextContent{90.000}{89.503}{214.827}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{samples and environmental conditions?}
+  \ALIUSPlacedTextContent{90.000}{126.098}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is indeed an important point. The dose-response relationships that we}
+  \ALIUSPlacedTextContent{90.000}{145.538}{418.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{present ignore other factors that contribute to the ASC experience, except}
+  \ALIUSPlacedTextContent{90.000}{164.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for the dosage. Also, the data we used, mainly stems from well-controlled}
+  \ALIUSPlacedTextContent{90.000}{184.658}{418.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{laboratory studies. It would not be appropriate to directly generalize these}
+  \ALIUSPlacedTextContent{90.000}{204.098}{418.180}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{data to recreational drug consumption. Strong effects of set and setting,}
+  \ALIUSPlacedTextContent{90.000}{223.538}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which are not systematically reported in the literature, are known and could}
+  \ALIUSPlacedTextContent{90.000}{242.978}{121.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have huge influences.}
+  \ALIUSPlacedTextContent{90.000}{282.098}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I believe our analysis is helpful to determine the dosage for studies carried}
+  \ALIUSPlacedTextContent{90.000}{301.538}{418.278}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{out under laboratory settings. Alternatively, our results can be used as a}
+  \ALIUSPlacedTextContent{90.000}{320.978}{418.283}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reference when carrying out a field study and comparing if the observed}
+  \ALIUSPlacedTextContent{90.000}{340.658}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects are stronger or weaker than under laboratory conditions.}
+  \ALIUSPlacedTextContent{90.000}{360.098}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The given data can show a specific profile of experiences. It can inform}
+  \ALIUSPlacedTextContent{90.000}{379.538}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{researchers if a specific drug or non-pharmacological method produces}
+  \ALIUSPlacedTextContent{90.000}{398.978}{87.923}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{specific effects,}
+  \ALIUSPlacedTextContent{179.988}{398.978}{18.741}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{e.g.,}
+  \ALIUSPlacedTextContent{198.747}{398.978}{309.496}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinations or out-of-body experiences, or anxiety.}
+  \ALIUSPlacedTextContent{90.000}{418.658}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{With more available standardized data, it will become increasingly feasible}
+  \ALIUSPlacedTextContent{90.000}{438.098}{351.850}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to compare the experiences across different induction methods.}
+  \ALIUSPlacedTextContent{90.000}{476.978}{418.418}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In controlled clinical trials, one can control for such placebo effects very well.}
+  \ALIUSPlacedTextContent{90.000}{496.658}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Other research, in which there is no control condition for placebo effects}
+  \ALIUSPlacedTextContent{90.000}{516.098}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(many field studies) might overestimate the effects or suffer from a huge}
+  \ALIUSPlacedTextContent{90.000}{535.538}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{variability in the data. I was involved in online surveys where we wanted to}
+  \ALIUSPlacedTextContent{90.000}{554.978}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{investigate the subjective effects induced by Kambô, the skin secretions of}
+  \ALIUSPlacedTextContent{90.000}{574.418}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{frog species (Schmidt et al., 2020; Majić et al., 2021). The relationship between}
+  \ALIUSPlacedTextContent{90.000}{594.098}{322.787}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmacology and subjective experiences is far from clear.}
+  \ALIUSPlacedTextContent{107.040}{633.408}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.120}{643.877}{324.196}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The dose-response relationships that we present}
+  \ALIUSPlacedTextContent{135.120}{661.877}{324.217}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{[from well-controlled laboratory studies] ignore}
+  \ALIUSPlacedTextContent{135.120}{679.877}{324.306}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{factors that contribute to the ASC experience,}
+  \ALIUSPlacedTextContent{135.120}{697.877}{324.321}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{except for the dosage. (...) It would not be}
+  \ALIUSPlacedTextContent{135.120}{715.877}{324.215}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{appropriate to directly generalize these data to}
+  \ALIUSPlacedTextContent{469.680}{724.368}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{135.120}{733.877}{201.244}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{recreational drug consumption.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 12
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{10.872}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{70}
+  \ALIUSPlacedTextContent{90.000}{72.098}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We were interested in how people score on the standardized questionnaires,}
+  \ALIUSPlacedTextContent{90.000}{91.538}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and whether this would provide supporting evidence alluding to potential}
+  \ALIUSPlacedTextContent{90.000}{110.978}{418.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoactive effects of Kambô. But as you pointed out, in the end, it is not}
+  \ALIUSPlacedTextContent{90.000}{130.658}{418.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possible to separate which of the reported effects emerge from psychoactive}
+  \ALIUSPlacedTextContent{90.000}{150.098}{418.149}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{properties, and which effects are related to other mechanisms of action. One}
+  \ALIUSPlacedTextContent{90.000}{169.538}{418.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{clue for this could be the variability you see in the data—the less variability,}
+  \ALIUSPlacedTextContent{90.000}{188.978}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the more of a causal pharmacologic effect on subjective experiences should}
+  \ALIUSPlacedTextContent{90.000}{208.658}{418.111}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be present. To nail these down, we need more data and innovative research}
+  \ALIUSPlacedTextContent{90.000}{228.098}{76.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{approaches.}
+  \ALIUSPlacedTextContent{90.000}{267.103}{418.380}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{The utility of the database also seems dependent on the amount of data}
+  \ALIUSPlacedTextContent{90.000}{284.383}{418.387}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{covering the spectrum of the phenomenal space that can currently be}
+  \ALIUSPlacedTextContent{90.000}{301.663}{418.333}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{measured via pharmacological and non-pharmacological methods. It seems}
+  \ALIUSPlacedTextContent{90.000}{318.943}{418.373}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{that the currently available data still does not reach this order of magnitude,}
+  \ALIUSPlacedTextContent{90.000}{336.223}{421.794}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and this puts certain limitations on what kind of insights can be generated.}
+  \ALIUSPlacedTextContent{90.000}{353.503}{294.569}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Do you have any suggestions on addressing this issue?}
+  \ALIUSPlacedTextContent{90.000}{390.098}{418.391}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In order to address such shortcomings of the current data, as well as to}
+  \ALIUSPlacedTextContent{90.000}{409.538}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{improve the amount of available data, we plan to develop the ASDB into an}
+  \ALIUSPlacedTextContent{90.000}{428.978}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Open Science Citizen Science platform. The idea would be that everyone can}
+  \ALIUSPlacedTextContent{90.000}{448.658}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{report their experiences and compare them with the experiences of thousands}
+  \ALIUSPlacedTextContent{90.000}{468.098}{418.338}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of other people. At the same time, one could collect anonymous data on}
+  \ALIUSPlacedTextContent{90.000}{487.538}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{potential factors that influence the experiences and potentially also long-}
+  \ALIUSPlacedTextContent{90.000}{506.978}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{term effects. The basic idea is to collect Big Data. Something that is not}
+  \ALIUSPlacedTextContent{90.000}{526.658}{418.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possible in laboratory experiments, where each study is limited to a few}
+  \ALIUSPlacedTextContent{90.000}{546.098}{418.194}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{participants. A website or app where you can compare your experience with}
+  \ALIUSPlacedTextContent{90.000}{565.538}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the experiences of thousands of other users would make it possible to collect}
+  \ALIUSPlacedTextContent{90.000}{584.978}{367.110}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hundreds of thousands of data points from users around the world.}
+  \ALIUSPlacedTextContent{90.000}{624.098}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{However, Citizen Science also has its very own limitations. When doing}
+  \ALIUSPlacedTextContent{90.000}{643.538}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Citizen Science one needs to think about the user experience—the users need}
+  \ALIUSPlacedTextContent{90.000}{662.978}{418.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to have fun with such an app and see their own benefit from using it.}
+  \ALIUSPlacedTextContent{90.000}{682.418}{418.104}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Therefore, you can not apply long and detailed questionnaires, but only short}
+  \ALIUSPlacedTextContent{90.000}{702.098}{418.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sets of questions. On the other hand, one can obtain bigger amounts of data,}
+  \ALIUSPlacedTextContent{90.000}{721.538}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{if you involve a whole community of users. Big data will solve multiple}
+  \ALIUSPlacedTextContent{90.000}{740.978}{418.200}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{problems in the validation of questionnaires, but also comes with new}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 13
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{9.132}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{71}
+  \ALIUSPlacedTextContent{90.000}{72.098}{418.318}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{challenges. I have high hopes that it will be an important step to address some}
+  \ALIUSPlacedTextContent{90.000}{91.538}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the biases in the literature, which I mentioned earlier. I am confident that}
+  \ALIUSPlacedTextContent{90.000}{110.978}{418.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{acting transparent and according to the highest standards of Open Science}
+  \ALIUSPlacedTextContent{90.000}{130.658}{302.052}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{will also motivate users to contribute to such a project.}
+  \ALIUSPlacedTextContent{90.000}{169.538}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In this light, my motivation to further develop the Altered States Database}
+  \ALIUSPlacedTextContent{90.000}{188.978}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is twofold. On the one hand, the ASDB provides a reference for the subjective}
+  \ALIUSPlacedTextContent{90.000}{208.658}{418.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences that can be expected when performing neurophysiologic}
+  \ALIUSPlacedTextContent{90.000}{228.098}{418.164}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiments and enables a direct comparison of new datasets. It allows}
+  \ALIUSPlacedTextContent{90.000}{247.538}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{researchers to ask under what conditions a specific experience does or does}
+  \ALIUSPlacedTextContent{90.000}{266.978}{418.309}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not occur. I believe that this knowledge in combination with human}
+  \ALIUSPlacedTextContent{90.000}{286.658}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroimaging studies can contribute to real advances in the identification of}
+  \ALIUSPlacedTextContent{90.000}{306.098}{346.824}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the relevant neural correlates of specific subjective experiences.}
+  \ALIUSPlacedTextContent{90.000}{344.978}{418.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{My second motivation is that the ASDB could be developed to contribute to}
+  \ALIUSPlacedTextContent{90.000}{364.658}{418.328}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the identification of predictors for specific experiences. In other words, it}
+  \ALIUSPlacedTextContent{90.000}{384.098}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{could be extended to incorporate measures of special biophysical or}
+  \ALIUSPlacedTextContent{90.000}{403.538}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{personality factors that might predict what is going to be experienced if}
+  \ALIUSPlacedTextContent{90.000}{422.978}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{somebody takes a drug or applies a non-pharmacological method to induce}
+  \ALIUSPlacedTextContent{90.000}{442.658}{51.976}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{an ASC.}
+  \ALIUSPlacedTextContent{90.000}{481.538}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I also hope that the transparent presentation and the summarizing and}
+  \ALIUSPlacedTextContent{90.000}{500.978}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sharing of scientific data, in the sense of Open Science, can contribute to}
+  \ALIUSPlacedTextContent{90.000}{520.418}{418.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{harm reduction. Currently, there is a huge enthusiasm for the potential}
+  \ALIUSPlacedTextContent{90.000}{540.098}{418.220}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{positive effects of psychedelics. Often, enthusiasm comes with some neglect}
+  \ALIUSPlacedTextContent{90.000}{559.538}{418.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of risks. I feel it is important that within the research community there is}
+  \ALIUSPlacedTextContent{90.000}{578.978}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more discussion and research on the identification of risk factors. I hope that}
+  \ALIUSPlacedTextContent{90.000}{598.418}{348.938}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{further development of my database can also contribute to this.}
+  \ALIUSPlacedTextContent{90.000}{635.503}{418.404}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Could you reflect on some of the negative risks of psychedelics and why the}
+  \ALIUSPlacedTextContent{90.000}{652.543}{418.369}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{current era of research has shifted towards a one-sided positive reporting of}
+  \ALIUSPlacedTextContent{90.000}{669.823}{74.187}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{their effects?}
+  \ALIUSPlacedTextContent{90.000}{706.418}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{All clinical studies are highly selective with regard to the included}
+  \ALIUSPlacedTextContent{90.000}{726.098}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{participants. This is of course for very good reasons—it would be terrible if a}
+  \ALIUSPlacedTextContent{90.000}{745.538}{418.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{clinical study harmed a patient—as said before: safety-first. At the same time,}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 14
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (108.000bp,-388.800bp) rectangle ++(181.200bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-442.080bp) rectangle ++(179.280bp,-0.720bp);
+  \fill[ALIUSC0000FF] (276.000bp,-510.960bp) rectangle ++(192.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (298.560bp,-564.240bp) rectangle ++(206.400bp,-0.720bp);
+  \fill[ALIUSCFFFFFF] (90.000bp,-573.120bp) rectangle ++(414.960bp,-15.600bp);
+  \fill[ALIUSCFFFFFF] (108.000bp,-588.720bp) rectangle ++(396.960bp,-15.840bp);
+  \fill[ALIUSCFFFFFF] (108.000bp,-604.560bp) rectangle ++(304.560bp,-15.840bp);
+  \fill[ALIUSC0000FF] (216.720bp,-617.520bp) rectangle ++(195.840bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-724.080bp) rectangle ++(249.360bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{9.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{72}
+  \ALIUSPlacedTextContent{90.000}{72.098}{418.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this produces a bias in the literature. One mostly hears about}
+  \ALIUSPlacedTextContent{90.000}{91.538}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{positive/helpful/beneficial effects of psychedelics because negative side}
+  \ALIUSPlacedTextContent{90.000}{110.978}{272.555}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effects seem to rarely occur in controlled studies.}
+  \ALIUSPlacedTextContent{90.000}{150.098}{418.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There are diverse potential side effects that can result from the consumption}
+  \ALIUSPlacedTextContent{90.000}{169.538}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of psychedelics, however, by now only a few predictors for such have been}
+  \ALIUSPlacedTextContent{90.000}{188.978}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{identified. It seems that most side effects are relatively rare. But it is obviously}
+  \ALIUSPlacedTextContent{90.000}{208.658}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a problem if one does not have good knowledge about their predictors.}
+  \ALIUSPlacedTextContent{90.000}{228.098}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It seems to me that there is not enough attention being paid to these}
+  \ALIUSPlacedTextContent{90.000}{247.538}{163.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{questions in current research.}
+  \ALIUSPlacedTextContent{263.666}{305.701}{67.644}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
+  \ALIUSPlacedTextContent{90.000}{344.425}{418.042}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bartossek, M. T., Kemmerer, J., \& Schmidt, T. T. (2020, May 26). Altered states}
+  \ALIUSPlacedTextContent{108.000}{360.025}{61.824}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{phenomena}
+  \ALIUSPlacedTextContent{190.024}{360.025}{43.678}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{induced}
+  \ALIUSPlacedTextContent{253.901}{360.025}{15.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{by}
+  \ALIUSPlacedTextContent{289.422}{360.025}{31.825}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{visual}
+  \ALIUSPlacedTextContent{341.446}{360.025}{35.656}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{flicker}
+  \ALIUSPlacedTextContent{397.301}{360.025}{26.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{light}
+  \ALIUSPlacedTextContent{444.094}{360.025}{63.934}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{stimulation.}
+  \ALIUSPlacedTextContent{108.000}{375.865}{181.168}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.31234/osf.io/825nc}
+  \ALIUSPlacedTextContent{90.000}{397.705}{417.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R. L., \& Friston, K. J. P. (2019). REBUS and the anarchic brain:}
+  \ALIUSPlacedTextContent{108.000}{413.305}{321.745}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{toward a unified model of the brain action of psychedelics.}
+  \ALIUSPlacedTextContent{429.667}{413.305}{14.594}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{71}
+  \ALIUSPlacedTextContent{444.272}{413.305}{63.751}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 316-344.}
+  \ALIUSPlacedTextContent{108.000}{429.145}{179.172}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1124/pr.118.017160}
+  \ALIUSPlacedTextContent{90.000}{450.745}{418.010}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Carhart-Harris, R. L., Muthukumaraswamy, S., Roseman, L., Kaelen, M., Droog,}
+  \ALIUSPlacedTextContent{108.000}{466.585}{373.828}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{W., Murphy, K., Tagliazucchi, E., Schenberg, E. E., Nest, T., Orban, C.}
+  \ALIUSPlacedTextContent{483.382}{466.585}{21.609}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{et al}
+  \ALIUSPlacedTextContent{108.000}{482.185}{399.971}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2016). Neural correlates of the LSD experience revealed by multimodal}
+  \ALIUSPlacedTextContent{108.000}{498.025}{72.708}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{neuroimaging.}
+  \ALIUSPlacedTextContent{180.708}{498.025}{15.040}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{113}
+  \ALIUSPlacedTextContent{195.761}{498.025}{80.134}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(17), 4853-4858.}
+  \ALIUSPlacedTextContent{275.904}{498.025}{192.443}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1073/pnas.1518377113}
+  \ALIUSPlacedTextContent{90.000}{519.865}{417.978}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Corlett, P. R., Frith, C. D., \& Fletcher, P. C. (2009). From drugs to deprivation: a}
+  \ALIUSPlacedTextContent{108.000}{535.465}{46.819}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Bayesian}
+  \ALIUSPlacedTextContent{170.743}{535.465}{58.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{framework}
+  \ALIUSPlacedTextContent{245.134}{535.465}{17.951}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{for}
+  \ALIUSPlacedTextContent{279.008}{535.465}{76.530}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{understanding}
+  \ALIUSPlacedTextContent{371.463}{535.465}{38.896}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{models}
+  \ALIUSPlacedTextContent{426.282}{535.465}{13.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of}
+  \ALIUSPlacedTextContent{455.430}{535.465}{52.682}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{psychosis.}
+  \ALIUSPlacedTextContent{108.000}{551.305}{190.750}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Psychopharmacology, 206(4), 515-530.}
+  \ALIUSPlacedTextContent{298.656}{551.305}{206.325}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00213-009-1561-0}
+  \ALIUSPlacedTextContent{90.000}{572.905}{418.018}{ALIUSC212121}{\ALIUSFontCormorantRegular}{12.960}{Corlett, P. R., Horga, G., Fletcher, P. C., Alderson-Day, B., Schmack, K., \& Powers}
+  \ALIUSPlacedTextContent{108.000}{588.745}{296.733}{ALIUSC212121}{\ALIUSFontCormorantRegular}{12.960}{III, A. R. (2019). Hallucinations and strong priors.}
+  \ALIUSPlacedTextContent{404.742}{588.745}{103.282}{ALIUSC212121}{\ALIUSFontCormorantItalic}{12.960}{Trends in cognitive}
+  \ALIUSPlacedTextContent{108.000}{604.585}{34.970}{ALIUSC212121}{\ALIUSFontCormorantItalic}{12.960}{sciences}
+  \ALIUSPlacedTextContent{142.995}{604.585}{5.919}{ALIUSC212121}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{148.923}{604.585}{9.151}{ALIUSC212121}{\ALIUSFontCormorantItalic}{12.960}{23}
+  \ALIUSPlacedTextContent{158.088}{604.585}{58.593}{ALIUSC212121}{\ALIUSFontCormorantRegular}{12.960}{(2), 114-127.}
+  \ALIUSPlacedTextContent{216.690}{604.585}{195.806}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.tics.2018.12.001}
+  \ALIUSPlacedTextContent{90.000}{626.185}{418.009}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dittrich, A., Lamparter, D., \& Maurer, M. (2010). 5D-ASC: Questionnaire for the}
+  \ALIUSPlacedTextContent{108.000}{642.025}{247.896}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{assessment of altered states of consciousness.}
+  \ALIUSPlacedTextContent{359.701}{642.025}{148.356}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{A short introduction. Zurich,}
+  \ALIUSPlacedTextContent{108.000}{657.865}{115.660}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Switzerland: PSIN PLUS}
+  \ALIUSPlacedTextContent{223.659}{657.865}{5.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{90.000}{679.465}{417.892}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Gonzalez-Castillo, J., Kam, J. W., Hoy, C. W., \& Bandettini, P. A. J. J. o. N. (2021).}
+  \ALIUSPlacedTextContent{108.000}{695.305}{317.616}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{How to Interpret Resting-State fMRI: Ask Your Participants.}
+  \ALIUSPlacedTextContent{425.643}{695.305}{13.095}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{41}
+  \ALIUSPlacedTextContent{438.750}{695.305}{69.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 1130-1141.}
+  \ALIUSPlacedTextContent{108.000}{711.145}{249.211}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/JNEUROSCI.1786-20.2020}
+  \ALIUSPlacedTextContent{90.000}{732.745}{418.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hashkes, S., van Rooij, I., \& Kwisthout, J. Perception is in the Details: A Predictive}
+  \ALIUSPlacedTextContent{108.000}{748.585}{256.774}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Coding Account of the Psychedelic Phenomenon.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 15
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (108.000bp,-116.400bp) rectangle ++(204.480bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-185.520bp) rectangle ++(231.600bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-270.240bp) rectangle ++(202.560bp,-0.720bp);
+  \fill[ALIUSC0000FF] (268.800bp,-307.680bp) rectangle ++(222.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (292.320bp,-376.560bp) rectangle ++(212.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-392.400bp) rectangle ++(32.640bp,-0.720bp);
+  \fill[ALIUSC0000FF] (134.640bp,-445.680bp) rectangle ++(213.840bp,-0.720bp);
+  \fill[ALIUSC0000FF] (162.480bp,-514.560bp) rectangle ++(192.960bp,-0.720bp);
+  \fill[ALIUSC0000FF] (206.880bp,-567.840bp) rectangle ++(192.720bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-620.880bp) rectangle ++(199.920bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-690.000bp) rectangle ++(212.400bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-758.880bp) rectangle ++(213.840bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{9.816}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{73}
+  \ALIUSPlacedTextContent{90.000}{72.025}{418.040}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hirschfeld, T., \& Schmidt, T. T. J. J. o. P. (2021). Dose–response relationships of}
+  \ALIUSPlacedTextContent{108.000}{87.625}{306.022}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{psilocybin-induced subjective experiences in humans.}
+  \ALIUSPlacedTextContent{414.036}{87.625}{21.371}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{35}
+  \ALIUSPlacedTextContent{435.423}{87.625}{72.600}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 384-397.}
+  \ALIUSPlacedTextContent{108.000}{103.465}{204.502}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881121992676}
+  \ALIUSPlacedTextContent{90.000}{125.065}{418.026}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{MacLean, K. A., Leoutsakos, J.-M. S., Johnson, M. W., \& Griffiths, R. R. (2012).}
+  \ALIUSPlacedTextContent{108.000}{140.905}{400.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Factor Analysis of the Mystical Experience Questionnaire: A Study of}
+  \ALIUSPlacedTextContent{108.000}{156.745}{315.603}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Experiences Occasioned by the Hallucinogen Psilocybin.}
+  \ALIUSPlacedTextContent{423.491}{156.745}{17.629}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{51}
+  \ALIUSPlacedTextContent{441.132}{156.745}{66.898}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 721-737.}
+  \ALIUSPlacedTextContent{108.000}{172.585}{231.530}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/j.1468-5906.2012.01685.x}
+  \ALIUSPlacedTextContent{90.000}{194.185}{418.032}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Majić, Tomislav et al. "Connected to the spirit of the frog: An Internet-based survey}
+  \ALIUSPlacedTextContent{108.000}{209.785}{400.011}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{on Kambô, the secretion of the Amazonian Giant Maki Frog (Phyllomedusa}
+  \ALIUSPlacedTextContent{108.000}{225.625}{400.016}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{bicolor): Motivations for use, settings and subjective experiences." Journal of}
+  \ALIUSPlacedTextContent{108.000}{241.465}{109.069}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{psychopharmacology}
+  \ALIUSPlacedTextContent{229.635}{241.465}{47.172}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(Oxford,}
+  \ALIUSPlacedTextContent{289.373}{241.465}{48.714}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{England)}
+  \ALIUSPlacedTextContent{350.653}{241.465}{20.819}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{vol.}
+  \ALIUSPlacedTextContent{383.998}{241.465}{22.146}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{35,4}
+  \ALIUSPlacedTextContent{418.705}{241.465}{34.595}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2021):}
+  \ALIUSPlacedTextContent{465.861}{241.465}{42.172}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{421-436.}
+  \ALIUSPlacedTextContent{108.000}{257.305}{202.416}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881121991554}
+  \ALIUSPlacedTextContent{90.000}{278.905}{418.041}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Muthukumaraswamy, S. (2021). Blinding and Expectancy Confounds in Psychedelic}
+  \ALIUSPlacedTextContent{108.000}{294.745}{160.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Randomised Controlled Trials.}
+  \ALIUSPlacedTextContent{268.910}{294.745}{222.498}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/17512433.2021.1933434}
+  \ALIUSPlacedTextContent{90.000}{316.345}{418.005}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Muthukumaraswamy, S. D., Carhart-Harris, R. L., Moran, R. J., Brookes, M. J.,}
+  \ALIUSPlacedTextContent{108.000}{332.185}{400.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Williams, T. M., Errtizoe, D., Sessa, B., Papadopoulos, A., Bolstridge, M., Singh,}
+  \ALIUSPlacedTextContent{108.000}{347.785}{400.077}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{K. D. (2013). Broadband cortical desynchronization underlies the human}
+  \ALIUSPlacedTextContent{108.000}{363.625}{87.690}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{psychedelic state.}
+  \ALIUSPlacedTextContent{195.686}{363.625}{12.041}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{33}
+  \ALIUSPlacedTextContent{207.741}{363.625}{84.499}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(38), 15171-15183.}
+  \ALIUSPlacedTextContent{292.364}{363.625}{212.623}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1523/JNEUROSCI.2063-}
+  \ALIUSPlacedTextContent{108.000}{379.465}{32.724}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{13.2013}
+  \ALIUSPlacedTextContent{90.000}{401.065}{418.057}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Olson, J. A., Suissa-Rocheleau, L., Lifshitz, M., Raz, A., \& Veissière, S. P. (2020).}
+  \ALIUSPlacedTextContent{108.000}{416.905}{336.092}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Tripping on nothing: placebo psychedelics and contextual factors.}
+  \ALIUSPlacedTextContent{444.149}{416.905}{17.658}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{237}
+  \ALIUSPlacedTextContent{461.821}{416.905}{43.166}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5), 1371-}
+  \ALIUSPlacedTextContent{108.000}{432.745}{26.555}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1382.}
+  \ALIUSPlacedTextContent{134.558}{432.745}{213.919}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00213-020-05464-5}
+  \ALIUSPlacedTextContent{90.000}{454.345}{418.089}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Preller, K. H., Razi, A., Zeidman, P., Stämpfli, P., Friston, K. J., \& Vollenweider, F.}
+  \ALIUSPlacedTextContent{108.000}{469.945}{400.088}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{X. (2019). Effective connectivity changes in LSD-induced altered states of}
+  \ALIUSPlacedTextContent{108.000}{485.785}{132.497}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness in humans.}
+  \ALIUSPlacedTextContent{240.506}{485.785}{229.094}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences}
+  \ALIUSPlacedTextContent{469.550}{485.785}{5.918}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{475.477}{485.785}{13.009}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{116}
+  \ALIUSPlacedTextContent{488.503}{485.785}{19.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(7),}
+  \ALIUSPlacedTextContent{108.000}{501.625}{54.537}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2743-2748.}
+  \ALIUSPlacedTextContent{162.547}{501.625}{192.793}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1073/pnas.1815129116}
+  \ALIUSPlacedTextContent{90.000}{523.225}{417.979}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Riba, J., Rodrıguez-Fornells, A., Strassman, R. J., Barbanoj, M. J. J. D., \&}
+  \ALIUSPlacedTextContent{108.000}{539.065}{400.038}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dependence, A. (2001). Psychometric assessment of the hallucinogen rating}
+  \ALIUSPlacedTextContent{108.000}{554.905}{26.387}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{scale.}
+  \ALIUSPlacedTextContent{134.402}{554.905}{13.207}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{62}
+  \ALIUSPlacedTextContent{147.623}{554.905}{59.172}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 215-223.}
+  \ALIUSPlacedTextContent{206.810}{554.905}{192.793}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1073/pnas.1815129116}
+  \ALIUSPlacedTextContent{90.000}{576.505}{418.070}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Schmidt, T. T., \& Berkemeyer, H. (2018). The Altered States Database:}
+  \ALIUSPlacedTextContent{108.000}{592.105}{71.454}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Psychometric}
+  \ALIUSPlacedTextContent{190.855}{592.105}{27.304}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Data}
+  \ALIUSPlacedTextContent{229.560}{592.105}{13.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of}
+  \ALIUSPlacedTextContent{254.185}{592.105}{41.911}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Altered}
+  \ALIUSPlacedTextContent{307.497}{592.105}{33.349}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{States}
+  \ALIUSPlacedTextContent{352.247}{592.105}{13.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of}
+  \ALIUSPlacedTextContent{376.856}{592.105}{75.522}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Consciousness.}
+  \ALIUSPlacedTextContent{466.846}{592.105}{5.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{9}
+  \ALIUSPlacedTextContent{472.306}{592.105}{35.735}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1028).}
+  \ALIUSPlacedTextContent{108.000}{607.945}{199.811}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/fpsyg.2018.01028}
+  \ALIUSPlacedTextContent{90.000}{629.785}{418.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Schmidt, T. T., Jagannathan, N., Ljubljanac, M., Xavier, A., \& Nierhaus, T. (2020).}
+  \ALIUSPlacedTextContent{108.000}{645.385}{400.005}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{The multimodal Ganzfeld-induced altered state of consciousness induces}
+  \ALIUSPlacedTextContent{108.000}{661.225}{52.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{decreased}
+  \ALIUSPlacedTextContent{178.321}{661.225}{86.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{thalamo-cortical}
+  \ALIUSPlacedTextContent{283.346}{661.225}{49.625}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{coupling.}
+  \ALIUSPlacedTextContent{332.980}{661.225}{45.386}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Scientific}
+  \ALIUSPlacedTextContent{396.502}{661.225}{35.101}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Reports}
+  \ALIUSPlacedTextContent{431.593}{661.225}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{437.521}{661.225}{9.460}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{10}
+  \ALIUSPlacedTextContent{446.998}{661.225}{18.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1),}
+  \ALIUSPlacedTextContent{483.409}{661.225}{24.624}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1-10.}
+  \ALIUSPlacedTextContent{108.000}{677.065}{212.360}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/s41598-020-75019-3}
+  \ALIUSPlacedTextContent{90.000}{698.665}{417.997}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Schmidt, T.T., Reiche, S., Hage, C.L.C. et al. Acute and subacute psychoactive}
+  \ALIUSPlacedTextContent{108.000}{714.505}{400.065}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{effects of Kambô, the secretion of the Amazonian Giant Maki Frog}
+  \ALIUSPlacedTextContent{108.000}{730.105}{400.021}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(Phyllomedusa bicolor): retrospective reports. Sci Rep 10, 21544 (2020).}
+  \ALIUSPlacedTextContent{108.000}{745.945}{213.762}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/s41598-020-78527-4}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 16
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC0000FF] (108.000bp,-116.400bp) rectangle ++(218.160bp,-0.720bp);
+  \fill[ALIUSC0000FF] (108.000bp,-185.520bp) rectangle ++(205.200bp,-0.720bp);
+  \fill[ALIUSC0000FF] (149.760bp,-238.560bp) rectangle ++(166.800bp,-0.720bp);
+  \fill[ALIUSC0000FF] (160.320bp,-301.440bp) rectangle ++(213.840bp,-0.720bp);
+  \ALIUSPlacedTextContent{90.000}{35.378}{336.752}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timo Torsten Schmidt – Phenomenoconnectomics and ASCs}
+  \ALIUSPlacedTextContent{491.760}{38.112}{10.560}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{74}
+  \ALIUSPlacedTextContent{90.000}{72.025}{418.019}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Studerus, E., Gamma, A., \& Vollenweider, F. X. (2010). Psychometric evaluation of}
+  \ALIUSPlacedTextContent{108.000}{87.625}{289.750}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{the altered states of consciousness rating scale (OAV).}
+  \ALIUSPlacedTextContent{397.759}{87.625}{41.414}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{PloS one}
+  \ALIUSPlacedTextContent{439.179}{87.625}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{445.107}{87.625}{4.847}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{5}
+  \ALIUSPlacedTextContent{449.969}{87.625}{58.064}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(8), e12412.}
+  \ALIUSPlacedTextContent{108.000}{103.465}{218.188}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1371/journal.pone.0012412}
+  \ALIUSPlacedTextContent{90.000}{125.065}{417.986}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Studerus, E., Kometer, M., Hasler, F., \& Vollenweider, F. X. (2011). Acute, subacute}
+  \ALIUSPlacedTextContent{108.000}{140.905}{400.039}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and long-term subjective effects of psilocybin in healthy humans: a pooled}
+  \ALIUSPlacedTextContent{108.000}{156.745}{166.180}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{analysis of experimental studies.}
+  \ALIUSPlacedTextContent{274.189}{156.745}{143.742}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of psychopharmacology}
+  \ALIUSPlacedTextContent{418.040}{156.745}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{423.968}{156.745}{9.566}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{25}
+  \ALIUSPlacedTextContent{433.549}{156.745}{74.484}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(11), 1434-1452.}
+  \ALIUSPlacedTextContent{108.000}{172.585}{205.086}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881110382466}
+  \ALIUSPlacedTextContent{90.000}{194.185}{418.036}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Ter Meulen, B. C., Tavy, D., \& Jacobs, B. C. (2009). From stroboscope to dream}
+  \ALIUSPlacedTextContent{108.000}{209.785}{271.649}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{machine: a history of flicker-induced hallucinations.}
+  \ALIUSPlacedTextContent{379.658}{209.785}{92.991}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{European neurology}
+  \ALIUSPlacedTextContent{472.656}{209.785}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{478.584}{209.785}{10.165}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{62}
+  \ALIUSPlacedTextContent{488.763}{209.785}{19.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5),}
+  \ALIUSPlacedTextContent{108.000}{225.625}{41.694}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{316-320.}
+  \ALIUSPlacedTextContent{149.703}{225.625}{166.769}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1159/000235945}
+  \ALIUSPlacedTextContent{90.000}{257.065}{418.030}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Wackermann, J., Pütz, P., \& Allefeld, C. (2008). Ganzfeld-induced hallucinatory}
+  \ALIUSPlacedTextContent{108.000}{272.905}{327.650}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{experience, its phenomenology and cerebral electrophysiology.}
+  \ALIUSPlacedTextContent{435.660}{272.905}{30.949}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Cortex}
+  \ALIUSPlacedTextContent{466.638}{272.905}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{472.566}{272.905}{10.981}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{44}
+  \ALIUSPlacedTextContent{483.564}{272.905}{24.475}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(10),}
+  \ALIUSPlacedTextContent{108.000}{288.505}{52.380}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1364-1378.}
+  \ALIUSPlacedTextContent{160.389}{288.505}{213.691}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.cortex.2007.05.003}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.168}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage

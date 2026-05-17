@@ -1,38 +1,352 @@
-% !TeX program = pdflatex
-% ALIUS Bulletin native reconstruction source.
-% Compile from the ALIUS-bulletin project root. This file does not include a pre-existing article PDF.
-\providecommand{\ALIUSRootPrefix}{}
-
+% !TeX program = lualatex
+% ALIUS Bulletin native visual reconstruction source.
+% Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
 \else
-\documentclass[a4paper,11pt]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage[protrusion=true,expansion=false]{microtype}
-\usepackage{parskip}
+\documentclass{article}
+\usepackage[paperwidth=595.0000bp,paperheight=842.0000bp,margin=0bp]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\pagestyle{empty}
 \fi
-\title{Towards a biocultural approach to dissociative consciousness}
-\author{Rebecca Seligman Interviewed by Arnaud Halloy}
-\date{ALIUS Bulletin 1}
+\makeatletter
+\@ifpackageloaded{fontspec}{}{\PackageError{ALIUS}{This reconstruction requires LuaLaTeX/XeLaTeX with fontspec loaded}{Compile with lualatex, or load fontspec before inputting this file.}}
+\makeatother
+\providecommand{\ALIUSFontLatoLight}{\fontspec{Lato Light}}
+\providecommand{\ALIUSFontLatoRegular}{\fontspec{Lato Regular}}
+\providecommand{\ALIUSFontLatoItalic}{\fontspec{Lato Italic}}
+\providecommand{\ALIUSFontLatoLightItalic}{\fontspec{Lato Light Italic}}
+\providecommand{\ALIUSFontCormorantRegular}{\fontspec{Cormorant Garamond Regular}}
+\providecommand{\ALIUSFontCormorantLight}{\fontspec{Cormorant Garamond Light}}
+\providecommand{\ALIUSFontCormorantMedium}{\fontspec{Cormorant Garamond Medium}}
+\providecommand{\ALIUSFontCormorantBold}{\fontspec{Cormorant Garamond Bold}}
+\providecommand{\ALIUSFontCormorantItalic}{\fontspec{Cormorant Garamond Italic}}
+\providecommand{\ALIUSFontTimes}{\fontspec{Times New Roman}}
+\providecommand{\ALIUSFontCalibri}{\fontspec{Calibri}}
+\providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
+\providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
+\definecolor{ALIUSC000000}{HTML}{000000}
+\definecolor{ALIUSC1A1718}{HTML}{1A1718}
+\definecolor{ALIUSC1F8135}{HTML}{1F8135}
+\definecolor{ALIUSC595959}{HTML}{595959}
+\definecolor{ALIUSC767171}{HTML}{767171}
+\definecolor{ALIUSC7F7F7F}{HTML}{7F7F7F}
+\definecolor{ALIUSCBFBFBF}{HTML}{BFBFBF}
+\definecolor{ALIUSCFFFFFF}{HTML}{FFFFFF}
+\providecommand{\ALIUSPlacedText}[6]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #6\kern0pt}}%
+  };%
+}
+\providecommand{\ALIUSPlacedTextContent}[7]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=#4] at (#1bp,-#2bp) {%
+    \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
+  };%
+}
+
+% --- Draft abstract retained as comments; not rendered in reconstruction. ---
+% \section*{Abstract}
+% This interview with Rebecca Seligman articulates a biocultural approach to dissociative consciousness, drawing on her ethnography of spirit possession in Afro-Brazilian Candombl\'e. Seligman begins by weighing the term "altered states of consciousness" against alternatives such as Gananath Obeyesekere's hypnomantic consciousness and Michele Stephen's autonomous imagination, arguing that the standard label implicitly normalizes a self-conscious, reflexive Euro-American awareness and that it is better carefully redefined as referring to non-reflexive states than abandoned. She then asks whether possession falls under the categories of altered states of consciousness or dissociation, contending that these framings risk eliding the ontological commitments and social relationships through which possession is constituted, and rejecting the dualism that treats culture as a post hoc interpretation of physiologically given trance. The conversation introduces her notion of looping, and more specifically bio-looping, to describe the recursive mutual influences among cultural meanings and practices, physiological states, and social roles. Further sections weigh the costs and benefits of bringing psychophysiological methods into ethnography, including the tension with participant observation and the technical demands of fieldwork, and consider how the technologies' increasing portability might allow tighter integration. The interview closes on the self-transformative and healing potential of possession in Candombl\'e, where mediumship simultaneously reshapes the social self, subjectivity, and embodied self of practitioners, with these dimensions linked through a looping process that moves participants from affliction to spiritual empowerment.\par
+% --- End draft abstract. ---
+% --- End draft abstract. ---
+% --- End draft abstract. ---
+% --- End draft abstract. ---
+% --- End draft abstract. ---
 
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-\maketitle
-\section*{Metadata}
-\textbf{Piece type:} interview\par
-\textbf{DOI:} 10.34700/x80s-k850\par
-\textbf{Keywords:} spirit possession, Candombl\'e, bio-looping, psychophysiology, altered states of consciousness\par
-\section*{Abstract}
-This interview with Rebecca Seligman articulates a biocultural approach to dissociative consciousness, drawing on her ethnography of spirit possession in Afro-Brazilian Candombl\'e. Seligman begins by weighing the term "altered states of consciousness" against alternatives such as Gananath Obeyesekere's hypnomantic consciousness and Michele Stephen's autonomous imagination, arguing that the standard label implicitly normalizes a self-conscious, reflexive Euro-American awareness and that it is better carefully redefined as referring to non-reflexive states than abandoned. She then asks whether possession falls under the categories of altered states of consciousness or dissociation, contending that these framings risk eliding the ontological commitments and social relationships through which possession is constituted, and rejecting the dualism that treats culture as a post hoc interpretation of physiologically given trance. The conversation introduces her notion of looping, and more specifically bio-looping, to describe the recursive mutual influences among cultural meanings and practices, physiological states, and social roles. Further sections weigh the costs and benefits of bringing psychophysiological methods into ethnography, including the tension with participant observation and the technical demands of fieldwork, and consider how the technologies' increasing portability might allow tighter integration. The interview closes on the self-transformative and healing potential of possession in Candombl\'e, where mediumship simultaneously reshapes the social self, subjectivity, and embodied self of practitioners, with these dimensions linked through a looping process that moves participants from affliction to spiritual empowerment.\par
-\section*{Extracted Text}
-\begingroup
-\small
-\noindent 47 ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin Towards a biocultural approach of dissociative consciousness An interview with Rebecca Seligman By Arnaud Halloy Rebecca Seligman r-seligman@northwestern.edu Department of Anthropology Northwestern University, Evanston, USA Arnaud Halloy halloy@unice.fr Department of Anthropology University of Nice Sophia Antipolis, France Citation: Seligman, R., \& Halloy, A. (2017). Towards a biocultural approach of dissociative consciousness. An interview with Rebecca Seligman. ALIUS Bulletin, 1, 47- 52. For many anthropologists today, the Western category 'altered states of consciousness' (ASC) is still haunted by the ghost of pathologization. Some of them have instead proposed the use of culture-specific concepts such as 'hyptomantic consciousness' (Obeyesekere, 1981), 'autonomous imagination' (Stephen, 1997) or 'shamanic state of consciousness' (Noll, 1983). They believe these terms may be more in sync with the experiential ground of possession, but at the same time, are more difficult to export as a general analytical category. Between these two attitudes, where would you drag your own epistemological cursor? The problem with the term or category ASC is that it assumes a normative state that is widely shared, and from which certain states can be marked as alterations. The unmarked normative state that is implied is a self-conscious, reflexive form of awareness that is highly valued in Euro-American cultures. Of course, this state may not be the default state for all individuals in all places at all times, and this is where the element of pathologization comes from--states labeled as ASCs are understood to be non-normative even when they may not be. On the other hand, as you correctly point out, there is a utility in this label in the sense that it is widely known. Even Obeyesekere's attempt to replace this concept did not get a lot of traction, so I don't think that inventing my own term or using one of these lesser known labels would have gotten me very far. That's why in my own work, I have generally taken the approach that I will get more traction by using the term that is more widely recognized, and by defining it very carefully so that it is clear what I mean and don't mean. When I use the term ASC I try to be clear that I mean non self-conscious, non-reflexive states of consciousness. Such states may or may not be altered or divergent from the state that an individual or group understands to be normative - I think that is the crucial distinction that needs to be made. To be honest, in my R. Seligman - Towards a Biocultural Approach of Dissociative Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 48 own work I more often use the term dissociation, which of course has strongly pathological implications as well. Much of my work has been devoted to understanding how and why dissociative states become pathogized/pathological. You have spent many years studying possession in an Afro-Brazilian possession cult in Bahia. As an anthropologist, would you say that "possession" corresponds to the category of ASC? If not, how would you categorize such a phenomenon and experience? If so, how would you define the "building-blocks" (Taves, 2009) of the possession phenomenon and experience? In other words, what possession is made of? If we use ASC to mean a non-reflexive state of awareness, as I suggested earlier, then I think what we call possession (phenomena in which individuals experience their self-consciousness to be displaced by that of a powerful "other") can be said to fall into this category. But by definition the categories ASC and dissociation are centered around particular states, and the states they are concerned with are understood to consist of particular forms of awareness, attention, and physiology. As such, these categories may narrow our focus in a way that fails to capture the complexity of possession. My ethnographic work shows that possession is as much about particular ontological perspectives and social relationships as it is about states of consciousness. An ASC or dissociation focus may elide these other aspects of possession. For example, possession has sometimes been understood as a cultural explanation for, or interpretation of, trance, which is in turn understood as a physiologically based ASC. By this understanding, possession is a kind of post hoc cultural explanation or interpretation of a state that is explainable in non- sociocultural terms. This way of understanding possession follows a kind of dualism that treats biology and culture as separable from one another. But my research strongly supports the idea that possession itself is at once physiological and cultural. Being possessed by an entity other than the self is an experience that emerges out of a set of cultural and social meanings and commitments that powerfully influence the state of consciousness of the possessed. In other words, my findings suggest that the beliefs and practices associated with possession contribute to producing an altered state. In broader terms, this would mean that physiological states are fundamentally shaped by psychocultural processes rather than prior to them. I have made a concerted effort in my work to complicate understandings of ASC and dissociation to reflect this non-dualistic view. Why do we need anthropologists to study ASC? To what extent are ASC such as possession culturally informed? As I said earlier, altered states are not themselves inherently pathological or normative, and they are not universal physiological states that exist divorced from the sociocultural meanings and practices that surround them. The experiential R. Seligman - Towards a Biocultural Approach of Dissociative Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 49 quality of these states is a direct product of their meaning for the individual and the social group. So this is why we need anthropologists to study ASCs -- because they are deeply socially and culturally conditioned. Researchers from other disciplines interested in altered states often view these states as the product of invariant physiological processes that can be understood in a decontextualized way. For example, psychiatrists tend to view dissociation as a neurophysiological mechanism that is triggered functionally. While my research and the research of a number of other scholars supports the idea that there is a physiological component to these states, I argue that patterns of physiological response associated with ASCs can be understood as embodiments of cultural practices and beliefs. Such cultural beliefs and practices take advantage of, shape, and enhance physiological potentials, but the physiology by itself does not constitute a particular kind of dissociative state (pathological or non-pathological), or a specific form of ASC (possession, shamanic trance, etc.). In my work I refer to the recursive mutual influences among cultural meanings and practices, physiological states, and social roles as looping and use the term bio-looping in particular to try to capture the role of physiology as both a condition for and a result of possession. What are the costs and benefits of incorporating psychological and psychophysiological methods into ethnography for studying possession? I actually have a chapter in my book devoted to just this question! I can say for sure that I don't think that every scholar studying possession ought to be using psychophysiological methods in their research. I made a choice to incorporate these methods because I was interested in a particular set of questions for which these methods made a lot of sense. I wanted to be able to make empirically based arguments about how possession is embodied, and using psychophysiology measurement ultimately allowed me to make inferences about the bidirectional relationship between bodily states and social and cultural meanings. But certainly the use of these methods has its challenges and even a down side. The methods I used were challenging to apply in a field setting, for one thing, for a variety of technical and logistical reasons. In addition, these methods seem at odds with the ethos of ethnography in some ways - they take people out of the flow of their daily lives and put the ethnographer in the position of clinical data collector, as opposed to a participant observer. So I think that use of this kind of method is only really merited when the research questions call for it. Using psychophysiology measurement ultimately allowed me to make inferences about the bidirectional relationship between bodily states and social and cultural meanings. " " R. Seligman - Towards a Biocultural Approach of Dissociative Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 50 On the other hand, I think that the more people who ask questions about how body, meaning and practice go together, and who combine psychophysiology methods with ethnography in order to answer them, the more data we will accumulate that can help us escape from dualistic engagements with possession and with ASCs more broadly. And on the bright side, the technologies are definitely getting better - more portable, easier to use, and less invasive -- which means that in the future, these methods may fit more seamlessly with traditional ethnography. For many decades, eminent scholars and psychiatrists have associated possession with mental illness and/or demonic influence. In your book Possessing Spirits and Healing Selves. Embodiment and Transformation in a Afro-Brazilian Religion, you affirm exactly the opposite by showing the self-transformative and healing potential of possession in Candomble. In a few words, how would you explain that possession might be a healing practice or might have some healing effects? Whew - that is a tough question to answer in just a few words - it took me a whole book! Yes, my book is ultimately about the ways in which spirit possession serves to transform and heal many of the individuals who participate as mediums. Many of the people I worked with came to their religious role with a sense of affliction and emerged from their initiations with a sense of well-being. So there is something important going on there. What I try to show in the book is that possession scaffolds a process of self-transformation, and that this self-transformation can result in healing. On the surface, this argument is not so far off from arguments by other scholars about the process of symbolic healing. But I tried to really dig deeper, to say "how does this work?" And what I found was that spirit possession works to transform people in a way that is complex and multifaceted. It transforms at once an individual's social self, her subjectivity (meaning her cognitions, affects, and sense of self in the world), and her embodied self - that is, her way of being and experiencing via her body. These transformations are mutually dependent and inseparable, though for heuristic purposes we tend to carve things up into different domains (i.e. the social, the bodily, etc.). The case studies in my book show that what we think of as cognitive dimensions of self, as represented through self-narrative, are transformed through engagement with the cosmology of Candomble. By taking on the ontological commitments of the religion, people come to understand and perform themselves These bodily, cognitive, and social aspects of self-transformation are linked together through a looping process, in which they continually shape and reinforce one another. " " R. Seligman - Towards a Biocultural Approach of Dissociative Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 51 quite differently. Ontology emerges through practice in Candomble spirit possession, and the enactment of the religious worldview also serves to transform people at a bodily, experiential level. My psychophysiology data support this argument in the sense that mediumship is associated with particular patterns of bodily response. At the same time, becoming a medium facilitates a transformation of the social self as well, as individuals become members of a close-knit religious community and come to be understood within this community as important ritual figures. A crucial part of my argument is that these bodily, cognitive, and social aspects of self-transformation are linked together through a looping process, in which they continually shape and reinforce one another. As a result, there is a kind of emergent property to the transformations people experience - the transformations seem to be more than the sum of their parts. The mediums I worked with not only came to feel differently, act differently, and think differently - they came to be different. I argue that this kind of transformation constitutes healing when people move from being afflicted, to being spiritually empowered. R. Seligman - Towards a Biocultural Approach of Dissociative Consciousness ALIUS Bulletin n1 (2017) aliusresearch.org/bulletin 52 References Noll, R. (1985). Mental Imagery Cultivation as a Cultural Phenomenon: The Role of Visions in Shamanism . Current Anthropology (26), 443-461. Obeyesekere, G. (1981). Medusa's Hair: An Essay on Personal Symbols and Religious Experience. Chicago: University of Chicago Press. Seligman, R. 2014. Possessing Spirits and Healing Selves. Embodiment and Transformation in an Afro-Brazilian Religion. Palgrave MacMillan: New-York. Stephen, M. (1997). Cargo cults, Cultural Creativity and Autonomous Imagination. Ethos, 25(3), 333-358. Taves, A. 2009. Religious experience reconsidered: A Building-Block Approach to the Study of Religion and Other Special Things. Princeton University Press, Princeton.\par
-\endgroup
+
+% Page 1
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \fill[ALIUSC1F8135] (360.760bp,-174.760bp) rectangle ++(116.640bp,-0.240bp);
+  \fill[ALIUSC1F8135] (360.760bp,-250.360bp) rectangle ++(59.040bp,-0.240bp);
+  \fill[ALIUSCBFBFBF] (355.000bp,-139.000bp) rectangle ++(0.240bp,-85.200bp);
+  \fill[ALIUSCBFBFBF] (355.000bp,-224.200bp) rectangle ++(0.240bp,-2.160bp);
+  \fill[ALIUSCBFBFBF] (355.000bp,-226.360bp) rectangle ++(0.240bp,-57.600bp);
+  \ALIUSPlacedTextContent{511.620}{35.460}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{47}
+  \ALIUSPlacedTextContent{71.080}{71.099}{282.620}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Towards a biocultural approach}
+  \ALIUSPlacedTextContent{71.080}{95.099}{260.562}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{of dissociative consciousness}
+  \ALIUSPlacedTextContent{74.920}{138.966}{125.486}{ALIUSC000000}{\ALIUSFontLatoLight}{15.840}{An interview with}
+  \ALIUSPlacedTextContent{360.760}{149.956}{96.465}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{Rebecca Seligman}
+  \ALIUSPlacedTextContent{74.920}{158.206}{148.523}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Rebecca Seligman}
+  \ALIUSPlacedTextContent{360.760}{164.795}{119.998}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{r-seligman@northwestern.edu}
+  \ALIUSPlacedTextContent{360.760}{175.595}{114.742}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Anthropology}
+  \ALIUSPlacedTextContent{360.760}{186.395}{157.783}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Northwestern University, Evanston, USA}
+  \ALIUSPlacedTextContent{74.920}{192.928}{96.371}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{By Arnaud Halloy}
+  \ALIUSPlacedTextContent{360.760}{225.556}{75.564}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{Arnaud Halloy}
+  \ALIUSPlacedTextContent{74.920}{226.036}{277.267}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{Citation: Seligman, R., \& Halloy, A. (2017). Towards a}
+  \ALIUSPlacedTextContent{360.760}{240.395}{62.435}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{halloy@unice.fr}
+  \ALIUSPlacedTextContent{74.920}{240.436}{277.266}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{biocultural approach of dissociative consciousness. An}
+  \ALIUSPlacedTextContent{360.760}{251.195}{113.005}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Anthropology}
+  \ALIUSPlacedTextContent{74.920}{254.836}{171.574}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{interview with Rebecca Seligman.}
+  \ALIUSPlacedTextContent{246.532}{254.836}{69.020}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{ALIUS Bulletin}
+  \ALIUSPlacedTextContent{315.551}{254.836}{4.686}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{,}
+  \ALIUSPlacedTextContent{320.276}{254.836}{6.960}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{1}
+  \ALIUSPlacedTextContent{327.236}{254.836}{22.640}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{, 47-}
+  \ALIUSPlacedTextContent{360.760}{261.995}{163.615}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{University of Nice Sophia Antipolis, France}
+  \ALIUSPlacedTextContent{74.920}{269.236}{18.606}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{52.}
+  \ALIUSPlacedTextContent{71.080}{320.287}{455.768}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{For many anthropologists today, the Western category 'altered states of}
+  \ALIUSPlacedTextContent{71.080}{337.567}{455.788}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{consciousness' (ASC) is still haunted by the ghost of pathologization. Some of them have}
+  \ALIUSPlacedTextContent{71.080}{354.847}{455.679}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{instead proposed the use of culture-specific concepts such as 'hyptomantic}
+  \ALIUSPlacedTextContent{71.080}{372.127}{455.720}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{consciousness' (Obeyesekere, 1981), 'autonomous imagination' (Stephen, 1997) or}
+  \ALIUSPlacedTextContent{71.080}{389.407}{455.761}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{'shamanic state of consciousness' (Noll, 1983). They believe these terms may be more}
+  \ALIUSPlacedTextContent{71.080}{406.447}{455.792}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{in sync with the experiential ground of possession, but at the same time, are more}
+  \ALIUSPlacedTextContent{71.080}{423.727}{455.685}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{difficult to export as a general analytical category. Between these two attitudes, where}
+  \ALIUSPlacedTextContent{71.080}{441.007}{262.422}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{would you drag your own epistemological cursor?}
+  \ALIUSPlacedTextContent{71.080}{470.058}{456.677}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The problem with the term or category ASC is that it assumes a normative state}
+  \ALIUSPlacedTextContent{71.080}{487.098}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that is widely shared, and from which certain states can be marked as alterations.}
+  \ALIUSPlacedTextContent{71.080}{503.898}{456.498}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The unmarked normative state that is implied is a self-conscious, reflexive form of}
+  \ALIUSPlacedTextContent{71.080}{520.938}{456.478}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{awareness that is highly valued in Euro-American cultures. Of course, this state may}
+  \ALIUSPlacedTextContent{71.080}{537.978}{456.381}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{not be the default state for all individuals in all places at all times, and this is where}
+  \ALIUSPlacedTextContent{71.080}{554.778}{456.586}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the element of pathologization comes from--states labeled as ASCs are understood}
+  \ALIUSPlacedTextContent{71.080}{571.818}{456.541}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to be non-normative even when they may not be. On the other hand, as you correctly}
+  \ALIUSPlacedTextContent{71.080}{588.858}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{point out, there is a utility in this label in the sense that it is widely known. Even}
+  \ALIUSPlacedTextContent{71.080}{605.658}{456.365}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Obeyesekere's attempt to replace this concept did not get a lot of traction, so I don't}
+  \ALIUSPlacedTextContent{71.080}{622.698}{456.539}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{think that inventing my own term or using one of these lesser known labels would}
+  \ALIUSPlacedTextContent{71.080}{639.738}{456.571}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{have gotten me very far. That's why in my own work, I have generally taken the}
+  \ALIUSPlacedTextContent{71.080}{656.538}{456.512}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{approach that I will get more traction by using the term that is more widely}
+  \ALIUSPlacedTextContent{71.080}{673.578}{456.525}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{recognized, and by defining it very carefully so that it is clear what I mean and don't}
+  \ALIUSPlacedTextContent{71.080}{690.378}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mean. When I use the term ASC I try to be clear that I mean non self-conscious,}
+  \ALIUSPlacedTextContent{71.080}{707.418}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{non-reflexive states of consciousness. Such states may or may not be « altered » or}
+  \ALIUSPlacedTextContent{71.080}{724.458}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{divergent from the state that an individual or group understands to be normative –}
+  \ALIUSPlacedTextContent{71.080}{741.258}{456.550}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think that is the crucial distinction that needs to be made. To be honest, in my}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 2
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{357.617}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Seligman – Towards a Biocultural Approach of Dissociative Consciousness}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{48}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.518}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{own work I more often use the term « dissociation, » which of course has strongly}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.532}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{pathological implications as well. Much of my work has been devoted to}
+  \ALIUSPlacedTextContent{71.080}{104.778}{444.292}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{understanding how and why dissociative states become pathogized/pathological.}
+  \ALIUSPlacedTextContent{71.080}{134.047}{455.758}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{You have spent many years studying possession in an Afro-Brazilian possession cult in}
+  \ALIUSPlacedTextContent{71.080}{151.326}{455.716}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Bahia. As an anthropologist, would you say that "possession" corresponds to the}
+  \ALIUSPlacedTextContent{71.080}{168.607}{455.721}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{category of ASC? If not, how would you categorize such a phenomenon and experience?}
+  \ALIUSPlacedTextContent{71.080}{185.886}{455.732}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{If so, how would you define the "building-blocks" (Taves, 2009) of the possession}
+  \ALIUSPlacedTextContent{71.080}{203.167}{391.966}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{phenomenon and experience? In other words, what possession is made of?}
+  \ALIUSPlacedTextContent{71.080}{232.218}{456.555}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{If we use ASC to mean a non-reflexive state of awareness, as I suggested earlier, then}
+  \ALIUSPlacedTextContent{71.080}{249.018}{456.673}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think what we call possession (phenomena in which individuals experience their}
+  \ALIUSPlacedTextContent{71.080}{266.058}{456.525}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{self-consciousness to be displaced by that of a powerful "other") can be said to fall}
+  \ALIUSPlacedTextContent{71.080}{282.858}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{into this category. But by definition the categories ASC and dissociation are}
+  \ALIUSPlacedTextContent{71.080}{299.898}{157.148}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{centered around particular}
+  \ALIUSPlacedTextContent{231.883}{299.898}{27.569}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{states}
+  \ALIUSPlacedTextContent{259.476}{299.898}{268.241}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{, and the states they are concerned with are}
+  \ALIUSPlacedTextContent{71.080}{316.938}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{understood to consist of particular forms of awareness, attention, and physiology.}
+  \ALIUSPlacedTextContent{71.080}{333.738}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{As such, these categories may narrow our focus in a way that fails to capture the}
+  \ALIUSPlacedTextContent{71.080}{350.778}{456.375}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{complexity of possession. My ethnographic work shows that possession is as much}
+  \ALIUSPlacedTextContent{71.080}{367.818}{456.495}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about particular ontological perspectives and social relationships as it is about states}
+  \ALIUSPlacedTextContent{71.080}{384.618}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of consciousness. An ASC or dissociation focus may elide these other aspects of}
+  \ALIUSPlacedTextContent{71.080}{401.658}{456.486}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{possession. For example, possession has sometimes been understood as a cultural}
+  \ALIUSPlacedTextContent{71.080}{418.698}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{explanation for, or interpretation of, trance, which is in turn understood as a}
+  \ALIUSPlacedTextContent{71.080}{435.498}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{physiologically based ASC. By this understanding, possession is a kind of post hoc}
+  \ALIUSPlacedTextContent{71.080}{452.538}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{cultural explanation or interpretation of a state that is explainable in non-}
+  \ALIUSPlacedTextContent{71.080}{469.338}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{sociocultural terms. This way of understanding possession follows a kind of dualism}
+  \ALIUSPlacedTextContent{71.080}{486.378}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that treats biology and culture as separable from one another. But my research}
+  \ALIUSPlacedTextContent{71.080}{503.418}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{strongly supports the idea that possession itself is at once physiological and cultural.}
+  \ALIUSPlacedTextContent{71.080}{520.218}{456.595}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Being possessed by an entity other than the self is an experience that emerges out of}
+  \ALIUSPlacedTextContent{71.080}{537.258}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{a set of cultural and social meanings and commitments that powerfully influence the}
+  \ALIUSPlacedTextContent{71.080}{554.298}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{state of consciousness of the possessed. In other words, my findings suggest that the}
+  \ALIUSPlacedTextContent{71.080}{571.098}{343.348}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{beliefs and practices associated with possession contribute to}
+  \ALIUSPlacedTextContent{415.660}{571.098}{48.879}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{producing}
+  \ALIUSPlacedTextContent{464.575}{571.098}{63.066}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{an altered}
+  \ALIUSPlacedTextContent{71.080}{588.138}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{state. In broader terms, this would mean that physiological states are fundamentally}
+  \ALIUSPlacedTextContent{71.080}{605.178}{456.542}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{shaped by psychocultural processes rather than prior to them. I have made a}
+  \ALIUSPlacedTextContent{71.080}{621.978}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{concerted effort in my work to complicate understandings of ASC and dissociation}
+  \ALIUSPlacedTextContent{71.080}{639.018}{186.094}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to reflect this non-dualistic view.}
+  \ALIUSPlacedTextContent{71.080}{668.286}{455.695}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Why do we need anthropologists to study ASC? To what extent are ASC such as}
+  \ALIUSPlacedTextContent{71.080}{685.326}{165.647}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{possession culturally informed?}
+  \ALIUSPlacedTextContent{71.080}{714.378}{456.507}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{As I said earlier, altered states are not themselves inherently pathological or}
+  \ALIUSPlacedTextContent{71.080}{731.418}{456.479}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{normative, and they are not universal physiological states that exist divorced from}
+  \ALIUSPlacedTextContent{71.080}{748.458}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the sociocultural meanings and practices that surround them. The experiential}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 3
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{357.617}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Seligman – Towards a Biocultural Approach of Dissociative Consciousness}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{49}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.487}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{quality of these states is a direct product of their meaning for the individual and the}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.535}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{social group. So this is why we need anthropologists to study ASCs -- because they}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.542}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{are deeply socially and culturally conditioned. Researchers from other disciplines}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{interested in altered states often view these states as the product of invariant}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{physiological processes that can be understood in a decontextualized way. For}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{example, psychiatrists tend to view dissociation as a neurophysiological mechanism}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.615}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that is triggered functionally. While my research and the research of a number of}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{other scholars supports the idea that there is a physiological component to these}
+  \ALIUSPlacedTextContent{71.080}{206.538}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{states, I argue that patterns of physiological response associated with ASCs can be}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{understood as embodiments of cultural practices and beliefs. Such cultural beliefs}
+  \ALIUSPlacedTextContent{71.080}{240.618}{456.506}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and practices take advantage of, shape, and enhance physiological potentials, but the}
+  \ALIUSPlacedTextContent{71.080}{257.418}{456.578}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{physiology by itself does not constitute a particular kind of dissociative state}
+  \ALIUSPlacedTextContent{71.080}{274.458}{456.527}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(pathological or non-pathological), or a specific form of ASC (possession, shamanic}
+  \ALIUSPlacedTextContent{71.080}{291.498}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{trance, etc.). In my work I refer to the recursive mutual influences among cultural}
+  \ALIUSPlacedTextContent{71.080}{308.298}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{meanings and practices, physiological states, and social roles as « looping » and use}
+  \ALIUSPlacedTextContent{71.080}{325.338}{456.531}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the term « bio-looping » in particular to try to capture the role of physiology as both}
+  \ALIUSPlacedTextContent{71.080}{342.138}{231.579}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{a condition for and a result of possession.}
+  \ALIUSPlacedTextContent{71.080}{371.407}{455.565}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What are the costs and benefits of incorporating psychological and psychophysiological}
+  \ALIUSPlacedTextContent{71.080}{388.687}{273.705}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{methods into ethnography for studying possession?}
+  \ALIUSPlacedTextContent{71.080}{417.738}{456.651}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I actually have a chapter in my book devoted to just this question! I can say for sure}
+  \ALIUSPlacedTextContent{71.080}{434.778}{456.569}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that I don't think that every scholar studying possession ought to be using}
+  \ALIUSPlacedTextContent{71.080}{451.578}{456.626}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychophysiological methods in their research. I made a choice to incorporate these}
+  \ALIUSPlacedTextContent{71.080}{468.618}{456.373}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{methods because I was interested in a particular set of questions for which these}
+  \ALIUSPlacedTextContent{71.080}{485.418}{456.348}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{methods made a lot of sense. I wanted to be able to make empirically based}
+  \ALIUSPlacedTextContent{71.080}{502.458}{456.451}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{arguments about how possession is embodied, and using psychophysiology}
+  \ALIUSPlacedTextContent{71.080}{519.498}{456.506}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{measurement ultimately allowed me to make inferences about the bidirectional}
+  \ALIUSPlacedTextContent{71.080}{536.298}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{relationship between bodily states and social and cultural meanings. But certainly}
+  \ALIUSPlacedTextContent{71.080}{553.338}{456.598}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the use of these methods has its challenges and even a down side. The methods I used}
+  \ALIUSPlacedTextContent{71.080}{570.378}{456.584}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{were challenging to apply in a field setting, for one thing, for a variety of technical}
+  \ALIUSPlacedTextContent{71.080}{587.178}{456.582}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and logistical reasons. In addition, these methods seem at odds with the ethos of}
+  \ALIUSPlacedTextContent{71.080}{604.218}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{ethnography in some ways – they take people out of the flow of their daily lives and}
+  \ALIUSPlacedTextContent{71.080}{621.258}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{put the ethnographer in the position of clinical data collector, as opposed to a}
+  \ALIUSPlacedTextContent{71.080}{638.058}{456.594}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{participant observer. So I think that use of this kind of method is only really merited}
+  \ALIUSPlacedTextContent{71.080}{655.098}{215.507}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{when the research questions call for it.}
+  \ALIUSPlacedTextContent{142.120}{670.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{157.240}{686.873}{246.490}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Using psychophysiology measurement}
+  \ALIUSPlacedTextContent{157.240}{704.873}{264.388}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{ultimately allowed me to make inferences}
+  \ALIUSPlacedTextContent{157.240}{722.873}{284.009}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{about the bidirectional relationship between}
+  \ALIUSPlacedTextContent{157.240}{740.393}{293.272}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{bodily states and social and cultural meanings.}
+  \ALIUSPlacedTextContent{451.720}{741.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 4
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{357.617}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Seligman – Towards a Biocultural Approach of Dissociative Consciousness}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{50}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.578}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{On the other hand, I think that the more people who ask questions about how body,}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.445}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{meaning and practice go together, and who combine psychophysiology methods}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.607}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{with ethnography in order to answer them, the more data we will accumulate that}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{can help us escape from dualistic engagements with possession and with ASCs more}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{broadly. And on the bright side, the technologies are definitely getting better – more}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{portable, easier to use, and less invasive -- which means that in the future, these}
+  \ALIUSPlacedTextContent{71.080}{172.698}{350.549}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{methods may fit more seamlessly with traditional ethnography.}
+  \ALIUSPlacedTextContent{71.080}{201.966}{455.676}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{For many decades, eminent scholars and psychiatrists have associated possession with}
+  \ALIUSPlacedTextContent{71.080}{219.247}{297.079}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{mental illness and/or demonic influence. In your book}
+  \ALIUSPlacedTextContent{370.267}{219.247}{156.524}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.310}{Possessing Spirits and Healing}
+  \ALIUSPlacedTextContent{71.080}{236.286}{334.362}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.310}{Selves. Embodiment and Transformation in a Afro-Brazilian Religion}
+  \ALIUSPlacedTextContent{405.492}{236.286}{121.308}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{, you affirm exactly the}
+  \ALIUSPlacedTextContent{71.080}{253.566}{455.828}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{opposite by showing the self-transformative and healing potential of possession in}
+  \ALIUSPlacedTextContent{71.080}{270.847}{455.655}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Candomblé. In a few words, how would you explain that possession might be a healing}
+  \ALIUSPlacedTextContent{71.080}{288.127}{237.373}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{practice or might have some healing effects?}
+  \ALIUSPlacedTextContent{71.080}{317.178}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Whew – that is a tough question to answer in just a few words – it took me a whole}
+  \ALIUSPlacedTextContent{71.080}{334.218}{456.501}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{book! Yes, my book is ultimately about the ways in which spirit possession serves to}
+  \ALIUSPlacedTextContent{71.080}{351.018}{456.648}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{transform and heal many of the individuals who participate as mediums. Many of}
+  \ALIUSPlacedTextContent{71.080}{368.058}{456.600}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the people I worked with came to their religious role with a sense of affliction and}
+  \ALIUSPlacedTextContent{71.080}{385.098}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{emerged from their initiations with a sense of well-being. So there is something}
+  \ALIUSPlacedTextContent{71.080}{401.898}{456.478}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{important going on there. What I try to show in the book is that possession scaffolds}
+  \ALIUSPlacedTextContent{71.080}{418.938}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{a process of self-transformation, and that this self-transformation can result in}
+  \ALIUSPlacedTextContent{71.080}{435.738}{456.465}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{healing. On the surface, this argument is not so far off from arguments by other}
+  \ALIUSPlacedTextContent{71.080}{452.778}{456.704}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{scholars about the process of symbolic healing. But I tried to really dig deeper, to say}
+  \ALIUSPlacedTextContent{71.080}{469.818}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"how does this work?" And what I found was that spirit possession works to}
+  \ALIUSPlacedTextContent{71.080}{486.618}{456.728}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{transform people in a way that is complex and multifaceted. It transforms at once}
+  \ALIUSPlacedTextContent{71.080}{503.658}{456.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{an individual's social self, her subjectivity (meaning her cognitions, affects, and sense}
+  \ALIUSPlacedTextContent{71.080}{520.698}{456.621}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of self in the world), and her embodied self – that is, her way of being and}
+  \ALIUSPlacedTextContent{71.080}{537.498}{456.482}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{experiencing via her body. These transformations are mutually dependent and}
+  \ALIUSPlacedTextContent{71.080}{554.538}{456.428}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inseparable, though for heuristic purposes we tend to carve things up into different}
+  \ALIUSPlacedTextContent{71.080}{571.578}{223.964}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{domains (i.e. the social, the bodily, etc.).}
+  \ALIUSPlacedTextContent{126.760}{583.048}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{146.680}{597.113}{281.911}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{These bodily, cognitive, and social aspects of}
+  \ALIUSPlacedTextContent{146.680}{615.113}{250.550}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{self-transformation are linked together}
+  \ALIUSPlacedTextContent{146.680}{633.113}{256.129}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{through a looping process, in which they}
+  \ALIUSPlacedTextContent{146.680}{650.633}{284.632}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{continually shape and reinforce one another.}
+  \ALIUSPlacedTextContent{430.600}{653.608}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{"}
+  \ALIUSPlacedTextContent{99.430}{687.258}{428.233}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The case studies in my book show that what we think of as cognitive}
+  \ALIUSPlacedTextContent{71.080}{704.298}{456.549}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{dimensions of self, as represented through self-narrative, are transformed through}
+  \ALIUSPlacedTextContent{71.080}{721.098}{456.738}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{engagement with the cosmology of Candomblé. By taking on the ontological}
+  \ALIUSPlacedTextContent{71.080}{738.138}{456.504}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{commitments of the religion, people come to understand and perform themselves}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 5
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{357.617}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Seligman – Towards a Biocultural Approach of Dissociative Consciousness}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{51}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.635}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{quite differently. Ontology emerges through practice in Candomblé spirit}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.463}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{possession, and the enactment of the religious worldview also serves to transform}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{people at a bodily, experiential level. My psychophysiology data support this}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.429}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{argument in the sense that mediumship is associated with particular patterns of}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.477}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{bodily response. At the same time, becoming a medium facilitates a transformation}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of the social self as well, as individuals become members of a close-knit religious}
+  \ALIUSPlacedTextContent{71.080}{172.698}{456.578}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{community and come to be understood within this community as important ritual}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.512}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{figures. A crucial part of my argument is that these bodily, cognitive, and social}
+  \ALIUSPlacedTextContent{71.080}{206.538}{456.627}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{aspects of self-transformation are linked together through a looping process, in}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.513}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{which they continually shape and reinforce one another. As a result, there is a kind}
+  \ALIUSPlacedTextContent{71.080}{240.618}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of emergent property to the transformations people experience – the}
+  \ALIUSPlacedTextContent{71.080}{257.418}{456.644}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{transformations seem to be more than the sum of their parts. The mediums I worked}
+  \ALIUSPlacedTextContent{71.080}{274.458}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{with not only came to feel differently, act differently, and think differently – they}
+  \ALIUSPlacedTextContent{71.080}{291.498}{44.174}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{came to}
+  \ALIUSPlacedTextContent{120.047}{291.498}{10.865}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{be}
+  \ALIUSPlacedTextContent{135.689}{291.498}{391.875}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{different. I argue that this kind of transformation constitutes healing}
+  \ALIUSPlacedTextContent{71.080}{308.298}{395.614}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{when people move from being afflicted, to being spiritually empowered.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
+\newpage
+
+% Page 6
+\thispagestyle{empty}
+\noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
+  \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
+  \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
+  \fill[ALIUSCFFFFFF] (270.280bp,-287.320bp) rectangle ++(193.440bp,-15.840bp);
+  \ALIUSPlacedTextContent{71.080}{35.460}{357.617}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Seligman – Towards a Biocultural Approach of Dissociative Consciousness}
+  \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{52}
+  \ALIUSPlacedTextContent{278.166}{71.444}{70.165}{ALIUSC000000}{\ALIUSFontLatoLight}{13.731}{References}
+  \ALIUSPlacedTextContent{71.080}{119.345}{456.329}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Noll, R. (1985). Mental Imagery Cultivation as a Cultural Phenomenon: The Role of}
+  \ALIUSPlacedTextContent{106.530}{135.185}{126.658}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Visions in Shamanism ».}
+  \ALIUSPlacedTextContent{233.199}{135.185}{102.374}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Current Anthropology}
+  \ALIUSPlacedTextContent{335.611}{135.185}{74.141}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(26), 443-461.}
+  \ALIUSPlacedTextContent{71.080}{156.785}{119.801}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Obeyesekere, G. (1981).}
+  \ALIUSPlacedTextContent{190.937}{156.785}{330.723}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Medusa's Hair: An Essay on Personal Symbols and Religious Experience}
+  \ALIUSPlacedTextContent{521.806}{156.785}{5.607}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{.}
+  \ALIUSPlacedTextContent{106.530}{172.625}{195.948}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Chicago: University of Chicago Press.}
+  \ALIUSPlacedTextContent{71.080}{194.225}{94.388}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Seligman, R. 2014.}
+  \ALIUSPlacedTextContent{165.666}{194.225}{361.753}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Possessing Spirits and Healing Selves. Embodiment and Transformation in an}
+  \ALIUSPlacedTextContent{106.530}{211.265}{114.025}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Afro-Brazilian Religion.}
+  \ALIUSPlacedTextContent{220.576}{211.265}{161.912}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Palgrave MacMillan: New-York.}
+  \ALIUSPlacedTextContent{71.080}{232.865}{424.751}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Stephen, M. (1997). Cargo cults, Cultural Creativity and Autonomous Imagination.}
+  \ALIUSPlacedTextContent{496.067}{232.865}{25.420}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Ethos}
+  \ALIUSPlacedTextContent{521.494}{232.865}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
+  \ALIUSPlacedTextContent{106.530}{249.905}{68.288}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{25(3), 333-358.}
+  \ALIUSPlacedTextContent{71.080}{271.505}{82.296}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Taves, A. 2009.}
+  \ALIUSPlacedTextContent{155.068}{271.505}{372.349}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Religious experience reconsidered: A Building-Block Approach to the Study of}
+  \ALIUSPlacedTextContent{106.530}{287.345}{157.967}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Religion and Other Special Things}
+  \ALIUSPlacedTextContent{264.567}{287.345}{202.149}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{. Princeton University Press, Princeton.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
+\end{tikzpicture}
+\null
 
 \ifdefined\ALIUSIssueBuild
 \clearpage
