@@ -23,7 +23,10 @@ try {
         if (-not (Test-Path $IssueTex)) {
             throw "Missing issue source: $IssueTex"
         }
-        lualatex -interaction=nonstopmode -halt-on-error -output-directory=Bulletins $IssueTex
+        # Hyperref destinations/citation jumps settle cleanly on the second pass.
+        1..2 | ForEach-Object {
+            lualatex -interaction=nonstopmode -halt-on-error -output-directory=Bulletins $IssueTex
+        }
     }
 
 }

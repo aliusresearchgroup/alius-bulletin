@@ -420,6 +420,8 @@ def preamble(width: float, height: float, colors: set[int]) -> list[str]:
         r"\providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%",
         r"  \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%",
         r"}",
+        r"\providecommand{\ALIUSRefAnchor}[1]{\hypertarget{#1}{}}",
+        r"\providecommand{\ALIUSCitationLink}[2]{\hyperlink{#1}{#2}}",
     ]
     for c in sorted(colors):
         lines.append(rf"\definecolor{{{color_name(c)}}}{{HTML}}{{{color_hex(c)}}}")

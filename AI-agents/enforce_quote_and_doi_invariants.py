@@ -4,6 +4,8 @@ Run after regenerating interview reconstructions from reference PDFs. It is idem
 - standalone interview sources load hyperref because DOI links use \href;
 - oversized decorative quote placeholders become robust TeX quote macros;
 - every interview gets the optional per-segment notable-quote macro;
+- every interview gets source-level macros for invisible reference anchors and
+  in-text citation jumps;
 - every interview gets a normalized first-page citation panel: citation text starts
   top-left, and the DOI is appended inline as a single unbroken green hyperlink
   in the same APA 7 citation paragraph.
@@ -36,6 +38,10 @@ NOTABLE_QUOTE_MACROS = (
     r"  \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%" + "\n"
     r"}" + "\n"
 )
+CITATION_LINK_MACROS = (
+    r"\providecommand{\ALIUSRefAnchor}[1]{\hypertarget{#1}{}}" + "\n"
+    r"\providecommand{\ALIUSCitationLink}[2]{\hyperlink{#1}{#2}}" + "\n"
+)
 
 
 def bib_doi(tex_path: Path) -> str:
@@ -64,6 +70,18 @@ def ensure_preamble(text: str) -> str:
             text = text.replace(close_marker, close_marker + NOTABLE_QUOTE_MACROS, 1)
         else:
             text = text.replace("\n\\definecolor", "\n" + NOTABLE_QUOTE_MACROS + r"\definecolor", 1)
+    if r"\providecommand{\ALIUSCitationLink}" not in text:
+        notable_marker = r"\providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%" + "\n"
+        if notable_marker in text:
+            # Insert after the full notable-quote macro block so all custom link
+            # helpers sit together before color declarations.
+            block = NOTABLE_QUOTE_MACROS
+            if block in text:
+                text = text.replace(block, block + CITATION_LINK_MACROS, 1)
+            else:
+                text = text.replace("\n\\definecolor", "\n" + CITATION_LINK_MACROS + r"\definecolor", 1)
+        else:
+            text = text.replace("\n\\definecolor", "\n" + CITATION_LINK_MACROS + r"\definecolor", 1)
     if r"\definecolor{ALIUSC1F8135}" not in text:
         text = text.replace("\n\\definecolor", "\n" + r"\definecolor{ALIUSC1F8135}{HTML}{1F8135}" + "\n" + r"\definecolor", 1)
     return text
