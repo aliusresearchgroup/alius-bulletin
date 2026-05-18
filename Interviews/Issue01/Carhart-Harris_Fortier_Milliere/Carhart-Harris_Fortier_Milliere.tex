@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -142,16 +147,16 @@
   \ALIUSPlacedTextContent{69.160}{150.046}{176.443}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Robin Carhart-Harris}
   \ALIUSPlacedTextContent{376.840}{154.955}{151.124}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Centre for Neuropsychopharmacology}
   \ALIUSPlacedTextContent{376.840}{165.755}{112.717}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Imperial College, London, UK}
-  \ALIUSPlacedTextContent{69.160}{184.768}{213.324}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Martin Fortier and Raphaël Millière}
+  \ALIUSPlacedTextContent{69.160}{184.768}{213.324}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Martin Fortier and RaphaÃ«l MilliÃ¨re}
   \ALIUSPlacedTextContent{376.840}{190.740}{71.262}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Martin Fortier}
   \ALIUSPlacedTextContent{376.840}{204.155}{82.654}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{martin.fortier@ens.fr}
   \ALIUSPlacedTextContent{376.840}{214.955}{74.000}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Institut Jean Nicod}
   \ALIUSPlacedTextContent{376.840}{225.755}{101.584}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{ENS/EHESS, Paris, France}
-  \ALIUSPlacedTextContent{376.840}{250.740}{80.557}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Raphaël Millière}
+  \ALIUSPlacedTextContent{376.840}{250.740}{80.557}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{RaphaÃ«l MilliÃ¨re}
   % ALIUS normalized citation panel begin
-  % ALIUS normalized citation panel text: Cite as: Carhart-Harris, R., Fortier, M., \& Millière, R. (2017). Psychedelics and consciousness. An interview with Robin Carhart- Harris. ALIUS Bulletin, 1, 1-16.
+  % ALIUS normalized citation panel text: Cite as: Carhart-Harris, R., Fortier, M., \& MilliÃ¨re, R. (2017). Psychedelics and consciousness. An interview with Robin Carhart- Harris. ALIUS Bulletin, 1, 1-16.
   \fill[white] (67.660bp,-257.608bp) rectangle ++(300.680bp,-40.600bp);
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (69.160bp,-259.608bp) {\begin{minipage}{297.680bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Carhart-Harris, R., Fortier, M., \& Millière, R. (2017). Psychedelics and consciousness. An interview with Robin Carhart- Harris. ALIUS Bulletin, 1, 1-16. \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/m5ky-6w96}{https://doi.org/10.34700/m5ky-6w96}}}\par}\end{minipage}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (69.160bp,-259.608bp) {\begin{minipage}{297.680bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Carhart-Harris, R., Fortier, M., \& MilliÃ¨re, R. (2017). Psychedelics and consciousness. An interview with Robin Carhart- Harris. ALIUS Bulletin, 1, 1-16. \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/m5ky-6w96}{https://doi.org/10.34700/m5ky-6w96}}}\par}\end{minipage}};
   % ALIUS normalized citation panel end
   \ALIUSPlacedTextContent{376.840}{264.155}{141.863}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{raphael.milliere@philosophy.ox.ac.uk}
   \ALIUSPlacedTextContent{376.840}{274.955}{83.333}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Faculty of Philosophy}
@@ -159,7 +164,7 @@
   % ALIUS rendered revised abstract begin
   \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (71.080bp,-317.000bp) {\begin{minipage}{456.000bp}{\ALIUSFontLatoRegular\fontsize{13.920bp}{16.800bp}\selectfont Abstract\par}\vspace{7.000bp}{\ALIUSFontCormorantRegular\fontsize{13.920bp}{16.800bp}\selectfont\raggedright This interview with Robin Carhart-Harris covers conceptual and methodological questions in neuroscientific research on psychedelics. Carhart-Harris discusses how dissatisfaction with the empirical limits of psychoanalysis led him to consider psychedelic drugs as a route to deep mental structures, and to pursue neuroimaging studies of psilocybin and LSD. The conversation turns to neuropsychoanalysis and his mapping of the default-mode network, particularly its subcortical and paralimbic components, onto the Freudian ego and unconscious. He addresses the state of consciousness research, the imprecision of its core definitions, and a shift of focus toward self-consciousness as the distinctive feature of the human mind. Further sections take up methodological issues in psychedelic neurophenomenology: the polysemy of terms such as supernaturalness in subjective questionnaires, the debate over whether drug-induced ego dissolution is best understood as a disruption of the narrative self or the minimal self, and the interpretation of default-mode network and task-positive network decoupling as a neural signature of the collapse of dualities. The interview examines entropy, criticality, and the relation between Karl Friston's free-energy principle and the reducing valve model for altered states of consciousness associated with Henri Bergson, Charlie Dunbar Broad, and Aldous Huxley.\par}\vspace{7.000bp}{\ALIUSFontCormorantItalic\fontsize{13.920bp}{16.800bp}\selectfont Keywords: }{\ALIUSFontCormorantRegular\fontsize{13.920bp}{16.800bp}\selectfont psychedelics, default-mode network, ego dissolution, free-energy principle, neuropsychoanalysis\par}\end{minipage}};
   % ALIUS rendered revised abstract end
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -169,7 +174,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{2}
   \ALIUSPlacedTextContent{71.080}{70.938}{277.545}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What got you interested in the topic of psychedelics?}
   \ALIUSPlacedTextContent{71.080}{100.709}{456.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It was an interest in the mind. At the time (about 12 years ago), I felt that my}
@@ -204,16 +209,16 @@
 % ALIUS notable quote slot begin
 % ALIUS notable quote id: carhart-harris-2017-q01
 % ALIUS notable quote rule: segment-auto-place; generated coordinates, do not hand-position
-  \ALIUSMaybeNotableQuoteAt{110.000}{538.000}{380.000}{I entertained the idea that a drug might exist that could alter the topography of the mind to aid access to the unconscious.}
+  \ALIUSMaybeNotableQuoteAt{110.000}{490.351}{380.000}{I entertained the idea that a drug might exist that could alter the topography of the mind to aid access to the unconscious.}
 % ALIUS notable quote slot end
-  \ALIUSPlacedTextContent{71.080}{646.011}{168.826}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Observations from LSD Research}
-  \ALIUSPlacedTextContent{239.929}{646.011}{287.649}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, and I thought - here it is! The most logical thing}
-  \ALIUSPlacedTextContent{71.080}{663.051}{456.405}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{from there seemed to be to take this to brain imaging and measure what's going on}
-  \ALIUSPlacedTextContent{71.080}{680.091}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in the brain as the unconscious mind is accessed under LSD or a similar drug - and}
-  \ALIUSPlacedTextContent{71.080}{697.073}{456.543}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that's basically the idea I took to David Nutt, then Professor of Psychopharmacology}
-  \ALIUSPlacedTextContent{71.080}{714.056}{456.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{at the University of Bristol, as a PhD proposal. Although I've never managed to work}
-  \ALIUSPlacedTextContent{71.080}{731.038}{343.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on that specific project, I'm a lot closer than I was 12 years ago.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{578.851}{168.826}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Observations from LSD Research}
+  \ALIUSPlacedTextContent{239.929}{578.851}{287.649}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, and I thought - here it is! The most logical thing}
+  \ALIUSPlacedTextContent{71.080}{595.834}{456.405}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{from there seemed to be to take this to brain imaging and measure what's going on}
+  \ALIUSPlacedTextContent{71.080}{612.816}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in the brain as the unconscious mind is accessed under LSD or a similar drug - and}
+  \ALIUSPlacedTextContent{71.080}{629.799}{456.543}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that's basically the idea I took to David Nutt, then Professor of Psychopharmacology}
+  \ALIUSPlacedTextContent{71.080}{646.781}{456.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{at the University of Bristol, as a PhD proposal. Although I've never managed to work}
+  \ALIUSPlacedTextContent{71.080}{663.763}{343.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on that specific project, I'm a lot closer than I was 12 years ago.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -223,7 +228,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{3}
   \ALIUSPlacedTextContent{71.080}{70.938}{455.654}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In addition to neuroscience, you studied psychoanalysis. Do you think some of the}
   \ALIUSPlacedTextContent{71.080}{88.217}{447.167}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{hypotheses of psychoanalysis on the human mind are relevant for scientific research?}
@@ -258,7 +263,7 @@
   \ALIUSPlacedTextContent{71.080}{714.056}{206.716}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{still deeply resonant and informative.}
   \ALIUSPlacedTextContent{99.430}{742.971}{428.066}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Let's take the example of the 'discovery' of the default-mode network (DMN)}
   \ALIUSPlacedTextContent{71.080}{759.953}{456.463}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for example, around the turn of the millennia. Cognitive neuroscientists have}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -268,7 +273,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{4}
   \ALIUSPlacedTextContent{71.080}{87.749}{456.610}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{struggled with this system as they can't easily identify what its main function is. It}
   \ALIUSPlacedTextContent{71.080}{104.789}{456.450}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{seems to be involved in either too much or nothing specific at all. Some have even}
@@ -285,16 +290,16 @@
   \ALIUSPlacedTextContent{71.080}{291.595}{456.469}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{DMN may serve some essential physiological functions (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-leech-scott-2014}{Leech et al., 2014}), and}
   \ALIUSPlacedTextContent{71.080}{308.578}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{granted, rudimentary prototypes of the adult human DMN may be observable in}
   \ALIUSPlacedTextContent{71.080}{325.560}{456.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lower species (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-mantini-gerits-2011}{Mantini et al., 2011}) and infants (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-doria-beckmann-2010}{Doria et al., 2010}) but laying the}
-  \ALIUSPlacedTextContent{71.080}{342.543}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{emphasis here seems more about evading the problem than tackling it – and}
+  \ALIUSPlacedTextContent{71.080}{342.543}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{emphasis here seems more about evading the problem than tackling it â€“ and}
   \ALIUSPlacedTextContent{71.080}{359.525}{456.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{moreover, these things needn't be inconsistent with psychoanalytic conceptions of}
-  \ALIUSPlacedTextContent{71.080}{376.507}{456.358}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind-function – such as the idea that the ego offers a reserve of energy that can be}
+  \ALIUSPlacedTextContent{71.080}{376.507}{456.358}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind-function â€“ such as the idea that the ego offers a reserve of energy that can be}
   \ALIUSPlacedTextContent{71.080}{393.490}{335.164}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'invested' in 'objects' of interest (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-carhart-harris-mayberg-2008}{Carhart-Harris et al., 2008}).}
-  \ALIUSPlacedTextContent{122.440}{436.804}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{140.200}{436.804}{291.812}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{If you want to look for 'the unconscious' in the}
-  \ALIUSPlacedTextContent{140.200}{454.958}{284.386}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{brain, you probably needn't look far from the}
-  \ALIUSPlacedTextContent{140.200}{473.111}{304.107}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{DMN and particularly its subcortical/paralimbic}
+  \ALIUSPlacedTextContent{122.200}{436.804}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{149.570}{436.804}{291.812}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{If you want to look for 'the unconscious' in the}
+  \ALIUSPlacedTextContent{153.283}{454.958}{284.386}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{brain, you probably needn't look far from the}
+  \ALIUSPlacedTextContent{143.422}{473.111}{304.107}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{DMN and particularly its subcortical/paralimbic}
   \ALIUSPlacedTextContent{140.200}{491.265}{310.552}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{components, such as the extended hippocampus.}
-  \ALIUSPlacedTextContent{449.320}{491.265}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{454.752}{491.265}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{99.430}{537.749}{428.107}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In 2008 (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-carhart-harris-mayberg-2008}{Carhart-Harris et al., 2008}) and later in 2010 (Carhart-Harris \&}
   \ALIUSPlacedTextContent{71.080}{554.731}{456.520}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-friston-2010}{Friston, 2010}) and more recently (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-carhart-harris-leech-2014}{Carhart-Harris et al., 2014}), I proposed that the}
   \ALIUSPlacedTextContent{71.080}{571.714}{456.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{default-mode network may relate to 'the ego' system, as described by Sigmund}
@@ -309,7 +314,7 @@
   \ALIUSPlacedTextContent{71.080}{724.555}{456.498}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unconscious' in the brain, you probably needn't look far from the DMN and}
   \ALIUSPlacedTextContent{71.080}{741.538}{456.419}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particularly its subcortical/paralimbic component/s, such as the extended}
   \ALIUSPlacedTextContent{71.080}{758.520}{456.441}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hippocampus. If you'd rather stick to cognitive or non-psychoanalytic terms when}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -319,10 +324,10 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{5}
   \ALIUSPlacedTextContent{71.080}{75.749}{456.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{talking about these systems, e.g. proposing that the DMN is related to 'the narrative}
-  \ALIUSPlacedTextContent{71.080}{92.789}{456.429}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{self' – then that's fine, I wouldn't want to argue with that – but at least know that}
+  \ALIUSPlacedTextContent{71.080}{92.789}{456.429}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{self' â€“ then that's fine, I wouldn't want to argue with that â€“ but at least know that}
   \ALIUSPlacedTextContent{71.080}{109.771}{456.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychoanalysis has talked about these systems in depth for over a century (Freud,}
   \ALIUSPlacedTextContent{71.080}{126.754}{456.480}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{1927; Freud, Strachey, \& Freud, 2001) and may offer a level of explanation that you}
   \ALIUSPlacedTextContent{71.080}{143.736}{456.398}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might find surprisingly useful and informative. Also, if you're going to judge}
@@ -356,12 +361,12 @@
   \ALIUSPlacedTextContent{71.080}{633.528}{456.424}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{self-consciousness and its neural correlates. A stronger focus on self-consciousness}
   \ALIUSPlacedTextContent{71.080}{650.511}{456.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and the nature of the self as a system (i.e. 'the ego' in psychoanalytic terminology)}
   \ALIUSPlacedTextContent{71.080}{667.493}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{would help along the initiative of trying to better understand the brain basis of}
-  \ALIUSPlacedTextContent{71.080}{684.475}{456.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{human consciousness – and why human consciousness is special. I think the}
+  \ALIUSPlacedTextContent{71.080}{684.475}{456.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{human consciousness â€“ and why human consciousness is special. I think the}
   \ALIUSPlacedTextContent{71.080}{701.458}{456.600}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{endeavor to better understand the brain basis of 'consciousness' is too vague a}
   \ALIUSPlacedTextContent{71.080}{718.440}{456.515}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{question/problem, and unless I'm missing something (which I may be), I don't think}
   \ALIUSPlacedTextContent{71.080}{735.423}{456.302}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it's going to come to much. It may sound anthropocentric but I think we need to}
   \ALIUSPlacedTextContent{71.080}{752.405}{456.463}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{better admit/acknowledge that the real motivator driving enthusiasm for}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -371,15 +376,15 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{6}
   \ALIUSPlacedTextContent{71.080}{75.749}{456.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'consciousness research' is the promise of understanding why and how the human}
-  \ALIUSPlacedTextContent{71.080}{92.789}{456.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind is different to that of other animals – and why/how we can reflect on our own}
+  \ALIUSPlacedTextContent{71.080}{92.789}{456.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind is different to that of other animals â€“ and why/how we can reflect on our own}
   \ALIUSPlacedTextContent{71.080}{109.771}{456.530}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thought and behavior. I'm actually open to the idea that it is something relatively}
   \ALIUSPlacedTextContent{71.080}{126.754}{456.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{recently learned or acquired though, as was argued by Julian \ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-jaynes-1990}{Jaynes (1990)}. Jaynes'}
   \ALIUSPlacedTextContent{71.080}{143.736}{456.441}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stuff about the breakdown of hemispheric separation, I'm less convinced about}
   \ALIUSPlacedTextContent{71.080}{160.719}{456.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{however, but the idea that (reflective) consciousness is a relatively recent acquisition}
-  \ALIUSPlacedTextContent{71.080}{177.701}{401.997}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the human mind, is a fascinating one – and has some intuitive appeal.}
+  \ALIUSPlacedTextContent{71.080}{177.701}{401.997}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the human mind, is a fascinating one â€“ and has some intuitive appeal.}
   \ALIUSPlacedTextContent{71.080}{206.538}{455.585}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Do you endorse any of the following approaches to consciousness: a topological}
   \ALIUSPlacedTextContent{71.080}{223.818}{455.706}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{approach (claiming that there is an area of consciousness), an electrophysiological}
   \ALIUSPlacedTextContent{71.080}{241.098}{455.700}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{approach (claiming that consciousness consists of a specific rhythm of neural activity),}
@@ -392,7 +397,7 @@
   \ALIUSPlacedTextContent{71.080}{372.639}{456.369}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{parahippocampal interactions are of particular interest to me in this regard. I}
   \ALIUSPlacedTextContent{71.080}{389.621}{456.416}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{wouldn't want to say that the DMN as an object in isolation is consciousness or}
   \ALIUSPlacedTextContent{71.080}{406.603}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{indeed 'the ego', but I would advise that we study its behavior, and how it develops,}
-  \ALIUSPlacedTextContent{71.080}{423.586}{456.422}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{how its constituent parts combine to form a gestalt – and how this gestalt interacts}
+  \ALIUSPlacedTextContent{71.080}{423.586}{456.422}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{how its constituent parts combine to form a gestalt â€“ and how this gestalt interacts}
   \ALIUSPlacedTextContent{71.080}{440.568}{456.445}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with others in the brain, and how the interaction of these gestalts relates to}
   \ALIUSPlacedTextContent{71.080}{457.551}{444.460}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subjective phenomena that we feel and can (mostly) be conscious of, and report.}
   \ALIUSPlacedTextContent{71.080}{486.378}{455.744}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{How do you interpret the seeming discrepancy between Vollenweider et al.'s study}
@@ -411,7 +416,7 @@
   \ALIUSPlacedTextContent{71.080}{698.079}{305.704}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{a decrease in frontal activity (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-palhano-fontes-andrade-2015}{Palhano-Fontes et al., 2015}).}
   \ALIUSPlacedTextContent{71.080}{727.131}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Not really, as that mPFC decrease was task-related I think. A team working at Kings}
   \ALIUSPlacedTextContent{71.080}{744.171}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{College London replicated our arterial spin labeled (ASL) intravenous psilocybin}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -421,7 +426,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{7}
   \ALIUSPlacedTextContent{71.080}{71.909}{375.376}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{study and found decreased blood flow however. As I say in the 2016}
   \ALIUSPlacedTextContent{446.977}{71.909}{30.996}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{PNAS}
@@ -432,7 +437,7 @@
   \ALIUSPlacedTextContent{71.080}{105.931}{456.494}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it's easy to think brain imaging literally reads-out 'brain activity', but that isn't at all}
   \ALIUSPlacedTextContent{71.080}{122.914}{456.450}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the case. The process of recording to analysis to brain images, involves a number of}
   \ALIUSPlacedTextContent{71.080}{139.896}{456.362}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{assumptions, e.g. people often assume that the BOLD signal of fMRI is measuring}
-  \ALIUSPlacedTextContent{71.080}{156.879}{456.449}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain activity and similarly that the ASL signal represents brain activity – but that's}
+  \ALIUSPlacedTextContent{71.080}{156.879}{456.449}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain activity and similarly that the ASL signal represents brain activity â€“ but that's}
   \ALIUSPlacedTextContent{71.080}{173.861}{456.443}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not always the case. For example, a direct vascular action of a drug can interfere with}
   \ALIUSPlacedTextContent{71.080}{190.843}{456.415}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the BOLD and ASL signal and give you a read-out that you misinterpret as being a}
   \ALIUSPlacedTextContent{71.080}{207.826}{456.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{change in 'brain activity'. I think in the case of the cerebral blood flow (CBF)}
@@ -443,7 +448,7 @@
   \ALIUSPlacedTextContent{71.080}{275.755}{38.287}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{activity}
   \ALIUSPlacedTextContent{109.411}{275.755}{418.134}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{). The overlap between location of the CBF reductions and changes in}
   \ALIUSPlacedTextContent{71.080}{292.738}{456.487}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{oscillatory power seen with intravenous psilocybin and MEG was quite remarkable}
-  \ALIUSPlacedTextContent{71.080}{309.720}{456.486}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{however (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-muthukumaraswamy-carhart-harris-2013}{Muthukumaraswamy et al., 2013}) – and importantly, the latter is a much}
+  \ALIUSPlacedTextContent{71.080}{309.720}{456.486}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{however (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-muthukumaraswamy-carhart-harris-2013}{Muthukumaraswamy et al., 2013}) â€“ and importantly, the latter is a much}
   \ALIUSPlacedTextContent{71.080}{326.703}{456.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more reliable and direct measure of brain activity. Basically, if you want this matter}
   \ALIUSPlacedTextContent{71.080}{343.685}{456.359}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to be comprehensively resolved, you need to do a bit more work, perhaps in animals,}
   \ALIUSPlacedTextContent{71.080}{360.667}{456.416}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{looking at vascular action of intravenous psilocybin. But I'm not sure it's a problem}
@@ -457,18 +462,18 @@
   \ALIUSPlacedTextContent{428.008}{462.562}{99.529}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{paper on LSD in}
   \ALIUSPlacedTextContent{71.080}{479.544}{456.469}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the most comprehensive in the sense. In brief, look to the present and future for the}
   \ALIUSPlacedTextContent{71.080}{496.527}{53.572}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{answer/s.}
-  \ALIUSPlacedTextContent{153.160}{530.404}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{152.680}{530.404}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{170.680}{530.404}{255.802}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Increased PFC metabolism is not a good}
-  \ALIUSPlacedTextContent{170.680}{548.558}{247.599}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{explanation for how psychedelics work}
-  \ALIUSPlacedTextContent{415.240}{566.711}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{170.680}{584.711}{245.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{to produce their characteristic effects.}
+  \ALIUSPlacedTextContent{174.782}{548.558}{247.599}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{explanation for how psychedelics work}
+  \ALIUSPlacedTextContent{430.482}{566.712}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{176.065}{566.712}{245.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{to produce their characteristic effects.}
   \ALIUSPlacedTextContent{71.080}{646.240}{455.845}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In addition to the recording technique, do you think that the mode of administration}
   \ALIUSPlacedTextContent{71.080}{663.519}{455.499}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{could also explain the discrepancy: i.e., oral administration in Vollenweider's study vs.}
   \ALIUSPlacedTextContent{71.080}{680.800}{212.050}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{intravenous administration in your own?}
   \ALIUSPlacedTextContent{71.080}{709.851}{456.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Possibly. I feel pretty confident that increased PFC metabolism is not a good}
   \ALIUSPlacedTextContent{71.080}{726.891}{456.616}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{explanation for how psychedelics work in the human brain to produce their}
   \ALIUSPlacedTextContent{71.080}{743.873}{246.713}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characteristic psychological effects however.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -478,7 +483,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{8}
   \ALIUSPlacedTextContent{71.080}{83.897}{455.450}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{On a related note, what are the potential limitations of fMRI imaging to study}
   \ALIUSPlacedTextContent{71.080}{101.178}{455.566}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{psychedelics? More generally, what are the benefits and downsides of each available}
@@ -489,7 +494,7 @@
   \ALIUSPlacedTextContent{71.080}{198.456}{459.805}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{temporal resolution and so provides little/no information about brain dynamics.}
   \ALIUSPlacedTextContent{71.080}{215.439}{459.699}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Simultaneous EEG-fMRI is an important way forward and we're embracing that.}
   \ALIUSPlacedTextContent{71.080}{232.421}{456.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Other techniques will likely also emerge in time.  For example, the temporal}
-  \ALIUSPlacedTextContent{71.080}{249.403}{320.770}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{resolution of fMRI is improving – something we might also}
+  \ALIUSPlacedTextContent{71.080}{249.403}{320.770}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{resolution of fMRI is improving â€“ something we might also}
   \ALIUSPlacedTextContent{394.989}{249.403}{132.582}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{try to make the most of.}
   \ALIUSPlacedTextContent{71.080}{266.386}{456.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dynamic EEG-fMRI measures twinned with experience sampling may be a powerful}
   \ALIUSPlacedTextContent{71.080}{283.368}{335.636}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{way forward. Similarly, decoding methods could prove useful.}
@@ -500,9 +505,9 @@
   \ALIUSPlacedTextContent{71.080}{393.029}{456.527}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{It's a challenge because you want to test 'set and setting' as variables but you also}
   \ALIUSPlacedTextContent{71.080}{410.069}{456.529}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{want to maintain safety and certain ethical standards. Music offers a good means of}
   \ALIUSPlacedTextContent{71.080}{427.051}{456.345}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modulating 'setting' and 'set' requires that we sample 'where people are at'}
-  \ALIUSPlacedTextContent{71.080}{444.034}{456.450}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychologically prior to the trip itself. This hasn't really been done properly yet – at}
-  \ALIUSPlacedTextContent{71.080}{461.016}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{least by us.  You could also try and manipulate expectations to manipulate set – and}
-  \ALIUSPlacedTextContent{71.080}{477.999}{456.436}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I suppose we've done that to an extent when looking at suggestibility – but far more}
+  \ALIUSPlacedTextContent{71.080}{444.034}{456.450}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{psychologically prior to the trip itself. This hasn't really been done properly yet â€“ at}
+  \ALIUSPlacedTextContent{71.080}{461.016}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{least by us.  You could also try and manipulate expectations to manipulate set â€“ and}
+  \ALIUSPlacedTextContent{71.080}{477.999}{456.436}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I suppose we've done that to an extent when looking at suggestibility â€“ but far more}
   \ALIUSPlacedTextContent{71.080}{494.981}{203.524}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{work could and should be done here.}
   \ALIUSPlacedTextContent{71.080}{523.818}{455.438}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What are the difficulties of gathering reliable data about the subjective effects of}
   \ALIUSPlacedTextContent{71.080}{541.097}{239.680}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{psychedelics, and how can they be overcome?}
@@ -517,7 +522,7 @@
   \ALIUSPlacedTextContent{71.080}{709.599}{455.616}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{questionnaires you use resort to concepts such as "looking strange" or "having a}
   \ALIUSPlacedTextContent{71.080}{726.639}{455.731}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{supernatural quality" and correlations are subsequently made between subjective}
   \ALIUSPlacedTextContent{71.080}{743.919}{455.485}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{reports (the feeling that an experience was strange or supernatural) and}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -527,7 +532,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{9}
   \ALIUSPlacedTextContent{71.080}{72.138}{455.589}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{neurophysiological data (a certain pattern of neural activity). Now, concepts such as}
   \ALIUSPlacedTextContent{71.080}{89.417}{455.585}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{that of strangeness or supernaturalness are notoriously ambiguous and likely to be}
@@ -553,11 +558,11 @@
   \ALIUSPlacedTextContent{71.080}{469.176}{456.440}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particular way, then you could provide participants with some kind of briefing}
   \ALIUSPlacedTextContent{71.080}{486.159}{456.420}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about what is meant by the term/s in question but then that could bias/prime people}
   \ALIUSPlacedTextContent{71.080}{503.141}{446.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to see things 'how you want them to see things', thus causing a confirmation bias.}
-  \ALIUSPlacedTextContent{152.920}{553.684}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{170.440}{553.684}{215.324}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Words are certainly vulnerable to}
+  \ALIUSPlacedTextContent{152.440}{553.684}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{194.032}{553.684}{215.324}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Words are certainly vulnerable to}
   \ALIUSPlacedTextContent{170.440}{571.838}{262.509}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{interpretation and biases, but language is}
-  \ALIUSPlacedTextContent{170.440}{589.991}{248.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{a difficult prison-house to escape from.}
-  \ALIUSPlacedTextContent{419.320}{589.991}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{177.499}{589.991}{248.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{a difficult prison-house to escape from.}
+  \ALIUSPlacedTextContent{436.949}{589.991}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{646.240}{455.609}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{You have investigated a phenomenon known as drug-induced ego dissolution (DIED),}
   \ALIUSPlacedTextContent{71.080}{663.519}{455.634}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{which is usually described as a breakdown of one's 'sense of self' and a feeling of unity}
   \ALIUSPlacedTextContent{71.080}{680.800}{455.632}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{with one's environment (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-lebedev-lovden-2015}{Lebedev et al., 2015}). You have suggested that DIED might be}
@@ -565,7 +570,7 @@
   \ALIUSPlacedTextContent{71.080}{715.359}{455.569}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{thoughts and autobiographical memories associated with being the particular person}
   \ALIUSPlacedTextContent{71.080}{732.639}{455.623}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{one self-identifies with. This is consistent with subjects reporting feeling as if they were}
   \ALIUSPlacedTextContent{71.080}{749.919}{455.609}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{not a person anymore when undergoing DIED during psychedelics use. However, there}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -575,12 +580,12 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{10}
   \ALIUSPlacedTextContent{71.080}{78.138}{455.649}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{is room for debate about whether DIED is merely a disruption of the narrative self, and}
-  \ALIUSPlacedTextContent{71.080}{95.178}{455.617}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{not also of lower-level self-specifying processes, related to the so-called « minimal » or}
-  \ALIUSPlacedTextContent{71.080}{112.457}{455.602}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{« bodily » self. There is a long tradition in philosophy of discussing the idea of the}
-  \ALIUSPlacedTextContent{71.080}{129.738}{455.544}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{minimal self (also called « sense of mineness ») as the pre-reflective, nonconceptual}
+  \ALIUSPlacedTextContent{71.080}{95.178}{455.617}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{not also of lower-level self-specifying processes, related to the so-called Â« minimal Â» or}
+  \ALIUSPlacedTextContent{71.080}{112.457}{455.602}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Â« bodily Â» self. There is a long tradition in philosophy of discussing the idea of the}
+  \ALIUSPlacedTextContent{71.080}{129.738}{455.544}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{minimal self (also called Â« sense of mineness Â») as the pre-reflective, nonconceptual}
   \ALIUSPlacedTextContent{71.080}{147.018}{455.608}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{feature of consciousness in virtue of which my experiences feel mine (\ALIUSCitationLink{aliusref-carhart-harris-fortier-milliere-zahavi-2014}{Zahavi, 2014}).}
   \ALIUSPlacedTextContent{71.080}{164.298}{455.603}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{This notion has also come under investigation in cognitive science and psychiatry.}
   \ALIUSPlacedTextContent{71.080}{181.577}{455.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{According to neurocognitive accounts of the minimal self, especially in a predictive}
@@ -616,7 +621,7 @@
   \ALIUSPlacedTextContent{330.423}{714.056}{197.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{. Generally speaking, the way people}
   \ALIUSPlacedTextContent{71.080}{731.038}{456.462}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understand and use the term 'the ego' in everyday parlance, is more or less consistent}
   \ALIUSPlacedTextContent{71.080}{748.021}{456.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with Freud's account of it. Our ego-dissolution inventory puts emphasis on reduced}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -626,7 +631,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{11}
   \ALIUSPlacedTextContent{71.080}{75.749}{456.400}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{'self-importance' and a sense of connectedness or oneness (e.g. to self, others and}
   \ALIUSPlacedTextContent{71.080}{92.789}{456.464}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{nature), which naturally accompanies DIED. I suppose what's happening is that}
@@ -634,10 +639,10 @@
   \ALIUSPlacedTextContent{71.080}{126.754}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{connectedness is the inevitable result. People can fight DIED but then they won't}
   \ALIUSPlacedTextContent{71.080}{143.736}{130.977}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feel the connectedness.}
   \ALIUSPlacedTextContent{150.280}{188.644}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{168.280}{188.644}{243.132}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I tend to think when people rate DIED}
-  \ALIUSPlacedTextContent{168.280}{206.798}{256.341}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{they are recognizing that it is 'the ego' in}
-  \ALIUSPlacedTextContent{428.440}{224.951}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{168.280}{242.951}{257.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the Freudian sense that is compromised.}
+  \ALIUSPlacedTextContent{175.710}{188.644}{243.132}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I tend to think when people rate DIED}
+  \ALIUSPlacedTextContent{169.106}{206.798}{256.341}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{they are recognizing that it is 'the ego' in}
+  \ALIUSPlacedTextContent{430.272}{224.952}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{168.280}{224.952}{257.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the Freudian sense that is compromised.}
   \ALIUSPlacedTextContent{71.080}{288.858}{455.535}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{The DMN is usually associated with mind-wandering, self-reflection and introspection}
   \ALIUSPlacedTextContent{71.080}{306.138}{455.792}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{while the Task Positive Network (TPN) is associated with the orientation of the mind}
   \ALIUSPlacedTextContent{71.080}{323.418}{455.645}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{towards the external world. Elaborating on this distinction, you notice that these two}
@@ -662,9 +667,9 @@
   \ALIUSPlacedTextContent{71.080}{663.519}{232.329}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{2015). How do you interpret these findings?}
   \ALIUSPlacedTextContent{71.080}{692.571}{453.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The specifics of the data processing and statistical thresholds can explain Palhano-}
   \ALIUSPlacedTextContent{71.080}{709.611}{456.430}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Fontes's alleged negative result. If you look closer at the method they used however,}
-  \ALIUSPlacedTextContent{71.080}{726.593}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think they did find this effect (i.e. reduced DMN-TPN orthogonality) – and I'm}
+  \ALIUSPlacedTextContent{71.080}{726.593}{456.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think they did find this effect (i.e. reduced DMN-TPN orthogonality) â€“ and I'm}
   \ALIUSPlacedTextContent{71.080}{743.576}{221.037}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{very confident others will in the future.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -674,7 +679,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{12}
   \ALIUSPlacedTextContent{71.080}{83.657}{455.687}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{Do you think that it can still be maintained that the loss of a clear dichotomy between}
   \ALIUSPlacedTextContent{71.080}{100.938}{453.200}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{the internal and the external is to be explained by the decrease of the DMN/TPN anti-}
@@ -708,7 +713,7 @@
   \ALIUSPlacedTextContent{71.080}{560.777}{455.494}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{highest the entropy, the highest the criticality; conversely, the lowest the entropy, the}
   \ALIUSPlacedTextContent{71.080}{578.058}{109.347}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{lowest the criticality.}
   \ALIUSPlacedTextContent{71.080}{607.109}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Did I say that? Criticality is just one thing, i.e. it's a critical point, so you can't really}
-  \ALIUSPlacedTextContent{71.080}{624.091}{456.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have low or high criticality – but you can be above or below it. Being super-critical,}
+  \ALIUSPlacedTextContent{71.080}{624.091}{456.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have low or high criticality â€“ but you can be above or below it. Being super-critical,}
   \ALIUSPlacedTextContent{71.080}{646.011}{117.410}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in the sense of being}
   \ALIUSPlacedTextContent{189.396}{646.011}{28.578}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{above}
   \ALIUSPlacedTextContent{217.998}{646.011}{309.433}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a critical point, would be most consistent with a more}
@@ -717,7 +722,7 @@
   \ALIUSPlacedTextContent{71.080}{709.599}{455.601}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{criticality? For example, it has been proposed that certain altered states can involve}
   \ALIUSPlacedTextContent{71.080}{726.639}{455.657}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{plenty of prediction errors while the weight (or the accuracy) ascribed to these}
   \ALIUSPlacedTextContent{71.080}{743.919}{455.627}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{predictions errors remains abnormally low; conversely, predictions errors can be low}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -727,7 +732,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{13}
   \ALIUSPlacedTextContent{71.080}{72.138}{455.612}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{while the accuracy ascribed to these limited predictions errors is very high. As Fletcher}
   \ALIUSPlacedTextContent{71.080}{89.417}{455.623}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{and Frith put it, "a relatively small prediction error might be given undue weight (if the}
@@ -741,7 +746,7 @@
   \ALIUSPlacedTextContent{71.080}{227.418}{455.627}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{plenty of prediction errors) and sub-criticality (high-level mental states are not}
   \ALIUSPlacedTextContent{71.080}{244.698}{455.472}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{malleable). This seems to contradict the idea that high entropy and high criticality}
   \ALIUSPlacedTextContent{71.080}{261.978}{123.647}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{always go hand in hand.}
-  \ALIUSPlacedTextContent{71.080}{291.029}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{They don't, as you can't have high criticality, but you have "super-criticality" – and}
+  \ALIUSPlacedTextContent{71.080}{291.029}{456.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{They don't, as you can't have high criticality, but you have "super-criticality" â€“ and}
   \ALIUSPlacedTextContent{71.080}{308.011}{456.432}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{generally speaking, though perhaps not absolutely, super-criticality would be}
   \ALIUSPlacedTextContent{71.080}{324.994}{166.186}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consistent with high entropy.}
   \ALIUSPlacedTextContent{71.080}{354.138}{455.507}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In your work, you have occasionally pondered upon what your findings suggest as to}
@@ -768,7 +773,7 @@
   \ALIUSPlacedTextContent{71.080}{724.638}{455.632}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{brain is simply a filter which cannot by itself generate any conscious representation (the}
   \ALIUSPlacedTextContent{71.080}{741.138}{455.358}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{richness of representations is to be found in the world), in Friston's model, the brain is}
   \ALIUSPlacedTextContent{71.080}{757.638}{455.790}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{notoriously able to generate conscious representation and it is even able to do so}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -778,7 +783,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.700}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{14}
   \ALIUSPlacedTextContent{71.080}{78.138}{455.592}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{before getting any sensory feedback. In other words, the free-energy and predictive}
   \ALIUSPlacedTextContent{71.080}{95.178}{455.512}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{view contends that the role of the world is corrective and that the role of the brain is}
@@ -799,7 +804,7 @@
   \ALIUSPlacedTextContent{99.430}{353.429}{428.147}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{If the metaphor is useful however, it's useful because it proposes that "the brain,}
   \ALIUSPlacedTextContent{71.080}{370.469}{453.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in main, is eliminative rather than productive". That idea is consistent with the free-}
   \ALIUSPlacedTextContent{71.080}{387.509}{456.440}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{energy principle because top-down inferences work to explain bottom-up sensory}
-  \ALIUSPlacedTextContent{71.080}{404.491}{456.517}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{information – so there's some functional suppression going on but suppression in}
+  \ALIUSPlacedTextContent{71.080}{404.491}{456.517}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{information â€“ so there's some functional suppression going on but suppression in}
   \ALIUSPlacedTextContent{71.080}{421.474}{456.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the sense of predictive processing.  Basically, I wouldn't worry too much about}
   \ALIUSPlacedTextContent{71.080}{438.456}{456.568}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Bergson, Broad and Huxley or indeed Kant when it comes to a contemporary}
   \ALIUSPlacedTextContent{71.080}{455.439}{456.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{account of how the brain works. It's best to see where the field is now, and Friston's}
@@ -819,10 +824,10 @@
   \ALIUSPlacedTextContent{192.462}{730.358}{187.829}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience and Biobehavioral Reviews}
   \ALIUSPlacedTextContent{380.334}{730.358}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{386.262}{730.358}{9.270}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{41}
-  \ALIUSPlacedTextContent{395.544}{730.358}{44.567}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 85–97.}
+  \ALIUSPlacedTextContent{395.544}{730.358}{44.567}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 85â€“97.}
   \ALIUSPlacedTextContent{71.080}{751.298}{386.432}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-beggs-plenz-2003}Beggs, J. M., \& Plenz, D. (2003). Neuronal avalanches in neocortical circuits.}
   \ALIUSPlacedTextContent{457.732}{751.298}{69.683}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.063}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -832,12 +837,12 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{15}
   \ALIUSPlacedTextContent{107.080}{77.836}{59.655}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
   \ALIUSPlacedTextContent{166.762}{77.836}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{172.690}{77.836}{9.151}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{23}
-  \ALIUSPlacedTextContent{181.854}{77.836}{85.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(35), 11167–11177.}
+  \ALIUSPlacedTextContent{181.854}{77.836}{85.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(35), 11167â€“11177.}
   \ALIUSPlacedTextContent{71.080}{99.676}{130.678}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-bergson-1994}Bergson, H. (1994 [1896]).}
   \ALIUSPlacedTextContent{201.766}{99.676}{92.641}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Matter and memory}
   \ALIUSPlacedTextContent{294.429}{99.676}{128.156}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. New York: Zone Books.}
@@ -845,27 +850,27 @@
   \ALIUSPlacedTextContent{107.080}{138.016}{131.426}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{238.546}{138.016}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{244.474}{138.016}{8.215}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{13}
-  \ALIUSPlacedTextContent{252.703}{138.016}{48.584}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 7–13.}
+  \ALIUSPlacedTextContent{252.703}{138.016}{48.584}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 7â€“13.}
   \ALIUSPlacedTextContent{71.080}{158.956}{100.699}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-broad-1953}Broad, C. D. (1953).}
   \ALIUSPlacedTextContent{172.114}{158.956}{205.737}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Religion, Philosophy and Psychical Research}
   \ALIUSPlacedTextContent{377.937}{158.956}{149.483}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. London: Routledge / Kegan}
   \ALIUSPlacedTextContent{107.080}{175.456}{27.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Paul.}
-  \ALIUSPlacedTextContent{71.080}{196.396}{456.391}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-carhart-harris-erritzoe-2012}Carhart-Harris, R., Erritzoe, D., Williams, T., Stone, J. M., Reed, L. J., Colasanti, A., …}
+  \ALIUSPlacedTextContent{71.080}{196.396}{456.391}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-carhart-harris-erritzoe-2012}Carhart-Harris, R., Erritzoe, D., Williams, T., Stone, J. M., Reed, L. J., Colasanti, A., â€¦}
   \ALIUSPlacedTextContent{107.080}{212.896}{420.337}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nutt, D. J. (2012). Neural correlates of the psychedelic state as determined by fMRI}
   \ALIUSPlacedTextContent{107.080}{229.396}{122.537}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{studies with psilocybin.}
   \ALIUSPlacedTextContent{229.835}{229.396}{225.504}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences}
   \ALIUSPlacedTextContent{455.313}{229.396}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{461.501}{229.396}{14.927}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{109}
-  \ALIUSPlacedTextContent{476.450}{229.396}{47.909}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 2138–}
+  \ALIUSPlacedTextContent{476.450}{229.396}{47.909}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 2138â€“}
   \ALIUSPlacedTextContent{107.080}{245.896}{26.081}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2143.}
   \ALIUSPlacedTextContent{71.080}{265.276}{456.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-carhart-harris-friston-2010}Carhart-Harris, R., \& Friston, K. (2010). The default-mode, ego-functions and free-energy:}
   \ALIUSPlacedTextContent{107.080}{281.776}{226.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{a neurobiological account of Freudian ideas.}
   \ALIUSPlacedTextContent{333.267}{281.776}{138.903}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain: A Journal of Neurology}
   \ALIUSPlacedTextContent{472.197}{281.776}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{478.152}{281.776}{12.659}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{133}
-  \ALIUSPlacedTextContent{490.827}{281.776}{33.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 1265–}
+  \ALIUSPlacedTextContent{490.827}{281.776}{33.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 1265â€“}
   \ALIUSPlacedTextContent{107.080}{298.276}{29.617}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1283.}
-  \ALIUSPlacedTextContent{71.080}{318.556}{456.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-carhart-harris-leech-2014}Carhart-Harris, R., Leech, R., Hellyer, P., Shanahan, M., Feilding, A., Tagliazucchi, E., …}
+  \ALIUSPlacedTextContent{71.080}{318.556}{456.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-carhart-harris-leech-2014}Carhart-Harris, R., Leech, R., Hellyer, P., Shanahan, M., Feilding, A., Tagliazucchi, E., â€¦}
   \ALIUSPlacedTextContent{107.080}{335.056}{420.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Nutt, D. (2014). The entropic brain: A theory of conscious states informed by}
   \ALIUSPlacedTextContent{107.080}{351.556}{238.814}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{neuroimaging research with psychedelic drugs.}
   \ALIUSPlacedTextContent{345.897}{351.556}{155.131}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Human Neuroscience}
@@ -880,52 +885,52 @@
   \ALIUSPlacedTextContent{444.799}{404.836}{5.016}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{7}
   \ALIUSPlacedTextContent{449.829}{404.836}{26.666}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 9. 9}
   \ALIUSPlacedTextContent{71.080}{425.116}{456.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-carhart-harris-muthukumaraswamy-2016}Carhart-Harris, R., Muthukumaraswamy, S., Roseman, L., Kaelen, M., Droog, W., Murphy,}
-  \ALIUSPlacedTextContent{107.080}{441.616}{420.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{K., … Nutt, D. (2016). Neural correlates of the LSD experience revealed by}
+  \ALIUSPlacedTextContent{107.080}{441.616}{420.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{K., â€¦ Nutt, D. (2016). Neural correlates of the LSD experience revealed by}
   \ALIUSPlacedTextContent{107.080}{458.116}{139.925}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{multimodal neuroimaging.}
   \ALIUSPlacedTextContent{248.860}{458.116}{234.991}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences}
   \ALIUSPlacedTextContent{483.792}{458.116}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{491.556}{458.116}{11.998}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{113}
   \ALIUSPlacedTextContent{503.568}{458.116}{23.840}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(17),}
-  \ALIUSPlacedTextContent{107.080}{474.616}{58.801}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{4853–4858.}
+  \ALIUSPlacedTextContent{107.080}{474.616}{58.801}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{4853â€“4858.}
   \ALIUSPlacedTextContent{71.080}{493.996}{428.870}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-chialvo-balenzuela-2008}Chialvo, D., Balenzuela, P., \& Fraiman, D. (2008). The brain: What is critical about it?}
   \ALIUSPlacedTextContent{499.551}{493.996}{27.864}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Conf.}
   \ALIUSPlacedTextContent{107.080}{510.496}{96.448}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proc. Am. Inst. Phys.}
   \ALIUSPlacedTextContent{203.564}{510.496}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{209.492}{510.496}{19.903}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{1028}
-  \ALIUSPlacedTextContent{229.420}{510.496}{40.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 28–45.}
+  \ALIUSPlacedTextContent{229.420}{510.496}{40.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 28â€“45.}
   \ALIUSPlacedTextContent{71.080}{531.436}{456.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-christoff-cosmelli-2011}Christoff, K., Cosmelli, D., Legrand, D., \& Thompson, E. (2011). Specifying the self for}
   \ALIUSPlacedTextContent{107.080}{547.936}{120.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{cognitive neuroscience.}
   \ALIUSPlacedTextContent{227.548}{547.936}{131.426}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{359.014}{547.936}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{364.942}{547.936}{8.630}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{15}
-  \ALIUSPlacedTextContent{373.587}{547.936}{64.612}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 104–112.}
+  \ALIUSPlacedTextContent{373.587}{547.936}{64.612}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 104â€“112.}
   \ALIUSPlacedTextContent{71.080}{569.116}{453.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-csikszentmihalyi-larson-1987}Csikszentmihalyi, M., \& Larson, R. (1987). Validity and reliability of the experience-}
   \ALIUSPlacedTextContent{107.080}{585.616}{93.519}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{sampling method.}
   \ALIUSPlacedTextContent{200.587}{585.616}{200.122}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Nervous and Mental Disease}
   \ALIUSPlacedTextContent{400.718}{585.616}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{406.646}{585.616}{13.657}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{175}
-  \ALIUSPlacedTextContent{420.321}{585.616}{65.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(9), 526–536.}
-  \ALIUSPlacedTextContent{71.080}{606.556}{456.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-doria-beckmann-2010}Doria, V., Beckmann, C., Arichi, T., Merchant, N., Groppo, M., Turkheimer, F., … Edwards,}
+  \ALIUSPlacedTextContent{420.321}{585.616}{65.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(9), 526â€“536.}
+  \ALIUSPlacedTextContent{71.080}{606.556}{456.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-doria-beckmann-2010}Doria, V., Beckmann, C., Arichi, T., Merchant, N., Groppo, M., Turkheimer, F., â€¦ Edwards,}
   \ALIUSPlacedTextContent{107.080}{623.056}{420.194}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{D. (2010). Emergence of resting state networks in the preterm human brain.}
   \ALIUSPlacedTextContent{107.080}{645.938}{373.828}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National Academy of Sciences of the United States of America}
   \ALIUSPlacedTextContent{480.896}{645.938}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{487.032}{645.938}{14.500}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{107}
   \ALIUSPlacedTextContent{501.553}{645.938}{25.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(46),}
-  \ALIUSPlacedTextContent{107.080}{662.438}{71.658}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{20015–20020.}
+  \ALIUSPlacedTextContent{107.080}{662.438}{71.658}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{20015â€“20020.}
   \ALIUSPlacedTextContent{71.080}{683.378}{456.376}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-fletcher-frith-2009}Fletcher, P., \& Frith, C. (2009). Perceiving is believing: a Bayesian approach to explaining}
   \ALIUSPlacedTextContent{107.080}{699.878}{205.584}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{the positive symptoms of schizophrenia.}
   \ALIUSPlacedTextContent{312.618}{699.878}{136.300}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature Reviews Neuroscience}
   \ALIUSPlacedTextContent{448.947}{699.878}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{454.874}{699.878}{9.472}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{10}
-  \ALIUSPlacedTextContent{464.364}{699.878}{54.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 48–58.}
+  \ALIUSPlacedTextContent{464.364}{699.878}{54.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 48â€“58.}
   \ALIUSPlacedTextContent{71.080}{721.058}{456.335}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-fox-zhang-2009}Fox, M. D., Zhang, D., Snyder, A. Z., \& Raichle, M. E. (2009). The global signal and observed}
   \ALIUSPlacedTextContent{107.080}{737.558}{222.889}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{anticorrelated resting state brain networks.}
   \ALIUSPlacedTextContent{330.182}{737.558}{125.731}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neurophysiology}
   \ALIUSPlacedTextContent{456.003}{737.558}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{462.132}{737.558}{13.255}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{101}
-  \ALIUSPlacedTextContent{475.404}{737.558}{48.955}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 3270–}
+  \ALIUSPlacedTextContent{475.404}{737.558}{48.955}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 3270â€“}
   \ALIUSPlacedTextContent{107.080}{754.058}{30.371}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{3283.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -935,22 +940,22 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{16}
   \ALIUSPlacedTextContent{71.080}{85.036}{373.963}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-friston-2010}Friston, K. (2010). The free-energy principle: A unified brain theory?}
   \ALIUSPlacedTextContent{447.920}{85.036}{79.484}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature Reviews}
   \ALIUSPlacedTextContent{107.080}{101.536}{59.655}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
   \ALIUSPlacedTextContent{166.762}{101.536}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{172.690}{101.536}{7.554}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{11}
-  \ALIUSPlacedTextContent{180.255}{101.536}{62.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 127–138.}
+  \ALIUSPlacedTextContent{180.255}{101.536}{62.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 127â€“138.}
   \ALIUSPlacedTextContent{71.080}{122.716}{418.707}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-friston-kilner-2006}Friston, K., Kilner, J., \& Harrison, L. (2006). A free energy principle for the brain.}
   \ALIUSPlacedTextContent{490.295}{122.716}{37.095}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal}
   \ALIUSPlacedTextContent{107.080}{139.216}{94.733}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{of Physiology - Paris}
   \ALIUSPlacedTextContent{201.834}{139.216}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{207.762}{139.216}{15.174}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{100}
-  \ALIUSPlacedTextContent{222.958}{139.216}{63.560}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1-3), 70–87.}
+  \ALIUSPlacedTextContent{222.958}{139.216}{63.560}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1-3), 70â€“87.}
   \ALIUSPlacedTextContent{71.080}{160.156}{88.872}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-halloy-2015}Halloy, A. (2015).}
-  \ALIUSPlacedTextContent{159.716}{160.156}{362.069}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Divinités incarnées: L'apprentissage de la possession dans un culte afro-brésilien}
+  \ALIUSPlacedTextContent{159.716}{160.156}{362.069}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{DivinitÃ©s incarnÃ©es: L'apprentissage de la possession dans un culte afro-brÃ©silien}
   \ALIUSPlacedTextContent{521.806}{160.156}{5.607}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
   \ALIUSPlacedTextContent{107.080}{176.656}{76.546}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Paris: PETRA.}
   \ALIUSPlacedTextContent{71.080}{197.596}{92.128}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-huxley-1954}Huxley, A. (1954).}
@@ -964,13 +969,13 @@
   \ALIUSPlacedTextContent{182.493}{256.876}{339.160}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Communing with the Gods: Consciousness, culture and the dreaming brain}
   \ALIUSPlacedTextContent{521.806}{256.876}{5.607}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
   \ALIUSPlacedTextContent{107.080}{273.376}{111.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Brisbane: Daily Grail.}
-  \ALIUSPlacedTextContent{71.080}{294.316}{456.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-lebedev-lovden-2015}Lebedev, A. V., Lövdén, M., Rosenthal, G., Feilding, A., Nutt, D. J., \& Carhart-Harris, R.}
+  \ALIUSPlacedTextContent{71.080}{294.316}{456.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-lebedev-lovden-2015}Lebedev, A. V., LÃ¶vdÃ©n, M., Rosenthal, G., Feilding, A., Nutt, D. J., \& Carhart-Harris, R.}
   \ALIUSPlacedTextContent{107.080}{310.816}{420.312}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{L. (2015). Finding the self by losing the self: Neural correlates of ego-dissolution}
   \ALIUSPlacedTextContent{107.080}{327.316}{90.518}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{under psilocybin.}
   \ALIUSPlacedTextContent{197.610}{327.316}{107.345}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Human Brain Mapping}
   \ALIUSPlacedTextContent{304.988}{327.316}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{310.916}{327.316}{9.888}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{36}
-  \ALIUSPlacedTextContent{320.822}{327.316}{75.467}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(8), 3137–3153.}
+  \ALIUSPlacedTextContent{320.822}{327.316}{75.467}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(8), 3137â€“3153.}
   \ALIUSPlacedTextContent{71.080}{347.596}{456.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-leech-scott-2014}Leech, R., Scott, G., Carhart-Harris, R., Turkheimer, F., Taylor-Robinson, S., \& Sharp, D.}
   \ALIUSPlacedTextContent{107.080}{364.096}{330.415}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2014). Spatial Dependencies between large-scale brain networks.}
   \ALIUSPlacedTextContent{437.480}{364.096}{54.102}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{PLOS ONE}
@@ -987,35 +992,35 @@
   \ALIUSPlacedTextContent{178.145}{422.476}{349.311}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{When God talks back: Understanding the American evangelical relationship}
   \ALIUSPlacedTextContent{107.080}{438.976}{43.083}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{with God}
   \ALIUSPlacedTextContent{150.187}{438.976}{136.827}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. New York: Alfred Knopf.}
-  \ALIUSPlacedTextContent{71.080}{459.916}{456.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-mantini-gerits-2011}Mantini, D., Gerits, A., Nelissen, K., Durand, J.-B., Joly, O., Simone, L., … Vanduffel, W.}
+  \ALIUSPlacedTextContent{71.080}{459.916}{456.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-mantini-gerits-2011}Mantini, D., Gerits, A., Nelissen, K., Durand, J.-B., Joly, O., Simone, L., â€¦ Vanduffel, W.}
   \ALIUSPlacedTextContent{107.080}{476.416}{263.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2011). Default Mode of Brain Function in Monkeys.}
   \ALIUSPlacedTextContent{370.292}{476.416}{157.134}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Neuroscience : The}
   \ALIUSPlacedTextContent{107.080}{492.916}{215.499}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Official Journal of the Society for Neuroscience}
   \ALIUSPlacedTextContent{322.602}{492.916}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{328.529}{492.916}{8.217}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{31}
-  \ALIUSPlacedTextContent{336.758}{492.916}{94.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(36), 12954–12962.}
+  \ALIUSPlacedTextContent{336.758}{492.916}{94.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(36), 12954â€“12962.}
   \ALIUSPlacedTextContent{71.080}{513.196}{456.389}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-morcom-fletcher-2007}Morcom, A., \& Fletcher, P. (2007). Does the brain have a baseline? Why we should be}
   \ALIUSPlacedTextContent{107.080}{529.696}{78.754}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{resisting a rest.}
   \ALIUSPlacedTextContent{185.832}{529.696}{56.363}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{NeuroImage}
   \ALIUSPlacedTextContent{242.225}{529.696}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{248.152}{529.696}{9.461}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{37}
-  \ALIUSPlacedTextContent{257.629}{529.696}{78.431}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 1073–1082.}
+  \ALIUSPlacedTextContent{257.629}{529.696}{78.431}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 1073â€“1082.}
   \ALIUSPlacedTextContent{71.080}{550.636}{456.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-murphy-birn-2009}Murphy, K., Birn, R. M., Handwerker, D. A., Jones, T. B., \& Bandettini, P. A. (2009). The}
   \ALIUSPlacedTextContent{107.080}{567.136}{420.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{impact of global signal regression on resting state correlations: Are anti-correlated}
   \ALIUSPlacedTextContent{107.080}{583.636}{113.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{networks introduced?}
   \ALIUSPlacedTextContent{220.334}{583.636}{56.363}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{NeuroImage}
   \ALIUSPlacedTextContent{276.727}{583.636}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{282.655}{583.636}{10.981}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{44}
-  \ALIUSPlacedTextContent{293.652}{583.636}{69.409}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 893–905.}
+  \ALIUSPlacedTextContent{293.652}{583.636}{69.409}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 893â€“905.}
   \ALIUSPlacedTextContent{71.080}{603.916}{456.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-muthukumaraswamy-carhart-harris-2013}Muthukumaraswamy, S., Carhart-Harris, R., Moran, R., Brookes, M., Williams, T.,}
-  \ALIUSPlacedTextContent{107.080}{620.416}{420.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Errtizoe, D., … Nutt, D. (2013). Broadband cortical desynchronization underlies the}
+  \ALIUSPlacedTextContent{107.080}{620.416}{420.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Errtizoe, D., â€¦ Nutt, D. (2013). Broadband cortical desynchronization underlies the}
   \ALIUSPlacedTextContent{107.080}{636.916}{128.602}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{human psychedelic state.}
   \ALIUSPlacedTextContent{235.711}{636.916}{108.430}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Neuroscience}
   \ALIUSPlacedTextContent{344.142}{636.916}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{350.069}{636.916}{8.878}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{33}
-  \ALIUSPlacedTextContent{358.961}{636.916}{89.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(38), 15171–15183.}
+  \ALIUSPlacedTextContent{358.961}{636.916}{89.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(38), 15171â€“15183.}
   \ALIUSPlacedTextContent{71.080}{653.416}{456.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-palhano-fontes-andrade-2015}Palhano-Fontes, F., Andrade, K. C., Tofoli, L. F., Santos, A. C., Crippa, J. A. S., Hallak, J.}
-  \ALIUSPlacedTextContent{107.080}{669.916}{420.408}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{E. C., … Araujo, D. B. de. (2015). The psychedelic state induced by ayahuasca}
+  \ALIUSPlacedTextContent{107.080}{669.916}{420.408}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{E. C., â€¦ Araujo, D. B. de. (2015). The psychedelic state induced by ayahuasca}
   \ALIUSPlacedTextContent{107.080}{686.416}{359.086}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{modulates the activity and connectivity of the default mode network.}
   \ALIUSPlacedTextContent{466.764}{686.416}{54.724}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{PLOS ONE}
   \ALIUSPlacedTextContent{521.494}{686.416}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
@@ -1025,9 +1030,9 @@
   \ALIUSPlacedTextContent{369.133}{719.416}{152.311}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The British Journal of Psychiatry}
   \ALIUSPlacedTextContent{521.494}{719.416}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{107.080}{735.916}{14.855}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{203}
-  \ALIUSPlacedTextContent{121.952}{735.916}{42.942}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 70–71.}
-  \ALIUSPlacedTextContent{71.080}{752.498}{453.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-roseman-sereno-2016}Roseman, L., Sereno, M., Leech, R., Kaelen, M., Orban, C., McGonigle, J., … Carhart-}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{121.952}{735.916}{42.942}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 70â€“71.}
+  \ALIUSPlacedTextContent{71.080}{752.498}{453.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-roseman-sereno-2016}Roseman, L., Sereno, M., Leech, R., Kaelen, M., Orban, C., McGonigle, J., â€¦ Carhart-}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1037,14 +1042,14 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris – Psychedelics and Consciousness}
+  \ALIUSPlacedTextContent{71.080}{35.460}{244.948}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{R. Carhart-Harris â€“ Psychedelics and Consciousness}
   \ALIUSPlacedTextContent{511.480}{35.700}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{17}
   \ALIUSPlacedTextContent{107.080}{79.036}{420.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Harris, R. (2016). LSD alters eyes-closed functional connectivity within the early}
   \ALIUSPlacedTextContent{107.080}{95.536}{190.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{visual cortex in a retinotopic fashion.}
   \ALIUSPlacedTextContent{297.967}{95.536}{107.345}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Human Brain Mapping}
   \ALIUSPlacedTextContent{405.345}{95.536}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{411.273}{95.536}{9.461}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{37}
-  \ALIUSPlacedTextContent{420.750}{95.536}{79.653}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(8), 3031–3040.}
+  \ALIUSPlacedTextContent{420.750}{95.536}{79.653}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(8), 3031â€“3040.}
   \ALIUSPlacedTextContent{71.080}{116.716}{96.746}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-shanon-2002}Shanon, B. (2002).}
   \ALIUSPlacedTextContent{169.590}{116.716}{357.774}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The antipodes of the mind: Charting the phenomenology of the ayahuasca}
   \ALIUSPlacedTextContent{107.080}{133.216}{46.771}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{experience}
@@ -1060,12 +1065,12 @@
   \ALIUSPlacedTextContent{160.197}{241.096}{123.159}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuropsychopharmacology}
   \ALIUSPlacedTextContent{283.420}{241.096}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{289.348}{241.096}{9.226}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{16}
-  \ALIUSPlacedTextContent{298.591}{241.096}{66.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5), 357–372.}
+  \ALIUSPlacedTextContent{298.591}{241.096}{66.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5), 357â€“372.}
   \ALIUSPlacedTextContent{71.080}{260.476}{97.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carhart-harris-fortier-milliere-zahavi-2014}Zahavi, D. (2014).}
   \ALIUSPlacedTextContent{171.982}{260.476}{305.944}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Self and Other: Exploring Subjectivity, Empathy, and Shame}
   \ALIUSPlacedTextContent{477.884}{260.476}{49.544}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Oxford}
   \ALIUSPlacedTextContent{106.530}{276.976}{87.491}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{University Press.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

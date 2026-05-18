@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -178,7 +183,7 @@
   \ALIUSPlacedTextContent{90.000}{703.903}{418.436}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Dr. Maddalena Canna is a Postdoctoral researcher at Northwestern University}
   \ALIUSPlacedTextContent{90.000}{721.183}{418.288}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{and Dr. Rebecca Seligman is an Associate professor of anthropology at}
   \ALIUSPlacedTextContent{90.000}{738.463}{418.492}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Northwestern University. You are both part of the ALIUS research group}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -187,7 +192,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{496.320}{35.472}{8.652}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{13}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -197,16 +202,16 @@
   \ALIUSPlacedTextContent{90.000}{137.263}{277.208}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{better understand some aspects of consciousness?}
   \ALIUSPlacedTextContent{90.000}{166.418}{418.198}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We both conducted our PhD research on spirit possession; Maddalena Canna}
   \ALIUSPlacedTextContent{90.000}{186.098}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on demonic possession in Nicaragua, and Rebecca Seligman on religious}
-  \ALIUSPlacedTextContent{90.000}{205.538}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possession in Brazilian Candomblé. Spirit possession has been frequently}
+  \ALIUSPlacedTextContent{90.000}{205.538}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possession in Brazilian CandomblÃ©. Spirit possession has been frequently}
   \ALIUSPlacedTextContent{90.000}{224.978}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{exoticized, as something exclusively bounded to localized systems of beliefs.}
   \ALIUSPlacedTextContent{90.000}{244.418}{418.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Also, it has been medicalized and conflated with a wide array of psychiatric}
   \ALIUSPlacedTextContent{90.000}{264.098}{418.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{constructs, from hysteria to conversion disorder. We both reacted to these}
-  \ALIUSPlacedTextContent{90.000}{283.538}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{two lines of misconception—exoticization and pathologization—by}
+  \ALIUSPlacedTextContent{90.000}{283.538}{418.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{two lines of misconceptionâ€”exoticization and pathologizationâ€”by}
   \ALIUSPlacedTextContent{90.000}{302.978}{418.198}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{deconstructing their underlying implicit assumptions. Both exoticization}
   \ALIUSPlacedTextContent{90.000}{322.418}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and pathologization of trance and possession rest on interrelated}
   \ALIUSPlacedTextContent{90.000}{342.098}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{assumptions about the nature of consciousness and the relationship between}
   \ALIUSPlacedTextContent{90.000}{361.538}{95.403}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind and body.}
-  \ALIUSPlacedTextContent{90.000}{392.978}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Possession—in whatever form—is a compelling example of how}
+  \ALIUSPlacedTextContent{90.000}{392.978}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Possessionâ€”in whatever formâ€”is a compelling example of how}
   \ALIUSPlacedTextContent{90.000}{412.418}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness cannot be reduced to the mind-body binarism dominating}
   \ALIUSPlacedTextContent{90.000}{431.858}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Western lay models of health. Studying the complex physiological, emotional}
   \ALIUSPlacedTextContent{90.000}{451.538}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and cognitive underpinnings of possession across cultures requires a model}
@@ -227,7 +232,7 @@
   \ALIUSPlacedTextContent{291.451}{697.538}{216.823}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it. The appraisal shapes the experience}
   \ALIUSPlacedTextContent{90.000}{716.978}{418.286}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of trance, including its physiological components (e.g., hormonal and}
   \ALIUSPlacedTextContent{90.000}{736.418}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuronal correlates) (Seligman 2018). This is why, as anthropologists, we put}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -236,21 +241,21 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.600}{35.472}{9.396}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{14}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
-  \ALIUSPlacedTextContent{107.040}{103.157}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{135.360}{103.157}{324.161}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The way in which a state of consciousness is}
-  \ALIUSPlacedTextContent{135.360}{121.157}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{appraised (e.g., healthy vs. pathological) and}
-  \ALIUSPlacedTextContent{135.360}{139.157}{79.701}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{reappraised}
-  \ALIUSPlacedTextContent{235.188}{139.157}{48.493}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{shapes}
-  \ALIUSPlacedTextContent{304.051}{139.157}{25.471}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the}
-  \ALIUSPlacedTextContent{349.650}{139.157}{32.671}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{core}
-  \ALIUSPlacedTextContent{402.691}{139.157}{17.545}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of}
-  \ALIUSPlacedTextContent{440.606}{139.157}{18.985}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{its}
-  \ALIUSPlacedTextContent{469.680}{147.648}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{135.360}{157.157}{196.034}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{phenomenological experience.}
+  \ALIUSPlacedTextContent{117.360}{100.658}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{135.416}{100.658}{324.161}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The way in which a state of consciousness is}
+  \ALIUSPlacedTextContent{135.360}{118.658}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{appraised (e.g., healthy vs. pathological) and}
+  \ALIUSPlacedTextContent{257.646}{136.658}{79.701}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{reappraised}
+  \ALIUSPlacedTextContent{273.250}{136.658}{48.493}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{shapes}
+  \ALIUSPlacedTextContent{284.761}{136.658}{25.471}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the}
+  \ALIUSPlacedTextContent{281.161}{136.658}{32.671}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{core}
+  \ALIUSPlacedTextContent{288.724}{136.658}{17.545}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of}
+  \ALIUSPlacedTextContent{288.004}{136.658}{18.985}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{its}
+  \ALIUSPlacedTextContent{463.633}{154.658}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{199.480}{154.658}{196.034}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{phenomenological experience.}
   \ALIUSPlacedTextContent{90.000}{190.658}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in brackets the term "altered" when talking about states of consciousness.}
   \ALIUSPlacedTextContent{90.000}{210.098}{418.137}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Transcultural research helps us better understand that the relationship}
   \ALIUSPlacedTextContent{90.000}{229.538}{418.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{between what is deemed normal and what is deemed altered is a matter of}
@@ -282,7 +287,7 @@
   \ALIUSPlacedTextContent{90.000}{720.223}{418.344}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{(Seligman, 2014). Trance is commonly practiced for healing purposes by}
   \ALIUSPlacedTextContent{90.000}{737.503}{418.442}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{shamans (Winkelman, 1989). By working on the way people frame the}
   \ALIUSPlacedTextContent{90.000}{754.783}{418.393}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{meaning and live their somatic experiences, body-mind relationships can be}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -291,7 +296,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{496.080}{35.472}{8.892}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{15}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -328,7 +333,7 @@
   \ALIUSPlacedTextContent{90.000}{697.538}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ways all the time, both outside and within Euro-American contexts. For this}
   \ALIUSPlacedTextContent{90.000}{716.978}{418.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reason, we don't see any limitation on a potential therapeutic use of trance.}
   \ALIUSPlacedTextContent{90.000}{736.418}{418.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Intervening on the dis-integration and re-integration of functions, trance}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -337,23 +342,23 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.360}{35.472}{9.564}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{16}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
   \ALIUSPlacedTextContent{90.000}{85.538}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and dissociative states can be used for an optimization of the overall health}
-  \ALIUSPlacedTextContent{90.000}{104.978}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the persona through the regulation of awareness—for example of pain or}
+  \ALIUSPlacedTextContent{90.000}{104.978}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the persona through the regulation of awarenessâ€”for example of pain or}
   \ALIUSPlacedTextContent{90.000}{124.418}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other sensations. Such regulation can lead to shifts in response and}
   \ALIUSPlacedTextContent{90.000}{144.098}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modulation or even reshaping of neuro-physiological pathways underpinning}
   \ALIUSPlacedTextContent{90.000}{163.538}{36.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{FND.}
-  \ALIUSPlacedTextContent{104.400}{209.717}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{132.480}{209.717}{320.234}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Intervening on the dis-integration and re-}
-  \ALIUSPlacedTextContent{132.480}{227.717}{324.303}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{integration of functions, trance and dissociative}
+  \ALIUSPlacedTextContent{114.480}{209.717}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{134.577}{209.717}{320.234}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Intervening on the dis-integration and re-}
+  \ALIUSPlacedTextContent{132.542}{227.717}{324.303}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{integration of functions, trance and dissociative}
   \ALIUSPlacedTextContent{132.480}{245.717}{324.427}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{states can be used to for an optimization of the}
-  \ALIUSPlacedTextContent{132.480}{263.717}{324.363}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{overall health of the persona through the}
-  \ALIUSPlacedTextContent{132.480}{281.717}{324.289}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{regulation of awareness—for example of pain or}
-  \ALIUSPlacedTextContent{466.800}{289.488}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{132.480}{299.717}{110.113}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{other sensations.}
+  \ALIUSPlacedTextContent{132.512}{263.717}{324.363}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{overall health of the persona through the}
+  \ALIUSPlacedTextContent{132.549}{281.717}{324.289}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{regulation of awarenessâ€”for example of pain or}
+  \ALIUSPlacedTextContent{460.907}{299.717}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{239.637}{299.717}{110.113}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{other sensations.}
   \ALIUSPlacedTextContent{90.000}{349.663}{418.335}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You argued that, in the case of Alice, her symptoms could arise from an}
   \ALIUSPlacedTextContent{90.000}{366.943}{418.464}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{enhanced sensitivity to her bodily signals along with a poor perceptual}
   \ALIUSPlacedTextContent{90.000}{384.223}{418.267}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{accuracy, explaining how benign bodily sensations can be amplified and}
@@ -376,7 +381,7 @@
   \ALIUSPlacedTextContent{90.000}{706.783}{418.388}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interoceptive abilities (Paulus \& Stein, 2010). On one hand, it is characterized}
   \ALIUSPlacedTextContent{90.000}{724.063}{418.340}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{by an enhanced interoceptive sensitivity, measured at the subjective level by}
   \ALIUSPlacedTextContent{90.000}{741.343}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{a better heart-beat detection and at the neural level by a stronger heart-}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -385,7 +390,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.840}{35.472}{9.132}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{17}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -414,9 +419,9 @@
   \ALIUSPlacedTextContent{90.000}{489.103}{418.256}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Importantly, schizophrenia is a condition which is differently appraised across}
   \ALIUSPlacedTextContent{90.000}{506.383}{418.547}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{cultures (Lin \& Kleinman, 1988). This notably results in considering the}
   \ALIUSPlacedTextContent{90.000}{523.663}{418.276}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{apparition of hallucinations either as being symptomatic or not, and to vary in}
-  \ALIUSPlacedTextContent{90.000}{540.943}{418.437}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{frequency and content depending on cultural contexts (Larøi et al., 2014).}
+  \ALIUSPlacedTextContent{90.000}{540.943}{418.437}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{frequency and content depending on cultural contexts (LarÃ¸i et al., 2014).}
   \ALIUSPlacedTextContent{90.000}{558.223}{404.743}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{How do you expect FND and its symptomatology to vary across cultures?}
-  \ALIUSPlacedTextContent{90.000}{587.138}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We do think culture acts at the level of appraisal—and re-appraisal—in}
+  \ALIUSPlacedTextContent{90.000}{587.138}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We do think culture acts at the level of appraisalâ€”and re-appraisalâ€”in}
   \ALIUSPlacedTextContent{90.000}{606.818}{418.292}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{shaping and reinforcing loops of interoceptive inferences. For example, a}
   \ALIUSPlacedTextContent{90.000}{626.258}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sensation can be appraised as a symptom and trigger cascades of pathogenic}
   \ALIUSPlacedTextContent{90.000}{645.698}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reactions because of the negative meaning associated (Hay 2010, Canna and}
@@ -425,7 +430,7 @@
   \ALIUSPlacedTextContent{90.000}{704.258}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reactions, leading to it being experienced as disruptive. The parallel with}
   \ALIUSPlacedTextContent{90.000}{723.698}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{schizophrenia is interesting. As studied by Luhrmann et al. (2012), some}
   \ALIUSPlacedTextContent{90.000}{743.138}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mental events like hearing voices (or auditory hallucination, from a}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -434,7 +439,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.120}{35.472}{9.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{18}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -464,14 +469,14 @@
   \ALIUSPlacedTextContent{90.000}{545.858}{92.394}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{exact same way.}
   \ALIUSPlacedTextContent{90.000}{577.538}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{That said, if we go back to the idea that appraisal is a key, socially scaffolded}
   \ALIUSPlacedTextContent{90.000}{596.978}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or kindled aspect of interoceptive inference, then negative appraisals of}
-  \ALIUSPlacedTextContent{108.240}{649.396}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{136.320}{649.396}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Processes of socially shaped appraisal (also called}
-  \ALIUSPlacedTextContent{136.320}{667.396}{324.200}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{cultural scaffolding, or social kindling) are not only}
-  \ALIUSPlacedTextContent{136.320}{685.396}{324.180}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{a cultural gloss, or a superficial layer of experience,}
+  \ALIUSPlacedTextContent{118.320}{649.396}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{136.351}{649.396}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Processes of socially shaped appraisal (also called}
+  \ALIUSPlacedTextContent{136.388}{667.396}{324.200}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{cultural scaffolding, or social kindling) are not only}
+  \ALIUSPlacedTextContent{136.398}{685.396}{324.180}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{a cultural gloss, or a superficial layer of experience,}
   \ALIUSPlacedTextContent{136.320}{703.396}{324.336}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{but they are at the very core of how an event is}
-  \ALIUSPlacedTextContent{470.880}{711.648}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{136.320}{721.396}{290.329}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experienced and integrated in individual lives}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{464.656}{721.396}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{153.323}{721.396}{290.329}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experienced and integrated in individual lives}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -480,7 +485,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.360}{35.472}{9.564}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{19}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -488,10 +493,10 @@
   \ALIUSPlacedTextContent{90.000}{104.978}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{increasing anxiety. We refer to the subsequent loops as "bio-looping" because}
   \ALIUSPlacedTextContent{90.000}{124.418}{418.392}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the mechanisms are not only cognitive and affective but can also entail}
   \ALIUSPlacedTextContent{90.000}{144.098}{418.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{physiological responses that become activated or reinforced through such}
-  \ALIUSPlacedTextContent{90.000}{163.538}{418.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{loops—for example stress hormones and inflammatory processes.  In light of}
+  \ALIUSPlacedTextContent{90.000}{163.538}{418.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{loopsâ€”for example stress hormones and inflammatory processes.  In light of}
   \ALIUSPlacedTextContent{90.000}{182.978}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{such processes, it would be especially productive to consider how gender-}
-  \ALIUSPlacedTextContent{90.000}{202.418}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{specific forms of anxiety—for example the hyper-focus on the control of}
-  \ALIUSPlacedTextContent{90.000}{222.098}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feminine bodies common in Euro-American societies—may concentrate}
+  \ALIUSPlacedTextContent{90.000}{202.418}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{specific forms of anxietyâ€”for example the hyper-focus on the control of}
+  \ALIUSPlacedTextContent{90.000}{222.098}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feminine bodies common in Euro-American societiesâ€”may concentrate}
   \ALIUSPlacedTextContent{90.000}{241.538}{418.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{patterns of sensitization among specific pockets of the population and}
   \ALIUSPlacedTextContent{90.000}{260.978}{265.150}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contribute to the huge gender disparity in FND.}
   \ALIUSPlacedTextContent{90.000}{292.543}{418.357}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You introduce the notion of "self-scape" to describe the set of possibilities}
@@ -516,7 +521,7 @@
   \ALIUSPlacedTextContent{90.000}{645.698}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{would be theoretically and pragmatically problematic. Because of this co-}
   \ALIUSPlacedTextContent{90.000}{665.138}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{constitutive nature of mental and physical aspects of health, the main}
   \ALIUSPlacedTextContent{90.000}{684.818}{412.875}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{intersectional variables of sex/gender and race/ethnicity are always at play.}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -525,7 +530,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{494.400}{35.472}{10.548}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{20}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -545,7 +550,7 @@
   \ALIUSPlacedTextContent{90.000}{338.978}{407.442}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cultural difference, we should at least disentangle between two main axes:}
   \ALIUSPlacedTextContent{126.000}{370.418}{382.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{i) cultural diversity as the availability of multiple models to appraise}
   \ALIUSPlacedTextContent{126.000}{389.858}{382.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and reappraise symptoms, a process that can be negative, positive or}
-  \ALIUSPlacedTextContent{126.000}{409.538}{382.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neutral. For example, in Brazilian Candomblé individuals who}
+  \ALIUSPlacedTextContent{126.000}{409.538}{382.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neutral. For example, in Brazilian CandomblÃ© individuals who}
   \ALIUSPlacedTextContent{126.000}{428.978}{382.220}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience loss of control over their bodies and consciousness learn to}
   \ALIUSPlacedTextContent{126.000}{448.418}{382.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reappraise and shape the experience as opportunities to connect with}
   \ALIUSPlacedTextContent{126.000}{467.858}{186.444}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{gods (Canna and Seligman, 2020).}
@@ -555,13 +560,13 @@
   \ALIUSPlacedTextContent{126.000}{565.538}{382.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particular Latinx and African American populations (Sewell, 2015)}
   \ALIUSPlacedTextContent{126.000}{584.978}{382.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and this is just one among the manifold variables that count in the}
   \ALIUSPlacedTextContent{126.000}{604.418}{120.505}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{modulation of FND.}
-  \ALIUSPlacedTextContent{105.840}{663.797}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{118.320}{663.797}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{136.320}{663.797}{324.288}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{We strongly endorse a non-binary model of mind}
-  \ALIUSPlacedTextContent{136.320}{681.797}{324.232}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{and body, hence reducing a condition to}
+  \ALIUSPlacedTextContent{136.353}{681.797}{324.232}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{and body, hence reducing a condition to}
   \ALIUSPlacedTextContent{136.320}{699.797}{324.299}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{psychogenic-only or physical-only etiology would}
-  \ALIUSPlacedTextContent{470.880}{713.568}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{136.320}{717.797}{300.504}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{be theoretically and pragmatically problematic.}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{464.619}{717.797}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{148.217}{717.797}{300.504}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{be theoretically and pragmatically problematic.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -570,13 +575,13 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{496.080}{35.472}{8.808}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{21}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
-  \ALIUSPlacedTextContent{90.000}{85.663}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You argued that "although the three dimensions that we presented—the}
+  \ALIUSPlacedTextContent{90.000}{85.663}{418.392}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{You argued that "although the three dimensions that we presentedâ€”the}
   \ALIUSPlacedTextContent{90.000}{102.943}{418.394}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{embodiment of cultural meaning, the conversion of chronic stress and the}
-  \ALIUSPlacedTextContent{90.000}{120.223}{418.260}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{impact of stigma—are particularly evident in PNES, (…) the range of their}
+  \ALIUSPlacedTextContent{90.000}{120.223}{418.260}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{impact of stigmaâ€”are particularly evident in PNES, (â€¦) the range of their}
   \ALIUSPlacedTextContent{90.000}{137.263}{418.256}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{applicability can be extended to other Functional Neurological Disorders, and}
   \ALIUSPlacedTextContent{90.000}{154.543}{418.364}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{other Somatic Symptom Disorders as well" (Canna and Seligman, 2020, p.7).}
   \ALIUSPlacedTextContent{90.000}{171.823}{414.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In FND, the conversion of cultural models into symptoms is rendered clear-}
@@ -603,14 +608,14 @@
   \ALIUSPlacedTextContent{90.000}{574.418}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dimensions of any other condition. As mentioned previously, we endorse a}
   \ALIUSPlacedTextContent{90.000}{594.098}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{strongly non-binary model of health and human experience. What we call}
   \ALIUSPlacedTextContent{90.000}{613.538}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"mind" and "body" in Western societies are not separated entities in many}
-  \ALIUSPlacedTextContent{90.000}{632.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other cultures. Hence, we don't see any structural reason—beyond}
-  \ALIUSPlacedTextContent{90.000}{652.418}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conventional disciplinary boundaries—to consider the physical and the}
+  \ALIUSPlacedTextContent{90.000}{632.978}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{other cultures. Hence, we don't see any structural reasonâ€”beyond}
+  \ALIUSPlacedTextContent{90.000}{652.418}{418.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conventional disciplinary boundariesâ€”to consider the physical and the}
   \ALIUSPlacedTextContent{90.000}{672.098}{418.298}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mental as two separate realms. One of the main reasons for our interest in}
   \ALIUSPlacedTextContent{90.000}{691.538}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{FND is that it is a compelling illustration of the artificiality of the mind/body}
   \ALIUSPlacedTextContent{90.000}{710.978}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{divide. In the case of FND, the mind/body divide comes to its most nefarious}
   \ALIUSPlacedTextContent{90.000}{730.418}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consequences: inadequate healthcare and a long history of mistreatment.}
   \ALIUSPlacedTextContent{90.000}{749.858}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Theoretically, this stems from an incapability to conceive of health in holistic}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -619,14 +624,14 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.360}{35.472}{9.648}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{22}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
   \ALIUSPlacedTextContent{90.000}{85.538}{418.283}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{terms, by taking into account the multiple entanglements of different}
   \ALIUSPlacedTextContent{90.000}{104.978}{418.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{physiological and psychological processes. Through a cross-cultural}
   \ALIUSPlacedTextContent{90.000}{124.418}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perspective, we can question the artificiality of this divide and aim at offering}
-  \ALIUSPlacedTextContent{90.000}{144.098}{386.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a more encompassing—and humanized—vision of treatment and care.}
+  \ALIUSPlacedTextContent{90.000}{144.098}{386.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a more encompassingâ€”and humanizedâ€”vision of treatment and care.}
   \ALIUSPlacedTextContent{90.000}{175.538}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{A great illustration of this is our work on trance and possession, in which}
   \ALIUSPlacedTextContent{90.000}{194.978}{418.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind, body and self can be seen to influence one another in powerful ways.}
   \ALIUSPlacedTextContent{90.000}{214.418}{418.336}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In Rebecca Seligman's work on spirit possession, she found that certain}
@@ -634,28 +639,28 @@
   \ALIUSPlacedTextContent{90.000}{253.538}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{particularly tuned into these sensations and typically shifted consciousness}
   \ALIUSPlacedTextContent{90.000}{272.978}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{away from self-awareness and bodiliness, to a different state. In Maddalena}
   \ALIUSPlacedTextContent{90.000}{292.418}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Canna's work a comparable tuning happens when the possession is deemed}
-  \ALIUSPlacedTextContent{90.000}{311.858}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dangerous—or demonic in spiritual terms. Complex sets of interoceptive cues}
+  \ALIUSPlacedTextContent{90.000}{311.858}{418.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dangerousâ€”or demonic in spiritual terms. Complex sets of interoceptive cues}
   \ALIUSPlacedTextContent{90.000}{331.538}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{signal the onset of a state of consciousness where the reconfiguration of}
   \ALIUSPlacedTextContent{90.000}{350.978}{418.183}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{perceptive, cognitive and bodily processes is experienced as disruptive}
   \ALIUSPlacedTextContent{90.000}{370.418}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(Seligman 2014, 2018; Canna 2017, 2021). Something similar is likely to be}
-  \ALIUSPlacedTextContent{90.000}{389.858}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{happening in FND, but within an entirely different context of meaning—one}
+  \ALIUSPlacedTextContent{90.000}{389.858}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{happening in FND, but within an entirely different context of meaningâ€”one}
   \ALIUSPlacedTextContent{90.000}{409.538}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in which the connection between mind, body, and self is not embraced. Thus,}
   \ALIUSPlacedTextContent{90.000}{428.978}{418.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different contexts of meaning can radically shift interoception and the}
   \ALIUSPlacedTextContent{90.000}{448.418}{182.677}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience of somatic symptoms.}
   \ALIUSPlacedTextContent{90.000}{479.858}{418.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{These ideas are supported by some interesting recent neuroscience research}
   \ALIUSPlacedTextContent{90.000}{499.538}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on the "Material Me" (Seth 2013), which suggests that interoceptive}
-  \ALIUSPlacedTextContent{90.000}{518.978}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{functions—or interoceptive affordances, as we call them—can be at the origin}
-  \ALIUSPlacedTextContent{90.000}{538.418}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the most primary sense of self. By closely monitoring this process—in}
-  \ALIUSPlacedTextContent{90.000}{557.858}{414.934}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{collaboration with the patients as active participants in our investigation—}
+  \ALIUSPlacedTextContent{90.000}{518.978}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{functionsâ€”or interoceptive affordances, as we call themâ€”can be at the origin}
+  \ALIUSPlacedTextContent{90.000}{538.418}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the most primary sense of self. By closely monitoring this processâ€”in}
+  \ALIUSPlacedTextContent{90.000}{557.858}{414.934}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{collaboration with the patients as active participants in our investigationâ€”}
   \ALIUSPlacedTextContent{90.000}{577.538}{418.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we hope to pave the way not only for a better understanding of FND, but}
   \ALIUSPlacedTextContent{90.000}{596.978}{349.722}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{most broadly for a more encompassing model of human health.}
-  \ALIUSPlacedTextContent{102.960}{657.797}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{115.440}{657.797}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{133.440}{657.797}{324.279}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Through a cross-cultural perspective, we can}
-  \ALIUSPlacedTextContent{133.440}{675.797}{324.181}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{question the artificiality of this divide and aim at}
-  \ALIUSPlacedTextContent{133.440}{693.797}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{offering a more encompassing—and humanized—}
-  \ALIUSPlacedTextContent{468.000}{700.608}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{133.440}{711.797}{182.352}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{vision of treatment and care}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{133.489}{675.797}{324.181}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{question the artificiality of this divide and aim at}
+  \ALIUSPlacedTextContent{133.440}{693.797}{324.273}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{offering a more encompassingâ€”and humanizedâ€”}
+  \ALIUSPlacedTextContent{461.719}{711.797}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{204.404}{711.797}{182.352}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{vision of treatment and care}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -664,7 +669,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.600}{35.472}{9.492}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{23}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -708,7 +713,7 @@
   \ALIUSPlacedTextContent{90.000}{692.258}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more compartmentalized and dehumanized (Marcum 2008, Oldani 2014, Eck}
   \ALIUSPlacedTextContent{90.000}{711.698}{418.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2020).  Providing the participant with a context for expressing their distress}
   \ALIUSPlacedTextContent{90.000}{731.138}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in their own words and being recognized for the specificity of their}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -717,18 +722,18 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{494.640}{35.472}{10.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{24}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
-  \ALIUSPlacedTextContent{105.120}{111.557}{25.392}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{137.760}{111.557}{164.285}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Anthropological research}
-  \ALIUSPlacedTextContent{301.920}{111.557}{19.417}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{is}
-  \ALIUSPlacedTextContent{323.760}{111.557}{138.296}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{action, (…) we don't}
-  \ALIUSPlacedTextContent{472.320}{123.168}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{137.760}{129.557}{154.091}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{study people, we study}
-  \ALIUSPlacedTextContent{291.840}{129.557}{26.523}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{with}
-  \ALIUSPlacedTextContent{318.480}{129.557}{51.296}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{people.}
+  \ALIUSPlacedTextContent{199.766}{111.557}{25.392}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{217.766}{111.557}{164.285}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Anthropological research}
+  \ALIUSPlacedTextContent{290.200}{111.557}{19.417}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{is}
+  \ALIUSPlacedTextContent{230.760}{111.557}{138.296}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{action, (â€¦) we don't}
+  \ALIUSPlacedTextContent{386.051}{129.557}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{222.863}{129.557}{154.091}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{study people, we study}
+  \ALIUSPlacedTextContent{286.647}{129.557}{26.523}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{with}
+  \ALIUSPlacedTextContent{274.260}{129.557}{51.296}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{people.}
   \ALIUSPlacedTextContent{90.000}{187.298}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience can impact on further coping, if not healing. During her}
   \ALIUSPlacedTextContent{90.000}{206.738}{418.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ethnography of seizures related to demonic possession in Nicaragua,}
   \ALIUSPlacedTextContent{90.000}{226.418}{418.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna used drawing as a means to establish a non-verbal dialogue}
@@ -757,7 +762,7 @@
   \ALIUSPlacedTextContent{90.000}{698.738}{418.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{anthropological knowledge can be translational, allowing it to be applied in}
   \ALIUSPlacedTextContent{90.000}{718.178}{418.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different kinds of practice.  While translation can be challenging, one of}
   \ALIUSPlacedTextContent{90.000}{737.858}{418.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{things that we excel at in anthropology is understanding the different stakes}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -770,7 +775,7 @@
   \fill[ALIUSC0000FF] (274.320bp,-652.080bp) rectangle ++(189.600bp,-0.720bp);
   \fill[ALIUSC0000FF] (90.000bp,-714.960bp) rectangle ++(223.680bp,-0.720bp);
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.360}{35.472}{9.732}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{25}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -784,14 +789,14 @@
   \ALIUSPlacedTextContent{221.485}{261.145}{286.558}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{"Dis-lui qu'il n'existe pas". La propagation de la transe grisi}
   \ALIUSPlacedTextContent{90.000}{276.985}{170.053}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{siknis chez les Miskitos du Nicaragua}
   \ALIUSPlacedTextContent{260.127}{276.985}{87.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Doctoral thesis.}
-  \ALIUSPlacedTextContent{126.000}{308.425}{381.991}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M. (2017). Modéliser les Configurations d' Etats Altérés de}
+  \ALIUSPlacedTextContent{126.000}{308.425}{381.991}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M. (2017). ModÃ©liser les Configurations d' Etats AltÃ©rÃ©s de}
   \ALIUSPlacedTextContent{90.000}{324.265}{63.389}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Conscience.}
   \ALIUSPlacedTextContent{153.426}{324.265}{103.001}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Intellectica, 2017/1, 67}
   \ALIUSPlacedTextContent{256.461}{324.265}{50.027}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{: 269-299.}
   \ALIUSPlacedTextContent{126.000}{355.705}{90.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M. (2019).}
   \ALIUSPlacedTextContent{216.947}{355.705}{118.785}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{La Contagion Visionnaire}
   \ALIUSPlacedTextContent{335.757}{355.705}{172.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Cahiers d'Anthropologie Sociale}
-  \ALIUSPlacedTextContent{90.000}{371.305}{328.884}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{17, David Dupuis \& Maddalena Canna éds., Paris, L'Herne, 2019.}
+  \ALIUSPlacedTextContent{90.000}{371.305}{328.884}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{17, David Dupuis \& Maddalena Canna Ã©ds., Paris, L'Herne, 2019.}
   \ALIUSPlacedTextContent{126.000}{402.985}{381.931}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Canna, M., \& Seligman, R. (2020). Dealing with the unknown. Functional}
   \ALIUSPlacedTextContent{90.000}{418.585}{351.063}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{neurological disorder (FND) and the conversion of cultural meaning.}
   \ALIUSPlacedTextContent{441.156}{418.585}{66.894}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Social Science}
@@ -813,23 +818,23 @@
   \ALIUSPlacedTextContent{304.734}{576.025}{133.190}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Clinical Psychology Review}
   \ALIUSPlacedTextContent{437.958}{576.025}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{447.085}{576.025}{10.122}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{30}
-  \ALIUSPlacedTextContent{457.224}{576.025}{50.813}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1—11.}
+  \ALIUSPlacedTextContent{457.224}{576.025}{50.813}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1â€”11.}
   \ALIUSPlacedTextContent{90.000}{591.865}{201.502}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.cpr.2009.08.008}
   \ALIUSPlacedTextContent{126.000}{623.305}{96.017}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hacking, I. (1995).}
   \ALIUSPlacedTextContent{222.889}{623.305}{284.991}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Rewriting the Soul: Multiple Personality and the Sciences of}
   \ALIUSPlacedTextContent{90.000}{639.145}{38.102}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Memory}
   \ALIUSPlacedTextContent{128.115}{639.145}{146.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Princeton University Press.}
   \ALIUSPlacedTextContent{274.349}{639.145}{189.574}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1515/9781400821686}
-  \ALIUSPlacedTextContent{126.000}{670.585}{382.016}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Halloy. (2012). Gods in the Flesh: Learning Emotions in the Xangô}
+  \ALIUSPlacedTextContent{126.000}{670.585}{382.016}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Halloy. (2012). Gods in the Flesh: Learning Emotions in the XangÃ´}
   \ALIUSPlacedTextContent{90.000}{686.185}{55.689}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Possession}
   \ALIUSPlacedTextContent{181.053}{686.185}{26.099}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Cult}
   \ALIUSPlacedTextContent{242.516}{686.185}{43.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(Brazil).}
   \ALIUSPlacedTextContent{321.109}{686.185}{31.441}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Ethnos}
   \ALIUSPlacedTextContent{352.556}{686.185}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{393.838}{686.185}{30.342}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{77(2),}
-  \ALIUSPlacedTextContent{459.544}{686.185}{48.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{177—202.}
+  \ALIUSPlacedTextContent{459.544}{686.185}{48.479}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{177â€”202.}
   \ALIUSPlacedTextContent{90.000}{702.025}{223.502}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/00141844.2011.586465}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -848,37 +853,37 @@
   \fill[ALIUSC0000FF] (146.160bp,-633.600bp) rectangle ++(211.440bp,-0.720bp);
   \fill[ALIUSC0000FF] (90.000bp,-696.480bp) rectangle ++(204.720bp,-0.720bp);
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{494.640}{35.472}{10.404}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{26}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
   \ALIUSPlacedTextContent{126.000}{85.225}{382.013}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hay. (2008). Reading Sensations: Understanding the Process of}
   \ALIUSPlacedTextContent{90.000}{101.065}{188.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Distinguishing `Fine' from `Sick'.}
   \ALIUSPlacedTextContent{285.507}{101.065}{146.693}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Transcultural Psychiatry, 45}
-  \ALIUSPlacedTextContent{432.191}{101.065}{75.833}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 198—229.}
+  \ALIUSPlacedTextContent{432.191}{101.065}{75.833}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 198â€”229.}
   \ALIUSPlacedTextContent{90.000}{116.905}{205.241}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/1363461508089765}
-  \ALIUSPlacedTextContent{126.000}{148.345}{382.087}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Larøi, F., Luhrmann, T. M., Bell, V., Christian, W. A., Deshpande, S.,}
+  \ALIUSPlacedTextContent{126.000}{148.345}{382.087}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{LarÃ¸i, F., Luhrmann, T. M., Bell, V., Christian, W. A., Deshpande, S.,}
   \ALIUSPlacedTextContent{90.000}{163.945}{418.072}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-canna-seligman-koroma-fernyhough-jenkins-2014}Fernyhough, C., Jenkins, J., \& Woods, A. (2014). Culture and Hallucinations:}
   \ALIUSPlacedTextContent{90.000}{179.785}{175.069}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Overview and Future Directions.}
   \ALIUSPlacedTextContent{266.928}{179.785}{105.409}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Schizophrenia Bulletin}
   \ALIUSPlacedTextContent{372.350}{179.785}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{380.144}{179.785}{11.175}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{40}
-  \ALIUSPlacedTextContent{391.337}{179.785}{116.702}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(Suppl\_4), S213—S220.}
+  \ALIUSPlacedTextContent{391.337}{179.785}{116.702}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(Suppl\_4), S213â€”S220.}
   \ALIUSPlacedTextContent{90.000}{195.625}{187.155}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/schbul/sbu012}
-  \ALIUSPlacedTextContent{126.000}{227.065}{382.004}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Leptourgos, P., Denève, S., \& Jardri, R. (2017). Can circular inference relate}
+  \ALIUSPlacedTextContent{126.000}{227.065}{382.004}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Leptourgos, P., DenÃ¨ve, S., \& Jardri, R. (2017). Can circular inference relate}
   \ALIUSPlacedTextContent{90.000}{242.665}{324.104}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{the neuropathological and behavioral aspects of schizophrenia?}
   \ALIUSPlacedTextContent{414.472}{242.665}{93.564}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current Opinion in}
   \ALIUSPlacedTextContent{90.000}{258.505}{61.495}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neurobiology}
   \ALIUSPlacedTextContent{151.527}{258.505}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{157.455}{258.505}{10.942}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{46}
-  \ALIUSPlacedTextContent{168.414}{258.505}{52.483}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 154—161.}
+  \ALIUSPlacedTextContent{168.414}{258.505}{52.483}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 154â€”161.}
   \ALIUSPlacedTextContent{220.907}{258.505}{204.359}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.conb.2017.08.012}
   \ALIUSPlacedTextContent{126.000}{289.945}{382.021}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Lin, K.-M., \& Kleinman, A. M. (1988). Psychopathology and Clinical Course}
   \ALIUSPlacedTextContent{90.000}{305.785}{247.480}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{of Schizophrenia: A Cross-Cultural Perspective.}
   \ALIUSPlacedTextContent{338.042}{305.785}{104.087}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Schizophrenia Bulletin}
   \ALIUSPlacedTextContent{442.140}{305.785}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{448.611}{305.785}{9.265}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{14}
-  \ALIUSPlacedTextContent{457.893}{305.785}{47.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 555—}
+  \ALIUSPlacedTextContent{457.893}{305.785}{47.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 555â€”}
   \ALIUSPlacedTextContent{90.000}{321.385}{22.527}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{567.}
   \ALIUSPlacedTextContent{112.541}{321.385}{191.232}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/schbul/14.4.555}
   \ALIUSPlacedTextContent{126.000}{337.225}{382.004}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Livingston, J. D., \& Boyd, J. E. (2010). Correlates and consequences of}
@@ -891,19 +896,19 @@
   \ALIUSPlacedTextContent{369.834}{368.665}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{397.066}{368.665}{8.802}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{71}
   \ALIUSPlacedTextContent{405.880}{368.665}{23.490}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(12),}
-  \ALIUSPlacedTextContent{450.688}{368.665}{57.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2150—2161.}
+  \ALIUSPlacedTextContent{450.688}{368.665}{57.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2150â€”2161.}
   \ALIUSPlacedTextContent{90.000}{384.505}{232.554}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.socscimed.2010.09.030}
   \ALIUSPlacedTextContent{126.000}{415.945}{382.030}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Luhrmann, Nusbaum, H., \& Thisted, R. (2010). The Absorption Hypothesis:}
   \ALIUSPlacedTextContent{90.000}{431.785}{262.679}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Learning to Hear God in Evangelical Christianity.}
   \ALIUSPlacedTextContent{353.781}{431.785}{135.932}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{American Anthropologist, 112}
   \ALIUSPlacedTextContent{489.764}{431.785}{18.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1),}
-  \ALIUSPlacedTextContent{90.000}{447.385}{40.400}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{66—78.}
+  \ALIUSPlacedTextContent{90.000}{447.385}{40.400}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{66â€”78.}
   \ALIUSPlacedTextContent{130.416}{447.385}{228.433}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/j.1548-1433.2009.01197.x}
   \ALIUSPlacedTextContent{126.000}{478.825}{382.056}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Luhrmann, Padmavati, R., Tharoor, H., \& Osei, A. (2015). Hearing Voices}
   \ALIUSPlacedTextContent{90.000}{494.665}{265.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{in Different Cultures: A Social Kindling Hypothesis.}
   \ALIUSPlacedTextContent{354.625}{494.665}{133.544}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Topics in Cognitive Science, 7}
   \ALIUSPlacedTextContent{488.218}{494.665}{19.811}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4),}
-  \ALIUSPlacedTextContent{90.000}{510.505}{51.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{646—663.}
+  \ALIUSPlacedTextContent{90.000}{510.505}{51.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{646â€”663.}
   \ALIUSPlacedTextContent{141.492}{510.505}{162.361}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/tops.12158}
   \ALIUSPlacedTextContent{126.000}{541.945}{107.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Marcum, J.A., 2008.}
   \ALIUSPlacedTextContent{235.661}{541.945}{146.974}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Humanizing Modern Medicine.}
@@ -926,7 +931,7 @@
   \ALIUSPlacedTextContent{126.000}{714.985}{381.968}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Park, H.-D., \& Tallon-Baudry, C. (2014). The neural subjective frame: From}
   \ALIUSPlacedTextContent{90.000}{730.825}{223.959}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{bodily signals to perceptual consciousness.}
   \ALIUSPlacedTextContent{315.716}{730.825}{192.294}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Philosophical Transactions of the Royal}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -944,7 +949,7 @@
   \fill[ALIUSC0000FF] (252.480bp,-554.880bp) rectangle ++(231.120bp,-0.720bp);
   \fill[ALIUSC0000FF] (90.000bp,-617.760bp) rectangle ++(233.280bp,-0.720bp);
   \ALIUSPlacedTextContent{90.000}{35.378}{228.037}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Maddalena Canna and Rebecca Seligman}
-  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{–}
+  \ALIUSPlacedTextContent{318.056}{35.378}{7.169}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{â€“}
   \ALIUSPlacedTextContent{325.266}{35.378}{147.671}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{How culture breaks down}
   \ALIUSPlacedTextContent{495.120}{35.472}{9.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{27}
   \ALIUSPlacedTextContent{90.000}{52.418}{131.369}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{the mind-body divide}
@@ -961,7 +966,7 @@
   \ALIUSPlacedTextContent{90.000}{148.345}{135.318}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Brain Structure and Function}
   \ALIUSPlacedTextContent{225.346}{148.345}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{230.608}{148.345}{13.986}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{214}
-  \ALIUSPlacedTextContent{244.609}{148.345}{84.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5—6), 451—463.}
+  \ALIUSPlacedTextContent{244.609}{148.345}{84.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5â€”6), 451â€”463.}
   \ALIUSPlacedTextContent{328.244}{148.345}{176.743}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s00429-010-}
   \ALIUSPlacedTextContent{90.000}{163.945}{33.326}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{0258-9}
   \ALIUSPlacedTextContent{126.000}{195.625}{382.071}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Pigott, T. A. (1999). Gender differences in the epidemiology and treatment}
@@ -969,44 +974,44 @@
   \ALIUSPlacedTextContent{195.297}{211.225}{157.932}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Clinical Psychiatry}
   \ALIUSPlacedTextContent{353.256}{211.225}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{359.184}{211.225}{52.423}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{60 Suppl 18}
-  \ALIUSPlacedTextContent{411.638}{211.225}{37.807}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 4—15.}
+  \ALIUSPlacedTextContent{411.638}{211.225}{37.807}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 4â€”15.}
   \ALIUSPlacedTextContent{126.000}{242.665}{381.980}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Seligman, R. (2010). The Unmaking and Making of Self: Embodied Suffering}
-  \ALIUSPlacedTextContent{90.000}{258.505}{418.149}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and Mind-Body Healing in Brazilian Candomblé: UNMAKING AND MAKING}
+  \ALIUSPlacedTextContent{90.000}{258.505}{418.149}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and Mind-Body Healing in Brazilian CandomblÃ©: UNMAKING AND MAKING}
   \ALIUSPlacedTextContent{90.000}{274.345}{60.653}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{THE SELF.}
   \ALIUSPlacedTextContent{150.644}{274.345}{25.394}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Ethos}
   \ALIUSPlacedTextContent{176.046}{274.345}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{181.974}{274.345}{10.148}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{38}
-  \ALIUSPlacedTextContent{192.139}{274.345}{68.724}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 297—320.}
+  \ALIUSPlacedTextContent{192.139}{274.345}{68.724}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(3), 297â€”320.}
   \ALIUSPlacedTextContent{260.882}{274.345}{226.618}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/j.1548-1352.2010.01146.x}
   \ALIUSPlacedTextContent{126.000}{305.785}{382.009}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Seligman, R. (2014). Looking Inside: Biological Mechanisms and}
-  \ALIUSPlacedTextContent{90.000}{321.385}{366.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Embodiment in Candomblé Trance and Possession. In R. Seligman,}
+  \ALIUSPlacedTextContent{90.000}{321.385}{366.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Embodiment in CandomblÃ© Trance and Possession. In R. Seligman,}
   \ALIUSPlacedTextContent{458.943}{321.385}{49.080}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Possessing}
   \ALIUSPlacedTextContent{90.000}{337.225}{32.942}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Spirits}
   \ALIUSPlacedTextContent{135.389}{337.225}{20.492}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{and}
   \ALIUSPlacedTextContent{168.328}{337.225}{39.124}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Healing}
   \ALIUSPlacedTextContent{219.898}{337.225}{27.540}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Selves}
   \ALIUSPlacedTextContent{262.895}{337.225}{22.908}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp.}
-  \ALIUSPlacedTextContent{298.244}{337.225}{48.573}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{111—134).}
+  \ALIUSPlacedTextContent{298.244}{337.225}{48.573}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{111â€”134).}
   \ALIUSPlacedTextContent{359.258}{337.225}{45.788}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Palgrave}
   \ALIUSPlacedTextContent{417.487}{337.225}{57.037}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Macmillan}
   \ALIUSPlacedTextContent{486.966}{337.225}{21.060}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{US.}
   \ALIUSPlacedTextContent{90.000}{353.065}{200.971}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1057/9781137409607\_4}
   \ALIUSPlacedTextContent{126.000}{384.505}{382.145}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Seligman, R. (2018). "Bio-looping" and the Psychophysiological in Religious}
-  \ALIUSPlacedTextContent{90.000}{400.105}{418.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Belief and Practice: Mechanisms of Embodiment in Candomblé Trance and}
+  \ALIUSPlacedTextContent{90.000}{400.105}{418.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Belief and Practice: Mechanisms of Embodiment in CandomblÃ© Trance and}
   \ALIUSPlacedTextContent{90.000}{415.945}{353.666}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-canna-seligman-koroma-possession-in-m-meloni-the-palgrave-handbook-of-biology-and-society-pp-417-439-palgrave-macmillan-uk-https-doi-org-10-1057-978-1-137-52879-7-18-seth-2013}Possession. In M. Meloni, J. Cromby, D. Fitzgerald, \& S. Lloyd (Eds.),}
   \ALIUSPlacedTextContent{443.929}{415.945}{64.105}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Palgrave}
   \ALIUSPlacedTextContent{90.000}{431.785}{179.553}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Handbook of Biology and Society}
-  \ALIUSPlacedTextContent{269.562}{431.785}{238.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp. 417—439). Palgrave Macmillan UK.}
+  \ALIUSPlacedTextContent{269.562}{431.785}{238.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp. 417â€”439). Palgrave Macmillan UK.}
   \ALIUSPlacedTextContent{90.000}{447.385}{220.798}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1057/978-1-137-52879-7\_18}
   \ALIUSPlacedTextContent{126.000}{478.825}{381.983}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self.}
   \ALIUSPlacedTextContent{90.000}{494.665}{130.701}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{220.712}{494.665}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{226.423}{494.665}{8.799}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{17}
-  \ALIUSPlacedTextContent{235.237}{494.665}{71.387}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(11), 565—573.}
+  \ALIUSPlacedTextContent{235.237}{494.665}{71.387}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(11), 565â€”573.}
   \ALIUSPlacedTextContent{306.418}{494.665}{198.476}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.tics.2013.09.007}
   \ALIUSPlacedTextContent{126.000}{526.105}{381.958}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Sewell. (2015). Disaggregating ethnoracial disparities in physician trust.}
   \ALIUSPlacedTextContent{90.000}{541.945}{124.318}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{\ALIUSRefAnchor{aliusref-canna-seligman-koroma-1-20-https-doi-org-10-1016-j-ssresearch-2015-06-020-winkelman-1989}Social Science Research, 54}
-  \ALIUSPlacedTextContent{214.303}{541.945}{38.045}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 1—20.}
+  \ALIUSPlacedTextContent{214.303}{541.945}{38.045}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 1â€”20.}
   \ALIUSPlacedTextContent{252.366}{541.945}{231.252}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.ssresearch.2015.06.020}
   \ALIUSPlacedTextContent{126.000}{573.385}{382.026}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Winkelman, M. (1989). A Cross-cultural Study of Shamanistic Healers.}
   \ALIUSPlacedTextContent{90.000}{589.225}{37.057}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal}
@@ -1016,9 +1021,9 @@
   \ALIUSPlacedTextContent{353.952}{589.225}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{401.884}{589.225}{8.490}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{21}
   \ALIUSPlacedTextContent{410.386}{589.225}{18.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1),}
-  \ALIUSPlacedTextContent{470.670}{589.225}{37.363}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{17—24.}
+  \ALIUSPlacedTextContent{470.670}{589.225}{37.363}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{17â€”24.}
   \ALIUSPlacedTextContent{90.000}{604.825}{233.261}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/02791072.1989.10472139}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

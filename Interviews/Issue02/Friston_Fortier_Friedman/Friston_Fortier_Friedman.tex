@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -168,20 +173,20 @@
   \ALIUSPlacedTextContent{71.080}{459.258}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I first came up with a prototypical free energy principle when I was eight years old,}
   \ALIUSPlacedTextContent{71.080}{476.058}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in what I have previously called a "Gerald Durrell" moment (\ALIUSCitationLink{aliusref-friston-fortier-friedman-friston-2012}{Friston, 2012}). I was in}
   \ALIUSPlacedTextContent{71.080}{493.098}{456.662}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the garden, during a gloriously hot 1960s British summer, preoccupied with the}
-  \ALIUSPlacedTextContent{71.080}{510.138}{298.931}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{antics of some woodlice (small armadillo like bugs—see}
+  \ALIUSPlacedTextContent{71.080}{510.138}{298.931}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{antics of some woodlice (small armadillo like bugsâ€”see}
   \ALIUSPlacedTextContent{369.296}{510.138}{38.191}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{Figure 1}
   \ALIUSPlacedTextContent{407.510}{510.138}{120.138}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{) who were frantically}
   \ALIUSPlacedTextContent{71.080}{526.938}{241.113}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{scurrying around trying to find some shade.}
   \ALIUSPlacedTextContent{71.080}{555.978}{456.592}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{After half an hour of observation and innocent (childlike) contemplation, I realized}
   \ALIUSPlacedTextContent{71.080}{573.018}{456.686}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{their "scurrying" had no purpose or intent: they were simply moving faster in the}
-  \ALIUSPlacedTextContent{71.080}{589.818}{456.529}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{sun—and slower in the shade. The simplicity of this explanation—for what one could}
+  \ALIUSPlacedTextContent{71.080}{589.818}{456.529}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{sunâ€”and slower in the shade. The simplicity of this explanationâ€”for what one could}
   \ALIUSPlacedTextContent{71.080}{606.858}{65.357}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{artfully call}
   \ALIUSPlacedTextContent{136.229}{606.858}{113.133}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{biotic self-organization}
-  \ALIUSPlacedTextContent{249.399}{606.858}{278.288}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{—appealed to me then and appeals to me now. It is}
+  \ALIUSPlacedTextContent{249.399}{606.858}{278.288}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{â€”appealed to me then and appeals to me now. It is}
   \ALIUSPlacedTextContent{71.080}{623.658}{456.687}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{exactly the same principle that underwrites the ensemble density dynamics of the}
-  \ALIUSPlacedTextContent{71.080}{640.698}{246.881}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{free energy principle—and all its corollaries.}
-  \ALIUSPlacedTextContent{71.080}{669.738}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The beautiful simplicity (or nihilistic tautology) of this sort of explanation for life—}
-  \ALIUSPlacedTextContent{71.080}{686.538}{252.921}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and creatures like us—crystallized in my teens}
+  \ALIUSPlacedTextContent{71.080}{640.698}{246.881}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{free energy principleâ€”and all its corollaries.}
+  \ALIUSPlacedTextContent{71.080}{669.738}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The beautiful simplicity (or nihilistic tautology) of this sort of explanation for lifeâ€”}
+  \ALIUSPlacedTextContent{71.080}{686.538}{252.921}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and creatures like usâ€”crystallized in my teens}
   \ALIUSPlacedTextContent{323.888}{686.538}{203.783}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(for an autobiographical account, see}
   \ALIUSPlacedTextContent{71.080}{703.578}{271.290}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{my personal supplementary material in this issue)}
   \ALIUSPlacedTextContent{342.448}{703.578}{185.238}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{. My father thought it would be a}
@@ -189,7 +194,7 @@
   \ALIUSPlacedTextContent{223.443}{720.618}{151.987}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{Space, Time and Gravitation}
   \ALIUSPlacedTextContent{375.439}{720.618}{152.198}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{by Sir Arthur Eddington}
   \ALIUSPlacedTextContent{71.080}{737.418}{456.500}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(\ALIUSCitationLink{aliusref-friston-fortier-friedman-eddington-2014}{Eddington, 2014}). Like my father, I took it to be a compelling essay on the structure}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -201,10 +206,10 @@
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
   \fill[ALIUSC0563C1] (281.320bp,-723.880bp) rectangle ++(98.400bp,-0.480bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (71.080bp,-446.200bp) {\includegraphics[width=453.840bp,height=254.880bp]{Interviews/Issue02/Friston_Fortier_Friedman/assets/alius-extracted-image-p002-b010.png}};
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{18}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.618}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of space-time, in which dynamics and motion are just shapes. The implication was}
-  \ALIUSPlacedTextContent{71.080}{87.978}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that a sufficient explanation—for nearly everything we see around us—lies in the}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that a sufficient explanationâ€”for nearly everything we see around usâ€”lies in the}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.725}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{structured dynamics of their behavior, which is just the "shape of things" in space}
   \ALIUSPlacedTextContent{71.080}{121.818}{366.158}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and time. On this view, the self-organized world "just is" its shape.}
   \ALIUSPlacedTextContent{71.080}{150.858}{456.445}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Over the subsequent 20 years, I learned enough mathematics to think about these}
@@ -217,12 +222,12 @@
   \ALIUSPlacedTextContent{468.871}{218.538}{58.763}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{variational}
   \ALIUSPlacedTextContent{71.080}{235.578}{28.550}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{Bayes}
   \ALIUSPlacedTextContent{99.667}{235.578}{428.105}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{. This is how the free energy principle developed into the current framework.}
-  \ALIUSPlacedTextContent{71.080}{252.618}{456.532}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{In brief, I was very lucky to meet the right people—and work in an era—when these}
+  \ALIUSPlacedTextContent{71.080}{252.618}{456.532}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{In brief, I was very lucky to meet the right peopleâ€”and work in an eraâ€”when these}
   \ALIUSPlacedTextContent{71.080}{269.418}{127.323}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{ideas were "in the air".}
   \ALIUSPlacedTextContent{71.080}{298.458}{456.437}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{You may get a sense that the explanations on offer under this framework are rather}
   \ALIUSPlacedTextContent{71.080}{315.498}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{deflationary; something that Andy Clark refers to as a (Quinean) desert landscape}
-  \ALIUSPlacedTextContent{71.080}{332.298}{456.520}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(\ALIUSCitationLink{aliusref-friston-fortier-friedman-clark-2013a}{Clark, 2013a}). Personally, I am drawn to that parsimony—always trying to chase}
-  \ALIUSPlacedTextContent{71.080}{349.338}{456.539}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{those early "aha moments" when I was a young boy—when insight meant that}
+  \ALIUSPlacedTextContent{71.080}{332.298}{456.520}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(\ALIUSCitationLink{aliusref-friston-fortier-friedman-clark-2013a}{Clark, 2013a}). Personally, I am drawn to that parsimonyâ€”always trying to chase}
+  \ALIUSPlacedTextContent{71.080}{349.338}{456.539}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{those early "aha moments" when I was a young boyâ€”when insight meant that}
   \ALIUSPlacedTextContent{71.080}{366.138}{456.713}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{something that looked very complicated was, in fact, very simple. Although, at its}
   \ALIUSPlacedTextContent{71.080}{383.178}{456.614}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{heart, the free energy principle is the ultimate deflationary (possibly tautological)}
   \ALIUSPlacedTextContent{71.080}{400.218}{456.511}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{account, one can spin-off a number of interesting corollaries, which I am sure you}
@@ -231,7 +236,7 @@
   \ALIUSPlacedTextContent{212.798}{713.208}{68.520}{ALIUSC000000}{\ALIUSFontLatoRegular}{9.840}{(original image:}
   \ALIUSPlacedTextContent{281.375}{713.208}{98.174}{ALIUSC0563C1}{\ALIUSFontLatoRegular}{9.840}{http://bit.ly/2nhmDT8}
   \ALIUSPlacedTextContent{379.663}{713.208}{4.899}{ALIUSC000000}{\ALIUSFontLatoRegular}{9.840}{)}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -241,7 +246,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{19}
   \ALIUSPlacedTextContent{71.080}{98.609}{455.765}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{The Bayesian brain hypothesis (e.g., \ALIUSCitationLink{aliusref-friston-fortier-friedman-knill-richards-1996}{Knill \& Richards, 1996}), predictive coding (e.g.,}
   \ALIUSPlacedTextContent{71.080}{114.208}{455.740}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{\ALIUSCitationLink{aliusref-friston-fortier-friedman-clark-2013a}{Clark, 2013a}) and the free energy principle (e.g., \ALIUSCitationLink{aliusref-friston-fortier-friedman-friston-2010}{Friston, 2010}) are often equated}
@@ -303,23 +308,23 @@
   \ALIUSPlacedTextContent{71.080}{458.848}{4.264}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{t}
   \ALIUSPlacedTextContent{80.287}{458.848}{64.786}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{:         P(H|D)}
   \ALIUSPlacedTextContent{168.024}{458.848}{21.470}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{P(D}
-  \ALIUSPlacedTextContent{194.449}{458.848}{55.509}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H) • P(H)}
+  \ALIUSPlacedTextContent{194.449}{458.848}{55.509}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H) â€¢ P(H)}
   \ALIUSPlacedTextContent{75.357}{465.269}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{8.400}{1}
   \ALIUSPlacedTextContent{145.076}{465.269}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{1}
   \ALIUSPlacedTextContent{189.519}{465.269}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{1}
   \ALIUSPlacedTextContent{71.080}{475.648}{4.264}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{t}
   \ALIUSPlacedTextContent{80.287}{475.648}{64.771}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{:         P(H|D)}
   \ALIUSPlacedTextContent{168.024}{475.648}{21.470}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{P(D}
-  \ALIUSPlacedTextContent{194.449}{475.648}{69.283}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H) • P(H|D)}
+  \ALIUSPlacedTextContent{194.449}{475.648}{69.283}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H) â€¢ P(H|D)}
   \ALIUSPlacedTextContent{75.357}{482.069}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{8.400}{2}
   \ALIUSPlacedTextContent{145.076}{482.069}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{2}
   \ALIUSPlacedTextContent{189.519}{482.069}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{2}
   \ALIUSPlacedTextContent{263.757}{482.069}{6.551}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{1}
-  \ALIUSPlacedTextContent{71.080}{498.869}{7.469}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{…}
+  \ALIUSPlacedTextContent{71.080}{498.869}{7.469}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{â€¦}
   \ALIUSPlacedTextContent{71.080}{508.288}{4.264}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{t}
   \ALIUSPlacedTextContent{79.709}{508.288}{64.786}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{:         P(H|D)}
   \ALIUSPlacedTextContent{167.114}{508.288}{21.470}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{P(D}
-  \ALIUSPlacedTextContent{194.848}{508.288}{69.283}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H) • P(H|D)}
+  \ALIUSPlacedTextContent{194.848}{508.288}{69.283}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H) â€¢ P(H|D)}
   \ALIUSPlacedTextContent{75.357}{514.709}{4.301}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{8.400}{n}
   \ALIUSPlacedTextContent{144.498}{514.709}{4.544}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{n}
   \ALIUSPlacedTextContent{188.609}{514.709}{6.185}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{n}
@@ -345,12 +350,12 @@
   \ALIUSPlacedTextContent{125.604}{654.688}{12.307}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{H}
   \ALIUSPlacedTextContent{142.539}{654.688}{20.181}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|D)}
   \ALIUSPlacedTextContent{178.236}{654.688}{35.202}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{P(D|H}
-  \ALIUSPlacedTextContent{218.389}{654.688}{37.874}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{) • P(H}
+  \ALIUSPlacedTextContent{218.389}{654.688}{37.874}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{) â€¢ P(H}
   \ALIUSPlacedTextContent{261.219}{654.688}{13.697}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H}
-  \ALIUSPlacedTextContent{279.877}{654.688}{39.274}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{) … P(H}
+  \ALIUSPlacedTextContent{279.877}{654.688}{39.274}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{) â€¦ P(H}
   \ALIUSPlacedTextContent{323.780}{654.688}{6.401}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{)}
   \ALIUSPlacedTextContent{92.523}{661.109}{6.593}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{1,}
-  \ALIUSPlacedTextContent{111.468}{661.109}{14.118}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{2,…,}
+  \ALIUSPlacedTextContent{111.468}{661.109}{14.118}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{2,â€¦,}
   \ALIUSPlacedTextContent{137.940}{661.109}{4.544}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{n}
   \ALIUSPlacedTextContent{213.459}{661.109}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{1}
   \ALIUSPlacedTextContent{256.289}{661.109}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{1}
@@ -359,7 +364,7 @@
   \ALIUSPlacedTextContent{71.080}{671.489}{2.903}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{l}
   \ALIUSPlacedTextContent{78.922}{671.489}{62.277}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{:        P(H|D)}
   \ALIUSPlacedTextContent{164.150}{671.489}{35.202}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{P(D|H}
-  \ALIUSPlacedTextContent{204.303}{671.489}{37.874}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{) • P(H}
+  \ALIUSPlacedTextContent{204.303}{671.489}{37.874}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{) â€¢ P(H}
   \ALIUSPlacedTextContent{247.133}{671.489}{13.697}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H}
   \ALIUSPlacedTextContent{265.791}{671.489}{3.888}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{)}
   \ALIUSPlacedTextContent{73.992}{677.909}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{8.400}{1}
@@ -370,7 +375,7 @@
   \ALIUSPlacedTextContent{71.080}{688.289}{2.903}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{l}
   \ALIUSPlacedTextContent{78.922}{688.289}{62.277}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{:        P(H|D)}
   \ALIUSPlacedTextContent{164.150}{688.289}{39.120}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{P(H|D)}
-  \ALIUSPlacedTextContent{208.203}{688.289}{33.965}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{• P(H}
+  \ALIUSPlacedTextContent{208.203}{688.289}{33.965}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{â€¢ P(H}
   \ALIUSPlacedTextContent{247.133}{688.289}{13.697}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{|H}
   \ALIUSPlacedTextContent{265.791}{688.289}{3.888}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{)}
   \ALIUSPlacedTextContent{73.992}{694.709}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{8.400}{2}
@@ -378,18 +383,18 @@
   \ALIUSPlacedTextContent{203.273}{694.709}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{1}
   \ALIUSPlacedTextContent{242.203}{694.709}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{2}
   \ALIUSPlacedTextContent{260.861}{694.709}{4.872}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{3}
-  \ALIUSPlacedTextContent{71.080}{711.509}{7.469}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{…}
+  \ALIUSPlacedTextContent{71.080}{711.509}{7.469}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{â€¦}
   \ALIUSPlacedTextContent{71.080}{720.928}{2.903}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{l}
   \ALIUSPlacedTextContent{78.344}{720.928}{62.277}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{:        P(H|D)}
   \ALIUSPlacedTextContent{163.240}{720.928}{39.120}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{P(H|D)}
-  \ALIUSPlacedTextContent{214.717}{720.928}{33.965}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{• P(H}
+  \ALIUSPlacedTextContent{214.717}{720.928}{33.965}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{â€¢ P(H}
   \ALIUSPlacedTextContent{253.316}{720.928}{3.888}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{)}
   \ALIUSPlacedTextContent{73.992}{727.349}{4.301}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{8.400}{n}
   \ALIUSPlacedTextContent{140.624}{727.349}{4.544}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{n}
   \ALIUSPlacedTextContent{202.363}{727.349}{12.296}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{n-1}
   \ALIUSPlacedTextContent{248.718}{727.349}{4.544}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.400}{n}
   \ALIUSPlacedTextContent{71.080}{749.489}{455.730}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Note, in this construction, the most general hypotheses are divided into a nested}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -399,7 +404,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{20}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.851}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{hierarchy of spatially-realized hypotheses, whereas in Bayesian belief updating}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.818}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{there is a temporal re-evaluation of one hypothesis. The Bayesian brain model}
@@ -447,7 +452,7 @@
   \ALIUSPlacedTextContent{71.080}{699.808}{455.920}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{all sensory data are sent up into the hierarchy, but only those that were not}
   \ALIUSPlacedTextContent{71.080}{715.409}{194.760}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{predicted by top-down processing?}
   \ALIUSPlacedTextContent{71.080}{743.008}{455.787}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Conversely, what do you consider lacking from the Bayesian brain and predictive}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -457,15 +462,15 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{21}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.650}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{coding models as long as they do not focus on entropy reduction, as the free energy}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.811}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{principle? In other words, what is explained by the entropic reduction within the free}
   \ALIUSPlacedTextContent{71.080}{102.208}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{energy principle that is not explained by any model parameters in the other}
   \ALIUSPlacedTextContent{71.080}{117.808}{76.242}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{frameworks?}
-  \ALIUSPlacedTextContent{71.080}{145.338}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Do I agree with this characterization the Bayesian brain hypothesis? Yes, I do—with}
+  \ALIUSPlacedTextContent{71.080}{145.338}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Do I agree with this characterization the Bayesian brain hypothesis? Yes, I doâ€”with}
   \ALIUSPlacedTextContent{71.080}{162.378}{456.398}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{a couple of caveats. I think it is useful to make a fundamental distinction at this}
-  \ALIUSPlacedTextContent{71.080}{179.178}{364.470}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{point—that we can appeal to later. The distinction is between a}
+  \ALIUSPlacedTextContent{71.080}{179.178}{364.470}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{pointâ€”that we can appeal to later. The distinction is between a}
   \ALIUSPlacedTextContent{437.036}{179.178}{23.341}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{state}
   \ALIUSPlacedTextContent{460.401}{179.178}{28.330}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and}
   \ALIUSPlacedTextContent{490.235}{179.178}{34.129}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{process}
@@ -481,11 +486,11 @@
   \ALIUSPlacedTextContent{71.080}{247.098}{259.601}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{like predictive coding and the Bayesian brain}
   \ALIUSPlacedTextContent{332.522}{247.098}{50.786}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{hypothesis}
   \ALIUSPlacedTextContent{383.327}{247.098}{144.359}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{. This is because the free}
-  \ALIUSPlacedTextContent{71.080}{264.138}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{energy principle is what it is—a principle. Like Hamilton's Principle of Stationary}
+  \ALIUSPlacedTextContent{71.080}{264.138}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{energy principle is what it isâ€”a principle. Like Hamilton's Principle of Stationary}
   \ALIUSPlacedTextContent{71.080}{280.938}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Action, it cannot be falsified. It cannot be disproven. In fact, there's not much you}
   \ALIUSPlacedTextContent{71.080}{297.978}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{can do with it, unless you ask whether measurable systems conform to the principle.}
   \ALIUSPlacedTextContent{71.080}{315.018}{456.395}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{On the other hand, hypotheses that the brain performs some form of Bayesian}
-  \ALIUSPlacedTextContent{71.080}{331.818}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inference or predictive coding are what they are—hypotheses. These hypotheses may}
+  \ALIUSPlacedTextContent{71.080}{331.818}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inference or predictive coding are what they areâ€”hypotheses. These hypotheses may}
   \ALIUSPlacedTextContent{71.080}{348.858}{265.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{or may not be supported by empirical evidence.}
   \ALIUSPlacedTextContent{71.080}{377.898}{456.392}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{On this view, the relation between the free energy principle and predictive coding}
   \ALIUSPlacedTextContent{71.080}{394.698}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is the relationship between a principle and a process theory. Crucially, there are lots}
@@ -506,14 +511,14 @@
   \ALIUSPlacedTextContent{71.080}{581.178}{93.752}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Mumford, 2003).}
   \ALIUSPlacedTextContent{71.080}{610.218}{456.676}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{In short, predictive coding is one of many ways of minimizing variational free}
   \ALIUSPlacedTextContent{71.080}{627.258}{456.515}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{energy. It is formally equivalent to Bayesian filtering; e.g., Kalman filtering in}
-  \ALIUSPlacedTextContent{71.080}{644.058}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{engineering (Rao \& Ballard, 1999). One aspect of these Bayesian filtering schemes—}
-  \ALIUSPlacedTextContent{71.080}{661.098}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that speaks to a possible confusion in your question—is that the "predictive" bit of}
+  \ALIUSPlacedTextContent{71.080}{644.058}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{engineering (Rao \& Ballard, 1999). One aspect of these Bayesian filtering schemesâ€”}
+  \ALIUSPlacedTextContent{71.080}{661.098}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that speaks to a possible confusion in your questionâ€”is that the "predictive" bit of}
   \ALIUSPlacedTextContent{71.080}{677.898}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{predictive coding is not about anticipation or the future. It is more simply}
   \ALIUSPlacedTextContent{71.080}{694.938}{456.406}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{generating predictions of "what is happening now", under my current beliefs or}
   \ALIUSPlacedTextContent{71.080}{711.978}{456.651}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{expectations about how my sensations are caused. I am trying to emphasize that}
   \ALIUSPlacedTextContent{71.080}{728.778}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{there is no alternation between prediction and subsequent correction; everything}
-  \ALIUSPlacedTextContent{71.080}{745.818}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{happens seamlessly over time—with continuous self-adjusting, self-organizing}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{745.818}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{happens seamlessly over timeâ€”with continuous self-adjusting, self-organizing}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -523,7 +528,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{22}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.501}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{dynamics which try to keep your expectations flowing in exactly the right direction.}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{If you get this right, it will look as if you are predicting things. In other words, if you}
@@ -538,19 +543,19 @@
   \ALIUSPlacedTextContent{71.080}{218.538}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{beliefs. However, the Bayesian brain is not the free energy principle, because both}
   \ALIUSPlacedTextContent{71.080}{235.578}{456.629}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the Bayesian brain hypothesis and predictive coding are incomplete theories of how}
   \ALIUSPlacedTextContent{71.080}{252.618}{135.723}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{we infer states of affairs.}
-  \ALIUSPlacedTextContent{116.920}{292.793}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{116.680}{292.793}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{134.680}{292.793}{346.317}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{It is this enactive, embodied, extended, embedded, and}
-  \ALIUSPlacedTextContent{134.680}{310.793}{323.752}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{encultured aspect that is lacking from the Bayesian}
-  \ALIUSPlacedTextContent{134.680}{328.793}{294.026}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{brain and predictive coding theories; precisely}
-  \ALIUSPlacedTextContent{446.920}{345.448}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{134.680}{346.313}{308.872}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{because they do not consider entropy reduction.}
+  \ALIUSPlacedTextContent{145.962}{310.313}{323.752}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{encultured aspect that is lacking from the Bayesian}
+  \ALIUSPlacedTextContent{160.826}{327.833}{294.026}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{brain and predictive coding theories; precisely}
+  \ALIUSPlacedTextContent{484.997}{345.353}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{153.403}{345.353}{308.872}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{because they do not consider entropy reduction.}
   \ALIUSPlacedTextContent{71.080}{397.338}{123.342}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This missing bit is the}
   \ALIUSPlacedTextContent{194.431}{397.338}{40.674}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{enactive}
   \ALIUSPlacedTextContent{235.113}{397.338}{292.474}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{compass of the free energy principle. In other words,}
   \ALIUSPlacedTextContent{71.080}{414.138}{456.518}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the free energy principle is not just about making the best (Bayesian) sense of sensory}
   \ALIUSPlacedTextContent{71.080}{431.178}{456.515}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{impressions of what's "out there". It tries to understand how we sample the world}
   \ALIUSPlacedTextContent{71.080}{448.218}{456.498}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and author our own sensations. Again, we come back to the woodlice and their}
-  \ALIUSPlacedTextContent{71.080}{465.018}{257.331}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{scurrying—and an attempt to understand the}
+  \ALIUSPlacedTextContent{71.080}{465.018}{257.331}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{scurryingâ€”and an attempt to understand the}
   \ALIUSPlacedTextContent{329.932}{465.018}{197.698}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{imperatives behind this apparently}
   \ALIUSPlacedTextContent{71.080}{482.058}{456.529}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{purposeful sampling of the world. It is this enactive, embodied, extended,}
   \ALIUSPlacedTextContent{71.080}{499.098}{456.694}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{embedded, and encultured aspect that is lacking from the Bayesian brain and}
@@ -565,14 +570,14 @@
   \ALIUSPlacedTextContent{71.080}{595.818}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in question are the ensemble densities above (i.e., the relative probabilities of states}
   \ALIUSPlacedTextContent{71.080}{612.858}{456.563}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of affairs). Interesting shapes (i.e., those characteristic of self-organizing systems like}
   \ALIUSPlacedTextContent{71.080}{629.658}{456.597}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{you and me) have a low entropy because our sensory states are concentrated in small}
-  \ALIUSPlacedTextContent{71.080}{646.698}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{regions of state space, with large regimes that are sparsely occupied (Schrödinger,}
+  \ALIUSPlacedTextContent{71.080}{646.698}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{regions of state space, with large regimes that are sparsely occupied (SchrÃ¶dinger,}
   \ALIUSPlacedTextContent{71.080}{663.498}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{1944). This is exactly the same as the (non-equilibrium steady-state) distribution of}
   \ALIUSPlacedTextContent{71.080}{680.538}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{woodlice in the shade. Crucially, in the absence of any movement, a low entropy}
   \ALIUSPlacedTextContent{71.080}{697.578}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"shaped" probability distribution would simply not exist (\ALIUSCitationLink{aliusref-friston-fortier-friedman-friston-2013}{Friston, 2013}). In other}
-  \ALIUSPlacedTextContent{71.080}{714.378}{456.523}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{words, had my woodlice just been basking in the sun—making exquisite Bayesian}
-  \ALIUSPlacedTextContent{71.080}{731.418}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inferences about their inexorable desiccation—there would have been no self-}
+  \ALIUSPlacedTextContent{71.080}{714.378}{456.523}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{words, had my woodlice just been basking in the sunâ€”making exquisite Bayesian}
+  \ALIUSPlacedTextContent{71.080}{731.418}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inferences about their inexorable desiccationâ€”there would have been no self-}
   \ALIUSPlacedTextContent{71.080}{748.458}{456.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{organization (and nothing of note to witness). In short, the free energy principle}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -582,10 +587,10 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{23}
-  \ALIUSPlacedTextContent{71.080}{70.938}{456.532}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{fully endorses the Bayesian brain hypothesis—but that's not the story. The only way}
-  \ALIUSPlacedTextContent{71.080}{87.978}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{you can change "the shape of things"—i.e., bound entropy production—is to act on}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.532}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{fully endorses the Bayesian brain hypothesisâ€”but that's not the story. The only way}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{you can change "the shape of things"â€”i.e., bound entropy productionâ€”is to act on}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.591}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the world. This is what distinguishes the free energy principle from predictive}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{processing. In fact, we have now taken to referring to the free energy principle as}
   \ALIUSPlacedTextContent{71.080}{138.858}{76.525}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{active inference}
@@ -606,7 +611,7 @@
   \ALIUSPlacedTextContent{71.080}{278.368}{455.768}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{do you hold these frameworks to accurately describe how the mind/brain works at}
   \ALIUSPlacedTextContent{71.080}{293.968}{329.814}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{a computational, algorithmic and/or implementational level?}
   \ALIUSPlacedTextContent{71.080}{321.568}{455.797}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{These three frameworks are often criticized for not being falsifiable and for being}
-  \ALIUSPlacedTextContent{71.080}{337.168}{455.784}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{exceedingly speculative—especially when they are endorsed at an implementational}
+  \ALIUSPlacedTextContent{71.080}{337.168}{455.784}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{exceedingly speculativeâ€”especially when they are endorsed at an implementational}
   \ALIUSPlacedTextContent{71.080}{352.768}{455.899}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{level. How would you reply to these objections? What evidence do you think we have}
   \ALIUSPlacedTextContent{71.080}{368.368}{319.427}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{for each of these frameworks and at each of Marr's levels?}
   \ALIUSPlacedTextContent{71.080}{395.898}{354.500}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think the free energy principle ticks all David Marr's boxes. The}
@@ -627,15 +632,15 @@
   \ALIUSPlacedTextContent{71.080}{543.498}{456.467}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{algorithmic process theories. In the systems neurosciences, at the moment, the most}
   \ALIUSPlacedTextContent{71.080}{560.538}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{popular seems to be predictive coding in canonical microcircuits (\ALIUSCitationLink{aliusref-friston-fortier-friedman-bastos-usrey-2012}{Bastos et al., 2012};}
   \ALIUSPlacedTextContent{71.080}{577.338}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{\ALIUSCitationLink{aliusref-friston-fortier-friedman-mumford-1992}{Mumford, 1992}; \ALIUSCitationLink{aliusref-friston-fortier-friedman-shipp-2016}{Shipp, 2016}). I am continually impressed by how much this}
-  \ALIUSPlacedTextContent{71.080}{594.378}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{particular process theory explains; in terms of neuroanatomy and neurophysiology—}
+  \ALIUSPlacedTextContent{71.080}{594.378}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{particular process theory explains; in terms of neuroanatomy and neurophysiologyâ€”}
   \ALIUSPlacedTextContent{71.080}{611.418}{211.448}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{at nearly any level you care to specify.}
-  \ALIUSPlacedTextContent{161.560}{658.073}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{162.040}{658.073}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{180.040}{658.073}{233.519}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I think the free energy principle ticks}
-  \ALIUSPlacedTextContent{180.040}{675.593}{146.152}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{all David Marr's boxes.}
-  \ALIUSPlacedTextContent{329.800}{676.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{223.723}{675.593}{146.152}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{all David Marr's boxes.}
+  \ALIUSPlacedTextContent{417.559}{675.593}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{727.098}{456.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{In short, I do "hold that these frameworks accurately describe how the brain and}
   \ALIUSPlacedTextContent{71.080}{744.138}{456.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mind works" at all three levels. I have yet to see any empirical evidence that would}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -645,18 +650,18 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{24}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{seriously question predictive coding as an algorithmic and implementational}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.672}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{explanation of early sensory processing. A whole range of predictions and empirical}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.508}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{facts can be explained or predicted under this particular process theory.}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.479}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Furthermore, there are many predictions that have yet to be confirmed. One of my}
-  \ALIUSPlacedTextContent{71.080}{138.858}{456.553}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{favorites is from Stewart Shipp: the prediction—from the computational level—is}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.553}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{favorites is from Stewart Shipp: the predictionâ€”from the computational levelâ€”is}
   \ALIUSPlacedTextContent{71.080}{155.658}{456.671}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that there are no principal cells (thought to encode expectations and errors) that}
   \ALIUSPlacedTextContent{71.080}{172.698}{456.473}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{pass messages (via axonal bifurcations) up and down cortical hierarchies at the same}
   \ALIUSPlacedTextContent{71.080}{189.738}{30.963}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{time.}
-  \ALIUSPlacedTextContent{71.080}{218.538}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{As opposed to listing all the evidence for predictive coding—in terms of}
-  \ALIUSPlacedTextContent{71.080}{235.578}{456.590}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{computational architectures and canonical microcircuits—I will amuse myself by}
+  \ALIUSPlacedTextContent{71.080}{218.538}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{As opposed to listing all the evidence for predictive codingâ€”in terms of}
+  \ALIUSPlacedTextContent{71.080}{235.578}{456.590}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{computational architectures and canonical microcircuitsâ€”I will amuse myself by}
   \ALIUSPlacedTextContent{71.080}{252.618}{456.447}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{deconstructing your question. I would assert that the notion that a "framework" can}
   \ALIUSPlacedTextContent{71.080}{269.418}{456.602}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{have the attribute "falsifiable" is a category error. The only thing that can be falsified}
   \ALIUSPlacedTextContent{71.080}{286.458}{456.428}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is a null "hypothesis". In other words, the only way you can falsify something is to}
@@ -686,7 +691,7 @@
   \ALIUSPlacedTextContent{71.080}{717.328}{455.736}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{distinct levels. For example, Andrey Chetverikov (2014; 2016) has recently}
   \ALIUSPlacedTextContent{71.080}{732.928}{455.837}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{explored the conscious and affective manifestations of prediction errors. A great}
   \ALIUSPlacedTextContent{71.080}{748.529}{455.831}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{deal of the ongoing research on the feelings of fluency and disfluency (Unkelback \&}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -696,7 +701,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{25}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.767}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Greifeneder, 2013) can be interpreted as exploring the conscious output of}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.655}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{subpersonal accurate predictions and subpersonal prediction errors. Fluency refers}
@@ -725,12 +730,12 @@
   \ALIUSPlacedTextContent{71.080}{469.408}{455.752}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{At the experiential level, this implies that humans are not driven simply by}
   \ALIUSPlacedTextContent{71.080}{485.008}{455.822}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{minimization of entropy (i.e., minimization of disfluency) but by the optimal blending}
   \ALIUSPlacedTextContent{71.080}{500.608}{455.702}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of entropy and negentropy (i.e., of disfluency and fluency). Chetverikov and}
-  \ALIUSPlacedTextContent{71.080}{516.208}{455.809}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Kristjánsson (2016, pp. 2–3) further remark that this proposal provides us a new}
-  \ALIUSPlacedTextContent{71.080}{531.808}{455.800}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{solution to the so-called "dark room problem": people do not seek dark rooms—i.e.,}
-  \ALIUSPlacedTextContent{71.080}{547.409}{455.750}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{perfectly fluent environments—because these are too boring; what they rather seek}
+  \ALIUSPlacedTextContent{71.080}{516.208}{455.809}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Kristjánsson (2016, pp. 2â€“3) further remark that this proposal provides us a new}
+  \ALIUSPlacedTextContent{71.080}{531.808}{455.800}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{solution to the so-called "dark room problem": people do not seek dark roomsâ€”i.e.,}
+  \ALIUSPlacedTextContent{71.080}{547.409}{455.750}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{perfectly fluent environmentsâ€”because these are too boring; what they rather seek}
   \ALIUSPlacedTextContent{71.080}{563.008}{455.933}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{are sweet spots characterized by some fluency (certainty and familiarity) and some}
   \ALIUSPlacedTextContent{71.080}{578.609}{230.399}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{disfluency (uncertainty and unfamiliarity).}
-  \ALIUSPlacedTextContent{71.080}{606.208}{455.784}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Do you think that different laws may apply at different levels—e.g., reduction of}
+  \ALIUSPlacedTextContent{71.080}{606.208}{455.784}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Do you think that different laws may apply at different levelsâ€”e.g., reduction of}
   \ALIUSPlacedTextContent{71.080}{621.808}{455.811}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{entropy at the subpersonal levels and a balanced equilibrium between fluency}
   \ALIUSPlacedTextContent{71.080}{637.409}{455.864}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{(negentropy) and disfluency (entropy) at the conscious level? Alternatively, do you}
   \ALIUSPlacedTextContent{71.080}{653.008}{455.812}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{think that the kind of finding put forward by Chetverikov and colleagues can easily}
@@ -739,7 +744,7 @@
   \ALIUSPlacedTextContent{71.080}{711.738}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I do not think that "different laws may apply at different levels". I see a singular and}
   \ALIUSPlacedTextContent{71.080}{728.778}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{simple explanation for all the apparent dialectics above: they are all explained by}
   \ALIUSPlacedTextContent{71.080}{745.818}{456.490}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{minimization of expected free energy, expected surprise or uncertainty. I feel slightly}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -749,7 +754,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{26}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{puritanical when deflating some of the (magical) thinking about inverted U curves}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.491}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and "sweet spots". However, things are just simpler than that: there is only one sweet}
@@ -759,16 +764,16 @@
   \ALIUSPlacedTextContent{71.080}{167.658}{456.510}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{their expected free energy, then we act to reduce expected surprise or, more simply,}
   \ALIUSPlacedTextContent{71.080}{184.698}{96.232}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{resolve uncertainty}
   \ALIUSPlacedTextContent{167.335}{184.698}{360.365}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{. So what's the first thing that we would do on entering a dark}
-  \ALIUSPlacedTextContent{71.080}{201.738}{456.539}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{room—we would turn on the lights. Why? Because this action has epistemic}
+  \ALIUSPlacedTextContent{71.080}{201.738}{456.539}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{roomâ€”we would turn on the lights. Why? Because this action has epistemic}
   \ALIUSPlacedTextContent{71.080}{218.538}{456.578}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{affordance; in other words, it resolves uncertainty (expected free energy). This}
   \ALIUSPlacedTextContent{71.080}{235.578}{456.668}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{simple argument generalizes to our inferences about (hidden or latent) states of the}
-  \ALIUSPlacedTextContent{71.080}{252.618}{375.651}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{world—and the contingencies that underwrite those states of affairs.}
-  \ALIUSPlacedTextContent{86.680}{291.113}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{71.080}{252.618}{375.651}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{worldâ€”and the contingencies that underwrite those states of affairs.}
+  \ALIUSPlacedTextContent{86.440}{291.113}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{104.440}{291.113}{402.238}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I do not think that 'different laws may apply at different levels'. I}
-  \ALIUSPlacedTextContent{104.440}{309.113}{359.407}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{see a singular and simple explanation for all the apparent}
-  \ALIUSPlacedTextContent{104.440}{327.113}{362.396}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{dialectics above: they are all explained by minimization of}
-  \ALIUSPlacedTextContent{458.920}{344.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{104.440}{345.113}{353.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{expected free energy, expected surprise or uncertainty.}
+  \ALIUSPlacedTextContent{125.855}{309.113}{359.407}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{see a singular and simple explanation for all the apparent}
+  \ALIUSPlacedTextContent{124.361}{327.113}{362.396}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{dialectics above: they are all explained by minimization of}
+  \ALIUSPlacedTextContent{510.678}{345.113}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{129.043}{345.113}{353.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{expected free energy, expected surprise or uncertainty.}
   \ALIUSPlacedTextContent{71.080}{397.338}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This means that any opportunity to resolve uncertainty itself now becomes}
   \ALIUSPlacedTextContent{71.080}{414.138}{456.442}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{attractive (literally, in the mathematical sense of a random dynamical attractor)}
   \ALIUSPlacedTextContent{71.080}{431.178}{456.563}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(\ALIUSCitationLink{aliusref-friston-fortier-friedman-friston-2013}{Friston, 2013}). In short, as nicely articulated by (\ALIUSCitationLink{aliusref-friston-fortier-friedman-schmidhuber-2010}{Schmidhuber, 2010}), the}
@@ -788,13 +793,13 @@
   \ALIUSPlacedTextContent{71.080}{612.858}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Given these imperatives, then the two ends of the inverted U become two extrema}
   \ALIUSPlacedTextContent{71.080}{629.658}{456.518}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{on different dimensions. In a world full of novelty and opportunity, we know}
   \ALIUSPlacedTextContent{71.080}{646.698}{456.592}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{immediately there is an opportunity to resolve reducible uncertainty and will}
-  \ALIUSPlacedTextContent{71.080}{663.498}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{immediately embark on joyful exploration—joyful because it reduces uncertainty or}
+  \ALIUSPlacedTextContent{71.080}{663.498}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{immediately embark on joyful explorationâ€”joyful because it reduces uncertainty or}
   \ALIUSPlacedTextContent{71.080}{680.538}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{expected free energy (\ALIUSCitationLink{aliusref-friston-fortier-friedman-joffily-coricelli-2013}{Joffily \& Coricelli, 2013}). Conversely, in a completely}
   \ALIUSPlacedTextContent{71.080}{697.578}{456.623}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{unpredictable world (i.e., a world with no precise sensory evidence, such as a dark}
-  \ALIUSPlacedTextContent{71.080}{714.378}{456.528}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{room) there is no opportunity and all uncertainty is irreducible—a joyless world.}
+  \ALIUSPlacedTextContent{71.080}{714.378}{456.528}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{room) there is no opportunity and all uncertainty is irreducibleâ€”a joyless world.}
   \ALIUSPlacedTextContent{71.080}{731.418}{456.588}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Boredom is simply the product of explorative behavior; emptying a world of its}
-  \ALIUSPlacedTextContent{71.080}{748.458}{456.663}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{epistemic value—a barren world in which all epistemic affordance has been}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{748.458}{456.663}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{epistemic valueâ€”a barren world in which all epistemic affordance has been}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -804,19 +809,19 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{27}
   \ALIUSPlacedTextContent{71.080}{70.938}{390.112}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{exhausted through information seeking, free energy minimizing action.}
   \ALIUSPlacedTextContent{71.080}{99.978}{456.671}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Note that I slipped in the word "joyful" above. This brings something interesting to}
-  \ALIUSPlacedTextContent{71.080}{116.778}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the table; namely, the affective valence of shifts in uncertainty—and how they are}
+  \ALIUSPlacedTextContent{71.080}{116.778}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the table; namely, the affective valence of shifts in uncertaintyâ€”and how they are}
   \ALIUSPlacedTextContent{71.080}{133.818}{456.647}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{evaluated by our brains (please see discussion of precision later). I think most people}
   \ALIUSPlacedTextContent{71.080}{150.858}{456.632}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{now regard emotion as associated with the opportunity for (or actual) reduction of}
   \ALIUSPlacedTextContent{71.080}{167.658}{456.590}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{uncertainty (or accompanying changes in precision). The implicit selfhood of an}
-  \ALIUSPlacedTextContent{71.080}{184.698}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{emotion is usually tied in to (free energy minimizing) interoceptive inference—and}
+  \ALIUSPlacedTextContent{71.080}{184.698}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{emotion is usually tied in to (free energy minimizing) interoceptive inferenceâ€”and}
   \ALIUSPlacedTextContent{71.080}{201.738}{456.420}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{autonomic reflexes. This would take us into another fascinating area about minimal}
-  \ALIUSPlacedTextContent{71.080}{218.538}{456.579}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{selfhood and embodiment—of the sort that Anil Seth and colleagues would speak to}
+  \ALIUSPlacedTextContent{71.080}{218.538}{456.579}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{selfhood and embodimentâ€”of the sort that Anil Seth and colleagues would speak to}
   \ALIUSPlacedTextContent{71.080}{235.578}{67.768}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(\ALIUSCitationLink{aliusref-friston-fortier-friedman-seth-2013}{Seth, 2013}).}
-  \ALIUSPlacedTextContent{71.080}{264.618}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{In short, we expect to be surprised in a world that is predictably unpredictable—}
+  \ALIUSPlacedTextContent{71.080}{264.618}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{In short, we expect to be surprised in a world that is predictably unpredictableâ€”}
   \ALIUSPlacedTextContent{71.080}{281.418}{291.777}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and this is the very stuff of free energy minimization.}
   \ALIUSPlacedTextContent{71.080}{310.528}{455.642}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{The previous question naturally leads us to explore the link between computational}
   \ALIUSPlacedTextContent{71.080}{326.128}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{processes and phenomenological contents. Some authors (\ALIUSCitationLink{aliusref-friston-fortier-friedman-fletcher-frith-2009}{Fletcher \& Frith, 2009};}
@@ -830,11 +835,11 @@
   \ALIUSPlacedTextContent{71.080}{450.928}{352.355}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{errors can obviously take place out of the field of consciousness.}
   \ALIUSPlacedTextContent{71.080}{478.528}{455.881}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{What is your take on this question of the mapping of subpersonal processes and}
   \ALIUSPlacedTextContent{71.080}{494.128}{455.829}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{phenomenology within the predictive coding framework? Methodologically}
-  \ALIUSPlacedTextContent{71.080}{509.728}{455.810}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{speaking, how can we decide whether a prediction error will be expressed—and}
-  \ALIUSPlacedTextContent{71.080}{525.328}{455.788}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{experienced—at the phenomenological level—through a feeling of disfluency or}
-  \ALIUSPlacedTextContent{71.080}{540.928}{117.861}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{strangeness—or not?}
+  \ALIUSPlacedTextContent{71.080}{509.728}{455.810}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{speaking, how can we decide whether a prediction error will be expressedâ€”and}
+  \ALIUSPlacedTextContent{71.080}{525.328}{455.788}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{experiencedâ€”at the phenomenological levelâ€”through a feeling of disfluency or}
+  \ALIUSPlacedTextContent{71.080}{540.928}{117.861}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{strangenessâ€”or not?}
   \ALIUSPlacedTextContent{71.080}{568.458}{456.590}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Again, I am forced into the deflationary corner. The explanation for how we decide}
-  \ALIUSPlacedTextContent{71.080}{585.498}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{whether a prediction error will be expressed—and experienced—is simple;}
+  \ALIUSPlacedTextContent{71.080}{585.498}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{whether a prediction error will be expressedâ€”and experiencedâ€”is simple;}
   \ALIUSPlacedTextContent{71.080}{602.298}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{particularly in the context of predictive coding. The degree to which a prediction}
   \ALIUSPlacedTextContent{71.080}{619.338}{456.769}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{error will be expressed (and experienced) depends upon its precision. This means we}
   \ALIUSPlacedTextContent{71.080}{636.138}{456.616}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{also have to predict the precision of prediction errors. This is how we decide whether}
@@ -848,7 +853,7 @@
   \ALIUSPlacedTextContent{71.080}{704.058}{456.587}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{order statistics; i.e., the precision or confidence that should be afforded prediction}
   \ALIUSPlacedTextContent{71.080}{721.098}{456.694}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{errors. There is a large literature on this; ranging from psychological and}
   \ALIUSPlacedTextContent{71.080}{737.898}{456.542}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{neurophysiological accounts of attention, through to detailed discussions of sensory}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -858,11 +863,11 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{28}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.454}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{attenuation in terms of attenuating the precision of sensory prediction errors}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.615}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(\ALIUSCitationLink{aliusref-friston-fortier-friedman-clark-2013b}{Clark, 2013b}). The common theme here is a focus on how we predict and model}
-  \ALIUSPlacedTextContent{71.080}{104.778}{456.632}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{precision or uncertainty—and what can go wrong when the underlying}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.632}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{precision or uncertaintyâ€”and what can go wrong when the underlying}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{neuromodulatory mechanisms are compromised (e.g., Palmer, Seth, \& Hohwy, 2015).}
   \ALIUSPlacedTextContent{71.080}{150.858}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This account makes a lot of sense from the point of view of an engineer. Precision is}
   \ALIUSPlacedTextContent{71.080}{167.658}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{just the Kalman gain; namely, the weight ascribed to prediction errors during online}
@@ -878,10 +883,10 @@
   \ALIUSPlacedTextContent{71.080}{337.338}{456.514}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{such that they can revise our beliefs and expectations about states of the world. The}
   \ALIUSPlacedTextContent{71.080}{354.138}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{key role of precision will figure prominently below; particularly in relation to}
   \ALIUSPlacedTextContent{71.080}{371.178}{175.146}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychopathology and psychosis.}
-  \ALIUSPlacedTextContent{105.160}{405.593}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{104.440}{405.593}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{122.440}{405.593}{358.409}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{The degree to which a prediction error will be expressed}
-  \ALIUSPlacedTextContent{416.680}{416.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{122.440}{423.353}{291.352}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{(and experienced) depends upon its precision.}
+  \ALIUSPlacedTextContent{484.849}{423.353}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{155.969}{423.353}{291.352}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{(and experienced) depends upon its precision.}
   \ALIUSPlacedTextContent{71.080}{472.048}{455.892}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{More broadly, this raises the question as to how the mind/brain should be parsed.}
   \ALIUSPlacedTextContent{71.080}{487.648}{455.725}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Psychologists have long considered that two levels were sufficient (e.g., Evans,}
   \ALIUSPlacedTextContent{71.080}{503.249}{455.794}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{2003). More recently, however, some psychologists have advanced that the}
@@ -890,7 +895,7 @@
   \ALIUSPlacedTextContent{71.080}{550.048}{312.070}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{distinguished in order to properly model the mind/brain?}
   \ALIUSPlacedTextContent{71.080}{577.578}{456.449}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{When Chris Frith and I are asked this question (which we often are), we answer six.}
   \ALIUSPlacedTextContent{71.080}{594.378}{456.364}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The answer is six. We say this without smiling and wait patiently for the answer to}
-  \ALIUSPlacedTextContent{71.080}{611.418}{456.501}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{settle in. We may be joking—or we may not. Some of the more principled reasons}
+  \ALIUSPlacedTextContent{71.080}{611.418}{456.501}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{settle in. We may be jokingâ€”or we may not. Some of the more principled reasons}
   \ALIUSPlacedTextContent{71.080}{628.218}{456.608}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{for assuming that there are six levels to the mind and brain include the following.}
   \ALIUSPlacedTextContent{71.080}{645.258}{456.529}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{First, neuroanatomy suggests that there are probably about six levels to the brain's}
   \ALIUSPlacedTextContent{71.080}{662.298}{456.575}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{hierarchy. This fits comfortably with the observation that as one moves higher or}
@@ -899,7 +904,7 @@
   \ALIUSPlacedTextContent{71.080}{713.178}{456.515}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of magnitude of temporal scale. For example, if the lower bound on predictive}
   \ALIUSPlacedTextContent{71.080}{729.978}{456.504}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{coding at the implementational level is about 25 ms (a duty cycle of fast gamma}
   \ALIUSPlacedTextContent{71.080}{747.018}{456.691}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{synchronization) then one might imagine the following hierarchy or Kabalistic}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -910,7 +915,7 @@
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
   \fill[ALIUSC1F8135] (98.920bp,-640.600bp) rectangle ++(125.040bp,-0.480bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{29}
   \ALIUSPlacedTextContent{71.080}{70.938}{60.236}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{taxonomy:}
   \ALIUSPlacedTextContent{92.330}{99.905}{95.393}{ALIUSC1A1718}{\ALIUSFontCormorantBold}{12.960}{Peripheral reflexes}
@@ -920,10 +925,10 @@
   \ALIUSPlacedTextContent{92.330}{137.345}{340.661}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{unfolding on a timescale of the perceptual moment (about 128 ms).}
   \ALIUSPlacedTextContent{92.330}{159.185}{43.920}{ALIUSC1A1718}{\ALIUSFontCormorantBold}{12.960}{Percepts}
   \ALIUSPlacedTextContent{136.256}{159.185}{377.317}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(possibly associated with qualitative experience): unfolding in lower levels}
-  \ALIUSPlacedTextContent{92.330}{174.785}{421.232}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{of the cortical and subcortical hierarchy – subtending the cognitive moment (about}
+  \ALIUSPlacedTextContent{92.330}{174.785}{421.232}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{of the cortical and subcortical hierarchy â€“ subtending the cognitive moment (about}
   \ALIUSPlacedTextContent{92.330}{190.625}{43.579}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{256 ms).}
   \ALIUSPlacedTextContent{92.330}{212.225}{48.389}{ALIUSC1A1718}{\ALIUSFontCormorantBold}{12.960}{Concepts}
-  \ALIUSPlacedTextContent{140.754}{212.225}{372.793}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{: corresponding to amodal or domain general expectations – that generate}
+  \ALIUSPlacedTextContent{140.754}{212.225}{372.793}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{: corresponding to amodal or domain general expectations â€“ that generate}
   \ALIUSPlacedTextContent{92.330}{228.065}{421.256}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{predictions in multiple domain-specific or modality-specific subordinate}
   \ALIUSPlacedTextContent{92.330}{243.905}{421.284}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{hierarchical levels. The timescale here now enters the range of 512 ms to seconds; of}
   \ALIUSPlacedTextContent{92.330}{259.505}{421.233}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{the sort associated with delay period activity in the prefrontal cortex and elsewhere.}
@@ -937,7 +942,7 @@
   \ALIUSPlacedTextContent{92.380}{366.065}{78.157}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{lasts for years).}
   \ALIUSPlacedTextContent{71.080}{393.738}{456.583}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Note that the timescales here pertain to the things (content items) that are}
   \ALIUSPlacedTextContent{71.080}{410.778}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{represented not the duration of representations. In other words, we may all have}
-  \ALIUSPlacedTextContent{71.080}{427.818}{456.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{thought "we would live forever"—for a few seconds. It would be interesting to go}
+  \ALIUSPlacedTextContent{71.080}{427.818}{456.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{thought "we would live forever"â€”for a few seconds. It would be interesting to go}
   \ALIUSPlacedTextContent{71.080}{444.618}{456.502}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{through and substantiate this partition in terms of the time constants of the}
   \ALIUSPlacedTextContent{71.080}{461.658}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{underlying neurophysiological processes (Smith, Gosselin, \& Schyns, 2006); ranging}
   \ALIUSPlacedTextContent{71.080}{478.698}{456.670}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{from fast synchronized neuronal dynamics, through population dynamics, through}
@@ -947,7 +952,7 @@
   \ALIUSPlacedTextContent{71.080}{558.378}{456.547}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{A more philosophical perspective on the above speaks to the notion of self-modeling}
   \ALIUSPlacedTextContent{71.080}{575.418}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in a Thomas Metzinger sense (\ALIUSCitationLink{aliusref-friston-fortier-friedman-metzinger-2003}{Metzinger, 2003}). In other words, by the very}
   \ALIUSPlacedTextContent{71.080}{592.218}{456.529}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{construction of hierarchal generative models (implicit in hierarchal predictive}
-  \ALIUSPlacedTextContent{71.080}{609.258}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{coding), there is a statistical separation (known formally as a Markov blanket – see}
+  \ALIUSPlacedTextContent{71.080}{609.258}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{coding), there is a statistical separation (known formally as a Markov blanket â€“ see}
   \ALIUSPlacedTextContent{71.080}{626.298}{26.963}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{also:}
   \ALIUSPlacedTextContent{98.891}{626.298}{124.918}{ALIUSC1F8135}{\ALIUSFontCormorantRegular}{13.920}{http://bit.ly/2BzMxWv}
   \ALIUSPlacedTextContent{223.853}{626.298}{303.801}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{) between levels (\ALIUSCitationLink{aliusref-friston-fortier-friedman-clark-2017}{Clark, 2017}). In turn, this means that}
@@ -958,7 +963,7 @@
   \ALIUSPlacedTextContent{71.080}{723.089}{455.802}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{If, as the free energy principle states, living organisms aim at minimizing entropy,}
   \ALIUSPlacedTextContent{71.080}{738.688}{455.747}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{how should we explain and understand altered states of consciousness involving an}
   \ALIUSPlacedTextContent{71.080}{754.289}{455.810}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{abnormally high entropy (\ALIUSCitationLink{aliusref-friston-fortier-friedman-carhart-harris-leech-2014}{Carhart-Harris et al., 2014}; Schartner, Carhart-Harris,}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -968,13 +973,13 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{30}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Barrett, Seth, \& Muthukumaraswamy, 2017), or, on the other hand, an abnormally}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.785}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{low entropy (\ALIUSCitationLink{aliusref-friston-fortier-friedman-burioka-miyata-2005}{Burioka et al., 2005}; \ALIUSCitationLink{aliusref-friston-fortier-friedman-schartner-seth-2015}{Schartner et al., 2015})? Are low entropy altered}
   \ALIUSPlacedTextContent{71.080}{102.208}{455.636}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{states more optimal than others? If so, would not this lead us to redefine the criteria}
-  \ALIUSPlacedTextContent{71.080}{117.808}{455.797}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of normality and abnormality? Indeed, everyday states of consciousness—which are}
-  \ALIUSPlacedTextContent{71.080}{133.408}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{characterized by some average entropy—would appear to be less optimal than non-}
+  \ALIUSPlacedTextContent{71.080}{117.808}{455.797}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of normality and abnormality? Indeed, everyday states of consciousnessâ€”which are}
+  \ALIUSPlacedTextContent{71.080}{133.408}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{characterized by some average entropyâ€”would appear to be less optimal than non-}
   \ALIUSPlacedTextContent{71.080}{149.008}{455.844}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{ordinary states characterized by low entropy. However, such a claim would be}
   \ALIUSPlacedTextContent{71.080}{164.609}{411.659}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{somewhat paradoxical as low entropy states seem closer to death than life!}
   \ALIUSPlacedTextContent{71.080}{192.138}{456.482}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This question is easy to deal with. As noted above, there is only one imperative;}
@@ -987,7 +992,7 @@
   \ALIUSPlacedTextContent{71.080}{310.938}{456.468}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{dissolved by noting that, mathematically, uncertainty is expected free energy.}
   \ALIUSPlacedTextContent{71.080}{327.738}{439.504}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Expected free energy bounds expected surprise and expected surprise is entropy.}
   \ALIUSPlacedTextContent{71.080}{356.778}{456.476}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Low entropy states are not closer to death. Death is characterized by dissipation,}
-  \ALIUSPlacedTextContent{71.080}{373.818}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{decay and dispersion. It is the ultimate high entropy state—literally, the edge of our}
+  \ALIUSPlacedTextContent{71.080}{373.818}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{decay and dispersion. It is the ultimate high entropy stateâ€”literally, the edge of our}
   \ALIUSPlacedTextContent{71.080}{390.618}{385.017}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{existential world, when we are gently absorbed back into the universe.}
   \ALIUSPlacedTextContent{71.080}{419.728}{455.814}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Some authors have suggested that the predictive coding framework dissolves the}
   \ALIUSPlacedTextContent{71.080}{435.328}{455.736}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{classical dichotomy between cognition and perception (\ALIUSCitationLink{aliusref-friston-fortier-friedman-fletcher-frith-2009}{Fletcher \& Frith, 2009};}
@@ -1017,7 +1022,7 @@
   \ALIUSPlacedTextContent{71.080}{716.128}{455.855}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{and prediction errors would underlie exteroception and another specialized circuit}
   \ALIUSPlacedTextContent{71.080}{731.729}{455.746}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{would underlie interoception. It would only be at a relatively high level that the}
   \ALIUSPlacedTextContent{71.080}{747.328}{332.199}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{distinction between the two would not be relevant anymore.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1027,7 +1032,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{31}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.933}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{What is your take on this issue: do you consider that the predictive framework}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.777}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{undermines classical dichotomies between perception and cognition or experience}
@@ -1037,7 +1042,7 @@
   \ALIUSPlacedTextContent{71.080}{163.578}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{noted above: perception and cognition can be associated with sentient (free energy}
   \ALIUSPlacedTextContent{71.080}{180.618}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{minimizing) neuronal dynamics, in our hierarchal generative models. On this view,}
   \ALIUSPlacedTextContent{71.080}{197.658}{456.569}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{cognition is the process of inference, whereby empirical priors contextualize and}
-  \ALIUSPlacedTextContent{71.080}{214.458}{456.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{predict perceptual content and—at a phenomenal level—possibly qualitative}
+  \ALIUSPlacedTextContent{71.080}{214.458}{456.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{predict perceptual content andâ€”at a phenomenal levelâ€”possibly qualitative}
   \ALIUSPlacedTextContent{71.080}{231.498}{456.689}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{experience. There is nothing magical about this. You entertain hierarchically}
   \ALIUSPlacedTextContent{71.080}{248.538}{456.546}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{separable beliefs whenever you perform an analysis of variance that includes both}
   \ALIUSPlacedTextContent{71.080}{265.338}{456.495}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{within and between subject effects. In other words, it is perfectly possible to have}
@@ -1052,10 +1057,10 @@
   \ALIUSPlacedTextContent{71.080}{423.328}{455.771}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of embodiment and non-representational engagement in the world (\ALIUSCitationLink{aliusref-friston-fortier-friedman-clark-2017}{Clark, 2017};}
   \ALIUSPlacedTextContent{71.080}{438.928}{455.875}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{\ALIUSCitationLink{aliusref-friston-fortier-friedman-downey-2017}{Downey, 2017}; \ALIUSCitationLink{aliusref-friston-fortier-friedman-gallagher-allen-2016}{Gallagher \& Allen, 2016}; \ALIUSCitationLink{aliusref-friston-fortier-friedman-kirchhoff-2016}{Kirchhoff, 2016}). On the other hand,}
   \ALIUSPlacedTextContent{71.080}{454.528}{455.821}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{representationalist philosophers have insisted that the very structure of Bayesian}
-  \ALIUSPlacedTextContent{71.080}{470.128}{455.754}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{modeling rules out direct realism—for the brain has only direct access to partial data}
+  \ALIUSPlacedTextContent{71.080}{470.128}{455.754}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{modeling rules out direct realismâ€”for the brain has only direct access to partial data}
   \ALIUSPlacedTextContent{71.080}{485.728}{455.751}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{caused by the world, and no direct access to the world itself, hence the necessity to}
   \ALIUSPlacedTextContent{71.080}{501.328}{455.794}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{build a model of the world. By the same token, the very structure of predictive}
-  \ALIUSPlacedTextContent{71.080}{516.928}{455.839}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{coding modeling rules out direct realism—for the brain has only direct access to}
+  \ALIUSPlacedTextContent{71.080}{516.928}{455.839}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{coding modeling rules out direct realismâ€”for the brain has only direct access to}
   \ALIUSPlacedTextContent{71.080}{532.529}{455.792}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{bottom-up prediction error data inconsistent with top-down predictions, and not}
   \ALIUSPlacedTextContent{71.080}{548.129}{455.830}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{direct access to the world itself, hence the necessity to build a model of world on}
   \ALIUSPlacedTextContent{71.080}{563.729}{455.793}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{which future predictions will be based (Hohwy, 2016, 2017). Moreover, the}
@@ -1069,7 +1074,7 @@
   \ALIUSPlacedTextContent{71.080}{700.529}{455.830}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{you unequivocally champion the representationalist view. What is your actual}
   \ALIUSPlacedTextContent{71.080}{716.128}{237.263}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{position on this heated philosophical issue?}
   \ALIUSPlacedTextContent{71.080}{743.658}{456.376}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This is an excellent question. My position on this philosophical issue is context}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1079,11 +1084,11 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{32}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.701}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{sensitive: I basically agree with the person that I am talking to. In other words, I am}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.586}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{quite happy to bat for both sides in the "representation wars" (\ALIUSCitationLink{aliusref-friston-fortier-friedman-williams-2017}{Williams, 2017}). I find}
-  \ALIUSPlacedTextContent{71.080}{104.778}{456.571}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{these wars most interesting—in terms of the personalities involved, but also from a}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.571}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{these wars most interestingâ€”in terms of the personalities involved, but also from a}
   \ALIUSPlacedTextContent{71.080}{121.818}{148.505}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mathematical perspective.}
   \ALIUSPlacedTextContent{71.080}{150.858}{456.532}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Exactly the same sort of dialectic emerges in the free energy formulation. In other}
   \ALIUSPlacedTextContent{71.080}{167.658}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{words, one could take the skeptical position that our Markov blankets provide an}
@@ -1094,12 +1099,12 @@
   \ALIUSPlacedTextContent{71.080}{252.618}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{position that in order for the Markov blanket to exist there must be states "out}
   \ALIUSPlacedTextContent{71.080}{269.418}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{there". In other words, a radically skeptical free energy minimizing agent only exists}
   \ALIUSPlacedTextContent{71.080}{286.458}{414.584}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in virtue of a mathematical construct that appeals to philosophical realism.}
-  \ALIUSPlacedTextContent{110.920}{333.353}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{128.440}{333.353}{275.159}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I am quite happy to bat for both sides in the}
-  \ALIUSPlacedTextContent{128.440}{351.353}{281.982}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{'representation wars'. I find these wars most}
-  \ALIUSPlacedTextContent{128.440}{369.353}{344.700}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{interesting—in terms of the personalities involved, but}
-  \ALIUSPlacedTextContent{128.440}{386.873}{241.672}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{also from a mathematical perspective.}
-  \ALIUSPlacedTextContent{374.680}{388.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{110.440}{333.353}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{163.210}{333.353}{275.159}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I am quite happy to bat for both sides in the}
+  \ALIUSPlacedTextContent{159.799}{350.873}{281.982}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{'representation wars'. I find these wars most}
+  \ALIUSPlacedTextContent{128.440}{368.393}{344.700}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{interestingâ€”in terms of the personalities involved, but}
+  \ALIUSPlacedTextContent{179.954}{385.913}{241.672}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{also from a mathematical perspective.}
+  \ALIUSPlacedTextContent{477.140}{385.913}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{431.178}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{My favorite way of eluding this dialectic is to either treat the Markov blanket as}
   \ALIUSPlacedTextContent{71.080}{448.218}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{something that you hide under to preserve a skeptical position (Hohwy, 2016).}
   \ALIUSPlacedTextContent{71.080}{465.018}{456.437}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Alternatively, the Markov blanket can be regarded as an existential interface that}
@@ -1109,7 +1114,7 @@
   \ALIUSPlacedTextContent{71.080}{532.938}{456.601}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{connotations, then I think, again, you can play both sides. Clearly, a posterior belief}
   \ALIUSPlacedTextContent{71.080}{549.978}{456.567}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about the causes of my sensations is, in some sense, representing or "standing in" for}
   \ALIUSPlacedTextContent{71.080}{566.778}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{a hypothesis that explains my sensorium. On the other hand, the desert landscape}
-  \ALIUSPlacedTextContent{71.080}{583.818}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{perspective of ensemble dynamics does not call on any representations—it is just in}
+  \ALIUSPlacedTextContent{71.080}{583.818}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{perspective of ensemble dynamics does not call on any representationsâ€”it is just in}
   \ALIUSPlacedTextContent{71.080}{600.858}{447.302}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the game of minimizing free energy by destroying free energy gradients (i.e}
   \ALIUSPlacedTextContent{518.458}{600.858}{9.176}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{.,}
   \ALIUSPlacedTextContent{71.080}{617.658}{106.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{prediction errors).}
@@ -1118,9 +1123,9 @@
   \ALIUSPlacedTextContent{71.080}{680.538}{456.414}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{puts action or movement into the mix, prior beliefs about how I will behave}
   \ALIUSPlacedTextContent{71.080}{697.578}{456.488}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{structure the world in a way that does not require a generative process (out there,}
   \ALIUSPlacedTextContent{71.080}{714.378}{456.497}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{beyond the Markov blanket) to be isomorphic with the generative model (on the}
-  \ALIUSPlacedTextContent{71.080}{731.418}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inside). This begs the question: can one represent something that does not exist—}
+  \ALIUSPlacedTextContent{71.080}{731.418}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inside). This begs the question: can one represent something that does not existâ€”}
   \ALIUSPlacedTextContent{71.080}{748.458}{150.549}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{before one has authored it?}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1130,13 +1135,13 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{33}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.803}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Many proposals have been made to model the neurocomputational mechanisms of}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.771}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{several neuropsychiatric illnesses. The case of psychosis is particularly suggestive.}
   \ALIUSPlacedTextContent{71.080}{102.208}{455.828}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Strikingly enough, the consensus is far from being established as to what these key}
   \ALIUSPlacedTextContent{71.080}{117.808}{455.749}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{mechanisms are. Some authors conceive of psychosis as first and foremost resulting}
-  \ALIUSPlacedTextContent{71.080}{133.408}{455.720}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{from an anomaly of bottom-up processing—of an unusually high triggering of}
+  \ALIUSPlacedTextContent{71.080}{133.408}{455.720}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{from an anomaly of bottom-up processingâ€”of an unusually high triggering of}
   \ALIUSPlacedTextContent{71.080}{149.008}{455.813}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{prediction errors mainly due to excessive dopaminergic activity (Smith, Li, Becker, \&}
   \ALIUSPlacedTextContent{71.080}{164.609}{455.842}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Kapur, 2006). Conversely, it has been proposed that the anomaly at work in}
   \ALIUSPlacedTextContent{71.080}{180.208}{455.798}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{psychosis would lie in top-down rather bottom-up processing: delusions or}
@@ -1145,11 +1150,11 @@
   \ALIUSPlacedTextContent{71.080}{227.008}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{advanced that psychosis actually results from a bidirectional anomaly: both bottom-}
   \ALIUSPlacedTextContent{71.080}{242.609}{455.790}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{up prediction errors and top-down predictions are at work, because, it is suggested,}
   \ALIUSPlacedTextContent{71.080}{258.208}{455.842}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of the unusual activity of AMPA and NMDA receptors respectively (Corlett, Honey,}
-  \ALIUSPlacedTextContent{71.080}{273.808}{453.275}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Krystal, \& Fletcher, 2011). A fourth Bayesian model pinpoints the precision—}
-  \ALIUSPlacedTextContent{71.080}{289.408}{455.792}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{inverse variance—ascribed to bottom-up and top-down processing rather than the}
+  \ALIUSPlacedTextContent{71.080}{273.808}{453.275}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Krystal, \& Fletcher, 2011). A fourth Bayesian model pinpoints the precisionâ€”}
+  \ALIUSPlacedTextContent{71.080}{289.408}{455.792}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{inverse varianceâ€”ascribed to bottom-up and top-down processing rather than the}
   \ALIUSPlacedTextContent{71.080}{305.008}{455.775}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{content of these processes themselves (\ALIUSCitationLink{aliusref-friston-fortier-friedman-fletcher-frith-2009}{Fletcher \& Frith, 2009}; Friston, Brown,}
   \ALIUSPlacedTextContent{71.080}{320.608}{455.947}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Siemerkus, \& Stephan, 2016). According to this model, psychosis is essentially an}
-  \ALIUSPlacedTextContent{71.080}{336.208}{455.796}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{anomaly concerning synaptic gain: precision weighting—and contextualization—of a}
+  \ALIUSPlacedTextContent{71.080}{336.208}{455.796}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{anomaly concerning synaptic gain: precision weightingâ€”and contextualizationâ€”of a}
   \ALIUSPlacedTextContent{71.080}{351.808}{455.782}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{given signal. Neuromodulators are thus identified as being crucially involved in}
   \ALIUSPlacedTextContent{71.080}{367.408}{58.192}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{psychosis.}
   \ALIUSPlacedTextContent{71.080}{395.008}{58.164}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{With your}
@@ -1179,7 +1184,7 @@
   \ALIUSPlacedTextContent{71.080}{705.258}{456.504}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{upon something called a mean field assumption. In turn, this means that the}
   \ALIUSPlacedTextContent{71.080}{722.058}{456.503}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(approximate) Bayesian beliefs about anything depend upon beliefs about}
   \ALIUSPlacedTextContent{71.080}{739.098}{456.710}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{everything else. This holds for beliefs about process or content and beliefs about}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1189,26 +1194,26 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{34}
   \ALIUSPlacedTextContent{71.080}{70.938}{115.424}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{precision or context.}
   \ALIUSPlacedTextContent{71.080}{99.978}{456.598}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The implication is you cannot break any sentient or inferential machinery without}
-  \ALIUSPlacedTextContent{71.080}{116.778}{456.550}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{breaking both process and precision-based inference. Put more simply—in context}
-  \ALIUSPlacedTextContent{71.080}{133.818}{456.530}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of predicting process and precision—if you cannot measure something when}
+  \ALIUSPlacedTextContent{71.080}{116.778}{456.550}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{breaking both process and precision-based inference. Put more simplyâ€”in context}
+  \ALIUSPlacedTextContent{71.080}{133.818}{456.530}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of predicting process and precisionâ€”if you cannot measure something when}
   \ALIUSPlacedTextContent{71.080}{150.858}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{performing a statistical analysis, you cannot estimate the standard error (i.e., the}
   \ALIUSPlacedTextContent{71.080}{167.658}{456.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inverse standard precision). Conversely, if you can't estimate the standard error you}
   \ALIUSPlacedTextContent{71.080}{184.698}{456.506}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{can never make an inference. I think this little metaphor is useful because it speaks}
   \ALIUSPlacedTextContent{71.080}{201.738}{456.582}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to false inference as the common denominator behind all current theories of}
   \ALIUSPlacedTextContent{71.080}{218.538}{217.342}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychopathology and pathophysiology.}
-  \ALIUSPlacedTextContent{102.280}{260.873}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{120.520}{260.873}{201.782}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{There is no distinction between}
-  \ALIUSPlacedTextContent{322.360}{260.873}{44.618}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{process}
-  \ALIUSPlacedTextContent{367.000}{260.873}{71.979}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{-based and}
-  \ALIUSPlacedTextContent{120.520}{278.873}{53.241}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{precision}
-  \ALIUSPlacedTextContent{173.800}{278.873}{319.630}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{-based models of psychopathology. […] you cannot}
-  \ALIUSPlacedTextContent{120.520}{296.873}{327.827}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{break any sentient or inferential machinery without}
-  \ALIUSPlacedTextContent{462.520}{311.848}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{120.520}{314.393}{340.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{breaking both process and precision-based inference.}
+  \ALIUSPlacedTextContent{118.819}{260.873}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{206.084}{260.873}{201.782}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{There is no distinction between}
+  \ALIUSPlacedTextContent{284.666}{260.873}{44.618}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{process}
+  \ALIUSPlacedTextContent{270.986}{260.873}{71.979}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{-based and}
+  \ALIUSPlacedTextContent{280.355}{278.393}{53.241}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{precision}
+  \ALIUSPlacedTextContent{147.160}{278.393}{319.630}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{-based models of psychopathology. [â€¦] you cannot}
+  \ALIUSPlacedTextContent{143.061}{295.913}{327.827}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{break any sentient or inferential machinery without}
+  \ALIUSPlacedTextContent{481.131}{313.433}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{136.819}{313.433}{340.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{breaking both process and precision-based inference.}
   \ALIUSPlacedTextContent{71.080}{363.498}{456.434}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{False inference here means exactly what it sounds like; namely, type I and type II}
   \ALIUSPlacedTextContent{71.080}{380.298}{456.685}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{errors associated with false positives and false negatives. These provide a compelling}
   \ALIUSPlacedTextContent{71.080}{397.338}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{metaphor for the positive and negative symptoms of many neuropsychiatric}
@@ -1232,7 +1237,7 @@
   \ALIUSPlacedTextContent{71.080}{721.169}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{surprising: indeed, many researchers seem inclined to think that bottom-up and top-}
   \ALIUSPlacedTextContent{71.080}{736.768}{455.806}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{down processes are underlain by glutamatergic and GABAergic activity whereas}
   \ALIUSPlacedTextContent{71.080}{752.369}{455.772}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{precision weighting is underlain by the neuromodulatory activity of acetylcholine,}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1242,14 +1247,14 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{35}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.764}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{norepinephrine, serotonin and dopamine (e.g., \ALIUSCitationLink{aliusref-friston-fortier-friedman-yu-dayan-2005}{Yu \& Dayan, 2005}). Do you consider}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.819}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{that the difference between process-based and precision-based models can be}
   \ALIUSPlacedTextContent{71.080}{102.208}{455.791}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{neurochemically boiled down to a difference between neurotransmission proper}
   \ALIUSPlacedTextContent{71.080}{117.808}{455.972}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{and neuromodulation? If so, why does the disconnection hypothesis identify}
   \ALIUSPlacedTextContent{71.080}{133.408}{407.982}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{glutamate anomalies as centrally mediating abnormal precision weighting?}
-  \ALIUSPlacedTextContent{71.080}{160.938}{456.636}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{These are interesting questions—especially from the perspective of computational}
+  \ALIUSPlacedTextContent{71.080}{160.938}{456.636}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{These are interesting questionsâ€”especially from the perspective of computational}
   \ALIUSPlacedTextContent{71.080}{177.978}{456.723}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychiatry. In short, my take on these issues is that the computational failure is in}
   \ALIUSPlacedTextContent{71.080}{194.778}{456.692}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{terms of precision control or, more generally, the encoding of uncertainty in}
   \ALIUSPlacedTextContent{71.080}{211.818}{456.453}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{generative models of the world. In predictive coding, this translates into an}
@@ -1263,14 +1268,14 @@
   \ALIUSPlacedTextContent{71.080}{347.418}{456.502}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{connectivity changes or measures of excitation-inhibition balance. The reason that}
   \ALIUSPlacedTextContent{71.080}{364.458}{456.635}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{we have focused on NMDA receptors is that they may play a profound role in}
   \ALIUSPlacedTextContent{71.080}{381.498}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{reporting and structuring the coupling between fast spiking inhibitory interneurons}
-  \ALIUSPlacedTextContent{71.080}{398.298}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and pyramidal cells—thought to report prediction errors. Generally speaking, it is}
+  \ALIUSPlacedTextContent{71.080}{398.298}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and pyramidal cellsâ€”thought to report prediction errors. Generally speaking, it is}
   \ALIUSPlacedTextContent{71.080}{415.338}{456.747}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{these fast inhibitory dynamics that set the overall excitability of pyramidal cells and}
   \ALIUSPlacedTextContent{71.080}{432.138}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{thereby, operationally, encode precision. Crucially, there is abundant evidence to}
-  \ALIUSPlacedTextContent{71.080}{449.178}{456.535}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{implicate modulatory neurotransmitters—via their effects on NMDA receptor}
-  \ALIUSPlacedTextContent{71.080}{466.218}{456.484}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{function—in the control of inhibitory dynamics. In short, my suspicion is that all of}
+  \ALIUSPlacedTextContent{71.080}{449.178}{456.535}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{implicate modulatory neurotransmittersâ€”via their effects on NMDA receptor}
+  \ALIUSPlacedTextContent{71.080}{466.218}{456.484}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{functionâ€”in the control of inhibitory dynamics. In short, my suspicion is that all of}
   \ALIUSPlacedTextContent{71.080}{483.018}{456.597}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{these phenomena (glutamate neurotransmission, inhibitory neurotransmission,}
   \ALIUSPlacedTextContent{71.080}{500.058}{456.527}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{synchronous gain and classical neuromodulators) all have a deeply enmeshed role in}
-  \ALIUSPlacedTextContent{71.080}{517.098}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the control of precision and the attention paid to—or attenuation of—sensory}
+  \ALIUSPlacedTextContent{71.080}{517.098}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the control of precision and the attention paid toâ€”or attenuation ofâ€”sensory}
   \ALIUSPlacedTextContent{71.080}{533.898}{253.293}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{evidence for our internal models of the world.}
   \ALIUSPlacedTextContent{71.080}{563.008}{455.821}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Regardless of the distinctions among the free energy, predictive coding, and}
   \ALIUSPlacedTextContent{71.080}{578.609}{455.790}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Bayesian brain frameworks, all these theories agree that anticipation is crucial for}
@@ -1286,7 +1291,7 @@
   \ALIUSPlacedTextContent{71.080}{734.609}{425.267}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{similar processes exist across these systems. On a related note, in a recent}
   \ALIUSPlacedTextContent{497.815}{734.609}{29.072}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{Aeon}
   \ALIUSPlacedTextContent{71.080}{750.208}{455.748}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{article (Friston, 2017) you argued that consciousness in general is a process rather}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1296,7 +1301,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{36}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.756}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{than a thing. You claimed that beyond simple self-organization (as in a virus), our}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.707}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{self-ness is granted by our "temporal thickness", or skill at minimizing surprises in}
@@ -1311,7 +1316,7 @@
   \ALIUSPlacedTextContent{71.080}{239.008}{455.773}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{national predictive organizations such as the UN represent the emergence of a new}
   \ALIUSPlacedTextContent{71.080}{254.609}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{level of consciousness? How would free energy delineate the arrival of self-}
   \ALIUSPlacedTextContent{71.080}{270.208}{336.476}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{awareness in digital and/or decentralized multilevel systems?}
-  \ALIUSPlacedTextContent{71.080}{297.738}{456.524}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The straightforward answer to your question is that—in my world—consciousness}
+  \ALIUSPlacedTextContent{71.080}{297.738}{456.524}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The straightforward answer to your question is thatâ€”in my worldâ€”consciousness}
   \ALIUSPlacedTextContent{71.080}{314.778}{456.498}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is a process and it is the process of inference. Therefore any system that minimizes}
   \ALIUSPlacedTextContent{71.080}{331.578}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{variational free energy is conscious to a greater or lesser extent (Hobson \& Friston,}
   \ALIUSPlacedTextContent{71.080}{348.618}{456.512}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{2014), in virtue of maximizing Bayesian model evidence (the complement of surprise}
@@ -1319,8 +1324,8 @@
   \ALIUSPlacedTextContent{71.080}{382.458}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{information is, mathematically, self-evidencing (Hohwy, 2016). Self-evidencing is}
   \ALIUSPlacedTextContent{71.080}{399.498}{459.833}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{just active inference and therefore must entail a rudimentary form of consciousness.}
   \ALIUSPlacedTextContent{71.080}{428.538}{456.416}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Your question is more searching. I take it as asking what is the difference between}
-  \ALIUSPlacedTextContent{71.080}{445.338}{456.572}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{self-evidencing systems that are aware of themselves—or at least have a minimal}
-  \ALIUSPlacedTextContent{71.080}{462.378}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{selfhood—and those systems (perhaps like an ant colony) that do not. As you rightly}
+  \ALIUSPlacedTextContent{71.080}{445.338}{456.572}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{self-evidencing systems that are aware of themselvesâ€”or at least have a minimal}
+  \ALIUSPlacedTextContent{71.080}{462.378}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{selfhoodâ€”and those systems (perhaps like an ant colony) that do not. As you rightly}
   \ALIUSPlacedTextContent{71.080}{479.418}{456.618}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{note, we have made this distinction on the basis of the counterfactual breath and}
   \ALIUSPlacedTextContent{71.080}{496.218}{456.612}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{temporal depth of generative models. In other words, if we are talking about systems}
   \ALIUSPlacedTextContent{71.080}{513.258}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that act to minimize free energy, and those systems have been selected (by the}
@@ -1329,7 +1334,7 @@
   \ALIUSPlacedTextContent{71.080}{564.138}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{include the future. In other words, they must have predictions about the}
   \ALIUSPlacedTextContent{71.080}{580.938}{163.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{consequences of their action.}
   \ALIUSPlacedTextContent{71.080}{609.978}{456.454}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The time horizon or depth of these models may be very short or very long. Usually,}
-  \ALIUSPlacedTextContent{71.080}{627.018}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the deeper the model, the greater the number of policies that can be entertained—}
+  \ALIUSPlacedTextContent{71.080}{627.018}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the deeper the model, the greater the number of policies that can be entertainedâ€”}
   \ALIUSPlacedTextContent{71.080}{643.818}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and the greater the counterfactual breadth or richness (\ALIUSCitationLink{aliusref-friston-fortier-friedman-seth-2014}{Seth, 2014}). Put another way,}
   \ALIUSPlacedTextContent{71.080}{660.858}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{counterfactual breath scores the latitude an agent has to select among viable policies}
   \ALIUSPlacedTextContent{71.080}{677.898}{456.515}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that she expects to resolve uncertainty (i.e., reduce the expected surprise of being}
@@ -1339,7 +1344,7 @@
   \ALIUSPlacedTextContent{394.598}{711.738}{133.039}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{) a generative model of}
   \ALIUSPlacedTextContent{71.080}{728.778}{456.423}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{counterfactual outcomes. In short, did it make a decision to select one policy (store}
   \ALIUSPlacedTextContent{71.080}{745.578}{456.470}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{its provisions) over another (gather its food) in the summer. If one could find}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1349,7 +1354,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{37}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.582}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{evidence for the encoding of the sufficient statistics of these counterfactual beliefs,}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in any (biophysical) aspect of the colony, then one would ascribe it a minimal}
@@ -1361,19 +1366,19 @@
   \ALIUSPlacedTextContent{71.080}{201.738}{456.508}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{distinction between self and other. This may sound like an obvious assertion;}
   \ALIUSPlacedTextContent{71.080}{218.538}{456.518}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{however, it becomes quite fundamental in terms of theory of mind, action}
   \ALIUSPlacedTextContent{71.080}{235.578}{456.493}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{observation, and the role of things like mirror neurons. In short, the only universes}
-  \ALIUSPlacedTextContent{71.080}{252.618}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in which I would need to contextualize my predictions—by calling upon inferences}
-  \ALIUSPlacedTextContent{71.080}{269.418}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about agency—are universes in which the things I see are caused by "creatures like}
+  \ALIUSPlacedTextContent{71.080}{252.618}{456.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in which I would need to contextualize my predictionsâ€”by calling upon inferences}
+  \ALIUSPlacedTextContent{71.080}{269.418}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about agencyâ€”are universes in which the things I see are caused by "creatures like}
   \ALIUSPlacedTextContent{71.080}{286.458}{456.493}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{me". In this, and only in this setting, does there become a need to discriminate}
   \ALIUSPlacedTextContent{71.080}{303.498}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{between self-made acts and the actions one observes others making. Given that most}
   \ALIUSPlacedTextContent{71.080}{320.298}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of us populate such worlds, inference about agency and concomitant self-awareness}
   \ALIUSPlacedTextContent{71.080}{337.338}{456.418}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{would be an emergent property. In this sense, unless the ant colony spends much of}
   \ALIUSPlacedTextContent{71.080}{354.138}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{his time engaging with other ant colonies, I suspect the ant colony would not be self-}
-  \ALIUSPlacedTextContent{71.080}{371.178}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{aware. Another example might be a worm. The only worms—on this argument—}
+  \ALIUSPlacedTextContent{71.080}{371.178}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{aware. Another example might be a worm. The only wormsâ€”on this argumentâ€”}
   \ALIUSPlacedTextContent{71.080}{388.218}{456.478}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that can be self-conscious are those whose "soil" comprises a writhing mass of other}
   \ALIUSPlacedTextContent{71.080}{405.018}{456.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{worms. If one now applies this treatment to computers that are globally connected}
   \ALIUSPlacedTextContent{71.080}{422.058}{456.440}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in our modern world, I am not sure that what the answer would be. I hope that I am}
-  \ALIUSPlacedTextContent{71.080}{439.098}{387.495}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{around long enough to see what transpires—to resolve my uncertainty.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{439.098}{387.495}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{around long enough to see what transpiresâ€”to resolve my uncertainty.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1383,23 +1388,23 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{38}
   \ALIUSPlacedTextContent{263.991}{71.444}{70.165}{ALIUSC000000}{\ALIUSFontLatoLight}{13.731}{References}
   \ALIUSPlacedTextContent{71.080}{101.585}{456.284}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-aitchison-lengyel-2017}Aitchison, L., \& Lengyel, M. (2017). With or without you: Predictive coding and Bayesian}
-  \ALIUSPlacedTextContent{106.530}{117.185}{417.830}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{inference in the brain. Current Opinion in Neurobiology, 46(Supplement C), 219–}
+  \ALIUSPlacedTextContent{106.530}{117.185}{417.830}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{inference in the brain. Current Opinion in Neurobiology, 46(Supplement C), 219â€“}
   \ALIUSPlacedTextContent{106.530}{133.025}{230.255}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{227. https://doi.org/10.1016/j.conb.2017.08.010}
   \ALIUSPlacedTextContent{71.080}{160.625}{456.229}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-allen-friston-2016}Allen, M., \& Friston, K. (2016). From cognitivism to autopoiesis: towards a computational}
   \ALIUSPlacedTextContent{106.530}{176.465}{187.641}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{framework for the embodied mind.}
   \ALIUSPlacedTextContent{295.767}{176.465}{40.290}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Synthese}
-  \ALIUSPlacedTextContent{336.053}{176.465}{188.314}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1–24. https://doi.org/10.1007/s11229-}
+  \ALIUSPlacedTextContent{336.053}{176.465}{188.314}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1â€“24. https://doi.org/10.1007/s11229-}
   \ALIUSPlacedTextContent{106.530}{192.305}{55.565}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{016-1288-5}
   \ALIUSPlacedTextContent{71.080}{219.905}{456.354}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-badcock-davey-2017}Badcock, P. B., Davey, C. G., Whittle, S., Allen, N. B., \& Friston, K. J. (2017). The Depressed}
   \ALIUSPlacedTextContent{106.530}{235.745}{208.416}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Brain: An Evolutionary Systems Theory.}
   \ALIUSPlacedTextContent{315.468}{235.745}{132.981}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{448.490}{235.745}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{454.937}{235.745}{8.490}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{21}
-  \ALIUSPlacedTextContent{463.439}{235.745}{63.968}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(3), 182–194.}
+  \ALIUSPlacedTextContent{463.439}{235.745}{63.968}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(3), 182â€“194.}
   \ALIUSPlacedTextContent{106.530}{251.345}{200.316}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.tics.2017.01.005}
   \ALIUSPlacedTextContent{71.080}{279.185}{456.349}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-bastos-usrey-2012}Bastos, A. M., Usrey, W. M., Adams, R. A., Mangun, G. R., Fries, P., \& Friston, K. J. (2012).}
   \ALIUSPlacedTextContent{106.530}{295.025}{237.290}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Canonical microcircuits for predictive coding.}
@@ -1410,18 +1415,18 @@
   \ALIUSPlacedTextContent{455.539}{338.465}{51.840}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neuron, 60}
   \ALIUSPlacedTextContent{507.415}{338.465}{19.992}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(6),}
   \ALIUSPlacedTextContent{106.530}{354.065}{216.983}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{1142-1152. doi: 10.1016/j.neuron.2008.09.021}
-  \ALIUSPlacedTextContent{71.080}{381.905}{456.382}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-burioka-miyata-2005}Burioka, N., Miyata, M., Cornélissen, G., Halberg, F., Takeshima, T., Kaplan, D. T., …}
+  \ALIUSPlacedTextContent{71.080}{381.905}{456.382}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-burioka-miyata-2005}Burioka, N., Miyata, M., CornÃ©lissen, G., Halberg, F., Takeshima, T., Kaplan, D. T., â€¦}
   \ALIUSPlacedTextContent{106.530}{397.745}{420.889}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Shimizu, E. (2005). Approximate Entropy in the Electroencephalogram During}
   \ALIUSPlacedTextContent{106.530}{413.345}{85.698}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Wake and Sleep.}
   \ALIUSPlacedTextContent{191.716}{413.345}{335.659}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Clinical EEG and Neuroscience : Official Journal of the EEG and Clinical}
   \ALIUSPlacedTextContent{106.530}{429.185}{134.770}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience Society (ENCS)}
   \ALIUSPlacedTextContent{241.311}{429.185}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{247.239}{429.185}{9.888}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{36}
-  \ALIUSPlacedTextContent{257.145}{429.185}{51.209}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 21–24.}
+  \ALIUSPlacedTextContent{257.145}{429.185}{51.209}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 21â€“24.}
   \ALIUSPlacedTextContent{71.080}{456.785}{456.230}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-bruineberg-kiverstein-2016}Bruineberg, J., Kiverstein, J., \& Rietveld, E. (2016). The anticipating brain is not a scientist:}
   \ALIUSPlacedTextContent{106.530}{472.625}{343.058}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{the free-energy principle from an ecological-enactive perspective.}
   \ALIUSPlacedTextContent{451.300}{472.625}{40.290}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Synthese}
-  \ALIUSPlacedTextContent{491.586}{472.625}{35.817}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1–28.}
+  \ALIUSPlacedTextContent{491.586}{472.625}{35.817}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1â€“28.}
   \ALIUSPlacedTextContent{106.530}{488.465}{204.528}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s11229-016-1239-1}
   \ALIUSPlacedTextContent{71.080}{516.065}{456.278}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-calvo-friston-2017}Calvo, P., \& Friston, K. (2017). Predicting green: really radical (plant) predictive processing.}
   \ALIUSPlacedTextContent{106.530}{531.905}{37.095}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Journal}
@@ -1438,7 +1443,7 @@
   \ALIUSPlacedTextContent{490.789}{531.905}{9.265}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{14}
   \ALIUSPlacedTextContent{500.071}{531.905}{27.338}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(131).}
   \ALIUSPlacedTextContent{106.530}{547.505}{189.085}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1098/rsif.2017.0096}
-  \ALIUSPlacedTextContent{71.080}{575.345}{456.326}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-carhart-harris-leech-2014}Carhart-Harris, R., Leech, R., Hellyer, P., Shanahan, M., Feilding, A., Tagliazucchi, E., …}
+  \ALIUSPlacedTextContent{71.080}{575.345}{456.326}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-carhart-harris-leech-2014}Carhart-Harris, R., Leech, R., Hellyer, P., Shanahan, M., Feilding, A., Tagliazucchi, E., â€¦}
   \ALIUSPlacedTextContent{106.530}{591.185}{420.907}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Nutt, D. (2014). The entropic brain: A theory of conscious states informed by}
   \ALIUSPlacedTextContent{106.530}{606.785}{238.814}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{neuroimaging research with psychedelic drugs.}
   \ALIUSPlacedTextContent{345.347}{606.785}{155.131}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Human Neuroscience}
@@ -1454,7 +1459,7 @@
   \ALIUSPlacedTextContent{407.538}{650.225}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{433.434}{650.225}{10.421}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{28}
   \ALIUSPlacedTextContent{443.873}{650.225}{19.020}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(3),}
-  \ALIUSPlacedTextContent{482.876}{650.225}{44.541}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{385–415.}
+  \ALIUSPlacedTextContent{482.876}{650.225}{44.541}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{385â€“415.}
   \ALIUSPlacedTextContent{106.530}{666.065}{226.979}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/02699931.2013.833085}
   \ALIUSPlacedTextContent{71.080}{693.905}{456.355}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-chetverikov-filippova-2014}Chetverikov, A., \& Filippova, M. (2014). How to tell a wife from a hat: affective feedback}
   \ALIUSPlacedTextContent{106.530}{709.505}{13.292}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{in}
@@ -1465,10 +1470,10 @@
   \ALIUSPlacedTextContent{418.323}{709.505}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{444.462}{709.505}{12.413}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{151}
   \ALIUSPlacedTextContent{456.889}{709.505}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
-  \ALIUSPlacedTextContent{483.035}{709.505}{44.375}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{206–213.}
+  \ALIUSPlacedTextContent{483.035}{709.505}{44.375}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{206â€“213.}
   \ALIUSPlacedTextContent{106.530}{725.345}{214.563}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.actpsy.2014.06.012}
   \ALIUSPlacedTextContent{71.080}{752.945}{456.355}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-chetverikov-kristjansson-2016}Chetverikov, A., \& Kristjánsson, Á. (2016). On the joys of perceiving: Affect as feedback}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1478,7 +1483,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{39}
   \ALIUSPlacedTextContent{106.530}{70.865}{17.972}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{for}
   \ALIUSPlacedTextContent{148.917}{70.865}{56.583}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{perceptual}
@@ -1488,14 +1493,14 @@
   \ALIUSPlacedTextContent{424.905}{70.865}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{455.240}{70.865}{14.681}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{169}
   \ALIUSPlacedTextContent{469.943}{70.865}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
-  \ALIUSPlacedTextContent{500.275}{70.865}{27.150}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{1–10.}
+  \ALIUSPlacedTextContent{500.275}{70.865}{27.150}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{1â€“10.}
   \ALIUSPlacedTextContent{106.530}{86.705}{215.994}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.actpsy.2016.05.005}
   \ALIUSPlacedTextContent{71.080}{114.305}{456.301}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-clark-2013a}Clark, A. (2013a). Whatever next? Predictive brains, situated agents, and the future of}
   \ALIUSPlacedTextContent{106.530}{130.145}{91.036}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{cognitive science.}
   \ALIUSPlacedTextContent{197.605}{130.145}{139.628}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Behavioral and Brain Sciences}
   \ALIUSPlacedTextContent{337.261}{130.145}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{343.189}{130.145}{9.888}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{36}
-  \ALIUSPlacedTextContent{353.095}{130.145}{61.934}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(3), 181–253.}
+  \ALIUSPlacedTextContent{353.095}{130.145}{61.934}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(3), 181â€“253.}
   \ALIUSPlacedTextContent{71.080}{157.985}{237.191}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-clark-2013b}Clark, A. (2013b). The many faces of precision.}
   \ALIUSPlacedTextContent{308.299}{157.985}{77.617}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Front Psychol., 4}
   \ALIUSPlacedTextContent{385.945}{157.985}{31.580}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 270.}
@@ -1509,13 +1514,13 @@
   \ALIUSPlacedTextContent{316.671}{260.705}{123.159}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neuropsychopharmacology}
   \ALIUSPlacedTextContent{439.894}{260.705}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{445.822}{260.705}{9.888}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{36}
-  \ALIUSPlacedTextContent{455.728}{260.705}{62.415}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 294–315.}
+  \ALIUSPlacedTextContent{455.728}{260.705}{62.415}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 294â€“315.}
   \ALIUSPlacedTextContent{71.080}{288.305}{456.196}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-davies-coltheart-2001}Davies, M., Coltheart, M., Langdon, R., \& Breen, N. (2001). Monothematic Delusions:}
   \ALIUSPlacedTextContent{106.530}{304.145}{169.870}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Towards a Two-Factor Account.}
   \ALIUSPlacedTextContent{276.888}{304.145}{175.951}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Philosophy, Psychiatry, \& Psychology}
   \ALIUSPlacedTextContent{452.851}{304.145}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{459.268}{304.145}{5.702}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{8}
-  \ALIUSPlacedTextContent{464.988}{304.145}{62.432}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 133–158.}
+  \ALIUSPlacedTextContent{464.988}{304.145}{62.432}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 133â€“158.}
   \ALIUSPlacedTextContent{106.530}{319.745}{189.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1353/ppp.2001.0007}
   \ALIUSPlacedTextContent{71.080}{347.585}{456.214}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-downey-2017}Downey, A. (2017). Radical Sensorimotor Enactivism \& Predictive Processing: Providing a}
   \ALIUSPlacedTextContent{106.530}{363.425}{420.852}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Conceptual Framework for the Scientific Study of Conscious Perception. In T.}
@@ -1532,7 +1537,7 @@
   \ALIUSPlacedTextContent{106.530}{481.745}{37.115}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Sciences}
   \ALIUSPlacedTextContent{143.644}{481.745}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{149.572}{481.745}{5.016}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{7}
-  \ALIUSPlacedTextContent{154.603}{481.745}{71.047}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(10), 454–459.}
+  \ALIUSPlacedTextContent{154.603}{481.745}{71.047}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(10), 454â€“459.}
   \ALIUSPlacedTextContent{71.080}{509.585}{456.270}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-fabry-2017}Fabry, R. E. (2017). Transcending the evidentiary boundary: Prediction error minimization,}
   \ALIUSPlacedTextContent{106.530}{525.185}{263.408}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{embodied interaction, and explanatory pluralism.}
   \ALIUSPlacedTextContent{372.426}{525.185}{135.153}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Philosophical Psychology, 30}
@@ -1547,13 +1552,13 @@
   \ALIUSPlacedTextContent{312.068}{627.905}{136.300}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Nature Reviews Neuroscience}
   \ALIUSPlacedTextContent{448.396}{627.905}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{454.324}{627.905}{9.472}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{10}
-  \ALIUSPlacedTextContent{463.814}{627.905}{54.473}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 48–58.}
+  \ALIUSPlacedTextContent{463.814}{627.905}{54.473}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 48â€“58.}
   \ALIUSPlacedTextContent{71.080}{655.745}{373.963}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-friston-2010}Friston, K. (2010). The free-energy principle: A unified brain theory?}
   \ALIUSPlacedTextContent{447.920}{655.745}{79.484}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Nature Reviews}
   \ALIUSPlacedTextContent{106.530}{671.345}{59.655}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
   \ALIUSPlacedTextContent{166.212}{671.345}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{172.140}{671.345}{7.554}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{11}
-  \ALIUSPlacedTextContent{179.706}{671.345}{62.350}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 127–138.}
+  \ALIUSPlacedTextContent{179.706}{671.345}{62.350}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 127â€“138.}
   \ALIUSPlacedTextContent{71.080}{699.185}{336.189}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-friston-2012}Friston, K. (2012). The history of the future of the Bayesian brain.}
   \ALIUSPlacedTextContent{407.587}{699.185}{72.148}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neuroimage, 62}
   \ALIUSPlacedTextContent{479.757}{699.185}{44.611}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 1230-}
@@ -1563,7 +1568,7 @@
   \ALIUSPlacedTextContent{436.248}{742.625}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{442.179}{742.625}{9.472}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{10}
   \ALIUSPlacedTextContent{451.669}{742.625}{75.732}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(86), 20130475.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1573,7 +1578,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{40}
   \ALIUSPlacedTextContent{106.530}{70.865}{187.043}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1098/rsif.2013.0475}
   \ALIUSPlacedTextContent{71.080}{98.705}{428.821}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-friston-2017}Friston, K. (2017, May 18). Consciousness is not a thing, but a process of inference.}
@@ -1589,14 +1594,14 @@
   \ALIUSPlacedTextContent{388.592}{173.585}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{421.784}{173.585}{14.253}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{176}
   \ALIUSPlacedTextContent{436.057}{173.585}{28.444}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2-3),}
-  \ALIUSPlacedTextContent{491.772}{173.585}{35.638}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{83–94.}
+  \ALIUSPlacedTextContent{491.772}{173.585}{35.638}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{83â€“94.}
   \ALIUSPlacedTextContent{106.530}{189.425}{213.680}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.schres.2016.07.014}
   \ALIUSPlacedTextContent{71.080}{217.025}{418.707}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-friston-kilner-2006}Friston, K., Kilner, J., \& Harrison, L. (2006). A free energy principle for the brain.}
   \ALIUSPlacedTextContent{490.295}{217.025}{37.095}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Journal}
   \ALIUSPlacedTextContent{106.530}{232.865}{94.733}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{of Physiology - Paris}
   \ALIUSPlacedTextContent{201.284}{232.865}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{207.212}{232.865}{15.174}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{100}
-  \ALIUSPlacedTextContent{222.408}{232.865}{63.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1-3), 70–87.}
+  \ALIUSPlacedTextContent{222.408}{232.865}{63.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1-3), 70â€“87.}
   \ALIUSPlacedTextContent{71.080}{260.705}{456.342}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-friston-lin-2017}Friston, K., Lin, M., Frith, C. D., Pezzulo, G., Hobson, J. A., \& Ondobaka, S. (2017). Active}
   \ALIUSPlacedTextContent{106.530}{276.305}{167.612}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Inference, Curiosity and Insight.}
   \ALIUSPlacedTextContent{274.109}{276.305}{71.889}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neural Comput}
@@ -1604,13 +1609,13 @@
   \ALIUSPlacedTextContent{71.080}{304.145}{456.314}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-gallagher-allen-2016}Gallagher, S., \& Allen, M. (2016). Active inference, enactivism and the hermeneutics of}
   \ALIUSPlacedTextContent{106.530}{319.745}{85.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{social cognition.}
   \ALIUSPlacedTextContent{192.042}{319.745}{40.290}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Synthese}
-  \ALIUSPlacedTextContent{232.328}{319.745}{240.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1–22. https://doi.org/10.1007/s11229-016-1269-8}
+  \ALIUSPlacedTextContent{232.328}{319.745}{240.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1â€“22. https://doi.org/10.1007/s11229-016-1269-8}
   \ALIUSPlacedTextContent{71.080}{347.585}{456.290}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-hobson-friston-2014}Hobson, A., \& Friston, K. (2014). Consciousness, Dreams, and Inference: The Cartesian}
   \ALIUSPlacedTextContent{106.530}{363.425}{96.021}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Theatre Revisited.}
   \ALIUSPlacedTextContent{202.571}{363.425}{149.000}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Journal of Consciousness Studies}
   \ALIUSPlacedTextContent{351.651}{363.425}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{357.579}{363.425}{8.490}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{21}
-  \ALIUSPlacedTextContent{366.081}{363.425}{56.344}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1-2), 6–32.}
+  \ALIUSPlacedTextContent{366.081}{363.425}{56.344}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1-2), 6â€“32.}
   \ALIUSPlacedTextContent{71.080}{391.025}{456.325}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-hoffman-singh-2015}Hoffman, D. D., Singh, M., \& Prakash, C. (2015). The Interface Theory of Perception.}
   \ALIUSPlacedTextContent{106.530}{406.865}{163.992}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Psychonomic Bulletin \& Review, 22}
   \ALIUSPlacedTextContent{270.574}{406.865}{228.917}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(6), 1480-1506. doi: 10.3758/s13423-015-0890-8}
@@ -1619,18 +1624,18 @@
   \ALIUSPlacedTextContent{106.530}{450.305}{118.746}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Psychiatry, \& Psychology}
   \ALIUSPlacedTextContent{225.294}{450.305}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{231.222}{450.305}{7.554}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{11}
-  \ALIUSPlacedTextContent{238.788}{450.305}{243.982}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 65–70. https://doi.org/10.1353/ppp.2004.0043}
+  \ALIUSPlacedTextContent{238.788}{450.305}{243.982}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 65â€“70. https://doi.org/10.1353/ppp.2004.0043}
   \ALIUSPlacedTextContent{71.080}{478.145}{42.882}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Hohwy,}
   \ALIUSPlacedTextContent{130.049}{478.145}{9.793}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{J.}
   \ALIUSPlacedTextContent{155.929}{478.145}{35.434}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2016).}
   \ALIUSPlacedTextContent{207.450}{478.145}{23.055}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{The}
   \ALIUSPlacedTextContent{246.592}{478.145}{78.755}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{self-evidencing}
   \ALIUSPlacedTextContent{341.434}{478.145}{32.644}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{brain.}
-  \ALIUSPlacedTextContent{390.178}{478.145}{23.600}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Noûs}
+  \ALIUSPlacedTextContent{390.178}{478.145}{23.600}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{NoÃ»s}
   \ALIUSPlacedTextContent{413.798}{478.145}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{435.797}{478.145}{10.551}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{50}
   \ALIUSPlacedTextContent{446.365}{478.145}{19.176}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2),}
-  \ALIUSPlacedTextContent{481.623}{478.145}{45.779}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{259–285.}
+  \ALIUSPlacedTextContent{481.623}{478.145}{45.779}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{259â€“285.}
   \ALIUSPlacedTextContent{106.530}{493.745}{169.195}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1111/nous.12062}
   \ALIUSPlacedTextContent{71.080}{521.585}{456.428}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-hohwy-2017}Hohwy, J. (2017). How to Entrain Your Evil Demon. In T. Metzinger \& W. Wiese (Eds.),}
   \ALIUSPlacedTextContent{106.530}{537.185}{169.536}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Philosophy and Predictive Processing}
@@ -1639,9 +1644,9 @@
   \ALIUSPlacedTextContent{500.201}{565.025}{27.216}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{PLoS}
   \ALIUSPlacedTextContent{106.530}{580.865}{69.458}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Comput Biol, 9}
   \ALIUSPlacedTextContent{176.013}{580.865}{236.157}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(6), e1003094. doi: 10.1371/journal.pcbi.1003094}
-  \ALIUSPlacedTextContent{71.080}{608.465}{456.350}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-kirchhoff-2016}Kirchhoff, M. D. (2016). Autopoiesis, free energy, and the life–mind continuity thesis.}
+  \ALIUSPlacedTextContent{71.080}{608.465}{456.350}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-kirchhoff-2016}Kirchhoff, M. D. (2016). Autopoiesis, free energy, and the lifeâ€“mind continuity thesis.}
   \ALIUSPlacedTextContent{106.530}{624.305}{40.290}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Synthese}
-  \ALIUSPlacedTextContent{146.816}{624.305}{239.641}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1–22. https://doi.org/10.1007/s11229-016-1100-6}
+  \ALIUSPlacedTextContent{146.816}{624.305}{239.641}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1â€“22. https://doi.org/10.1007/s11229-016-1100-6}
   \ALIUSPlacedTextContent{71.080}{651.905}{221.499}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-knill-richards-1996}Knill, D., \& Richards, W. (Eds.). (1996).}
   \ALIUSPlacedTextContent{296.058}{651.905}{159.687}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Perception as Bayesian inference}
   \ALIUSPlacedTextContent{455.743}{651.905}{71.697}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{. Cambridge:}
@@ -1656,7 +1661,7 @@
   \ALIUSPlacedTextContent{496.466}{754.625}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{502.138}{754.625}{5.443}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{6}
   \ALIUSPlacedTextContent{507.598}{754.625}{19.811}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(4),}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1666,9 +1671,9 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{41}
-  \ALIUSPlacedTextContent{106.530}{70.865}{253.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{547–569. https://doi.org/10.1007/s13164-015-0253-4}
+  \ALIUSPlacedTextContent{106.530}{70.865}{253.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{547â€“569. https://doi.org/10.1007/s13164-015-0253-4}
   \ALIUSPlacedTextContent{71.080}{98.705}{334.982}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-lyon-2015}Lyon, P. (2015). The cognitive cell: bacterial behavior reconsidered.}
   \ALIUSPlacedTextContent{405.562}{98.705}{115.914}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Microbiology}
   \ALIUSPlacedTextContent{521.494}{98.705}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
@@ -1683,7 +1688,7 @@
   \ALIUSPlacedTextContent{362.551}{157.985}{10.514}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{47}
   \ALIUSPlacedTextContent{373.080}{157.985}{68.129}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(Supplement}
   \ALIUSPlacedTextContent{460.545}{157.985}{18.840}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{C),}
-  \ALIUSPlacedTextContent{498.720}{157.985}{28.692}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{6–16.}
+  \ALIUSPlacedTextContent{498.720}{157.985}{28.692}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{6â€“16.}
   \ALIUSPlacedTextContent{106.530}{173.585}{219.348}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.concog.2016.04.001}
   \ALIUSPlacedTextContent{71.080}{201.425}{86.270}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-marr-1982}Marr, D. (1982).}
   \ALIUSPlacedTextContent{159.544}{201.425}{367.815}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Vision. A Computational Investigation into the Human Representation and}
@@ -1702,14 +1707,14 @@
   \ALIUSPlacedTextContent{448.480}{347.585}{73.298}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Conscious Cogn}
   \ALIUSPlacedTextContent{521.806}{347.585}{5.607}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{.}
   \ALIUSPlacedTextContent{106.530}{363.425}{163.931}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{doi: 10.1016/j.concog.2015.04.007}
-  \ALIUSPlacedTextContent{71.080}{391.025}{456.346}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-powers-mathys-2017}Powers, A. R., Mathys, C., \& Corlett, P. R. (2017). Pavlovian conditioning–induced}
+  \ALIUSPlacedTextContent{71.080}{391.025}{456.346}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-powers-mathys-2017}Powers, A. R., Mathys, C., \& Corlett, P. R. (2017). Pavlovian conditioningâ€“induced}
   \ALIUSPlacedTextContent{106.530}{406.865}{328.277}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{hallucinations result from overweighting of perceptual priors.}
   \ALIUSPlacedTextContent{437.037}{406.865}{33.183}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Science}
   \ALIUSPlacedTextContent{470.225}{406.865}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{478.374}{406.865}{14.321}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{357}
   \ALIUSPlacedTextContent{492.713}{406.865}{34.685}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(6351),}
-  \ALIUSPlacedTextContent{106.530}{422.465}{245.360}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{596–600. https://doi.org/10.1126/science.aan3458}
-  \ALIUSPlacedTextContent{71.080}{450.305}{453.287}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-ramstead-badcock-2017}Ramstead, M., Badcock, P., \& Friston, K. (2017). Answering Schrödinger's question: A free-}
+  \ALIUSPlacedTextContent{106.530}{422.465}{245.360}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{596â€“600. https://doi.org/10.1126/science.aan3458}
+  \ALIUSPlacedTextContent{71.080}{450.305}{453.287}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-ramstead-badcock-2017}Ramstead, M., Badcock, P., \& Friston, K. (2017). Answering SchrÃ¶dinger's question: A free-}
   \ALIUSPlacedTextContent{106.530}{466.145}{102.524}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{energy formulation.}
   \ALIUSPlacedTextContent{208.500}{466.145}{104.820}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Physics of Life Reviews}
   \ALIUSPlacedTextContent{313.323}{466.145}{214.089}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{. https://doi.org/10.1016/j.plrev.2017.09.001}
@@ -1721,7 +1726,7 @@
   \ALIUSPlacedTextContent{71.080}{553.025}{456.156}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-ratcliffe-2013}Ratcliffe, M. (2013). Delusional atmosphere and the sense of unreality. In G. Stanghellini \&}
   \ALIUSPlacedTextContent{106.530}{568.865}{83.242}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{T. Fuchs (Eds.),}
   \ALIUSPlacedTextContent{190.994}{568.865}{258.183}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{One Century of Karl Jaspers' General Psychopathology}
-  \ALIUSPlacedTextContent{449.204}{568.865}{78.202}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 229–244).}
+  \ALIUSPlacedTextContent{449.204}{568.865}{78.202}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 229â€“244).}
   \ALIUSPlacedTextContent{106.530}{584.465}{170.690}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Oxford: Oxford University Press.}
   \ALIUSPlacedTextContent{71.080}{612.305}{456.166}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-rosen-kineman-2005}Rosen, J., \& Kineman, J. J. (2005). Anticipatory systems and time: a new look at Rosennean}
   \ALIUSPlacedTextContent{106.530}{627.905}{61.693}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{complexity.}
@@ -1729,7 +1734,7 @@
   \ALIUSPlacedTextContent{106.530}{643.745}{80.948}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Systems Research}
   \ALIUSPlacedTextContent{187.440}{643.745}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{193.368}{643.745}{9.423}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{22}
-  \ALIUSPlacedTextContent{202.806}{643.745}{221.271}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(5), 399–412. https://doi.org/10.1002/sres.715}
+  \ALIUSPlacedTextContent{202.806}{643.745}{221.271}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(5), 399â€“412. https://doi.org/10.1002/sres.715}
   \ALIUSPlacedTextContent{71.080}{671.345}{456.240}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-schartner-carhart-harris-2017}Schartner, M., Carhart-Harris, R. L., Barrett, A. B., Seth, A. K., \& Muthukumaraswamy, S.}
   \ALIUSPlacedTextContent{106.530}{687.185}{420.884}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{D. (2017). Increased spontaneous MEG signal diversity for psychoactive doses of}
   \ALIUSPlacedTextContent{106.530}{703.025}{52.909}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{ketamine,}
@@ -1744,7 +1749,7 @@
   \ALIUSPlacedTextContent{473.432}{703.025}{53.991}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{srep46421.}
   \ALIUSPlacedTextContent{106.530}{718.625}{168.895}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1038/srep46421}
   \ALIUSPlacedTextContent{71.080}{746.465}{456.264}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-schartner-seth-2015}Schartner, M., Seth, A., Noirhomme, Q., Boly, M., Bruno, M.-A., Laureys, S., \& Barrett, A.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1754,7 +1759,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{42}
   \ALIUSPlacedTextContent{106.530}{70.865}{420.877}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2015). Complexity of Multi-Dimensional Spontaneous EEG Decreases during}
   \ALIUSPlacedTextContent{106.530}{86.705}{47.519}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Propofol}
@@ -1773,7 +1778,7 @@
   \ALIUSPlacedTextContent{142.695}{145.985}{291.376}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Ieee Transactions on Autonomous Mental Development, 2}
   \ALIUSPlacedTextContent{434.175}{145.985}{93.224}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(3), 230-247. doi:}
   \ALIUSPlacedTextContent{106.530}{161.585}{135.240}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{10.1109/tamd.2010.2056368}
-  \ALIUSPlacedTextContent{71.080}{189.425}{456.331}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-schrodinger-1944}Schrödinger, E. (1944). What Is Life? : The Physical Aspect of the Living Cell (pp. 1-32).}
+  \ALIUSPlacedTextContent{71.080}{189.425}{456.331}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-schrodinger-1944}SchrÃ¶dinger, E. (1944). What Is Life? : The Physical Aspect of the Living Cell (pp. 1-32).}
   \ALIUSPlacedTextContent{106.530}{205.025}{166.531}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Dublin: Trinity College, Dublin.}
   \ALIUSPlacedTextContent{71.080}{232.865}{376.268}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-seth-2013}Seth, A. K. (2013). Interoceptive inference, emotion, and the embodied self.}
   \ALIUSPlacedTextContent{446.921}{232.865}{80.484}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Trends Cogn Sci,}
@@ -1787,7 +1792,7 @@
   \ALIUSPlacedTextContent{71.080}{335.585}{456.302}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-seth-2015}Seth, A. (2015). The Cybernetic Bayesian Brain: From Interoceptive Inference to}
   \ALIUSPlacedTextContent{106.530}{351.425}{324.454}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Sensorimotor Contingencies. In T. Metzinger \& J. Windt (Eds.),}
   \ALIUSPlacedTextContent{430.802}{351.425}{56.998}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Open MIND}
-  \ALIUSPlacedTextContent{487.838}{351.425}{36.522}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 1–}
+  \ALIUSPlacedTextContent{487.838}{351.425}{36.522}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 1â€“}
   \ALIUSPlacedTextContent{106.530}{367.025}{199.342}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{24). Frankfurt am Main: MIND Group.}
   \ALIUSPlacedTextContent{71.080}{394.865}{456.316}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-shea-frith-2016}Shea, N., \& Frith, C. (2016). Dual-process theories and consciousness: The case for "Type}
   \ALIUSPlacedTextContent{106.530}{410.465}{30.974}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Zero"}
@@ -1798,7 +1803,7 @@
   \ALIUSPlacedTextContent{414.281}{410.465}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{441.270}{410.465}{19.651}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{2016}
   \ALIUSPlacedTextContent{460.939}{410.465}{18.268}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1),}
-  \ALIUSPlacedTextContent{500.279}{410.465}{27.145}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{1–10.}
+  \ALIUSPlacedTextContent{500.279}{410.465}{27.145}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{1â€“10.}
   \ALIUSPlacedTextContent{106.530}{426.305}{173.420}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/nc/niw005}
   \ALIUSPlacedTextContent{71.080}{454.145}{309.912}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-shipp-2016}Shipp, S. (2016). Neural Elements for Predictive Coding.}
   \ALIUSPlacedTextContent{384.460}{454.145}{81.393}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Front Psychol, 7}
@@ -1814,16 +1819,16 @@
   \ALIUSPlacedTextContent{279.551}{572.465}{194.219}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Network: Computation in Neural Systems}
   \ALIUSPlacedTextContent{473.827}{572.465}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{479.994}{572.465}{8.799}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{17}
-  \ALIUSPlacedTextContent{488.807}{572.465}{35.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 61–}
+  \ALIUSPlacedTextContent{488.807}{572.465}{35.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 61â€“}
   \ALIUSPlacedTextContent{106.530}{588.305}{238.159}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{84. https://doi.org/10.1080/09548980500361624}
-  \ALIUSPlacedTextContent{71.080}{615.905}{456.298}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-teufel-subramaniam-2015}Teufel, C., Subramaniam, N., Dobler, V., Perez, J., Finnemann, J., Mehta, P., … Fletcher, P.}
+  \ALIUSPlacedTextContent{71.080}{615.905}{456.298}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-teufel-subramaniam-2015}Teufel, C., Subramaniam, N., Dobler, V., Perez, J., Finnemann, J., Mehta, P., â€¦ Fletcher, P.}
   \ALIUSPlacedTextContent{106.530}{631.745}{420.777}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2015). Shift toward prior knowledge confers a perceptual advantage in early}
   \ALIUSPlacedTextContent{106.530}{647.345}{274.553}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{psychosis and psychosis-prone healthy individuals.}
   \ALIUSPlacedTextContent{385.322}{647.345}{142.100}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Proceedings of the National}
   \ALIUSPlacedTextContent{106.530}{663.185}{94.481}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Academy of Sciences}
   \ALIUSPlacedTextContent{201.025}{663.185}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{206.952}{663.185}{12.271}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{112}
-  \ALIUSPlacedTextContent{219.238}{663.185}{287.154}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(43), 13401–13406. https://doi.org/10.1073/pnas.1503916112}
+  \ALIUSPlacedTextContent{219.238}{663.185}{287.154}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(43), 13401â€“13406. https://doi.org/10.1073/pnas.1503916112}
   \ALIUSPlacedTextContent{71.080}{691.025}{241.401}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-unkelback-greifeneder-2013}Unkelback, C., \& Greifeneder, R. (Eds.). (2013).}
   \ALIUSPlacedTextContent{312.826}{691.025}{214.580}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{The Experience of Thinking: How the Fluency}
   \ALIUSPlacedTextContent{106.530}{706.625}{255.307}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{of Mental Processes Influences Cognition and Behaviour}
@@ -1831,7 +1836,7 @@
   \ALIUSPlacedTextContent{106.530}{722.465}{31.476}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Press.}
   \ALIUSPlacedTextContent{71.080}{750.065}{396.666}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-friston-fortier-friedman-williams-2017}Williams, D. (2017). Predictive Processing and the Representation Wars.}
   \ALIUSPlacedTextContent{471.583}{750.065}{55.829}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Minds and}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1841,7 +1846,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Of woodlice and men}
+  \ALIUSPlacedTextContent{71.080}{35.460}{155.839}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Of woodlice and men}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{43}
   \ALIUSPlacedTextContent{106.530}{70.865}{43.097}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Machines}
   \ALIUSPlacedTextContent{149.637}{70.865}{156.885}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{. doi: 10.1007/s11023-017-9441-6}
@@ -1850,8 +1855,8 @@
   \ALIUSPlacedTextContent{489.672}{98.705}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{496.639}{98.705}{10.942}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{46}
   \ALIUSPlacedTextContent{507.598}{98.705}{19.811}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(4),}
-  \ALIUSPlacedTextContent{106.530}{114.305}{268.032}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{681–692. https://doi.org/10.1016/j.neuron.2005.04.026}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{106.530}{114.305}{268.032}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{681â€“692. https://doi.org/10.1016/j.neuron.2005.04.026}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -138,7 +143,7 @@
   \fill[white] (88.576bp,-199.817bp) rectangle ++(293.817bp,-37.500bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (90.076bp,-201.817bp) {\begin{minipage}{290.817bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Koroma, M. (2022). What is it like to be asleep ? ALIUS Bulle tin, 6, \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.5281/zenodo.7419360}{https://doi.org/10.5281/zenodo.7419360}}}\par}\end{minipage}};
   % ALIUS normalized citation panel end
-  \ALIUSPlacedTextContent{392.579}{203.135}{76.888}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{University of Liège,}
+  \ALIUSPlacedTextContent{392.579}{203.135}{76.888}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{University of LiÃ¨ge,}
   \ALIUSPlacedTextContent{392.579}{213.944}{33.562}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{Belgium}
   \ALIUSPlacedTextContent{90.076}{275.983}{55.628}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.007}{Abstract}
   \ALIUSPlacedTextContent{90.076}{307.324}{101.803}{ALIUSC000000}{\ALIUSFontLatoLight}{12.010}{In  this  episode,  Ma}
@@ -191,7 +196,7 @@
   \ALIUSPlacedTextContent{420.289}{718.356}{19.539}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{fter}
   \ALIUSPlacedTextContent{439.829}{718.356}{68.739}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{awakening}
   \ALIUSPlacedTextContent{90.076}{737.870}{126.173}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{(\ALIUSCitationLink{aliusref-koroma-friedman-coutrot-oudiette-de-cock-2009}{Oudiette et al., 2009}).}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{386.027}{792.995}{120.329}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -206,7 +211,7 @@
   \fill[ALIUSC595959] (482.638bp,-747.229bp) rectangle ++(11.720bp,-11.750bp);
   \fill[ALIUSC595959] (107.451bp,-94.720bp) rectangle ++(11.720bp,-11.750bp);
   \fill[ALIUSC595959] (114.078bp,-721.695bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{266.534}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Matthieu Koroma – What is it like to be asleep ?}
+  \ALIUSPlacedTextContent{90.076}{35.448}{266.534}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Matthieu Koroma â€“ What is it like to be asleep ?}
   \ALIUSPlacedTextContent{500.872}{37.291}{7.638}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{2}
   \ALIUSPlacedTextContent{139.069}{91.581}{331.553}{ALIUSC000000}{\ALIUSFontLatoLight}{15.013}{Could memories be made up to the such an extent}
   \ALIUSPlacedTextContent{139.681}{113.246}{320.496}{ALIUSC000000}{\ALIUSFontLatoLight}{15.013}{that we actually do not dream at all during sleep?}
@@ -257,7 +262,7 @@
   \ALIUSPlacedTextContent{164.189}{719.368}{271.480}{ALIUSC000000}{\ALIUSFontLatoLight}{15.013}{The dreamless sleep experience has been}
   \ALIUSPlacedTextContent{140.196}{740.085}{103.189}{ALIUSC000000}{\ALIUSFontLatoLight}{15.013}{described in par}
   \ALIUSPlacedTextContent{243.377}{740.085}{212.210}{ALIUSC000000}{\ALIUSFontLatoLight}{15.013}{ticular detail by great meditators.}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{386.027}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -270,7 +275,7 @@
   \fill[ALIUSCFFFFFF] (90.076bp,-91.574bp) rectangle ++(352.383bp,-16.968bp);
   \fill[ALIUSC595959] (99.066bp,-543.532bp) rectangle ++(11.720bp,-11.750bp);
   \fill[ALIUSC595959] (476.633bp,-568.253bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{266.534}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Matthieu Koroma – What is it like to be asleep ?}
+  \ALIUSPlacedTextContent{90.076}{35.448}{266.534}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Matthieu Koroma â€“ What is it like to be asleep ?}
   \ALIUSPlacedTextContent{501.028}{37.291}{7.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{3}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.484}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Finally,  we  can  also  wake  up  knowing  that  we  experienced  something  in  our}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.439}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{dream  but  without  being  able  to  say  precisely  what  it  was  about .  While  this}
@@ -320,9 +325,9 @@
   \ALIUSPlacedTextContent{126.106}{696.799}{175.665}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{International Journal of Neuroscience}
   \ALIUSPlacedTextContent{298.727}{696.799}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
   \ALIUSPlacedTextContent{304.659}{696.799}{13.633}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{85}
-  \ALIUSPlacedTextContent{315.248}{696.799}{64.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(1–2), 19–30.}
+  \ALIUSPlacedTextContent{315.248}{696.799}{64.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(1â€“2), 19â€“30.}
   \ALIUSPlacedTextContent{126.106}{714.919}{221.026}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.3109/00207459608986348}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{386.027}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -337,7 +342,7 @@
   \fill[ALIUSCFFFFFF] (90.076bp,-150.544bp) rectangle ++(217.619bp,-15.756bp);
   \fill[ALIUSCFFFFFF] (90.076bp,-410.120bp) rectangle ++(100.438bp,-15.756bp);
   \fill[ALIUSCFFFFFF] (235.601bp,-410.120bp) rectangle ++(59.917bp,-15.756bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{266.534}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Matthieu Koroma – What is it like to be asleep ?}
+  \ALIUSPlacedTextContent{90.076}{35.448}{266.534}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Matthieu Koroma â€“ What is it like to be asleep ?}
   \ALIUSPlacedTextContent{500.283}{37.291}{8.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{4}
   \ALIUSPlacedTextContent{90.076}{72.076}{189.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-koroma-friedman-coutrot-dement-wolpert-1958}Dement, W., \& Wolpert, E. A. (1958).}
   \ALIUSPlacedTextContent{279.569}{72.076}{185.903}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{The relation of eye movements, body}
@@ -348,7 +353,7 @@
   \ALIUSPlacedTextContent{166.133}{108.315}{10.342}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{gy}
   \ALIUSPlacedTextContent{176.474}{108.315}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
   \ALIUSPlacedTextContent{182.406}{108.315}{12.774}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{55}
-  \ALIUSPlacedTextContent{192.136}{108.315}{64.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(6), 543–553.}
+  \ALIUSPlacedTextContent{192.136}{108.315}{64.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(6), 543â€“553.}
   \ALIUSPlacedTextContent{256.411}{108.315}{166.091}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1037/h0040031}
   \ALIUSPlacedTextContent{90.076}{132.440}{241.592}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-koroma-friedman-coutrot-dennett-1976}Dennett, D. C. (1976). Are dreams experiences?.}
   \ALIUSPlacedTextContent{331.667}{132.440}{116.594}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{The Philosophical Review}
@@ -364,11 +369,11 @@
   \ALIUSPlacedTextContent{463.205}{210.923}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
   \ALIUSPlacedTextContent{469.137}{210.923}{12.995}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{43}
   \ALIUSPlacedTextContent{479.089}{210.923}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
-  \ALIUSPlacedTextContent{126.106}{229.043}{34.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{84–91.}
+  \ALIUSPlacedTextContent{126.106}{229.043}{34.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{84â€“91.}
   \ALIUSPlacedTextContent{161.007}{229.043}{207.315}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1016/j.smrv.2018.10.005}
   \ALIUSPlacedTextContent{90.076}{253.168}{389.107}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-koroma-friedman-coutrot-konkoly-appel-2021}Konkoly, K. R., Appel, K., Chabani, E., Mangiaruga, A., Gott, J., Mallett, R.,}
   \ALIUSPlacedTextContent{126.106}{271.287}{372.652}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Caughran, B., Witkowski, S., Whitmore, N. W., Mazurek, C. Y., Berent, J.}
-  \ALIUSPlacedTextContent{126.106}{289.407}{364.027}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{B., Weber, F. D., Türker, B., Leu-Semenescu, S., Maranci, J.-B., Pipa, G.,}
+  \ALIUSPlacedTextContent{126.106}{289.407}{364.027}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{B., Weber, F. D., TÃ¼rker, B., Leu-Semenescu, S., Maranci, J.-B., Pipa, G.,}
   \ALIUSPlacedTextContent{126.106}{307.527}{348.716}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Arnulf, I., Oudiette, D., Dresler, M., \& Paller, K. A. (2021). Real-time}
   \ALIUSPlacedTextContent{126.106}{325.646}{334.615}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{dialogue between experimenters and dreamers during REM sleep.}
   \ALIUSPlacedTextContent{460.721}{325.646}{39.676}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Current}
@@ -390,14 +395,14 @@
   \ALIUSPlacedTextContent{256.918}{470.499}{10.342}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{gy}
   \ALIUSPlacedTextContent{267.260}{470.499}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
   \ALIUSPlacedTextContent{273.192}{470.499}{12.800}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{72}
-  \ALIUSPlacedTextContent{282.948}{470.499}{63.052}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(6), 551–557.}
+  \ALIUSPlacedTextContent{282.948}{470.499}{63.052}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(6), 551â€“557.}
   \ALIUSPlacedTextContent{126.106}{488.619}{254.418}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1212/01.wnl.0000341936.78678.3a}
   \ALIUSPlacedTextContent{90.076}{512.743}{106.747}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-koroma-friedman-coutrot-revonsuo-2005}Revonsuo, A. (2005).}
   \ALIUSPlacedTextContent{196.822}{512.743}{108.022}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{The self in dreams. In}
   \ALIUSPlacedTextContent{307.888}{512.743}{35.682}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{The lost}
   \ALIUSPlacedTextContent{343.570}{512.743}{155.086}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{self: Pathologies of the brain and}
   \ALIUSPlacedTextContent{126.106}{530.863}{39.194}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{identity}
-  \ALIUSPlacedTextContent{165.300}{530.863}{239.771}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(pp. 206–219). Oxford University Press Oxford.}
+  \ALIUSPlacedTextContent{165.300}{530.863}{239.771}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(pp. 206â€“219). Oxford University Press Oxford.}
   \ALIUSPlacedTextContent{90.076}{554.988}{85.907}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-koroma-friedman-coutrot-siclari-laroc-que-2013}Siclari, F., LaRoc}
   \ALIUSPlacedTextContent{175.905}{554.988}{294.445}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{que, J. J., Postle, B. R., \& Tononi, G. (2013). Assessing sleep}
   \ALIUSPlacedTextContent{126.106}{573.107}{330.517}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{consciousness within subjects using a serial awakening paradigm.}
@@ -413,7 +418,7 @@
   \ALIUSPlacedTextContent{180.494}{633.471}{36.293}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Science}
   \ALIUSPlacedTextContent{213.743}{633.471}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
   \ALIUSPlacedTextContent{219.675}{633.471}{18.927}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{290}
-  \ALIUSPlacedTextContent{235.558}{633.471}{81.745}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(5490), 350–353.}
+  \ALIUSPlacedTextContent{235.558}{633.471}{81.745}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(5490), 350â€“353.}
   \ALIUSPlacedTextContent{126.106}{651.591}{219.087}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1126/science.290.5490.350}
   \ALIUSPlacedTextContent{90.076}{675.716}{413.147}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-koroma-friedman-coutrot-windt-2013}Windt, J. M. (2013). Reporting dream experience: Why (not) to be skeptical about}
   \ALIUSPlacedTextContent{126.106}{693.835}{76.802}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{dream reports.}
@@ -422,7 +427,7 @@
   \ALIUSPlacedTextContent{363.574}{693.835}{8.078}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{7}
   \ALIUSPlacedTextContent{368.608}{693.835}{5.607}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{.}
   \ALIUSPlacedTextContent{126.106}{711.955}{210.918}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.3389/fnhum.2013.00708}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{386.027}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -439,7 +444,7 @@
   \fill[ALIUSCFFFFFF] (90.076bp,-192.788bp) rectangle ++(407.797bp,-15.756bp);
   \fill[ALIUSCFFFFFF] (90.076bp,-210.908bp) rectangle ++(317.246bp,-15.756bp);
   \fill[ALIUSCFFFFFF] (90.076bp,-229.028bp) rectangle ++(248.535bp,-15.756bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{266.534}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Matthieu Koroma – What is it like to be asleep ?}
+  \ALIUSPlacedTextContent{90.076}{35.448}{266.534}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Matthieu Koroma â€“ What is it like to be asleep ?}
   \ALIUSPlacedTextContent{500.788}{37.291}{7.723}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{5}
   \ALIUSPlacedTextContent{90.076}{72.076}{141.583}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-koroma-friedman-coutrot-windt-nielsen-2016}Windt, J. M., Nielsen, T., \&}
   \ALIUSPlacedTextContent{231.659}{72.076}{262.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Thompson, E. (2016). Does Consciousness Disappear}
@@ -447,7 +452,7 @@
   \ALIUSPlacedTextContent{225.243}{90.195}{133.271}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{355.470}{90.195}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
   \ALIUSPlacedTextContent{361.402}{90.195}{13.464}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{20}
-  \ALIUSPlacedTextContent{371.821}{90.195}{70.037}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(12), 871–882.}
+  \ALIUSPlacedTextContent{371.821}{90.195}{70.037}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(12), 871â€“882.}
   \ALIUSPlacedTextContent{126.106}{108.315}{203.061}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1016/j.tics.2016.09.006}
   \ALIUSPlacedTextContent{90.076}{132.440}{404.756}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-koroma-friedman-coutrot-ward-wegner-2013}Ward, A. F., \& Wegner, D. M. (2013). Mind-blanking: When the mind goes away.}
   \ALIUSPlacedTextContent{126.106}{150.559}{95.690}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Frontiers in psycholo}
@@ -464,7 +469,7 @@
   \ALIUSPlacedTextContent{361.701}{210.923}{8.768}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{8}
   \ALIUSPlacedTextContent{367.425}{210.923}{42.941}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(1), 1-10.}
   \ALIUSPlacedTextContent{126.106}{229.043}{215.549}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1038/s41598-018-21067-9}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.520}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{386.027}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

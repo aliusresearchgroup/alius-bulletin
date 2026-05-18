@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -164,7 +169,7 @@
   \ALIUSPlacedTextContent{77.652}{472.180}{81.607}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{to rogue agents.}
   \ALIUSPlacedTextContent{119.909}{503.655}{382.394}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.729}{altered states of consciousness, cognitive science, consciousness, philosophy, psychedelics.}
   \ALIUSPlacedTextContent{77.652}{503.700}{42.252}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.623}{keywords:}
-  \ALIUSPlacedTextContent{77.652}{533.994}{442.861}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Your published works—and interviews—span volumes and fields, conveying complex}
+  \ALIUSPlacedTextContent{77.652}{533.994}{442.861}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Your published worksâ€”and interviewsâ€”span volumes and fields, conveying complex}
   \ALIUSPlacedTextContent{77.652}{548.687}{362.048}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{ideas through engaging words and thought experiments. The singular}
   \ALIUSPlacedTextContent{440.467}{548.687}{80.010}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{Intuition Pumps}
   \ALIUSPlacedTextContent{77.652}{563.148}{150.115}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{and Other Tools for Thinking}
@@ -184,7 +189,7 @@
   \ALIUSPlacedTextContent{77.652}{694.459}{442.881}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{professionalized nature of academic philosophy, providing an inroad for many people}
   \ALIUSPlacedTextContent{77.652}{708.919}{442.841}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{into some of the most valuable aspects of philosophical thinking, and also spurring an}
   \ALIUSPlacedTextContent{77.652}{723.613}{378.954}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{incredible amount of students into various areas of the cognitive sciences.}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -233,7 +238,7 @@
   \ALIUSPlacedTextContent{77.652}{709.386}{442.826}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{indeterminacy of translation thesis, and find affinity with American pragmatic traditions}
   \ALIUSPlacedTextContent{77.652}{723.846}{442.863}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{(\ALIUSCitationLink{aliusref-dennett-fleig-goldstein-friedman-hookway-2016}{Hookway, 2016}). You stated that Quine's view of a philosopher's primary role is to}
   \ALIUSPlacedTextContent{77.652}{738.540}{442.836}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{"[provide] the conceptual clarifications and underpinnings for theories that are}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -267,7 +272,7 @@
   \ALIUSPlacedTextContent{77.652}{428.742}{443.615}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{account of a system's input-output competence. But I think I got him to see that his}
   \ALIUSPlacedTextContent{77.652}{445.302}{443.744}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{pure Skinnerian behaviorism was too simple, more of a "nice try" than a "good trick."}
   \ALIUSPlacedTextContent{77.652}{461.628}{443.521}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{He softened his line on the abandonment of intentional idioms in science after he}
-  \ALIUSPlacedTextContent{77.652}{478.188}{446.870}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{saw that there was a rather Quinian way of handling them—my "intentional stance."}
+  \ALIUSPlacedTextContent{77.652}{478.188}{446.870}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{saw that there was a rather Quinian way of handling themâ€”my "intentional stance."}
   \ALIUSPlacedTextContent{77.652}{506.239}{442.947}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Your early career was characterized by the fact that you took the time to learn}
   \ALIUSPlacedTextContent{77.652}{520.932}{442.895}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{neuroscience and psychology and incorporated these studies into philosophy of mind}
   \ALIUSPlacedTextContent{77.652}{535.393}{443.078}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{and philosophy of language. For many years you have argued against philosophers and}
@@ -283,9 +288,9 @@
   \ALIUSPlacedTextContent{77.652}{681.164}{442.877}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{of the predictive processing paradigm (\ALIUSCitationLink{aliusref-dennett-fleig-goldstein-friedman-dennett-1993}{Dennett, 1993}). All of these actions comport}
   \ALIUSPlacedTextContent{77.652}{695.858}{443.035}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{well with the view that science and philosophy are continuous. Nevertheless, there is a}
   \ALIUSPlacedTextContent{77.652}{710.319}{442.878}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{difference between providing conceptual and clarificatory underpinnings for scientific}
-  \ALIUSPlacedTextContent{77.652}{725.012}{442.819}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{theories, and providing speculative scientific theories themselves—even if it is a matter}
+  \ALIUSPlacedTextContent{77.652}{725.012}{442.819}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{theories, and providing speculative scientific theories themselvesâ€”even if it is a matter}
   \ALIUSPlacedTextContent{77.652}{739.706}{53.773}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{of degree.}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -316,7 +321,7 @@
   \ALIUSPlacedTextContent{77.652}{358.835}{259.745}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{philosopher can tell a scientist how to do their job?}
   \ALIUSPlacedTextContent{77.652}{384.894}{443.651}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Anybody can, in principle, tell scientists how to do better science. Scientists are just}
   \ALIUSPlacedTextContent{77.652}{401.454}{443.702}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{as vulnerable to illusion, sloppy thinking, unrecognized presuppositions as anyone}
-  \ALIUSPlacedTextContent{77.652}{417.780}{443.680}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{else. And sometimes 'hybrid vigor' is particularly valuable. Schrödinger was no}
+  \ALIUSPlacedTextContent{77.652}{417.780}{443.680}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{else. And sometimes 'hybrid vigor' is particularly valuable. SchrÃ¶dinger was no}
   \ALIUSPlacedTextContent{77.652}{434.340}{443.693}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{biologist, but he certainly gave a major boost to biology in What is Life?. Judea Pearl}
   \ALIUSPlacedTextContent{77.652}{450.666}{443.786}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{comes to mind as an AI researcher (and a good amateur philosopher!) who has}
   \ALIUSPlacedTextContent{77.652}{467.226}{443.680}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{developed statistical and mathematical methods that can teach researchers in lots of}
@@ -325,17 +330,17 @@
   \ALIUSPlacedTextContent{77.652}{516.672}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{ambitious) geologists. But philosophers should be better positioned than most}
   \ALIUSPlacedTextContent{77.652}{533.231}{443.626}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{others to provide such perspectives because they claim to specialize in thinking the}
   \ALIUSPlacedTextContent{77.652}{549.791}{429.155}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{unthinkable, expanding the imagination, critiquing the hidden assumptions, etc.}
-  \ALIUSPlacedTextContent{134.561}{595.134}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{140.817}{595.134}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{595.134}{247.144}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Anybody can, in principle, tell scientists}
-  \ALIUSPlacedTextContent{158.817}{612.627}{247.134}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{how to do better science. Scientists are}
-  \ALIUSPlacedTextContent{158.817}{630.119}{247.089}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{just as vulnerable to illusion, sloppy}
+  \ALIUSPlacedTextContent{158.829}{612.627}{247.134}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{how to do better science. Scientists are}
+  \ALIUSPlacedTextContent{158.852}{630.119}{247.089}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{just as vulnerable to illusion, sloppy}
   \ALIUSPlacedTextContent{158.817}{647.612}{247.158}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{thinking, unrecognized presuppositions}
-  \ALIUSPlacedTextContent{260.741}{663.328}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{158.817}{665.105}{94.627}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{as anyone else.}
+  \ALIUSPlacedTextContent{409.975}{665.105}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{235.083}{665.105}{94.627}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{as anyone else.}
   \ALIUSPlacedTextContent{77.652}{708.919}{442.895}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Recently Carhart-Harris and Friston (Carhart-Harris \& Friston, 2010) integrated}
   \ALIUSPlacedTextContent{77.652}{723.613}{442.867}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{psychiatry with predictive processing and neuroscience to argue that "Freudian}
   \ALIUSPlacedTextContent{77.652}{738.074}{442.871}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{constructs may have neurobiological substrates." For example they claim that the}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -367,7 +372,7 @@
   \ALIUSPlacedTextContent{77.652}{361.804}{443.721}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{renegade thinkers, taking seriously and even championing ideas of even rather}
   \ALIUSPlacedTextContent{77.652}{378.364}{443.712}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{cultish figures: Erving Goffman, Julian Jaynes, J. J. Gibson, to name three. One idea}
   \ALIUSPlacedTextContent{77.652}{394.690}{443.710}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of Freud's that I want to take very seriously is simply the idea that some thoughts}
-  \ALIUSPlacedTextContent{77.652}{411.250}{443.729}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{are harder—more painful—to think than others, and it has nothing to do with how}
+  \ALIUSPlacedTextContent{77.652}{411.250}{443.729}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{are harderâ€”more painfulâ€”to think than others, and it has nothing to do with how}
   \ALIUSPlacedTextContent{77.652}{427.809}{443.725}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{much information they contain or how many steps away from the sensory periphery}
   \ALIUSPlacedTextContent{77.652}{444.136}{443.712}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{they are. Bringing the affective or emotional dimension into cognitive science is now}
   \ALIUSPlacedTextContent{77.652}{460.695}{447.919}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{getting underway, long overdue. In Inside Jokes: Using Humor to Reverse-Engineer}
@@ -387,7 +392,7 @@
   \ALIUSPlacedTextContent{77.652}{713.117}{442.867}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{might have important consequences for an individual's personal life if it did achieve a}
   \ALIUSPlacedTextContent{77.652}{727.578}{442.802}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{certain level of celebrity (e.g., a belief about needing to quit a job, or that one has left the}
   \ALIUSPlacedTextContent{77.652}{742.272}{442.853}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{front door unlocked). In Jungian psychology, dreams are thought to be a stage for the}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -423,7 +428,7 @@
   \ALIUSPlacedTextContent{77.652}{449.096}{442.842}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{If you could design your dream empirical experiment in order to test some aspect of}
   \ALIUSPlacedTextContent{77.652}{463.790}{443.088}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness, what would you do? Feel free to ignore financial, methodological, or}
   \ALIUSPlacedTextContent{77.652}{478.251}{442.722}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{ethical constraints. What theory would this experiment aim to prove or disprove? If not}
-  \ALIUSPlacedTextContent{77.652}{492.944}{442.869}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{answered above—what empirical evidence (if any) do you think it would take to sway}
+  \ALIUSPlacedTextContent{77.652}{492.944}{442.869}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{answered aboveâ€”what empirical evidence (if any) do you think it would take to sway}
   \ALIUSPlacedTextContent{77.652}{507.638}{159.019}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{your critics on Consciousness?}
   \ALIUSPlacedTextContent{77.652}{533.698}{443.808}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{If I could design my dream experiment right now, I'd be off doing it. Give me a year}
   \ALIUSPlacedTextContent{77.652}{550.257}{443.653}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{or so and ask me again. Back when I wrote Consciousness Explained (Dennett 1995)}
@@ -435,10 +440,10 @@
   \ALIUSPlacedTextContent{77.652}{648.916}{443.710}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{about consciousness, I found I had some serious catching up to do. I'm happy with}
   \ALIUSPlacedTextContent{77.652}{665.475}{443.660}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{how well the theory sketch in Consciousness Explained (Dennett 1995) has stood up}
   \ALIUSPlacedTextContent{77.652}{682.035}{443.731}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{for twenty-five years, but now it's time to fill in a lot of details and extend it. In}
-  \ALIUSPlacedTextContent{77.652}{698.361}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{addition to the blossoming of new experimental paradigms—on beyond masked}
+  \ALIUSPlacedTextContent{77.652}{698.361}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{addition to the blossoming of new experimental paradigmsâ€”on beyond masked}
   \ALIUSPlacedTextContent{77.652}{714.921}{443.653}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{priming and blindsight to inattentional blindness and the attentional blink and}
-  \ALIUSPlacedTextContent{77.652}{731.480}{443.825}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{others—there is mounting evidence, and hints of consensus, on the brain regions}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{731.480}{443.825}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{othersâ€”there is mounting evidence, and hints of consensus, on the brain regions}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -450,8 +455,8 @@
   \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
   \ALIUSPlacedTextContent{77.652}{46.516}{164.318}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Daniel Dennett - Dennett Explained}
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{17}
-  \ALIUSPlacedTextContent{77.652}{81.223}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{involved. There is still some yawning chasms—nobody yet has a good account of}
-  \ALIUSPlacedTextContent{77.652}{97.550}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{how content is registered and transmitted, so far as I know—but there's now an}
+  \ALIUSPlacedTextContent{77.652}{81.223}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{involved. There is still some yawning chasmsâ€”nobody yet has a good account of}
+  \ALIUSPlacedTextContent{77.652}{97.550}{443.675}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{how content is registered and transmitted, so far as I knowâ€”but there's now an}
   \ALIUSPlacedTextContent{77.652}{114.109}{402.066}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{embarrassment of riches to sort through, not a blank wall of befuddlement.}
   \ALIUSPlacedTextContent{77.652}{142.393}{442.870}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{The idea of "affordances" (the idea that organism's perceive possible interactions with}
   \ALIUSPlacedTextContent{77.652}{156.854}{360.037}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{objects in the environment) held an important role in your recent work}
@@ -468,7 +473,7 @@
   \ALIUSPlacedTextContent{180.650}{273.471}{38.046}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{Umwelt}
   \ALIUSPlacedTextContent{218.696}{273.471}{301.817}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{, referring to the aspects of the environment that make a}
   \ALIUSPlacedTextContent{77.652}{288.165}{442.861}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{difference to an organism, and with which an organism can interact. This concept has}
-  \ALIUSPlacedTextContent{77.652}{302.625}{442.855}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{origins in the field of semiotics (\ALIUSCitationLink{aliusref-dennett-fleig-goldstein-friedman-salthe-2014}{Salthe, 2014}; \ALIUSCitationLink{aliusref-dennett-fleig-goldstein-friedman-uexkull-1910}{Uexküll, 1910}). What led you to start}
+  \ALIUSPlacedTextContent{77.652}{302.625}{442.855}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{origins in the field of semiotics (\ALIUSCitationLink{aliusref-dennett-fleig-goldstein-friedman-salthe-2014}{Salthe, 2014}; \ALIUSCitationLink{aliusref-dennett-fleig-goldstein-friedman-uexkull-1910}{UexkÃ¼ll, 1910}). What led you to start}
   \ALIUSPlacedTextContent{77.652}{317.319}{154.488}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{thinking that affordances and}
   \ALIUSPlacedTextContent{232.680}{317.319}{38.046}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{Umwelt}
   \ALIUSPlacedTextContent{270.726}{317.319}{249.761}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{have an important role to play in how scientists}
@@ -476,9 +481,9 @@
   \ALIUSPlacedTextContent{77.652}{346.473}{51.441}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Gibson's?}
   \ALIUSPlacedTextContent{77.652}{372.533}{443.594}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I've been saying for many years that the brain's job is to "produce future" (I'm not}
   \ALIUSPlacedTextContent{77.652}{389.093}{443.710}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{alone in making that observation of course). Gibson's idea of affordances and von}
-  \ALIUSPlacedTextContent{77.652}{405.652}{443.703}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Uexküll's idea of the Umwelt together draw attention to the economy or efficiency}
+  \ALIUSPlacedTextContent{77.652}{405.652}{443.703}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{UexkÃ¼ll's idea of the Umwelt together draw attention to the economy or efficiency}
   \ALIUSPlacedTextContent{77.652}{421.979}{443.751}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of evolution: it is always optimizing, selecting the arrangements that most}
-  \ALIUSPlacedTextContent{77.652}{438.538}{443.649}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{effectively, swiftly—and with energetic efficiency—do what needs to be done. Don't}
+  \ALIUSPlacedTextContent{77.652}{438.538}{443.649}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{effectively, swiftlyâ€”and with energetic efficiencyâ€”do what needs to be done. Don't}
   \ALIUSPlacedTextContent{77.652}{454.865}{443.630}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{waste time and energy on information-gathering and processing that won't often}
   \ALIUSPlacedTextContent{77.652}{471.424}{440.496}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{pay for itself. Nature is a ruthlessly efficient finder of shortcuts and acceptable half-}
   \ALIUSPlacedTextContent{77.652}{487.984}{443.548}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{measures, which is why we find ourselves living in a macroscopic world of colored}
@@ -498,7 +503,7 @@
   \ALIUSPlacedTextContent{77.652}{709.386}{442.929}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{provide data that is unconvincing on its own, there have now been a swell of studies}
   \ALIUSPlacedTextContent{77.652}{724.080}{442.886}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{concluding that psychedelics have substantial therapeutic value (Bogenschutz et al.,}
   \ALIUSPlacedTextContent{77.652}{738.540}{442.904}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{2018; Carhart-Harris \& Goodwin, 2017; Garcia-Romeu \& Richards, 2018). The clinical}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -511,7 +516,7 @@
   \ALIUSPlacedTextContent{77.652}{46.516}{164.318}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Daniel Dennett - Dennett Explained}
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{18}
   \ALIUSPlacedTextContent{77.652}{81.286}{442.878}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{value of psychedelics suggests a picture in which psychedelics impact the mind in a}
-  \ALIUSPlacedTextContent{77.652}{95.746}{442.874}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{much more targeted, structured, interesting, complicated—take your pick—way than in}
+  \ALIUSPlacedTextContent{77.652}{95.746}{442.874}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{much more targeted, structured, interesting, complicatedâ€”take your pickâ€”way than in}
   \ALIUSPlacedTextContent{77.652}{110.440}{443.058}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{the traditional psychotomimetic model, wherein psychedelics simply induce temporary}
   \ALIUSPlacedTextContent{77.652}{124.901}{442.949}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{psychotic like symptoms. There are many, for this reason, who believe that psychedelics}
   \ALIUSPlacedTextContent{77.652}{139.594}{442.871}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{provide an important inroad into studying consciousness and cognition at large. An}
@@ -522,41 +527,41 @@
   \ALIUSPlacedTextContent{77.652}{224.025}{443.066}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{because if you perturb it, then you see it; and you perturb it by perturbing the engine which}
   \ALIUSPlacedTextContent{77.652}{238.719}{442.889}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{generates it, which is the mind/brain system resting behind your eyebrows. If you swap out}
   \ALIUSPlacedTextContent{77.652}{253.179}{442.685}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{the ordinary chemicals that are running that system in an invisible fashion, then you see: it's}
-  \ALIUSPlacedTextContent{77.652}{267.873}{442.881}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{like dropping ink into a bowl of clear water—suddenly the convection currents operating in the}
+  \ALIUSPlacedTextContent{77.652}{267.873}{442.881}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{like dropping ink into a bowl of clear waterâ€”suddenly the convection currents operating in the}
   \ALIUSPlacedTextContent{77.652}{282.334}{442.887}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{clear water become visible, because you see the particles of ink tracing out the previously}
   \ALIUSPlacedTextContent{77.652}{297.028}{442.807}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{invisible dynamics of the standing water. The mind is precisely like that, and the psychedelic}
-  \ALIUSPlacedTextContent{77.652}{311.488}{442.867}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{is like a dye-marker being dropped into this aqueous system. And then you say, 'Oh, I see—it}
+  \ALIUSPlacedTextContent{77.652}{311.488}{442.867}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{is like a dye-marker being dropped into this aqueous system. And then you say, 'Oh, I seeâ€”it}
   \ALIUSPlacedTextContent{77.652}{326.182}{142.127}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.128}{works like this...and like this.'"}
   \ALIUSPlacedTextContent{77.652}{352.304}{442.945}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Do you believe that psychedelics can play an important role in the study of the mind?}
   \ALIUSPlacedTextContent{77.652}{366.998}{442.864}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{What is the role of various "altered states of consciousness" in your work? For example}
   \ALIUSPlacedTextContent{77.652}{381.458}{442.876}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{in Dennett (2017) you talk about LSD in the context of hallucinations, but we find few}
   \ALIUSPlacedTextContent{77.652}{396.152}{157.227}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{other discussions on the topic.}
   \ALIUSPlacedTextContent{77.652}{422.212}{443.428}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Yes, you put it well. It's risky to subject your brain and body to unusual substances}
-  \ALIUSPlacedTextContent{436.600}{438.609}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{436.600}{438.609}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{Â¾}
   \ALIUSPlacedTextContent{77.652}{439.704}{358.877}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and stimuli, but any new challenge may prove very enlightening}
   \ALIUSPlacedTextContent{450.157}{439.704}{71.179}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and possibly}
   \ALIUSPlacedTextContent{77.652}{456.264}{443.754}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{therapeutic. There is only a difference in degree between being bumped from}
   \ALIUSPlacedTextContent{77.652}{472.824}{443.624}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{depression by a gorgeous summer day and being cured of depression by ingesting a}
   \ALIUSPlacedTextContent{77.652}{489.383}{443.713}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{drug of one sort or another. I expect we'll learn a great deal in the near future about}
   \ALIUSPlacedTextContent{77.652}{505.710}{443.742}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{the modulating power of psychedelics. I also expect that we'll have some scientific}
-  \ALIUSPlacedTextContent{194.736}{522.107}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{194.736}{522.107}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{Â¾}
   \ALIUSPlacedTextContent{77.652}{523.202}{116.973}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{martyrs along the way}
   \ALIUSPlacedTextContent{208.306}{523.202}{313.059}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{people who bravely but rashly do things to themselves that}
   \ALIUSPlacedTextContent{77.652}{539.762}{443.697}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{disable their minds in very unfortunate ways. I know of a few such cases, and these}
   \ALIUSPlacedTextContent{77.652}{556.322}{443.683}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{have made me quite cautious about self-experimentation, since I'm quite content}
-  \ALIUSPlacedTextContent{192.870}{572.718}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
+  \ALIUSPlacedTextContent{192.870}{572.718}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{Â¾}
   \ALIUSPlacedTextContent{77.652}{573.814}{115.121}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{with the mind I have}
   \ALIUSPlacedTextContent{206.398}{573.814}{314.983}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{though I wish I were a better mathematician. Aside from}
   \ALIUSPlacedTextContent{77.652}{590.374}{443.694}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{alcohol, caffeine, nicotine and cannabis (which has little effect on me, so I don't}
   \ALIUSPlacedTextContent{77.652}{606.933}{443.698}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{bother with it), I have avoided the mind-changing options. No LSD, no psilocybin}
   \ALIUSPlacedTextContent{77.652}{623.493}{429.793}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{or mescaline, though I've often been offered them, and none of the "hard" drugs.}
-  \ALIUSPlacedTextContent{134.561}{668.836}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{158.817}{668.836}{274.618}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{It's risky to subject your brain and body to}
+  \ALIUSPlacedTextContent{140.817}{668.836}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{158.857}{668.836}{274.618}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{It's risky to subject your brain and body to}
   \ALIUSPlacedTextContent{158.817}{686.329}{274.690}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{unusual substances and stimuli, but any new}
-  \ALIUSPlacedTextContent{158.817}{703.821}{274.697}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{challenge may prove very enlightening—and}
-  \ALIUSPlacedTextContent{295.260}{721.170}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{158.817}{721.314}{133.380}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{possibly therapeutic.}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{158.817}{703.821}{274.697}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{challenge may prove very enlighteningâ€”and}
+  \ALIUSPlacedTextContent{437.514}{721.314}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{229.476}{721.314}{133.380}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{possibly therapeutic.}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -571,11 +576,11 @@
   \ALIUSPlacedTextContent{77.652}{81.223}{443.638}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{As a philosopher, I have always accepted the possibility that the Athenians were}
   \ALIUSPlacedTextContent{77.652}{97.550}{443.717}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{right: Socrates was quite capable of corrupting the minds of those with whom he}
   \ALIUSPlacedTextContent{77.652}{114.109}{443.620}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{had dialogue. I don't think he did any clear lasting harm, but it is certainly possible}
-  \ALIUSPlacedTextContent{77.652}{130.669}{443.710}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{for a philosopher to seriously confuse an interlocutor or reader—to the point of}
+  \ALIUSPlacedTextContent{77.652}{130.669}{443.710}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{for a philosopher to seriously confuse an interlocutor or readerâ€”to the point of}
   \ALIUSPlacedTextContent{77.652}{146.995}{443.559}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{mental illness or suicide, or other destructive behavior. Ideas can be just as}
   \ALIUSPlacedTextContent{77.652}{163.555}{106.156}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{dangerous as drugs.}
-  \ALIUSPlacedTextContent{134.561}{209.132}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{411.177}{207.588}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{140.817}{209.132}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{411.506}{209.132}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{209.132}{248.689}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Ideas can be just as dangerous as drugs.}
   \ALIUSPlacedTextContent{77.652}{248.282}{442.933}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Since psychedelics were made illegal in 1966, much of psychedelic research has been}
   \ALIUSPlacedTextContent{77.652}{262.742}{442.870}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{carried out by "underground" scientists and psychonauts. While there has been}
@@ -599,7 +604,7 @@
   \ALIUSPlacedTextContent{77.652}{548.687}{92.918}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{mental functions?}
   \ALIUSPlacedTextContent{77.652}{574.747}{443.833}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I think that the policies that have been hammered out in academia for doing}
   \ALIUSPlacedTextContent{77.652}{591.307}{443.802}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{ethically defensible research, while not perfect, should be followed everywhere, and}
-  \ALIUSPlacedTextContent{77.652}{607.633}{443.705}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I don't know how that can be enforced. Perhaps—perhaps—by passing legislation}
+  \ALIUSPlacedTextContent{77.652}{607.633}{443.705}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I don't know how that can be enforced. Perhapsâ€”perhapsâ€”by passing legislation}
   \ALIUSPlacedTextContent{77.652}{624.193}{443.703}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{making developers, wherever they are, strictly liable for any harmful applications of}
   \ALIUSPlacedTextContent{77.652}{640.519}{443.764}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{their products. Strict liability laws (which disallow ignorance as an excuse), if done}
   \ALIUSPlacedTextContent{77.652}{657.079}{443.715}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{right, can set up prudent systems of self-policing: investors won't invest their money}
@@ -608,7 +613,7 @@
   \ALIUSPlacedTextContent{77.652}{706.524}{443.823}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{convinced themselves that the insured have taken all reasonable steps and followed}
   \ALIUSPlacedTextContent{77.652}{723.084}{443.806}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{all the rules scrupulously. I think these conditions should be in force for AI as well}
   \ALIUSPlacedTextContent{77.652}{739.410}{443.725}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{as for psychedelics and gene-tinkering. There will still be rogues, for whom such risk}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -624,21 +629,21 @@
   \ALIUSPlacedTextContent{77.652}{97.550}{443.630}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{all; they should be regarded as intellectual vandals. The power to do tremendous}
   \ALIUSPlacedTextContent{77.652}{114.109}{443.628}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{harm to society, to life itself, is growing, and it will be very hard to keep}
   \ALIUSPlacedTextContent{77.652}{130.669}{440.351}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{irresponsible adventurers from launching projects that have terrible consequences.}
-  \ALIUSPlacedTextContent{134.561}{176.245}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{158.817}{176.245}{281.596}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I think that the policies that have been}
-  \ALIUSPlacedTextContent{158.817}{193.738}{281.618}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{hammered out in academia for doing ethically}
-  \ALIUSPlacedTextContent{158.817}{211.231}{281.594}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{defensible research, while not perfect, should}
-  \ALIUSPlacedTextContent{158.817}{228.723}{281.563}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{be followed everywhere… There will still be}
+  \ALIUSPlacedTextContent{140.817}{176.245}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{158.883}{176.245}{281.596}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I think that the policies that have been}
+  \ALIUSPlacedTextContent{158.872}{193.738}{281.618}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{hammered out in academia for doing ethically}
+  \ALIUSPlacedTextContent{158.884}{211.231}{281.594}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{defensible research, while not perfect, should}
+  \ALIUSPlacedTextContent{158.900}{228.723}{281.563}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{be followed everywhereâ€¦ There will still be}
   \ALIUSPlacedTextContent{158.817}{246.216}{281.728}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{rogues, for whom such risk is not motivating,}
-  \ALIUSPlacedTextContent{158.817}{263.708}{72.361}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{apparently,}
-  \ALIUSPlacedTextContent{244.529}{263.708}{25.770}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{and}
-  \ALIUSPlacedTextContent{283.650}{263.708}{30.466}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{they}
-  \ALIUSPlacedTextContent{327.467}{263.708}{44.178}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{should}
-  \ALIUSPlacedTextContent{384.996}{263.708}{23.801}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{not}
-  \ALIUSPlacedTextContent{422.147}{263.708}{18.238}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{be}
-  \ALIUSPlacedTextContent{158.817}{281.201}{281.607}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{romanticized or honored at all; they should be}
-  \ALIUSPlacedTextContent{365.696}{297.150}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{158.817}{298.693}{202.656}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{regarded as intellectual vandals.}
+  \ALIUSPlacedTextContent{263.501}{263.708}{72.361}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{apparently,}
+  \ALIUSPlacedTextContent{286.796}{263.708}{25.770}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{and}
+  \ALIUSPlacedTextContent{284.448}{263.708}{30.466}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{they}
+  \ALIUSPlacedTextContent{277.592}{263.708}{44.178}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{should}
+  \ALIUSPlacedTextContent{287.781}{263.708}{23.801}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{not}
+  \ALIUSPlacedTextContent{290.562}{263.708}{18.238}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{be}
+  \ALIUSPlacedTextContent{158.878}{281.201}{281.607}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{romanticized or honored at all; they should be}
+  \ALIUSPlacedTextContent{444.545}{298.693}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{198.353}{298.693}{202.656}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{regarded as intellectual vandals.}
   \ALIUSPlacedTextContent{77.652}{342.508}{442.630}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{You have said that we should teach children about religion, and in fact all of the world's}
   \ALIUSPlacedTextContent{77.652}{356.969}{442.975}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{religions, as a way to vaccinate them against absolutist beliefs held by their elders}
   \ALIUSPlacedTextContent{77.652}{371.662}{442.864}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{(\ALIUSCitationLink{aliusref-dennett-fleig-goldstein-friedman-frazier-2009}{Frazier, 2009}). Pluralistic education may vaccinate children against traditional}
@@ -648,7 +653,7 @@
   \ALIUSPlacedTextContent{77.652}{429.971}{442.782}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{children adopting these latter types of perspectives and engaging in a bit of the old}
   \ALIUSPlacedTextContent{77.652}{444.432}{442.847}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{ultraviolence would be a bad thing. How then should we tell children which set of}
   \ALIUSPlacedTextContent{77.652}{459.125}{175.593}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{behaviors are actually preferable?}
-  \ALIUSPlacedTextContent{77.652}{485.185}{443.663}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{"Show, don't tell"—as the teachers of fiction-writing urge. The project of rearing}
+  \ALIUSPlacedTextContent{77.652}{485.185}{443.663}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{"Show, don't tell"â€”as the teachers of fiction-writing urge. The project of rearing}
   \ALIUSPlacedTextContent{77.652}{501.745}{443.679}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and socializing our children so that they can enter the adult world with a good}
   \ALIUSPlacedTextContent{77.652}{518.304}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{chance of success is well-known to be a daunting challenge, requiring patience,}
   \ALIUSPlacedTextContent{77.652}{534.631}{443.846}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{persistence, judgment and flexibility, which would be too much to expect of many}
@@ -659,12 +664,12 @@
   \ALIUSPlacedTextContent{77.652}{628.857}{443.700}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{mother and her baby. (This holds for fathers too, of course, but for well-explored}
   \ALIUSPlacedTextContent{77.652}{645.184}{443.681}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{biological reasons, careless fathers are much more common than careless mothers.)}
   \ALIUSPlacedTextContent{77.652}{661.743}{443.737}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{The natural, genetically endorsed tendency of all of us to love and protect our}
-  \ALIUSPlacedTextContent{77.652}{678.070}{443.730}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{children has been wisely—if largely unwittingly—exploited by the processes that}
+  \ALIUSPlacedTextContent{77.652}{678.070}{443.730}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{children has been wiselyâ€”if largely unwittinglyâ€”exploited by the processes that}
   \ALIUSPlacedTextContent{77.652}{694.629}{443.715}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{have generated our moral policies and their supporting intuitions. In short we try}
   \ALIUSPlacedTextContent{77.652}{711.189}{443.650}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{not to "spoil" our children. Some parents succeed better than others. It is a tightrope}
   \ALIUSPlacedTextContent{77.652}{727.516}{443.732}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{act, with mistakes and pitfalls on both sides. Too much blaming and scolding can}
   \ALIUSPlacedTextContent{77.652}{744.075}{443.749}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{create a guilt-ridden adolescent and adult, to say nothing of the excesses of corporal}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -683,14 +688,14 @@
   \ALIUSPlacedTextContent{77.652}{114.109}{443.695}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{entitlement, unable to summon the self-control required to negotiate the complex}
   \ALIUSPlacedTextContent{77.652}{130.669}{443.650}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{social world of adulthood without constantly falling into conflict with their fellow}
   \ALIUSPlacedTextContent{77.652}{147.229}{149.312}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{citizens and with authority.}
-  \ALIUSPlacedTextContent{134.561}{192.572}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{140.817}{192.572}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{192.572}{288.593}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{The natural, genetically endorsed tendency of}
-  \ALIUSPlacedTextContent{158.817}{210.064}{288.462}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{all of us to love and protect our children has}
-  \ALIUSPlacedTextContent{158.817}{227.557}{288.520}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{been wisely—if largely unwittingly—exploited}
-  \ALIUSPlacedTextContent{158.817}{245.050}{288.499}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{by the processes that have generated our}
+  \ALIUSPlacedTextContent{158.883}{210.064}{288.462}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{all of us to love and protect our children has}
+  \ALIUSPlacedTextContent{158.854}{227.557}{288.520}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{been wiselyâ€”if largely unwittinglyâ€”exploited}
+  \ALIUSPlacedTextContent{158.864}{245.050}{288.499}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{by the processes that have generated our}
   \ALIUSPlacedTextContent{158.817}{262.542}{288.576}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{moral policies and their supporting intuitions.}
-  \ALIUSPlacedTextContent{419.574}{278.724}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{158.817}{280.035}{257.283}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{In short we try not to "spoil" our children.}
+  \ALIUSPlacedTextContent{451.410}{280.035}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{174.472}{280.035}{257.283}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{In short we try not to "spoil" our children.}
   \ALIUSPlacedTextContent{77.652}{324.020}{443.697}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Negotiating these opposing pitfalls is a delicate task, especially in light of the fact}
   \ALIUSPlacedTextContent{77.652}{340.347}{443.650}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that every move we make is public, discussable, criticizable, likely to "telegraph our}
   \ALIUSPlacedTextContent{77.652}{356.906}{443.678}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{punches" to those we are trying to influence (for their own good, of course, but}
@@ -703,7 +708,7 @@
   \ALIUSPlacedTextContent{77.652}{482.216}{31.579}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{right?}
   \ALIUSPlacedTextContent{77.652}{508.275}{443.660}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{I once set out to produce a textbook on Plato's theory of forms, looking at all the}
   \ALIUSPlacedTextContent{77.652}{524.602}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Platonic texts that arguably could be considered to deal with the theory of forms,}
-  \ALIUSPlacedTextContent{77.652}{541.161}{443.637}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and inviting students to harmonize them—by reordering them, reinterpreting them,}
+  \ALIUSPlacedTextContent{77.652}{541.161}{443.637}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and inviting students to harmonize themâ€”by reordering them, reinterpreting them,}
   \ALIUSPlacedTextContent{77.652}{557.721}{443.902}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{even rejecting some texts that didn't "fit" an otherwise good version. This was in}
   \ALIUSPlacedTextContent{77.652}{574.047}{443.654}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{part inspired by Gilbert Ryle's book Plato's Progress, which I read in draft when I}
   \ALIUSPlacedTextContent{77.652}{590.607}{443.674}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{was Ryle's student.  Ryle called it his "naughty book" since it was so irreverently}
@@ -716,7 +721,7 @@
   \ALIUSPlacedTextContent{77.652}{705.825}{443.641}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of essence-hunting and counter-example-mongering that we are only just now}
   \ALIUSPlacedTextContent{77.652}{722.384}{443.711}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{recovering from. I view Plato's views as wonderful examples to study, in the}
   \ALIUSPlacedTextContent{77.652}{738.944}{443.662}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{diagnostic spirit of "let's see if we can pinpoint where these brilliant folks misled}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -749,7 +754,7 @@
   \ALIUSPlacedTextContent{77.652}{387.693}{443.710}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{which New World monkeys had to pass? I don't know, and the articles I've skimmed}
   \ALIUSPlacedTextContent{77.652}{404.253}{443.685}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{don't discuss it, but I would think this bottleneck would leave a trace after 30-40}
   \ALIUSPlacedTextContent{77.652}{420.812}{282.205}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{million years, discoverable via bioinformatics today.}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -763,21 +768,21 @@
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{23}
   \ALIUSPlacedTextContent{265.090}{81.376}{68.256}{ALIUSC000000}{\ALIUSFontLatoLight}{13.394}{References}
   \ALIUSPlacedTextContent{77.652}{109.140}{443.479}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-bogenschutz-podrebarac-2018}Bogenschutz, M. P., Podrebarac, S. K., Duane, J. H., Amegadzie, S. S., Malone, T. C., Owens,}
-  \ALIUSPlacedTextContent{112.103}{124.301}{408.941}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{L. T., … Mennenga, S. E. (2018). Clinical Interpretations of Patient Experience in a}
+  \ALIUSPlacedTextContent{112.103}{124.301}{408.941}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{L. T., â€¦ Mennenga, S. E. (2018). Clinical Interpretations of Patient Experience in a}
   \ALIUSPlacedTextContent{112.103}{139.694}{412.975}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Trial of Psilocybin-Assisted Psychotherapy for Alcohol Use Disorder. Frontiers in}
   \ALIUSPlacedTextContent{110.874}{155.088}{110.220}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Pharmacology, 9, 100.}
   \ALIUSPlacedTextContent{77.652}{181.910}{443.472}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-bond-tejedor-2015}Bond, M., Tejedor, M. F., Campbell, K. E., Jr, Chornogubsky, L., Novo, N., \& Goin, F.}
   \ALIUSPlacedTextContent{112.103}{197.303}{409.027}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{(2015). Eocene primates of South America and the African origins of New World}
-  \ALIUSPlacedTextContent{112.103}{212.697}{185.119}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{monkeys. Nature, 520(7548), 538–541.}
+  \ALIUSPlacedTextContent{112.103}{212.697}{185.119}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{monkeys. Nature, 520(7548), 538â€“541.}
   \ALIUSPlacedTextContent{77.652}{239.518}{447.449}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-brook-2003}Brook, A. (2003). Kant and Freud. In M. C. Chung \& C. Feltham (Eds.), Psychoanalytic}
-  \ALIUSPlacedTextContent{110.874}{254.912}{286.087}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Knowledge (pp. 20–39). London: Palgrave Macmillan UK.}
+  \ALIUSPlacedTextContent{110.874}{254.912}{286.087}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Knowledge (pp. 20â€“39). London: Palgrave Macmillan UK.}
   \ALIUSPlacedTextContent{77.652}{281.734}{440.509}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-carhart-harris-friston-2010}Carhart-Harris, R. L., \& Friston, K. J. (2010). The default-mode, ego-functions and free-}
   \ALIUSPlacedTextContent{112.103}{297.127}{409.018}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{energy: a neurobiological account of Freudian ideas. Brain: A Journal of Neurology,}
-  \ALIUSPlacedTextContent{112.103}{312.521}{100.084}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{133(Pt 4), 1265–1283.}
+  \ALIUSPlacedTextContent{112.103}{312.521}{100.084}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{133(Pt 4), 1265â€“1283.}
   \ALIUSPlacedTextContent{77.652}{339.343}{443.402}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-carhart-harris-goodwin-2017}Carhart-Harris, R. L., \& Goodwin, G. M. (2017). The Therapeutic Potential of Psychedelic}
-  \ALIUSPlacedTextContent{112.103}{354.736}{387.971}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Drugs: Past, Present, and Future. Neuropsychopharmacology, 42(11), 2105–2113.}
+  \ALIUSPlacedTextContent{112.103}{354.736}{387.971}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Drugs: Past, Present, and Future. Neuropsychopharmacology, 42(11), 2105â€“2113.}
   \ALIUSPlacedTextContent{77.652}{381.558}{443.463}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-clark-2013}Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of}
-  \ALIUSPlacedTextContent{112.103}{396.952}{337.275}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{cognitive science. The Behavioral and Brain Sciences, 36(3), 181–204.}
+  \ALIUSPlacedTextContent{112.103}{396.952}{337.275}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{cognitive science. The Behavioral and Brain Sciences, 36(3), 181â€“204.}
   \ALIUSPlacedTextContent{77.652}{423.774}{443.468}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-dennett-1982}Dennett, D.C. (1982). "Philosophy According to Nozick." New Boston Review 7}
   \ALIUSPlacedTextContent{112.103}{439.167}{147.750}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{(January/February 1982): 9-11.}
   \ALIUSPlacedTextContent{77.652}{466.222}{303.479}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-dennett-1993}Dennett, D. C. (1993). Consciousness Explained. Penguin UK.}
@@ -788,12 +793,12 @@
   \ALIUSPlacedTextContent{77.652}{577.708}{447.421}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-dennett-2006}Dennett, D. C. (2006). Sweet Dreams: Philosophical Obstacles to a Science of}
   \ALIUSPlacedTextContent{110.874}{593.102}{168.105}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Consciousness. A Bradford Book.}
   \ALIUSPlacedTextContent{77.652}{619.924}{443.469}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-dennett-2013a}Dennett, D. C. (2013a). Expecting ourselves to expect: the Bayesian brain as a projector.}
-  \ALIUSPlacedTextContent{110.874}{635.317}{250.689}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{The Behavioral and Brain Sciences, 36(3), 209–210.}
+  \ALIUSPlacedTextContent{110.874}{635.317}{250.689}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{The Behavioral and Brain Sciences, 36(3), 209â€“210.}
   \ALIUSPlacedTextContent{77.652}{662.139}{443.484}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-dennett-2013b}Dennett, D. C. (2013b). Intuition Pumps And Other Tools for Thinking. W. W. Norton \&}
   \ALIUSPlacedTextContent{112.103}{677.532}{53.670}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Company.}
   \ALIUSPlacedTextContent{77.652}{704.354}{447.423}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-dennett-2014}Dennett, D. C. (2014). Why and How Does Consciousness Seem the Way it Seems? In Open}
-  \ALIUSPlacedTextContent{110.874}{719.748}{238.018}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{MIND. Johannes Gutenberg Universität Mainz.}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{110.874}{719.748}{238.018}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{MIND. Johannes Gutenberg UniversitÃ¤t Mainz.}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -822,29 +827,29 @@
   \ALIUSPlacedTextContent{112.103}{253.979}{328.948}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{/dennett\_teach\_children\_emall\_em\_the\_facts\_about\_their\_religion}
   \ALIUSPlacedTextContent{77.652}{280.801}{443.371}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-garcia-romeu-richards-2018}Garcia-Romeu, A., \& Richards, W. A. (2018). Current perspectives on psychedelic therapy:}
   \ALIUSPlacedTextContent{112.103}{295.961}{412.972}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{use of serotonergic hallucinogens in clinical interventions. International Review of}
-  \ALIUSPlacedTextContent{110.874}{311.355}{88.338}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Psychiatry , 1–26.}
+  \ALIUSPlacedTextContent{110.874}{311.355}{88.338}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Psychiatry , 1â€“26.}
   \ALIUSPlacedTextContent{77.652}{338.410}{447.443}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-gibson-1979}Gibson, J. J. (1979). "The theory of affordances", in The Ecological Approach to Visual}
   \ALIUSPlacedTextContent{110.874}{353.803}{254.062}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Perception (pp. 127-143). Boston: Houghton Miffin.}
   \ALIUSPlacedTextContent{77.652}{380.625}{447.447}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-hobson-friston-2016}Hobson, J. A., \& Friston, K. J. (2016). A Response to Our Theatre Critics. Journal of}
-  \ALIUSPlacedTextContent{110.874}{396.019}{199.283}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Consciousness Studies, 23(3-4), 245–254.}
+  \ALIUSPlacedTextContent{110.874}{396.019}{199.283}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Consciousness Studies, 23(3-4), 245â€“254.}
   \ALIUSPlacedTextContent{77.652}{422.841}{447.416}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-hofstadter-dennett-1982}Hofstadter, D. R., \& Dennett, D. C. (1982). The Mind's I: Fantasies and Reflections on Self}
   \ALIUSPlacedTextContent{110.874}{438.234}{126.289}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{and Soul. Bantam Books.}
   \ALIUSPlacedTextContent{77.652}{465.056}{447.446}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-hookway-2016}Hookway, C. (2016). Pragmatism. In E. N. Zalta (Ed.), The Stanford Encyclopedia of}
   \ALIUSPlacedTextContent{110.874}{480.449}{410.231}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Philosophy (Summer 2016). Metaphysics Research Lab, Stanford University.}
   \ALIUSPlacedTextContent{112.103}{495.843}{366.229}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Retrieved from plato.stanford.edu/archives/sum2016/entries/pragmatism/}
-  \ALIUSPlacedTextContent{77.652}{522.665}{443.477}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-jung-1963}Jung, C. G. (1963). Memories, Dreams, Reflections, tr. R. \& C. Winston; ed. Aniela Jaffé.}
+  \ALIUSPlacedTextContent{77.652}{522.665}{443.477}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-jung-1963}Jung, C. G. (1963). Memories, Dreams, Reflections, tr. R. \& C. Winston; ed. Aniela JaffÃ©.}
   \ALIUSPlacedTextContent{112.103}{538.058}{211.649}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{London: Collins. Routledge \& Kegan Paul.}
-  \ALIUSPlacedTextContent{77.652}{564.880}{447.461}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Lorenzo. (2007). Podcast 117 – 'The Importance of Psychedelics' - Psychedelic Salon}
+  \ALIUSPlacedTextContent{77.652}{564.880}{447.461}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Lorenzo. (2007). Podcast 117 â€“ 'The Importance of Psychedelics' - Psychedelic Salon}
   \ALIUSPlacedTextContent{110.874}{580.274}{407.287}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Podcasts. Available at: psychedelicsalon.com/podcast-117-the-importance-of-}
   \ALIUSPlacedTextContent{112.103}{595.667}{224.623}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{psychedelics/. (Accessed: 20th February 2019)}
-  \ALIUSPlacedTextContent{77.652}{622.489}{443.424}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-perelman-johnson-2011}Perelman, P., Johnson, W. E., Roos, C., Seuánez, H. N., Horvath, J. E., Moreira, M. A. M.,}
-  \ALIUSPlacedTextContent{112.103}{637.649}{412.979}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{… Pecon-Slattery, J. (2011). A molecular phylogeny of living primates. PLoS}
+  \ALIUSPlacedTextContent{77.652}{622.489}{443.424}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-perelman-johnson-2011}Perelman, P., Johnson, W. E., Roos, C., SeuÃ¡nez, H. N., Horvath, J. E., Moreira, M. A. M.,}
+  \ALIUSPlacedTextContent{112.103}{637.649}{412.979}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{â€¦ Pecon-Slattery, J. (2011). A molecular phylogeny of living primates. PLoS}
   \ALIUSPlacedTextContent{110.874}{653.043}{120.818}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Genetics, 7(3), e1001342.}
   \ALIUSPlacedTextContent{77.652}{680.098}{447.466}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-ross-brook-2000}Ross, D., Brook, A., \& Thompson, D. (2000). Dennett's Philosophy: A Comprehensive}
   \ALIUSPlacedTextContent{110.874}{695.492}{119.997}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{Assessment. MIT Press.}
-  \ALIUSPlacedTextContent{77.652}{722.313}{440.501}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-salthe-2014}Salthe, S. N. (2014). Creating the Umwelt: From Chance to Choice. Biosemiotics, 7(3), 351–}
+  \ALIUSPlacedTextContent{77.652}{722.313}{440.501}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-salthe-2014}Salthe, S. N. (2014). Creating the Umwelt: From Chance to Choice. Biosemiotics, 7(3), 351â€“}
   \ALIUSPlacedTextContent{112.103}{737.707}{21.430}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{359.}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -858,8 +863,8 @@
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{25}
   \ALIUSPlacedTextContent{77.652}{81.152}{447.403}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-swanson-2016}Swanson, L. R. (2016). The Predictive Processing Paradigm Has Roots in Kant. Frontiers}
   \ALIUSPlacedTextContent{110.874}{96.546}{161.359}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{in Systems Neuroscience, 10, 79.}
-  \ALIUSPlacedTextContent{77.652}{123.368}{364.749}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-uexkull-1910}Uexküll, J. von. (1910). Die Umwelt. Die Neue Rundschau, 21(2), 638–649. □}
-  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
+  \ALIUSPlacedTextContent{77.652}{123.368}{364.749}{ALIUSC1A1718}{\ALIUSFontCormorantMedium}{12.595}{\ALIUSRefAnchor{aliusref-dennett-fleig-goldstein-friedman-uexkull-1910}UexkÃ¼ll, J. von. (1910). Die Umwelt. Die Neue Rundschau, 21(2), 638â€“649. â–¡}
+  \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin nÂ°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

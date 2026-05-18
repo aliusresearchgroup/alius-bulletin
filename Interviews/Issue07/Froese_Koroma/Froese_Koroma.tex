@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -227,7 +232,7 @@
   \ALIUSPlacedTextContent{389.564}{702.726}{115.595}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{and psychology. What}
   \ALIUSPlacedTextContent{90.000}{719.106}{415.069}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{is the importance for you of interdisciplinarity in the study of the mind and how}
   \ALIUSPlacedTextContent{90.000}{735.486}{260.505}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{is it enacted in the research practice of your team?}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -238,7 +243,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (94.500bp,-666.487bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p002-b007.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (465.750bp,-707.699bp) {\includegraphics[width=130.250bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p002-b008.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{500.452}{37.248}{4.824}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{2}
   \ALIUSPlacedTextContent{90.000}{104.760}{17.745}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{We}
   \ALIUSPlacedTextContent{112.516}{104.760}{16.500}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{are}
@@ -441,7 +446,7 @@
   \ALIUSPlacedTextContent{186.503}{684.449}{222.270}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{How do I know that certain aspects}
   \ALIUSPlacedTextContent{153.244}{705.150}{288.787}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{from someone's mental and conscious activity}
   \ALIUSPlacedTextContent{171.810}{725.849}{251.662}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{make a difference in the material world?}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -452,7 +457,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-364.497bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p003-b008.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (473.250bp,-407.957bp) {\includegraphics[width=122.750bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p003-b009.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{500.608}{37.248}{4.668}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{3}
   \ALIUSPlacedTextContent{90.000}{91.497}{20.096}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{The}
   \ALIUSPlacedTextContent{116.367}{91.497}{28.967}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{route}
@@ -498,11 +503,11 @@
   \ALIUSPlacedTextContent{90.000}{188.983}{56.812}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{processing}
   \ALIUSPlacedTextContent{154.582}{188.983}{32.717}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{where}
   \ALIUSPlacedTextContent{194.320}{188.983}{43.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{surprise}
-  \ALIUSPlacedTextContent{244.566}{188.983}{11.620}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{—}
+  \ALIUSPlacedTextContent{244.566}{188.983}{11.620}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{â€”}
   \ALIUSPlacedTextContent{263.204}{188.983}{11.798}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{or}
   \ALIUSPlacedTextContent{282.023}{188.983}{56.924}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{prediction}
   \ALIUSPlacedTextContent{345.968}{188.983}{27.525}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{error}
-  \ALIUSPlacedTextContent{380.514}{188.983}{11.620}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{—}
+  \ALIUSPlacedTextContent{380.514}{188.983}{11.620}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{â€”}
   \ALIUSPlacedTextContent{399.152}{188.983}{11.058}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{in}
   \ALIUSPlacedTextContent{417.230}{188.983}{28.926}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{brain}
   \ALIUSPlacedTextContent{453.176}{188.983}{36.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{signals}
@@ -655,7 +660,7 @@
   \ALIUSPlacedTextContent{477.722}{701.082}{27.133}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{posit}
   \ALIUSPlacedTextContent{90.000}{720.579}{414.593}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{representational content either, because that would simply presuppose what}
   \ALIUSPlacedTextContent{90.000}{740.076}{131.598}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{we are trying to explain.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -666,7 +671,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-346.500bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p004-b008.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (471.750bp,-406.156bp) {\includegraphics[width=124.250bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p004-b009.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{499.864}{37.248}{5.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{4}
   \ALIUSPlacedTextContent{90.000}{91.497}{415.066}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{To do better, we need a notion of what it means for a goal or value to make}
   \ALIUSPlacedTextContent{90.000}{110.994}{5.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{a}
@@ -879,7 +884,7 @@
   \ALIUSPlacedTextContent{369.575}{719.776}{34.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{neural}
   \ALIUSPlacedTextContent{408.532}{719.776}{96.356}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{signals reflect the}
   \ALIUSPlacedTextContent{90.000}{739.273}{272.220}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{phenomenon of becoming conscious of the world?}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -890,7 +895,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-72.000bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p005-b009.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (483.000bp,-133.497bp) {\includegraphics[width=113.000bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p005-b008.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{500.368}{37.248}{4.908}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{5}
   \ALIUSPlacedTextContent{172.864}{91.497}{249.547}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{If what happens in your subjective mind}
   \ALIUSPlacedTextContent{114.402}{112.197}{366.472}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{makes a difference, there will be an unexplained variability}
@@ -1073,7 +1078,7 @@
   \ALIUSPlacedTextContent{404.432}{712.719}{43.883}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{possibly}
   \ALIUSPlacedTextContent{453.086}{712.719}{51.956}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{reflecting}
   \ALIUSPlacedTextContent{90.000}{732.216}{399.660}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{self-reference are associated with the temporal structure of consciousness.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1082,7 +1087,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{499.696}{37.248}{5.580}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{6}
   \ALIUSPlacedTextContent{90.000}{91.497}{57.007}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Signatures}
   \ALIUSPlacedTextContent{151.778}{91.497}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
@@ -1167,7 +1172,7 @@
   \ALIUSPlacedTextContent{424.939}{266.971}{38.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{remain}
   \ALIUSPlacedTextContent{467.940}{266.971}{36.955}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{careful}
   \ALIUSPlacedTextContent{90.000}{286.468}{382.828}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{with identifying consciousness with this and other physical properties.}
-  \ALIUSPlacedTextContent{90.000}{325.462}{414.529}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Bjorn Brembs is a researcher at Freie Universität Berlin that works on free will}
+  \ALIUSPlacedTextContent{90.000}{325.462}{414.529}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Bjorn Brembs is a researcher at Freie UniversitÃ¤t Berlin that works on free will}
   \ALIUSPlacedTextContent{90.000}{342.022}{9.744}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{in}
   \ALIUSPlacedTextContent{103.560}{342.022}{21.696}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{flies}
   \ALIUSPlacedTextContent{129.072}{342.022}{46.799}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{(Brembs,}
@@ -1284,7 +1289,7 @@
   \ALIUSPlacedTextContent{452.527}{681.473}{23.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{look}
   \ALIUSPlacedTextContent{484.936}{681.473}{19.760}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{like}
   \ALIUSPlacedTextContent{90.000}{700.971}{245.186}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{stochastic events that are not predetermined.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1293,7 +1298,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{500.128}{37.248}{5.148}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{7}
   \ALIUSPlacedTextContent{90.000}{88.560}{414.865}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Could we be able to capture moments when consciousness and the mind would}
   \ALIUSPlacedTextContent{90.000}{105.120}{28.152}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{make}
@@ -1521,7 +1526,7 @@
   \ALIUSPlacedTextContent{319.977}{729.279}{74.759}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{consciousness}
   \ALIUSPlacedTextContent{398.552}{729.279}{106.325}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{and their relation to}
   \ALIUSPlacedTextContent{90.000}{745.839}{137.914}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{markers of consciousness?}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1530,7 +1535,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{499.408}{37.248}{5.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{8}
   \ALIUSPlacedTextContent{90.000}{88.560}{9.828}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{A}
   \ALIUSPlacedTextContent{104.597}{88.560}{15.044}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{lot}
@@ -1660,7 +1665,7 @@
   \ALIUSPlacedTextContent{167.718}{525.245}{11.435}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to}
   \ALIUSPlacedTextContent{183.924}{525.245}{12.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{be}
   \ALIUSPlacedTextContent{201.543}{525.245}{49.046}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{impaired}
-  \ALIUSPlacedTextContent{255.360}{525.245}{51.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(Hipólito}
+  \ALIUSPlacedTextContent{255.360}{525.245}{51.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(HipÃ³lito}
   \ALIUSPlacedTextContent{311.611}{525.245}{10.441}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{et}
   \ALIUSPlacedTextContent{326.823}{525.245}{177.821}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{al., 2023). What the psychedelics}
   \ALIUSPlacedTextContent{90.000}{544.742}{13.870}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{do}
@@ -1732,7 +1737,7 @@
   \ALIUSPlacedTextContent{252.215}{712.719}{22.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that}
   \ALIUSPlacedTextContent{279.292}{712.719}{225.390}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{space and reintegrating them during and}
   \ALIUSPlacedTextContent{90.000}{732.216}{391.909}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{after the process would be very important to consider for mental health.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1745,7 +1750,7 @@
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (437.250bp,-114.750bp) {\includegraphics[width=158.750bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p009-b013.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (81.000bp,-534.623bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p009-b014.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (474.750bp,-617.120bp) {\includegraphics[width=121.250bp,height=73.500bp]{Interviews/Issue07/Froese_Koroma/assets/alius-extracted-image-p009-b015.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{499.696}{37.248}{5.580}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{9}
   \ALIUSPlacedTextContent{159.353}{92.700}{276.577}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{It's not just about increasing neural entropy,}
   \ALIUSPlacedTextContent{180.383}{113.400}{234.510}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{because too much openness could be}
@@ -1895,9 +1900,9 @@
   \ALIUSPlacedTextContent{116.873}{613.220}{361.530}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{because that's really where the creation of the conditions}
   \ALIUSPlacedTextContent{189.285}{633.919}{219.607}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{of behavior generation takes place.}
   \ALIUSPlacedTextContent{263.917}{686.117}{67.446}{ALIUSC000000}{\ALIUSFontLatoLight}{14.000}{References}
-  \ALIUSPlacedTextContent{90.000}{724.756}{397.784}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-boncompte-medel-2021}Boncompte, G., Medel, V., Cortínez, L. I., \& Ossandón, T. (2021). Brain activity}
+  \ALIUSPlacedTextContent{90.000}{724.756}{397.784}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-boncompte-medel-2021}Boncompte, G., Medel, V., CortÃ­nez, L. I., \& OssandÃ³n, T. (2021). Brain activity}
   \ALIUSPlacedTextContent{126.000}{748.861}{345.383}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{complexity has a nonlinear relation to the level of propofol sedation.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1906,12 +1911,12 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{495.568}{37.248}{9.708}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{10}
   \ALIUSPlacedTextContent{126.000}{72.000}{137.526}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{British Journal of Anaesthesia}
   \ALIUSPlacedTextContent{263.524}{72.000}{2.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{,}
   \ALIUSPlacedTextContent{266.410}{72.000}{16.571}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{127}
-  \ALIUSPlacedTextContent{282.979}{72.000}{61.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(2), 254–263.}
+  \ALIUSPlacedTextContent{282.979}{72.000}{61.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(2), 254â€“263.}
   \ALIUSPlacedTextContent{126.000}{96.104}{193.850}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1016/j.bja.2021.04.023}
   \ALIUSPlacedTextContent{90.000}{138.313}{365.046}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-brembs-2011}Brembs, B. (2011). Towards a scientific concept of free will as a biological}
   \ALIUSPlacedTextContent{126.000}{162.417}{325.551}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{trait: Spontaneous actions and decision-making in invertebrates.}
@@ -1919,7 +1924,7 @@
   \ALIUSPlacedTextContent{126.000}{210.627}{133.184}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Society B: Biological Sciences}
   \ALIUSPlacedTextContent{259.183}{210.627}{2.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{,}
   \ALIUSPlacedTextContent{262.069}{210.627}{18.507}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{278}
-  \ALIUSPlacedTextContent{280.575}{210.627}{79.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(1707), 930–939.}
+  \ALIUSPlacedTextContent{280.575}{210.627}{79.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(1707), 930â€“939.}
   \ALIUSPlacedTextContent{126.000}{234.731}{187.664}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1098/rspb.2010.2325}
   \ALIUSPlacedTextContent{90.000}{276.939}{372.597}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-carhart-harris-leech-2014}Carhart-Harris, R. L., Leech, R., Hellyer, P. J., Shanahan, M., Feilding, A.,}
   \ALIUSPlacedTextContent{126.000}{301.044}{364.112}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{Tagliazucchi, E., Chialvo, D. R., \& Nutt, D. (2014). The entropic brain: A}
@@ -1951,9 +1956,9 @@
   \ALIUSPlacedTextContent{312.858}{644.611}{41.016}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Preprint}
   \ALIUSPlacedTextContent{353.872}{644.611}{2.561}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{.}
   \ALIUSPlacedTextContent{126.000}{668.716}{190.406}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://philsci-archive.pitt.edu/22824/}
-  \ALIUSPlacedTextContent{90.000}{710.925}{405.698}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-hipolito-mago-2023}Hipólito, I., Mago, J., Rosas, F. E., \& Carhart-Harris, R. (2023). Pattern breaking:}
+  \ALIUSPlacedTextContent{90.000}{710.925}{405.698}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-hipolito-mago-2023}HipÃ³lito, I., Mago, J., Rosas, F. E., \& Carhart-Harris, R. (2023). Pattern breaking:}
   \ALIUSPlacedTextContent{126.000}{735.029}{272.384}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{A complex systems approach to psychedelic medicine.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1962,7 +1967,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese – How mind and matter meet along the route to consciousness}
+  \ALIUSPlacedTextContent{90.000}{35.400}{379.527}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Froese â€“ How mind and matter meet along the route to consciousness}
   \ALIUSPlacedTextContent{497.308}{37.248}{7.968}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{11}
   \ALIUSPlacedTextContent{126.000}{72.000}{138.058}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Neuroscience of Consciousness}
   \ALIUSPlacedTextContent{264.057}{72.000}{2.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{,}
@@ -1974,7 +1979,7 @@
   \ALIUSPlacedTextContent{247.163}{162.418}{141.878}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Behavioral and Brain Sciences}
   \ALIUSPlacedTextContent{389.039}{162.418}{2.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{,}
   \ALIUSPlacedTextContent{391.925}{162.418}{8.760}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{8}
-  \ALIUSPlacedTextContent{400.684}{162.418}{62.070}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(4), 529–539.}
+  \ALIUSPlacedTextContent{400.684}{162.418}{62.070}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(4), 529â€“539.}
   \ALIUSPlacedTextContent{126.000}{186.522}{215.332}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1017/S0140525X00044903}
   \ALIUSPlacedTextContent{90.000}{228.730}{348.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-schartner-carhart-harris-2017}Schartner, M. M., Carhart-Harris, R. L., Barrett, A. B., Seth, A. K., \&}
   \ALIUSPlacedTextContent{126.000}{252.836}{349.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{Muthukumaraswamy, S. D. (2017). Increased spontaneous MEG signal}
@@ -1990,7 +1995,7 @@
   \ALIUSPlacedTextContent{229.579}{361.357}{133.144}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{362.722}{361.357}{2.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{,}
   \ALIUSPlacedTextContent{365.608}{361.357}{12.620}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{25}
-  \ALIUSPlacedTextContent{378.226}{361.357}{62.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(7), 558–570.}
+  \ALIUSPlacedTextContent{378.226}{361.357}{62.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(7), 558â€“570.}
   \ALIUSPlacedTextContent{126.000}{385.463}{196.345}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1016/j.tics.2021.04.001}
   \ALIUSPlacedTextContent{90.000}{421.672}{363.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-schurger-sitt-2012}Schurger, A., Sitt, J. D., \& Dehaene, S. (2012). An accumulator model for}
   \ALIUSPlacedTextContent{126.000}{445.775}{307.889}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{spontaneous neural activity prior to self-initiated movement.}
@@ -2005,11 +2010,11 @@
   \ALIUSPlacedTextContent{202.677}{560.298}{208.001}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Journal of Experimental Psychology: General}
   \ALIUSPlacedTextContent{410.678}{560.298}{2.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{,}
   \ALIUSPlacedTextContent{413.564}{560.298}{16.766}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{134}
-  \ALIUSPlacedTextContent{430.328}{560.298}{56.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(1), 117–123.}
+  \ALIUSPlacedTextContent{430.328}{560.298}{56.326}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(1), 117â€“123.}
   \ALIUSPlacedTextContent{126.000}{584.402}{206.794}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1037/0096-3445.134.1.117}
   \ALIUSPlacedTextContent{90.000}{626.611}{354.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-van-orden-kloos-2011}Van Orden, G. C., Kloos, H., \& Wallot, S. (2011). Living in the Pink. In}
   \ALIUSPlacedTextContent{126.000}{650.716}{143.971}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Philosophy of Complex Systems}
-  \ALIUSPlacedTextContent{269.971}{650.716}{117.756}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(pp. 629–672). Elsevier.}
+  \ALIUSPlacedTextContent{269.971}{650.716}{117.756}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(pp. 629â€“672). Elsevier.}
   \ALIUSPlacedTextContent{126.000}{674.820}{255.646}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1016/B978-0-444-52076-0.50022-5}
   \ALIUSPlacedTextContent{90.000}{717.029}{219.971}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-froese-koroma-ward-greenwood-2007}Ward, L., \& Greenwood, P. (2007). 1/f noise.}
   \ALIUSPlacedTextContent{309.971}{717.029}{61.992}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Scholarpedia}
@@ -2017,7 +2022,7 @@
   \ALIUSPlacedTextContent{374.847}{717.029}{7.759}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{2}
   \ALIUSPlacedTextContent{382.605}{717.029}{45.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(12), 1537.}
   \ALIUSPlacedTextContent{126.000}{741.133}{203.480}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.4249/scholarpedia.1537}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°7 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.752}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°7 (2024)}
   \ALIUSPlacedTextContent{385.848}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

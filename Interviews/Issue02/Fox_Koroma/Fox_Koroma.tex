@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -136,7 +141,7 @@
   \fill[ALIUSCBFBFBF] (368.200bp,-255.640bp) rectangle ++(0.240bp,-2.160bp);
   \fill[ALIUSCBFBFBF] (368.200bp,-257.800bp) rectangle ++(0.240bp,-36.000bp);
   \fill[ALIUSC1F8135] (256.600bp,-670.600bp) rectangle ++(140.160bp,-0.480bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{1}
   \ALIUSPlacedTextContent{71.080}{71.086}{456.959}{ALIUSC000000}{\ALIUSFontLatoRegular}{18.960}{Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{71.080}{93.874}{419.799}{ALIUSC000000}{\ALIUSFontLatoLight}{18.000}{Dreaming, meditation, mind-wandering, and well-being}
@@ -150,7 +155,7 @@
   \ALIUSPlacedTextContent{373.960}{193.595}{97.242}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Stanford University, USA}
   \ALIUSPlacedTextContent{373.960}{218.356}{95.698}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{Matthieu Koroma}
   \ALIUSPlacedTextContent{373.960}{233.195}{115.130}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{mkoroma@ens-paris-saclay.fr}
-  \ALIUSPlacedTextContent{373.960}{243.995}{152.986}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{LSCP, Département d'études cognitives}
+  \ALIUSPlacedTextContent{373.960}{243.995}{152.986}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{LSCP, DÃ©partement d'Ã©tudes cognitives}
   \ALIUSPlacedTextContent{373.960}{254.795}{147.120}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{ENS/EHESS/PSL Research University,}
   % ALIUS normalized citation panel begin
   % ALIUS normalized citation panel text: Cite as: Fox, K. \& Koroma, M. (2018). Wandering along the spectrum of spontaneous thinking: dreaming, meditation, mind-wandering, and well-being. An interview with Kieran Fox. ALIUS Bulletin, 2, 1-15.
@@ -180,7 +185,7 @@
   \ALIUSPlacedTextContent{71.080}{703.409}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{approaches and definitions. It has been proposed that the notion of mind-wandering}
   \ALIUSPlacedTextContent{71.080}{719.008}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{could be considered as an umbrella term for a range of phenomena with family-}
   \ALIUSPlacedTextContent{71.080}{734.609}{455.696}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{resemblances studied using different approaches, rather than being defined as a}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -190,7 +195,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{2}
   \ALIUSPlacedTextContent{71.080}{71.008}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{cognitive phenomenon per se. What is the definition or approach of mind-}
   \ALIUSPlacedTextContent{71.080}{86.609}{232.960}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{wandering that you endorse in your work?}
@@ -198,33 +203,33 @@
   \ALIUSPlacedTextContent{379.529}{114.138}{104.311}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{spontaneous thought}
   \ALIUSPlacedTextContent{483.835}{114.138}{43.799}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{as the}
   \ALIUSPlacedTextContent{71.080}{131.178}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{umbrella term (Christoff, Irving, Fox, Spreng, \& Andrews-Hanna, 2016). By}
-  \ALIUSPlacedTextContent{71.080}{147.978}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"spontaneous" we mean cognition that is relatively unconstrained—either by}
+  \ALIUSPlacedTextContent{71.080}{147.978}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"spontaneous" we mean cognition that is relatively unconstrainedâ€”either by}
   \ALIUSPlacedTextContent{71.080}{165.018}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{bottom-up constraints like affective or perceptual salience, or top-down constraints}
   \ALIUSPlacedTextContent{71.080}{182.058}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{like the executive control of attention. In this framework, mind-wandering falls}
   \ALIUSPlacedTextContent{71.080}{198.858}{456.628}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{somewhere in the center of a spectrum. On one end of this spectrum you have totally}
   \ALIUSPlacedTextContent{71.080}{215.898}{456.598}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{unconstrained thought; no one really knows what this would look like, but the}
-  \ALIUSPlacedTextContent{71.080}{232.938}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{closest we can imagine is acute psychosis—there is thought and perception and}
+  \ALIUSPlacedTextContent{71.080}{232.938}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{closest we can imagine is acute psychosisâ€”there is thought and perception and}
   \ALIUSPlacedTextContent{71.080}{249.738}{456.481}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mental content, but it is totally disorganized and nothing is connected, no thought}
   \ALIUSPlacedTextContent{71.080}{266.778}{456.500}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is really related to any other. At the other extreme, you have totally constrained}
   \ALIUSPlacedTextContent{71.080}{283.818}{456.746}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{thought, for instance if you were totally focused on writing a difficult exam.}
   \ALIUSPlacedTextContent{71.080}{300.618}{456.590}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Cognition like dreaming, mind-wandering, and creative thinking instead fall in the}
-  \ALIUSPlacedTextContent{71.080}{317.658}{456.597}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{middle—they are more spontaneous forms of thought than, say, writing a}
+  \ALIUSPlacedTextContent{71.080}{317.658}{456.597}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{middleâ€”they are more spontaneous forms of thought than, say, writing a}
   \ALIUSPlacedTextContent{71.080}{334.698}{456.508}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{demanding exam, but they are still far more constrained and coherent than, say,}
   \ALIUSPlacedTextContent{71.080}{351.498}{456.598}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychosis. This is the current thinking of my colleagues and myself, but, of course,}
   \ALIUSPlacedTextContent{71.080}{368.538}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{these states are difficult to study and define and we hope to make more progress in}
   \ALIUSPlacedTextContent{71.080}{385.338}{456.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the future (see Figure 1, reproduced with permission from Christoff, Irving, Fox,}
   \ALIUSPlacedTextContent{71.080}{402.378}{188.446}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Spreng, \& Andrews-Hanna, 2016).}
-  \ALIUSPlacedTextContent{108.280}{437.513}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{110.920}{437.513}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{128.920}{437.513}{335.825}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{By 'spontaneous' we mean cognition that is relatively}
-  \ALIUSPlacedTextContent{128.920}{455.513}{334.031}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{unconstrained—either by bottom-up constraints like}
-  \ALIUSPlacedTextContent{128.920}{473.513}{285.359}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{affective or perceptual salience, or top-down}
-  \ALIUSPlacedTextContent{446.680}{490.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{128.920}{491.513}{317.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{constraints like the executive control of attention.}
+  \ALIUSPlacedTextContent{129.817}{455.513}{334.031}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{unconstrainedâ€”either by bottom-up constraints like}
+  \ALIUSPlacedTextContent{154.153}{473.513}{285.359}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{affective or perceptual salience, or top-down}
+  \ALIUSPlacedTextContent{468.745}{491.513}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{138.316}{491.513}{317.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{constraints like the executive control of attention.}
   \ALIUSPlacedTextContent{71.080}{541.888}{455.802}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Is mind-wandering necessarily a conscious phenomenon or can there be a}
   \ALIUSPlacedTextContent{71.080}{557.489}{455.841}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{subconscious form of mind-wandering, with a drifting in the activation of different}
   \ALIUSPlacedTextContent{71.080}{573.089}{309.073}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{cognitive networks without being consciously accessed?}
   \ALIUSPlacedTextContent{71.080}{600.618}{456.498}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{My own view, and I think this is amply supported by the empirical evidence, is that}
-  \ALIUSPlacedTextContent{71.080}{617.418}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mind-wandering can definitely be unconscious—in fact, I think it's safe to say the}
+  \ALIUSPlacedTextContent{71.080}{617.418}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mind-wandering can definitely be unconsciousâ€”in fact, I think it's safe to say the}
   \ALIUSPlacedTextContent{71.080}{634.458}{456.523}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{majority of mind-wandering is below the level of full awareness. For example, in}
   \ALIUSPlacedTextContent{71.080}{651.498}{456.567}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{laboratory studies of mind-wandering, when randomly-timed "thought probes"}
   \ALIUSPlacedTextContent{71.080}{668.298}{456.531}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{catch people mind-wandering, we can also ask whether people were conscious or}
@@ -233,7 +238,7 @@
   \ALIUSPlacedTextContent{71.080}{719.178}{456.456}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Smith, \& Schooler, 2009; Fox \& Christoff, 2015; \ALIUSCitationLink{aliusref-fox-koroma-schooler-smallwood-2011}{Schooler et al., 2011}). And this is even}
   \ALIUSPlacedTextContent{71.080}{736.218}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{during studies where people know they are going to be asked about mind-}
   \ALIUSPlacedTextContent{71.080}{753.258}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{wandering; even then, they only seem to notice about 50\%. Assuming you are}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -244,9 +249,9 @@
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (67.720bp,-191.560bp) {\includegraphics[width=468.000bp,height=440.880bp]{Interviews/Issue02/Fox_Koroma/assets/alius-extracted-image-p003-b010.png}};
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{3}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -256,7 +261,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{4}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{persuaded by the parallels we have drawn between mind-wandering when awake}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and dreaming while asleep (Domhoff \& Fox, 2015; \ALIUSCitationLink{aliusref-fox-koroma-fox-nijeboer-2013}{Fox et al., 2013}), then dreaming}
@@ -271,19 +276,19 @@
   \ALIUSPlacedTextContent{71.080}{240.618}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{find them difficult to recall. So I think the evidence that detailed and complex}
   \ALIUSPlacedTextContent{71.080}{257.418}{456.490}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{spontaneous thought processes can take place without any concurrent awareness or}
   \ALIUSPlacedTextContent{71.080}{274.458}{456.642}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{subsequent recall is overwhelming, and in fact this raises some very deep questions}
-  \ALIUSPlacedTextContent{71.080}{291.498}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about why these phenomena take place at all—why are there rich}
+  \ALIUSPlacedTextContent{71.080}{291.498}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about why these phenomena take place at allâ€”why are there rich}
   \ALIUSPlacedTextContent{71.080}{308.298}{456.480}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychological/subjective correlates of these brain processes that we so seldom notice}
   \ALIUSPlacedTextContent{71.080}{325.338}{316.907}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and whose function (if any) is very difficult to determine?}
-  \ALIUSPlacedTextContent{92.440}{369.833}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{94.600}{369.833}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{112.600}{369.833}{377.014}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I think the evidence that detailed and complex spontaneous}
-  \ALIUSPlacedTextContent{112.600}{387.833}{364.028}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{thought processes can take place without any concurrent}
-  \ALIUSPlacedTextContent{112.600}{405.353}{311.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{awareness or subsequent recall is overwhelming.}
-  \ALIUSPlacedTextContent{424.360}{408.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{119.093}{387.353}{364.028}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{thought processes can take place without any concurrent}
+  \ALIUSPlacedTextContent{145.111}{404.873}{311.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{awareness or subsequent recall is overwhelming.}
+  \ALIUSPlacedTextContent{493.614}{404.873}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{464.608}{458.310}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{If you consider mind-wandering as a conscious phenomenon, would you}
   \ALIUSPlacedTextContent{71.080}{480.208}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{consider mind-wandering as a proper conscious state (in a sense that mind-}
   \ALIUSPlacedTextContent{71.080}{495.808}{455.817}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{wandering characterizes a way of being conscious (\ALIUSCitationLink{aliusref-fox-koroma-bayne-hohwy-2016}{Bayne et al., 2016}), like}
   \ALIUSPlacedTextContent{71.080}{511.408}{176.586}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{for example a meditative state)?}
-  \ALIUSPlacedTextContent{71.080}{538.938}{456.541}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I don't think of mind-wandering as a conscious state—I think of these processes as}
+  \ALIUSPlacedTextContent{71.080}{538.938}{456.541}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I don't think of mind-wandering as a conscious stateâ€”I think of these processes as}
   \ALIUSPlacedTextContent{71.080}{555.978}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{more or less ongoing, below the level of awareness, competing with other inputs and}
   \ALIUSPlacedTextContent{71.080}{573.018}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{signals in the brain for our attention. We can tune in and pay attention to them, or}
   \ALIUSPlacedTextContent{71.080}{589.818}{456.590}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{not, and sometimes the thoughts will be strong enough or emotionally salient}
@@ -296,7 +301,7 @@
   \ALIUSPlacedTextContent{71.080}{708.618}{456.440}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{conducted along the auditory nerve, and processed at least at some low level in the}
   \ALIUSPlacedTextContent{71.080}{725.658}{456.483}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{brain. I suspect the brain is constantly generating thoughts, imagery, and so on at a}
   \ALIUSPlacedTextContent{71.080}{742.458}{456.505}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"subthreshold" level as well, and noticing it is more a matter of this content catching}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -306,7 +311,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{5}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{our attention and becoming illuminated by our conscious awareness than of}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{entering a particular conscious state where mind-wandering then starts or is allowed}
@@ -348,7 +353,7 @@
   \ALIUSPlacedTextContent{71.080}{718.048}{455.780}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{In a recent article that you co-authored, mind-wandering is characterized within the}
   \ALIUSPlacedTextContent{71.080}{733.648}{455.832}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{spontaneous thinking framework as a thought process in which content is weakly}
   \ALIUSPlacedTextContent{71.080}{749.248}{455.832}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{constrained by automatic processes and task-related cognitive control (Christoff et}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -358,7 +363,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{6}
   \ALIUSPlacedTextContent{71.080}{71.008}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{al, 2016). What, then, are the determinants of thought contents during mind-}
   \ALIUSPlacedTextContent{71.080}{86.609}{65.836}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{wandering?}
@@ -399,7 +404,7 @@
   \ALIUSPlacedTextContent{71.080}{694.529}{375.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{offer insights into the nature and dynamics of spontaneous thinking?}
   \ALIUSPlacedTextContent{71.080}{722.058}{456.519}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{A major issue that many of us worry about in mind-wandering research is, "Are we}
   \ALIUSPlacedTextContent{71.080}{739.098}{456.470}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{changing the content and dynamics of spontaneous thought by asking people to}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -409,7 +414,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{7}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.514}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{observe and report on it?" The answer must almost certainly be "Yes." William James,}
   \ALIUSPlacedTextContent{71.080}{87.978}{32.275}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in his}
@@ -455,7 +460,7 @@
   \ALIUSPlacedTextContent{71.080}{714.138}{456.664}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{some psychological content to study and analyze. So, when we find that people}
   \ALIUSPlacedTextContent{71.080}{731.178}{456.569}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mind-wander a lot during a boring task, or during college lectures for example, we}
   \ALIUSPlacedTextContent{71.080}{747.978}{456.437}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{need to remember that in many cases the participant's interest in the task or the}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -465,7 +470,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{8}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.590}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{lecture is minimal. For example, in the case of university lectures, perhaps listening}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to the lecture is relevant to some distant goal of doing well on a final exam and}
@@ -491,24 +496,24 @@
   \ALIUSPlacedTextContent{71.080}{427.098}{456.620}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{immediate future, or even more distant memories and hypothetical futures, and}
   \ALIUSPlacedTextContent{71.080}{443.898}{456.467}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{considers these instead. This seems like it would have clear benefits for everyday life.}
   \ALIUSPlacedTextContent{71.080}{460.938}{456.614}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{And if your current goals and concerns happen to be, say, an artistic or scientific}
-  \ALIUSPlacedTextContent{71.080}{477.978}{456.547}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{problem you are working on, your brain will turn to these concerns—I see the}
+  \ALIUSPlacedTextContent{71.080}{477.978}{456.547}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{problem you are working on, your brain will turn to these concernsâ€”I see the}
   \ALIUSPlacedTextContent{71.080}{494.778}{456.485}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{relationship with creativity as just a special case of the more general phenomenon of}
   \ALIUSPlacedTextContent{71.080}{511.818}{456.518}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{an automatic, natural focus on current concerns whenever there are cognitive}
   \ALIUSPlacedTextContent{71.080}{528.858}{456.458}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{resources available. If you're an artist, your concern will be your next creation; if}
   \ALIUSPlacedTextContent{71.080}{545.658}{456.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{you're a new parent, your newborn child. In both cases, your mind will tend to focus}
   \ALIUSPlacedTextContent{71.080}{562.698}{289.958}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{on your central concerns whenever it has the chance.}
-  \ALIUSPlacedTextContent{108.520}{589.913}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{127.960}{589.913}{327.747}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I see the relationship with creativity as just a special}
-  \ALIUSPlacedTextContent{127.960}{607.913}{279.202}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{case of the more general phenomenon of an}
-  \ALIUSPlacedTextContent{127.960}{625.913}{286.687}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{automatic, natural focus on current concerns}
-  \ALIUSPlacedTextContent{127.960}{643.433}{316.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{whenever there are cognitive resources available.}
-  \ALIUSPlacedTextContent{446.440}{643.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{109.960}{587.728}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{127.960}{587.728}{327.747}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I see the relationship with creativity as just a special}
+  \ALIUSPlacedTextContent{152.233}{605.248}{279.202}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{case of the more general phenomenon of an}
+  \ALIUSPlacedTextContent{148.490}{622.768}{286.687}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{automatic, natural focus on current concerns}
+  \ALIUSPlacedTextContent{133.678}{640.288}{316.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{whenever there are cognitive resources available.}
+  \ALIUSPlacedTextContent{459.707}{640.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{677.248}{455.791}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{How is the study of mind-wandering informative regarding clinical conditions like}
   \ALIUSPlacedTextContent{71.080}{692.849}{235.683}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{ADHD or for mental well-being in general?}
   \ALIUSPlacedTextContent{71.080}{720.378}{456.660}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Well, if you accept the hypothesis I've advanced above, that spontaneous thought}
   \ALIUSPlacedTextContent{71.080}{737.178}{456.513}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and mind-wandering are a natural, healthy, and probably useful function of the}
   \ALIUSPlacedTextContent{71.080}{754.218}{456.472}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{human mind, then you can then conceive numerous mental health conditions as}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -518,7 +523,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{517.960}{35.700}{8.464}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{9}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.575}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{dysfunctions of this natural propensity toward spontaneous thinking detached from}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.584}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the here and now. Various clinical conditions will distort or exaggerate given aspects}
@@ -563,7 +568,7 @@
   \ALIUSPlacedTextContent{71.080}{681.258}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{thought is, what causes mental illness, and what conduces to general well-being, so}
   \ALIUSPlacedTextContent{71.080}{698.298}{456.555}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{understanding how all these things are interrelated is necessarily a long-term project}
   \ALIUSPlacedTextContent{71.080}{715.338}{138.368}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that is still in its infancy.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -573,7 +578,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{10}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.792}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Because mind-wandering represents a spontaneous cognitive phenomenon}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.809}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{unrelated to task-demands, it is challenging to probe and characterize}
@@ -613,7 +618,7 @@
   \ALIUSPlacedTextContent{71.080}{681.498}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{test more specific hypotheses (\ALIUSCitationLink{aliusref-fox-koroma-kucyi-salomons-2013}{Kucyi et al., 2013}), to investigate the neural correlates}
   \ALIUSPlacedTextContent{71.080}{698.538}{456.519}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of particular types of thought content (\ALIUSCitationLink{aliusref-fox-koroma-gorgolewski-lurie-2014}{Gorgolewski et al., 2014}), and to understand}
   \ALIUSPlacedTextContent{71.080}{715.578}{448.226}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the neural basis of how emotions color spontaneous thoughts (\ALIUSCitationLink{aliusref-fox-koroma-tusche-smallwood-2014}{Tusche et al., 2014}).}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -623,7 +628,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{11}
   \ALIUSPlacedTextContent{71.080}{71.008}{421.735}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Where do you see the study of mind-wandering evolving in the coming years?}
   \ALIUSPlacedTextContent{71.080}{98.538}{456.520}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{A major, long-term project will be understanding its relationship(s) to mental illness}
@@ -633,7 +638,7 @@
   \ALIUSPlacedTextContent{71.080}{166.458}{456.394}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{patterns? Can we steer people away from the negative biases that we see in mental}
   \ALIUSPlacedTextContent{71.080}{183.258}{456.512}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{illness, and instead nudge them toward positive, constructive, and creative patterns}
   \ALIUSPlacedTextContent{71.080}{200.298}{65.797}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of thinking?}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -643,7 +648,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{12}
   \ALIUSPlacedTextContent{263.991}{71.444}{70.165}{ALIUSC000000}{\ALIUSFontLatoLight}{13.731}{References}
   \ALIUSPlacedTextContent{71.080}{104.465}{456.296}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-fox-koroma-andrews-hanna-kaiser-2013}Andrews-Hanna, J. R., Kaiser, R. H., Turner, A. E. J., Reineberg, A., Godinez, D.,}
@@ -702,7 +707,7 @@
   \ALIUSPlacedTextContent{468.154}{708.785}{50.391}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 342-353.}
   \ALIUSPlacedTextContent{71.080}{736.625}{456.341}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-fox-koroma-ellamil-fox-2016}Ellamil, M., Fox, K. C. R., Dixon, M. L., Pritchard, S., Todd, R. M., Thompson, E., \&}
   \ALIUSPlacedTextContent{106.530}{752.225}{420.772}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Christoff, K. (2016). Dynamics of neural recruitment surrounding the spontaneous}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -712,7 +717,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{13}
   \ALIUSPlacedTextContent{106.530}{70.865}{313.882}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{arising of thoughts in experienced mindfulness practitioners.}
   \ALIUSPlacedTextContent{421.092}{70.865}{75.829}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neuroimage, 136}
@@ -773,7 +778,7 @@
   \ALIUSPlacedTextContent{106.530}{753.905}{238.625}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Mindfulness and negative automatic thinking.}
   \ALIUSPlacedTextContent{345.886}{753.905}{161.474}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Cognitive therapy and research, 32}
   \ALIUSPlacedTextContent{507.415}{753.905}{20.000}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(6),}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -783,7 +788,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{14}
   \ALIUSPlacedTextContent{106.530}{70.865}{47.115}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{758-774.}
   \ALIUSPlacedTextContent{71.080}{98.705}{456.127}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-fox-koroma-gorgolewski-lurie-2014}Gorgolewski, K. J., Lurie, D., Urchs, S., Kipping, J. A., Craddock, R. C., Milham, M. P., . . .}
@@ -826,7 +831,7 @@
   \ALIUSPlacedTextContent{71.080}{556.865}{393.751}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-fox-koroma-klinger-1987}Klinger, E. \& Cox, W. M. (1987). Dimensions of thought flow in everyday life.}
   \ALIUSPlacedTextContent{464.894}{556.865}{62.491}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Imagination,}
   \ALIUSPlacedTextContent{106.530}{572.465}{126.915}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Cognition and Personality,}
-  \ALIUSPlacedTextContent{233.459}{572.465}{59.790}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{7: 105—128}
+  \ALIUSPlacedTextContent{233.459}{572.465}{59.790}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{7: 105â€”128}
   \ALIUSPlacedTextContent{71.080}{600.305}{405.946}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-fox-koroma-klinger-cox-2004}Klinger, E., \& Cox, W. M. (2004). Motivation and the theory of current concerns.}
   \ALIUSPlacedTextContent{476.736}{600.305}{50.684}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Handbook}
   \ALIUSPlacedTextContent{106.530}{615.905}{299.410}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{of motivational counseling: Concepts, approaches, and assessment}
@@ -840,7 +845,7 @@
   \ALIUSPlacedTextContent{470.913}{718.625}{56.512}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Proceedings}
   \ALIUSPlacedTextContent{106.530}{734.465}{186.621}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{of the National Academy of Sciences, 110}
   \ALIUSPlacedTextContent{293.179}{734.465}{95.045}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(46), 18692-18697.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -850,7 +855,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox – Wandering along the spectrum of spontaneous thinking}
+  \ALIUSPlacedTextContent{71.080}{35.460}{298.730}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Fox â€“ Wandering along the spectrum of spontaneous thinking}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{15}
   \ALIUSPlacedTextContent{71.080}{70.865}{456.400}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-fox-koroma-lutz-thompson-2003}Lutz, A., \& Thompson, E. (2003). Neurophenomenology integrating subjective experience}
   \ALIUSPlacedTextContent{106.530}{86.705}{303.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and brain dynamics in the neuroscience of consciousness.}
@@ -912,7 +917,7 @@
   \ALIUSPlacedTextContent{224.022}{663.185}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{229.950}{663.185}{9.265}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{14}
   \ALIUSPlacedTextContent{239.231}{663.185}{59.958}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(3), 317-324.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

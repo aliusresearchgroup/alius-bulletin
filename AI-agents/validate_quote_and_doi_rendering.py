@@ -12,6 +12,10 @@ Checks current TeX sources for two Overleaf-sensitive details:
   can jump to their matching reference entries without visual restyling.
 - opening decorative pull quotes must sit on the first pull-quote text baseline,
   mirroring the lower-right closing quote instead of floating on a separate line.
+- closing decorative pull quotes must sit on the final pull-quote text baseline
+  and to the right of the text box, never between quote-body lines.
+- legacy absolute-position pull-quote body lines must be centered as one compact
+  rectangle, so shorter lines do not drift left while the marks stay fixed.
 
 Optionally checks compiled PDFs for live DOI URI annotations.
 """
@@ -42,6 +46,8 @@ FILL_RE = re.compile(
     r"\+\+\((?P<w>[0-9.]+)bp,-(?P<h>[0-9.]+)bp\);"
 )
 PULL_QUOTE_TEXT_COLORS = {"ALIUSC000000", "ALIUSC595959", "ALIUSC7F7F7F"}
+QUOTE_OPEN = r"\ALIUSPullQuoteOpen"
+QUOTE_CLOSE = r"\ALIUSPullQuoteClose"
 
 
 def bib_doi(tex_path: Path) -> str:
@@ -115,8 +121,22 @@ def source_report() -> dict[str, Any]:
             missing_hyperref.append(rel)
 
         spans = parsed_spans_with_pages(text)
-        for opener in [rec for rec in spans if rec["text"] == r"\ALIUSPullQuoteOpen"]:
-            candidates = [rec for rec in spans if is_pull_quote_text_candidate(rec, opener)]
+        for opener in [rec for rec in spans if rec["text"] == QUOTE_OPEN]:
+            next_opener_line = min(
+                (
+                    rec["line"]
+                    for rec in spans
+                    if rec["text"] == QUOTE_OPEN
+                    and rec["page"] == opener["page"]
+                    and rec["line"] > opener["line"]
+                ),
+                default=10**9,
+            )
+            candidates = [
+                rec
+                for rec in spans
+                if is_pull_quote_text_candidate(rec, opener) and opener["line"] < rec["line"] < next_opener_line
+            ]
             if not candidates:
                 bad_pull_quote_alignment.append(f"{rel}:{opener['line']}: no pull-quote text candidate near opener")
                 continue
@@ -124,6 +144,40 @@ def source_report() -> dict[str, Any]:
             if abs(opener["yf"] - target_y) > 1.1:
                 bad_pull_quote_alignment.append(
                     f"{rel}:{opener['line']}: opener y={opener['yf']:.3f}, first text y={target_y:.3f}"
+                )
+            closers = [
+                rec
+                for rec in spans
+                if rec["text"] == QUOTE_CLOSE
+                and rec["page"] == opener["page"]
+                and rec["line"] > opener["line"]
+                and rec["line"] < next_opener_line
+                and opener["yf"] - 10.0 <= rec["yf"] <= opener["yf"] + 220.0
+            ]
+            if not closers:
+                bad_pull_quote_alignment.append(f"{rel}:{opener['line']}: no closing pull-quote mark near opener")
+                continue
+            closer = closers[-1]
+            candidates = [rec for rec in candidates if rec["yf"] <= closer["yf"] + 1.6]
+            if not candidates:
+                bad_pull_quote_alignment.append(f"{rel}:{opener['line']}: no pull-quote body enclosed by closer")
+                continue
+            target_last_y = max(rec["yf"] for rec in candidates)
+            if closer["yf"] < target_last_y - 1.1 or abs(closer["yf"] - target_last_y) > 1.6:
+                bad_pull_quote_alignment.append(
+                    f"{rel}:{opener['line']}: closer y={closer['yf']:.3f}, final text y={target_last_y:.3f}"
+                )
+            body_right = max(rec["xf"] + float(rec["w"]) for rec in candidates)
+            if closer["xf"] < body_right + 1.0:
+                bad_pull_quote_alignment.append(
+                    f"{rel}:{opener['line']}: closer x={closer['xf']:.3f} overlaps body right={body_right:.3f}"
+                )
+            centers = [rec["xf"] + float(rec["w"]) / 2.0 for rec in candidates]
+            center = sum(centers) / len(centers)
+            drift = max(abs(item - center) for item in centers)
+            if drift > 2.0:
+                bad_pull_quote_alignment.append(
+                    f"{rel}:{opener['line']}: pull-quote body centers drift by {drift:.1f}bp"
                 )
 
         first_page = text.split(r"\end{tikzpicture}", 1)[0]

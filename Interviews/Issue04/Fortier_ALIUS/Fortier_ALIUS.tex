@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -154,7 +159,7 @@
   \ALIUSPlacedTextContent{90.951}{550.169}{418.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{respect: after a Bachelor's degree in philosophy at the Sorbonne, Martin}
   \ALIUSPlacedTextContent{90.951}{569.609}{418.209}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{obtained two Master's degrees in parallel - one in philosophy, and another in}
   \ALIUSPlacedTextContent{90.951}{589.048}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{anthropology. He then started a Ph.D. in cognitive science at the Institut Jean}
-  \ALIUSPlacedTextContent{90.951}{608.729}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Nicod, under the supervision of Jerôme Dokic. His dissertation, which}
+  \ALIUSPlacedTextContent{90.951}{608.729}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Nicod, under the supervision of JerÃ´me Dokic. His dissertation, which}
   \ALIUSPlacedTextContent{90.951}{628.169}{199.705}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{remains unfinished, is an impressive}
   \ALIUSPlacedTextContent{290.709}{628.169}{62.158}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{tour de force}
   \ALIUSPlacedTextContent{352.896}{628.169}{156.352}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{seamlessly connecting ideas}
@@ -163,7 +168,7 @@
   \ALIUSPlacedTextContent{90.951}{706.169}{418.232}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Martin's ideal of interdisciplinarity was rooted in his aversion for empirical}
   \ALIUSPlacedTextContent{90.951}{725.609}{418.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{blindspots, partial evidence, and culturally-grounded intuitions. He}
   \ALIUSPlacedTextContent{90.951}{745.049}{418.392}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{encouraged philosophers to seek the support of empirical data and refrain}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -206,7 +211,7 @@
   \ALIUSPlacedTextContent{90.951}{697.048}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Amazonian cultures is Bayesian constructivism. There is a long-lasting}
   \ALIUSPlacedTextContent{90.951}{716.489}{418.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{controversy in psychology between nativists, who think abstract knowledge}
   \ALIUSPlacedTextContent{90.951}{735.929}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is innately present in humans, and empiricists, who believe it is simply}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -255,7 +260,7 @@
   \ALIUSPlacedTextContent{90.951}{697.048}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Amazonian people conceptualize them as being highly malleable. In}
   \ALIUSPlacedTextContent{90.951}{716.489}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ethnobiology, essentialist thinking has often been associated with taxonomic}
   \ALIUSPlacedTextContent{90.951}{735.929}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thinking. Several authors have maintained that ethnobiological knowledge is}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -310,7 +315,7 @@
   \ALIUSPlacedTextContent{90.951}{697.048}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{"body", etc.) to the same beings. His preliminary findings contrast with the}
   \ALIUSPlacedTextContent{90.951}{716.489}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{view that dualism is universal. Instead, it seems that properties of beings are}
   \ALIUSPlacedTextContent{90.951}{735.929}{297.769}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ascribed in a very dynamic and context-sensitive way.}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -354,7 +359,7 @@
   \ALIUSPlacedTextContent{90.951}{677.369}{418.278}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that supernatural thinking is not a matter of modularity or domain-specific}
   \ALIUSPlacedTextContent{90.951}{697.048}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{knowledge. This proposal challenges many influential approaches to religious}
   \ALIUSPlacedTextContent{90.951}{716.489}{326.355}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{thinking developed within the cognitive science of religion.}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -382,7 +387,7 @@
   \ALIUSPlacedTextContent{263.177}{345.928}{99.403}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{antihistaminergic}
   \ALIUSPlacedTextContent{382.995}{345.928}{77.657}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinogens}
   \ALIUSPlacedTextContent{481.067}{345.928}{28.141}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(e.g.,}
-  \ALIUSPlacedTextContent{328.292}{365.487}{7.336}{ALIUSC000000}{\ALIUSFontCambria}{13.920}{κ}
+  \ALIUSPlacedTextContent{328.292}{365.487}{7.336}{ALIUSC000000}{\ALIUSFontCambria}{13.920}{Îº}
   \ALIUSPlacedTextContent{90.951}{365.848}{105.310}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brompheniramine,}
   \ALIUSPlacedTextContent{208.551}{365.848}{107.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{diphenhydramine);}
   \ALIUSPlacedTextContent{335.668}{365.848}{43.153}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{-opioid}
@@ -405,7 +410,7 @@
   \ALIUSPlacedTextContent{90.951}{677.849}{418.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmacodynamics and resulting hallucinogenic effects of serotonergics and}
   \ALIUSPlacedTextContent{90.951}{697.289}{418.247}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{antimuscarinics, he suggested that one-to-one mappings can be established}
   \ALIUSPlacedTextContent{90.951}{716.729}{380.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{between the neuropharmacological and the phenomenological levels.}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -446,13 +451,13 @@
   \ALIUSPlacedTextContent{90.951}{560.489}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in how stimuli from the world are being processed. A hallucinatory state may}
   \ALIUSPlacedTextContent{90.951}{579.928}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be induced exactly by the same input (i.e., by the same relation) as the non-}
   \ALIUSPlacedTextContent{90.951}{599.369}{418.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinatory state, but what makes it hallucinatory is the way it processes}
-  \ALIUSPlacedTextContent{90.951}{619.048}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that input – i.e., what kind of output it generates given a certain input.}
-  \ALIUSPlacedTextContent{90.951}{657.928}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The second myth is that there is such a thing as a perfect hallucination – i.e.,}
+  \ALIUSPlacedTextContent{90.951}{619.048}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that input â€“ i.e., what kind of output it generates given a certain input.}
+  \ALIUSPlacedTextContent{90.951}{657.928}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The second myth is that there is such a thing as a perfect hallucination â€“ i.e.,}
   \ALIUSPlacedTextContent{90.951}{677.369}{418.241}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a hallucinatory content that perfectly mimics a non-hallucinatory content.}
   \ALIUSPlacedTextContent{90.951}{697.048}{418.174}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Martin argued that none of the different kinds of hallucination induced by}
   \ALIUSPlacedTextContent{90.951}{716.489}{418.150}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{his nine classes of hallucinogens ever generates perfect hallucinations. He}
   \ALIUSPlacedTextContent{90.951}{735.929}{418.289}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{believed this to be equally true of other types of hallucinations caused by}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -481,7 +486,7 @@
   \ALIUSPlacedTextContent{90.951}{307.048}{418.398}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that each hallucinogen generates a specific kind of hallucinatory content and}
   \ALIUSPlacedTextContent{90.951}{326.488}{418.382}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that this specificity can be elucidated by studying the cellular and}
   \ALIUSPlacedTextContent{90.951}{345.928}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neurocognitive mechanisms underpinning the hallucinatory effects. Thus, an}
-  \ALIUSPlacedTextContent{90.951}{365.608}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{antimuscarinic hallucinogen – unlike a serotonergic hallucinogen – will}
+  \ALIUSPlacedTextContent{90.951}{365.608}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{antimuscarinic hallucinogen â€“ unlike a serotonergic hallucinogen â€“ will}
   \ALIUSPlacedTextContent{90.951}{385.048}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{never induce extraordinary hallucinatory objects (such as a chimera). Thus,}
   \ALIUSPlacedTextContent{90.951}{404.488}{418.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Martin argued that hallucinations are normatively constrained: they are}
   \ALIUSPlacedTextContent{90.951}{423.928}{418.261}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{governed by specific laws and these laws can be discovered by the}
@@ -499,7 +504,7 @@
   \ALIUSPlacedTextContent{90.951}{677.369}{295.584}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the slogan "perception is a controlled hallucination").}
   \ALIUSPlacedTextContent{90.951}{716.489}{418.179}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Martin was also interested in the relationship between neuropharmacology}
   \ALIUSPlacedTextContent{90.951}{735.929}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and culture. He set out to answer the following question: when one entertains}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -518,7 +523,7 @@
   \ALIUSPlacedTextContent{90.951}{209.609}{418.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Martin's contribution to this debate consists of highlighting two main points.}
   \ALIUSPlacedTextContent{90.951}{229.049}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{First, he suggested that by comparing the role of neuropharmacology and}
   \ALIUSPlacedTextContent{90.951}{248.489}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{culture in hallucinogenic experiences induced by distinct classes of}
-  \ALIUSPlacedTextContent{332.447}{267.807}{7.336}{ALIUSC000000}{\ALIUSFontCambria}{13.920}{κ}
+  \ALIUSPlacedTextContent{332.447}{267.807}{7.336}{ALIUSC000000}{\ALIUSFontCambria}{13.920}{Îº}
   \ALIUSPlacedTextContent{90.951}{268.168}{241.509}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{compounds (serotonergics, antimuscarinics,}
   \ALIUSPlacedTextContent{339.823}{268.168}{169.404}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{-opioids, etc.), we can improve}
   \ALIUSPlacedTextContent{90.951}{287.848}{418.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{our understanding of the relative contribution made by each factor. Second,}
@@ -544,7 +549,7 @@
   \ALIUSPlacedTextContent{90.951}{697.289}{418.190}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cultural traits under scrutiny are encountered in all cultures regardless of}
   \ALIUSPlacedTextContent{90.951}{716.729}{418.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{whether hallucinogenic use is present or not. Martin concluded that}
   \ALIUSPlacedTextContent{90.951}{736.409}{418.346}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinogens play only a limited role in cultural evolution; furthermore,}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -556,7 +561,7 @@
   \ALIUSPlacedTextContent{494.631}{36.568}{14.583}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{10}
   \ALIUSPlacedTextContent{90.951}{73.048}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{their role may concern formal properties of culture, rather than its content.}
   \ALIUSPlacedTextContent{90.951}{92.488}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To take the example of beliefs, Martin thought that hallucinogens shape not}
-  \ALIUSPlacedTextContent{90.951}{111.928}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{so much what is believed – i.e., the content of beliefs – as the kind of attitude}
+  \ALIUSPlacedTextContent{90.951}{111.928}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{so much what is believed â€“ i.e., the content of beliefs â€“ as the kind of attitude}
   \ALIUSPlacedTextContent{90.951}{131.609}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people entertain towards those contents. In other words, regardless of what}
   \ALIUSPlacedTextContent{90.951}{151.049}{418.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{belief is being entertained (believing in gods, in spirits, in dwarfs, etc.),}
   \ALIUSPlacedTextContent{90.951}{170.488}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinogens have very specific attitudinal effects. Van Leeuwen has}
@@ -588,7 +593,7 @@
   \ALIUSPlacedTextContent{90.951}{697.048}{418.295}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{speculations have been made about the use of hallucinogens at different}
   \ALIUSPlacedTextContent{90.951}{716.489}{418.346}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{epochs and in different places in the world. The HUTHAC does not include}
   \ALIUSPlacedTextContent{90.951}{735.929}{418.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the doubtful cases of hallucinogenic use advanced by these authors. It only}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -607,7 +612,7 @@
   \ALIUSPlacedTextContent{90.951}{209.609}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cultures. By and large, in the last hundred years, hallucinogenic use has}
   \ALIUSPlacedTextContent{90.951}{229.049}{418.374}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mainly flourished in the Americas and been absent elsewhere (with only a}
   \ALIUSPlacedTextContent{90.951}{248.489}{418.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{few exceptions). Even in the Americas, hallucinogenic use has been}
-  \ALIUSPlacedTextContent{90.951}{267.928}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{persistently absent from some areas – notably North America (with the}
+  \ALIUSPlacedTextContent{90.951}{267.928}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{persistently absent from some areas â€“ notably North America (with the}
   \ALIUSPlacedTextContent{90.951}{287.608}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{exception of Southern California and the Southwest), the Southern Cone,}
   \ALIUSPlacedTextContent{90.951}{307.048}{418.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and Eastern Brazil. Another finding is that hallucinogenic use has gradually}
   \ALIUSPlacedTextContent{90.951}{326.488}{418.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{increased through the centuries (for example, in South America, ayahuasca}
@@ -631,7 +636,7 @@
   \ALIUSPlacedTextContent{90.951}{697.048}{418.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{hallucinogenic experience (one can certainly observe dramatic functional}
   \ALIUSPlacedTextContent{90.951}{716.489}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{changes in brain connectivity, but not any structural change). And yet, under}
   \ALIUSPlacedTextContent{90.951}{735.929}{418.311}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{LSD, consciousness will be so deeply altered, sounds will influence the}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -663,7 +668,7 @@
   \ALIUSPlacedTextContent{90.951}{443.608}{310.396}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{answering the questions raised in these various projects.}
   \ALIUSPlacedTextContent{90.951}{482.488}{418.236}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Beyond his extensive research program, Martin was a lion-hearted colleague}
   \ALIUSPlacedTextContent{90.951}{501.928}{418.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and loyal friend. His contribution to academia was also pedagogical. During}
-  \ALIUSPlacedTextContent{90.951}{521.369}{418.220}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{his stay in Perú, he dedicated a lot of time and effort to mentor}
+  \ALIUSPlacedTextContent{90.951}{521.369}{418.220}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{his stay in PerÃº, he dedicated a lot of time and effort to mentor}
   \ALIUSPlacedTextContent{90.951}{541.049}{418.132}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{undergraduate students to study abroad. Some of them have now entered}
   \ALIUSPlacedTextContent{90.951}{560.489}{418.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Master studies and Ph.D. programs in top-ranked universities worldwide. He}
   \ALIUSPlacedTextContent{90.951}{579.928}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{was able to connect people across continents and ideas across disciplines.}
@@ -673,7 +678,7 @@
   \ALIUSPlacedTextContent{90.951}{677.369}{418.338}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the formation of innovative collaborations (such as ALIUS), which will}
   \ALIUSPlacedTextContent{90.951}{697.048}{418.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{forever bear his unique signature. His passion for the scientific study of}
   \ALIUSPlacedTextContent{90.951}{716.489}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness was inspiring, altering the trajectory of many researchers in}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -692,11 +697,11 @@
   \ALIUSPlacedTextContent{90.951}{73.048}{418.228}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{our network and beyond. Now Martin lives on through networks: of neurons,}
   \ALIUSPlacedTextContent{90.951}{92.488}{138.186}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{citations, and colleagues.}
   \ALIUSPlacedTextContent{238.693}{148.492}{123.302}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{Selected references}
-  \ALIUSPlacedTextContent{90.951}{181.936}{418.011}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier, M., Wente, A. O., Fernández Flecha, M., \& Gopnik, A. (submitted).}
+  \ALIUSPlacedTextContent{90.951}{181.936}{418.011}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier, M., Wente, A. O., FernÃ¡ndez Flecha, M., \& Gopnik, A. (submitted).}
   \ALIUSPlacedTextContent{126.951}{199.936}{381.999}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Abstract causal knowledge in Amazonia: Shipibo-Konibo horticulturalists}
   \ALIUSPlacedTextContent{126.951}{218.176}{382.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{learn multiple causality more readily than U.S. and Peruvian}
   \ALIUSPlacedTextContent{126.951}{236.176}{87.024}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{undergraduates.}
-  \ALIUSPlacedTextContent{90.951}{254.176}{414.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier-Davy, M., \& Millière, R. (2020). The multi-dimensional approach to drug-}
+  \ALIUSPlacedTextContent{90.951}{254.176}{414.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier-Davy, M., \& MilliÃ¨re, R. (2020). The multi-dimensional approach to drug-}
   \ALIUSPlacedTextContent{126.951}{272.416}{382.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{induced states a commentary on Bayne and Carter's "dimensions of}
   \ALIUSPlacedTextContent{126.951}{290.416}{225.067}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness and the psychedelic state".}
   \ALIUSPlacedTextContent{356.294}{290.416}{152.656}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience of Consciousness,}
@@ -709,8 +714,8 @@
   \ALIUSPlacedTextContent{126.951}{362.896}{9.931}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{43}
   \ALIUSPlacedTextContent{136.895}{362.896}{5.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
   \ALIUSPlacedTextContent{142.498}{362.896}{214.605}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1017/S0140525X19002905}
-  \ALIUSPlacedTextContent{90.951}{380.896}{418.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier, M. (2019). Le façonnement neuropharmacologique de la culture :}
-  \ALIUSPlacedTextContent{126.951}{399.136}{382.041}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Anthropologie comparée des rituels à hallucinogènes sérotoninergiques et}
+  \ALIUSPlacedTextContent{90.951}{380.896}{418.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier, M. (2019). Le faÃ§onnement neuropharmacologique de la culture :}
+  \ALIUSPlacedTextContent{126.951}{399.136}{382.041}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Anthropologie comparÃ©e des rituels Ã  hallucinogÃ¨nes sÃ©rotoninergiques et}
   \ALIUSPlacedTextContent{126.951}{417.136}{99.166}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{anticholinergiques.}
   \ALIUSPlacedTextContent{241.638}{417.136}{38.084}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Cahiers}
   \ALIUSPlacedTextContent{295.206}{417.136}{74.844}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{d'Anthropologie}
@@ -730,8 +735,8 @@
   \ALIUSPlacedTextContent{488.959}{580.096}{16.978}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{35-}
   \ALIUSPlacedTextContent{126.951}{598.096}{16.998}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{38.}
   \ALIUSPlacedTextContent{143.967}{598.096}{226.744}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1080/2153599X.2018.1453531}
-  \ALIUSPlacedTextContent{90.951}{622.336}{417.947}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier, M. (2018). Le sens de réalité dans les expériences psychotropes : Etude}
-  \ALIUSPlacedTextContent{126.951}{640.336}{352.725}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{comparée des hallucinogènes sérotoninergiques et anticholinergiques.}
+  \ALIUSPlacedTextContent{90.951}{622.336}{417.947}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier, M. (2018). Le sens de rÃ©alitÃ© dans les expÃ©riences psychotropes : Etude}
+  \ALIUSPlacedTextContent{126.951}{640.336}{352.725}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{comparÃ©e des hallucinogÃ¨nes sÃ©rotoninergiques et anticholinergiques.}
   \ALIUSPlacedTextContent{479.542}{640.336}{29.453}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Ed. S.}
   \ALIUSPlacedTextContent{126.951}{658.576}{290.599}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Baud. Histoires et usages des plantes psychotropes. Paris: Imago}
   \ALIUSPlacedTextContent{417.532}{658.576}{50.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 125-184.}
@@ -741,8 +746,8 @@
   \ALIUSPlacedTextContent{126.951}{718.816}{182.446}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{diversity: An interdisciplinary approach}
   \ALIUSPlacedTextContent{309.391}{718.816}{199.631}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Oxford/New York: Oxford University}
   \ALIUSPlacedTextContent{126.951}{736.816}{25.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Press}
-  \ALIUSPlacedTextContent{152.833}{736.816}{58.400}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{, pp. 343–378}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{152.833}{736.816}{58.400}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{, pp. 343â€“378}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -766,16 +771,16 @@
   \ALIUSPlacedTextContent{126.951}{195.136}{14.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{In}
   \ALIUSPlacedTextContent{141.029}{195.136}{127.762}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Science of Lay Theories}
   \ALIUSPlacedTextContent{268.830}{195.136}{160.225}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp. 265-315). Springer, Cham.}
-  \ALIUSPlacedTextContent{90.951}{216.736}{417.946}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier, M., \& Fortier, M. (2017). Pour une science de la diversité de la conscience:}
-  \ALIUSPlacedTextContent{126.951}{232.576}{381.938}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Vers une redéfinition multidimensionnelle des états modifiés de conscience.}
+  \ALIUSPlacedTextContent{90.951}{216.736}{417.946}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Fortier, M., \& Fortier, M. (2017). Pour une science de la diversitÃ© de la conscience:}
+  \ALIUSPlacedTextContent{126.951}{232.576}{381.938}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Vers une redÃ©finition multidimensionnelle des Ã©tats modifiÃ©s de conscience.}
   \ALIUSPlacedTextContent{126.951}{248.416}{67.036}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Intellectica, 67}
   \ALIUSPlacedTextContent{194.016}{248.416}{40.836}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 27-62.}
-  \ALIUSPlacedTextContent{90.951}{270.256}{418.054}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dumas, G., Fortier, M., \& González, J. (2017). Les enjeux des états modifiés de la}
-  \ALIUSPlacedTextContent{126.951}{288.256}{382.013}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{conscience et de la cognition: limites passées et émergence de nouveaux}
+  \ALIUSPlacedTextContent{90.951}{270.256}{418.054}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dumas, G., Fortier, M., \& GonzÃ¡lez, J. (2017). Les enjeux des Ã©tats modifiÃ©s de la}
+  \ALIUSPlacedTextContent{126.951}{288.256}{382.013}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{conscience et de la cognition: limites passÃ©es et Ã©mergence de nouveaux}
   \ALIUSPlacedTextContent{126.951}{306.256}{60.432}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{paradigmes.}
   \ALIUSPlacedTextContent{190.386}{306.256}{50.595}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Intellectica}
   \ALIUSPlacedTextContent{241.007}{306.256}{52.305}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 67, 27-62.}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

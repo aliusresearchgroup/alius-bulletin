@@ -27,16 +27,35 @@ PANEL_END = "% ALIUS normalized citation panel end"
 PANEL_TEXT_PREFIX = "% ALIUS normalized citation panel text: "
 PULL_QUOTE_TEXT_COLORS = {"ALIUSC000000", "ALIUSC595959", "ALIUSC7F7F7F"}
 NOTABLE_QUOTE_MACROS = (
-    r"\providecommand{\ALIUSNotableQuoteAt}[4]{%" + "\n"
-    r"  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%" + "\n"
-    r"    \begin{minipage}{#3bp}%" + "\n"
-    r"      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%" + "\n"
-    r"    \end{minipage}%" + "\n"
+    r"\providecommand{\ALIUSPullQuoteBlockAt}[4]{%" + "\n"
+    r"  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%" + "\n"
+    r"    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%" + "\n"
     r"  };%" + "\n"
+    r"  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%" + "\n"
+    r"  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%" + "\n"
+    r"    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%" + "\n"
+    r"  };%" + "\n"
+    r"}" + "\n"
+    r"\providecommand{\ALIUSNotableQuoteAt}[4]{%" + "\n"
+    r"  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%" + "\n"
     r"}" + "\n"
     r"\providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%" + "\n"
     r"  \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%" + "\n"
     r"}" + "\n"
+)
+NOTABLE_QUOTE_BLOCK_RE = re.compile(
+    r"\\providecommand\{\\ALIUSPullQuoteBlockAt\}\[4\]\{%.*?"
+    r"\\providecommand\{\\ALIUSMaybeNotableQuoteAt\}\[4\]\{%\n"
+    r"  \\if\\relax\\detokenize\{#4\}\\relax\\else\\ALIUSNotableQuoteAt\{#1\}\{#2\}\{#3\}\{#4\}\\fi%\n"
+    r"\}\n",
+    re.S,
+)
+LEGACY_NOTABLE_QUOTE_BLOCK_RE = re.compile(
+    r"\\providecommand\{\\ALIUSNotableQuoteAt\}\[4\]\{%.*?"
+    r"\\providecommand\{\\ALIUSMaybeNotableQuoteAt\}\[4\]\{%\n"
+    r"  \\if\\relax\\detokenize\{#4\}\\relax\\else\\ALIUSNotableQuoteAt\{#1\}\{#2\}\{#3\}\{#4\}\\fi%\n"
+    r"\}\n",
+    re.S,
 )
 CITATION_LINK_MACROS = (
     r"\providecommand{\ALIUSRefAnchor}[1]{\hypertarget{#1}{}}" + "\n"
@@ -70,6 +89,10 @@ def ensure_preamble(text: str) -> str:
             text = text.replace(close_marker, close_marker + NOTABLE_QUOTE_MACROS, 1)
         else:
             text = text.replace("\n\\definecolor", "\n" + NOTABLE_QUOTE_MACROS + r"\definecolor", 1)
+    elif r"\providecommand{\ALIUSPullQuoteBlockAt}" not in text:
+        text = LEGACY_NOTABLE_QUOTE_BLOCK_RE.sub(lambda _match: NOTABLE_QUOTE_MACROS, text, count=1)
+    else:
+        text = NOTABLE_QUOTE_BLOCK_RE.sub(lambda _match: NOTABLE_QUOTE_MACROS, text, count=1)
     if r"\providecommand{\ALIUSCitationLink}" not in text:
         notable_marker = r"\providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%" + "\n"
         if notable_marker in text:

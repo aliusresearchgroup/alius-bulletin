@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -133,32 +138,32 @@
   \ALIUSPlacedTextContent{511.620}{35.460}{14.844}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{45}
   \ALIUSPlacedTextContent{78.180}{71.099}{123.983}{ALIUSC000000}{\ALIUSFontLatoRegular}{19.920}{Am I autistic?}
   \ALIUSPlacedTextContent{78.180}{101.311}{228.119}{ALIUSC000000}{\ALIUSFontLatoLight}{17.755}{An intellectual autobiography}
-  \ALIUSPlacedTextContent{74.920}{136.606}{268.000}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Karl Friston, Martin Fortier, Matthieu Koroma and Raphaël Millière}
-  \ALIUSPlacedTextContent{352.840}{155.700}{168.000}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Karl Friston, Martin Fortier, Matthieu Koroma \& Raphaël Millière}
+  \ALIUSPlacedTextContent{74.920}{136.606}{268.000}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Karl Friston, Martin Fortier, Matthieu Koroma and RaphaÃ«l MilliÃ¨re}
+  \ALIUSPlacedTextContent{352.840}{155.700}{168.000}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Karl Friston, Martin Fortier, Matthieu Koroma \& RaphaÃ«l MilliÃ¨re}
   \ALIUSPlacedTextContent{352.840}{169.232}{71.402}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.759}{k.friston@ucl.ac.uk}
   \ALIUSPlacedTextContent{352.840}{179.915}{168.215}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Wellcome Centre for Human Neuroimaging}
   \ALIUSPlacedTextContent{352.840}{190.715}{119.210}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{University College London, UK}
   % ALIUS normalized citation panel begin
-  % ALIUS normalized citation panel text: Cite as: Friston, K., Fortier, M., Koroma, M. \& Millière, R. (2018). Am I autistic? An intellectual autobiography. ALIUS Bulletin, 2, 45-52.
+  % ALIUS normalized citation panel text: Cite as: Friston, K., Fortier, M., Koroma, M. \& MilliÃ¨re, R. (2018). Am I autistic? An intellectual autobiography. ALIUS Bulletin, 2, 45-52.
   \fill[white] (73.420bp,-194.728bp) rectangle ++(270.920bp,-40.600bp);
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (74.920bp,-196.728bp) {\begin{minipage}{267.920bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Friston, K., Fortier, M., Koroma, M. \& Millière, R. (2018). Am I autistic? An intellectual autobiography. ALIUS Bulletin, 2, 45-52. \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/q2qt-2y52}{https://doi.org/10.34700/q2qt-2y52}}}\par}\end{minipage}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (74.920bp,-196.728bp) {\begin{minipage}{267.920bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Friston, K., Fortier, M., Koroma, M. \& MilliÃ¨re, R. (2018). Am I autistic? An intellectual autobiography. ALIUS Bulletin, 2, 45-52. \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/q2qt-2y52}{https://doi.org/10.34700/q2qt-2y52}}}\par}\end{minipage}};
   % ALIUS normalized citation panel end
   \ALIUSPlacedTextContent{71.080}{255.738}{456.609}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{What follows are some personal notes that were inspired by answering the first}
   \ALIUSPlacedTextContent{71.080}{272.778}{70.833}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{question for}
   \ALIUSPlacedTextContent{253.000}{272.778}{57.395}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{ALIUS Bulletin}
   \ALIUSPlacedTextContent{222.493}{272.778}{305.161}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{. In looking back at my life, I can see some distinctly}
-  \ALIUSPlacedTextContent{71.080}{289.578}{456.609}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{autistic traits in my childhood—and indeed current ways of engaging with the}
+  \ALIUSPlacedTextContent{71.080}{289.578}{456.609}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{autistic traits in my childhoodâ€”and indeed current ways of engaging with the}
   \ALIUSPlacedTextContent{71.080}{306.618}{456.515}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{world. For example, I religiously avoid mobile phones and do not Skype. In fact, I}
   \ALIUSPlacedTextContent{71.080}{323.658}{456.580}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{find any disruption to my weekly routine rather nerve wracking. Unhappily, this}
-  \ALIUSPlacedTextContent{71.080}{340.458}{456.538}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{means travelling to international conferences can be unsettling—where I spend most}
+  \ALIUSPlacedTextContent{71.080}{340.458}{456.538}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{means travelling to international conferences can be unsettlingâ€”where I spend most}
   \ALIUSPlacedTextContent{71.080}{357.498}{456.520}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of the time avoiding other human beings; especially in the morning. Curiously, I feel}
-  \ALIUSPlacedTextContent{71.080}{374.538}{456.530}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{most at home with myself when lecturing "onstage"—close to lots of people who are,}
+  \ALIUSPlacedTextContent{71.080}{374.538}{456.530}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{most at home with myself when lecturing "onstage"â€”close to lots of people who are,}
   \ALIUSPlacedTextContent{71.080}{391.338}{210.440}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{at the same time, comfortably distant.}
   \ALIUSPlacedTextContent{71.080}{420.378}{456.493}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{When reflecting on my early (academic) experiences, similar themes come to mind.}
   \ALIUSPlacedTextContent{71.080}{437.418}{456.555}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I was obsessed with the natural world and would commit to recording it in a}
   \ALIUSPlacedTextContent{71.080}{454.218}{456.665}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{somewhat obsessional fashion: see, for example, the illustrations of aquatic flora and}
   \ALIUSPlacedTextContent{71.080}{471.258}{456.439}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{fauna that decorate these notes. I must have spent hours on these for a school}
-  \ALIUSPlacedTextContent{71.080}{488.298}{424.048}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{project—at the expense of actually learning what I should have been learning.}
+  \ALIUSPlacedTextContent{71.080}{488.298}{424.048}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{projectâ€”at the expense of actually learning what I should have been learning.}
   \ALIUSPlacedTextContent{71.080}{517.098}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I am not pretending that I was autistic; however, I remember being assessed by}
   \ALIUSPlacedTextContent{71.080}{534.138}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{educational psychologists on several occasions. The first (at age 5) was a mildly}
   \ALIUSPlacedTextContent{71.080}{550.938}{456.731}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{traumatic experience that was meant to resolve a confusing relationship with my}
@@ -168,12 +173,12 @@
   \ALIUSPlacedTextContent{71.080}{618.858}{456.614}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{thought the puppets in Thunderbirds ever got hungry. I recall thinking at that time}
   \ALIUSPlacedTextContent{71.080}{635.898}{456.523}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"what on earth does a psychologist expect me to say?" After several levels of recursive}
   \ALIUSPlacedTextContent{71.080}{652.698}{456.611}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{sophistication, I opted for "yes". The third encounter with a psychologist followed a}
-  \ALIUSPlacedTextContent{71.080}{669.738}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{science project when I was 10 years of age. I had designed a self-righting robot—}
+  \ALIUSPlacedTextContent{71.080}{669.738}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{science project when I was 10 years of age. I had designed a self-righting robotâ€”}
   \ALIUSPlacedTextContent{71.080}{686.778}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{involving mercury levels and feedback actuators that would enable a little robot}
   \ALIUSPlacedTextContent{71.080}{703.578}{456.481}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{table to traverse uneven surfaces (a useful endeavour that set me in good stead to}
   \ALIUSPlacedTextContent{71.080}{720.618}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{understand the notion of feedback, optimal control, and in later life, cybernetics).}
   \ALIUSPlacedTextContent{71.080}{737.658}{459.833}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The psychologist wanted to know how I came up with the idea. I somehow knew she}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -186,9 +191,9 @@
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (300.040bp,-71.080bp) {\includegraphics[width=218.400bp,height=270.720bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p002-b008.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (77.080bp,-71.800bp) {\includegraphics[width=213.360bp,height=269.280bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p002-b007.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (138.760bp,-355.480bp) {\includegraphics[width=318.000bp,height=400.320bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p002-b009.png}};
-  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Am I autistic?}
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Am I autistic?}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{46}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -198,7 +203,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Am I autistic?}
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Am I autistic?}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{47}
   \ALIUSPlacedTextContent{71.080}{70.938}{235.994}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{was more interested in me than robots}
   \ALIUSPlacedTextContent{310.932}{70.938}{31.355}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{per se}
@@ -206,24 +211,24 @@
   \ALIUSPlacedTextContent{71.080}{87.978}{456.468}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{happened, which I want to write down before I forget it: on walking to primary}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.616}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{school every day I had to pass the grammar school students waiting for the school}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.547}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{bus. I recall thinking: "one day, I want to be in that queue" and then, more}
-  \ALIUSPlacedTextContent{71.080}{138.858}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{poignantly, "I must remind myself about this moment when I am grown—so I do}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{poignantly, "I must remind myself about this moment when I am grownâ€”so I do}
   \ALIUSPlacedTextContent{71.080}{155.658}{362.308}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{not forget the insight, ambition and sophistication of childhood".}
   \ALIUSPlacedTextContent{71.080}{184.698}{456.567}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Throughout my education, my primary sources of self-esteem were largely drilling}
   \ALIUSPlacedTextContent{71.080}{201.738}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{down into an area or problem in a somewhat perfectionist fashion and deriving a}
-  \ALIUSPlacedTextContent{71.080}{218.538}{456.610}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{delightful sense of comfort in isolating the problem domain—that felt like my little}
+  \ALIUSPlacedTextContent{71.080}{218.538}{456.610}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{delightful sense of comfort in isolating the problem domainâ€”that felt like my little}
   \ALIUSPlacedTextContent{71.080}{235.578}{456.617}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{world. My teachers seemed to know this and used to play games with me. One of}
   \ALIUSPlacedTextContent{71.080}{252.618}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{these games (of which I was most proud) was to see if I could derive answers to A-}
-  \ALIUSPlacedTextContent{71.080}{269.418}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{level questions in mathematics—that were more parsimonious than the worked}
+  \ALIUSPlacedTextContent{71.080}{269.418}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{level questions in mathematicsâ€”that were more parsimonious than the worked}
   \ALIUSPlacedTextContent{71.080}{286.458}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{answers supplied by the examination boards. I recall being obsessed by mathematical}
   \ALIUSPlacedTextContent{71.080}{303.498}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{issues and enormously pleased by their resolution. One of my favorite achievements}
-  \ALIUSPlacedTextContent{71.080}{320.298}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{was being able to derive Schrödinger wave equation from scratch. My reward was to}
+  \ALIUSPlacedTextContent{71.080}{320.298}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{was being able to derive SchrÃ¶dinger wave equation from scratch. My reward was to}
   \ALIUSPlacedTextContent{71.080}{337.338}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{take the physics class while my physics teacher (Ged Proctor) amused himself in the}
   \ALIUSPlacedTextContent{71.080}{354.138}{443.017}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{stockroom (I don't know how, because his primary passion was Morris dancing).}
   \ALIUSPlacedTextContent{71.080}{383.178}{456.647}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I do not think I was really autistic; however, any unusual traits may have been}
   \ALIUSPlacedTextContent{71.080}{400.218}{456.520}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{compounded by my early schooling: my father was a civil (bridge) engineer during}
   \ALIUSPlacedTextContent{71.080}{417.018}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{an active period of motorway construction in the United Kingdom. This meant that}
   \ALIUSPlacedTextContent{71.080}{434.058}{456.440}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{we had to move around the country. By the age of 10, I had attended six schools, and}
-  \ALIUSPlacedTextContent{71.080}{451.098}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{had come to realize that the only constants in my life were my family—and the things}
+  \ALIUSPlacedTextContent{71.080}{451.098}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{had come to realize that the only constants in my life were my familyâ€”and the things}
   \ALIUSPlacedTextContent{71.080}{467.898}{87.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inside my head.}
   \ALIUSPlacedTextContent{71.080}{496.938}{456.451}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This background sets the scene for a series of vignettes that, in retrospect, trace a}
   \ALIUSPlacedTextContent{71.080}{513.978}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{clear path to the current formulations of the free energy principle. The woodlouse}
@@ -235,7 +240,7 @@
   \ALIUSPlacedTextContent{71.080}{581.658}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{selection; however, there was a more subtle aspect to the insight that speaks to}
   \ALIUSPlacedTextContent{71.080}{598.698}{456.508}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{second order selection. In other words, irrespective of the implicit gradient descent}
   \ALIUSPlacedTextContent{71.080}{615.498}{456.462}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in any optimization process (e.g., natural selection) a simpler mechanism can be in}
-  \ALIUSPlacedTextContent{71.080}{632.538}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{play —without any gradient destroying dynamics. This is simply the fast evacuation}
+  \ALIUSPlacedTextContent{71.080}{632.538}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{play â€”without any gradient destroying dynamics. This is simply the fast evacuation}
   \ALIUSPlacedTextContent{71.080}{649.578}{456.598}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of volatile, high-energy regimes of phase-space. In evolutionary thinking, this has}
   \ALIUSPlacedTextContent{71.080}{666.378}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{often been exemplified in terms of selection for selectability (e.g., the increased}
   \ALIUSPlacedTextContent{71.080}{683.418}{98.977}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mutation rate of}
@@ -243,8 +248,8 @@
   \ALIUSPlacedTextContent{226.697}{683.418}{300.918}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{unexposed to a volatile temperature environment).}
   \ALIUSPlacedTextContent{71.080}{700.458}{456.685}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Mathematically, this underwrites generic optimization schemes such as stochastic}
   \ALIUSPlacedTextContent{71.080}{717.258}{456.596}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{dynamic optimization. In later life, I often thought about trying to develop this idea}
-  \ALIUSPlacedTextContent{71.080}{734.298}{459.833}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in terms of meta-selection—and even ended up using it in the context of active}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{734.298}{459.833}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in terms of meta-selectionâ€”and even ended up using it in the context of active}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -258,9 +263,9 @@
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (307.960bp,-135.880bp) {\includegraphics[width=218.880bp,height=272.160bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p004-b006.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (307.960bp,-422.200bp) {\includegraphics[width=219.360bp,height=279.360bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p004-b010.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (67.240bp,-423.160bp) {\includegraphics[width=226.800bp,height=280.320bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p004-b007.png}};
-  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Am I autistic?}
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Am I autistic?}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{48}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -270,30 +275,30 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Am I autistic?}
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Am I autistic?}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{49}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inference; in the form of autovitiation (the destruction of unlikely fixed points by}
   \ALIUSPlacedTextContent{71.080}{87.978}{417.104}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{simply moving faster in regimes of high surprise or low probability density).}
   \ALIUSPlacedTextContent{71.080}{116.778}{456.420}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The translation of this sort of thinking into physics started, for me, in my late teens,}
   \ALIUSPlacedTextContent{71.080}{133.818}{456.674}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{when I became preoccupied with holistic explanations based on minimal}
-  \ALIUSPlacedTextContent{71.080}{150.858}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{assumptions. I recall spending hours thinking furiously in my bedroom—}
+  \ALIUSPlacedTextContent{71.080}{150.858}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{assumptions. I recall spending hours thinking furiously in my bedroomâ€”}
   \ALIUSPlacedTextContent{71.080}{167.658}{456.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{overlooking cherry blossoms in the front garden: I was convinced that there should}
   \ALIUSPlacedTextContent{71.080}{184.698}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{be a singular explanation for the shape of things, just starting from the premise that}
   \ALIUSPlacedTextContent{71.080}{201.738}{456.699}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{something existed. My best conceptualization of this was some abstract point in an}
   \ALIUSPlacedTextContent{71.080}{218.538}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{abstract space that, in later life, transpired to be a point attractor in a phase-space.}
   \ALIUSPlacedTextContent{71.080}{235.578}{456.531}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This style of thinking made it easy to understand dynamical systems theory in terms}
-  \ALIUSPlacedTextContent{71.080}{252.618}{456.478}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of attracting sets—and the distinction between different forms of attracting}
+  \ALIUSPlacedTextContent{71.080}{252.618}{456.478}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of attracting setsâ€”and the distinction between different forms of attracting}
   \ALIUSPlacedTextContent{71.080}{269.418}{63.442}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{manifolds.}
   \ALIUSPlacedTextContent{71.080}{298.458}{456.492}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The obsession to put things together came to a practical head in the summer}
   \ALIUSPlacedTextContent{71.080}{315.498}{456.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{holidays after a year of Medical Science Tripos studies at Cambridge University. I}
   \ALIUSPlacedTextContent{71.080}{332.298}{456.512}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{had, with deliberate intent, chosen psychology and physics to pursue for the}
   \ALIUSPlacedTextContent{71.080}{349.338}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{subsequent years of my undergraduate study. This meant that I had to catch up with}
-  \ALIUSPlacedTextContent{71.080}{366.138}{456.569}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the other physics students. I spent an absorbing holiday—to the exclusion of}
-  \ALIUSPlacedTextContent{71.080}{383.178}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{everything else—trying to get all of physics onto one page. I failed—but was able to}
+  \ALIUSPlacedTextContent{71.080}{366.138}{456.569}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the other physics students. I spent an absorbing holidayâ€”to the exclusion of}
+  \ALIUSPlacedTextContent{71.080}{383.178}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{everything elseâ€”trying to get all of physics onto one page. I failedâ€”but was able to}
   \ALIUSPlacedTextContent{71.080}{400.218}{456.581}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{condense quantum theory into one page (see Figure on the next page). I think that}
   \ALIUSPlacedTextContent{71.080}{417.018}{456.758}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{this was symptomatic of an obsessional drive to integration and simplification.}
   \ALIUSPlacedTextContent{71.080}{434.058}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Although I forgot nearly everything I had learned during this period, it meant I was}
-  \ALIUSPlacedTextContent{71.080}{451.098}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{not intimidated when taking up these themes in later life—largely by foraging in}
+  \ALIUSPlacedTextContent{71.080}{451.098}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{not intimidated when taking up these themes in later lifeâ€”largely by foraging in}
   \ALIUSPlacedTextContent{71.080}{467.898}{63.260}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Wikipedia.}
   \ALIUSPlacedTextContent{71.080}{496.938}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Another memorable episode of intense thinking occurred when on a Christmas}
   \ALIUSPlacedTextContent{71.080}{513.978}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{break from University, thinking earnestly in the early hours over a nourishing coal}
@@ -305,12 +310,12 @@
   \ALIUSPlacedTextContent{71.080}{615.498}{456.517}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{peaceful distraction from my job in musing on these issues, while working in a}
   \ALIUSPlacedTextContent{71.080}{632.538}{457.647}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{therapeutic community of chronic schizophrenics in an old-style Victorian asylum.}
   \ALIUSPlacedTextContent{71.080}{661.578}{456.701}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I had, at this point, concluded that statistical invariance (i.e., correlations) had to be}
-  \ALIUSPlacedTextContent{71.080}{678.378}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{transcribed into the physics of our brains—in order for them to possess an attracting}
+  \ALIUSPlacedTextContent{71.080}{678.378}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{transcribed into the physics of our brainsâ€”in order for them to possess an attracting}
   \ALIUSPlacedTextContent{71.080}{695.418}{456.669}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{set. I found this idea so compelling that I spent an entire Saturday at Blackwell's}
   \ALIUSPlacedTextContent{71.080}{712.458}{456.514}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{bookshop in Oxford (where I was training), scouring medical and mathematics}
   \ALIUSPlacedTextContent{71.080}{729.258}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{books for related ideas (this was before the World Wide Web and Wikipedia). After}
   \ALIUSPlacedTextContent{71.080}{746.298}{459.833}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about three hours searching, I found references to the writings of Hebb and}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -321,9 +326,9 @@
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (71.080bp,-71.080bp) {\includegraphics[width=455.520bp,height=694.560bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p006-b006.png}};
-  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Am I autistic?}
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Am I autistic?}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{50}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -337,9 +342,9 @@
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (307.000bp,-131.080bp) {\includegraphics[width=221.040bp,height=281.520bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p007-b006.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (307.000bp,-433.240bp) {\includegraphics[width=223.200bp,height=273.600bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p007-b008.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (67.240bp,-433.720bp) {\includegraphics[width=222.000bp,height=273.360bp]{Interviews/Issue02/Friston/assets/alius-extracted-image-p007-b007.png}};
-  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Am I autistic?}
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Am I autistic?}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{51}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -349,11 +354,11 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston – Am I autistic?}
+  \ALIUSPlacedTextContent{71.080}{35.460}{119.214}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{K. Friston â€“ Am I autistic?}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{52}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{surprised myself with an ambivalent reaction: intense pleasure that the idea was}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{valid and intense displeasure I had wasted several years on something that was}
-  \ALIUSPlacedTextContent{71.080}{104.778}{456.583}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{already known. I remember trying to work out how old Hebb was—and whether I}
+  \ALIUSPlacedTextContent{71.080}{104.778}{456.583}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{already known. I remember trying to work out how old Hebb wasâ€”and whether I}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.512}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{could have ever met him. From that point on, I waited patiently until I could get}
   \ALIUSPlacedTextContent{71.080}{138.858}{456.572}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{into research proper, at around the age of 28. The next part of the story, from my}
   \ALIUSPlacedTextContent{71.080}{155.658}{239.237}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{perspective, can be found in (\ALIUSCitationLink{aliusref-friston-friston-2012}{Friston, 2012}).}
@@ -362,7 +367,7 @@
   \ALIUSPlacedTextContent{429.595}{247.338}{77.369}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{Neuroimage, 62}
   \ALIUSPlacedTextContent{506.992}{247.338}{20.632}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(2),}
   \ALIUSPlacedTextContent{71.080}{264.138}{253.812}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{1230-1233. doi: 10.1016/j.neuroimage.2011.10.004}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

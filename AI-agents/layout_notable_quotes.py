@@ -34,7 +34,7 @@ PAGE_BOTTOM = 760.0
 PAGE_HEIGHT = PAGE_BOTTOM - PAGE_TOP
 FOOTER_TOP = 780.0
 HEADER_BOTTOM = 60.0
-MIN_GAP_AFTER_QUOTE = 28.0
+MIN_GAP_AFTER_QUOTE = 16.5
 MAX_ALLOWED_DEAD_SPACE = 95.0
 PAGE_ROW_TOP = PAGE_TOP
 MIN_ROW_GAP = 16.5
@@ -211,6 +211,18 @@ def next_movable_span_after(spans: list[Span], idx: int) -> Span | None:
         if span.idx > idx and is_movable_content(span):
             return span
     return None
+
+
+def previous_movable_span_before(spans: list[Span], quote: Quote) -> Span | None:
+    previous = [
+        span
+        for span in spans
+        if span.page == quote.page
+        and span.idx < quote.idx
+        and is_movable_content(span)
+        and span.text.strip() not in {r"\ALIUSPullQuoteOpen", r"\ALIUSPullQuoteClose"}
+    ]
+    return max(previous, key=lambda span: (span.y, span.idx), default=None)
 
 
 def previous_question_before(spans: list[Span], idx: int) -> Span | None:
@@ -438,6 +450,57 @@ def normalize_row_flow_after_quote(lines: list[str], quote: Quote) -> tuple[list
     return insert_moved_lines_by_page(lines, remove_indices, moved), changed_rows
 
 
+def compact_local_spacing_around_quote(lines: list[str], quote: Quote) -> tuple[list[str], int]:
+    """Remove same-page dead air around a semantic notable quote.
+
+    Notable quotes should sit like a paragraph-level insert: one normal row of
+    breathing room after the amplified answer material, and one normal row
+    before the following text. This pass avoids hand-coded y coordinates by
+    deriving both edges from surrounding movable rows.
+    """
+    spans = parse_spans(lines)
+    current_quote = next((item for item in parse_quotes(lines) if item.idx == quote.idx), quote)
+    previous = previous_movable_span_before(spans, current_quote)
+    next_span = next_movable_span_after(spans, current_quote.idx)
+    if not previous or not next_span or next_span.page != current_quote.page:
+        return lines, 0
+
+    previous_bottom = previous.y + line_lead(lines, previous.idx)
+    desired_quote_y = previous_bottom + MIN_ROW_GAP
+    changed_rows = 0
+    if current_quote.y - desired_quote_y > 4.0:
+        lines[current_quote.idx] = replace_second_arg_y(lines[current_quote.idx], desired_quote_y)
+        changed_rows += 1
+        current_quote = Quote(
+            idx=current_quote.idx,
+            page=current_quote.page,
+            x=current_quote.x,
+            y=desired_quote_y,
+            width=current_quote.width,
+            text=current_quote.text,
+            quote_id=current_quote.quote_id,
+        )
+
+    target_next_y = current_quote.y + quote_height(current_quote) + MIN_ROW_GAP
+    rows = [row for row in movable_rows_after_quote(lines, current_quote.idx) if row.page == current_quote.page]
+    if not rows or rows[0].y - target_next_y <= 4.0:
+        return lines, changed_rows
+
+    placements: dict[int, float] = {}
+    cursor = target_next_y
+    for row in rows:
+        new_y = min(row.y, max(cursor, PAGE_ROW_TOP))
+        if abs(new_y - row.y) > 0.01:
+            changed_rows += 1
+            for idx in row.indices:
+                placements[idx] = new_y
+        cursor = new_y + max(MIN_ROW_GAP, row.lead)
+
+    for idx, new_y in placements.items():
+        lines[idx] = replace_second_arg_y(lines[idx], new_y)
+    return lines, changed_rows
+
+
 def downstream_row_problems(lines: list[str], quote: Quote) -> list[str]:
     rows = movable_rows_after_quote(lines, quote.idx)
     problems: list[str] = []
@@ -500,6 +563,19 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
         if not repaired_this_round:
             break
 
+    local_spacing_repairs: list[dict[str, Any]] = []
+    while True:
+        quotes = parse_quotes(lines)
+        repaired_this_round = False
+        for quote in quotes:
+            lines, changed_rows = compact_local_spacing_around_quote(lines, quote)
+            if changed_rows:
+                local_spacing_repairs.append({"quote_id": quote.quote_id, "changed_rows": changed_rows})
+                repaired_this_round = True
+                break
+        if not repaired_this_round:
+            break
+
     spans = parse_spans(lines)
     quotes = parse_quotes(lines)
     quote_reports: list[dict[str, Any]] = []
@@ -542,6 +618,7 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
         "metadata_blocks_added": metadata_changes,
         "reflow_shifts": reflow_shifts,
         "row_flow_repairs": row_flow_repairs,
+        "local_spacing_repairs": local_spacing_repairs,
         "problems": problems,
         "changed": new_text != original,
         "ok": not problems,
@@ -563,6 +640,7 @@ def main() -> int:
         "changed_files": sum(1 for item in per_file if item["changed"]),
         "reflowed_quotes": sum(len(item["reflow_shifts"]) for item in per_file),
         "row_flow_repaired_quotes": sum(len(item["row_flow_repairs"]) for item in per_file),
+        "local_spacing_repaired_quotes": sum(len(item["local_spacing_repairs"]) for item in per_file),
         "files": per_file,
         "ok": all(item["ok"] for item in per_file),
     }

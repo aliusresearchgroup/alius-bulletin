@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -128,17 +133,17 @@
   \fill[ALIUSCFFFFFF] (397.083bp,-219.544bp) rectangle ++(96.894bp,-10.809bp);
   \ALIUSPlacedTextContent{90.076}{72.075}{415.014}{ALIUSC000000}{\ALIUSFontLatoRegular}{20.012}{An interdisciplinary journey into consciousness}
   \ALIUSPlacedTextContent{90.076}{99.699}{79.337}{ALIUSC000000}{\ALIUSFontLatoRegular}{20.012}{research}
-  \ALIUSPlacedTextContent{90.076}{139.332}{287.439}{ALIUSC000000}{\ALIUSFontLatoLight}{20.012}{An interview with Juan González}
-  \ALIUSPlacedTextContent{397.083}{195.534}{72.050}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.004}{Juan González}
+  \ALIUSPlacedTextContent{90.076}{139.332}{287.439}{ALIUSC000000}{\ALIUSFontLatoLight}{20.012}{An interview with Juan GonzÃ¡lez}
+  \ALIUSPlacedTextContent{397.083}{195.534}{72.050}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.004}{Juan GonzÃ¡lez}
   \ALIUSPlacedTextContent{397.083}{208.740}{80.311}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.008}{jgonzalez@uaem.mx}
   \ALIUSPlacedTextContent{90.076}{213.488}{35.968}{ALIUSC000000}{\ALIUSFontLatoLight}{13.008}{By Ma}
   \ALIUSPlacedTextContent{125.972}{213.488}{79.351}{ALIUSC000000}{\ALIUSFontLatoLight}{13.008}{'hieu Koroma}
   \ALIUSPlacedTextContent{397.083}{219.549}{99.344}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{Morelos State University,}
   \ALIUSPlacedTextContent{397.083}{230.358}{80.442}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{Cuernavaca, Mexico}
   % ALIUS normalized citation panel begin
-  % ALIUS normalized citation panel text: Cite as: González, J., Koroma, M. (2023). An interdisciplinary journey into consciousness research. An interview with Juan González by Ma 'hieu Koroma, ALIUS Bulle
+  % ALIUS normalized citation panel text: Cite as: GonzÃ¡lez, J., Koroma, M. (2023). An interdisciplinary journey into consciousness research. An interview with Juan GonzÃ¡lez by Ma 'hieu Koroma, ALIUS Bulle
   \fill[white] (88.576bp,-229.442bp) rectangle ++(248.000bp,-51.300bp);
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (90.076bp,-231.442bp) {\begin{minipage}{245.000bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: González, J., Koroma, M. (2023). An interdisciplinary journey into consciousness research. An interview with Juan González by Ma 'hieu Koroma, ALIUS Bulle \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.5281/zenodo.7674054}{https://doi.org/10.5281/zenodo.7674054}}}\par}\end{minipage}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (90.076bp,-231.442bp) {\begin{minipage}{245.000bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: GonzÃ¡lez, J., Koroma, M. (2023). An interdisciplinary journey into consciousness research. An interview with Juan GonzÃ¡lez by Ma 'hieu Koroma, ALIUS Bulle \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.5281/zenodo.7674054}{https://doi.org/10.5281/zenodo.7674054}}}\par}\end{minipage}};
   % ALIUS normalized citation panel end
   \ALIUSPlacedTextContent{397.083}{251.982}{15.521}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.004}{Ma}
   \ALIUSPlacedTextContent{412.533}{251.982}{68.710}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.004}{'hieu Koroma}
@@ -148,10 +153,10 @@
   \ALIUSPlacedTextContent{379.517}{255.462}{4.913}{ALIUSC000000}{\ALIUSFontLatoLight}{10.006}{,}
   \ALIUSPlacedTextContent{397.083}{267.163}{11.611}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.008}{ma}
   \ALIUSPlacedTextContent{408.644}{267.163}{95.349}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.008}{'hieu.koroma@uliege.be}
-  \ALIUSPlacedTextContent{397.083}{278.398}{76.888}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{University of Liège,}
-  \ALIUSPlacedTextContent{397.083}{289.207}{58.477}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{Liège, Belgium}
+  \ALIUSPlacedTextContent{397.083}{278.398}{76.888}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{University of LiÃ¨ge,}
+  \ALIUSPlacedTextContent{397.083}{289.207}{58.477}{ALIUSC000000}{\ALIUSFontLatoLight}{9.008}{LiÃ¨ge, Belgium}
   \ALIUSPlacedTextContent{90.076}{320.111}{55.628}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.007}{Abstract}
-  \ALIUSPlacedTextContent{90.076}{351.451}{418.202}{ALIUSC000000}{\ALIUSFontLatoLight}{12.010}{In  this  interview,  Pr.  González  and  Dr.  Koroma  discuss  the  purpose  and  the}
+  \ALIUSPlacedTextContent{90.076}{351.451}{418.202}{ALIUSC000000}{\ALIUSFontLatoLight}{12.010}{In  this  interview,  Pr.  GonzÃ¡lez  and  Dr.  Koroma  discuss  the  purpose  and  the}
   \ALIUSPlacedTextContent{90.076}{365.863}{418.875}{ALIUSC000000}{\ALIUSFontLatoLight}{12.010}{challenges  of  an  interdisciplinary  study  of  consciousness.  They  do  so  by  first}
   \ALIUSPlacedTextContent{90.076}{380.275}{322.915}{ALIUSC000000}{\ALIUSFontLatoLight}{12.010}{tracing  back  the  history  of  ALIUS,  a  15  years-old  interna}
   \ALIUSPlacedTextContent{412.924}{380.275}{28.770}{ALIUSC000000}{\ALIUSFontLatoLight}{12.010}{tional}
@@ -190,13 +195,13 @@
   \ALIUSPlacedTextContent{90.076}{618.306}{49.284}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{it begin?}
   \ALIUSPlacedTextContent{90.076}{647.588}{418.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{First  I  want  to  thank  you,  Matthieu,  for  this  opportunity  to  express  myself,}
   \ALIUSPlacedTextContent{90.076}{667.101}{418.353}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{and  to  ALIUS  as  well.  I  would  say  ALIUS  dates  back  to  2006.  At  that  time,  I}
-  \ALIUSPlacedTextContent{90.076}{686.614}{418.365}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{was  having  my  sabbatical  year  in  Paris  and  was  invited  by  Jérôme  Dokic  at}
-  \ALIUSPlacedTextContent{90.076}{706.128}{418.546}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{the  École  des  Hautes  Études  en  Sciences  Sociales  (EHESS)  to  deliver  a  series}
+  \ALIUSPlacedTextContent{90.076}{686.614}{418.365}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{was  having  my  sabbatical  year  in  Paris  and  was  invited  by  JÃ©rÃ´me  Dokic  at}
+  \ALIUSPlacedTextContent{90.076}{706.128}{418.546}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{the  Ã‰cole  des  Hautes  Ã‰tudes  en  Sciences  Sociales  (EHESS)  to  deliver  a  series}
   \ALIUSPlacedTextContent{90.076}{725.641}{278.485}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{of  seminars  there  for  the  2005-2006  school  year.}
   \ALIUSPlacedTextContent{365.283}{725.641}{20.114}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{The}
   \ALIUSPlacedTextContent{385.397}{725.641}{123.407}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{seminars  delved  into}
   \ALIUSPlacedTextContent{90.076}{745.155}{418.514}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{the  subject  of  hallucinations,  in  the  context  of  philosophy  and  cognitive}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -205,7 +210,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{500.872}{37.291}{7.638}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{2}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.557}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{science  during  which  I  met  Alexandre  Lehmann,  a  young  and  brilliant}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.750}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{researcher  who  attended  those  seminars  and  who  was  very  interested  in  the}
@@ -239,7 +244,7 @@
   \ALIUSPlacedTextContent{225.210}{376.791}{12.690}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{fit}
   \ALIUSPlacedTextContent{237.900}{376.791}{270.981}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{organization.  Over  the  years,  we  got  a  great}
   \ALIUSPlacedTextContent{90.076}{396.305}{359.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{response  as  people  from  University  Paris  5,  Institut  Jean  Nicod  (I}
-  \ALIUSPlacedTextContent{450.047}{396.305}{22.103}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{ãN),}
+  \ALIUSPlacedTextContent{450.047}{396.305}{22.103}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Ã£N),}
   \ALIUSPlacedTextContent{472.150}{396.305}{36.538}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Ecole}
   \ALIUSPlacedTextContent{90.076}{415.818}{418.805}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Centrale,  University  Paris  6,  the  Relais  d'Information  sur  les  Sciences  de  la}
   \ALIUSPlacedTextContent{90.076}{435.332}{418.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Cognition  (RISC)  and  other  institutions  got  involved.  We  started  growing}
@@ -275,7 +280,7 @@
   \ALIUSPlacedTextContent{286.043}{728.034}{222.906}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{organized  by  Guillaume  and  Martin,  an}
   \ALIUSPlacedTextContent{90.076}{747.547}{167.451}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{event that started to already re}
   \ALIUSPlacedTextContent{257.526}{747.547}{192.509}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{flect Martin's pledge, for the better.}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -284,7 +289,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{501.028}{37.291}{7.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{3}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{In  the  meantime,  ARTHEMOC  became  ARTEMOC  (without  the  H),}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.532}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{because  the  idea  was  not  to  emphasize  hallucinations  in  particular  anymore,}
@@ -321,12 +326,12 @@
   \ALIUSPlacedTextContent{90.076}{364.781}{418.823}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{hallucinations.  I  am  very  happy  to  see  that  yourself  and  the  rest  have  done  a}
   \ALIUSPlacedTextContent{90.076}{384.295}{418.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{great  job  by  bringing  in  very  professional  and  capable  people;  I  think}
   \ALIUSPlacedTextContent{90.076}{403.808}{103.678}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{ALIUS is thriving.}
-  \ALIUSPlacedTextContent{413.441}{442.835}{14.903}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{—}
+  \ALIUSPlacedTextContent{413.441}{442.835}{14.903}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{â€”}
   \ALIUSPlacedTextContent{90.076}{443.915}{246.104}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{So  do  you  think  that  some  of  the  early  objec}
   \ALIUSPlacedTextContent{336.174}{443.915}{24.969}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{tives}
   \ALIUSPlacedTextContent{361.143}{443.915}{55.372}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{of  ALIUS}
   \ALIUSPlacedTextContent{425.066}{443.915}{83.458}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{for  instance,  to}
-  \ALIUSPlacedTextContent{468.819}{462.348}{14.903}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{—}
+  \ALIUSPlacedTextContent{468.819}{462.348}{14.903}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{â€”}
   \ALIUSPlacedTextContent{90.076}{463.429}{232.623}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{promote  more  research  dedicated  to  alterna}
   \ALIUSPlacedTextContent{322.620}{463.429}{19.769}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{tive}
   \ALIUSPlacedTextContent{342.389}{463.429}{129.505}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.010}{states  of  consciousness}
@@ -350,7 +355,7 @@
   \ALIUSPlacedTextContent{90.076}{683.128}{299.590}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{should not expect major breakthroughs in this respect.}
   \ALIUSPlacedTextContent{90.076}{714.651}{418.705}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Fortunately,  another  good  decision  was  to  open  ALIUS  internationally.  You}
   \ALIUSPlacedTextContent{90.076}{734.165}{418.519}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{see,  ARTHEMOC  and  ARTEMOC  kind  of  took  pride,  to  some  extent,  in}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -359,7 +364,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{500.283}{37.291}{8.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{4}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.822}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{being  special  and  present  in  the  French  scene,  as  we  tried  to  do  everything}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.891}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{in  French  with  some  things  in  English  now  and  then.  With  ALIUS,  and  that}
@@ -407,7 +412,7 @@
   \ALIUSPlacedTextContent{90.076}{735.789}{224.569}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{very  interesting  and  actually  passionate}
   \ALIUSPlacedTextContent{311.367}{735.789}{54.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{questions.}
   \ALIUSPlacedTextContent{365.559}{735.789}{143.143}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Both  in  cognitive  science}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -416,7 +421,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{500.788}{37.291}{7.723}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{5}
   \ALIUSPlacedTextContent{90.076}{72.079}{258.417}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{and  consciousness  research  we  have  indeed  di}
   \ALIUSPlacedTextContent{348.492}{72.079}{36.740}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{fferent}
@@ -473,7 +478,7 @@
   \ALIUSPlacedTextContent{190.448}{696.510}{318.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{a  bit  of  your  own  disciplinary  identity  in  order  to  reach  a}
   \ALIUSPlacedTextContent{90.076}{716.024}{418.211}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{middle  ground,  and  this  is  challenging.  It  has  to  do  with  personal}
   \ALIUSPlacedTextContent{90.076}{735.537}{418.394}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{adaptability  and  cognitive  plasticity,  and  with  the  interest  or  motivation}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -484,7 +489,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
   \fill[ALIUSC595959] (120.104bp,-289.510bp) rectangle ++(11.744bp,-11.796bp);
   \fill[ALIUSC595959] (458.617bp,-332.590bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{500.115}{37.291}{8.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{6}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.462}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{you  may  or  may  not  have  to  reach  for  others  out  there.  In  this  third  level,}
   \ALIUSPlacedTextContent{90.076}{91.593}{25.495}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{the}
@@ -561,7 +566,7 @@
   \ALIUSPlacedTextContent{317.705}{733.196}{30.759}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{There}
   \ALIUSPlacedTextContent{348.463}{733.196}{159.883}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{are,  for  instance,  top-down}
   \ALIUSPlacedTextContent{90.076}{752.709}{418.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{institutional  limits.  We  have  all  experienced  a  paper  being  rejected  by}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -570,7 +575,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{500.548}{37.291}{7.963}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{7}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.836}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{editors  saying  that  it  is  not  for  their  journals,  or  we  have  seen  university}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.680}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{departments  with  people  who  feel  uneasy  about  their  institutional  or}
@@ -617,7 +622,7 @@
   \ALIUSPlacedTextContent{90.076}{618.456}{21.472}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{stru}
   \ALIUSPlacedTextContent{111.548}{618.456}{33.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{filing}
   \ALIUSPlacedTextContent{144.786}{618.456}{92.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{to  provide  a  de}
-  \ALIUSPlacedTextContent{237.187}{618.456}{75.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{finition—that}
+  \ALIUSPlacedTextContent{237.187}{618.456}{75.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{finitionâ€”that}
   \ALIUSPlacedTextContent{312.669}{618.456}{196.173}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{I  am  not  happy  with  just  as  I  am}
   \ALIUSPlacedTextContent{90.076}{637.970}{161.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{not  happy  with  my  own  de}
   \ALIUSPlacedTextContent{251.389}{637.970}{41.530}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{finition}
@@ -634,7 +639,7 @@
   \ALIUSPlacedTextContent{90.076}{748.454}{25.993}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{ques}
   \ALIUSPlacedTextContent{116.068}{748.454}{38.254}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{tioning}
   \ALIUSPlacedTextContent{154.322}{748.454}{354.431}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{myself  what  qualifies  as  a  "state"  of  consciousness,  especially  in}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -643,7 +648,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{499.827}{37.291}{8.683}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{8}
   \ALIUSPlacedTextContent{90.076}{72.072}{262.643}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{psychedelic  states,  where  you  have  such  a  plas}
   \ALIUSPlacedTextContent{352.719}{72.072}{27.612}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{ticity}
@@ -698,7 +703,7 @@
   \ALIUSPlacedTextContent{90.076}{683.009}{418.707}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{How  can  psychedelics  then  inform  on  the  neurobiological  and  sociological}
   \ALIUSPlacedTextContent{90.076}{700.273}{223.048}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{constraints that make a conscious state?}
   \ALIUSPlacedTextContent{90.076}{734.810}{418.684}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{A  very  important  part  that  philosophers,  including  myself,  tend  to  forget}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -709,7 +714,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
   \fill[ALIUSC595959] (99.086bp,-310.524bp) rectangle ++(11.744bp,-11.796bp);
   \fill[ALIUSC595959] (481.887bp,-414.556bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{500.115}{37.291}{8.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{9}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{when  it  comes  to  cognition  is  biology.  We  need  to  know  the  most  we  can}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.657}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{about  our  cognitive  system,  including  the  brain  and  the  nervous  system,  to}
@@ -767,7 +772,7 @@
   \ALIUSPlacedTextContent{90.076}{698.508}{418.264}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{or  riding  a  roller  coaster.  It  is  pretty  much  an  anthropological  fact  that,  at}
   \ALIUSPlacedTextContent{90.076}{718.022}{418.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{some  point,  we  need  to  explore  and  experiment  with  our  own  consciousness.}
   \ALIUSPlacedTextContent{90.076}{737.535}{418.715}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Even  other  animals  do  change  drastically  their  behavior  by  intoxicating}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -776,7 +781,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{495.984}{37.291}{12.526}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{10}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.406}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{themselves  through  plants  or  other  means.  I  think  that  kind  of  need  is}
   \ALIUSPlacedTextContent{90.076}{91.593}{60.646}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{universal.}
@@ -842,7 +847,7 @@
   \ALIUSPlacedTextContent{90.076}{735.537}{21.001}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{to}
   \ALIUSPlacedTextContent{107.799}{735.537}{22.369}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{find}
   \ALIUSPlacedTextContent{130.168}{735.537}{378.738}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{their  place  and  balance  in  a  individualistic  world,  where  success,}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -851,7 +856,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{497.725}{37.291}{10.785}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{11}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.441}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{money  and  competition  are  paramount  values,  where  healthy  habits  are}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.536}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{hard  to  implement  and  maintain,  where  social  media,  video  games,  virtual}
@@ -913,7 +918,7 @@
   \ALIUSPlacedTextContent{90.076}{707.028}{418.220}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{broad  minded  and  you  reckon  that  science  does  not  and  cannot  encompass}
   \ALIUSPlacedTextContent{90.076}{726.541}{418.392}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{our  full  understanding  of  reality,  then  I  think  that  science  and  scientists  can}
   \ALIUSPlacedTextContent{90.076}{746.055}{418.803}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{do  a  great  job  in  building,  validating  or  reinforcing  connections  to  other}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -924,7 +929,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
   \fill[ALIUSC595959] (93.081bp,-524.149bp) rectangle ++(11.744bp,-11.796bp);
   \fill[ALIUSC595959] (480.386bp,-606.538bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{496.884}{37.291}{11.626}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{12}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{worldviews.  But  if  you  are  very  limited  in  your  outlook  on  reality,  and  either}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{implicitly  or  explicitly  dismiss  other  people's  way  of  looking  at  the  world,}
@@ -986,7 +991,7 @@
   \ALIUSPlacedTextContent{365.982}{730.304}{20.584}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{tive}
   \ALIUSPlacedTextContent{386.566}{730.304}{122.002}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{approaches  of  how}
   \ALIUSPlacedTextContent{90.076}{747.569}{228.350}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{people live and make sense of the world?}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -995,7 +1000,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{497.041}{37.291}{11.470}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{13}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.831}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Like  I  said,  I  think  there  is  a  great  potential  gain  in  the  collaboration}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.874}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{between  science,  epistemology  and  phenomenology.  As  a  personal  anecdote,}
@@ -1043,7 +1048,7 @@
   \ALIUSPlacedTextContent{160.487}{540.402}{214.540}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{of  consciousness  things  appear  in  a  di}
   \ALIUSPlacedTextContent{375.027}{540.402}{36.740}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{fferent}
   \ALIUSPlacedTextContent{411.767}{540.402}{96.461}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{light.  Of  course,}
-  \ALIUSPlacedTextContent{90.076}{559.916}{418.714}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{it  is  not  an  illusion  nor  a  hallucination—that  is  another  typical  way  to}
+  \ALIUSPlacedTextContent{90.076}{559.916}{418.714}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{it  is  not  an  illusion  nor  a  hallucinationâ€”that  is  another  typical  way  to}
   \ALIUSPlacedTextContent{90.076}{579.429}{418.815}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{dismiss  it.  First-hand  experience,  like  Francisco  Varela  would  say,  is}
   \ALIUSPlacedTextContent{90.076}{598.943}{306.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{cognitively paramount and not replaceable by anything.}
   \ALIUSPlacedTextContent{90.076}{637.970}{418.693}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{We  have  not  talked  about  Shamanism,  and  I  know  that  in  Europe}
@@ -1054,7 +1059,7 @@
   \ALIUSPlacedTextContent{90.076}{735.537}{148.128}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{an  experiential  way  too.}
   \ALIUSPlacedTextContent{234.926}{735.537}{20.114}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{The}
   \ALIUSPlacedTextContent{255.039}{735.537}{253.217}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{credo  of  the  phenomenologists?  First-hand}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1067,7 +1072,7 @@
   \fill[ALIUSC595959] (489.393bp,-177.233bp) rectangle ++(11.720bp,-11.750bp);
   \fill[ALIUSC595959] (114.099bp,-527.754bp) rectangle ++(11.744bp,-11.796bp);
   \fill[ALIUSC595959] (466.124bp,-569.613bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{496.296}{37.291}{12.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{14}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{experience.  Experience  pervades  everything  and  is  at  the  center  of}
   \ALIUSPlacedTextContent{90.076}{91.593}{395.887}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{everything we think or feel. We need to put experience in its right place.}
@@ -1125,7 +1130,7 @@
   \ALIUSPlacedTextContent{169.804}{744.275}{135.935}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{tion and methodologies (}
   \ALIUSPlacedTextContent{305.739}{744.275}{23.623}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.505}{e.g.,}
   \ALIUSPlacedTextContent{329.637}{744.275}{108.266}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{Kagan  et al., 2022).}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1134,7 +1139,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{496.800}{37.291}{11.710}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{15}
   \ALIUSPlacedTextContent{90.076}{72.072}{15.988}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{Un}
   \ALIUSPlacedTextContent{105.976}{72.072}{10.655}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{til}
@@ -1204,7 +1209,7 @@
   \ALIUSPlacedTextContent{90.076}{736.331}{149.575}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{have  to  cook  it  in  a  di}
   \ALIUSPlacedTextContent{239.651}{736.331}{36.740}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{fferent}
   \ALIUSPlacedTextContent{276.390}{736.331}{232.514}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{pot.  When  you  are  in  a  shamanistic}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1213,11 +1218,11 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{496.128}{37.291}{12.382}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{16}
   \ALIUSPlacedTextContent{90.076}{72.079}{418.779}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{environment,  a  ceremony,  or  in  a  ritual,  you  may  feel  the  spirit  of  Peyote,  or}
   \ALIUSPlacedTextContent{90.076}{91.593}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{Ayahuasca,  or  the  water,  for  instance.  You  are  able  to  sort  of  communicate}
-  \ALIUSPlacedTextContent{90.076}{111.106}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{with  it—in  the  sense  of  a  spiritual  communion  with  that  spirit—and  feel}
+  \ALIUSPlacedTextContent{90.076}{111.106}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{with  itâ€”in  the  sense  of  a  spiritual  communion  with  that  spiritâ€”and  feel}
   \ALIUSPlacedTextContent{90.076}{130.620}{418.507}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{yourself  possessed  by,  or  connected  to,  its  "personality"  or  "wisdom"  or}
   \ALIUSPlacedTextContent{90.076}{150.133}{418.195}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{"greatness"  (it  is  hard  to  put  into  words  this  type  of  experience.  What}
   \ALIUSPlacedTextContent{90.076}{169.646}{418.874}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{cannot  be  said,  we  should  indeed  pass  over  in  silence,  as  Wittgenstein  wisely}
@@ -1258,7 +1263,7 @@
   \ALIUSPlacedTextContent{90.076}{702.522}{92.516}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{would give an en}
   \ALIUSPlacedTextContent{182.504}{702.522}{243.263}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.505}{tirely new way to look about consciousness?}
   \ALIUSPlacedTextContent{90.076}{739.308}{405.523}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{The problem I see with consciousness is that oftentimes we tend to reify it.}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1269,7 +1274,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
   \fill[ALIUSC595959] (105.842bp,-506.130bp) rectangle ++(11.744bp,-11.796bp);
   \fill[ALIUSC595959] (475.882bp,-568.706bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{496.560}{37.291}{11.950}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{17}
   \ALIUSPlacedTextContent{90.076}{72.079}{30.750}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{We  o}
   \ALIUSPlacedTextContent{120.825}{72.079}{21.682}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{ften}
@@ -1314,7 +1319,7 @@
   \ALIUSPlacedTextContent{204.677}{673.770}{151.951}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Journal of Consciousness Studies}
   \ALIUSPlacedTextContent{353.584}{673.770}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
   \ALIUSPlacedTextContent{359.516}{673.770}{13.490}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{28}
-  \ALIUSPlacedTextContent{369.961}{673.770}{72.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(7–8),  9-17(9).}
+  \ALIUSPlacedTextContent{369.961}{673.770}{72.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(7â€“8),  9-17(9).}
   \ALIUSPlacedTextContent{90.076}{710.009}{393.569}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-gonzalez-koroma-friston-wiese-2020}Friston, K. J., Wiese, W., \& Hobson, J. A. (2020). Sentience and the Origins of}
   \ALIUSPlacedTextContent{126.106}{728.129}{320.657}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Consciousness: From Cartesian Duality to Markovian Monism.}
   \ALIUSPlacedTextContent{446.763}{728.129}{40.040}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Entropy}
@@ -1322,7 +1327,7 @@
   \ALIUSPlacedTextContent{126.106}{746.248}{12.488}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{22}
   \ALIUSPlacedTextContent{135.550}{746.248}{40.586}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(5), 516.}
   \ALIUSPlacedTextContent{176.136}{746.248}{169.929}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.3390/e22050516}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1338,7 +1343,7 @@
   \fill[ALIUSCFFFFFF] (90.076bp,-561.291bp) rectangle ++(414.897bp,-15.756bp);
   \fill[ALIUSCFFFFFF] (126.106bp,-579.411bp) rectangle ++(379.507bp,-15.756bp);
   \fill[ALIUSCFFFFFF] (126.106bp,-597.530bp) rectangle ++(222.325bp,-15.756bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{González – An interdisciplinary journey into consciousness research}
+  \ALIUSPlacedTextContent{90.076}{35.448}{374.722}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{GonzÃ¡lez â€“ An interdisciplinary journey into consciousness research}
   \ALIUSPlacedTextContent{495.840}{37.291}{12.671}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{18}
   \ALIUSPlacedTextContent{90.076}{72.076}{413.667}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-gonzalez-koroma-kagan-kitchen-2022}Kagan, B. J., Kitchen, A. C., Tran, N. T., Habibollahi, F., Khajehnejad, M., Parker,}
   \ALIUSPlacedTextContent{126.106}{90.195}{370.739}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{B. J., Bhat, A., Rollo, B., Razi, A., \& Friston, K. J. (2022). In vitro neurons}
@@ -1376,7 +1381,7 @@
   \ALIUSPlacedTextContent{339.720}{398.229}{151.951}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Journal  of Consciousness Studies}
   \ALIUSPlacedTextContent{488.627}{398.229}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
   \ALIUSPlacedTextContent{126.106}{416.349}{13.230}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{29}
-  \ALIUSPlacedTextContent{136.291}{416.349}{64.444}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(3), 229–265.}
+  \ALIUSPlacedTextContent{136.291}{416.349}{64.444}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(3), 229â€“265.}
   \ALIUSPlacedTextContent{200.735}{416.349}{207.991}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.53765/20512201.29.3.229}
   \ALIUSPlacedTextContent{90.076}{452.588}{413.160}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-gonzalez-koroma-timmermann-bauer-2022}Timmermann, C., Bauer, P. R., Gosseries, O., Vanhaudenhuyse, A., Vollenweider,}
   \ALIUSPlacedTextContent{126.106}{470.708}{305.880}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{F., Laureys, S., Singer, T., Antonova, E., \& Lutz, A. (2022). A}
@@ -1394,7 +1399,7 @@
   \ALIUSPlacedTextContent{126.106}{597.546}{46.817}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{20140167}
   \ALIUSPlacedTextContent{169.879}{597.546}{5.607}{ALIUSC222222}{\ALIUSFontCormorantRegular}{13.008}{.}
   \ALIUSPlacedTextContent{175.486}{598.467}{175.755}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{12.010}{https://doi.org/10.1098/rstb.2014.0167}
-  \ALIUSPlacedTextContent{90.076}{633.785}{402.714}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-gonzalez-koroma-zamberlan-sanz-2018}Zamberlan, F., Sanz, C., Martínez Vivot, R., Pallavicini, C., Erowid, F., Erowid,}
+  \ALIUSPlacedTextContent{90.076}{633.785}{402.714}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-gonzalez-koroma-zamberlan-sanz-2018}Zamberlan, F., Sanz, C., MartÃ­nez Vivot, R., Pallavicini, C., Erowid, F., Erowid,}
   \ALIUSPlacedTextContent{126.106}{651.905}{145.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{E., \& Tagliazucchi, E. (2018).}
   \ALIUSPlacedTextContent{272.008}{651.905}{233.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{The Varieties of the Psychedelic Experience: A}
   \ALIUSPlacedTextContent{126.106}{670.024}{361.646}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Preliminary Study of the Association Between the Reported Subjective}
@@ -1406,7 +1411,7 @@
   \ALIUSPlacedTextContent{393.155}{706.264}{11.551}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{12}
   \ALIUSPlacedTextContent{401.663}{706.264}{22.726}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{, 54.}
   \ALIUSPlacedTextContent{126.106}{724.383}{203.308}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.3389/fnint.2018.00054}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

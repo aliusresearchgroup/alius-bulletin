@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -170,7 +175,7 @@
   \ALIUSPlacedTextContent{90.076}{698.843}{418.826}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{therefore,  experience  a  profound  change  when  in  weightlessness,  both  in}
   \ALIUSPlacedTextContent{90.076}{718.356}{418.744}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{terms  of  unconscious  physiological  mechanisms  as  well  as  in  terms  of}
   \ALIUSPlacedTextContent{90.076}{737.870}{104.700}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{subjective feelings.}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -181,7 +186,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
   \fill[ALIUSC595959] (99.066bp,-94.720bp) rectangle ++(11.720bp,-11.750bp);
   \fill[ALIUSC595959] (480.386bp,-139.410bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{305.949}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Steven Jillings – What is it like to be in weightlessness ?}
+  \ALIUSPlacedTextContent{90.076}{35.448}{305.949}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Steven Jillings â€“ What is it like to be in weightlessness ?}
   \ALIUSPlacedTextContent{500.872}{37.291}{7.638}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{2}
   \ALIUSPlacedTextContent{128.069}{92.785}{343.721}{ALIUSC000000}{\ALIUSFontLatoLight}{15.013}{Of the various aspects of spaceflight, weightlessness}
   \ALIUSPlacedTextContent{160.252}{113.503}{279.354}{ALIUSC000000}{\ALIUSFontLatoLight}{15.013}{is probably the most remarkable difference}
@@ -255,7 +260,7 @@
   \ALIUSPlacedTextContent{145.671}{720.839}{29.722}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{flight}
   \ALIUSPlacedTextContent{175.393}{720.839}{333.413}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{(Glasauer  \&  Mittelstaedt,  1997).  Weightlessness  can  further}
   \ALIUSPlacedTextContent{90.076}{740.353}{418.252}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{lead  to  visual  and  bodily  illusions,  such  as  the  inversion  illusion,  where  one's}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -266,7 +271,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
   \fill[ALIUSC595959] (93.811bp,-231.920bp) rectangle ++(11.720bp,-11.750bp);
   \fill[ALIUSC595959] (481.887bp,-295.067bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{305.949}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Steven Jillings – What is it like to be in weightlessness ?}
+  \ALIUSPlacedTextContent{90.076}{35.448}{305.949}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Steven Jillings â€“ What is it like to be in weightlessness ?}
   \ALIUSPlacedTextContent{501.028}{37.291}{7.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{3}
   \ALIUSPlacedTextContent{90.076}{72.079}{300.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{sense  of  uprightness  is  lost  (Gabriel  et  al.,  1967).}
   \ALIUSPlacedTextContent{387.082}{72.079}{20.114}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{The}
@@ -330,7 +335,7 @@
   \ALIUSPlacedTextContent{458.048}{720.839}{50.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{due  to  a}
   \ALIUSPlacedTextContent{90.076}{740.353}{42.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{floating}
   \ALIUSPlacedTextContent{132.628}{740.353}{375.931}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{"position"  during  sleep  (Wu  et  al.,  2018).  Accumulation  of  sleep}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -341,7 +346,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(596.000bp,-842.957bp);
   \fill[ALIUSC595959] (99.066bp,-226.677bp) rectangle ++(11.720bp,-11.750bp);
   \fill[ALIUSC595959] (481.136bp,-269.117bp) rectangle ++(11.720bp,-11.750bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{305.949}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Steven Jillings – What is it like to be in weightlessness ?}
+  \ALIUSPlacedTextContent{90.076}{35.448}{305.949}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Steven Jillings â€“ What is it like to be in weightlessness ?}
   \ALIUSPlacedTextContent{500.283}{37.291}{8.227}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{4}
   \ALIUSPlacedTextContent{90.076}{72.079}{12.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{de}
   \ALIUSPlacedTextContent{102.962}{72.079}{22.271}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.007}{ficit}
@@ -413,9 +418,9 @@
   \ALIUSPlacedTextContent{468.864}{731.822}{36.957}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Journal}
   \ALIUSPlacedTextContent{126.106}{749.942}{77.400}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{of Neurophysiolo}
   \ALIUSPlacedTextContent{203.506}{749.942}{10.342}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{gy}
-  \ALIUSPlacedTextContent{216.891}{749.942}{79.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{106 (2): 620–29.}
+  \ALIUSPlacedTextContent{216.891}{749.942}{79.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{106 (2): 620â€“29.}
   \ALIUSPlacedTextContent{296.451}{749.942}{182.118}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1152/jn.00081.2011}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -428,14 +433,14 @@
   \fill[ALIUSCFFFFFF] (90.076bp,-90.180bp) rectangle ++(392.226bp,-15.756bp);
   \fill[ALIUSCFFFFFF] (90.076bp,-108.300bp) rectangle ++(121.300bp,-15.756bp);
   \fill[ALIUSCFFFFFF] (90.076bp,-313.516bp) rectangle ++(403.260bp,-15.756bp);
-  \ALIUSPlacedTextContent{90.076}{35.448}{305.949}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Steven Jillings – What is it like to be in weightlessness ?}
+  \ALIUSPlacedTextContent{90.076}{35.448}{305.949}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.007}{Steven Jillings â€“ What is it like to be in weightlessness ?}
   \ALIUSPlacedTextContent{500.788}{37.291}{7.723}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.010}{5}
   \ALIUSPlacedTextContent{90.076}{72.076}{94.311}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-graybiel-kello-fi-1967}Graybiel, A., Kello}
   \ALIUSPlacedTextContent{184.386}{72.076}{277.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{fi, R. S. (1967) Inversion illusion in parabolic flight: its}
   \ALIUSPlacedTextContent{126.106}{90.195}{213.507}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{probable dependence on otolith function.}
   \ALIUSPlacedTextContent{339.613}{90.195}{142.845}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Aerospace  Medical Association}
   \ALIUSPlacedTextContent{479.414}{90.195}{5.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{,}
-  \ALIUSPlacedTextContent{126.106}{108.315}{85.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{38(11):1099—103.}
+  \ALIUSPlacedTextContent{126.106}{108.315}{85.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{38(11):1099â€”103.}
   \ALIUSPlacedTextContent{211.376}{108.315}{203.334}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.3357/AMHP.4195.2015}
   \ALIUSPlacedTextContent{90.076}{132.440}{380.951}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-glasauer-1997}Glasauer, S. \& Mittelstaedt., H. (1997) Perception of Spatial Orientation in}
   \ALIUSPlacedTextContent{126.106}{150.559}{12.540}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Di}
@@ -445,44 +450,44 @@
   \ALIUSPlacedTextContent{392.687}{150.559}{79.689}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{A Journal of the}
   \ALIUSPlacedTextContent{126.106}{168.679}{143.066}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{International Society for Gravi}
   \ALIUSPlacedTextContent{269.172}{168.679}{88.483}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{tational Physiology}
-  \ALIUSPlacedTextContent{360.699}{168.679}{58.837}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{4 (2): P5–8.}
+  \ALIUSPlacedTextContent{360.699}{168.679}{58.837}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{4 (2): P5â€“8.}
   \ALIUSPlacedTextContent{90.076}{192.804}{79.702}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-iodavina-ma-ffei-2005}Iodavina, I., Ma}
   \ALIUSPlacedTextContent{169.778}{192.804}{316.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{ffei, V., Bosco, G., Zago, M., Macaluso, E., Lacquaniti, F. (2005)}
   \ALIUSPlacedTextContent{126.106}{210.923}{369.243}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Representation of Visual Gravitational Motion in the Human Vestibular}
   \ALIUSPlacedTextContent{126.106}{229.043}{40.911}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Cortex.}
   \ALIUSPlacedTextContent{167.017}{229.043}{36.293}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Science}
-  \ALIUSPlacedTextContent{203.311}{229.043}{95.560}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{308 (5720): 416–19.}
+  \ALIUSPlacedTextContent{203.311}{229.043}{95.560}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{308 (5720): 416â€“19.}
   \ALIUSPlacedTextContent{298.870}{229.043}{193.591}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1126/science.1107961}
   \ALIUSPlacedTextContent{90.076}{253.168}{187.022}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-karmali-shelhamer-2008}Karmali, F., \& Shelhamer, M. (2008).}
   \ALIUSPlacedTextContent{277.097}{253.168}{204.349}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{The Dynamics of Parabolic Flight: Flight}
   \ALIUSPlacedTextContent{126.106}{271.287}{201.071}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Characteristics and Passenger Percepts.}
   \ALIUSPlacedTextContent{327.177}{271.287}{12.137}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Ac}
   \ALIUSPlacedTextContent{339.313}{271.287}{72.249}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{ta Astronautica}
-  \ALIUSPlacedTextContent{414.606}{271.287}{90.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{63 (5-6): 594–602.}
+  \ALIUSPlacedTextContent{414.606}{271.287}{90.395}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{63 (5-6): 594â€“602.}
   \ALIUSPlacedTextContent{126.106}{289.407}{233.084}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1016/j.actaastro.2008.04.009}
   \ALIUSPlacedTextContent{90.076}{313.532}{224.408}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Kornilova LN. Orientation illusions in space}
   \ALIUSPlacedTextContent{314.483}{313.532}{30.166}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{flight.}
   \ALIUSPlacedTextContent{347.694}{313.532}{56.886}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{J Vestib Res}
-  \ALIUSPlacedTextContent{404.580}{313.532}{91.800}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{1997;7(6):429—39.}
+  \ALIUSPlacedTextContent{404.580}{313.532}{91.800}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{1997;7(6):429â€”39.}
   \ALIUSPlacedTextContent{90.076}{337.656}{361.282}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-reschke-bloomberg-1998}Reschke, M. F., Bloomberg, J. J., Harm, D. L., Paloski, W. H., Layne, C.,}
   \ALIUSPlacedTextContent{126.106}{355.776}{345.126}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{McDonald, V. (1998) Posture, Locomotion, Spatial Orientation, and}
   \ALIUSPlacedTextContent{126.106}{373.896}{238.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Motion Sickness as a Function of Space Flight.}
   \ALIUSPlacedTextContent{364.224}{373.896}{113.056}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Brain  Research Reviews}
   \ALIUSPlacedTextContent{477.280}{373.896}{14.634}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{28}
-  \ALIUSPlacedTextContent{126.106}{392.015}{64.899}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(1-2): 102–17.}
+  \ALIUSPlacedTextContent{126.106}{392.015}{64.899}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{(1-2): 102â€“17.}
   \ALIUSPlacedTextContent{191.005}{392.015}{231.602}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1016/S0165-0173(98)00031-9}
-  \ALIUSPlacedTextContent{90.076}{416.140}{309.730}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-senot-zago-2012}Senot, P., Zago, M., Le Séac'h, A., Zaoui, M., Berthoz, A., Lac}
+  \ALIUSPlacedTextContent{90.076}{416.140}{309.730}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-senot-zago-2012}Senot, P., Zago, M., Le SÃ©ac'h, A., Zaoui, M., Berthoz, A., Lac}
   \ALIUSPlacedTextContent{399.727}{416.140}{54.440}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{quaniti, F.,}
   \ALIUSPlacedTextContent{126.106}{434.260}{339.194}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{McIntyre, J. (2012) When up Is down in 0g: How Gravity Sensing A}
   \ALIUSPlacedTextContent{465.300}{434.260}{27.175}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{ffects}
   \ALIUSPlacedTextContent{126.106}{452.379}{183.197}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{the Timing of Interceptive Actions.}
   \ALIUSPlacedTextContent{309.303}{452.379}{130.669}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{The Journal of Neuroscience,}
   \ALIUSPlacedTextContent{443.016}{452.379}{33.028}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{32 (6):}
-  \ALIUSPlacedTextContent{126.106}{470.499}{45.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{1969–73.}
+  \ALIUSPlacedTextContent{126.106}{470.499}{45.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{1969â€“73.}
   \ALIUSPlacedTextContent{171.518}{470.499}{115.254}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1523/}
   \ALIUSPlacedTextContent{286.772}{470.499}{130.201}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{JNEUROSCI.3886-11.2012}
-  \ALIUSPlacedTextContent{90.076}{494.624}{380.639}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-schneider-brummer-2008}Schneider, S., Brümmer, V., Carnahan, H., Dubrowski, A., Askew, C. D., \&}
-  \ALIUSPlacedTextContent{126.106}{512.743}{355.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Strüder, H. K. (2008). What happens to the brain in weightlessness? A}
+  \ALIUSPlacedTextContent{90.076}{494.624}{380.639}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-schneider-brummer-2008}Schneider, S., BrÃ¼mmer, V., Carnahan, H., Dubrowski, A., Askew, C. D., \&}
+  \ALIUSPlacedTextContent{126.106}{512.743}{355.559}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{StrÃ¼der, H. K. (2008). What happens to the brain in weightlessness? A}
   \ALIUSPlacedTextContent{481.664}{512.743}{20.917}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{first}
   \ALIUSPlacedTextContent{126.106}{530.863}{157.870}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{approach by EEG tomography.}
   \ALIUSPlacedTextContent{283.976}{530.863}{58.278}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Neuroimage}
@@ -499,9 +504,9 @@
   \ALIUSPlacedTextContent{90.076}{633.471}{410.805}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{\ALIUSRefAnchor{aliusref-jillings-friedman-coutrot-koroma-young-c-m-oman-1984}Young, L. R., C. M. Oman, D. G. Watt, K. E. Money, and B. K. Lichtenberg (1984)}
   \ALIUSPlacedTextContent{126.106}{651.591}{381.107}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{Spatial Orientation in Weightlessness and Readaptation to Earth's Gravity.}
   \ALIUSPlacedTextContent{126.106}{669.711}{36.293}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.008}{Science}
-  \ALIUSPlacedTextContent{159.355}{669.711}{97.420}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{, 225 (4658): 205–8.}
+  \ALIUSPlacedTextContent{159.355}{669.711}{97.420}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.008}{, 225 (4658): 205â€“8.}
   \ALIUSPlacedTextContent{256.775}{669.711}{194.241}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.008}{https://doi.org/10.1126/science.6610215}
-  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin n°6 (2023)}
+  \ALIUSPlacedTextContent{90.076}{792.995}{124.352}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.010}{ALIUS Bulletin nÂ°6 (2023)}
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

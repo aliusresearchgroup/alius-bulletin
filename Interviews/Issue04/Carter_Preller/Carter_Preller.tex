@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -145,7 +150,7 @@
   % ALIUS normalized citation panel end
   \ALIUSPlacedTextContent{394.071}{250.429}{70.861}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{preller@bli.uzh.ch}
   \ALIUSPlacedTextContent{394.071}{261.229}{120.279}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Psychatric Hospital University,}
-  \ALIUSPlacedTextContent{394.071}{272.029}{76.495}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Zürich, Switzerland}
+  \ALIUSPlacedTextContent{394.071}{272.029}{76.495}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{ZÃ¼rich, Switzerland}
   \ALIUSPlacedTextContent{368.863}{273.242}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
   \ALIUSPlacedTextContent{375.271}{273.242}{7.937}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{4,}
   \ALIUSPlacedTextContent{90.951}{345.052}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
@@ -170,7 +175,7 @@
   \ALIUSPlacedTextContent{90.951}{695.129}{418.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{create so many different experiences. The more I learnt about neurons and}
   \ALIUSPlacedTextContent{90.951}{714.568}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the brain, the more I became fascinated by the fact that the lump of jelly in}
   \ALIUSPlacedTextContent{90.951}{734.248}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{my skull could be creating all of the experiences that make me me.}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -178,7 +183,7 @@
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter â€“ The Dimensions of Consciousness}
   \ALIUSPlacedTextContent{494.871}{36.329}{14.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{41}
   \ALIUSPlacedTextContent{90.951}{73.048}{418.251}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{For medical reasons I think it is important to understand how the brain}
   \ALIUSPlacedTextContent{90.951}{92.488}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{generates a conscious experience. Either in cases of brain damage and an}
@@ -214,7 +219,7 @@
   \ALIUSPlacedTextContent{90.951}{721.173}{412.265}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{From 2002 to 2004, you worked in Zurich and conducted experiments with}
   \ALIUSPlacedTextContent{90.951}{738.453}{384.231}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{psilocybin. Why did you move half-way around the world to work with}
   \ALIUSPlacedTextContent{90.951}{755.493}{76.793}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{psychedelics?}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -222,7 +227,7 @@
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter â€“ The Dimensions of Consciousness}
   \ALIUSPlacedTextContent{493.911}{36.329}{15.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{42}
   \ALIUSPlacedTextContent{90.951}{73.048}{418.233}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{During my PhD, I travelled to Zurich twice (each time for around 8 months)}
   \ALIUSPlacedTextContent{90.951}{92.488}{418.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to conduct two different studies with psychedelics (\ALIUSCitationLink{aliusref-carter-preller-carter-pettigrew-2004}{Carter et al., 2004};}
@@ -258,7 +263,7 @@
   \ALIUSPlacedTextContent{90.951}{705.208}{418.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{nature of the experience and the quality of the associated psychotherapy}
   \ALIUSPlacedTextContent{90.951}{724.648}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sessions that are critical to the therapeutic effect rather than a direct}
   \ALIUSPlacedTextContent{90.951}{744.328}{418.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pharmacological effect of the drug. If this turns out to be true, then it will}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -267,7 +272,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (179.751bp,-569.751bp) rectangle ++(28.080bp,-0.720bp);
-  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter â€“ The Dimensions of Consciousness}
   \ALIUSPlacedTextContent{494.151}{36.329}{15.017}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{43}
   \ALIUSPlacedTextContent{90.951}{73.048}{418.285}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{obviously be very important to understand which aspects of the experience}
   \ALIUSPlacedTextContent{90.951}{92.488}{418.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and the therapy are important. It will also then be necessary to somehow}
@@ -299,17 +304,17 @@
   \ALIUSPlacedTextContent{90.951}{614.489}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to lead to increases along some dimensions (such a perceptual intensity) and}
   \ALIUSPlacedTextContent{90.951}{633.928}{418.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{decreases in other dimensions (particularly those related to cognitive}
   \ALIUSPlacedTextContent{90.951}{653.369}{61.734}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{functions).}
-  \ALIUSPlacedTextContent{121.951}{691.867}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{148.831}{691.867}{312.259}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The key message is supposed to be that it is}
-  \ALIUSPlacedTextContent{148.831}{709.867}{90.487}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{inappropriate}
-  \ALIUSPlacedTextContent{252.959}{709.867}{17.787}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{or}
-  \ALIUSPlacedTextContent{284.387}{709.867}{97.306}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{over-simplistic}
-  \ALIUSPlacedTextContent{395.341}{709.867}{17.799}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{to}
-  \ALIUSPlacedTextContent{426.787}{709.867}{34.344}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{view}
-  \ALIUSPlacedTextContent{148.831}{727.867}{312.183}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness as a single "thing" that can be}
-  \ALIUSPlacedTextContent{471.391}{738.039}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{148.831}{745.867}{283.134}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{considered to exist in higher or lower states}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{130.851}{691.867}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{148.851}{691.867}{312.259}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The key message is supposed to be that it is}
+  \ALIUSPlacedTextContent{259.738}{709.867}{90.487}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{inappropriate}
+  \ALIUSPlacedTextContent{296.087}{709.867}{17.787}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{or}
+  \ALIUSPlacedTextContent{256.328}{709.867}{97.306}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{over-simplistic}
+  \ALIUSPlacedTextContent{296.082}{709.867}{17.799}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{to}
+  \ALIUSPlacedTextContent{287.809}{709.867}{34.344}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{view}
+  \ALIUSPlacedTextContent{148.889}{727.867}{312.183}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness as a single "thing" that can be}
+  \ALIUSPlacedTextContent{465.111}{745.867}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{163.414}{745.867}{283.134}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{considered to exist in higher or lower states}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -317,7 +322,7 @@
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter â€“ The Dimensions of Consciousness}
   \ALIUSPlacedTextContent{493.191}{36.329}{15.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{44}
   \ALIUSPlacedTextContent{90.951}{73.173}{418.361}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In your article, you therefore argue that the psychedelic state cannot be}
   \ALIUSPlacedTextContent{90.951}{90.453}{384.474}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{described as a "higher" state of consciousness. How was this received?}
@@ -354,7 +359,7 @@
   \ALIUSPlacedTextContent{90.951}{723.929}{202.709}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{themselves or any other person to be}
   \ALIUSPlacedTextContent{293.722}{723.929}{24.565}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{more}
   \ALIUSPlacedTextContent{318.319}{723.929}{132.208}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conscious than normal.}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -362,16 +367,16 @@
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter â€“ The Dimensions of Consciousness}
   \ALIUSPlacedTextContent{493.911}{36.329}{15.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{45}
-  \ALIUSPlacedTextContent{117.151}{88.267}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{126.991}{88.267}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{144.991}{88.267}{317.354}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I think consciousness researchers would benefit}
-  \ALIUSPlacedTextContent{144.991}{106.267}{317.295}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{from more thought given to the question of what}
-  \ALIUSPlacedTextContent{144.991}{124.267}{317.281}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{it would mean for themselves or any other}
-  \ALIUSPlacedTextContent{469.231}{137.559}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{144.991}{142.267}{86.429}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{person to be}
-  \ALIUSPlacedTextContent{231.391}{142.267}{31.335}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{more}
-  \ALIUSPlacedTextContent{262.831}{142.267}{152.518}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{conscious than normal.}
+  \ALIUSPlacedTextContent{145.020}{106.267}{317.295}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{from more thought given to the question of what}
+  \ALIUSPlacedTextContent{145.028}{124.267}{317.281}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{it would mean for themselves or any other}
+  \ALIUSPlacedTextContent{466.345}{142.267}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{260.454}{142.267}{86.429}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{person to be}
+  \ALIUSPlacedTextContent{288.000}{142.267}{31.335}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{15.120}{more}
+  \ALIUSPlacedTextContent{227.409}{142.267}{152.518}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{conscious than normal.}
   \ALIUSPlacedTextContent{90.951}{187.653}{418.393}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{On your webpage, one of the questions you are asking is "What are the factors}
   \ALIUSPlacedTextContent{90.951}{204.933}{418.436}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{that determine the contents of an individual's conscious experience?" What is}
   \ALIUSPlacedTextContent{90.951}{222.213}{205.528}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{your current answer to this question?}
@@ -400,7 +405,7 @@
   \ALIUSPlacedTextContent{90.951}{697.529}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which capacities we care more about. It might be the case that we have}
   \ALIUSPlacedTextContent{90.951}{716.969}{418.221}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{greater concerns about capacities that are not as complex. For example,}
   \ALIUSPlacedTextContent{90.951}{736.409}{418.253}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{concepts like free-will are often considered uniquely human, but there are}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -408,7 +413,7 @@
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter â€“ The Dimensions of Consciousness}
   \ALIUSPlacedTextContent{493.191}{36.329}{16.081}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{46}
   \ALIUSPlacedTextContent{90.951}{73.048}{418.310}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{already artificial intelligence (AI) systems that can formulate their own goals.}
   \ALIUSPlacedTextContent{90.951}{92.488}{418.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In the last few years, there has been a lot more discussion around these}
@@ -435,14 +440,14 @@
   \ALIUSPlacedTextContent{90.951}{553.768}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{curiosities. So I think if someone believes they would like to study}
   \ALIUSPlacedTextContent{90.951}{573.208}{418.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness, I would suggest they start by reflecting more on what aspect}
   \ALIUSPlacedTextContent{90.951}{592.648}{298.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of consciousness they would like to better understand.}
-  \ALIUSPlacedTextContent{119.311}{654.427}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{131.791}{654.427}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{149.791}{654.427}{305.636}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I do not think we need a new definition of}
-  \ALIUSPlacedTextContent{149.791}{672.427}{305.466}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness, but rather we need to be}
-  \ALIUSPlacedTextContent{149.791}{690.427}{305.481}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{clearer about which aspects of dimensions of}
-  \ALIUSPlacedTextContent{149.791}{708.427}{305.469}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness that individual experiments are}
-  \ALIUSPlacedTextContent{465.631}{722.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{149.791}{726.427}{47.458}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{testing.}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{149.876}{672.427}{305.466}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness, but rather we need to be}
+  \ALIUSPlacedTextContent{149.869}{690.427}{305.481}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{clearer about which aspects of dimensions of}
+  \ALIUSPlacedTextContent{149.875}{708.427}{305.469}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness that individual experiments are}
+  \ALIUSPlacedTextContent{459.427}{726.427}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{278.880}{726.427}{47.458}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{testing.}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -459,7 +464,7 @@
   \fill[ALIUSC0000FF] (150.711bp,-541.191bp) rectangle ++(190.800bp,-0.720bp);
   \fill[ALIUSC0000FF] (180.471bp,-604.071bp) rectangle ++(201.600bp,-0.720bp);
   \fill[ALIUSC0000FF] (126.951bp,-698.631bp) rectangle ++(217.680bp,-0.720bp);
-  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter â€“ The Dimensions of Consciousness}
   \ALIUSPlacedTextContent{493.671}{36.329}{15.577}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{47}
   \ALIUSPlacedTextContent{264.617}{73.132}{71.454}{ALIUSC000000}{\ALIUSFontLatoLight}{13.920}{References}
   \ALIUSPlacedTextContent{90.951}{103.216}{275.355}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carter-preller-bayne-2014}Bayne, T. (2014). The Unity of Consciousness.}
@@ -529,7 +534,7 @@
   \ALIUSPlacedTextContent{126.951}{685.695}{217.706}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1162/089892905774597191}
   \ALIUSPlacedTextContent{90.951}{717.135}{417.995}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-carter-preller-carter-hasler-2007}Carter, O. L., Hasler, F., Pettigrew, J. D., Wallis, G. M., Liu, G. B., \& Vollenweider,}
   \ALIUSPlacedTextContent{126.951}{732.976}{382.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{F. X. (2007). Psilocybin links binocular rivalry switch rate to attention and}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -543,7 +548,7 @@
   \fill[ALIUSC0000FF] (126.951bp,-274.791bp) rectangle ++(187.680bp,-0.720bp);
   \fill[ALIUSC0000FF] (126.951bp,-384.951bp) rectangle ++(202.080bp,-0.720bp);
   \fill[ALIUSC0000FF] (186.951bp,-463.671bp) rectangle ++(207.600bp,-0.720bp);
-  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter – The Dimensions of Consciousness}
+  \ALIUSPlacedTextContent{90.951}{36.329}{285.491}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Olivia Carter â€“ The Dimensions of Consciousness}
   \ALIUSPlacedTextContent{492.711}{36.329}{16.417}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{48}
   \ALIUSPlacedTextContent{126.951}{72.976}{178.472}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{subjective arousal levels in humans.}
   \ALIUSPlacedTextContent{304.751}{72.976}{143.616}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychopharmacology (Berl), 195}
@@ -582,7 +587,7 @@
   \ALIUSPlacedTextContent{126.951}{450.736}{8.490}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{21}
   \ALIUSPlacedTextContent{135.452}{450.736}{51.493}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 50-64.}
   \ALIUSPlacedTextContent{186.957}{450.736}{207.584}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1177/0269881106065859}
-  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
+  \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

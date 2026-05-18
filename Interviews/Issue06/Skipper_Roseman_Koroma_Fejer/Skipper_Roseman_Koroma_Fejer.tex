@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -160,7 +165,7 @@
   \ALIUSPlacedTextContent{401.420}{379.513}{88.440}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.000}{Matthieu Koroma}
   \ALIUSPlacedTextContent{403.170}{392.487}{107.370}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.000}{matthieu.koroma@uliege.be}
   \ALIUSPlacedTextContent{403.680}{403.487}{109.498}{ALIUSC000000}{\ALIUSFontLatoLight}{9.000}{GIGA-CRC In Vivo Imaging}
-  \ALIUSPlacedTextContent{403.680}{415.987}{108.405}{ALIUSC000000}{\ALIUSFontLatoLight}{9.000}{University of Liège, Belgium}
+  \ALIUSPlacedTextContent{403.680}{415.987}{108.405}{ALIUSC000000}{\ALIUSFontLatoLight}{9.000}{University of LiÃ¨ge, Belgium}
   \ALIUSPlacedTextContent{72.025}{433.332}{55.859}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.000}{Abstract}
   \ALIUSPlacedTextContent{72.025}{464.793}{470.481}{ALIUSC000000}{\ALIUSFontLatoLight}{11.000}{This interview explores the intimate relationship between language and consciousness, drawing}
   \ALIUSPlacedTextContent{72.025}{480.043}{470.470}{ALIUSC000000}{\ALIUSFontLatoLight}{11.000}{insights from aphasia phenomenology, psychedelic experiences, and neuroscientific theories.}
@@ -186,7 +191,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{521.220}{38.866}{4.422}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{2}
   \ALIUSPlacedTextContent{72.025}{72.173}{470.305}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{11.000}{Project, short for Understanding Neuroplasticity Induced by Tryptamine, focusing on the effects}
   \ALIUSPlacedTextContent{72.025}{87.423}{470.547}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{11.000}{of psychedelics on brain plasticity and language, among other things. I assume we will delve deeper}
@@ -218,7 +223,7 @@
   \ALIUSPlacedTextContent{72.025}{663.784}{471.469}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{what I was doing. I thought that I needed to switch gears and change careers. I even}
   \ALIUSPlacedTextContent{72.025}{683.289}{471.273}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{had a startup and tried different things like building sensory substitution devices for a}
   \ALIUSPlacedTextContent{72.025}{702.789}{471.487}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{few years, and that didn't really work out. If I was going to stay in science, I wanted to}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -228,7 +233,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{521.470}{38.866}{4.279}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{3}
   \ALIUSPlacedTextContent{72.025}{72.094}{471.369}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{go back to where I was when I was really excited. I thus started studying consciousness}
   \ALIUSPlacedTextContent{72.025}{91.594}{471.071}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{again, which is the thing that I felt really compelled by around the campfire and in the}
@@ -259,7 +264,7 @@
   \ALIUSPlacedTextContent{72.025}{637.764}{470.820}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{happening to us or within us until we verbalize it. We spend so much time doing it. I}
   \ALIUSPlacedTextContent{72.025}{657.284}{470.963}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{thought, "Oh my god, there's a huge hole in the literature" in the neural correlates of}
   \ALIUSPlacedTextContent{72.025}{676.784}{385.701}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{consciousness, which is quite comparable in the psychedelic literature.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -269,7 +274,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{520.720}{38.866}{4.961}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{4}
   \ALIUSPlacedTextContent{72.025}{72.094}{471.021}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I said: "Okay, I really love psychedelics, and I really love consciousness. I'm going to use}
   \ALIUSPlacedTextContent{72.025}{91.594}{471.131}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{psychedelics to perturb consciousness.". I already thought about this connection}
@@ -280,10 +285,10 @@
   \ALIUSPlacedTextContent{72.025}{189.144}{470.722}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{use that as a tool to perturb conscious experience because of that phenomenology of}
   \ALIUSPlacedTextContent{72.025}{208.644}{48.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{oneness.}
   \ALIUSPlacedTextContent{72.025}{244.486}{342.717}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{I heard a rumor that you used to give talks barefoot. Is that true?}
-  \ALIUSPlacedTextContent{165.830}{286.295}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{172.080}{286.295}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{190.080}{286.295}{247.995}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{I've tried to adapt to my weirdness by}
-  \ALIUSPlacedTextContent{415.670}{302.225}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{215.350}{307.045}{192.960}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{becoming weirder sometimes.}
+  \ALIUSPlacedTextContent{442.075}{307.045}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{217.598}{307.045}{192.960}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{becoming weirder sometimes.}
   \ALIUSPlacedTextContent{72.025}{356.184}{470.820}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{That's entirely true. For 20 years in my life, I have had this weird phase in my life,}
   \ALIUSPlacedTextContent{72.025}{375.684}{471.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{starting in my second year of college where I only wore flip-flops. I even gave my job}
   \ALIUSPlacedTextContent{72.025}{395.184}{471.425}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{talk at UCL in a suit and flip-flops. I always wondered if I liked wearing flip-flops}
@@ -299,7 +304,7 @@
   \ALIUSPlacedTextContent{72.025}{621.014}{470.951}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{scanners and making them listen to speech sounds or single words. I really don't think}
   \ALIUSPlacedTextContent{72.025}{640.514}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that's the only way to understand the neurobiology of language. It's probably in fact}
   \ALIUSPlacedTextContent{72.025}{660.044}{127.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{one of the worst ways.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -309,13 +314,13 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{521.220}{38.866}{4.499}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{5}
-  \ALIUSPlacedTextContent{79.275}{89.200}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{84.550}{89.200}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{102.550}{89.200}{450.510}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{I've always taken a little bit more tricky approach to the neurobiology}
-  \ALIUSPlacedTextContent{133.300}{109.995}{389.160}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{of language. We are using it right now, it is a conversational}
-  \ALIUSPlacedTextContent{534.720}{126.675}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{144.050}{130.495}{364.095}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{perspective, where we actually make use of the context.}
+  \ALIUSPlacedTextContent{133.225}{109.700}{389.160}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{of language. We are using it right now, it is a conversational}
+  \ALIUSPlacedTextContent{557.060}{130.200}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{145.757}{130.200}{364.095}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{perspective, where we actually make use of the context.}
   \ALIUSPlacedTextContent{72.025}{183.394}{470.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I've always taken a little bit more tricky approach to the neurobiology of language. We}
   \ALIUSPlacedTextContent{72.025}{202.894}{470.834}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{are using it right now, it is a conversational perspective, where we make use of the}
   \ALIUSPlacedTextContent{72.025}{222.394}{471.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{context. From the very beginning of my career in 1999, I studied how the brain makes}
@@ -328,7 +333,7 @@
   \ALIUSPlacedTextContent{72.025}{358.934}{470.918}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{information to help us comprehend the words that people are saying. My approach was}
   \ALIUSPlacedTextContent{72.025}{378.434}{470.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{always to try to study language as a whole and try to reconstruct how the brain}
   \ALIUSPlacedTextContent{72.025}{397.934}{471.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{processes all of the individual putative levels of analysis like phonemes, semantics,}
-  \ALIUSPlacedTextContent{72.025}{417.434}{244.381}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{speech production, attention, memory, etc…}
+  \ALIUSPlacedTextContent{72.025}{417.434}{244.381}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{speech production, attention, memory, etcâ€¦}
   \ALIUSPlacedTextContent{72.025}{451.306}{471.083}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{What findings did you make from the perspective of context dependency of language}
   \ALIUSPlacedTextContent{72.025}{467.806}{64.597}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{processing?}
   \ALIUSPlacedTextContent{72.025}{501.484}{470.666}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Philosophically or ideologically, I do not think you can study language outside of the}
@@ -344,7 +349,7 @@
   \ALIUSPlacedTextContent{111.300}{657.534}{431.780}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{". At the end of a 50-year career, he actually told me that he decided that}
   \ALIUSPlacedTextContent{72.025}{677.034}{470.736}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{phonemes weren't real and had no psychological reality outside of the context of}
   \ALIUSPlacedTextContent{72.025}{696.539}{47.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{reading.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -354,12 +359,12 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{520.720}{38.866}{5.115}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{6}
-  \ALIUSPlacedTextContent{99.800}{100.700}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{107.550}{100.700}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{125.550}{100.700}{346.882}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{A really interesting way of thinking about speech and}
-  \ALIUSPlacedTextContent{176.330}{121.245}{240.915}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{language is that it is a grand delusion.}
-  \ALIUSPlacedTextContent{470.950}{122.925}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{178.534}{121.245}{240.915}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{language is that it is a grand delusion.}
+  \ALIUSPlacedTextContent{476.432}{121.245}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{72.025}{174.364}{470.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{A really interesting way of thinking about speech and language is that it is a grand}
   \ALIUSPlacedTextContent{72.025}{193.894}{90.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{illusion. Imagine}
   \ALIUSPlacedTextContent{166.330}{193.894}{376.670}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{hearing a language that is not a Romance language for the first time.}
@@ -387,7 +392,7 @@
   \ALIUSPlacedTextContent{72.025}{662.034}{470.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{created this issue that maybe doesn't exist, the issue of ambiguity. In context, I can see}
   \ALIUSPlacedTextContent{72.025}{681.539}{471.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{your lips when you're talking to me which helps me decode my speech sounds, and your}
   \ALIUSPlacedTextContent{72.025}{701.039}{470.876}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{gestures which have semantic meaning that help me to decode what you're trying to}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -397,7 +402,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{520.980}{38.866}{4.719}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{7}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.750}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{say, I know you and have some background knowledge to help decode what you're}
   \ALIUSPlacedTextContent{72.025}{91.594}{40.278}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{saying,}
@@ -434,7 +439,7 @@
   \ALIUSPlacedTextContent{72.025}{635.014}{471.451}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{learning now is that context is different. Context is always changing by definition,}
   \ALIUSPlacedTextContent{72.025}{654.514}{470.946}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that's why we call it context. That means that the brain networks that process language}
   \ALIUSPlacedTextContent{72.025}{674.044}{168.601}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{are absolutely never the same.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -444,14 +449,14 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{520.220}{38.866}{5.379}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{8}
   \ALIUSPlacedTextContent{72.025}{71.936}{409.997}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{If that is the case, then how do we know what these networks' functions are?}
-  \ALIUSPlacedTextContent{87.025}{117.745}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{115.050}{117.745}{394.980}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{There is currently more and more use of the term: "language}
-  \ALIUSPlacedTextContent{104.300}{138.495}{417.175}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{network". This concept bothers me because I do not think there}
-  \ALIUSPlacedTextContent{508.450}{154.228}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{213.100}{158.995}{194.460}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{are stable regions in the brain.}
+  \ALIUSPlacedTextContent{86.300}{117.745}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{115.397}{117.745}{394.980}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{There is currently more and more use of the term: "language}
+  \ALIUSPlacedTextContent{104.300}{138.245}{417.175}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{network". This concept bothers me because I do not think there}
+  \ALIUSPlacedTextContent{525.475}{158.745}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{215.657}{158.745}{194.460}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{are stable regions in the brain.}
   \ALIUSPlacedTextContent{72.025}{212.644}{471.069}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{This is going to be a little critique of fMRI and my discipline. There is currently more}
   \ALIUSPlacedTextContent{72.025}{232.144}{471.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{and more use of the term: "language network". This concept bothers me because I do}
   \ALIUSPlacedTextContent{72.025}{251.644}{470.890}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{not think there are stable regions in the brain. If you go back to the 19th century, from}
@@ -476,7 +481,7 @@
   \ALIUSPlacedTextContent{72.025}{661.284}{470.736}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{gyrus, the posterior cortex and all of the superior temporal gyrus are the home of}
   \ALIUSPlacedTextContent{72.025}{680.789}{470.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{language in the brain. What is left are regions around the auditory cortex, and}
   \ALIUSPlacedTextContent{72.025}{700.289}{471.381}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{connectivity hubs because 99\% of the studies are auditory-based, or reading-based, so}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -486,19 +491,19 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{520.720}{38.866}{5.115}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{9}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{it's not surprising that you end up with regions around the auditory cortex and}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.820}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{connectivity zones because we know the brain has a small world organization. The}
   \ALIUSPlacedTextContent{72.025}{111.114}{471.030}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{inferior frontal gyrus is indeed one of the biggest connectivity hubs in the entire human}
   \ALIUSPlacedTextContent{72.025}{130.614}{35.301}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{brain.}
   \ALIUSPlacedTextContent{72.025}{166.706}{471.277}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{The inferior frontal gyrus is also a hub for other functions unrelated to language.}
-  \ALIUSPlacedTextContent{77.525}{215.525}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{103.300}{215.525}{426.280}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{It would be a mistake to call those regions the "language network"}
-  \ALIUSPlacedTextContent{111.550}{236.025}{413.685}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{and assume that that is where language is processed only. Such}
-  \ALIUSPlacedTextContent{101.550}{256.740}{433.306}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{claims in the literature, that we teach our students and that can be}
-  \ALIUSPlacedTextContent{216.100}{277.295}{200.460}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{found in textbooks, are absurd.}
-  \ALIUSPlacedTextContent{472.950}{278.725}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{83.550}{215.525}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{105.063}{215.525}{426.280}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{It would be a mistake to call those regions the "language network"}
+  \ALIUSPlacedTextContent{111.360}{236.025}{413.685}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{and assume that that is where language is processed only. Such}
+  \ALIUSPlacedTextContent{101.550}{256.525}{433.306}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{claims in the literature, that we teach our students and that can be}
+  \ALIUSPlacedTextContent{217.973}{277.025}{200.460}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{found in textbooks, are absurd.}
+  \ALIUSPlacedTextContent{538.856}{277.025}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{72.025}{326.414}{470.736}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{That is an excellent point. One of my first projects when I got to the University of}
   \ALIUSPlacedTextContent{72.025}{345.934}{471.002}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Chicago was to write a list of what all of the different functions people claimed for the}
   \ALIUSPlacedTextContent{72.025}{365.434}{471.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{inferior frontal gyrus. At that time, the inferior frontal gyrus was involved in 50 or 60}
@@ -518,7 +523,7 @@
   \ALIUSPlacedTextContent{72.025}{658.044}{470.652}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to some degree. I think that it is a new field and there's a lot more to be done, such as}
   \ALIUSPlacedTextContent{72.025}{677.534}{470.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{taking this naturalistic perspective that I have always had for language to apply it in}
   \ALIUSPlacedTextContent{72.025}{697.039}{142.101}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the psychedelics domain.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -528,19 +533,19 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.720}{38.866}{8.997}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{10}
   \ALIUSPlacedTextContent{72.025}{71.936}{470.508}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{At the beginning of the current wave of psychedelic research when most studies were}
   \ALIUSPlacedTextContent{72.025}{88.436}{470.604}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{being conducted in Switzerland, neuroscience adhered to a localizationist approach. Later}
   \ALIUSPlacedTextContent{72.025}{104.956}{471.125}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{when we commenced our research at Imperial College, network-based approaches for}
   \ALIUSPlacedTextContent{72.025}{121.706}{470.498}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{fMRI were already quite well established. It is interesting how you may get sucked into}
   \ALIUSPlacedTextContent{72.025}{138.206}{450.767}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{speaking a language that is rebellious in one discipline but just normal in another one.}
-  \ALIUSPlacedTextContent{67.275}{178.470}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{95.550}{178.470}{428.798}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{We study language with fMRI, leading to the illusion that we have}
-  \ALIUSPlacedTextContent{94.550}{199.275}{431.085}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{this specific set of regions that process language. But if we [could]}
-  \ALIUSPlacedTextContent{84.775}{219.775}{452.235}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{study every neuron in every neuromodulatory system at once, I think}
-  \ALIUSPlacedTextContent{527.470}{239.748}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{98.800}{240.525}{419.000}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{we would learn that there are no language networks in the brain.}
+  \ALIUSPlacedTextContent{66.775}{172.859}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{96.493}{172.859}{428.798}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{We study language with fMRI, leading to the illusion that we have}
+  \ALIUSPlacedTextContent{95.350}{193.359}{431.085}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{this specific set of regions that process language. But if we [could]}
+  \ALIUSPlacedTextContent{84.775}{213.859}{452.235}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{study every neuron in every neuromodulatory system at once, I think}
+  \ALIUSPlacedTextContent{541.010}{234.359}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{101.392}{234.359}{419.000}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{we would learn that there are no language networks in the brain.}
   \ALIUSPlacedTextContent{72.025}{273.664}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I actually think there has even been a regression in the neurobiology of language. We}
   \ALIUSPlacedTextContent{72.025}{293.164}{470.988}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{were moving really in the right direction through the early 2000s into starting to think}
   \ALIUSPlacedTextContent{72.025}{312.664}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{about language in the brain as distributed sets of networks that are dynamically}
@@ -561,7 +566,7 @@
   \ALIUSPlacedTextContent{72.025}{655.014}{470.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{do the Wada test in the left hemisphere. People thought the Wada test was a gold}
   \ALIUSPlacedTextContent{72.025}{674.534}{470.988}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{standard for many years. My skepticism and the reason that I have a problem with the}
   \ALIUSPlacedTextContent{72.025}{694.039}{471.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Wada test and testing laterality with fMRI is the very specific kinds of tests being used.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -571,7 +576,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{518.470}{38.866}{7.402}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{11}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Wada test in the left hemisphere disturbs language more than in the right, but that}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.722}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{depends on the kind of functions that the left and the right brain operate and goes}
@@ -604,11 +609,11 @@
   \ALIUSPlacedTextContent{169.830}{559.734}{373.156}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{are more likely to lose consciousness, and you are slower to recover}
   \ALIUSPlacedTextContent{72.025}{579.264}{470.764}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{consciousness. And if you're more bilateral for language, both sides seem to be}
   \ALIUSPlacedTextContent{72.025}{598.764}{379.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{associated with consciousness, which is a really interesting set of data.}
-  \ALIUSPlacedTextContent{75.025}{644.870}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{83.550}{644.870}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{101.550}{644.870}{424.817}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{The idea that language is in the left hemisphere is antiquated and}
-  \ALIUSPlacedTextContent{124.050}{665.665}{375.930}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{wrong and really depends on what you mean by language.}
-  \ALIUSPlacedTextContent{505.200}{665.850}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{125.993}{665.665}{375.930}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{wrong and really depends on what you mean by language.}
+  \ALIUSPlacedTextContent{530.367}{665.665}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -618,7 +623,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{517.730}{38.866}{8.172}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{12}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.820}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{The idea that language is in the left hemisphere is antiquated and wrong and depends}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.680}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{on what you mean by language. For example, if you tested language comprehension}
@@ -647,7 +652,7 @@
   \ALIUSPlacedTextContent{72.025}{572.244}{470.933}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{hemisphere and an unconscious right hemisphere. I think that is not the modern}
   \ALIUSPlacedTextContent{72.025}{591.764}{471.319}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{interpretation and some more recent views suggest that that is semi-accurate but too}
   \ALIUSPlacedTextContent{72.025}{611.264}{33.551}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{gross.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -657,7 +662,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{517.730}{38.866}{8.029}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{13}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.820}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{It is not like you end up with a conscious and unconscious brain, but you end up with}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.876}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{two conscious brains that have different kinds of consciousness or differently}
@@ -667,12 +672,12 @@
   \ALIUSPlacedTextContent{72.025}{169.614}{471.111}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{related regions (\ALIUSCitationLink{aliusref-skipper-roseman-koroma-fejer-pinto-neville-2017}{Pinto et al., 2017}). I review a whole ton of evidence points toward a}
   \ALIUSPlacedTextContent{72.025}{189.144}{471.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{strong connection between language and consciousness (\ALIUSCitationLink{aliusref-skipper-roseman-koroma-fejer-skipper-2022}{Skipper, 2022}), which may}
   \ALIUSPlacedTextContent{72.025}{208.644}{425.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{come down to how we define consciousness and left hemisphere functioning.}
-  \ALIUSPlacedTextContent{76.775}{253.750}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{82.550}{253.750}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{100.550}{253.750}{436.957}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{I would like to test some of my own theories by injecting DMT into}
-  \ALIUSPlacedTextContent{129.550}{274.545}{379.440}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{the right hemisphere and maintain an observing conscious}
-  \ALIUSPlacedTextContent{107.050}{295.045}{424.395}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{language, a self, to actually describe some of the things that have}
-  \ALIUSPlacedTextContent{425.930}{311.268}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{220.350}{315.795}{197.805}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{been typically called ineffable.}
+  \ALIUSPlacedTextContent{129.308}{274.250}{379.440}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{the right hemisphere and maintain an observing conscious}
+  \ALIUSPlacedTextContent{106.831}{294.750}{424.395}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{language, a self, to actually describe some of the things that have}
+  \ALIUSPlacedTextContent{541.507}{315.250}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{220.126}{315.250}{197.805}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{been typically called ineffable.}
   \ALIUSPlacedTextContent{72.025}{366.934}{470.904}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I would like to test some of my theories by, just maybe for fun, injecting DMT into the}
   \ALIUSPlacedTextContent{72.025}{386.434}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{right hemisphere and maintain an observing conscious language, a self, to describe}
   \ALIUSPlacedTextContent{72.025}{405.934}{471.437}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{some of the things that have been typically called ineffable. Imagine, in a perfect world,}
@@ -688,7 +693,7 @@
   \ALIUSPlacedTextContent{72.025}{636.856}{470.592}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{How has the perspective on the relationship between language and consciousness}
   \ALIUSPlacedTextContent{72.025}{653.606}{470.568}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{evolved over time, and what role do you believe language plays in shaping our cognitive}
   \ALIUSPlacedTextContent{72.025}{670.136}{161.147}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{processes and consciousness?}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -698,7 +703,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{517.220}{38.866}{8.711}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{14}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.722}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{There was a time at various points in history when philosophers thought, like Dan}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Dennett, that there was a connection between language and consciousness. We have}
@@ -736,7 +741,7 @@
   \ALIUSPlacedTextContent{72.025}{653.764}{470.820}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{a small number of categories which makes us have a very low information way to}
   \ALIUSPlacedTextContent{72.025}{673.284}{470.764}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{communicate with each other, which is why I think it's evolutionarily important to}
   \ALIUSPlacedTextContent{72.025}{692.789}{84.831}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{have language.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -746,15 +751,15 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{517.470}{38.866}{8.249}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{15}
-  \ALIUSPlacedTextContent{80.775}{94.450}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{107.550}{94.450}{414.825}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{Language organizes our thoughts perceptually, emotionally, and}
-  \ALIUSPlacedTextContent{146.300}{114.995}{311.475}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{abstractly, and is a tool for organizing the world.}
-  \ALIUSPlacedTextContent{459.950}{114.995}{19.695}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{[…]}
-  \ALIUSPlacedTextContent{102.300}{135.745}{425.655}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{Language is not separable from consciousness and generates and}
-  \ALIUSPlacedTextContent{510.730}{149.175}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{161.580}{156.245}{307.450}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{maintains conscious experience in and of itself.}
+  \ALIUSPlacedTextContent{84.300}{88.804}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{107.715}{88.804}{414.825}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{Language organizes our thoughts perceptually, emotionally, and}
+  \ALIUSPlacedTextContent{159.390}{109.304}{311.475}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{abstractly, and is a tool for organizing the world.}
+  \ALIUSPlacedTextContent{305.280}{109.304}{19.695}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{[â€¦]}
+  \ALIUSPlacedTextContent{102.300}{129.804}{425.655}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{Language is not separable from consciousness and generates and}
+  \ALIUSPlacedTextContent{531.955}{150.304}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{161.402}{150.304}{307.450}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{maintains conscious experience in and of itself.}
   \ALIUSPlacedTextContent{72.025}{189.144}{470.750}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Language organizes our thoughts perceptually, emotionally, and abstractly, and is a}
   \ALIUSPlacedTextContent{72.025}{208.644}{470.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{tool for organizing the world. This is why, I think, some meditators and Buddhists ask}
   \ALIUSPlacedTextContent{72.025}{228.144}{471.451}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{us to give up what languages have given us, or at least just observe them. There's a little}
@@ -782,7 +787,7 @@
   \ALIUSPlacedTextContent{72.025}{673.284}{39.242}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{qualia,}
   \ALIUSPlacedTextContent{111.300}{673.284}{16.492}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{etc.}
   \ALIUSPlacedTextContent{127.800}{673.284}{415.680}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{are clearly changed by language, meaning that language isn't just an add-on}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -792,18 +797,18 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.970}{38.866}{8.865}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{16}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that we can call in relation to extended consciousness, it loops back onto itself, onto}
   \ALIUSPlacedTextContent{72.025}{91.594}{327.671}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{these kinds of earlier conceptions of conscious experiences.}
   \ALIUSPlacedTextContent{72.025}{135.456}{470.460}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{The first time we met, we talked about the phenomenology of aphasia and I just wonder}
   \ALIUSPlacedTextContent{72.025}{151.956}{470.520}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{if you can expand on this and how it relates to your research on language and even}
   \ALIUSPlacedTextContent{72.025}{168.706}{72.597}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{psychedelics.}
-  \ALIUSPlacedTextContent{64.275}{215.525}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{70.025}{215.525}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{88.025}{215.525}{459.120}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{Aphasic people also experience an increased connection to everything}
-  \ALIUSPlacedTextContent{90.050}{236.025}{453.900}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{[…]. This is quite similar to the maybe more intense phenomenological}
-  \ALIUSPlacedTextContent{499.700}{252.498}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{147.300}{256.740}{340.346}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{aspects of psychedelics, and meditative experiences}
+  \ALIUSPlacedTextContent{90.635}{236.025}{453.900}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{[â€¦]. This is quite similar to the maybe more intense phenomenological}
+  \ALIUSPlacedTextContent{551.145}{256.525}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{147.412}{256.525}{340.346}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{aspects of psychedelics, and meditative experiences}
   \ALIUSPlacedTextContent{72.025}{303.164}{470.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{That is one of the things that got me into psychedelics. Anecdotally, there are probably}
   \ALIUSPlacedTextContent{72.025}{322.664}{470.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{about 10 to 20 references now of people writing about their experiences of aphasia after}
   \ALIUSPlacedTextContent{72.025}{342.184}{471.449}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{their recovery. Aphasia here typically means people having lost all language, inner}
@@ -824,7 +829,7 @@
   \ALIUSPlacedTextContent{72.025}{654.264}{471.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the self that is comfortable fitting into social and cultural norms and that we lose with}
   \ALIUSPlacedTextContent{72.025}{673.794}{470.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{aphasia, or with psychedelics. An even deeper sort of connection to consciousness is}
   \ALIUSPlacedTextContent{72.025}{693.289}{398.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{indicated by claims that feral people fail the mirror self-recognition test.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -834,7 +839,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{517.470}{38.866}{8.469}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{17}
   \ALIUSPlacedTextContent{72.025}{71.936}{359.967}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{There were mirror self-recognition tests conducted on feral people?}
   \ALIUSPlacedTextContent{72.025}{108.114}{471.239}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{A lot of these tests are quite old, nothing was systematic and so far, everything we have}
@@ -862,7 +867,7 @@
   \ALIUSPlacedTextContent{72.025}{595.264}{471.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to accept that language is a causal determinant of consciousness. I was not allowed to}
   \ALIUSPlacedTextContent{72.025}{614.764}{470.736}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{say this in my paper (\ALIUSCitationLink{aliusref-skipper-roseman-koroma-fejer-skipper-2022}{Skipper, 2022}). So I can say that in an interview and be trashed}
   \ALIUSPlacedTextContent{72.025}{634.264}{194.851}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{for it, but I actually don't think so.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -872,13 +877,13 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.720}{38.866}{9.129}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{18}
-  \ALIUSPlacedTextContent{81.025}{95.450}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{86.300}{95.450}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{104.300}{95.450}{408.349}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{At a fundamental level, I have to accept that language is causal}
-  \ALIUSPlacedTextContent{106.550}{116.245}{403.905}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{determinant of consciousness. […] I think people are confused}
-  \ALIUSPlacedTextContent{514.470}{135.675}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{108.050}{136.745}{396.645}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{about what causality is, particularly in cognitive neuroscience.}
+  \ALIUSPlacedTextContent{106.522}{115.950}{403.905}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{determinant of consciousness. [â€¦] I think people are confused}
+  \ALIUSPlacedTextContent{516.649}{136.450}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{110.152}{136.450}{396.645}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{about what causality is, particularly in cognitive neuroscience.}
   \ALIUSPlacedTextContent{72.025}{191.894}{471.321}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I think people are confused about what causality is, particularly in cognitive}
   \ALIUSPlacedTextContent{72.025}{211.394}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{neuroscience. People often think that causality amounts to a double dissociation of}
   \ALIUSPlacedTextContent{72.025}{230.894}{470.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{necessary and sufficient conditions, and I think that's a feeble view of causality but}
@@ -905,7 +910,7 @@
   \ALIUSPlacedTextContent{72.025}{656.284}{470.767}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{150,000 words the day that you speak or are being spoken at. So, I always found that a}
   \ALIUSPlacedTextContent{72.025}{675.794}{471.319}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{weird criticism of my work. I think that consciousness is multi-determined. And I}
   \ALIUSPlacedTextContent{72.025}{695.289}{474.731}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{think the way that language generates and sustains consciousness isn't one thing either.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -915,13 +920,13 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.970}{38.866}{8.865}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{19}
-  \ALIUSPlacedTextContent{107.300}{92.450}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{130.550}{92.450}{361.637}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{Going back to my own research on the neurobiology of}
-  \ALIUSPlacedTextContent{118.800}{113.245}{385.215}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{language, I believe that words are deeply tied to every inch}
-  \ALIUSPlacedTextContent{199.330}{133.745}{220.245}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{and every centimeter of the brain.}
-  \ALIUSPlacedTextContent{429.920}{134.675}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{100.800}{92.450}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{130.589}{92.450}{361.637}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{Going back to my own research on the neurobiology of}
+  \ALIUSPlacedTextContent{118.800}{112.950}{385.215}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{language, I believe that words are deeply tied to every inch}
+  \ALIUSPlacedTextContent{201.285}{133.450}{220.245}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{and every centimeter of the brain.}
+  \ALIUSPlacedTextContent{508.015}{133.450}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{72.025}{183.894}{470.764}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I tried to elucidate the various ways in which language and inner speech generate and}
   \ALIUSPlacedTextContent{72.025}{203.394}{470.967}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{sustain conscious experience. There are different mechanisms and the primary one, I}
   \ALIUSPlacedTextContent{72.025}{222.894}{470.764}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{think, is speech production. I think that what we're primarily aware of are both inner}
@@ -949,7 +954,7 @@
   \ALIUSPlacedTextContent{72.025}{640.014}{470.946}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{movement of your lips and is much more complex. Inner speech varies on a continuum}
   \ALIUSPlacedTextContent{72.025}{659.534}{471.197}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{from engaging the motor system more or less. So, for example, we do a lot of dialogic}
   \ALIUSPlacedTextContent{72.025}{679.034}{352.421}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{inner speech, and we talk to ourselves about what we are doing.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -959,12 +964,12 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{515.970}{38.866}{9.747}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{20}
-  \ALIUSPlacedTextContent{69.275}{90.450}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{74.300}{90.450}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{92.300}{90.450}{444.356}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{Speech is on a continuum more or less far away from consciousness}
-  \ALIUSPlacedTextContent{511.480}{105.425}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{121.300}{111.245}{382.110}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{depending on being less likely to engage the motor system.}
+  \ALIUSPlacedTextContent{540.656}{111.245}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{123.423}{111.245}{382.110}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{depending on being less likely to engage the motor system.}
   \ALIUSPlacedTextContent{72.025}{159.114}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Often we use other people's voices in our heads and communicate with those voices}
   \ALIUSPlacedTextContent{72.025}{178.614}{470.946}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{and have basically a dialogue in our heads in one way or another. The more it happens}
   \ALIUSPlacedTextContent{72.025}{198.144}{470.961}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{in sentences, the more likely it is to engage the motor system and feedback systems}
@@ -991,7 +996,7 @@
   \ALIUSPlacedTextContent{72.025}{653.764}{470.960}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that is you manipulating pictures of yourself in the past, but it makes zero sense to me}
   \ALIUSPlacedTextContent{72.025}{673.284}{471.101}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{since I don't have any visual imagery as I explained earlier. My narrative self is}
   \ALIUSPlacedTextContent{72.025}{692.789}{134.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{exclusively word-based.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1001,13 +1006,13 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{517.730}{38.866}{8.152}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{21}
-  \ALIUSPlacedTextContent{70.025}{90.950}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{93.300}{90.950}{414.329}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{There's still some debate and skepticism about whether there is}
-  \ALIUSPlacedTextContent{86.025}{111.495}{430.290}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{any narrative self at all, and Strawson, I believe, claims that he has}
-  \ALIUSPlacedTextContent{521.470}{126.425}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{83.025}{132.245}{430.705}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{no narrative self but just episodic memories, and that's fine for me.}
+  \ALIUSPlacedTextContent{66.318}{90.950}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{92.506}{90.950}{414.329}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{There's still some debate and skepticism about whether there is}
+  \ALIUSPlacedTextContent{84.525}{111.495}{430.290}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{any narrative self at all, and Strawson, I believe, claims that he has}
+  \ALIUSPlacedTextContent{519.023}{132.040}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{84.318}{132.040}{430.705}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{no narrative self but just episodic memories, and that's fine for me.}
   \ALIUSPlacedTextContent{72.025}{186.144}{470.904}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{There's still some debate and skepticism about whether there is any narrative self at all,}
   \ALIUSPlacedTextContent{72.025}{205.644}{470.918}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{and Strawson, I believe, claims that he has no narrative self but just episodic memories,}
   \ALIUSPlacedTextContent{72.025}{225.144}{125.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{and that's fine for me.}
@@ -1033,7 +1038,7 @@
   \ALIUSPlacedTextContent{72.025}{645.264}{471.121}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{interest from the very onset wasn't the acute experience, except kind of really grossly,}
   \ALIUSPlacedTextContent{72.025}{664.794}{470.820}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{some hypothesis around language regions being affected during the acute experience,}
   \ALIUSPlacedTextContent{72.025}{684.289}{311.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{and maybe tying those to the post-interview that we do.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1043,7 +1048,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.970}{38.866}{8.922}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{22}
   \ALIUSPlacedTextContent{72.025}{72.094}{471.016}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{My main interest was using movie scans after the psychedelic experience to understand}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.876}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{what brain networks specifically were affected. Because I have some issues with the}
@@ -1060,10 +1065,10 @@
   \ALIUSPlacedTextContent{72.025}{330.506}{470.813}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{terms of explaining the sense of connection and access to primal consciousness, via the}
   \ALIUSPlacedTextContent{72.025}{347.026}{470.424}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{loss of categorical thinking. How does this inform our understanding of psychedelics}
   \ALIUSPlacedTextContent{72.025}{363.776}{201.960}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{impact language and the sense of self?}
-  \ALIUSPlacedTextContent{99.300}{400.065}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{107.550}{400.065}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{125.550}{400.065}{376.155}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{I think nobody thinks about the self as a unitary construct}
-  \ALIUSPlacedTextContent{451.200}{418.775}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{177.580}{420.845}{268.125}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{anymore: there are different kinds of self.}
+  \ALIUSPlacedTextContent{505.705}{420.845}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{179.565}{420.845}{268.125}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{anymore: there are different kinds of self.}
   \ALIUSPlacedTextContent{72.025}{464.464}{470.918}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I think nobody thinks about the self as a unitary construct anymore: there are different}
   \ALIUSPlacedTextContent{72.025}{483.964}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{kinds of self. A gross distinction is between a bodily self and a narrative self. A lot of}
   \ALIUSPlacedTextContent{72.025}{503.484}{471.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{people in the psychedelics domain associate the narrative self with the default mode}
@@ -1078,7 +1083,7 @@
   \ALIUSPlacedTextContent{133.050}{667.294}{15.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{ego}
   \ALIUSPlacedTextContent{148.830}{667.294}{394.030}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{. That's fair enough because some of the literature does outside of the}
   \ALIUSPlacedTextContent{72.025}{686.789}{121.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{psychedelics domain.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1088,7 +1093,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.970}{38.866}{8.779}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{23}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Maybe this experience of connection to everything probably comes in part from}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.904}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{everything not being connected anymore by our language categories because categories}
@@ -1125,7 +1130,7 @@
   \ALIUSPlacedTextContent{415.170}{684.039}{79.478}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{War and Peace'}
   \ALIUSPlacedTextContent{494.950}{684.039}{26.040}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{, or '}
   \ALIUSPlacedTextContent{520.980}{684.039}{22.498}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{The}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1135,7 +1140,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.220}{38.866}{9.461}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{24}
   \ALIUSPlacedTextContent{72.025}{72.094}{23.618}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Idiot}
   \ALIUSPlacedTextContent{95.800}{72.094}{447.640}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{', which might impact them profoundly. Like for me as a 20-year-old reading Alan}
@@ -1171,7 +1176,7 @@
   \ALIUSPlacedTextContent{72.025}{663.284}{470.960}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{associated semantics. Language "in pure meaning": somehow you have the}
   \ALIUSPlacedTextContent{72.025}{682.789}{470.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{phenomenological sense that you're using language, but it's just the meaning, without}
   \ALIUSPlacedTextContent{72.025}{702.289}{223.131}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{necessarily manipulating imagery either.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1181,7 +1186,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.720}{38.866}{8.999}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{25}
   \ALIUSPlacedTextContent{72.025}{71.936}{470.592}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Do you think that people under psychedelics experience a specific type of}
   \ALIUSPlacedTextContent{72.025}{88.436}{400.997}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{phenomenology, particularly in relation to the engagement of inner speech?}
@@ -1217,7 +1222,7 @@
   \ALIUSPlacedTextContent{72.025}{658.044}{471.417}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the same way as being deeply related to language functioning. As we discussed earlier,}
   \ALIUSPlacedTextContent{72.025}{677.534}{470.904}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{language is ambiguous, our own internal experiences need to decode the acoustic signal}
   \ALIUSPlacedTextContent{72.025}{697.039}{303.901}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{into the words in order to be able to understand them.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1227,7 +1232,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.220}{38.866}{9.615}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{26}
   \ALIUSPlacedTextContent{72.025}{71.936}{470.484}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Let's talk about ineffability. There are a lot of times in a psychedelic experience that feeling}
   \ALIUSPlacedTextContent{72.025}{88.436}{470.448}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{of ineffability, meaning we cannot use words to describe those experiences. Is that only}
@@ -1235,11 +1240,11 @@
   \ALIUSPlacedTextContent{72.025}{121.706}{470.340}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{them? For instance, falling in love for the first time is such an ineffable experience, like}
   \ALIUSPlacedTextContent{72.025}{138.206}{470.424}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{psychedelics, by just the novelty of things. They don't fit categories, and something}
   \ALIUSPlacedTextContent{72.025}{154.706}{433.747}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{happens to the language itself being dissolved. I wonder if you thought about this.}
-  \ALIUSPlacedTextContent{84.025}{197.025}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{104.050}{197.025}{397.395}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{One hypothesis could be [that] vision steals the show. At the}
-  \ALIUSPlacedTextContent{117.050}{217.775}{371.160}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{start of a DMT trip, everything in the visual experience is}
-  \ALIUSPlacedTextContent{505.450}{233.748}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{101.050}{238.275}{399.090}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{geometric and crazy and there's almost no room for language.}
+  \ALIUSPlacedTextContent{83.703}{197.025}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{102.550}{197.025}{397.395}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{One hypothesis could be [that] vision steals the show. At the}
+  \ALIUSPlacedTextContent{115.668}{217.525}{371.160}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{start of a DMT trip, everything in the visual experience is}
+  \ALIUSPlacedTextContent{504.793}{238.025}{14.160}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{101.703}{238.025}{399.090}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{geometric and crazy and there's almost no room for language.}
   \ALIUSPlacedTextContent{72.025}{279.664}{470.764}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{One hypothesis could be like we said earlier, vision steals the show. At the start of a}
   \ALIUSPlacedTextContent{72.025}{299.164}{470.960}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{DMT trip, everything in the visual experience is geometric and crazy and there's almost}
   \ALIUSPlacedTextContent{72.025}{318.664}{471.481}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{no room for language there. Maybe 5-MeO seems to be more cerebral and its content}
@@ -1261,7 +1266,7 @@
   \ALIUSPlacedTextContent{72.025}{646.764}{340.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{constrained potentially by our normal categorical constraints.}
   \ALIUSPlacedTextContent{72.025}{674.126}{470.484}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{We spoke about the effects of psychedelics on language in terms of disability, now let's}
   \ALIUSPlacedTextContent{72.025}{690.631}{470.683}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{mention a bit of the meaning-making because it's something so interesting to study. I'm}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1271,7 +1276,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.480}{38.866}{9.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{27}
   \ALIUSPlacedTextContent{72.025}{71.936}{471.015}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{curious actually how you understand the meaning-making process. Also, the one that}
   \ALIUSPlacedTextContent{72.025}{88.436}{470.424}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{happens online if there's an online meaning of making, but also after and how you're}
@@ -1298,11 +1303,11 @@
   \ALIUSPlacedTextContent{72.025}{556.234}{471.031}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{between more inner speech-based thinking to a more imagistic thinking. We are thus}
   \ALIUSPlacedTextContent{72.025}{575.734}{477.721}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{testing a switch between types of categories of inner speech that people have described.}
   \ALIUSPlacedTextContent{72.025}{614.764}{471.002}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{We know from diary and experience sampling studies that certain changes in language}
-  \ALIUSPlacedTextContent{72.025}{634.264}{471.073}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{predict changes in mental health and well-being (\ALIUSCitationLink{aliusref-skipper-roseman-koroma-fejer-gregoire-doucerain-2021}{Grégoire et al., 2021}; Nezlek et al.,}
+  \ALIUSPlacedTextContent{72.025}{634.264}{471.073}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{predict changes in mental health and well-being (\ALIUSCitationLink{aliusref-skipper-roseman-koroma-fejer-gregoire-doucerain-2021}{GrÃ©goire et al., 2021}; Nezlek et al.,}
   \ALIUSPlacedTextContent{72.025}{653.764}{470.778}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{2017; \ALIUSCitationLink{aliusref-skipper-roseman-koroma-fejer-tov-ng-2013}{Tov et al., 2013}). Who is going to benefit from therapy can be predicted from}
   \ALIUSPlacedTextContent{72.025}{673.284}{470.774}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{changes in people's words. I think that's right now in a very nascent stage and not}
   \ALIUSPlacedTextContent{72.025}{692.789}{470.736}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{making use of the complexities of language. That tends to be in terms like: how many}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1312,7 +1317,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{515.970}{38.866}{9.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{28}
   \ALIUSPlacedTextContent{72.025}{72.094}{470.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{times do I refer to me? Which one might predict what changes after experiencing a}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{change in the self, but you can go much more deeply by taking into account the balance}
@@ -1344,7 +1349,7 @@
   \ALIUSPlacedTextContent{72.025}{638.606}{471.277}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{McKenna or other religious deities? Do you think these experiences are merely attributed}
   \ALIUSPlacedTextContent{72.025}{655.106}{470.945}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{meanings post-experience, or does the meaning-making process subconsciously shape the}
   \ALIUSPlacedTextContent{72.025}{671.876}{276.197}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{experience itself, without our conscious awareness?}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1354,20 +1359,20 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.220}{38.866}{9.615}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{29}
   \ALIUSPlacedTextContent{72.025}{72.094}{471.002}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Nick \ALIUSCitationLink{aliusref-skipper-roseman-koroma-fejer-chater-2018}{Chater (2018)} has a quite controversial hypothesis called the mind is flat. Its basic}
   \ALIUSPlacedTextContent{72.025}{91.594}{470.750}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{premise is that we do not have the really deep unconscious minds that we think we}
-  \ALIUSPlacedTextContent{72.025}{111.114}{471.325}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{have. He argues that what we consider unconscious processes—thought to be wild}
-  \ALIUSPlacedTextContent{72.025}{130.614}{471.209}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{hidden forces shaping our decisions—are actually shallow, consisting merely of}
+  \ALIUSPlacedTextContent{72.025}{111.114}{471.325}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{have. He argues that what we consider unconscious processesâ€”thought to be wild}
+  \ALIUSPlacedTextContent{72.025}{130.614}{471.209}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{hidden forces shaping our decisionsâ€”are actually shallow, consisting merely of}
   \ALIUSPlacedTextContent{72.025}{150.114}{470.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{forgotten experiences. I don't know if this interpretation aligns with her views, but I}
   \ALIUSPlacedTextContent{72.025}{169.614}{203.131}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{find it difficult to accept this theory.}
-  \ALIUSPlacedTextContent{100.800}{209.525}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{126.050}{209.525}{372.525}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{In my view, even during intense psychedelic experiences,}
+  \ALIUSPlacedTextContent{93.050}{209.525}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{125.915}{209.525}{372.525}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{In my view, even during intense psychedelic experiences,}
   \ALIUSPlacedTextContent{111.050}{230.025}{402.255}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{such as those induced by high doses of DMT, where one may}
-  \ALIUSPlacedTextContent{122.800}{250.750}{378.615}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{feel detached from reality, the language system still subtly}
-  \ALIUSPlacedTextContent{390.670}{262.975}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{237.850}{271.295}{144.815}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{guides the experience.}
+  \ALIUSPlacedTextContent{122.870}{250.525}{378.615}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{feel detached from reality, the language system still subtly}
+  \ALIUSPlacedTextContent{517.305}{271.025}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{239.770}{271.025}{144.815}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{guides the experience.}
   \ALIUSPlacedTextContent{72.025}{328.164}{470.890}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{In my view, even during intense psychedelic experiences, such as those induced by high}
   \ALIUSPlacedTextContent{72.025}{347.684}{470.764}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{doses of DMT, where one may feel detached from reality, the language system still}
   \ALIUSPlacedTextContent{72.025}{367.184}{471.002}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{subtly guides the experience. This raises the question of whether we could hypothesize}
@@ -1385,13 +1390,13 @@
   \ALIUSPlacedTextContent{511.980}{634.856}{31.044}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{Angel}
   \ALIUSPlacedTextContent{72.025}{651.356}{28.788}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{Cards}
   \ALIUSPlacedTextContent{100.800}{651.356}{327.202}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{and we can both maybe speak about how those cards relate.}
-  \ALIUSPlacedTextContent{72.025}{684.631}{75.097}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{I start with …}
-  \ALIUSPlacedTextContent{180.080}{701.131}{12.072}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{…}
+  \ALIUSPlacedTextContent{72.025}{684.631}{75.097}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{I start with â€¦}
+  \ALIUSPlacedTextContent{180.080}{701.131}{12.072}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{â€¦}
   \ALIUSPlacedTextContent{192.080}{701.131}{42.264}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{curiosity}
   \ALIUSPlacedTextContent{234.350}{701.131}{25.524}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{and}
   \ALIUSPlacedTextContent{260.100}{701.131}{23.364}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{faith}
   \ALIUSPlacedTextContent{283.380}{701.131}{6.072}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1401,24 +1406,24 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC000000] (70.525bp,-56.530bp) rectangle ++(471.200bp,-0.500bp);
   \fill[ALIUSC000000] (70.525bp,-723.975bp) rectangle ++(471.200bp,-0.500bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{516.220}{38.866}{9.497}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{30}
   \ALIUSPlacedTextContent{72.025}{71.936}{470.628}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{The relationship between curiosity and faith feels deep. In my work as a researcher and in}
   \ALIUSPlacedTextContent{72.025}{88.436}{470.652}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{my experiences as a psychonaut, curiosity is the drive, the passion. It's also guided by this}
   \ALIUSPlacedTextContent{72.025}{104.956}{471.185}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{faith that things that I don't really know yet are working in some ways that we can}
   \ALIUSPlacedTextContent{72.025}{121.706}{65.597}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{understand.}
-  \ALIUSPlacedTextContent{100.800}{159.245}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{117.800}{159.245}{388.585}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{I have given up on the first-person subjective experience to}
-  \ALIUSPlacedTextContent{114.050}{179.970}{395.653}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{be a scientist and don't have much faith that we may be able}
-  \ALIUSPlacedTextContent{485.450}{189.955}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{146.050}{200.525}{327.800}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{to describe that first-person subjective experience.}
+  \ALIUSPlacedTextContent{96.050}{159.245}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{117.584}{159.245}{388.585}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{I have given up on the first-person subjective experience to}
+  \ALIUSPlacedTextContent{114.050}{179.800}{395.653}{ALIUSC000000}{\ALIUSFontLatoLight}{15.025}{be a scientist and don't have much faith that we may be able}
+  \ALIUSPlacedTextContent{513.703}{200.355}{14.167}{ALIUSC595959}{\ALIUSFontCormorantRegular}{48.025}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{147.976}{200.355}{327.800}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{to describe that first-person subjective experience.}
   \ALIUSPlacedTextContent{72.025}{242.894}{471.443}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{That could be completely misguided because your faith is founded neither on}
   \ALIUSPlacedTextContent{72.025}{262.414}{471.421}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Newtonian nor Galilean specifications about what things mean in the scientific realms.}
   \ALIUSPlacedTextContent{72.025}{281.914}{471.343}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I have given up on the first-person subjective experience to be a scientist and I actually}
   \ALIUSPlacedTextContent{72.025}{301.414}{471.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{don't have much faith that we may be able to describe that first-person subjective}
   \ALIUSPlacedTextContent{72.025}{320.914}{60.942}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{experience.}
-  \ALIUSPlacedTextContent{72.025}{357.276}{146.647}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Now your turn, you have …}
-  \ALIUSPlacedTextContent{252.100}{373.776}{12.072}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{…}
+  \ALIUSPlacedTextContent{72.025}{357.276}{146.647}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Now your turn, you have â€¦}
+  \ALIUSPlacedTextContent{252.100}{373.776}{12.072}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{â€¦}
   \ALIUSPlacedTextContent{264.100}{373.776}{54.972}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{abundance}
   \ALIUSPlacedTextContent{319.130}{373.776}{25.524}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{and}
   \ALIUSPlacedTextContent{344.650}{373.776}{39.948}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{courage}
@@ -1440,7 +1445,7 @@
   \ALIUSPlacedTextContent{72.025}{681.539}{471.439}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{\ALIUSRefAnchor{aliusref-skipper-roseman-koroma-fejer-cook-kay-2005}Cook, R. S., Kay, P., \& Regier, T. (2005). The World Color Survey Database. In}
   \ALIUSPlacedTextContent{108.050}{698.539}{233.674}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Handbook of categorization in cognitive science}
   \ALIUSPlacedTextContent{341.900}{698.539}{127.826}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(pp. 223-241). Elsevier.}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1459,7 +1464,7 @@
   \fill[ALIUSC0000FF] (313.130bp,-543.920bp) rectangle ++(202.600bp,-0.750bp);
   \fill[ALIUSC0000FF] (108.050bp,-594.700bp) rectangle ++(250.600bp,-0.750bp);
   \fill[ALIUSC0000FF] (108.050bp,-696.475bp) rectangle ++(175.330bp,-0.750bp);
-  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper – The intimacy of psychedelics, language, and consciousness}
+  \ALIUSPlacedTextContent{72.025}{36.094}{376.171}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Skipper â€“ The intimacy of psychedelics, language, and consciousness}
   \ALIUSPlacedTextContent{517.730}{38.866}{7.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{11.000}{31}
   \ALIUSPlacedTextContent{72.025}{72.094}{471.016}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{\ALIUSRefAnchor{aliusref-skipper-roseman-koroma-fejer-chalmers-1997}Chalmers, D. J. (1997). The conscious mind: In search of a fundamental theory. Oxford}
   \ALIUSPlacedTextContent{108.050}{89.094}{67.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Paperbacks.}
@@ -1488,7 +1493,7 @@
   \ALIUSPlacedTextContent{464.700}{224.644}{22.116}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{279}
   \ALIUSPlacedTextContent{486.950}{224.644}{56.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(1), 50-55.}
   \ALIUSPlacedTextContent{108.050}{241.644}{269.028}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{14.000}{https://doi.org/10.1038/scientificamerican0798-50}
-  \ALIUSPlacedTextContent{72.025}{258.634}{471.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{\ALIUSRefAnchor{aliusref-skipper-roseman-koroma-fejer-gregoire-doucerain-2021}Grégoire, S., Doucerain, M., Morin, L., \& Finkelstein-Fox, L. (2021). The relationship}
+  \ALIUSPlacedTextContent{72.025}{258.634}{471.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{\ALIUSRefAnchor{aliusref-skipper-roseman-koroma-fejer-gregoire-doucerain-2021}GrÃ©goire, S., Doucerain, M., Morin, L., \& Finkelstein-Fox, L. (2021). The relationship}
   \ALIUSPlacedTextContent{108.050}{275.664}{435.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{between value-based actions, psychological distress and well-being: A multilevel}
   \ALIUSPlacedTextContent{108.050}{292.414}{31.262}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{diary}
   \ALIUSPlacedTextContent{152.276}{292.414}{35.770}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{study.}
@@ -1551,7 +1556,7 @@
   \ALIUSPlacedTextContent{469.700}{665.534}{17.736}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{25}
   \ALIUSPlacedTextContent{487.450}{665.534}{55.958}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(4), 1069.}
   \ALIUSPlacedTextContent{108.050}{682.539}{175.084}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{14.000}{https://doi.org/10.1037/a0033007}
-  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{72.025}{741.086}{112.024}{ALIUSC767171}{\ALIUSFontCormorantRegular}{11.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{406.170}{741.086}{108.317}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{11.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

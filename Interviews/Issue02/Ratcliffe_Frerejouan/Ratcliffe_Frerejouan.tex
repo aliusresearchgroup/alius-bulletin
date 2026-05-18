@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -195,7 +200,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{96}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.479}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{on depression emphasizes the centrality of interpersonal possibilities to existential}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{feeling, along with how our experiences, thoughts, and activities are shaped and}
@@ -210,12 +215,12 @@
   \ALIUSPlacedTextContent{255.668}{189.738}{60.879}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{anticipatory}
   \ALIUSPlacedTextContent{316.595}{189.738}{211.078}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{structure of experience in more detail}
   \ALIUSPlacedTextContent{71.080}{206.538}{452.636}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and also showing exactly how this structure is inextricable from the interpersonal.}
-  \ALIUSPlacedTextContent{105.160}{252.953}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{122.680}{252.953}{331.412}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Seemingly localized experiences, of the kind that are}
-  \ALIUSPlacedTextContent{122.680}{270.953}{346.550}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{often labeled as 'hallucinations' and 'delusions', tend to}
-  \ALIUSPlacedTextContent{122.680}{288.953}{351.110}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{arise in the context of wider-ranging phenomenological}
-  \ALIUSPlacedTextContent{122.680}{306.713}{270.712}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{disturbances involving the sense of reality.}
-  \ALIUSPlacedTextContent{395.320}{309.688}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{104.680}{252.953}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{132.529}{252.953}{331.412}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Seemingly localized experiences, of the kind that are}
+  \ALIUSPlacedTextContent{124.960}{270.713}{346.550}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{often labeled as 'hallucinations' and 'delusions', tend to}
+  \ALIUSPlacedTextContent{122.680}{288.473}{351.110}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{arise in the context of wider-ranging phenomenological}
+  \ALIUSPlacedTextContent{162.879}{306.233}{270.712}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{disturbances involving the sense of reality.}
+  \ALIUSPlacedTextContent{477.790}{306.233}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{351.498}{456.644}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{One of the reasons I ended up focusing on hallucinations and, more specifically,}
   \ALIUSPlacedTextContent{71.080}{368.298}{456.587}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"auditory verbal hallucinations" (something of a misnomer, as will become clear) is}
   \ALIUSPlacedTextContent{71.080}{385.338}{456.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that I became involved in a project called "Hearing the Voice", based at Durham}
@@ -246,8 +251,8 @@
   \ALIUSPlacedTextContent{71.080}{687.978}{456.641}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The latter is more permissive, as two experiences could turn out to be quite different}
   \ALIUSPlacedTextContent{71.080}{705.018}{451.193}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in kind, even where the subject is constitutionally incapable of telling them apart.}
   \ALIUSPlacedTextContent{71.080}{734.058}{456.440}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Turning first to (a), it is pretty clear that real hallucinations are messier than}
-  \ALIUSPlacedTextContent{71.080}{750.858}{456.588}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{philosophers' hallucinations—they are seldom, if ever, phenomenologically identical}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{750.858}{456.588}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{philosophers' hallucinationsâ€”they are seldom, if ever, phenomenologically identical}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -257,7 +262,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{97}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.600}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to veridical perceptual experiences. However, a more interesting point is that they}
   \ALIUSPlacedTextContent{71.080}{87.978}{149.726}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{are often quite different in}
@@ -300,7 +305,7 @@
   \ALIUSPlacedTextContent{71.080}{717.258}{456.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{much messier. While content and sense are to be distinguished, content does at least}
   \ALIUSPlacedTextContent{71.080}{734.298}{456.617}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{make some contribution to sense. Consequently, when one has the sense of}
   \ALIUSPlacedTextContent{71.080}{751.338}{456.470}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{perceiving something, but without the usual perceptual content, that sense is partial,}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -310,7 +315,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{98}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.579}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{incomplete. In addition, there is often a feeling of incongruity, tension. The relevant}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{experience is immediately recognized as unusual, as involving a kind of}
@@ -351,7 +356,7 @@
   \ALIUSPlacedTextContent{71.080}{703.818}{456.650}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to insist on qualitative distinctions between experiences that are typical of}
   \ALIUSPlacedTextContent{71.080}{720.858}{456.612}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{schizophrenia and of other conditions, distinctions that are in many cases}
   \ALIUSPlacedTextContent{71.080}{737.658}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{questionable. However, the main focus of my critique is on the claim that}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -361,7 +366,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{99}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.494}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{schizophrenia originates in a disturbance of minimal self. There are two aspects to}
   \ALIUSPlacedTextContent{71.080}{87.978}{75.468}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{this critique.}
@@ -372,7 +377,7 @@
   \ALIUSPlacedTextContent{71.080}{184.698}{456.600}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{experiences emanate, as something that experiences presuppose, or as something}
   \ALIUSPlacedTextContent{71.080}{201.738}{456.664}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that is recognized reflectively. Rather, it is integral to the structure of experience,}
   \ALIUSPlacedTextContent{71.080}{218.538}{456.512}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inseparable from it, and grasped with a kind of phenomenological immediacy. But}
-  \ALIUSPlacedTextContent{71.080}{235.578}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{what, exactly, does it consist of—what more can be said? Repeated appeals to me-}
+  \ALIUSPlacedTextContent{71.080}{235.578}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{what, exactly, does it consist ofâ€”what more can be said? Repeated appeals to me-}
   \ALIUSPlacedTextContent{71.080}{252.618}{456.464}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{ness, mine-ness, what-it-is-like-for-me-ness, and the like do not really tell us very}
   \ALIUSPlacedTextContent{71.080}{269.418}{456.323}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{much. Thus, one of the things I try to do in the book is formulate a more specific}
   \ALIUSPlacedTextContent{71.080}{286.458}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and detailed account of what "minimal self" (construed phenomenologically)}
@@ -380,20 +385,20 @@
   \ALIUSPlacedTextContent{431.950}{303.498}{95.703}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{modal structure of}
   \ALIUSPlacedTextContent{71.080}{320.298}{68.253}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{intentionality}
   \ALIUSPlacedTextContent{139.384}{320.298}{388.246}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{, by which I mean a pre-reflective sense of the various types of}
-  \ALIUSPlacedTextContent{71.080}{337.338}{456.541}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{intentional state as distinct from one another—"perceiving" as distinct from}
+  \ALIUSPlacedTextContent{71.080}{337.338}{456.541}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{intentional state as distinct from one anotherâ€”"perceiving" as distinct from}
   \ALIUSPlacedTextContent{71.080}{354.138}{456.574}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"imagining", "imagining" from "remembering", etc. I offer various arguments for this}
   \ALIUSPlacedTextContent{71.080}{371.178}{456.409}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{move. For instance, if one could not distinguish perceiving from remembering and}
   \ALIUSPlacedTextContent{71.080}{388.218}{456.547}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{anticipating, one would lack any sense of temporal location. And, if one could not}
   \ALIUSPlacedTextContent{71.080}{405.018}{456.640}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{distinguish perceiving from imagining, one would similarly lack any sense of spatial}
   \ALIUSPlacedTextContent{71.080}{422.058}{456.402}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{location. Without any sense of spatial or temporal location, it is difficult to see how}
   \ALIUSPlacedTextContent{71.080}{439.098}{395.419}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{any kind of experiential self or perspectival structure could be retained.}
-  \ALIUSPlacedTextContent{117.160}{486.473}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{116.680}{486.473}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{134.680}{486.473}{330.509}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{My proposal is that we identify minimal self with the}
-  \ALIUSPlacedTextContent{134.680}{504.473}{191.541}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{modal structure of intentionality}
-  \ALIUSPlacedTextContent{326.200}{504.473}{120.208}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{, by which I mean a}
-  \ALIUSPlacedTextContent{134.680}{522.473}{272.115}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{pre-reflective sense of the various types of}
-  \ALIUSPlacedTextContent{134.680}{540.233}{290.632}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{intentional state as distinct from one another.}
-  \ALIUSPlacedTextContent{431.560}{541.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{204.164}{504.233}{191.541}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{modal structure of intentionality}
+  \ALIUSPlacedTextContent{239.831}{504.233}{120.208}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{, by which I mean a}
+  \ALIUSPlacedTextContent{163.877}{521.993}{272.115}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{pre-reflective sense of the various types of}
+  \ALIUSPlacedTextContent{154.619}{539.753}{290.632}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{intentional state as distinct from one another.}
+  \ALIUSPlacedTextContent{469.189}{539.753}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{583.818}{337.357}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{One could argue that the modal structure of intentionality is}
   \ALIUSPlacedTextContent{408.931}{583.818}{46.404}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{necessary}
   \ALIUSPlacedTextContent{455.382}{583.818}{72.265}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{for minimal}
@@ -412,7 +417,7 @@
   \ALIUSPlacedTextContent{71.080}{719.418}{456.492}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{intentionality or at least concede that modal structure is essential to it. If one rejects}
   \ALIUSPlacedTextContent{71.080}{736.458}{456.539}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{this conclusion and insists that minimal self is something else altogether, perhaps}
   \ALIUSPlacedTextContent{71.080}{753.258}{456.570}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{something "even more minimal", then one should stop trying to account for}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -422,7 +427,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{505.240}{35.700}{21.224}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{100}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{schizophrenia in terms of disordered minimal self. Given that the relevant symptoms}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.452}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{originate in disturbances of the modal structure of intentionality, any appeal to an}
@@ -475,7 +480,7 @@
   \ALIUSPlacedTextContent{71.080}{751.338}{336.377}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Development of the structure of intentionality is, if you like,}
   \ALIUSPlacedTextContent{407.842}{751.338}{46.103}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{entrusted}
   \ALIUSPlacedTextContent{453.957}{751.338}{73.711}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to the social}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -485,7 +490,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{505.240}{35.700}{21.224}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{101}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.588}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{world, such that it can be derailed in one or another way by certain interpersonal}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.486}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{processes. Moreover, that structure is interpersonally and socially sustained even in}
@@ -537,7 +542,7 @@
   \ALIUSPlacedTextContent{71.080}{712.458}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The next step in the argument is to show that this style is inextricable from one's}
   \ALIUSPlacedTextContent{71.080}{729.258}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{anticipated and actual interactions with other people. There are, I show, all sorts of}
   \ALIUSPlacedTextContent{71.080}{746.298}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{ways in which other people serve to sustain, repair, and disrupt the anticipatory style}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -547,7 +552,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{505.240}{35.700}{21.224}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{102}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.617}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of experience. Consider a world in which other people in general offer only one or}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{another form of threat, a world where there is no prospect of felt interpersonal}
@@ -573,11 +578,11 @@
   \ALIUSPlacedTextContent{71.080}{439.098}{456.585}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{structure, riddled with doubt, no longer shaped by long-term projects and associated}
   \ALIUSPlacedTextContent{71.080}{455.898}{456.503}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{configurations of equipment, and divorced from practical activities, becomes closer}
   \ALIUSPlacedTextContent{71.080}{472.938}{189.146}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in structure to certain imaginings.}
-  \ALIUSPlacedTextContent{104.920}{518.633}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{122.440}{518.633}{335.095}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Experiences that tend to be associated with the label}
-  \ALIUSPlacedTextContent{122.440}{536.633}{348.434}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{'schizophrenia' need to be placed in their interpersonal}
-  \ALIUSPlacedTextContent{380.920}{553.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{122.440}{554.393}{258.232}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{contexts and re-interpreted accordingly.}
+  \ALIUSPlacedTextContent{104.440}{517.218}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{129.110}{517.218}{335.095}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Experiences that tend to be associated with the label}
+  \ALIUSPlacedTextContent{122.440}{534.978}{348.434}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{'schizophrenia' need to be placed in their interpersonal}
+  \ALIUSPlacedTextContent{474.874}{552.738}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{167.541}{552.738}{258.232}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{contexts and re-interpreted accordingly.}
   \ALIUSPlacedTextContent{71.080}{588.858}{456.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Types of experience along these and similar lines are, I suggest, consistent with}
   \ALIUSPlacedTextContent{71.080}{605.658}{456.423}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{various different psychiatric diagnoses. A global loss of trust in other people and an}
   \ALIUSPlacedTextContent{71.080}{622.698}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{interpersonal world that offers only threat are associated with certain post-}
@@ -588,7 +593,7 @@
   \ALIUSPlacedTextContent{71.080}{707.418}{456.498}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{grounds for regarding disorders of self as somehow more basic than disorders of}
   \ALIUSPlacedTextContent{71.080}{724.458}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{interpersonal relatedness. The two are inseparable and the relationship is one of}
   \ALIUSPlacedTextContent{71.080}{741.258}{114.513}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mutual implication.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -598,7 +603,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{505.240}{35.700}{21.224}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{103}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Effectively, what I end up doing in the book is steering a middle path between the}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.486}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{self-disorder approach, which has the virtue of acknowledging how various}
@@ -617,7 +622,7 @@
   \ALIUSPlacedTextContent{71.080}{309.568}{455.848}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{neither full-blown perceptions nor thoughts, then how should we characterize}
   \ALIUSPlacedTextContent{71.080}{325.168}{35.969}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{them?}
   \ALIUSPlacedTextContent{71.080}{352.698}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{As I mentioned earlier, the label "AVH" encompasses a range of importantly}
-  \ALIUSPlacedTextContent{71.080}{369.738}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{different experiences. Some of these plausibly resemble—to varying degrees—}
+  \ALIUSPlacedTextContent{71.080}{369.738}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{different experiences. Some of these plausibly resembleâ€”to varying degreesâ€”}
   \ALIUSPlacedTextContent{71.080}{386.538}{456.499}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{veridical auditory experiences, but many others do not. What we have in these latter}
   \ALIUSPlacedTextContent{71.080}{403.578}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{cases is a variably complete sense of perceiving something, which arises in the}
   \ALIUSPlacedTextContent{71.080}{420.618}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{absence of the usual sensory perceptual content. The sense of perceiving might}
@@ -639,7 +644,7 @@
   \ALIUSPlacedTextContent{71.080}{686.778}{456.546}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Nothing is experienced as "real" or "there" in quite the way it once was, thus}
   \ALIUSPlacedTextContent{71.080}{703.818}{456.398}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{rendering the person more susceptible to localized disturbances of intentionality}
   \ALIUSPlacedTextContent{71.080}{720.858}{179.935}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that are more extreme in nature.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -649,7 +654,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{505.240}{35.700}{21.224}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{104}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.855}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Beyond your interest in hallucinatory states, you insist on the fact that an analysis}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of these unusual experiences allows us to better understand how our experience of}
@@ -663,7 +668,7 @@
   \ALIUSPlacedTextContent{71.080}{225.978}{456.651}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenology of depression and I will probably have a bit more to say about}
   \ALIUSPlacedTextContent{71.080}{243.018}{456.501}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{hallucinations too. I may also end up getting dragged further into debates}
   \ALIUSPlacedTextContent{71.080}{260.058}{456.428}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{concerning the existence and nature of minimal self. I don't want to, but it's proving}
-  \ALIUSPlacedTextContent{71.080}{276.858}{456.525}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{irresistible—like a really nasty itch that you have to scratch, even though you know}
+  \ALIUSPlacedTextContent{71.080}{276.858}{456.525}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{irresistibleâ€”like a really nasty itch that you have to scratch, even though you know}
   \ALIUSPlacedTextContent{71.080}{293.898}{207.360}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that doing so will only make it worse.}
   \ALIUSPlacedTextContent{71.080}{322.938}{456.575}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{My next major project is likely to be on the nature of "grief", something that is}
   \ALIUSPlacedTextContent{71.080}{339.738}{456.616}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{complicated, multi-faceted, highly variable, poorly understood, and philosophically}
@@ -673,12 +678,12 @@
   \ALIUSPlacedTextContent{71.080}{407.658}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{hallucinations", including "voices", are commonplace but again poorly understood.}
   \ALIUSPlacedTextContent{71.080}{424.698}{456.529}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The topic of grief also fits in with my wider interest in emotions, feelings, and}
   \ALIUSPlacedTextContent{71.080}{441.498}{132.797}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{interpersonal relations.}
-  \ALIUSPlacedTextContent{105.160}{486.713}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{122.680}{486.713}{317.645}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Grief does not simply conclude at some point with}
-  \ALIUSPlacedTextContent{122.680}{504.713}{310.548}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{'letting go' of the deceased. Rather, people retain}
-  \ALIUSPlacedTextContent{122.680}{522.713}{324.952}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{various different types of connection with the dead}
-  \ALIUSPlacedTextContent{122.680}{540.473}{328.552}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{which continue to play important roles in their lives.}
-  \ALIUSPlacedTextContent{456.040}{544.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{104.680}{486.713}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{128.134}{486.713}{317.645}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Grief does not simply conclude at some point with}
+  \ALIUSPlacedTextContent{131.682}{504.473}{310.548}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{'letting go' of the deceased. Rather, people retain}
+  \ALIUSPlacedTextContent{124.480}{522.233}{324.952}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{various different types of connection with the dead}
+  \ALIUSPlacedTextContent{122.680}{539.993}{328.552}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{which continue to play important roles in their lives.}
+  \ALIUSPlacedTextContent{455.232}{539.993}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{586.218}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{One of the things I want to do is explore in depth the many ways in which}
   \ALIUSPlacedTextContent{71.080}{603.258}{456.724}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{experience, thought, and activity are interpersonally regulated, something that is}
   \ALIUSPlacedTextContent{71.080}{620.298}{456.468}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{rendered particularly salient by bereavement. But what I'm most excited about here}
@@ -689,7 +694,7 @@
   \ALIUSPlacedTextContent{71.080}{705.018}{456.482}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{conclude at some point with "letting go" of the deceased, ceasing to relate to her.}
   \ALIUSPlacedTextContent{71.080}{722.058}{456.473}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Rather, people retain various different types of connection with the dead,}
   \ALIUSPlacedTextContent{71.080}{738.858}{456.529}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{connections that can continue to play important roles in their lives. I'd like to widen}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -699,14 +704,14 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{505.240}{35.700}{21.224}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{105}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.630}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{social cognition research to accommodate these relations in all their diversity}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.593}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(including their cultural diversity), and also to address how our relations with the}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.513}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{living and the dead interact with each other. After that, I might try to tackle the}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.506}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{topic of temporal experience, something that I've been working towards for a while}
   \ALIUSPlacedTextContent{71.080}{138.858}{245.677}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{now but still feel thoroughly intimidated by.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -716,18 +721,18 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{505.240}{35.700}{21.224}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{106}
   \ALIUSPlacedTextContent{263.991}{71.444}{67.420}{ALIUSC000000}{\ALIUSFontLatoLight}{13.731}{References}
-  \ALIUSPlacedTextContent{71.080}{108.305}{456.279}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-baillarger-1846}Baillarger, J. 1846. De l'influence à l'état intermédiaire à la veille et au sommeil sur la}
-  \ALIUSPlacedTextContent{106.530}{124.145}{316.507}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{production et la marche des hallucinations. Paris: JB. Baillière.}
+  \ALIUSPlacedTextContent{71.080}{108.305}{456.279}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-baillarger-1846}Baillarger, J. 1846. De l'influence Ã  l'Ã©tat intermÃ©diaire Ã  la veille et au sommeil sur la}
+  \ALIUSPlacedTextContent{106.530}{124.145}{316.507}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{production et la marche des hallucinations. Paris: JB. BailliÃ¨re.}
   \ALIUSPlacedTextContent{71.080}{151.985}{456.397}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-macpherson-2013}Macpherson, F. 2013. The philosophy and psychology of hallucination: An introduction. In}
   \ALIUSPlacedTextContent{106.530}{167.585}{417.837}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Hallucination: Philosophy and Psychology, ed. F. Macpherson and D. Platchias, 1-}
   \ALIUSPlacedTextContent{106.530}{183.425}{163.450}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{38. Cambridge, MA: MIT Press.}
   \ALIUSPlacedTextContent{71.080}{211.025}{456.347}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-parnas-2013}Parnas, J. 2013. On psychosis: Karl Jaspers and beyond. In One Century of Karl Jaspers'}
   \ALIUSPlacedTextContent{106.530}{226.865}{420.855}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{General Psychopathology, ed. G. Stanghellini and T. Fuchs, 208-228. Oxford:}
   \ALIUSPlacedTextContent{106.530}{242.705}{127.804}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Oxford University Press.}
-  \ALIUSPlacedTextContent{71.080}{270.305}{456.232}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-raballo-s-bye-2009}Raballo, A., D. Sæbye, and J. Parnas. 2009. Looking at the Schizophrenia Spectrum}
+  \ALIUSPlacedTextContent{71.080}{270.305}{456.232}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-raballo-s-bye-2009}Raballo, A., D. SÃ¦bye, and J. Parnas. 2009. Looking at the Schizophrenia Spectrum}
   \ALIUSPlacedTextContent{106.530}{286.145}{420.845}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Through the Prism of Self-disorders: An Empirical Study. Schizophrenia Bulletin}
   \ALIUSPlacedTextContent{106.530}{301.745}{57.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{37: 344-351.}
   \ALIUSPlacedTextContent{71.080}{329.585}{456.194}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-ratcliffe-2008}Ratcliffe, M. 2008. Feelings of Being: Phenomenology, Psychiatry, and the Sense of Reality.}
@@ -751,7 +756,7 @@
   \ALIUSPlacedTextContent{106.530}{697.025}{49.442}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Springer.}
   \ALIUSPlacedTextContent{71.080}{724.625}{456.341}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-zahavi-2014}Zahavi, D. 2014. Self and Other: Exploring Subjectivity, Empathy, and Shame. Oxford:}
   \ALIUSPlacedTextContent{106.530}{740.465}{127.804}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Oxford University Press.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -761,12 +766,12 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-48.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe – Verbal Hallucinations, Intentionality, and Interpersonal Experience}
+  \ALIUSPlacedTextContent{71.080}{35.460}{374.853}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{M. Ratcliffe â€“ Verbal Hallucinations, Intentionality, and Interpersonal Experience}
   \ALIUSPlacedTextContent{505.240}{35.700}{21.224}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{107}
   \ALIUSPlacedTextContent{71.080}{70.865}{456.414}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-ratcliffe-frerejouan-zahavi-2017}Zahavi, D. 2017. Thin, Thinner, Thinnest. In C. Durt, T. Fuchs, and C. Tewes, eds.}
   \ALIUSPlacedTextContent{106.530}{86.705}{420.867}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Embodiment, Enaction, and Culture: Investigating the Constitution of the Shared}
   \ALIUSPlacedTextContent{106.530}{102.305}{226.785}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{World. Cambridge, MA: MIT Press: 193-199.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

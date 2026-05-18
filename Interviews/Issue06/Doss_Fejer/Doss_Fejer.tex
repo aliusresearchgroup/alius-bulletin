@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -247,7 +252,7 @@
   \ALIUSPlacedTextContent{319.954}{722.598}{163.458}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Neuropsychopharmacologists,}
   \ALIUSPlacedTextContent{491.184}{722.598}{18.766}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{but}
   \ALIUSPlacedTextContent{516.972}{722.598}{4.648}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -258,7 +263,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-611.329bp) {\includegraphics[width=42.750bp,height=63.000bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p002-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (489.750bp,-695.326bp) {\includegraphics[width=105.750bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p002-b010.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{42.833}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{identify}
   \ALIUSPlacedTextContent{138.354}{83.840}{10.595}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{as}
   \ALIUSPlacedTextContent{154.471}{83.840}{25.554}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{both}
@@ -457,12 +462,12 @@
   \ALIUSPlacedTextContent{510.038}{549.085}{11.435}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to}
   \ALIUSPlacedTextContent{90.000}{568.582}{330.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{broaden my research interests and make them more relevant.}
   \ALIUSPlacedTextContent{130.609}{631.576}{350.557}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{One of the other major benefits of cognitive psychology}
-  \ALIUSPlacedTextContent{141.518}{652.201}{288.157}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{[…] is that you can try to set yourself up to fail.}
-  \ALIUSPlacedTextContent{435.443}{652.201}{34.815}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{[…] In}
-  \ALIUSPlacedTextContent{150.068}{672.826}{311.647}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{contrast, psychedelic drug studies … investigating}
+  \ALIUSPlacedTextContent{141.518}{652.201}{288.157}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{[â€¦] is that you can try to set yourself up to fail.}
+  \ALIUSPlacedTextContent{435.443}{652.201}{34.815}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{[â€¦] In}
+  \ALIUSPlacedTextContent{150.068}{672.826}{311.647}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{contrast, psychedelic drug studies â€¦ investigating}
   \ALIUSPlacedTextContent{133.609}{693.451}{344.572}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{subjective effects do not take the risk of producing null}
   \ALIUSPlacedTextContent{282.634}{714.076}{46.515}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{results.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -473,7 +478,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-329.840bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p003-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (484.500bp,-396.552bp) {\includegraphics[width=111.500bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p003-b009.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{126.000}{83.840}{14.429}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{To}
   \ALIUSPlacedTextContent{145.199}{83.840}{23.468}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{date}
   \ALIUSPlacedTextContent{173.439}{83.840}{347.751}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{,the most high-impact paper that I have published was also the}
@@ -722,7 +727,7 @@
   \ALIUSPlacedTextContent{359.162}{726.747}{62.031}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{unexpected}
   \ALIUSPlacedTextContent{425.964}{726.747}{95.657}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{results, and using}
   \ALIUSPlacedTextContent{90.000}{748.113}{313.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{methods of cognitive psychology is a good way to do that.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -731,7 +736,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{431.581}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Is there something particularly insightful about using drug interventions in the field}
   \ALIUSPlacedTextContent{90.000}{100.400}{328.196}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{of cognitive psychology, or more specifically, memory research?}
   \ALIUSPlacedTextContent{126.000}{128.960}{40.413}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Charan}
@@ -999,7 +1004,7 @@
   \ALIUSPlacedTextContent{239.199}{733.792}{11.435}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to}
   \ALIUSPlacedTextContent{255.405}{733.792}{12.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{be}
   \ALIUSPlacedTextContent{273.024}{733.792}{248.642}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the first time it encounters that sound. I also}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1008,7 +1013,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{41.294}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{wonder}
   \ALIUSPlacedTextContent{136.065}{83.840}{44.596}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{whether}
   \ALIUSPlacedTextContent{185.432}{83.840}{8.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{it}
@@ -1246,7 +1251,7 @@
   \ALIUSPlacedTextContent{420.801}{737.765}{50.361}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{tragically}
   \ALIUSPlacedTextContent{475.933}{737.765}{25.008}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{took}
   \ALIUSPlacedTextContent{505.711}{737.765}{15.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{his}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1257,7 +1262,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-586.686bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p006-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (497.250bp,-677.594bp) {\includegraphics[width=98.250bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p006-b010.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{431.177}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{own life. This incident made me reflect on the bizarre effects of hallucinogens,}
   \ALIUSPlacedTextContent{90.000}{103.337}{24.364}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{such}
   \ALIUSPlacedTextContent{120.635}{103.337}{10.595}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{as}
@@ -1458,7 +1463,7 @@
   \ALIUSPlacedTextContent{330.261}{729.423}{8.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{is}
   \ALIUSPlacedTextContent{343.584}{729.423}{178.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{largely due to how the nature of}
   \ALIUSPlacedTextContent{90.000}{746.377}{431.287}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the work creates the impression of bias. I hesitate to label it as 'bad science'. It}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1467,7 +1472,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{431.492}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{is not intended as a criticism of individual researchers, but rather the approach}
   \ALIUSPlacedTextContent{90.000}{100.794}{431.382}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the psychedelic field takes as a whole. In this respect, I think some biases affect}
   \ALIUSPlacedTextContent{90.000}{117.748}{61.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{researchers'}
@@ -1751,7 +1756,7 @@
   \ALIUSPlacedTextContent{420.764}{745.046}{50.696}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{estimates}
   \ALIUSPlacedTextContent{478.482}{745.046}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{496.476}{745.046}{24.937}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{time}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1762,7 +1767,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-351.334bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p008-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (489.000bp,-427.854bp) {\includegraphics[width=106.500bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p008-b012.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{47.284}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{duration}
   \ALIUSPlacedTextContent{147.304}{83.840}{40.692}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{became}
   \ALIUSPlacedTextContent{198.017}{83.840}{28.015}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{more}
@@ -1852,7 +1857,7 @@
   \ALIUSPlacedTextContent{129.173}{372.058}{353.437}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{I think personal experiences may be helpful in examining}
   \ALIUSPlacedTextContent{141.964}{390.058}{327.847}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{some basic low-level perceptual phenomena such as}
   \ALIUSPlacedTextContent{147.833}{408.058}{316.117}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{color constancy. A researcher skilled in perceptual}
-  \ALIUSPlacedTextContent{127.549}{426.058}{356.692}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{studies … might gain valuable insights from a psychedelic}
+  \ALIUSPlacedTextContent{127.549}{426.058}{356.692}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{studies â€¦ might gain valuable insights from a psychedelic}
   \ALIUSPlacedTextContent{269.607}{444.058}{72.570}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{experience.}
   \ALIUSPlacedTextContent{90.000}{479.012}{31.344}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Could}
   \ALIUSPlacedTextContent{128.910}{479.012}{15.480}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{we}
@@ -1956,7 +1961,7 @@
   \ALIUSPlacedTextContent{401.131}{743.746}{28.016}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{more}
   \ALIUSPlacedTextContent{433.917}{743.746}{58.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{prominent}
   \ALIUSPlacedTextContent{496.871}{743.746}{24.812}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{than}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1965,7 +1970,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{431.635}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{greens and reds? Understanding that a white wall reflects a spectrum of colors,}
   \ALIUSPlacedTextContent{90.000}{100.794}{23.510}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{they}
   \ALIUSPlacedTextContent{121.281}{100.794}{32.437}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{might}
@@ -2121,7 +2126,7 @@
   \ALIUSPlacedTextContent{221.614}{474.355}{36.132}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{(Yaden}
   \ALIUSPlacedTextContent{261.562}{474.355}{10.764}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{et}
   \ALIUSPlacedTextContent{276.142}{474.355}{245.487}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{al., 2021; Yaden et al., 2017). Fortier-Davy and}
-  \ALIUSPlacedTextContent{90.000}{490.915}{40.740}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Millière}
+  \ALIUSPlacedTextContent{90.000}{490.915}{40.740}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{MilliÃ¨re}
   \ALIUSPlacedTextContent{139.805}{490.915}{35.040}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{(2020)}
   \ALIUSPlacedTextContent{183.911}{490.915}{21.036}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{also}
   \ALIUSPlacedTextContent{213.263}{490.915}{24.108}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{note}
@@ -2247,7 +2252,7 @@
   \ALIUSPlacedTextContent{432.233}{741.285}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{457.427}{741.285}{45.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{universe}
   \ALIUSPlacedTextContent{509.716}{741.285}{11.798}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{or}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -2274,7 +2279,7 @@
   \fill[ALIUSCFFFFFF] (90.000bp,-738.553bp) rectangle ++(194.828bp,-16.954bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-216.769bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p010-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (496.500bp,-329.722bp) {\includegraphics[width=99.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p010-b010.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{431.556}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{consciousness that often doesn't translate into their everyday lives. People may}
   \ALIUSPlacedTextContent{90.000}{100.794}{34.311}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{report}
   \ALIUSPlacedTextContent{129.083}{100.794}{22.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that}
@@ -2313,7 +2318,7 @@
   \ALIUSPlacedTextContent{359.512}{168.610}{162.066}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{machine elves on DMT, some}
   \ALIUSPlacedTextContent{90.000}{185.564}{353.723}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{researchers seem to take the notion that they may exist, seriously.}
   \ALIUSPlacedTextContent{129.934}{237.472}{351.907}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{I maintain that it is crucial to approach these claims with}
-  \ALIUSPlacedTextContent{148.662}{255.472}{314.452}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{skepticism, akin to … reports from individuals with}
+  \ALIUSPlacedTextContent{148.662}{255.472}{314.452}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{skepticism, akin to â€¦ reports from individuals with}
   \ALIUSPlacedTextContent{137.164}{273.472}{337.447}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{schizophrenia, recognizing that a heightened sense of}
   \ALIUSPlacedTextContent{138.990}{291.472}{333.795}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{reality does not equate to actual reality. But for some}
   \ALIUSPlacedTextContent{142.782}{309.472}{326.212}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{reason when people report seeing machine elves on}
@@ -2466,7 +2471,7 @@
   \ALIUSPlacedTextContent{361.665}{738.553}{22.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that}
   \ALIUSPlacedTextContent{390.242}{738.553}{62.380}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{psychedelic}
   \ALIUSPlacedTextContent{458.894}{738.553}{62.674}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{experiences}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -2475,7 +2480,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{41.546}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{provide}
   \ALIUSPlacedTextContent{140.817}{83.840}{5.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{a}
   \ALIUSPlacedTextContent{155.954}{83.840}{60.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{heightened}
@@ -2724,7 +2729,7 @@
   \ALIUSPlacedTextContent{415.855}{672.661}{88.855}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{over-attribution}
   \ALIUSPlacedTextContent{510.230}{672.661}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{90.000}{689.615}{270.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{various subjective phenomena to prediction error.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -2735,7 +2740,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-364.721bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p012-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (487.500bp,-409.426bp) {\includegraphics[width=108.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p012-b007.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{126.000}{116.115}{17.773}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{My}
   \ALIUSPlacedTextContent{149.294}{116.115}{29.219}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{other}
   \ALIUSPlacedTextContent{184.034}{116.115}{38.369}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{critical}
@@ -2886,7 +2891,7 @@
   \ALIUSPlacedTextContent{90.000}{563.195}{50.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{influence}
   \ALIUSPlacedTextContent{145.728}{563.195}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{162.222}{563.195}{67.109}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{psychedelics}
-  \ALIUSPlacedTextContent{234.853}{563.195}{11.620}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{—}
+  \ALIUSPlacedTextContent{234.853}{563.195}{11.620}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{â€”}
   \ALIUSPlacedTextContent{251.991}{563.195}{23.077}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{who}
   \ALIUSPlacedTextContent{279.838}{563.195}{28.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{often}
   \ALIUSPlacedTextContent{312.974}{563.195}{45.114}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{describe}
@@ -2896,9 +2901,9 @@
   \ALIUSPlacedTextContent{475.561}{563.195}{29.330}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{novel}
   \ALIUSPlacedTextContent{509.663}{563.195}{11.798}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{or}
   \ALIUSPlacedTextContent{90.000}{580.149}{54.797}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{surprising}
-  \ALIUSPlacedTextContent{149.568}{580.149}{11.620}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{—}
+  \ALIUSPlacedTextContent{149.568}{580.149}{11.620}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{â€”}
   \ALIUSPlacedTextContent{165.955}{580.149}{355.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{it falls short in explaining other psychedelic experiences, such as}
-  \ALIUSPlacedTextContent{90.000}{597.104}{22.335}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{déjà}
+  \ALIUSPlacedTextContent{90.000}{597.104}{22.335}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{dÃ©jÃ }
   \ALIUSPlacedTextContent{119.356}{597.104}{15.729}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{vu.}
   \ALIUSPlacedTextContent{142.107}{597.104}{29.960}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Some}
   \ALIUSPlacedTextContent{179.089}{597.104}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
@@ -2961,7 +2966,7 @@
   \ALIUSPlacedTextContent{448.604}{732.735}{13.281}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{its}
   \ALIUSPlacedTextContent{470.407}{732.735}{50.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{purposes.}
   \ALIUSPlacedTextContent{90.000}{749.688}{431.079}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Currently, there's a tendency to generalize findings based on a small number of}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -2970,7 +2975,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{68.689}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{participants.}
   \ALIUSPlacedTextContent{163.462}{83.840}{64.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Everybody's}
   \ALIUSPlacedTextContent{232.488}{83.840}{72.763}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{piggybacking}
@@ -3189,7 +3194,7 @@
   \ALIUSPlacedTextContent{202.100}{738.348}{43.071}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{propose}
   \ALIUSPlacedTextContent{249.942}{738.348}{22.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that}
   \ALIUSPlacedTextContent{277.020}{738.348}{244.666}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{there are likely cases of facilitated top-down}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -3200,7 +3205,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-469.498bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p014-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (505.500bp,-527.486bp) {\includegraphics[width=90.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p014-b009.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{56.812}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{processing}
   \ALIUSPlacedTextContent{153.082}{83.840}{32.101}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{under}
   \ALIUSPlacedTextContent{190.705}{83.840}{70.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{psychedelics,}
@@ -3433,7 +3438,7 @@
   \ALIUSPlacedTextContent{394.633}{742.776}{5.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{a}
   \ALIUSPlacedTextContent{406.770}{742.776}{59.652}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{completely}
   \ALIUSPlacedTextContent{472.693}{742.776}{48.991}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{flattened}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -3442,7 +3447,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.400}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{53.087}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{hierarchy.}
   \ALIUSPlacedTextContent{153.860}{83.840}{60.000}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Essentially,}
   \ALIUSPlacedTextContent{224.632}{83.840}{20.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{this}
@@ -3505,7 +3510,7 @@
   \ALIUSPlacedTextContent{318.464}{285.712}{63.162}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{dissolution,}
   \ALIUSPlacedTextContent{386.399}{285.712}{42.315}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{another}
   \ALIUSPlacedTextContent{433.486}{285.712}{29.611}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{study}
-  \ALIUSPlacedTextContent{467.867}{285.712}{53.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{by Müller}
+  \ALIUSPlacedTextContent{467.867}{285.712}{53.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{by MÃ¼ller}
   \ALIUSPlacedTextContent{90.000}{302.666}{431.053}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{et al. (2018) failed to replicate this finding despite controlling for head motion}
   \ALIUSPlacedTextContent{90.000}{319.620}{20.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{and}
   \ALIUSPlacedTextContent{115.035}{319.620}{36.033}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{having}
@@ -3690,7 +3695,7 @@
   \ALIUSPlacedTextContent{434.675}{743.470}{22.936}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{This}
   \ALIUSPlacedTextContent{463.883}{743.470}{22.475}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{may}
   \ALIUSPlacedTextContent{492.628}{743.470}{28.883}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{cause}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -3701,7 +3706,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-344.786bp) {\includegraphics[width=39.750bp,height=58.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p016-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (491.250bp,-407.600bp) {\includegraphics[width=104.250bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p016-b008.png}};
-  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{28.926}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{brain}
   \ALIUSPlacedTextContent{125.946}{83.840}{40.875}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{activity}
   \ALIUSPlacedTextContent{173.841}{83.840}{37.614}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{similar}
@@ -3916,7 +3921,7 @@
   \ALIUSPlacedTextContent{271.773}{727.318}{49.983}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{cognitive}
   \ALIUSPlacedTextContent{326.527}{727.318}{71.950}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{psychologists}
   \ALIUSPlacedTextContent{403.249}{727.318}{118.216}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{aim to enter the field}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -3925,7 +3930,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{106.494}{83.840}{70.090}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{neuroscience}
   \ALIUSPlacedTextContent{182.105}{83.840}{11.058}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{in}
@@ -4156,7 +4161,7 @@
   \ALIUSPlacedTextContent{399.558}{745.225}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{425.503}{745.225}{76.708}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{R-enantiomer}
   \ALIUSPlacedTextContent{510.732}{745.225}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -4165,7 +4170,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{187.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{methylenedioxyethylamphetamine}
   \ALIUSPlacedTextContent{290.827}{83.840}{47.338}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(MDEA)}
   \ALIUSPlacedTextContent{351.187}{83.840}{18.766}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{but}
@@ -4427,7 +4432,7 @@
   \ALIUSPlacedTextContent{409.907}{745.426}{26.435}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{tried}
   \ALIUSPlacedTextContent{443.362}{745.426}{38.119}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{certain}
   \ALIUSPlacedTextContent{488.501}{745.426}{32.869}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{drugs.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -4438,7 +4443,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-319.992bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p019-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (495.000bp,-367.992bp) {\includegraphics[width=100.500bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p019-b011.png}};
-  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{70.874}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Investigating}
   \ALIUSPlacedTextContent{170.145}{83.840}{42.063}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{obvious}
   \ALIUSPlacedTextContent{221.479}{83.840}{54.069}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{subjective}
@@ -4550,7 +4555,7 @@
   \ALIUSPlacedTextContent{432.151}{270.334}{89.598}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{impacts of these}
   \ALIUSPlacedTextContent{90.000}{287.288}{60.182}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{substances.}
   \ALIUSPlacedTextContent{135.533}{340.572}{340.710}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{I have definitely not gained any new insights about the}
-  \ALIUSPlacedTextContent{137.344}{358.572}{337.087}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{mind by researching [psychedelic] drugs. … what have}
+  \ALIUSPlacedTextContent{137.344}{358.572}{337.087}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{mind by researching [psychedelic] drugs. â€¦ what have}
   \ALIUSPlacedTextContent{189.132}{376.572}{233.520}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{you learned? I am guessing not much.}
   \ALIUSPlacedTextContent{126.000}{428.326}{4.648}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I}
   \ALIUSPlacedTextContent{138.420}{428.326}{24.461}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{have}
@@ -4692,7 +4697,7 @@
   \ALIUSPlacedTextContent{354.765}{751.225}{111.215}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{psychopharmacology}
   \ALIUSPlacedTextContent{472.796}{751.225}{32.004}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{aimed}
   \ALIUSPlacedTextContent{510.865}{751.225}{10.560}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{at}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -4701,7 +4706,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.399}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{57.851}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{elucidating}
   \ALIUSPlacedTextContent{152.417}{83.840}{17.436}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{the}
   \ALIUSPlacedTextContent{174.419}{83.840}{77.387}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{neurochemical}
@@ -5075,7 +5080,7 @@
   \ALIUSPlacedTextContent{404.589}{746.240}{34.236}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{notion}
   \ALIUSPlacedTextContent{445.640}{746.240}{10.716}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{of}
   \ALIUSPlacedTextContent{463.172}{746.240}{58.283}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{conducting}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -5086,7 +5091,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (98.250bp,-479.949bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p021-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (486.750bp,-518.355bp) {\includegraphics[width=108.750bp,height=73.500bp]{Interviews/Issue06/Doss_Fejer/assets/alius-extracted-image-p021-b010.png}};
-  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{47.975}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{cognitive}
   \ALIUSPlacedTextContent{143.291}{83.840}{38.736}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{science}
   \ALIUSPlacedTextContent{187.343}{83.840}{11.508}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{or}
@@ -5101,7 +5106,7 @@
   \ALIUSPlacedTextContent{160.307}{100.400}{59.303}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{discussions}
   \ALIUSPlacedTextContent{227.176}{100.400}{13.344}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{on}
   \ALIUSPlacedTextContent{248.086}{100.400}{50.183}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{'cognitive}
-  \ALIUSPlacedTextContent{305.836}{100.400}{113.411}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{phenomenology'—the}
+  \ALIUSPlacedTextContent{305.836}{100.400}{113.411}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{phenomenology'â€”the}
   \ALIUSPlacedTextContent{426.812}{100.400}{22.152}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{idea}
   \ALIUSPlacedTextContent{455.780}{100.400}{21.708}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{that}
   \ALIUSPlacedTextContent{484.304}{100.400}{37.032}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{certain}
@@ -5291,7 +5296,7 @@
   \ALIUSPlacedTextContent{493.250}{709.789}{28.015}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{more}
   \ALIUSPlacedTextContent{90.000}{726.742}{431.642}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{informative. The framing of questionnaires needs to be changed up in an effort}
   \ALIUSPlacedTextContent{90.000}{743.695}{431.077}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to either refute or strengthen an effect across multiple experiments in a single}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -5300,7 +5305,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{65.751}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{publication,}
   \ALIUSPlacedTextContent{162.773}{83.840}{37.614}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{similar}
   \ALIUSPlacedTextContent{207.409}{83.840}{11.435}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to}
@@ -5376,7 +5381,7 @@
   \ALIUSPlacedTextContent{474.958}{367.367}{46.092}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{873-888.}
   \ALIUSPlacedTextContent{90.000}{384.322}{246.293}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{14.000}{https://doi.org/10.1097/aln.0000000000001275}
   \ALIUSPlacedTextContent{90.000}{413.277}{431.492}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Bowles, B., Crupi, C., Mirsattari, S. M., Pigott, S. E., Parrent, A. G., Pruessner,}
-  \ALIUSPlacedTextContent{90.000}{430.230}{431.340}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{J. C., Yonelinas, A. P., \& Köhler, S. (2007). Impaired familiarity with preserved}
+  \ALIUSPlacedTextContent{90.000}{430.230}{431.340}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{J. C., Yonelinas, A. P., \& KÃ¶hler, S. (2007). Impaired familiarity with preserved}
   \ALIUSPlacedTextContent{90.000}{447.184}{64.004}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{recollection}
   \ALIUSPlacedTextContent{168.524}{447.184}{25.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{after}
   \ALIUSPlacedTextContent{208.430}{447.184}{44.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{anterior}
@@ -5478,7 +5483,7 @@
   \ALIUSPlacedTextContent{179.934}{749.494}{72.482}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{cannabinoids}
   \ALIUSPlacedTextContent{257.187}{749.494}{13.940}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{on}
   \ALIUSPlacedTextContent{275.898}{749.494}{245.867}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{episodic memory: A review and reanalysis of}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -5487,7 +5492,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{28.953}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{acute}
   \ALIUSPlacedTextContent{124.474}{83.840}{25.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{drug}
   \ALIUSPlacedTextContent{155.380}{83.840}{34.941}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{effects}
@@ -5550,7 +5555,7 @@
   \ALIUSPlacedTextContent{422.365}{306.334}{24.208}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Wit,}
   \ALIUSPlacedTextContent{459.595}{306.334}{13.378}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{H.}
   \ALIUSPlacedTextContent{485.996}{306.334}{35.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(2018).}
-  \ALIUSPlacedTextContent{90.000}{323.289}{150.585}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Δ(9)-Tetrahydrocannabinol}
+  \ALIUSPlacedTextContent{90.000}{323.289}{150.585}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Î”(9)-Tetrahydrocannabinol}
   \ALIUSPlacedTextContent{246.107}{323.289}{10.595}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{at}
   \ALIUSPlacedTextContent{262.223}{323.289}{49.604}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Retrieval}
   \ALIUSPlacedTextContent{317.350}{323.289}{35.095}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Drives}
@@ -5575,7 +5580,7 @@
   \ALIUSPlacedTextContent{90.000}{432.059}{72.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Fortier-Davy,}
   \ALIUSPlacedTextContent{168.725}{432.059}{18.360}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{M.,}
   \ALIUSPlacedTextContent{193.357}{432.059}{9.758}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{\&}
-  \ALIUSPlacedTextContent{209.384}{432.059}{45.994}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Millière,}
+  \ALIUSPlacedTextContent{209.384}{432.059}{45.994}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{MilliÃ¨re,}
   \ALIUSPlacedTextContent{261.651}{432.059}{12.175}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{R.}
   \ALIUSPlacedTextContent{280.098}{432.059}{36.003}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(2020).}
   \ALIUSPlacedTextContent{322.374}{432.059}{20.096}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{The}
@@ -5680,7 +5685,7 @@
   \ALIUSPlacedTextContent{518.024}{729.414}{3.108}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{,}
   \ALIUSPlacedTextContent{90.000}{746.369}{9.993}{ALIUSC000000}{\ALIUSFontCormorantItalic}{14.000}{41}
   \ALIUSPlacedTextContent{99.990}{746.369}{70.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(6), 1130-1141.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -5689,7 +5694,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{53.662}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Grimmer,}
   \ALIUSPlacedTextContent{149.184}{83.840}{17.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{H.,}
   \ALIUSPlacedTextContent{172.003}{83.840}{63.694}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Laukkonen,}
@@ -5873,7 +5878,7 @@
   \ALIUSPlacedTextContent{381.681}{712.461}{3.108}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{,}
   \ALIUSPlacedTextContent{384.789}{712.461}{18.891}{ALIUSC000000}{\ALIUSFontCormorantItalic}{14.000}{107}
   \ALIUSPlacedTextContent{403.677}{712.461}{60.797}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(1), 343-352.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -5882,7 +5887,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{61.330}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{McGovern,}
   \ALIUSPlacedTextContent{158.352}{83.840}{17.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{H.,}
   \ALIUSPlacedTextContent{181.921}{83.840}{53.662}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Grimmer,}
@@ -5955,7 +5960,7 @@
   \ALIUSPlacedTextContent{132.174}{306.334}{13.224}{ALIUSC000000}{\ALIUSFontCormorantItalic}{14.000}{19}
   \ALIUSPlacedTextContent{145.395}{306.334}{48.316}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{, 745-757.}
   \ALIUSPlacedTextContent{193.711}{306.334}{300.007}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{14.000}{https://doi.org/https://doi.org/10.1016/j.nicl.2018.05.037}
-  \ALIUSPlacedTextContent{90.000}{335.289}{39.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Müller,}
+  \ALIUSPlacedTextContent{90.000}{335.289}{39.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{MÃ¼ller,}
   \ALIUSPlacedTextContent{133.994}{335.289}{12.986}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{F.,}
   \ALIUSPlacedTextContent{151.753}{335.289}{40.551}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Dolder,}
   \ALIUSPlacedTextContent{197.076}{335.289}{9.544}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{P.}
@@ -6100,7 +6105,7 @@
   \ALIUSPlacedTextContent{485.597}{683.506}{11.435}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to}
   \ALIUSPlacedTextContent{504.053}{683.506}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{90.000}{700.461}{73.014}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{default-mode}
-  \ALIUSPlacedTextContent{173.785}{700.461}{90.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{network—global}
+  \ALIUSPlacedTextContent{173.785}{700.461}{90.168}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{networkâ€”global}
   \ALIUSPlacedTextContent{274.725}{700.461}{34.634}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{source}
   \ALIUSPlacedTextContent{320.130}{700.461}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{341.874}{700.461}{31.530}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{DMN}
@@ -6115,7 +6120,7 @@
   \ALIUSPlacedTextContent{416.789}{717.414}{22.025}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(12),}
   \ALIUSPlacedTextContent{463.837}{717.414}{57.453}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{2058-2069.}
   \ALIUSPlacedTextContent{90.000}{734.369}{223.402}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{14.000}{https://doi.org/10.1038/s41386-020-0785-x}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -6124,7 +6129,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{431.152}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Scheidegger, M., Walter, M., Lehmann, M., Metzger, C., Grimm, S., Boeker, H.,}
   \ALIUSPlacedTextContent{90.000}{100.795}{431.206}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Boesiger, P., Henning, A., \& Seifritz, E. (2012). Ketamine decreases resting state}
   \ALIUSPlacedTextContent{90.000}{117.748}{56.111}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{functional}
@@ -6142,7 +6147,7 @@
   \ALIUSPlacedTextContent{168.812}{180.609}{44.525}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Hermle,}
   \ALIUSPlacedTextContent{218.860}{180.609}{14.134}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{L.,}
   \ALIUSPlacedTextContent{238.517}{180.609}{9.758}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{\&}
-  \ALIUSPlacedTextContent{253.793}{180.609}{31.946}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Grön,}
+  \ALIUSPlacedTextContent{253.793}{180.609}{31.946}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{GrÃ¶n,}
   \ALIUSPlacedTextContent{291.262}{180.609}{12.734}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{G.}
   \ALIUSPlacedTextContent{308.769}{180.609}{35.024}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(2001).}
   \ALIUSPlacedTextContent{348.565}{180.609}{93.373}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Enantio-selective}
@@ -6281,7 +6286,7 @@
   \ALIUSPlacedTextContent{90.000}{688.461}{249.889}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{14.000}{https://doi.org/10.1080/09687637.2020.1854688}
   \ALIUSPlacedTextContent{90.000}{717.414}{431.146}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Yaden, D. B., Johnson, M. W., Griffiths, R. R., Doss, M. K., Garcia-Romeu, A.,}
   \ALIUSPlacedTextContent{90.000}{734.369}{431.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Nayak, S., Gukasyan, N., Mathur, B. N., \& Barrett, F. S. (2021). Psychedelics and}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -6290,7 +6295,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss – On The Cinco Sins of Psychedelic Research}
+  \ALIUSPlacedTextContent{90.000}{35.398}{275.412}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Doss â€“ On The Cinco Sins of Psychedelic Research}
   \ALIUSPlacedTextContent{90.000}{83.840}{77.308}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{consciousness:}
   \ALIUSPlacedTextContent{176.581}{83.840}{70.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Distinctions,}
   \ALIUSPlacedTextContent{255.928}{83.840}{76.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{demarcations,}
@@ -6390,7 +6395,7 @@
   \ALIUSPlacedTextContent{150.919}{369.195}{16.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{N.,}
   \ALIUSPlacedTextContent{173.290}{369.195}{37.767}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Musso,}
   \ALIUSPlacedTextContent{216.580}{369.195}{12.986}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{F.,}
-  \ALIUSPlacedTextContent{235.088}{369.195}{39.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Müller,}
+  \ALIUSPlacedTextContent{235.088}{369.195}{39.222}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{MÃ¼ller,}
   \ALIUSPlacedTextContent{279.833}{369.195}{12.986}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{F.,}
   \ALIUSPlacedTextContent{298.341}{369.195}{53.312}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Lammers,}
   \ALIUSPlacedTextContent{357.176}{369.195}{12.987}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{F.,}
@@ -6429,7 +6434,7 @@
   \ALIUSPlacedTextContent{452.527}{420.059}{16.401}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{(1),}
   \ALIUSPlacedTextContent{481.200}{420.059}{40.397}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{107-119.}
   \ALIUSPlacedTextContent{90.000}{437.012}{265.364}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{14.000}{https://doi.org/https://doi.org/10.1002/hbm.24791}
-  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2024)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{122.184}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2024)}
   \ALIUSPlacedTextContent{386.280}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

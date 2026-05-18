@@ -30,6 +30,7 @@ Maintain an Overleaf-importable source archive where bulletin pieces and issue-l
 - Keep `AI-agents/formatting-context.md` current whenever formatting, compile-engine, layout, or visual-QA assumptions change.
 - Preserve hidden citation navigation: in-text author-year citations should use `\ALIUSCitationLink{...}{...}` only when they can resolve to a same-file `\ALIUSRefAnchor{...}` in the visible reference list.
 - Treat notable quotes as semantic Q&A-segment inserts. Do not hand-freeze a blank-producing quote position; run `python AI-agents/layout_notable_quotes.py` so generated coordinates keep the quote after its source answer material and before the next question without stranding large whitespace.
+- Treat decorative pull quotes as framed text boxes: run `python AI-agents/standardize_pull_quote_blocks.py` after extraction/regeneration so opening and closing quote marks sit outside the centered quote body instead of becoming their own lines or landing between quote-body lines.
 
 ## LaTeX Workflow
 
@@ -66,6 +67,7 @@ Generated PDFs should remain untracked.
 - Confirm the only staged PDF, if any, is the approved cover background asset.
 - Confirm changed interview folders still have editable `.tex` sources and matching `.bib` files when applicable.
 - Run `python AI-agents/layout_notable_quotes.py --check` after notable-quote edits.
+- Run `python AI-agents/standardize_pull_quote_blocks.py --check` after pull-quote or extraction repairs.
 - Run `python AI-agents/link_in_text_citations.py --check` after citation/link edits.
 - Do not stop after a local commit. Push the completed change to `origin/main` before reporting done.
 - Summarize any visual QA limits honestly in the final note.

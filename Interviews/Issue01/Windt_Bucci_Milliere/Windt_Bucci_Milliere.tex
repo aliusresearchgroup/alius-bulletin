@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -144,16 +149,16 @@
   \ALIUSPlacedTextContent{369.160}{178.955}{110.219}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{jennifer.windt@monash.edu}
   \ALIUSPlacedTextContent{369.160}{189.755}{104.100}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Philosophy}
   \ALIUSPlacedTextContent{369.160}{200.555}{158.238}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Monash University, Melbourne, Australia}
-  \ALIUSPlacedTextContent{69.640}{212.128}{207.038}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{By Alessio Bucci and Raphaël Millière}
+  \ALIUSPlacedTextContent{69.640}{212.128}{207.038}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{By Alessio Bucci and RaphaÃ«l MilliÃ¨re}
   \ALIUSPlacedTextContent{369.160}{225.540}{65.070}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Alessio Bucci}
   \ALIUSPlacedTextContent{369.160}{238.955}{83.931}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{alessio.bucci@unito.it}
   \ALIUSPlacedTextContent{369.160}{249.755}{102.363}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Philosophy}
   \ALIUSPlacedTextContent{369.160}{260.555}{93.736}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{University of Turin, Italy}
-  \ALIUSPlacedTextContent{369.160}{285.540}{80.557}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{Raphaël Millière}
+  \ALIUSPlacedTextContent{369.160}{285.540}{80.557}{ALIUSC000000}{\ALIUSFontLatoRegular}{10.800}{RaphaÃ«l MilliÃ¨re}
   % ALIUS normalized citation panel begin
-  % ALIUS normalized citation panel text: Cite as: Windt, J., Bucci, A. \& Millière, R. (2017). Relocating dreams on the conceptual map: how the analysis of sleep and dreaming challenges our taxonomy of mental states. An interview with Jennifer Windt. ALIUS Bulletin, 1, 53-78.
+  % ALIUS normalized citation panel text: Cite as: Windt, J., Bucci, A. \& MilliÃ¨re, R. (2017). Relocating dreams on the conceptual map: how the analysis of sleep and dreaming challenges our taxonomy of mental states. An interview with Jennifer Windt. ALIUS Bulletin, 1, 53-78.
   \fill[white] (68.140bp,-288.808bp) rectangle ++(292.520bp,-51.300bp);
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (69.640bp,-290.808bp) {\begin{minipage}{289.520bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Windt, J., Bucci, A. \& Millière, R. (2017). Relocating dreams on the conceptual map: how the analysis of sleep and dreaming challenges our taxonomy of mental states. An interview with Jennifer Windt. ALIUS Bulletin, 1, 53-78. \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/xhfg-wq83}{https://doi.org/10.34700/xhfg-wq83}}}\par}\end{minipage}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (69.640bp,-290.808bp) {\begin{minipage}{289.520bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Windt, J., Bucci, A. \& MilliÃ¨re, R. (2017). Relocating dreams on the conceptual map: how the analysis of sleep and dreaming challenges our taxonomy of mental states. An interview with Jennifer Windt. ALIUS Bulletin, 1, 53-78. \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/xhfg-wq83}{https://doi.org/10.34700/xhfg-wq83}}}\par}\end{minipage}};
   % ALIUS normalized citation panel end
   \ALIUSPlacedTextContent{369.160}{298.955}{141.863}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{raphael.milliere@philosophy.ox.ac.uk}
   \ALIUSPlacedTextContent{369.160}{309.755}{83.333}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Faculty of Philosophy}
@@ -164,7 +169,7 @@
   \ALIUSPlacedTextContent{71.080}{445.338}{456.953}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{right over my head, but what I did understand blew my mind, and I was hooked. For}
   \ALIUSPlacedTextContent{71.080}{462.138}{456.824}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the seminar, each of us had to pick one week's readings to present to the class. When}
   \ALIUSPlacedTextContent{71.080}{479.178}{456.712}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Thomas introduced the topic of dreaming, he asked if any of us had ever had a lucid}
-  \ALIUSPlacedTextContent{71.080}{496.218}{456.923}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream—that is, if any of us had ever noticed while dreaming that we were now}
+  \ALIUSPlacedTextContent{71.080}{496.218}{456.923}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreamâ€”that is, if any of us had ever noticed while dreaming that we were now}
   \ALIUSPlacedTextContent{71.080}{513.018}{456.840}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming. I had had some nightmares in which I was vaguely aware that this wasn't}
   \ALIUSPlacedTextContent{71.080}{530.058}{456.743}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{really happening, that this was just a dream. And even though I had never really}
   \ALIUSPlacedTextContent{71.080}{547.098}{456.738}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{given much thought to dreaming, something about that question piqued my interest,}
@@ -179,11 +184,11 @@
   \ALIUSPlacedTextContent{71.080}{671.658}{147.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Nielsen, and Mark Solms (}
   \ALIUSPlacedTextContent{218.271}{671.658}{152.758}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Brain and Behavioral Sciences}
   \ALIUSPlacedTextContent{371.071}{671.658}{156.883}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{, vol. 23, issue 6, 2000). This}
-  \ALIUSPlacedTextContent{71.080}{688.698}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ended up being way too much to fit into a presentation—but it eventually led to a}
+  \ALIUSPlacedTextContent{71.080}{688.698}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ended up being way too much to fit into a presentationâ€”but it eventually led to a}
   \ALIUSPlacedTextContent{71.080}{705.498}{460.197}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{term paper, and then to my MA and PhD theses, which I then turned into a book.}
   \ALIUSPlacedTextContent{71.080}{722.538}{456.749}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There was always so much more to learn about dreaming, so much more to read and}
   \ALIUSPlacedTextContent{71.080}{739.578}{370.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{write and investigate that I never felt I had finished with the topic.}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{404.763}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -193,7 +198,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{54}
   \ALIUSPlacedTextContent{99.430}{70.938}{428.583}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Now I am beginning to look beyond dreaming to think more about how}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.884}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming connects to waking mind wandering, but also to experience in dreamless}
@@ -203,7 +208,7 @@
   \ALIUSPlacedTextContent{71.080}{155.658}{456.760}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and elusive conscious state in which conscious cognitive processes have become}
   \ALIUSPlacedTextContent{71.080}{172.698}{456.845}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{largely detached from outward behavior, ongoing tasks, and the environment.}
   \ALIUSPlacedTextContent{71.080}{189.738}{456.701}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dreams are so private that we can't even remember our own dreams most of the}
-  \ALIUSPlacedTextContent{71.080}{206.538}{457.021}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{time—each night's dreams are elusive even to ourselves, slipping out of our conscious}
+  \ALIUSPlacedTextContent{71.080}{206.538}{457.021}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{timeâ€”each night's dreams are elusive even to ourselves, slipping out of our conscious}
   \ALIUSPlacedTextContent{71.080}{223.578}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{memories as we wake up every morning. That elusiveness puzzles me on a theoretical}
   \ALIUSPlacedTextContent{71.080}{240.618}{456.701}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{level, but it also gives the topic an air of mystery similar to uncharted territories that}
   \ALIUSPlacedTextContent{71.080}{257.418}{456.790}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{keeps me coming back to it. I think a similar elusiveness characterizes waking mind}
@@ -211,16 +216,16 @@
   \ALIUSPlacedTextContent{71.080}{291.498}{456.984}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{exactly because for the most part, it happens in the background, around the edges}
   \ALIUSPlacedTextContent{71.080}{308.298}{456.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of awareness and retrospective recall (Smallwood \& Schooler, 2015). There is a lot of}
   \ALIUSPlacedTextContent{71.080}{325.338}{298.680}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{uncharted territory in our waking mental lives as well.}
-  \ALIUSPlacedTextContent{144.520}{365.513}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{162.760}{365.513}{246.901}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Dreaming is the clearest example of an}
-  \ALIUSPlacedTextContent{162.760}{383.513}{282.899}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{utterly private and elusive conscious state in}
-  \ALIUSPlacedTextContent{162.760}{401.513}{257.381}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{which conscious cognitive processes are}
-  \ALIUSPlacedTextContent{424.600}{415.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{162.760}{419.033}{260.632}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{largely detached from outward behavior.}
+  \ALIUSPlacedTextContent{144.760}{365.513}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{180.759}{365.513}{246.901}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Dreaming is the clearest example of an}
+  \ALIUSPlacedTextContent{162.760}{383.033}{282.899}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{utterly private and elusive conscious state in}
+  \ALIUSPlacedTextContent{175.519}{400.553}{257.381}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{which conscious cognitive processes are}
+  \ALIUSPlacedTextContent{449.659}{418.073}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{173.894}{418.073}{260.632}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{largely detached from outward behavior.}
   \ALIUSPlacedTextContent{99.430}{463.098}{428.486}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Another factor that has kept me interested in dreaming is how theoretical}
   \ALIUSPlacedTextContent{71.080}{479.898}{456.827}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{problems intersect with personal experience. For me, an interest in the philosophy}
   \ALIUSPlacedTextContent{71.080}{496.938}{456.969}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and science of dreaming came first, and only later and after a lot of reading did I}
-  \ALIUSPlacedTextContent{71.080}{513.978}{456.895}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{become more interested in my own dreams—in keeping a dream diary, trying}
+  \ALIUSPlacedTextContent{71.080}{513.978}{456.895}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{become more interested in my own dreamsâ€”in keeping a dream diary, trying}
   \ALIUSPlacedTextContent{71.080}{530.778}{456.762}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(unfortunately without much success) to induce lucid dreams, and so on. I have kept}
   \ALIUSPlacedTextContent{71.080}{547.818}{456.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this personal interest in my own dreams largely separate from my theoretical work,}
   \ALIUSPlacedTextContent{71.080}{564.858}{456.895}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{but it has made me more aware of the ubiquity and importance of dreams and sleep}
@@ -228,12 +233,12 @@
   \ALIUSPlacedTextContent{71.080}{598.698}{456.837}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream every night and that virtually everyone has some dream story or other to tell}
   \ALIUSPlacedTextContent{71.080}{615.498}{456.805}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{makes the topic more tangible than, say, some purely metaphysical problem about}
   \ALIUSPlacedTextContent{71.080}{632.538}{456.858}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the relationship between mind and body. This first-person familiarity then draws}
-  \ALIUSPlacedTextContent{71.080}{649.578}{456.892}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people into the more philosophical questions as well—for example almost everyone}
+  \ALIUSPlacedTextContent{71.080}{649.578}{456.892}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people into the more philosophical questions as wellâ€”for example almost everyone}
   \ALIUSPlacedTextContent{71.080}{666.378}{456.858}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{has an opinion as to whether they dream in color or in black-and-white, and as Eric}
   \ALIUSPlacedTextContent{71.080}{683.418}{456.829}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Schwitzgebel has shown, the fact that these opinions change over time leads directly}
   \ALIUSPlacedTextContent{71.080}{700.458}{456.980}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to the skeptical question of how well we know our own dreams, but also conscious}
   \ALIUSPlacedTextContent{71.080}{717.258}{290.477}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience more generally (\ALIUSCitationLink{aliusref-windt-bucci-milliere-schwitzgebel-2002}{Schwitzgebel, 2002}, 2011).}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -244,9 +249,9 @@
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
   \fill[ALIUSC1F8135] (262.360bp,-119.080bp) rectangle ++(175.680bp,-0.480bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{55}
-  \ALIUSPlacedTextContent{99.430}{70.938}{428.498}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There was one other crucial factor—and this one had more to do with}
+  \ALIUSPlacedTextContent{99.430}{70.938}{428.498}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{There was one other crucial factorâ€”and this one had more to do with}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.796}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mentoring and research environment than with dreaming. Thomas Metzinger had a}
   \ALIUSPlacedTextContent{71.080}{104.778}{191.254}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{group, called the MIND Group (}
   \ALIUSPlacedTextContent{262.359}{104.778}{175.666}{ALIUSC1F8135}{\ALIUSFontCormorantRegular}{13.920}{fias.uni-frankfurt.de/mindgroup}
@@ -255,40 +260,40 @@
   \ALIUSPlacedTextContent{71.080}{138.858}{456.760}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and cognitive neuroscience. The group met twice a year for conferences with invited}
   \ALIUSPlacedTextContent{71.080}{155.658}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{international speakers in Frankfurt, and aside from the public lectures, the meetings}
   \ALIUSPlacedTextContent{71.080}{172.698}{456.927}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{were by invitation only. Just after I finished my MA thesis, Thomas organized a}
-  \ALIUSPlacedTextContent{71.080}{189.738}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{meeting with Olaf Blanke, Allan Hobson, and Antti Revonsuo—all leaders in the}
+  \ALIUSPlacedTextContent{71.080}{189.738}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{meeting with Olaf Blanke, Allan Hobson, and Antti Revonsuoâ€”all leaders in the}
   \ALIUSPlacedTextContent{71.080}{206.538}{456.779}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fields of OBE (out-of-body experience) and dream research. Thomas encouraged me}
-  \ALIUSPlacedTextContent{71.080}{223.578}{456.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to present my thesis at the meeting, and I was both thrilled and terrified—looking}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to present my thesis at the meeting, and I was both thrilled and terrifiedâ€”looking}
   \ALIUSPlacedTextContent{71.080}{240.618}{456.836}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{back, it seems I was a nervous wreck for weeks. But the presentation ended up being}
   \ALIUSPlacedTextContent{71.080}{257.418}{456.914}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fine, and afterwards I got to have these long conversations over dinner with my}
-  \ALIUSPlacedTextContent{71.080}{274.458}{456.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{intellectual heroes. And that just fascinated me—that this was actually a}
+  \ALIUSPlacedTextContent{71.080}{274.458}{456.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{intellectual heroes. And that just fascinated meâ€”that this was actually a}
   \ALIUSPlacedTextContent{71.080}{291.498}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{conversation I could be part of, and that once I got beyond the nervousness, I could}
   \ALIUSPlacedTextContent{71.080}{308.298}{456.836}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{take a peek at Allan's dream diary or joke with Antti about dream bizarreness. This}
   \ALIUSPlacedTextContent{71.080}{325.338}{456.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{very much felt like a live area of research, and the people working in it were not just}
   \ALIUSPlacedTextContent{71.080}{342.138}{456.790}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brilliant and genuinely passionate about their work, but also extremely friendly, laid}
   \ALIUSPlacedTextContent{71.080}{359.178}{456.697}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{back, and open enough to play around with different ideas with us students. For the}
-  \ALIUSPlacedTextContent{71.080}{376.218}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{first time, I had the feeling that this was a research area I could contribute to—that}
+  \ALIUSPlacedTextContent{71.080}{376.218}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{first time, I had the feeling that this was a research area I could contribute toâ€”that}
   \ALIUSPlacedTextContent{71.080}{393.018}{352.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I could maybe go from being a student to doing actual research.}
   \ALIUSPlacedTextContent{99.430}{416.058}{428.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Part of this experience had, I think, to do with the intellectual atmosphere that}
   \ALIUSPlacedTextContent{71.080}{433.098}{456.907}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characterizes dream research. Dream research, including the philosophy of}
   \ALIUSPlacedTextContent{71.080}{449.898}{456.918}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming, was a marginalized topic for a long time, and the group of people involved}
   \ALIUSPlacedTextContent{71.080}{466.938}{456.843}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in it is still quite small. In addition, the air of fringyness that surrounds the topic}
-  \ALIUSPlacedTextContent{71.080}{483.978}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ensures that most people working in this area are just genuinely interested—you}
+  \ALIUSPlacedTextContent{71.080}{483.978}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ensures that most people working in this area are just genuinely interestedâ€”you}
   \ALIUSPlacedTextContent{71.080}{500.778}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{wouldn't pursue this line of research for reasons of prestige. (Especially for}
-  \ALIUSPlacedTextContent{71.080}{517.818}{456.787}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{laboratory research, it's also too draining—nights spent in the sleep lab exact an}
+  \ALIUSPlacedTextContent{71.080}{517.818}{456.787}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{laboratory research, it's also too drainingâ€”nights spent in the sleep lab exact an}
   \ALIUSPlacedTextContent{71.080}{534.858}{456.843}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{enormous toll on researchers.) So while there is indeed a lot of weird stuff out there}
   \ALIUSPlacedTextContent{71.080}{551.658}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on dreaming, many of the serious scholars who produce high-quality research have}
   \ALIUSPlacedTextContent{71.080}{568.698}{456.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{retained a certain playfulness, creativity, and openness to different positions and}
   \ALIUSPlacedTextContent{71.080}{585.498}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{approaches. In consequence, this area is extremely pleasant and inspiring to work in,}
   \ALIUSPlacedTextContent{71.080}{602.538}{201.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and I have made some great friends.}
-  \ALIUSPlacedTextContent{99.430}{631.578}{428.500}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{But the other factor had to do with mentoring—with having a teacher like}
+  \ALIUSPlacedTextContent{99.430}{631.578}{428.500}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{But the other factor had to do with mentoringâ€”with having a teacher like}
   \ALIUSPlacedTextContent{71.080}{648.378}{456.724}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Thomas who didn't just get me hooked on philosophy of mind and cognitive science,}
   \ALIUSPlacedTextContent{71.080}{665.418}{456.828}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{but encouraged me, even as a student, to participate in an actual conversation with}
   \ALIUSPlacedTextContent{71.080}{682.458}{456.892}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the philosophers and researchers whose work I had been studying. This was}
-  \ALIUSPlacedTextContent{71.080}{699.258}{456.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{incredibly special about the MIND Group—and I know that for many other junior}
+  \ALIUSPlacedTextContent{71.080}{699.258}{456.806}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{incredibly special about the MIND Groupâ€”and I know that for many other junior}
   \ALIUSPlacedTextContent{71.080}{716.298}{456.788}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{members, going to those meetings and presenting their work there was extremely}
   \ALIUSPlacedTextContent{71.080}{733.338}{456.794}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{motivating and a formative point in their research and career trajectories. I also saw}
   \ALIUSPlacedTextContent{71.080}{750.138}{456.929}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this later when, as Thomas' assistant and group manager of the MIND Group, I}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -299,10 +304,10 @@
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
   \fill[ALIUSC1F8135] (312.040bp,-169.960bp) rectangle ++(80.880bp,-0.480bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{56}
   \ALIUSPlacedTextContent{71.080}{70.938}{457.012}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{encouraged my own students to participate in the meetings. I wish there were more}
-  \ALIUSPlacedTextContent{71.080}{87.978}{456.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{opportunities to mentor and support students in that way—to create an}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{opportunities to mentor and support students in that wayâ€”to create an}
   \ALIUSPlacedTextContent{71.080}{104.778}{457.040}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{environment where they don't feel that they are mere students, but where they can}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.724}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{get a taste of what it's like to actually participate in an academic conversation with}
   \ALIUSPlacedTextContent{71.080}{138.858}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{leading researchers, either at a conference or in print (as in the Open MIND}
@@ -327,13 +332,13 @@
   \ALIUSPlacedTextContent{71.080}{384.138}{456.779}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{close association with dreaming in the 1950s (\ALIUSCitationLink{aliusref-windt-bucci-milliere-dement-kleitman-1957}{Dement \& Kleitman, 1957}). For the}
   \ALIUSPlacedTextContent{71.080}{400.938}{456.819}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{first time, the contrast between dreamful REM sleep and presumably dreamless}
   \ALIUSPlacedTextContent{71.080}{417.978}{456.821}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{NREM (or non-REM) sleep suggested that there might be an objective marker of}
-  \ALIUSPlacedTextContent{71.080}{435.018}{456.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming over and above the subjective impression of having dreamt—and that this}
+  \ALIUSPlacedTextContent{71.080}{435.018}{456.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming over and above the subjective impression of having dreamtâ€”and that this}
   \ALIUSPlacedTextContent{71.080}{451.818}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might make dreaming objectively diagnosable, turning it into a respectable and well-}
   \ALIUSPlacedTextContent{71.080}{468.858}{227.421}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{behaved target of scientific investigation.}
   \ALIUSPlacedTextContent{99.430}{491.898}{428.460}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The discovery of REM sleep also marked the beginning of scientific sleep}
   \ALIUSPlacedTextContent{71.080}{508.698}{456.804}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research. Today, these two fields are largely separate, and dreaming plays at best a}
-  \ALIUSPlacedTextContent{71.080}{525.738}{456.893}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{marginal role in important areas of sleep research—including research on memory}
-  \ALIUSPlacedTextContent{71.080}{542.778}{456.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consolidation in sleep and sleep disorders—but at least initially, both fields}
+  \ALIUSPlacedTextContent{71.080}{525.738}{456.893}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{marginal role in important areas of sleep researchâ€”including research on memory}
+  \ALIUSPlacedTextContent{71.080}{542.778}{456.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consolidation in sleep and sleep disordersâ€”but at least initially, both fields}
   \ALIUSPlacedTextContent{71.080}{559.578}{456.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{developed together. Importantly, the discovery of REM sleep, and more generally of}
   \ALIUSPlacedTextContent{71.080}{576.618}{456.827}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a complex sleep architecture involving different stages of sleep associated with}
   \ALIUSPlacedTextContent{71.080}{593.658}{456.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different levels and patterns of brain activity, profoundly changed scientific}
@@ -346,7 +351,7 @@
   \ALIUSPlacedTextContent{71.080}{712.218}{456.782}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{was it a state between sleep and wakefulness, of being half asleep, as it were? A}
   \ALIUSPlacedTextContent{71.080}{729.258}{456.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{similar conceptual uncertainty is implicit, today, in the question of whether lucid}
   \ALIUSPlacedTextContent{71.080}{746.058}{456.728}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreams are hybrid states, occurring on the border between REM sleep and}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -356,15 +361,15 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{57}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.807}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{wakefulness, or genuine sleep states involving a substage of REM sleep (say, lucid}
   \ALIUSPlacedTextContent{71.080}{87.978}{454.945}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{REM sleep; Voss, Holzmann, Tuin, \& Hobson, 2009; Windt \& Voss, forthcoming).}
-  \ALIUSPlacedTextContent{127.000}{122.153}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{128.440}{122.153}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{146.440}{122.153}{329.400}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{How to reconcile the study of subjective experience}
-  \ALIUSPlacedTextContent{146.440}{140.153}{300.582}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{with cognitive neuroscience remains one of the}
-  \ALIUSPlacedTextContent{413.560}{153.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{146.440}{157.913}{264.472}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{most pressing and unresolved challenges.}
+  \ALIUSPlacedTextContent{160.849}{139.913}{300.582}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{with cognitive neuroscience remains one of the}
+  \ALIUSPlacedTextContent{479.840}{157.673}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{178.904}{157.673}{264.472}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{most pressing and unresolved challenges.}
   \ALIUSPlacedTextContent{99.430}{202.698}{428.607}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{While researchers were initially enthusiastic about the prospects for a science}
   \ALIUSPlacedTextContent{71.080}{219.738}{456.818}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of dreaming, in philosophy, these early studies on dreaming and REM sleep}
   \ALIUSPlacedTextContent{71.080}{236.538}{456.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{produced an almost allergic reaction. Norman Malcolm famously denied both that}
@@ -381,7 +386,7 @@
   \ALIUSPlacedTextContent{71.080}{423.018}{456.909}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reports and the absence of objective criteria for determining the occurrence of}
   \ALIUSPlacedTextContent{71.080}{440.058}{456.831}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreams. In Malcolm's view, the only way to determine whether and what someone}
   \ALIUSPlacedTextContent{71.080}{457.098}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{has dreamt is the dream report given after awakening. Waking memory reports can,}
-  \ALIUSPlacedTextContent{71.080}{473.898}{456.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{at least in principle, be checked and verified—but according to Malcolm, the very}
+  \ALIUSPlacedTextContent{71.080}{473.898}{456.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{at least in principle, be checked and verifiedâ€”but according to Malcolm, the very}
   \ALIUSPlacedTextContent{71.080}{490.938}{456.829}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{idea of verifying dream reports is absurd. If we introduced objective criteria for}
   \ALIUSPlacedTextContent{71.080}{507.978}{456.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{determining whether or not a person had dreamt, such as the presence vs absence of}
   \ALIUSPlacedTextContent{71.080}{524.778}{456.781}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{REM sleep, we would be changing the concept of dreaming. We would then no}
@@ -389,8 +394,8 @@
   \ALIUSPlacedTextContent{71.080}{558.858}{456.925}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subjective experiences nor targets for scientific research, whereas today, most}
   \ALIUSPlacedTextContent{71.080}{575.658}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{researchers and philosophers think the opposite is true. Yet, how exactly to reconcile}
   \ALIUSPlacedTextContent{71.080}{592.698}{456.878}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the study of dream experience, via the analysis of dream reports, with the study of}
-  \ALIUSPlacedTextContent{71.080}{609.498}{456.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sleep—and, more generally, the study of subjective experience with cognitive}
-  \ALIUSPlacedTextContent{71.080}{626.538}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroscience—remains one of the most pressing and unresolved challenges in}
+  \ALIUSPlacedTextContent{71.080}{609.498}{456.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sleepâ€”and, more generally, the study of subjective experience with cognitive}
+  \ALIUSPlacedTextContent{71.080}{626.538}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroscienceâ€”remains one of the most pressing and unresolved challenges in}
   \ALIUSPlacedTextContent{71.080}{643.578}{356.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{philosophy of mind and interdisciplinary consciousness research.}
   \ALIUSPlacedTextContent{99.430}{666.378}{428.500}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Today, the picture is much more complicated. In philosophy, the question of}
   \ALIUSPlacedTextContent{71.080}{683.418}{456.855}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream experience has been replaced by a number of more precise follow-up}
@@ -400,7 +405,7 @@
   \ALIUSPlacedTextContent{71.080}{751.338}{225.124}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{delusions? And so on (see Windt, 2015,}
   \ALIUSPlacedTextContent{298.241}{751.338}{23.426}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2016}
   \ALIUSPlacedTextContent{321.705}{751.338}{206.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for discussion). In this process, the}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -410,7 +415,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{58}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.828}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{philosophical debate on dreaming has moved away from purely conceptual analysis}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.932}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and become much more interdisciplinary and empirically based. At the same time,}
@@ -420,8 +425,8 @@
   \ALIUSPlacedTextContent{71.080}{155.658}{456.798}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{even in the deep stages of NREM sleep (including slow-wave sleep: Windt, Nielsen,}
   \ALIUSPlacedTextContent{71.080}{172.698}{456.841}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{\& Thompson, 2016). This last point is surprising because dreamless, deep sleep is}
   \ALIUSPlacedTextContent{71.080}{189.738}{456.799}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{often by definition thought to be unconscious. What is needed at this point is a}
-  \ALIUSPlacedTextContent{71.080}{206.538}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{taxonomy of both dreaming and dreamless sleep—including conscious mentation}
-  \ALIUSPlacedTextContent{71.080}{223.578}{456.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{occurring in dreamless sleep—that is initially independent of sleep stages. Such a}
+  \ALIUSPlacedTextContent{71.080}{206.538}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{taxonomy of both dreaming and dreamless sleepâ€”including conscious mentation}
+  \ALIUSPlacedTextContent{71.080}{223.578}{456.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{occurring in dreamless sleepâ€”that is initially independent of sleep stages. Such a}
   \ALIUSPlacedTextContent{71.080}{240.618}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fine-grained taxonomy might then, in conjunction with more fine-grained sleep-}
   \ALIUSPlacedTextContent{71.080}{257.418}{456.878}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{stage scoring, allow for a more precise mapping of sleep stages. This type of project}
   \ALIUSPlacedTextContent{71.080}{274.458}{456.721}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{would be a huge step towards bringing sleep and dream research back together again.}
@@ -438,10 +443,10 @@
   \ALIUSPlacedTextContent{71.080}{491.178}{456.835}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for discussion and further references). The basic idea, here, is that dreaming is at}
   \ALIUSPlacedTextContent{71.080}{508.218}{456.889}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{core immersive: there is a here-and-now experience, a sense of being present in the}
   \ALIUSPlacedTextContent{71.080}{525.018}{456.701}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream world. And associated with this sense of presence is a representation of a}
-  \ALIUSPlacedTextContent{71.080}{542.058}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{self—the dream self, or the dream character the dreamer later identifies with—that}
+  \ALIUSPlacedTextContent{71.080}{542.058}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{selfâ€”the dream self, or the dream character the dreamer later identifies withâ€”that}
   \ALIUSPlacedTextContent{71.080}{559.098}{456.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is experienced at the center of the dream world. Simulation views allow for a lot of}
   \ALIUSPlacedTextContent{71.080}{575.898}{456.834}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{variance across different types of dreams (such as lucid dreams, nightmares, and so}
-  \ALIUSPlacedTextContent{71.080}{592.938}{456.910}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on). There are also different kinds of simulation views—for example, what exactly is}
+  \ALIUSPlacedTextContent{71.080}{592.938}{456.910}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on). There are also different kinds of simulation viewsâ€”for example, what exactly is}
   \ALIUSPlacedTextContent{71.080}{609.978}{456.748}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{involved in experiencing oneself as a self in dreams is open to debate. Still, in a field}
   \ALIUSPlacedTextContent{71.080}{626.778}{456.936}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that was long characterized by considerable uncertainty and controversy as to how}
   \ALIUSPlacedTextContent{71.080}{643.818}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to define dreaming, increasing convergence on immersion and self- and world-}
@@ -451,7 +456,7 @@
   \ALIUSPlacedTextContent{71.080}{717.738}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on virtual reality and full-body illusions. In fact, dreaming is sometimes described}
   \ALIUSPlacedTextContent{71.080}{734.538}{456.843}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as the gold standard of immersive virtual reality, and its investigation might help}
   \ALIUSPlacedTextContent{71.080}{751.578}{456.893}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{identify and empirically ground the conditions for presence and phenomenal}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -461,7 +466,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{59}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.825}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{selfhood (Windt, 2015, chap. 12). Moreover, because simulation views offer a more}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.772}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{precise definition of dreaming, they can also be used to develop a taxonomy for}
@@ -501,10 +506,10 @@
   \ALIUSPlacedTextContent{71.080}{648.378}{248.141}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{informed by research findings and vice versa.}
   \ALIUSPlacedTextContent{99.430}{671.418}{428.430}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Another potential area of application is the search for the neural correlates of}
   \ALIUSPlacedTextContent{71.080}{688.458}{456.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness (NCC). To date, this research has largely been construed as a search}
-  \ALIUSPlacedTextContent{71.080}{705.258}{456.838}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for the neural correlates of specific contents of consciousness—such as seeing red or}
+  \ALIUSPlacedTextContent{71.080}{705.258}{456.838}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for the neural correlates of specific contents of consciousnessâ€”such as seeing red or}
   \ALIUSPlacedTextContent{71.080}{722.298}{456.953}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{feeling pain. In this context, dream research can be used to investigate the neural}
   \ALIUSPlacedTextContent{71.080}{739.338}{456.891}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{correlates of specific contents of dream experience. For example, lucid dreamers can}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -514,7 +519,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{60}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{use prearranged eye-movement patterns (e.g. looking left-right-left right in their}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.792}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream) to signal that they have now become lucid and are engaging in a specific task,}
@@ -546,10 +551,10 @@
   \ALIUSPlacedTextContent{71.080}{433.098}{456.938}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{structure of phenomenal experience and its neural correlates. Standard}
   \ALIUSPlacedTextContent{71.080}{449.898}{456.802}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characterizations of consciousness as what disappears in dreamless deep sleep would}
   \ALIUSPlacedTextContent{71.080}{466.938}{456.911}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{then require revision. I think a plausible argument can be made that this is indeed}
-  \ALIUSPlacedTextContent{71.080}{483.978}{427.801}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the case—and it will be very exciting to see where this research develops next.}
+  \ALIUSPlacedTextContent{71.080}{483.978}{427.801}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the caseâ€”and it will be very exciting to see where this research develops next.}
   \ALIUSPlacedTextContent{71.080}{530.047}{455.907}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In your opinion, is dreaming an altered state of consciousness? If so, what  defines it as}
   \ALIUSPlacedTextContent{71.080}{547.326}{31.627}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{such?}
-  \ALIUSPlacedTextContent{71.080}{576.378}{456.833}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dreaming is clearly on the list of altered states of consciousness—at least according}
+  \ALIUSPlacedTextContent{71.080}{576.378}{456.833}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dreaming is clearly on the list of altered states of consciousnessâ€”at least according}
   \ALIUSPlacedTextContent{71.080}{593.178}{456.957}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to folk psychology, dreaming is the most frequently occurring altered state,}
   \ALIUSPlacedTextContent{71.080}{610.218}{456.789}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{remarkable for its ubiquity and spontaneous occurrence as well as for its}
   \ALIUSPlacedTextContent{71.080}{627.258}{456.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characteristic differences from standard wakefulness on the phenomenological,}
@@ -559,7 +564,7 @@
   \ALIUSPlacedTextContent{99.430}{706.938}{428.485}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The term altered states of consciousness, in my view, suggests an alteration not}
   \ALIUSPlacedTextContent{71.080}{723.978}{456.903}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{just in behavior and/or neural processing, but in phenomenal experience. But this}
   \ALIUSPlacedTextContent{71.080}{740.778}{456.858}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{means that dreaming, somewhat counterintuitively, does not clearly or necessarily}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -569,13 +574,13 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{61}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{involve such an alteration. Recall that simulation views define dreaming by its}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.810}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{immersive structure: the experience of a world centered on a self. On a purely}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{phenomenological level of description, this here-and-now experience marks a deep}
   \ALIUSPlacedTextContent{71.080}{121.818}{293.052}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{similarity between dreaming and waking experience.}
-  \ALIUSPlacedTextContent{99.430}{144.858}{425.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To be sure, there are differences on the neuroscientific and functional levels—}
+  \ALIUSPlacedTextContent{99.430}{144.858}{425.184}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{To be sure, there are differences on the neuroscientific and functional levelsâ€”}
   \ALIUSPlacedTextContent{71.080}{161.658}{456.882}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroimaging studies suggest that brain activation patterns in REM sleep differ}
   \ALIUSPlacedTextContent{71.080}{178.698}{456.945}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{from wakefulness, and these differences are reflected, for instance, in the strongly}
   \ALIUSPlacedTextContent{71.080}{195.738}{456.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{visual and emotional character of dreaming and the frequency of movement}
@@ -583,7 +588,7 @@
   \ALIUSPlacedTextContent{71.080}{229.578}{456.829}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{association between subjective experience on the one hand and environmental and}
   \ALIUSPlacedTextContent{71.080}{246.618}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{real-body stimuli and real-body movements on the other hand is also much weaker}
   \ALIUSPlacedTextContent{71.080}{263.418}{456.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and less predictable in dreaming than in wakefulness. Moreover, dreams typically}
-  \ALIUSPlacedTextContent{71.080}{280.458}{456.825}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{misrepresent the sleeping subject's current location—only rarely, as in realistic false}
+  \ALIUSPlacedTextContent{71.080}{280.458}{456.825}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{misrepresent the sleeping subject's current locationâ€”only rarely, as in realistic false}
   \ALIUSPlacedTextContent{71.080}{297.498}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{awakenings, do dreams mimic the sleeping subject's actual environment. These}
   \ALIUSPlacedTextContent{71.080}{314.298}{456.896}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{differences, however, don't necessarily show up on the phenomenological level of}
   \ALIUSPlacedTextContent{71.080}{331.338}{456.818}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{description. This comes back to the classical philosophical problem of dream}
@@ -611,7 +616,7 @@
   \ALIUSPlacedTextContent{71.080}{716.298}{456.701}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{undefined. Both dreams and waking experience are heterogeneous and characterized}
   \ALIUSPlacedTextContent{71.080}{733.338}{456.838}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{by numerous fluctuations on the phenomenological, functional, and neuroscientific}
   \ALIUSPlacedTextContent{71.080}{750.138}{456.771}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{levels of description. Often, these fluctuations are subtle, hard to detect, and evade}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -621,7 +626,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{62}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.910}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{any quick-and-easy, general characterization. I think that gaining a better}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{understanding of these fluctuations in dreaming and wakefulness, along with a more}
@@ -634,7 +639,7 @@
   \ALIUSPlacedTextContent{71.080}{212.538}{456.855}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think research should move toward more fine-grained, multi-level classification}
   \ALIUSPlacedTextContent{71.080}{229.578}{456.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{systems able to capture fluctuations in experience across the sleep-wake cycle. This}
   \ALIUSPlacedTextContent{71.080}{246.618}{456.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{project will be applicable to many states that fall under the folk-psychological}
-  \ALIUSPlacedTextContent{71.080}{263.418}{456.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{heading of altered states—including dreaming—but in this process, we might find}
+  \ALIUSPlacedTextContent{71.080}{263.418}{456.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{heading of altered statesâ€”including dreamingâ€”but in this process, we might find}
   \ALIUSPlacedTextContent{71.080}{280.458}{456.878}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{deep continuities in experience across so-called altered and standard states, as well}
   \ALIUSPlacedTextContent{71.080}{297.498}{456.904}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as, perhaps, genuine heterogeneity between and even within states commonly}
   \ALIUSPlacedTextContent{71.080}{314.298}{456.905}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{classified as either altered or baseline states. It might still be useful to develop a}
@@ -642,7 +647,7 @@
   \ALIUSPlacedTextContent{71.080}{348.138}{456.791}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{described as altered states apart from baseline or standard states of consciousness. I}
   \ALIUSPlacedTextContent{71.080}{365.178}{456.896}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{worry, however, that categorizing both wakefulness and dreams in the broad terms}
   \ALIUSPlacedTextContent{71.080}{382.218}{456.903}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{required for this type of project will result in an overly simplified and stereotyped}
-  \ALIUSPlacedTextContent{71.080}{399.018}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{view—and in many ways, this would be a move in the opposite direction from what}
+  \ALIUSPlacedTextContent{71.080}{399.018}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{viewâ€”and in many ways, this would be a move in the opposite direction from what}
   \ALIUSPlacedTextContent{71.080}{416.058}{88.656}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I am proposing.}
   \ALIUSPlacedTextContent{71.080}{462.127}{453.600}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What are the main methods used in dream research to gather data about the first-}
   \ALIUSPlacedTextContent{71.080}{479.407}{456.065}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{person experience of dreaming? What role do dream reports play in this process, and}
@@ -653,14 +658,14 @@
   \ALIUSPlacedTextContent{71.080}{576.858}{456.917}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{study of conscious experience during sleep. In fact, I would go so far as to say that}
   \ALIUSPlacedTextContent{71.080}{593.898}{456.941}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream research is constrained, for methodological reasons, by data from the}
   \ALIUSPlacedTextContent{71.080}{610.698}{456.793}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{collection and analysis of dream reports. By this, I do not mean that dream research}
-  \ALIUSPlacedTextContent{71.080}{627.738}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is exclusively about the study of dream reports—clearly, this would restrict the scope}
+  \ALIUSPlacedTextContent{71.080}{627.738}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is exclusively about the study of dream reportsâ€”clearly, this would restrict the scope}
   \ALIUSPlacedTextContent{71.080}{644.778}{456.875}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of the field quite drastically. While some areas of dream research are exclusively}
   \ALIUSPlacedTextContent{71.080}{661.578}{456.832}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{report-based, others try to relate data from dream reports to behavioral,}
   \ALIUSPlacedTextContent{71.080}{678.618}{456.800}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{polysomnographic, and/or neuroimaging data from the same sleep stage. Achieving}
   \ALIUSPlacedTextContent{71.080}{695.658}{456.923}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this kind of one-one mapping of different types of data about the same experiential}
   \ALIUSPlacedTextContent{71.080}{712.458}{457.076}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{episode was at the center of the early laboratory studies of REM sleep/dreaming and}
   \ALIUSPlacedTextContent{71.080}{729.498}{217.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{continues to drive progress to this day.}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -670,16 +675,16 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{63}
-  \ALIUSPlacedTextContent{151.720}{86.393}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{168.520}{86.393}{221.911}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Dream research is constrained, for}
+  \ALIUSPlacedTextContent{150.520}{86.393}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{189.573}{86.393}{221.911}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Dream research is constrained, for}
   \ALIUSPlacedTextContent{168.520}{104.393}{264.016}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{methodological reasons, by data from the}
-  \ALIUSPlacedTextContent{427.720}{121.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{168.520}{122.393}{257.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{collection and analysis of dream reports.}
+  \ALIUSPlacedTextContent{436.536}{122.393}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{172.012}{122.393}{257.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{collection and analysis of dream reports.}
   \ALIUSPlacedTextContent{99.430}{162.858}{428.513}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In saying that dream research is constrained, for methodological reasons, by}
-  \ALIUSPlacedTextContent{71.080}{179.658}{456.717}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the space of reportable dreams—by what can and can't be reported about experience}
-  \ALIUSPlacedTextContent{71.080}{196.698}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{during sleep—some points need qualification. To begin with, the notion of first-}
+  \ALIUSPlacedTextContent{71.080}{179.658}{456.717}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the space of reportable dreamsâ€”by what can and can't be reported about experience}
+  \ALIUSPlacedTextContent{71.080}{196.698}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{during sleepâ€”some points need qualification. To begin with, the notion of first-}
   \ALIUSPlacedTextContent{71.080}{213.738}{456.840}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{person data is controversial. If we take first-person data to refer to introspective}
   \ALIUSPlacedTextContent{71.080}{230.538}{457.099}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{knowledge or inner observation of one's ongoing conscious states, it is unclear that}
   \ALIUSPlacedTextContent{71.080}{247.578}{456.710}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we are still speaking of data in any interesting sense. Data are gathered with the help}
@@ -688,19 +693,19 @@
   \ALIUSPlacedTextContent{71.080}{298.458}{456.746}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{introspective knowledge (if it is knowledge) of ongoing conscious experience. When}
   \ALIUSPlacedTextContent{71.080}{315.498}{456.822}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I use the term first-person data, I am using it in a different and fairly innocent sense}
   \ALIUSPlacedTextContent{71.080}{332.298}{456.759}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to refer to data gathered from dream reports. Dream reports furnish the raw}
-  \ALIUSPlacedTextContent{71.080}{349.338}{456.889}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{material for the science of dreaming—and dream reports, unlike the experiences}
+  \ALIUSPlacedTextContent{71.080}{349.338}{456.889}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{material for the science of dreamingâ€”and dream reports, unlike the experiences}
   \ALIUSPlacedTextContent{71.080}{366.138}{456.925}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they supposedly describe, are intersubjectively accessible. And while different}
   \ALIUSPlacedTextContent{71.080}{383.178}{456.784}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research groups may disagree as to how best to analyze these data, there are more or}
   \ALIUSPlacedTextContent{71.080}{400.218}{456.666}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{less established scoring systems and statistical methods that can be applied to them.}
   \ALIUSPlacedTextContent{71.080}{417.018}{456.768}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Through the collection and analysis of large sets of dream reports, researchers can}
-  \ALIUSPlacedTextContent{71.080}{434.058}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{then begin to investigate general questions about dreaming—for instance about the}
+  \ALIUSPlacedTextContent{71.080}{434.058}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{then begin to investigate general questions about dreamingâ€”for instance about the}
   \ALIUSPlacedTextContent{71.080}{451.098}{456.886}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{frequency of different types of emotions in dream reports as compared to waking}
   \ALIUSPlacedTextContent{71.080}{467.898}{456.876}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reports (Sikka, Valli, Virta, \& Revonsuo, 2014). The results of these studies are, in}
-  \ALIUSPlacedTextContent{71.080}{484.938}{353.517}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{principle, replicable—even if the individual experiences are not.}
+  \ALIUSPlacedTextContent{71.080}{484.938}{353.517}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{principle, replicableâ€”even if the individual experiences are not.}
   \ALIUSPlacedTextContent{99.430}{507.978}{428.598}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{When I speak of dream reports in this context, I do so in a very broad sense.}
   \ALIUSPlacedTextContent{71.080}{524.778}{456.827}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dream reports, in my view, are the results of behaviors conducted with the sincere}
   \ALIUSPlacedTextContent{71.080}{541.818}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{intent of conveying or recording certain relevant information about a particular}
-  \ALIUSPlacedTextContent{71.080}{558.858}{456.863}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream (Windt 2015, chap. 3). This can be done in many different ways—through}
+  \ALIUSPlacedTextContent{71.080}{558.858}{456.863}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream (Windt 2015, chap. 3). This can be done in many different waysâ€”through}
   \ALIUSPlacedTextContent{71.080}{575.658}{456.690}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{written or spoken dream reports, by responding to specific questions in an interview}
   \ALIUSPlacedTextContent{71.080}{592.698}{456.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{with an experimenter or a questionnaire, or by using non-verbal media such as}
   \ALIUSPlacedTextContent{71.080}{609.498}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{drawings or comparing one's dreams to photographs with different degrees of}
@@ -712,7 +717,7 @@
   \ALIUSPlacedTextContent{71.080}{711.258}{456.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they can, I think, be described as a kind of concurrent behavioral report.}
   \ALIUSPlacedTextContent{71.080}{728.298}{456.821}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Theoretically, this is extremely interesting, because it means that at least}
   \ALIUSPlacedTextContent{71.080}{745.338}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unidirectional communication from dreaming to wakefulness is possible. At the}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -722,7 +727,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{64}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{same time, these concurrent reports cannot provide stand-alone evidence: to avoid}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.859}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{false positives, it is crucial that the retrospective dream report later confirm that the}
@@ -730,7 +735,7 @@
   \ALIUSPlacedTextContent{99.430}{127.818}{428.513}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The tricky question from a philosophical perspective, however, is whether}
   \ALIUSPlacedTextContent{71.080}{144.858}{456.733}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dream reports as the primary source of data for scientific dream research are}
   \ALIUSPlacedTextContent{71.080}{161.658}{456.825}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{trustworthy with respect to the occurrence and phenomenal character of experience}
-  \ALIUSPlacedTextContent{71.080}{178.698}{456.878}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{during sleep—whether dream reports reflect what it is actually like to dream. In}
+  \ALIUSPlacedTextContent{71.080}{178.698}{456.878}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{during sleepâ€”whether dream reports reflect what it is actually like to dream. In}
   \ALIUSPlacedTextContent{71.080}{195.738}{456.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{philosophy, the trustworthiness of dream reports has long been doubted as a matter}
   \ALIUSPlacedTextContent{71.080}{212.538}{456.829}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of principle. At its strongest, skepticism about dream reporting claims that no}
   \ALIUSPlacedTextContent{71.080}{229.578}{456.732}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{matter how much the methods for gathering and analyzing dream reports are}
@@ -740,7 +745,7 @@
   \ALIUSPlacedTextContent{71.080}{297.498}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which we can never be sure that dream reports provide evidence about conscious}
   \ALIUSPlacedTextContent{71.080}{314.298}{456.983}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience in sleep, is misguided (\ALIUSCitationLink{aliusref-windt-bucci-milliere-windt-2013}{Windt, 2013}, 2015a, chap.s 1\&4). A more}
   \ALIUSPlacedTextContent{71.080}{331.338}{456.755}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{constructive and research-generating strategy is to start with the default assumption}
-  \ALIUSPlacedTextContent{71.080}{348.138}{456.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that at least a subset of dream reports are trustworthy—and then to use this subset}
+  \ALIUSPlacedTextContent{71.080}{348.138}{456.844}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that at least a subset of dream reports are trustworthyâ€”and then to use this subset}
   \ALIUSPlacedTextContent{71.080}{365.178}{456.873}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as a baseline for further improving the conditions under which dreams are reported,}
   \ALIUSPlacedTextContent{71.080}{382.218}{456.904}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{along with training and more precise scoring systems, both for categorizing the}
   \ALIUSPlacedTextContent{71.080}{399.018}{319.471}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{range of sleep-related experience and scoring sleep stages.}
@@ -751,7 +756,7 @@
   \ALIUSPlacedTextContent{71.080}{489.978}{456.771}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and further references). By contrast, studies investigating spontaneous dream recall,}
   \ALIUSPlacedTextContent{71.080}{506.778}{456.807}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in which participants sleep at home and write their dreams in a dream diary after}
   \ALIUSPlacedTextContent{71.080}{523.818}{456.828}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{waking up in the morning, offer less controlled conditions. At the same time, the}
-  \ALIUSPlacedTextContent{71.080}{540.858}{453.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{laboratory situation itself may alter sleep quality as well as the content of dreams—}
+  \ALIUSPlacedTextContent{71.080}{540.858}{453.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{laboratory situation itself may alter sleep quality as well as the content of dreamsâ€”}
   \ALIUSPlacedTextContent{71.080}{557.658}{456.776}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it is not uncommon for participants to dream of the lab, the researchers, and so on.}
   \ALIUSPlacedTextContent{71.080}{574.698}{456.916}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Further issues concern which participant groups to use (e.g. lucid vs nonlucid}
   \ALIUSPlacedTextContent{71.080}{591.498}{456.754}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreamers, participants with high vs low dream recall), to what extent training can}
@@ -764,7 +769,7 @@
   \ALIUSPlacedTextContent{71.080}{716.298}{456.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{changes in how best to report and rate the occurrence of dream emotions have led}
   \ALIUSPlacedTextContent{71.080}{733.338}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to different theoretical views on the frequency and kinds of emotions experienced}
   \ALIUSPlacedTextContent{71.080}{750.138}{456.918}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in dreams (\ALIUSCitationLink{aliusref-windt-bucci-milliere-sikka-valli-2014}{Sikka et al., 2014}). For now, my main point is that if we start from a}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -774,7 +779,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{65}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.742}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{default position in which at least some subset of dream reports are assumed to be}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{trustworthy, it makes sense to say that scientific dream research, by developing new}
@@ -791,11 +796,11 @@
   \ALIUSPlacedTextContent{71.080}{280.458}{456.740}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{progress, in this view, would involve moving beyond the study of dream reports to}
   \ALIUSPlacedTextContent{71.080}{297.498}{456.774}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{more objective and scientific kinds of data. For instance, we might envision future}
   \ALIUSPlacedTextContent{71.080}{314.298}{456.895}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{researchers predicting dream experience on the basis of polysomnographic and/or}
-  \ALIUSPlacedTextContent{71.080}{331.338}{453.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroimaging data alone. And while first steps are being taken in this direction—}
+  \ALIUSPlacedTextContent{71.080}{331.338}{453.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroimaging data alone. And while first steps are being taken in this directionâ€”}
   \ALIUSPlacedTextContent{71.080}{348.138}{456.863}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for example by using advanced machine-learning algorithms to decode patterns of}
   \ALIUSPlacedTextContent{71.080}{365.178}{456.728}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain activity that map onto the presence vs absence of dreaming (as in the dream}
   \ALIUSPlacedTextContent{71.080}{382.218}{456.834}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{catcher test proposed by Antti Revonsuo; \ALIUSCitationLink{aliusref-windt-bucci-milliere-revonsuo-2005}{Revonsuo, 2005}), or onto different kinds}
-  \ALIUSPlacedTextContent{71.080}{399.018}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of dream content (Horikawa, Tamaki, Miyawaki, \& Kamitani, 2013)—it is important}
+  \ALIUSPlacedTextContent{71.080}{399.018}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of dream content (Horikawa, Tamaki, Miyawaki, \& Kamitani, 2013)â€”it is important}
   \ALIUSPlacedTextContent{71.080}{416.058}{456.958}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to keep in mind that the success of such predictions, ultimately, is measured by their}
   \ALIUSPlacedTextContent{71.080}{433.098}{456.863}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{correspondence to reported dreams. Even if it were the case that future researchers}
   \ALIUSPlacedTextContent{71.080}{449.898}{456.768}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{made predictions about the occurrence and content of dreams largely in the absence}
@@ -812,11 +817,11 @@
   \ALIUSPlacedTextContent{71.080}{636.378}{199.380}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of scientific dream research proper.}
   \ALIUSPlacedTextContent{99.430}{659.418}{428.531}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Couldn't there be kinds of experience in sleep that are so subtle and fleeting}
   \ALIUSPlacedTextContent{71.080}{676.458}{456.935}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that they are beyond the grasp of memory and below the threshold of reportability?}
-  \ALIUSPlacedTextContent{71.080}{693.258}{456.789}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think that this is possible—perhaps even probable. Certain white dreams, in which}
+  \ALIUSPlacedTextContent{71.080}{693.258}{456.789}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think that this is possibleâ€”perhaps even probable. Certain white dreams, in which}
   \ALIUSPlacedTextContent{71.080}{710.298}{456.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{participants say that they remember having dreamt but can't recall any details,}
   \ALIUSPlacedTextContent{71.080}{727.338}{456.727}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{might be an example of remembering a type of conscious experience that was so}
   \ALIUSPlacedTextContent{71.080}{744.138}{456.946}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{subtle and fleeting that nothing other than a vague impression of its occurrence can}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -826,10 +831,10 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{66}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.858}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be reported. In other white dream reports, the inability to give a more detailed}
-  \ALIUSPlacedTextContent{71.080}{87.978}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{description might be due to forgetting—and by investigating such reports in more}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{description might be due to forgettingâ€”and by investigating such reports in more}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{detail it might, ultimately, be possible to tease apart different factors involved and}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{distinguish different subtypes of white dream reports. Here we would have a case in}
   \ALIUSPlacedTextContent{71.080}{138.858}{456.818}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{which the potential limits of dream reporting would be investigated exactly through}
@@ -847,13 +852,13 @@
   \ALIUSPlacedTextContent{71.080}{274.458}{456.827}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{methods and training, these experiences are beyond the reach of scientific dream}
   \ALIUSPlacedTextContent{71.080}{291.498}{50.955}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research.}
   \ALIUSPlacedTextContent{99.430}{314.298}{428.504}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think the relevance of this point is often under-appreciated: while the use of}
-  \ALIUSPlacedTextContent{71.080}{331.338}{456.834}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{data from first-person reports—on dreaming, but also on conscious experience more}
-  \ALIUSPlacedTextContent{71.080}{348.138}{456.808}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{generally—is often thought to hamper scientific progress and to be at odds with the}
+  \ALIUSPlacedTextContent{71.080}{331.338}{456.834}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{data from first-person reportsâ€”on dreaming, but also on conscious experience more}
+  \ALIUSPlacedTextContent{71.080}{348.138}{456.808}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{generallyâ€”is often thought to hamper scientific progress and to be at odds with the}
   \ALIUSPlacedTextContent{71.080}{365.178}{456.988}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{requirements for an objective science of consciousness, I think that in fact, the}
   \ALIUSPlacedTextContent{71.080}{382.218}{456.884}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{systematic collection and analysis of report-based data is the condition of possibility}
   \ALIUSPlacedTextContent{71.080}{399.018}{456.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of a science of dreaming, and of a science of consciousness more generally. A key}
   \ALIUSPlacedTextContent{71.080}{416.058}{456.938}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{challenge then becomes how to improve the methods for gathering and scoring these}
-  \ALIUSPlacedTextContent{71.080}{433.098}{456.810}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reports—for instance through questionnaires, training, and improved taxonomies}
+  \ALIUSPlacedTextContent{71.080}{433.098}{456.810}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{reportsâ€”for instance through questionnaires, training, and improved taxonomies}
   \ALIUSPlacedTextContent{71.080}{449.898}{456.811}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for categorizing subtle and hard-to-describe differences in experience. This is an}
   \ALIUSPlacedTextContent{71.080}{466.938}{456.838}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{area, I think, where philosophy and cognitive neuroscience can constructively}
   \ALIUSPlacedTextContent{71.080}{483.978}{134.144}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{complement each other.}
@@ -870,7 +875,7 @@
   \ALIUSPlacedTextContent{71.080}{706.698}{456.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{7). The pattern of bodily experience in dreams appears to be different from standard}
   \ALIUSPlacedTextContent{71.080}{723.498}{456.832}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{wakefulness. The dreams of subjects experiencing phantom limbs are a good}
   \ALIUSPlacedTextContent{71.080}{740.538}{456.875}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{example. Following amputation, many people report feeling that the absent limb is}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -880,7 +885,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{67}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.859}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{still present; frequently the phantom limb will be frozen in an uncomfortable}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.870}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{position, as if paralyzed, and associated with unpleasant tingling or even pain}
@@ -892,7 +897,7 @@
   \ALIUSPlacedTextContent{71.080}{189.738}{456.889}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience in dreams typically differs from wakefulness, but also that body}
   \ALIUSPlacedTextContent{71.080}{206.538}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{representation in dreams can't simply be described as a whole-body variant of}
   \ALIUSPlacedTextContent{71.080}{223.578}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{waking phantom limbs. Bodily experience in dreams requires an account of its own.}
-  \ALIUSPlacedTextContent{99.430}{246.618}{428.503}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Body parts can also be missing—in the sense of failing to be represented—in}
+  \ALIUSPlacedTextContent{99.430}{246.618}{428.503}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Body parts can also be missingâ€”in the sense of failing to be representedâ€”in}
   \ALIUSPlacedTextContent{71.080}{263.418}{456.743}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreams. Sometimes, dreamers can have the feeling that an individual body part is}
   \ALIUSPlacedTextContent{71.080}{280.458}{456.848}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{absent, and this feeling can even extend to the whole body: dream reports}
   \ALIUSPlacedTextContent{71.080}{297.498}{456.815}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{occasionally describe the feeling of being a disembodied self or of lacking any kind}
@@ -914,15 +919,15 @@
   \ALIUSPlacedTextContent{71.080}{574.698}{456.867}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(\ALIUSCitationLink{aliusref-windt-bucci-milliere-nielsen-1993}{Nielsen, 1993}; Nielsen, Ouellet, \& Zadra, 1995). Moreover, many intense dreams,}
   \ALIUSPlacedTextContent{71.080}{591.498}{456.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{including nightmares, appear to have a strong bodily component. A good example}
   \ALIUSPlacedTextContent{71.080}{608.538}{456.874}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is the dream of being unable to flee from a pursuer. The dream of being chased is at}
-  \ALIUSPlacedTextContent{71.080}{625.578}{456.760}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the top of typical dream themes (\ALIUSCitationLink{aliusref-windt-bucci-milliere-nielsen-zadra-2003}{Nielsen et al., 2003}; Schredl, Ciric, Götz, \&}
+  \ALIUSPlacedTextContent{71.080}{625.578}{456.760}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the top of typical dream themes (\ALIUSCitationLink{aliusref-windt-bucci-milliere-nielsen-zadra-2003}{Nielsen et al., 2003}; Schredl, Ciric, GÃ¶tz, \&}
   \ALIUSPlacedTextContent{71.080}{642.378}{456.880}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Wittmann, 2004; \ALIUSCitationLink{aliusref-windt-bucci-milliere-yu-2008}{Yu, 2008}), or dreams that most people say they have had at some}
   \ALIUSPlacedTextContent{71.080}{659.418}{456.707}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{point in their lives. This does not mean that the chase dream is representative of the}
-  \ALIUSPlacedTextContent{71.080}{676.458}{456.890}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{majority of dreams—but only that there is something particularly memorable about}
+  \ALIUSPlacedTextContent{71.080}{676.458}{456.890}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{majority of dreamsâ€”but only that there is something particularly memorable about}
   \ALIUSPlacedTextContent{71.080}{693.258}{456.863}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{it. For now, the important point is that the dream of being unable to flee from a}
-  \ALIUSPlacedTextContent{71.080}{710.298}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pursuer—of having incomplete control of one's legs or even feeling paralyzed—can}
+  \ALIUSPlacedTextContent{71.080}{710.298}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{pursuerâ€”of having incomplete control of one's legs or even feeling paralyzedâ€”can}
   \ALIUSPlacedTextContent{71.080}{727.338}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{be straightforwardly explained by appealing to illusory own-body perception:  when}
   \ALIUSPlacedTextContent{71.080}{744.138}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{one becomes aware of the comparative inactivity of the sleeping body and the REM-}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -932,10 +937,10 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{68}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.775}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{related loss of muscle tone while dreaming, this may be experienced as inability to}
-  \ALIUSPlacedTextContent{71.080}{87.978}{425.966}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{control one's legs—along with associated fear and the feeling of being chased.}
+  \ALIUSPlacedTextContent{71.080}{87.978}{425.966}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{control one's legsâ€”along with associated fear and the feeling of being chased.}
   \ALIUSPlacedTextContent{99.430}{110.778}{388.396}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{By combining these two readings, we get the claim that dreams are}
   \ALIUSPlacedTextContent{489.807}{110.778}{38.127}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{weakly}
   \ALIUSPlacedTextContent{71.080}{127.818}{182.293}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{phenomenally-functionally embodied}
@@ -951,7 +956,7 @@
   \ALIUSPlacedTextContent{71.080}{280.458}{456.757}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreams show that conscious experience in general depends on brain activity alone}
   \ALIUSPlacedTextContent{71.080}{297.498}{456.829}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(\ALIUSCitationLink{aliusref-windt-bucci-milliere-revonsuo-2005}{Revonsuo, 2005}).  Proponents of embodied, extended, and enactive accounts}
   \ALIUSPlacedTextContent{71.080}{314.298}{456.865}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{typically accept that dreaming is a state of functional disembodiment and cranial}
-  \ALIUSPlacedTextContent{71.080}{331.338}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{envatment, but deny that the same is true for perceptual experience (\ALIUSCitationLink{aliusref-windt-bucci-milliere-noe-2005}{Noë, 2005}).}
+  \ALIUSPlacedTextContent{71.080}{331.338}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{envatment, but deny that the same is true for perceptual experience (\ALIUSCitationLink{aliusref-windt-bucci-milliere-noe-2005}{NoÃ«, 2005}).}
   \ALIUSPlacedTextContent{71.080}{348.138}{456.907}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This is related to the phenomenological claim that conscious experience in dreams}
   \ALIUSPlacedTextContent{71.080}{365.178}{456.749}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{differs from standard perceptual experience precisely because in dreams, conscious}
   \ALIUSPlacedTextContent{71.080}{382.218}{204.350}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience is cut off from the world.}
@@ -972,12 +977,12 @@
   \ALIUSPlacedTextContent{71.080}{625.578}{24.061}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{body}
   \ALIUSPlacedTextContent{95.174}{625.578}{432.703}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{problem: the problem of how the functional interaction between body and}
   \ALIUSPlacedTextContent{71.080}{642.378}{266.537}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{brain brings about bodily experience in dreams.}
-  \ALIUSPlacedTextContent{151.720}{683.033}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{168.280}{683.033}{262.320}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{In a majority of dreams, the processing of}
-  \ALIUSPlacedTextContent{168.280}{701.033}{271.493}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{peripheral and bodily stimuli is altered, but}
-  \ALIUSPlacedTextContent{346.600}{715.048}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{168.280}{718.553}{179.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{not completely suppressed.}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{150.280}{683.033}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{172.867}{683.033}{262.320}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{In a majority of dreams, the processing of}
+  \ALIUSPlacedTextContent{168.280}{700.553}{271.493}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{peripheral and bodily stimuli is altered, but}
+  \ALIUSPlacedTextContent{443.773}{718.073}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{214.510}{718.073}{179.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{not completely suppressed.}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -987,7 +992,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{69}
   \ALIUSPlacedTextContent{99.430}{93.978}{428.485}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The view and research strategy I propose are inspired by a classical theory}
   \ALIUSPlacedTextContent{71.080}{110.778}{355.834}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about the sources of dreaming, which was popular in the late 19}
@@ -995,8 +1000,8 @@
   \ALIUSPlacedTextContent{426.998}{110.838}{7.064}{ALIUSC000000}{\ALIUSFontCormorantRegular}{8.400}{th}
   \ALIUSPlacedTextContent{71.080}{127.818}{456.924}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fallen into disfavor: Leibreiztheorie, or somatic source theory, which says that}
   \ALIUSPlacedTextContent{71.080}{144.858}{456.871}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming in general arises in response to bodily sensations (for a newer version, see}
-  \ALIUSPlacedTextContent{71.080}{161.658}{456.874}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{\ALIUSCitationLink{aliusref-windt-bucci-milliere-schonhammer-2005}{Schönhammer, 2005}). My view is weaker in a number of ways. For instance, I do not}
-  \ALIUSPlacedTextContent{71.080}{178.698}{453.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think that all dreams, or even all aspects of dreaming, can be explained in this way—}
+  \ALIUSPlacedTextContent{71.080}{161.658}{456.874}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{\ALIUSCitationLink{aliusref-windt-bucci-milliere-schonhammer-2005}{SchÃ¶nhammer, 2005}). My view is weaker in a number of ways. For instance, I do not}
+  \ALIUSPlacedTextContent{71.080}{178.698}{453.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think that all dreams, or even all aspects of dreaming, can be explained in this wayâ€”}
   \ALIUSPlacedTextContent{71.080}{195.738}{456.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{instead, my claim is only that to understand the distinctive pattern of bodily}
   \ALIUSPlacedTextContent{71.080}{212.538}{456.799}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience, a purely brain-based account that assumes that dream activity unfolds}
   \ALIUSPlacedTextContent{71.080}{229.578}{456.924}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{completely independently of the sleeping body and environment is insufficient. I}
@@ -1019,18 +1024,18 @@
   \ALIUSPlacedTextContent{71.080}{523.818}{456.873}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{phenomenological characterization, together with a better understanding and new}
   \ALIUSPlacedTextContent{71.080}{540.858}{390.505}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{paradigms for investigating the real-body basis of dreaming, is needed.}
   \ALIUSPlacedTextContent{99.430}{563.658}{428.433}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{This does not, however, show that the underlying metaphysical point is false.}
-  \ALIUSPlacedTextContent{71.080}{580.698}{456.827}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{For the internalist, the dream example can be merely illustrative—and to the extent}
+  \ALIUSPlacedTextContent{71.080}{580.698}{456.827}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{For the internalist, the dream example can be merely illustrativeâ€”and to the extent}
   \ALIUSPlacedTextContent{71.080}{597.498}{456.957}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that it is, I take issue merely with the adequacy of the example, not necessarily with}
   \ALIUSPlacedTextContent{71.080}{614.538}{456.820}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the deeper metaphysical claim it is taken to support. The debate between internalists}
   \ALIUSPlacedTextContent{71.080}{631.578}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and externalists is about the constitutive supervenience base, or the minimal set of}
-  \ALIUSPlacedTextContent{71.080}{648.378}{456.873}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{metaphysically sufficient conditions of conscious experience—roughly, whether}
+  \ALIUSPlacedTextContent{71.080}{648.378}{456.873}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{metaphysically sufficient conditions of conscious experienceâ€”roughly, whether}
   \ALIUSPlacedTextContent{71.080}{665.418}{456.921}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{anything other than brain activity is needed to bring about experience, or whether}
   \ALIUSPlacedTextContent{71.080}{682.458}{456.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the vehicles of experience extend beyond the skull (\ALIUSCitationLink{aliusref-windt-bucci-milliere-block-2005}{Block, 2005}). My point about}
   \ALIUSPlacedTextContent{71.080}{699.258}{456.800}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming does not directly speak to this issue. Even if it were the case that as a matter}
   \ALIUSPlacedTextContent{71.080}{716.298}{456.777}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of fact, bodily experience in dreams never arose independently of sensory prompting}
   \ALIUSPlacedTextContent{71.080}{733.338}{456.832}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and own-body perception, this would still show only that real-body sensations are}
   \ALIUSPlacedTextContent{71.080}{750.138}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{causally enabling conditions for bodily experience in dreams to occur. For a}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1040,14 +1045,14 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{70}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.690}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{metaphysical claim about the constitutive supervenience base of experience, this is}
   \ALIUSPlacedTextContent{71.080}{87.978}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{not enough. In defending the claim that dreams are weakly phenomenally-}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{functionally embodied states, I am moving away from the metaphysical debate}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.841}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{between internalists and externalists to a more empirically plausible account of}
   \ALIUSPlacedTextContent{71.080}{138.858}{456.761}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreaming and its place in our taxonomy of mental states. I think this is a constructive}
-  \ALIUSPlacedTextContent{71.080}{155.658}{456.894}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{move to make, and hopefully one that can inspire new research—but it also involves}
+  \ALIUSPlacedTextContent{71.080}{155.658}{456.894}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{move to make, and hopefully one that can inspire new researchâ€”but it also involves}
   \ALIUSPlacedTextContent{71.080}{172.698}{194.760}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{changing the topic of conversation.}
   \ALIUSPlacedTextContent{71.080}{218.766}{98.380}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{You advocate the}
   \ALIUSPlacedTextContent{171.574}{218.766}{204.108}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.310}{Immersive Spatiotemporal Hallucination}
@@ -1064,25 +1069,25 @@
   \ALIUSPlacedTextContent{71.080}{401.418}{456.879}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{structural feature of dreaming: the feeling of presence, or of being immersed in a}
   \ALIUSPlacedTextContent{71.080}{418.218}{456.865}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{world. I think the key commonality between my view and other versions of}
   \ALIUSPlacedTextContent{71.080}{435.258}{456.945}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{simulation views is that they all focus on the experience of a self in a world. To my}
-  \ALIUSPlacedTextContent{71.080}{452.298}{456.832}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind, this convergence is really more important than potential differences—because}
+  \ALIUSPlacedTextContent{71.080}{452.298}{456.832}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mind, this convergence is really more important than potential differencesâ€”because}
   \ALIUSPlacedTextContent{71.080}{469.098}{456.873}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{taken together, simulation views have the power to unify different theoretical}
   \ALIUSPlacedTextContent{71.080}{486.138}{456.782}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{accounts of dreaming. They also suggest points of contact with other areas of}
-  \ALIUSPlacedTextContent{71.080}{503.178}{456.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{research—such as virtual reality research or work on full-body illusions—and can be}
+  \ALIUSPlacedTextContent{71.080}{503.178}{456.885}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{researchâ€”such as virtual reality research or work on full-body illusionsâ€”and can be}
   \ALIUSPlacedTextContent{71.080}{519.978}{456.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{used to develop a more precise framework for describing dreamless sleep experiences}
   \ALIUSPlacedTextContent{71.080}{537.018}{45.523}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as well.}
   \ALIUSPlacedTextContent{99.430}{559.818}{428.512}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Where ISTH differs from other versions of the simulation view (Revonsuo et}
   \ALIUSPlacedTextContent{71.080}{576.858}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{al., 2015) is that it focuses on spatiotemporal self-location to offer a simplified}
-  \ALIUSPlacedTextContent{71.080}{593.898}{456.851}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{account of what characterizes all kinds of dreaming—and with it a criterion for}
+  \ALIUSPlacedTextContent{71.080}{593.898}{456.851}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{account of what characterizes all kinds of dreamingâ€”and with it a criterion for}
   \ALIUSPlacedTextContent{71.080}{610.698}{456.867}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{distinguishing minimal forms of dreaming from dreamless sleep experiences that no}
   \ALIUSPlacedTextContent{71.080}{627.738}{456.899}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{longer have this immersive, here-and-now structure. The key idea is that to identify}
   \ALIUSPlacedTextContent{71.080}{644.778}{456.892}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the phenomenal core of dreaming, it is useful to look away from the characteristics}
-  \ALIUSPlacedTextContent{71.080}{661.578}{456.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of a majority of dreams—such as visual imagery and movement sensations, strong}
-  \ALIUSPlacedTextContent{71.080}{678.618}{456.942}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{emotions, and so on—to experiences that are likely rare, but can still be}
+  \ALIUSPlacedTextContent{71.080}{661.578}{456.949}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of a majority of dreamsâ€”such as visual imagery and movement sensations, strong}
+  \ALIUSPlacedTextContent{71.080}{678.618}{456.942}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{emotions, and so onâ€”to experiences that are likely rare, but can still be}
   \ALIUSPlacedTextContent{71.080}{695.658}{278.325}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characterized as dreamlike in some relevant sense.}
   \ALIUSPlacedTextContent{99.430}{718.458}{428.515}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think the most interesting dream reports for this type of project are those}
   \ALIUSPlacedTextContent{71.080}{735.498}{456.856}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{describing a sense of phenomenal disembodiment. In these dreams, the experience}
   \ALIUSPlacedTextContent{71.080}{752.538}{456.751}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of being or having a body has been lost entirely. Yet dreamers will often say that}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1092,29 +1097,29 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{71}
-  \ALIUSPlacedTextContent{71.080}{70.938}{456.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they continued to have a self—they now experienced themselves as a disembodied}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they continued to have a selfâ€”they now experienced themselves as a disembodied}
   \ALIUSPlacedTextContent{71.080}{87.978}{457.051}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{entity, as an abstract mind, and the locus of identification had shrunk to an}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.754}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unextended point. This suggest that the experience of embodiment is not necessary}
   \ALIUSPlacedTextContent{71.080}{121.818}{132.975}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for experiencing oneself}
   \ALIUSPlacedTextContent{203.805}{121.818}{10.280}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{as}
   \ALIUSPlacedTextContent{214.109}{121.818}{313.837}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a self. There is still a here-and-now experience, or a sense}
-  \ALIUSPlacedTextContent{71.080}{138.858}{456.914}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of spatiotemporal self-location—but it is not tied to the experience of having a body}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.914}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of spatiotemporal self-locationâ€”but it is not tied to the experience of having a body}
   \ALIUSPlacedTextContent{71.080}{155.658}{456.882}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or being an embodied agent. In fact, it can be associated with the experience of}
   \ALIUSPlacedTextContent{71.080}{172.698}{456.857}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lacking a body. And yet, participants are still willing to describe this experience,}
   \ALIUSPlacedTextContent{71.080}{189.738}{456.896}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{after awakening, as having involved a phenomenal self: they still place themselves at}
   \ALIUSPlacedTextContent{71.080}{206.538}{145.887}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the center of their dream.}
-  \ALIUSPlacedTextContent{136.120}{251.033}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{152.200}{251.033}{237.187}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{The experience of embodiment is not}
-  \ALIUSPlacedTextContent{427.960}{265.048}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{152.200}{268.793}{222.212}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{necessary for experiencing oneself}
-  \ALIUSPlacedTextContent{374.440}{268.793}{12.944}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{as}
-  \ALIUSPlacedTextContent{387.400}{268.793}{41.512}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{a self.}
+  \ALIUSPlacedTextContent{153.962}{251.033}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{171.962}{251.033}{237.187}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{The experience of embodiment is not}
+  \ALIUSPlacedTextContent{413.149}{268.793}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{179.450}{268.793}{222.212}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{necessary for experiencing oneself}
+  \ALIUSPlacedTextContent{284.084}{268.793}{12.944}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{as}
+  \ALIUSPlacedTextContent{269.800}{268.793}{41.512}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{a self.}
   \ALIUSPlacedTextContent{99.430}{322.458}{425.224}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I think these types of dream reports are highly informative for theories of self-}
   \ALIUSPlacedTextContent{71.080}{339.498}{456.849}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness and of dreaming. For theories of self-consciousness, they suggest that}
-  \ALIUSPlacedTextContent{71.080}{356.298}{456.895}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimal phenomenal selfhood—the simplest form in which we can experience}
-  \ALIUSPlacedTextContent{71.080}{373.338}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ourselves as being or having a self—is associated with spatiotemporal self-location.}
+  \ALIUSPlacedTextContent{71.080}{356.298}{456.895}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimal phenomenal selfhoodâ€”the simplest form in which we can experience}
+  \ALIUSPlacedTextContent{71.080}{373.338}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{ourselves as being or having a selfâ€”is associated with spatiotemporal self-location.}
   \ALIUSPlacedTextContent{71.080}{390.138}{456.864}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The analysis of dreaming thus extends existing work on minimal phenomenal}
   \ALIUSPlacedTextContent{71.080}{407.178}{456.988}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{selfhood (\ALIUSCitationLink{aliusref-windt-bucci-milliere-blanke-metzinger-2009}{Blanke \& Metzinger, 2009}), but offers a simplified account. In particular,}
   \ALIUSPlacedTextContent{71.080}{424.218}{456.671}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{minimal phenomenal selfhood does not require experiencing oneself as a bodily self}
@@ -1128,16 +1133,16 @@
   \ALIUSPlacedTextContent{71.080}{565.818}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Antti Revonsuo uses the characterization of dreaming as the experience of a self-in-}
   \ALIUSPlacedTextContent{71.080}{582.858}{456.897}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{a-world to motivate the virtual reality metaphor of conscious experience (Revonsuo,}
   \ALIUSPlacedTextContent{71.080}{599.658}{457.005}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2005). His main point, here, is that a majority of dreams are actually very similar to}
-  \ALIUSPlacedTextContent{71.080}{616.698}{456.947}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{standard waking experience—and this is in line with his aim of using the concept of}
+  \ALIUSPlacedTextContent{71.080}{616.698}{456.947}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{standard waking experienceâ€”and this is in line with his aim of using the concept of}
   \ALIUSPlacedTextContent{71.080}{633.498}{456.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{inner presence, which is illustrated to the fullest extent by dreaming, as a metaphor}
   \ALIUSPlacedTextContent{71.080}{650.538}{456.920}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{for conscious experience in general. By contrast, with the ISTH model, I was more}
-  \ALIUSPlacedTextContent{71.080}{667.578}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interested in focusing on a minimal characterization of dreaming—and this was in}
+  \ALIUSPlacedTextContent{71.080}{667.578}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{interested in focusing on a minimal characterization of dreamingâ€”and this was in}
   \ALIUSPlacedTextContent{71.080}{684.378}{456.889}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{line with having a unified theory of dreaming first, along with a framework for}
   \ALIUSPlacedTextContent{71.080}{701.418}{456.796}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{describing different types of dream (and dreamless sleep) experience and}
   \ALIUSPlacedTextContent{71.080}{718.458}{456.831}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{accommodating the inherent variability of the target phenomenon. Only then, on}
   \ALIUSPlacedTextContent{71.080}{735.258}{456.906}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{this basis, does it make sense to determine the location of dreaming in the broader}
   \ALIUSPlacedTextContent{71.080}{752.298}{456.795}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{framework of concepts used to describe mental states in wakefulness. I think that}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1147,18 +1152,18 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{72}
-  \ALIUSPlacedTextContent{71.080}{70.938}{456.824}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these different strategies—i.e. a primary interest in theories and metaphors of}
-  \ALIUSPlacedTextContent{71.080}{87.978}{456.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness in general vs a theory and framework of dreaming in particular—led}
+  \ALIUSPlacedTextContent{71.080}{70.938}{456.824}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these different strategiesâ€”i.e. a primary interest in theories and metaphors of}
+  \ALIUSPlacedTextContent{71.080}{87.978}{456.854}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness in general vs a theory and framework of dreaming in particularâ€”led}
   \ALIUSPlacedTextContent{71.080}{104.778}{450.339}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{us to emphasize slightly different aspects of world- and self-simulation in dreams.}
   \ALIUSPlacedTextContent{99.430}{127.818}{428.430}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{That said, I think one advantage of the ISTH model and its focus on minimal}
   \ALIUSPlacedTextContent{71.080}{144.858}{456.948}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{forms of dreaming, as opposed to the features of a majority of dreams, is that it}
-  \ALIUSPlacedTextContent{71.080}{161.658}{456.876}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{allows for a high degree of variability within dreams—ranging from bodiless dreams}
+  \ALIUSPlacedTextContent{71.080}{161.658}{456.876}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{allows for a high degree of variability within dreamsâ€”ranging from bodiless dreams}
   \ALIUSPlacedTextContent{71.080}{178.698}{456.801}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to the experience of full, wake-like embodiment, to the experience of having two}
   \ALIUSPlacedTextContent{71.080}{195.738}{456.861}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{bodies at the same time or even of slipping back and forth between them (van Eeden,}
   \ALIUSPlacedTextContent{71.080}{212.538}{456.895}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{1913). The model is also compatible with a large degree of variation in cognitive}
-  \ALIUSPlacedTextContent{71.080}{229.578}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{agency—ranging from certain nonlucid dreams in which thinking and attempts at}
+  \ALIUSPlacedTextContent{71.080}{229.578}{456.853}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{agencyâ€”ranging from certain nonlucid dreams in which thinking and attempts at}
   \ALIUSPlacedTextContent{71.080}{246.618}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{rational reflection are completely absent to fully lucid dreams involving}
   \ALIUSPlacedTextContent{71.080}{263.418}{456.782}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{metacognitive insight into the fact that one is now dreaming plus dream control. I}
   \ALIUSPlacedTextContent{71.080}{280.458}{457.008}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{think any theory of dreaming will have to be able to accommodate this underlying}
@@ -1187,7 +1192,7 @@
   \ALIUSPlacedTextContent{71.080}{711.738}{37.095}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2016).}
   \ALIUSPlacedTextContent{99.430}{734.538}{428.444}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Second, I think that simulation views now offer a sufficient degree of}
   \ALIUSPlacedTextContent{71.080}{751.578}{456.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{unification to the field of dream research to move beyond sleep and sleep-related}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1197,10 +1202,10 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{73}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.877}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experiences. Here, the challenge is how to integrate dreaming (and dreamless sleep}
-  \ALIUSPlacedTextContent{71.080}{87.978}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience) into a broader theory of consciousness and the self—to locate sleep-}
+  \ALIUSPlacedTextContent{71.080}{87.978}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{experience) into a broader theory of consciousness and the selfâ€”to locate sleep-}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.950}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{related experience, as it were, on the map of concepts used to describe standard and}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.690}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{altered wake states, as well as disorders of consciousness. The most important}
   \ALIUSPlacedTextContent{71.080}{138.858}{456.906}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{contrast conditions, in my view, are full-body illusions, immersive virtual reality,}
@@ -1225,21 +1230,21 @@
   \ALIUSPlacedTextContent{71.080}{466.938}{456.874}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{appears to be stronger than commonly assumed. By investigating varying degrees of}
   \ALIUSPlacedTextContent{71.080}{483.978}{456.863}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{concordance between bodily experience and its real-body basis, it may then become}
   \ALIUSPlacedTextContent{71.080}{500.778}{340.399}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{possible to identify continuities across sleep and wakefulness.}
-  \ALIUSPlacedTextContent{122.680}{536.873}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{123.160}{536.873}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{141.160}{536.873}{322.798}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Perhaps sleep and wakefulness themselves are not}
-  \ALIUSPlacedTextContent{141.160}{554.873}{321.850}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{mutually exclusive, and a profound departure from}
-  \ALIUSPlacedTextContent{426.520}{571.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{141.160}{572.393}{288.952}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the familiar sleep-wake dichotomy is needed.}
+  \ALIUSPlacedTextContent{141.634}{554.393}{321.850}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{mutually exclusive, and a profound departure from}
+  \ALIUSPlacedTextContent{467.958}{571.913}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{158.083}{571.913}{288.952}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the familiar sleep-wake dichotomy is needed.}
   \ALIUSPlacedTextContent{99.430}{609.498}{428.494}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Similarly, there are good reasons for thinking that conscious sleep mentation}
   \ALIUSPlacedTextContent{71.080}{626.538}{456.801}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is closely related, on the phenomenological and neuroscientific levels of descriptions,}
   \ALIUSPlacedTextContent{71.080}{643.578}{456.869}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to spontaneous thought in wakefulness. It has even been suggested that dreaming}
   \ALIUSPlacedTextContent{71.080}{660.378}{456.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{can be regarded as an intensified form of waking mind wandering (Fox, Nijeboer,}
   \ALIUSPlacedTextContent{71.080}{677.418}{456.893}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Solomonova, Domhoff, \& Christoff, 2013). Again, given a more precise taxonomy for}
-  \ALIUSPlacedTextContent{71.080}{694.458}{456.858}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{describing the range of conscious experience in sleep—both dreamful and}
-  \ALIUSPlacedTextContent{71.080}{711.258}{456.841}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreamless—we can now ask which features of experience and cognitive processing}
+  \ALIUSPlacedTextContent{71.080}{694.458}{456.858}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{describing the range of conscious experience in sleepâ€”both dreamful and}
+  \ALIUSPlacedTextContent{71.080}{711.258}{456.841}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{dreamlessâ€”we can now ask which features of experience and cognitive processing}
   \ALIUSPlacedTextContent{71.080}{728.298}{453.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{change in concert with sleep-wake transitions, and which ones are state-}
   \ALIUSPlacedTextContent{71.080}{745.338}{456.869}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{independent, remaining more or less stable across the sleep-wake cycle. I think this}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1249,7 +1254,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-55.000bp) rectangle ++(456.960bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-786.760bp) rectangle ++(456.720bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.700}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.960}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{74}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.771}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{is an extremely interesting and fruitful question to ask, both theoretically and}
   \ALIUSPlacedTextContent{71.080}{87.978}{457.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{empirically. The answer has the potential to undermine our understanding of what}
@@ -1278,7 +1283,7 @@
   \ALIUSPlacedTextContent{71.080}{483.978}{456.860}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{impact on these or related issues, and if philosophical work, e.g. on different kinds}
   \ALIUSPlacedTextContent{71.080}{500.778}{456.856}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{of sleep-related experience, had some role in this, I think this would be an absolutely}
   \ALIUSPlacedTextContent{71.080}{517.818}{123.564}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{fantastic development.}
-  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.380}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.380}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1293,18 +1298,18 @@
   \ALIUSPlacedTextContent{106.530}{120.305}{131.426}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{237.996}{120.305}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{243.924}{120.305}{8.215}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{13}
-  \ALIUSPlacedTextContent{252.153}{120.305}{45.542}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 7–13.}
+  \ALIUSPlacedTextContent{252.153}{120.305}{45.542}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 7â€“13.}
   \ALIUSPlacedTextContent{71.080}{142.145}{305.562}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-block-2005}Block, N. (2005). Review of Alva Noe, Action in Perception.}
   \ALIUSPlacedTextContent{376.622}{142.145}{98.405}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Philosophy}
   \ALIUSPlacedTextContent{475.083}{142.145}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{480.986}{142.145}{14.189}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{102}
-  \ALIUSPlacedTextContent{495.195}{142.145}{29.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 259–}
+  \ALIUSPlacedTextContent{495.195}{142.145}{29.165}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 259â€“}
   \ALIUSPlacedTextContent{106.530}{157.985}{21.635}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{272.}
   \ALIUSPlacedTextContent{71.080}{179.585}{255.155}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-brugger-2008}Brugger, P. (2008). The phantom limb in dreams.}
   \ALIUSPlacedTextContent{326.984}{179.585}{134.302}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Consciousness and Cognition}
   \ALIUSPlacedTextContent{461.321}{179.585}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{467.975}{179.585}{8.799}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{17}
-  \ALIUSPlacedTextContent{476.789}{179.585}{47.570}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 1272–}
+  \ALIUSPlacedTextContent{476.789}{179.585}{47.570}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 1272â€“}
   \ALIUSPlacedTextContent{106.530}{195.425}{30.124}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1278.}
   \ALIUSPlacedTextContent{71.080}{217.025}{456.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-dement-kleitman-1957}Dement, W., \& Kleitman, N. (1957). The relation of eye movements during sleep to dream}
   \ALIUSPlacedTextContent{106.530}{232.865}{301.317}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{activity: an objective method for the study of dreaming.}
@@ -1312,7 +1317,7 @@
   \ALIUSPlacedTextContent{106.530}{248.705}{50.628}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychology}
   \ALIUSPlacedTextContent{157.163}{248.705}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{163.091}{248.705}{9.294}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{53}
-  \ALIUSPlacedTextContent{172.399}{248.705}{64.742}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5), 339–346.}
+  \ALIUSPlacedTextContent{172.399}{248.705}{64.742}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(5), 339â€“346.}
   \ALIUSPlacedTextContent{71.080}{270.305}{239.729}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-dennett-1976}Dennett, D. C. (1976). Are dreams experiences?}
   \ALIUSPlacedTextContent{310.820}{270.305}{97.245}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Philosophical Review}
   \ALIUSPlacedTextContent{408.084}{270.305}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
@@ -1324,19 +1329,19 @@
   \ALIUSPlacedTextContent{106.530}{323.585}{45.262}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Cognition}
   \ALIUSPlacedTextContent{151.821}{323.585}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{157.749}{323.585}{10.408}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{20}
-  \ALIUSPlacedTextContent{168.174}{323.585}{76.689}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 998–1008.}
-  \ALIUSPlacedTextContent{71.080}{345.425}{456.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-dresler-koch-2011}Dresler, M., Koch, S. P., Wehrle, R., Spoormaker, V. I., Holsboer, F., Steiger, A., … Czisch,}
+  \ALIUSPlacedTextContent{168.174}{323.585}{76.689}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 998â€“1008.}
+  \ALIUSPlacedTextContent{71.080}{345.425}{456.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-dresler-koch-2011}Dresler, M., Koch, S. P., Wehrle, R., Spoormaker, V. I., Holsboer, F., Steiger, A., â€¦ Czisch,}
   \ALIUSPlacedTextContent{106.530}{361.025}{381.077}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{M. (2011). Dreamed movement elicits activation in the sensorimotor cortex.}
   \ALIUSPlacedTextContent{487.526}{361.025}{39.886}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current}
   \ALIUSPlacedTextContent{106.530}{376.865}{54.108}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Biology: CB}
   \ALIUSPlacedTextContent{160.648}{376.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{166.576}{376.865}{8.490}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{21}
-  \ALIUSPlacedTextContent{175.078}{376.865}{80.979}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(21), 1833–1837.}
+  \ALIUSPlacedTextContent{175.078}{376.865}{80.979}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(21), 1833â€“1837.}
   \ALIUSPlacedTextContent{71.080}{398.465}{334.144}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-flanagan-1995}Flanagan, O. (1995). Deconstructing dreams: the spandrels of sleep.}
   \ALIUSPlacedTextContent{404.549}{398.465}{116.897}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Philosophy}
   \ALIUSPlacedTextContent{521.494}{398.465}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{106.530}{414.305}{10.165}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{92}
-  \ALIUSPlacedTextContent{116.709}{414.305}{49.741}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 5–27.}
+  \ALIUSPlacedTextContent{116.709}{414.305}{49.741}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 5â€“27.}
   \ALIUSPlacedTextContent{71.080}{436.145}{456.338}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-fox-nijeboer-2013}Fox, K. C. R., Nijeboer, S., Solomonova, E., Domhoff, G. W., \& Christoff, K. (2013).}
   \ALIUSPlacedTextContent{106.530}{451.745}{417.837}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Dreaming as mind wandering: evidence from functional neuroimaging and first-}
   \ALIUSPlacedTextContent{106.530}{467.585}{121.212}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{person content reports.}
@@ -1347,20 +1352,20 @@
   \ALIUSPlacedTextContent{71.080}{489.185}{107.235}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-hobson-1988}Hobson, J. A. (1988).}
   \ALIUSPlacedTextContent{178.355}{489.185}{95.060}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Dreaming Brain}
   \ALIUSPlacedTextContent{273.448}{489.185}{191.750}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1st edition). New York: Basic Books.}
-  \ALIUSPlacedTextContent{71.080}{511.025}{453.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-hohwy-2010}Hohwy, J. (2010). The hypothesis testing brain: some philosophical applications (pp. 135–}
+  \ALIUSPlacedTextContent{71.080}{511.025}{453.280}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-hohwy-2010}Hohwy, J. (2010). The hypothesis testing brain: some philosophical applications (pp. 135â€“}
   \ALIUSPlacedTextContent{106.530}{526.865}{238.145}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{144). Macquarie Centre for Cognitive Science.}
   \ALIUSPlacedTextContent{71.080}{548.465}{456.288}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-horikawa-tamaki-2013}Horikawa, T., Tamaki, M., Miyawaki, Y., \& Kamitani, Y. (2013). Neural Decoding of Visual}
   \ALIUSPlacedTextContent{106.530}{564.305}{116.018}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Imagery During Sleep.}
   \ALIUSPlacedTextContent{222.552}{564.305}{33.183}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Science}
   \ALIUSPlacedTextContent{255.741}{564.305}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{261.669}{564.305}{15.630}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{340}
-  \ALIUSPlacedTextContent{277.320}{564.305}{84.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6132), 639–642.}
+  \ALIUSPlacedTextContent{277.320}{564.305}{84.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6132), 639â€“642.}
   \ALIUSPlacedTextContent{71.080}{585.905}{456.398}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-huber-felice-ghilardi-2004}Huber, R., Felice Ghilardi, M., Massimini, M., \& Tononi, G. (2004). Local sleep and}
   \ALIUSPlacedTextContent{106.530}{601.745}{47.229}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{learning.}
   \ALIUSPlacedTextContent{153.758}{601.745}{32.841}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Nature}
   \ALIUSPlacedTextContent{186.622}{601.745}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{192.549}{601.745}{15.638}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{430}
-  \ALIUSPlacedTextContent{208.201}{601.745}{75.364}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6995), 78–81.}
+  \ALIUSPlacedTextContent{208.201}{601.745}{75.364}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6995), 78â€“81.}
   \ALIUSPlacedTextContent{71.080}{623.585}{89.826}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-jouvet-1999}Jouvet, M. (1999).}
   \ALIUSPlacedTextContent{160.472}{623.585}{205.512}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Paradox of Sleep: The Story of Dreaming}
   \ALIUSPlacedTextContent{366.036}{623.585}{161.406}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. (L. Garey, Trans.). Cambridge,}
@@ -1375,11 +1380,11 @@
   \ALIUSPlacedTextContent{487.677}{714.305}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{495.534}{714.305}{7.554}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{11}
   \ALIUSPlacedTextContent{503.099}{714.305}{24.307}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(19),}
-  \ALIUSPlacedTextContent{106.530}{729.905}{59.425}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2392–2402.}
+  \ALIUSPlacedTextContent{106.530}{729.905}{59.425}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{2392â€“2402.}
   \ALIUSPlacedTextContent{71.080}{751.745}{100.834}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-malcolm-1962}Malcolm, N. (1962).}
   \ALIUSPlacedTextContent{171.919}{751.745}{45.429}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Dreaming}
   \ALIUSPlacedTextContent{217.379}{751.745}{145.380}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Routledge and Kegan Paul.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1389,7 +1394,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.460}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{76}
   \ALIUSPlacedTextContent{71.080}{70.865}{456.327}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-metzinger-2006}Metzinger, T. (2006). Reply to Hobson: Can there be a first-person science of}
   \ALIUSPlacedTextContent{106.530}{86.705}{76.707}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness?}
@@ -1405,13 +1410,13 @@
   \ALIUSPlacedTextContent{228.845}{139.985}{132.850}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Consciousness and Cognition}
   \ALIUSPlacedTextContent{361.727}{139.985}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{367.655}{139.985}{8.799}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{17}
-  \ALIUSPlacedTextContent{376.469}{139.985}{76.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 1266–1271.}
+  \ALIUSPlacedTextContent{376.469}{139.985}{76.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 1266â€“1271.}
   \ALIUSPlacedTextContent{71.080}{161.585}{456.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-nielsen-1993}Nielsen, T. A. (1993). Changes in the kinesthetic content of dreams following}
   \ALIUSPlacedTextContent{106.530}{177.425}{308.020}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{somatosensory stimulation of leg muscles during REM sleep.}
   \ALIUSPlacedTextContent{414.462}{177.425}{45.429}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Dreaming}
   \ALIUSPlacedTextContent{459.922}{177.425}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{465.768}{177.425}{4.432}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{3}
-  \ALIUSPlacedTextContent{470.214}{177.425}{60.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 99–113.}
+  \ALIUSPlacedTextContent{470.214}{177.425}{60.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 99â€“113.}
   \ALIUSPlacedTextContent{71.080}{199.025}{456.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-nielsen-ouellet-1995}Nielsen, T. A., Ouellet, L., \& Zadra, A. L. (1995). Pressure stimulation during REM sleep}
   \ALIUSPlacedTextContent{106.530}{214.865}{245.386}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{alters dream limb activity and body bizarreness.}
   \ALIUSPlacedTextContent{351.925}{214.865}{67.537}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Sleep Research}
@@ -1423,8 +1428,8 @@
   \ALIUSPlacedTextContent{406.121}{252.305}{45.429}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Dreaming}
   \ALIUSPlacedTextContent{451.581}{252.305}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{457.509}{252.305}{8.215}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{13}
-  \ALIUSPlacedTextContent{465.737}{252.305}{64.638}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 211–235.}
-  \ALIUSPlacedTextContent{71.080}{274.145}{78.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-noe-2005}Noë, A. (2005).}
+  \ALIUSPlacedTextContent{465.737}{252.305}{64.638}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 211â€“235.}
+  \ALIUSPlacedTextContent{71.080}{274.145}{78.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-noe-2005}NoÃ«, A. (2005).}
   \ALIUSPlacedTextContent{149.326}{274.145}{93.859}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Action in Perception}
   \ALIUSPlacedTextContent{243.223}{274.145}{182.767}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Cambridge, Mass.: The MIT Press.}
   \ALIUSPlacedTextContent{71.080}{295.745}{456.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-noreika-2014}Noreika, V. (2014). It's not just about the contents: searching for a neural correlate of a}
@@ -1438,11 +1443,11 @@
   \ALIUSPlacedTextContent{106.530}{412.145}{415.012}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Psychophysiology: Official Journal of the International Organization of Psychophysiology}
   \ALIUSPlacedTextContent{521.494}{412.145}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{106.530}{427.745}{10.513}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{74}
-  \ALIUSPlacedTextContent{117.060}{427.745}{54.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 14–18.}
+  \ALIUSPlacedTextContent{117.060}{427.745}{54.473}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 14â€“18.}
   \ALIUSPlacedTextContent{71.080}{449.585}{456.237}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-rechtschaffen-buchignani-1992}Rechtschaffen, A., \& Buchignani, C. (1992). The visual appearance of dreams. In J. S.}
   \ALIUSPlacedTextContent{106.530}{465.185}{152.083}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Antrobus \& M. Bertini (Eds.),}
   \ALIUSPlacedTextContent{258.327}{465.185}{197.218}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The neuropsychology of sleep and dreaming}
-  \ALIUSPlacedTextContent{455.555}{465.185}{71.856}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp. 143–155).}
+  \ALIUSPlacedTextContent{455.555}{465.185}{71.856}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp. 143â€“155).}
   \ALIUSPlacedTextContent{106.530}{481.025}{270.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Hillsdale, NJ, US: Lawrence Erlbaum Associates, Inc.}
   \ALIUSPlacedTextContent{71.080}{502.865}{109.629}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-revonsuo-2005}Revonsuo, A. (2005).}
   \ALIUSPlacedTextContent{182.128}{502.865}{275.316}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Inner Presence: Consciousness as a Biological Phenomenon}
@@ -1454,31 +1459,31 @@
   \ALIUSPlacedTextContent{181.711}{571.745}{27.895}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{from}
   \ALIUSPlacedTextContent{232.171}{571.745}{292.197}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{http://open-mind.net/papers/the-avatars-in-the-machine-}
   \ALIUSPlacedTextContent{106.530}{587.345}{280.940}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dreaming-as-a-simulation-of-social-reality/getAbstract}
-  \ALIUSPlacedTextContent{71.080}{609.185}{341.071}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-schonhammer-2005}Schönhammer, R. (2005). "Typical Dreams": Reflections of Arousal.}
+  \ALIUSPlacedTextContent{71.080}{609.185}{341.071}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-schonhammer-2005}SchÃ¶nhammer, R. (2005). "Typical Dreams": Reflections of Arousal.}
   \ALIUSPlacedTextContent{411.975}{609.185}{115.391}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Journal of Consciousness}
   \ALIUSPlacedTextContent{106.530}{625.025}{33.261}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Studies}
   \ALIUSPlacedTextContent{139.796}{625.025}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{145.724}{625.025}{8.488}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{12}
-  \ALIUSPlacedTextContent{154.226}{625.025}{65.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4–5), 18–37.}
-  \ALIUSPlacedTextContent{71.080}{646.625}{456.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-schredl-ciric-2004}Schredl, M., Ciric, P., Götz, S., \& Wittmann, L. (2004). Typical dreams: stability and gender}
+  \ALIUSPlacedTextContent{154.226}{625.025}{65.457}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4â€“5), 18â€“37.}
+  \ALIUSPlacedTextContent{71.080}{646.625}{456.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-schredl-ciric-2004}Schredl, M., Ciric, P., GÃ¶tz, S., \& Wittmann, L. (2004). Typical dreams: stability and gender}
   \ALIUSPlacedTextContent{106.530}{662.465}{60.803}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{differences.}
   \ALIUSPlacedTextContent{167.342}{662.465}{119.826}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Journal of Psychology}
   \ALIUSPlacedTextContent{287.212}{662.465}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{293.140}{662.465}{13.929}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{138}
-  \ALIUSPlacedTextContent{307.088}{662.465}{70.657}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 485–494.}
+  \ALIUSPlacedTextContent{307.088}{662.465}{70.657}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(6), 485â€“494.}
   \ALIUSPlacedTextContent{71.080}{684.065}{456.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-schwartz-2000}Schwartz, S. (2000). A Historical Loop of One Hundred Years: Similarities Between 19th}
   \ALIUSPlacedTextContent{106.530}{699.905}{233.695}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Century and Contemporary Dream Research.}
   \ALIUSPlacedTextContent{340.304}{699.905}{45.429}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Dreaming}
   \ALIUSPlacedTextContent{385.764}{699.905}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{391.691}{699.905}{9.472}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{10}
-  \ALIUSPlacedTextContent{401.181}{699.905}{56.345}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 55–66.}
+  \ALIUSPlacedTextContent{401.181}{699.905}{56.345}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 55â€“66.}
   \ALIUSPlacedTextContent{71.080}{721.745}{403.950}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-schwitzgebel-2002}Schwitzgebel, E. (2002). Why did we think we dreamed in black and white?}
   \ALIUSPlacedTextContent{476.937}{721.745}{50.479}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Studies in}
   \ALIUSPlacedTextContent{106.530}{737.345}{190.512}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{History and Philosophy of Science Part A}
   \ALIUSPlacedTextContent{297.079}{737.345}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{303.007}{737.345}{8.878}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{33}
-  \ALIUSPlacedTextContent{311.899}{737.345}{71.411}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 649–660.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{311.899}{737.345}{71.411}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(4), 649â€“660.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1488,7 +1493,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.460}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{77}
   \ALIUSPlacedTextContent{71.080}{70.865}{118.688}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-schwitzgebel-2011}Schwitzgebel, E. (2011).}
   \ALIUSPlacedTextContent{189.806}{70.865}{131.026}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Perplexities of Consciousness}
@@ -1509,7 +1514,7 @@
   \ALIUSPlacedTextContent{106.530}{199.025}{45.262}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Cognition}
   \ALIUSPlacedTextContent{151.821}{199.025}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{157.749}{199.025}{9.566}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{25}
-  \ALIUSPlacedTextContent{167.329}{199.025}{42.994}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 51–66.}
+  \ALIUSPlacedTextContent{167.329}{199.025}{42.994}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 51â€“66.}
   \ALIUSPlacedTextContent{71.080}{220.865}{456.331}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-singer-2014a}Singer, W. (2014a). State or content of consciousness? Open MIND. Frankfurt am Main:}
   \ALIUSPlacedTextContent{106.530}{236.705}{417.837}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{MIND Group. Retrieved from http://open-mind.net/papers/state-or-content-of-}
   \ALIUSPlacedTextContent{106.530}{252.305}{268.902}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{consciousness-a-reply-to-valdas-noreika/getAbstract}
@@ -1522,14 +1527,14 @@
   \ALIUSPlacedTextContent{307.336}{358.865}{136.764}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Annual Review of Psychology}
   \ALIUSPlacedTextContent{444.131}{358.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{450.059}{358.865}{10.903}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{66}
-  \ALIUSPlacedTextContent{460.979}{358.865}{67.407}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 487–518.}
+  \ALIUSPlacedTextContent{460.979}{358.865}{67.407}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 487â€“518.}
   \ALIUSPlacedTextContent{71.080}{380.465}{456.385}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-tamaki-bang-2016}Tamaki, M., Bang, J. W., Watanabe, T., \& Sasaki, Y. (2016). Night watch in one brain}
   \ALIUSPlacedTextContent{106.530}{396.305}{379.930}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{hemisphere during sleep associated with the first-night effect in humans.}
   \ALIUSPlacedTextContent{487.526}{396.305}{39.886}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Current}
   \ALIUSPlacedTextContent{106.530}{412.145}{34.106}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Biology}
   \ALIUSPlacedTextContent{140.641}{412.145}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{146.569}{412.145}{10.162}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{26}
-  \ALIUSPlacedTextContent{156.748}{412.145}{76.767}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(9), 1190–1194.}
+  \ALIUSPlacedTextContent{156.748}{412.145}{76.767}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(9), 1190â€“1194.}
   \ALIUSPlacedTextContent{71.080}{433.745}{456.336}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-thompson-2014}Thompson, E. (2014). Dreamless sleep, the embodied mind, and consciousness. Open}
   \ALIUSPlacedTextContent{106.530}{449.585}{417.837}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{MIND. Frankfurt am Main: MIND Group. Retrieved from http://open-}
   \ALIUSPlacedTextContent{106.530}{465.185}{393.657}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{mind.net/papers/dreamless-sleep-the-embodied-mind-and-consciousness-the-}
@@ -1539,7 +1544,7 @@
   \ALIUSPlacedTextContent{504.825}{502.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{511.315}{502.865}{10.162}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{26}
   \ALIUSPlacedTextContent{521.494}{502.865}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
-  \ALIUSPlacedTextContent{106.530}{518.465}{43.774}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{431–461.}
+  \ALIUSPlacedTextContent{106.530}{518.465}{43.774}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{431â€“461.}
   \ALIUSPlacedTextContent{71.080}{540.305}{456.334}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-voss-hobson-2014}Voss, U., \& Hobson, A. (2014). What is the state-of-the-art on lucid dreaming? - recent}
   \ALIUSPlacedTextContent{106.530}{555.905}{420.945}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{advances and questions for future research. Open MIND. Frankfurt am Main:}
   \ALIUSPlacedTextContent{106.530}{571.745}{417.837}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{MIND Group. Retrieved from http://open-mind.net/papers/what-is-the-state-of-}
@@ -1551,12 +1556,12 @@
   \ALIUSPlacedTextContent{490.987}{640.625}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{498.251}{640.625}{9.150}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{32}
   \ALIUSPlacedTextContent{507.415}{640.625}{19.992}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(9),}
-  \ALIUSPlacedTextContent{106.530}{656.465}{53.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1191–1200.}
+  \ALIUSPlacedTextContent{106.530}{656.465}{53.238}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{1191â€“1200.}
   \ALIUSPlacedTextContent{71.080}{678.065}{456.358}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-windt-2010}Windt, J. M. (2010). The immersive spatiotemporal hallucination model of dreaming.}
   \ALIUSPlacedTextContent{106.530}{693.905}{196.493}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Phenomenology and the Cognitive Sciences}
   \ALIUSPlacedTextContent{302.981}{693.905}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{308.909}{693.905}{5.443}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{9}
-  \ALIUSPlacedTextContent{314.369}{693.905}{66.549}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 295–316.}
+  \ALIUSPlacedTextContent{314.369}{693.905}{66.549}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(2), 295â€“316.}
   \ALIUSPlacedTextContent{71.080}{715.745}{456.337}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-windt-2013}Windt, J. M. (2013). Reporting dream experience: why (not) to be skeptical about dream}
   \ALIUSPlacedTextContent{106.530}{731.345}{42.032}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{reports.}
   \ALIUSPlacedTextContent{148.571}{731.345}{155.131}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Human Neuroscience}
@@ -1565,7 +1570,7 @@
   \ALIUSPlacedTextContent{314.669}{731.345}{8.649}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{.}
   \ALIUSPlacedTextContent{71.080}{753.185}{106.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-windt-2015a}Windt, J. M. (2015a).}
   \ALIUSPlacedTextContent{177.396}{753.185}{349.895}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Dreaming: A Conceptual Framework for Philosophy of Mind and Empirical}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1575,11 +1580,11 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt – Relocating Dreams on the Conceptual Map}
+  \ALIUSPlacedTextContent{71.080}{35.460}{250.842}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{J. Windt â€“ Relocating Dreams on the Conceptual Map}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{78}
   \ALIUSPlacedTextContent{106.530}{70.865}{41.152}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Research}
   \ALIUSPlacedTextContent{147.713}{70.865}{354.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1 edition). Cambridge, Massachusetts ; London, England: MIT Press.}
-  \ALIUSPlacedTextContent{71.080}{92.705}{456.383}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-windt-2015b}Windt, J. M. (2015b). Just in time—dreamless sleep experience as pure subjective}
+  \ALIUSPlacedTextContent{71.080}{92.705}{456.383}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-windt-bucci-milliere-windt-2015b}Windt, J. M. (2015b). Just in timeâ€”dreamless sleep experience as pure subjective}
   \ALIUSPlacedTextContent{106.530}{108.305}{421.016}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{temporality. Open MIND. Frankfurt am Main: MIND Group. Retrieved from}
   \ALIUSPlacedTextContent{106.530}{124.145}{397.139}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{http://open-mind.net/papers/just-in-time-dreamless-sleep-experience-as-pure-}
   \ALIUSPlacedTextContent{106.530}{139.985}{358.730}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{subjective-temporality-a-commentary-on-evan-thompson/getAbstract}
@@ -1593,7 +1598,7 @@
   \ALIUSPlacedTextContent{191.404}{230.705}{131.426}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{322.871}{230.705}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{328.799}{230.705}{10.408}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{20}
-  \ALIUSPlacedTextContent{339.224}{230.705}{73.036}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(12), 871–882.}
+  \ALIUSPlacedTextContent{339.224}{230.705}{73.036}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(12), 871â€“882.}
   \ALIUSPlacedTextContent{71.080}{252.305}{456.297}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Windt, J. M., \& Voss, U. (forthcoming). Spontaneous thought, insight, and control in lucid}
   \ALIUSPlacedTextContent{106.530}{268.145}{211.170}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{dreams. In K. Christoff \& K. Fox (Eds.),}
   \ALIUSPlacedTextContent{319.076}{268.145}{202.630}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Oxford Handbook of Spontaneous Thought}
@@ -1603,8 +1608,8 @@
   \ALIUSPlacedTextContent{415.637}{305.585}{45.429}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Dreaming}
   \ALIUSPlacedTextContent{461.097}{305.585}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{467.025}{305.585}{9.485}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{18}
-  \ALIUSPlacedTextContent{476.528}{305.585}{48.454}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1–10.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
+  \ALIUSPlacedTextContent{476.528}{305.585}{48.454}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1), 1â€“10.}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

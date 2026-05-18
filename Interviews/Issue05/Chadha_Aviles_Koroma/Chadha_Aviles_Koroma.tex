@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -139,14 +144,14 @@
   \ALIUSPlacedTextContent{87.840}{190.529}{126.427}{ALIUSC000000}{\ALIUSFontLatoLight}{16.080}{An interview with}
   \ALIUSPlacedTextContent{371.520}{194.759}{107.611}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{and Contemplative studies,}
   \ALIUSPlacedTextContent{371.520}{205.559}{113.556}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Monash University, Australia}
-  \ALIUSPlacedTextContent{87.840}{226.008}{222.921}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Edvard Avilés and Matthieu Koroma}
+  \ALIUSPlacedTextContent{87.840}{226.008}{222.921}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{by Edvard AvilÃ©s and Matthieu Koroma}
   \ALIUSPlacedTextContent{371.520}{230.784}{68.390}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Edvard Aviles}
   \ALIUSPlacedTextContent{371.520}{243.959}{74.753}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{eda39@cornell.edu}
   \ALIUSPlacedTextContent{371.520}{254.759}{109.250}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Sage School of Philosophy,}
   % ALIUS normalized citation panel begin
-  % ALIUS normalized citation panel text: Cite as: Chadha, M., Avilés, E. \& Koroma, M. (2021). Indian philosophy and the value of transformative experiences. An interview with Monima Chadha by Edvard Aviles and Matthieu Koroma. ALIUS Bulletin, 5, 29-38,
+  % ALIUS normalized citation panel text: Cite as: Chadha, M., AvilÃ©s, E. \& Koroma, M. (2021). Indian philosophy and the value of transformative experiences. An interview with Monima Chadha by Edvard Aviles and Matthieu Koroma. ALIUS Bulletin, 5, 29-38,
   \fill[white] (86.340bp,-253.731bp) rectangle ++(276.680bp,-51.300bp);
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (87.840bp,-255.731bp) {\begin{minipage}{273.680bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Chadha, M., Avilés, E. \& Koroma, M. (2021). Indian philosophy and the value of transformative experiences. An interview with Monima Chadha by Edvard Aviles and Matthieu Koroma. ALIUS Bulletin, 5, 29-38, \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/rn10-az29}{https://doi.org/10.34700/rn10-az29}}}\par}\end{minipage}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (87.840bp,-255.731bp) {\begin{minipage}{273.680bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Chadha, M., AvilÃ©s, E. \& Koroma, M. (2021). Indian philosophy and the value of transformative experiences. An interview with Monima Chadha by Edvard Aviles and Matthieu Koroma. ALIUS Bulletin, 5, 29-38, \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/rn10-az29}{https://doi.org/10.34700/rn10-az29}}}\par}\end{minipage}};
   % ALIUS normalized citation panel end
   \ALIUSPlacedTextContent{371.520}{265.559}{96.254}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Cornell University, USA}
   \ALIUSPlacedTextContent{371.520}{287.184}{88.206}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Matthieu Koroma}
@@ -175,7 +180,7 @@
   \ALIUSPlacedTextContent{90.000}{687.583}{418.530}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{led you to your interest for the philosophy of mind or the reverse? Is there}
   \ALIUSPlacedTextContent{90.000}{704.863}{418.320}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{something in particular in the Indian philosophical corpus that sparkled your}
   \ALIUSPlacedTextContent{90.000}{722.143}{49.837}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interest?}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -183,7 +188,7 @@
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{494.640}{35.472}{13.200}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{30}
   \ALIUSPlacedTextContent{90.000}{72.098}{418.430}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I have always been intrigued by issues in philosophy of mind and language,}
   \ALIUSPlacedTextContent{90.000}{91.538}{418.234}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{so in a sense it was philosophy of mind that came first. My interest in Indian}
@@ -227,7 +232,7 @@
   \ALIUSPlacedTextContent{90.000}{629.378}{150.687}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Dasti and Stephen Phillips.}
   \ALIUSPlacedTextContent{90.000}{660.818}{296.817}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{2. The Concealed Art of the Soul, by Jonardon Ganeri}
   \ALIUSPlacedTextContent{90.000}{692.258}{255.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{3. Buddhism as Philosophy by Mark Siderits.}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -235,12 +240,12 @@
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{496.320}{35.472}{11.460}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{31}
-  \ALIUSPlacedTextContent{105.600}{92.357}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{115.680}{92.357}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{133.680}{92.357}{324.354}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I hesitate to recommend texts because the Indian}
-  \ALIUSPlacedTextContent{468.240}{104.448}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{133.680}{110.357}{238.018}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{tradition is primarily an oral tradition.}
+  \ALIUSPlacedTextContent{462.034}{110.357}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{176.848}{110.357}{238.018}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{tradition is primarily an oral tradition.}
   \ALIUSPlacedTextContent{90.000}{161.743}{418.304}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Since the 90's there has been a rising interest in the neuroscience of}
   \ALIUSPlacedTextContent{90.000}{179.023}{418.574}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consciousness. In the field, neurobiologists and psychologists usually operate}
   \ALIUSPlacedTextContent{90.000}{196.303}{418.282}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{with a cognitive concept of consciousness: consciousness is cognitive access}
@@ -281,7 +286,7 @@
   \ALIUSPlacedTextContent{90.000}{693.583}{418.386}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{of Buddhism. However, with few exceptions (Kriegel, 2019) in contemporary}
   \ALIUSPlacedTextContent{90.000}{710.863}{418.305}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{philosophy of perception, the study of consciousness is focused on the}
   \ALIUSPlacedTextContent{90.000}{727.903}{333.662}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{sensory features of experience ignoring its valenced aspects.}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -289,7 +294,7 @@
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{495.600}{35.472}{12.300}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{32}
   \ALIUSPlacedTextContent{90.000}{72.223}{418.383}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{What do Indian traditions have to say about the relationship between}
   \ALIUSPlacedTextContent{90.000}{89.503}{147.395}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{consciousness and value?}
@@ -302,7 +307,7 @@
   \ALIUSPlacedTextContent{94.326}{176.978}{40.872}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{saṃsāra}
   \ALIUSPlacedTextContent{135.233}{176.978}{373.100}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{) which according to most classical Indian philosophers, is}
   \ALIUSPlacedTextContent{90.000}{196.658}{366.817}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{characterised by suffering. The highest goal of life is liberation (}
-  \ALIUSPlacedTextContent{456.815}{196.658}{31.134}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{mokṣa}
+  \ALIUSPlacedTextContent{456.815}{196.658}{31.134}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{moká¹£a}
   \ALIUSPlacedTextContent{487.992}{196.658}{20.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{or}
   \ALIUSPlacedTextContent{90.000}{216.098}{39.410}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{nirvāṇa}
   \ALIUSPlacedTextContent{129.437}{216.098}{72.167}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{). Except the}
@@ -334,18 +339,18 @@
   \ALIUSPlacedTextContent{90.000}{614.258}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{been interested in illusions in the discussions of perception, consciousness}
   \ALIUSPlacedTextContent{90.000}{633.698}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and ontology. The discussions in Indian philosophy differ because the}
   \ALIUSPlacedTextContent{90.000}{653.378}{418.332}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{primary aim guiding Indian philosophers is how to achieve enlightenment or}
-  \ALIUSPlacedTextContent{110.160}{692.596}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{138.000}{692.596}{326.575}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The discussions in Indian philosophy differ}
-  \ALIUSPlacedTextContent{138.000}{710.596}{57.157}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{because}
-  \ALIUSPlacedTextContent{209.046}{710.596}{25.474}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the}
-  \ALIUSPlacedTextContent{248.409}{710.596}{53.331}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{primary}
-  \ALIUSPlacedTextContent{315.630}{710.596}{26.684}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{aim}
-  \ALIUSPlacedTextContent{356.445}{710.596}{50.912}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{guiding}
-  \ALIUSPlacedTextContent{421.488}{710.596}{43.237}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Indian}
+  \ALIUSPlacedTextContent{120.000}{692.596}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{138.085}{692.596}{326.575}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The discussions in Indian philosophy differ}
+  \ALIUSPlacedTextContent{272.794}{710.596}{57.157}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{because}
+  \ALIUSPlacedTextContent{288.636}{710.596}{25.474}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the}
+  \ALIUSPlacedTextContent{274.707}{710.596}{53.331}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{primary}
+  \ALIUSPlacedTextContent{288.031}{710.596}{26.684}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{aim}
+  \ALIUSPlacedTextContent{275.917}{710.596}{50.912}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{guiding}
+  \ALIUSPlacedTextContent{279.755}{710.596}{43.237}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Indian}
   \ALIUSPlacedTextContent{138.000}{728.596}{326.746}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{philosophers is how to achieve enlightenment or}
-  \ALIUSPlacedTextContent{477.360}{737.088}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{138.000}{746.596}{64.018}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{liberation.}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{468.746}{746.596}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{269.364}{746.596}{64.018}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{liberation.}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -353,7 +358,7 @@
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{495.600}{35.472}{12.144}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{33}
   \ALIUSPlacedTextContent{90.000}{72.098}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{liberation. This concern gives the Indian discussion of consciousness a}
   \ALIUSPlacedTextContent{90.000}{91.538}{418.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{different flavour, but in the end, this concern cannot be divorced from the}
@@ -414,7 +419,7 @@
   \ALIUSPlacedTextContent{90.000}{720.223}{418.399}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{processes. Our attention has been brought on the suggestion that differences}
   \ALIUSPlacedTextContent{90.000}{737.503}{418.399}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{in metaphysical conception about consciousness may depend on practices, as}
   \ALIUSPlacedTextContent{90.000}{754.783}{47.581}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{you say:}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -422,7 +427,7 @@
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{494.880}{35.472}{12.888}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{34}
   \ALIUSPlacedTextContent{90.000}{72.223}{418.423}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{"If we think that conscious states supervene on collections of present mental}
   \ALIUSPlacedTextContent{90.000}{89.503}{47.288}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{dharmas}
@@ -445,7 +450,7 @@
   \ALIUSPlacedTextContent{90.000}{351.938}{418.215}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{and conscious experiences. And again, there is not one kind of meditation}
   \ALIUSPlacedTextContent{90.000}{371.378}{418.194}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{but different meditation practices depending on the tradition. To take an}
   \ALIUSPlacedTextContent{90.000}{390.818}{282.650}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{example, in Vasubandhu's seminal text the}
-  \ALIUSPlacedTextContent{382.306}{390.818}{119.526}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Abhidharmakośabhasya}
+  \ALIUSPlacedTextContent{382.306}{390.818}{119.526}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{AbhidharmakoÅ›abhasya}
   \ALIUSPlacedTextContent{501.892}{390.818}{6.366}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{,}
   \ALIUSPlacedTextContent{90.000}{410.258}{418.259}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mindfulness meditation is explained carefully as a stepwise progression.}
   \ALIUSPlacedTextContent{90.000}{429.938}{418.210}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Mindfulness meditation has the aim of curbing thoughts that proliferate}
@@ -469,7 +474,7 @@
   \ALIUSPlacedTextContent{90.000}{717.823}{418.240}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{introspection and first-person data to understand consciousness in the Indian}
   \ALIUSPlacedTextContent{90.000}{735.103}{418.423}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{traditions? Does the Indian philosophical legacy have something to contribute}
   \ALIUSPlacedTextContent{90.000}{752.383}{344.166}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{to the prospects of a scientific understanding of consciousness?}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -477,13 +482,13 @@
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{495.360}{35.472}{12.384}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{35}
-  \ALIUSPlacedTextContent{115.200}{88.517}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{141.840}{88.517}{317.611}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Indian philosophers have an additional resource}
+  \ALIUSPlacedTextContent{123.840}{88.517}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{141.853}{88.517}{317.611}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Indian philosophers have an additional resource}
   \ALIUSPlacedTextContent{141.840}{106.517}{317.638}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{in first-person data available in meditative}
-  \ALIUSPlacedTextContent{463.680}{112.848}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{141.840}{124.517}{80.578}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experiences.}
+  \ALIUSPlacedTextContent{463.478}{124.517}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{260.370}{124.517}{80.578}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{experiences.}
   \ALIUSPlacedTextContent{90.000}{171.938}{418.258}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Philosophers cannot afford to ignore first-person data and introspection if}
   \ALIUSPlacedTextContent{90.000}{191.378}{418.250}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they want to understand the nature of consciousness. Indian philosophers}
   \ALIUSPlacedTextContent{90.000}{210.818}{418.248}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{have an additional resource in first-person data available in meditative}
@@ -513,7 +518,7 @@
   \ALIUSPlacedTextContent{222.540}{482.383}{285.845}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{in about 7\% of trip reports of high-dosage intakes of}
   \ALIUSPlacedTextContent{90.000}{499.663}{47.152}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{Psilocybe}
   \ALIUSPlacedTextContent{137.174}{499.663}{371.239}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{mushrooms, LSD, Salvia, DMT, 5-MeO-DMT, ayahuasca and}
-  \ALIUSPlacedTextContent{90.000}{516.943}{418.343}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{ketamine (Millière, 2017). Despite being rare, these experiences have been}
+  \ALIUSPlacedTextContent{90.000}{516.943}{418.343}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{ketamine (MilliÃ¨re, 2017). Despite being rare, these experiences have been}
   \ALIUSPlacedTextContent{90.000}{534.223}{316.563}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{interpreted in relation to the Buddhist concept of no-self (}
   \ALIUSPlacedTextContent{406.568}{534.223}{45.637}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.357}{anatman}
   \ALIUSPlacedTextContent{452.217}{534.223}{56.161}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{) by some}
@@ -526,15 +531,15 @@
   \ALIUSPlacedTextContent{90.000}{668.978}{418.295}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{transformative experiences. These experiences, at least in the Buddhist}
   \ALIUSPlacedTextContent{90.000}{688.658}{418.310}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{tradition are brought about by a variety of spiritual exercises. In keeping with}
   \ALIUSPlacedTextContent{90.000}{708.098}{292.464}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the general Buddhist tradition Vasubandhu in the}
-  \ALIUSPlacedTextContent{385.414}{708.098}{119.526}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Abhidharmakośabhasya}
+  \ALIUSPlacedTextContent{385.414}{708.098}{119.526}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{AbhidharmakoÅ›abhasya}
   \ALIUSPlacedTextContent{90.000}{727.538}{300.909}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{notes that the spiritual path is an integrated system of}
-  \ALIUSPlacedTextContent{391.270}{727.538}{17.053}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{śīla}
+  \ALIUSPlacedTextContent{391.270}{727.538}{17.053}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Å›Ä«la}
   \ALIUSPlacedTextContent{408.349}{727.538}{96.625}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(moral conduct)-}
   \ALIUSPlacedTextContent{90.000}{746.978}{41.735}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{samādhi}
   \ALIUSPlacedTextContent{131.747}{746.978}{76.903}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(meditation)-}
   \ALIUSPlacedTextContent{208.676}{746.978}{32.427}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{prajñā}
   \ALIUSPlacedTextContent{241.141}{746.978}{270.392}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{(wisdom or internalization of philosophical}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -542,16 +547,16 @@
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{494.640}{35.472}{13.056}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{36}
-  \ALIUSPlacedTextContent{105.600}{83.477}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{115.440}{83.477}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{133.440}{83.477}{326.728}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I think it is better to describe the altered states of}
-  \ALIUSPlacedTextContent{472.800}{97.248}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{133.440}{101.477}{292.978}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness as transformative experiences.}
+  \ALIUSPlacedTextContent{464.168}{101.477}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{150.315}{101.477}{292.978}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{consciousness as transformative experiences.}
   \ALIUSPlacedTextContent{90.000}{149.378}{418.240}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{insights of the Abhidharma tradition). In the commentary that follows,}
   \ALIUSPlacedTextContent{90.000}{168.818}{418.193}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Vasubandhu writes that whoever desires to see the truths should first of all}
   \ALIUSPlacedTextContent{90.000}{188.498}{89.380}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{guard morality (}
-  \ALIUSPlacedTextContent{179.425}{188.498}{17.053}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{śīla}
+  \ALIUSPlacedTextContent{179.425}{188.498}{17.053}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Å›Ä«la}
   \ALIUSPlacedTextContent{196.504}{188.498}{311.719}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{), then they read the teachings on which the insight into}
   \ALIUSPlacedTextContent{90.000}{207.938}{418.342}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{the truths depends, and listen to their meaning, having listened they reflect}
   \ALIUSPlacedTextContent{90.000}{227.378}{418.245}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{on the teachings, and having reflected, they devote themselves to the}
@@ -561,12 +566,12 @@
   \ALIUSPlacedTextContent{90.000}{305.378}{418.098}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{meditation is not an isolated phenomenon, it is embedded within the}
   \ALIUSPlacedTextContent{90.000}{324.818}{418.216}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{spiritual exercises considered as a whole, including knowledge of Buddhist}
   \ALIUSPlacedTextContent{90.000}{344.258}{124.494}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{philosophical insights.}
-  \ALIUSPlacedTextContent{105.840}{395.237}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{132.960}{395.237}{327.313}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The experience of no self in meditation is not an}
-  \ALIUSPlacedTextContent{132.960}{413.237}{327.336}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{isolated phenomenon, it is embedded within the}
+  \ALIUSPlacedTextContent{114.960}{395.237}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{133.040}{395.237}{327.313}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The experience of no self in meditation is not an}
+  \ALIUSPlacedTextContent{133.028}{413.237}{327.336}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{isolated phenomenon, it is embedded within the}
   \ALIUSPlacedTextContent{132.960}{431.237}{327.472}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{spiritual exercises considered as a whole, including}
-  \ALIUSPlacedTextContent{462.000}{445.968}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{132.960}{449.237}{293.459}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{knowledge of Buddhist philosophical insights.}
+  \ALIUSPlacedTextContent{464.432}{449.237}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{149.967}{449.237}{293.459}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{knowledge of Buddhist philosophical insights.}
   \ALIUSPlacedTextContent{90.000}{500.623}{418.377}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{In the Buddhist traditions, the notion of no-self has both metaphysical and}
   \ALIUSPlacedTextContent{90.000}{517.903}{418.244}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{practical aspects, as holding the self as a substance is considered not only as}
   \ALIUSPlacedTextContent{90.000}{535.183}{418.250}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{a false view about the reality but also as a source of suffering. How do}
@@ -581,7 +586,7 @@
   \ALIUSPlacedTextContent{90.000}{709.058}{418.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{others, some of whom are suffering. The Buddhists do recognize that it is}
   \ALIUSPlacedTextContent{90.000}{728.498}{418.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{built-in precondition of our form of life that we have self-concern and special}
   \ALIUSPlacedTextContent{90.000}{748.178}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{concern for our loved ones. That is why the Buddhists do not recommend}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -589,7 +594,7 @@
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{495.120}{35.472}{12.624}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{37}
   \ALIUSPlacedTextContent{90.000}{72.098}{418.278}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{giving up on this self-concern or special concern for our loved ones. Rather}
   \ALIUSPlacedTextContent{90.000}{91.538}{418.320}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{they recommend extending similar concern to others. And they do not think}
@@ -632,7 +637,7 @@
   \ALIUSPlacedTextContent{90.000}{698.383}{418.521}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{cross-cultural discussion about consciousness and the mind? What is your}
   \ALIUSPlacedTextContent{90.000}{715.663}{226.397}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{approach to overcome these challenges?}
   \ALIUSPlacedTextContent{90.000}{750.098}{418.260}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{One of the most important challenges is to draw the attention of mainstream}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -644,7 +649,7 @@
   \fill[ALIUSC0000FF] (149.520bp,-372.720bp) rectangle ++(217.440bp,-0.720bp);
   \fill[ALIUSC0000FF] (90.000bp,-561.600bp) rectangle ++(187.200bp,-0.720bp);
   \fill[ALIUSC0000FF] (229.440bp,-671.760bp) rectangle ++(206.640bp,-0.720bp);
-  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha – Transformative experiences in Indian philosophy}
+  \ALIUSPlacedTextContent{90.000}{35.378}{386.261}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Monima Chadha â€“ Transformative experiences in Indian philosophy}
   \ALIUSPlacedTextContent{494.400}{35.472}{13.344}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{38}
   \ALIUSPlacedTextContent{90.000}{72.098}{418.213}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{philosophers of mind and consciousness to pay serious attention to the}
   \ALIUSPlacedTextContent{90.000}{91.538}{418.276}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{classical Indian tradition and what it has to offer. There is not just the}
@@ -658,12 +663,12 @@
   \ALIUSPlacedTextContent{90.000}{284.665}{178.983}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Consciousness. In W. Seager (Ed.),}
   \ALIUSPlacedTextContent{269.696}{284.665}{193.392}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Routledge Handbook of Panpsychism}
   \ALIUSPlacedTextContent{463.125}{284.665}{44.908}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(1st ed.,}
-  \ALIUSPlacedTextContent{90.000}{300.505}{113.873}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{pp. 25–35). Routledge.}
+  \ALIUSPlacedTextContent{90.000}{300.505}{113.873}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{pp. 25â€“35). Routledge.}
   \ALIUSPlacedTextContent{203.903}{300.505}{197.254}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.4324/9781315717708-3}
   \ALIUSPlacedTextContent{126.000}{328.105}{381.984}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Chalmers, D. (2007). The Hard Problem of Consciousness. In M. Velmans \&}
   \ALIUSPlacedTextContent{90.000}{343.945}{98.729}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{S. Schneider (Eds.),}
   \ALIUSPlacedTextContent{188.093}{343.945}{196.971}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The Blackwell Companion to Consciousness}
-  \ALIUSPlacedTextContent{385.082}{343.945}{122.967}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp. 223–235). Blackwell}
+  \ALIUSPlacedTextContent{385.082}{343.945}{122.967}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(pp. 223â€“235). Blackwell}
   \ALIUSPlacedTextContent{90.000}{359.785}{59.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Publishing.}
   \ALIUSPlacedTextContent{149.538}{359.785}{217.333}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1002/9780470751466.ch18}
   \ALIUSPlacedTextContent{126.000}{391.225}{327.476}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Frankish, K. (2016). Illusionism as a theory of consciousness.}
@@ -671,7 +676,7 @@
   \ALIUSPlacedTextContent{90.000}{406.825}{100.246}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Consciousness Studies}
   \ALIUSPlacedTextContent{190.254}{406.825}{5.919}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{196.182}{406.825}{9.151}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{23}
-  \ALIUSPlacedTextContent{205.346}{406.825}{70.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(11–12), 11–39.}
+  \ALIUSPlacedTextContent{205.346}{406.825}{70.852}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{(11â€“12), 11â€“39.}
   \ALIUSPlacedTextContent{126.000}{438.505}{382.035}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Goff, P. (2017). Consciousness and Fundamental Reality. Oxford: Oxford}
   \ALIUSPlacedTextContent{90.000}{454.105}{87.530}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{University Press.}
   \ALIUSPlacedTextContent{126.000}{485.545}{94.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Huxley, A. (1999).}
@@ -680,13 +685,13 @@
   \ALIUSPlacedTextContent{199.926}{501.385}{112.347}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Simon and Schuster.}
   \ALIUSPlacedTextContent{126.000}{532.825}{248.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Kriegel, U. (2019). The Value of Consciousness.}
   \ALIUSPlacedTextContent{376.066}{532.825}{39.380}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Analysis}
-  \ALIUSPlacedTextContent{415.454}{532.825}{92.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 79, (3), 503–520.}
+  \ALIUSPlacedTextContent{415.454}{532.825}{92.574}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{, 79, (3), 503â€“520.}
   \ALIUSPlacedTextContent{90.000}{548.665}{187.289}{ALIUSC0000FF}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1093/analys/anz045}
   \ALIUSPlacedTextContent{126.000}{580.105}{206.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Leary, T., Metzner, R., \& Dass, R. (1964).}
   \ALIUSPlacedTextContent{332.877}{580.105}{175.105}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{The psychedelic experience: A manual}
   \ALIUSPlacedTextContent{90.000}{595.945}{243.110}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{based on the Tibetan book of the dead (Vol. 1)}
   \ALIUSPlacedTextContent{333.103}{595.945}{174.930}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{. Carol Publishing Corporation.}
-  \ALIUSPlacedTextContent{126.000}{627.385}{381.994}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Millière, R. (2017). Looking for the Self: Phenomenology, Neurophysiology}
+  \ALIUSPlacedTextContent{126.000}{627.385}{381.994}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{MilliÃ¨re, R. (2017). Looking for the Self: Phenomenology, Neurophysiology}
   \ALIUSPlacedTextContent{90.000}{642.985}{353.387}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{and Philosophical Significance of Drug-induced Ego Dissolution.}
   \ALIUSPlacedTextContent{447.140}{642.985}{60.873}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in}
   \ALIUSPlacedTextContent{90.000}{658.825}{97.896}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Human Neuroscience}
@@ -702,7 +707,7 @@
   \ALIUSPlacedTextContent{126.000}{737.545}{86.074}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Sider, T. (2001).}
   \ALIUSPlacedTextContent{214.162}{737.545}{293.802}{ALIUSC000000}{\ALIUSFontCormorantItalic}{12.960}{Four-Dimensionalism: An Ontology of Persistence and Time.}
   \ALIUSPlacedTextContent{90.000}{753.385}{170.663}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.960}{Oxford: Oxford University Press.}
-  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°5 (2021)}
+  \ALIUSPlacedTextContent{90.000}{792.192}{120.165}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°5 (2021)}
   \ALIUSPlacedTextContent{384.252}{792.192}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

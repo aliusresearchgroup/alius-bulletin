@@ -96,7 +96,14 @@ def is_symbol_fallback_span(span: dict[str, Any]) -> bool:
 
 
 def is_body_greek_symbol_fallback(span: dict[str, Any]) -> bool:
-    return span["text"].strip() in {"β", "κ"} and span["font"] in {r"\ALIUSFontCambria", r"\ALIUSFontCalibri"}
+    # Some extracted sources carry UTF-8 mojibake for Greek fallback glyphs
+    # (`Î²`, `Îº`) while the rendered font still supplies the intended beta/kappa
+    # glyph. Treat these one-glyph fallback spans as allowed symbols, not random
+    # answer-font drift inside Cormorant prose.
+    return span["text"].strip() in {"β", "κ", "Î²", "Îº"} and span["font"] in {
+        r"\ALIUSFontCambria",
+        r"\ALIUSFontCalibri",
+    }
 
 
 def visual_lines(spans: list[dict[str, Any]]) -> list[list[dict[str, Any]]]:

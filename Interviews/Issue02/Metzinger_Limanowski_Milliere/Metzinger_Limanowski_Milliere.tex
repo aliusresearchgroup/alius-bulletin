@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -144,24 +149,24 @@
   \ALIUSPlacedTextContent{74.920}{177.406}{155.487}{ALIUSC000000}{\ALIUSFontLatoLight}{18.960}{Thomas Metzinger}
   \ALIUSPlacedTextContent{352.840}{177.515}{93.057}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{metzinge@uni-mainz.de}
   \ALIUSPlacedTextContent{352.840}{188.315}{100.594}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Department of Philosophy}
-  \ALIUSPlacedTextContent{352.840}{199.115}{156.648}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Johannes Gutenberg-Universität, Mainz,}
+  \ALIUSPlacedTextContent{352.840}{199.115}{156.648}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Johannes Gutenberg-UniversitÃ¤t, Mainz,}
   \ALIUSPlacedTextContent{352.840}{209.915}{37.412}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Germany}
-  \ALIUSPlacedTextContent{74.920}{212.128}{223.757}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{By Jakub Limanowski \& Raphaël Millière}
+  \ALIUSPlacedTextContent{74.920}{212.128}{223.757}{ALIUSC000000}{\ALIUSFontLatoLight}{12.960}{By Jakub Limanowski \& RaphaÃ«l MilliÃ¨re}
   \ALIUSPlacedTextContent{352.840}{234.676}{97.990}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{Jakub Limanowski}
   \ALIUSPlacedTextContent{352.840}{249.515}{88.049}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{j.limanowski@ucl.ac.uk}
   \ALIUSPlacedTextContent{352.840}{260.315}{168.215}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Wellcome Centre for Human Neuroimaging}
   \ALIUSPlacedTextContent{352.840}{271.115}{119.210}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{University College London, UK}
-  \ALIUSPlacedTextContent{352.840}{292.276}{87.922}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{Raphaël Millière}
+  \ALIUSPlacedTextContent{352.840}{292.276}{87.922}{ALIUSC000000}{\ALIUSFontLatoRegular}{12.000}{RaphaÃ«l MilliÃ¨re}
   % ALIUS normalized citation panel begin
-  % ALIUS normalized citation panel text: Cite as: Metzinger, T., Limanowski, J. \& Millière, R. (2018). Splendor and misery of self-models: conceptual and empirical issues regarding consciousness and self-consciousness. An interview with Thomas Metzinger. ALIUS Bulletin, 2, 53-73
+  % ALIUS normalized citation panel text: Cite as: Metzinger, T., Limanowski, J. \& MilliÃ¨re, R. (2018). Splendor and misery of self-models: conceptual and empirical issues regarding consciousness and self-consciousness. An interview with Thomas Metzinger. ALIUS Bulletin, 2, 53-73
   \fill[white] (73.420bp,-294.568bp) rectangle ++(270.920bp,-62.000bp);
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (74.920bp,-296.568bp) {\begin{minipage}{267.920bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Metzinger, T., Limanowski, J. \& Millière, R. (2018). Splendor and misery of self-models: conceptual and empirical issues regarding consciousness and self-consciousness. An interview with Thomas Metzinger. ALIUS Bulletin, 2, 53-73 \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/epgh-at59}{https://doi.org/10.34700/epgh-at59}}}\par}\end{minipage}};
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at (74.920bp,-296.568bp) {\begin{minipage}{267.920bp}{\ALIUSFontLatoLight\fontsize{9.200bp}{10.700bp}\selectfont\raggedright Cite as: Metzinger, T., Limanowski, J. \& MilliÃ¨re, R. (2018). Splendor and misery of self-models: conceptual and empirical issues regarding consciousness and self-consciousness. An interview with Thomas Metzinger. ALIUS Bulletin, 2, 53-73 \mbox{\textcolor{ALIUSC1F8135}{\href{https://doi.org/10.34700/epgh-at59}{https://doi.org/10.34700/epgh-at59}}}\par}\end{minipage}};
   % ALIUS normalized citation panel end
   \ALIUSPlacedTextContent{352.840}{307.115}{141.863}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.880}{raphael.milliere@philosophy.ox.ac.uk}
   \ALIUSPlacedTextContent{352.840}{317.915}{83.333}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Faculty of Philosophy}
   \ALIUSPlacedTextContent{352.840}{328.715}{96.346}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{University of Oxford, UK}
   \ALIUSPlacedTextContent{71.080}{406.048}{217.575}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Hello Thomas. Are you a self right now?}
-  \ALIUSPlacedTextContent{71.080}{433.578}{385.592}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Hello Raphaël and Jakub! Hmmm…. If I really was "a" self, how would I}
+  \ALIUSPlacedTextContent{71.080}{433.578}{385.592}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Hello RaphaÃ«l and Jakub! Hmmmâ€¦. If I really was "a" self, how would I}
   \ALIUSPlacedTextContent{456.316}{433.578}{26.548}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{know}
   \ALIUSPlacedTextContent{482.915}{433.578}{44.729}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{? Could}
   \ALIUSPlacedTextContent{71.080}{450.378}{222.371}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I ever catch myself, epistemically, in my}
@@ -184,17 +189,17 @@
   \ALIUSPlacedTextContent{308.505}{589.888}{70.101}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{phenomena,}
   \ALIUSPlacedTextContent{390.680}{589.888}{101.126}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{depersonalization}
   \ALIUSPlacedTextContent{503.880}{589.888}{22.953}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{and}
-  \ALIUSPlacedTextContent{71.080}{605.489}{455.824}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{somatoparaphrenia to dreaming, meditation and full-body illusions—among many}
+  \ALIUSPlacedTextContent{71.080}{605.489}{455.824}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{somatoparaphrenia to dreaming, meditation and full-body illusionsâ€”among many}
   \ALIUSPlacedTextContent{71.080}{621.089}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{others. In your opinion, what place should the discussion of empirical data about so-}
   \ALIUSPlacedTextContent{71.080}{636.688}{360.727}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{called altered states of consciousness have in philosophy of mind?}
   \ALIUSPlacedTextContent{71.080}{664.218}{456.498}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{There are many ways in which it can be useful. For example, it changes our}
   \ALIUSPlacedTextContent{71.080}{681.258}{456.583}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{theoretical intuitions. Intuitions are phenomenal states that guide our thinking, and}
-  \ALIUSPlacedTextContent{71.080}{698.298}{456.621}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{they are millions of years old—shaped in the world of our ancestors, determining}
+  \ALIUSPlacedTextContent{71.080}{698.298}{456.621}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{they are millions of years oldâ€”shaped in the world of our ancestors, determining}
   \ALIUSPlacedTextContent{71.080}{715.098}{456.655}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the attractor landscapes of our brains today, setting priors. They have the form "I}
   \ALIUSPlacedTextContent{71.080}{732.138}{51.401}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{just know}
   \ALIUSPlacedTextContent{122.581}{732.138}{404.933}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{x", without us having any idea or introspective access to the causal history}
-  \ALIUSPlacedTextContent{71.080}{749.178}{456.519}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of this knowledge—in intuitive "insight" we suddenly know something, but we really}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{749.178}{456.519}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of this knowledgeâ€”in intuitive "insight" we suddenly know something, but we really}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -205,7 +210,7 @@
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
   \fill[ALIUSC1F8135] (329.320bp,-472.360bp) rectangle ++(116.640bp,-0.480bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{54}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.438}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{have no idea where this knowledge comes from. What many don't see is that there}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.445}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is a distinct phenomenology of knowing, and also a phenomenology of certainty (of}
@@ -221,9 +226,9 @@
   \ALIUSPlacedTextContent{71.080}{240.618}{456.689}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of armchair phenomenology or old-school analytical philosophy of mind to}
   \ALIUSPlacedTextContent{71.080}{257.418}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{empirically-informed, interdisciplinary philosophy of cognitive science, then what}
   \ALIUSPlacedTextContent{71.080}{274.458}{356.948}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{would you think the results over the last three decades would be?}
-  \ALIUSPlacedTextContent{170.440}{318.953}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{188.680}{318.953}{202.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Philosophers should design and}
-  \ALIUSPlacedTextContent{392.440}{336.568}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{170.680}{318.953}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{189.520}{318.953}{202.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Philosophers should design and}
+  \ALIUSPlacedTextContent{396.672}{336.953}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{188.680}{336.953}{203.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{propose their own experiments.}
   \ALIUSPlacedTextContent{71.080}{390.138}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{A frequent epistemological fallacy consists in ascribing epistemic status to}
   \ALIUSPlacedTextContent{71.080}{407.178}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenal states because of the phenomenal signature of knowing. Jennifer Windt}
@@ -238,7 +243,7 @@
   \ALIUSPlacedTextContent{357.866}{475.098}{10.938}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{is}
   \ALIUSPlacedTextContent{371.572}{475.098}{156.040}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{an insight, to put it in an}
   \ALIUSPlacedTextContent{71.080}{491.898}{456.665}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{oversimplified way. But a large part of academic philosophy in the last century has}
-  \ALIUSPlacedTextContent{71.080}{508.938}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{consisted in exactly this—"making our intuitions explicit". However, the great}
+  \ALIUSPlacedTextContent{71.080}{508.938}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{consisted in exactly thisâ€”"making our intuitions explicit". However, the great}
   \ALIUSPlacedTextContent{71.080}{525.978}{456.529}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{danger in cultivating so called "first-person methods" (perhaps as an antidote to}
   \ALIUSPlacedTextContent{71.080}{542.778}{456.608}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{intuition-mongering, as exemplified by some forms of old-school armchair}
   \ALIUSPlacedTextContent{71.080}{559.818}{456.526}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{philosophizing) is that people have dramatic experiences of deep, ineffable "insights"}
@@ -247,12 +252,12 @@
   \ALIUSPlacedTextContent{71.080}{622.698}{456.611}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{each world that can be simulated on the phenomenal level, relative to a certain class}
   \ALIUSPlacedTextContent{71.080}{639.498}{456.473}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of systems; the possibility of its simulation depending on the functional architecture.}
   \ALIUSPlacedTextContent{71.080}{656.538}{456.532}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{However, the functional architecture of our brains has not evolved to help us}
-  \ALIUSPlacedTextContent{71.080}{673.578}{456.550}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{generate metatheoretical knowledge—therefore we should always be very careful}
+  \ALIUSPlacedTextContent{71.080}{673.578}{456.550}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{generate metatheoretical knowledgeâ€”therefore we should always be very careful}
   \ALIUSPlacedTextContent{71.080}{690.378}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{with modal intuitions about what is necessary or possible. So-called "xPhi" or}
   \ALIUSPlacedTextContent{71.080}{707.418}{456.561}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"experimental philosophy" uses statistical estimation of phenomenological reports}
   \ALIUSPlacedTextContent{71.080}{724.458}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of others to search the landscape of possible phenomenal worlds in different}
   \ALIUSPlacedTextContent{71.080}{741.258}{456.491}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{populations and comparing the intuitions of lay persons to the academic ones, and}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -262,7 +267,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{55}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{it is very stimulating and leads to interesting results. However, the method of}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.530}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{interdisciplinary constraint satisfaction (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-weisberg-2006}{Weisberg, 2006}) that I have tried to}
@@ -278,7 +283,7 @@
   \ALIUSPlacedTextContent{71.080}{269.418}{456.496}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{where we could aim at saying what consciousness, cognition, and so on, really are in}
   \ALIUSPlacedTextContent{71.080}{286.458}{15.973}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{all}
   \ALIUSPlacedTextContent{87.104}{286.458}{440.483}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{possible beings that instantiate them, no matter how they are physically realized}
-  \ALIUSPlacedTextContent{71.080}{303.498}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(if at all). Now I have a slightly more modest and sober attitude—that is perhaps}
+  \ALIUSPlacedTextContent{71.080}{303.498}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(if at all). Now I have a slightly more modest and sober attitudeâ€”that is perhaps}
   \ALIUSPlacedTextContent{71.080}{320.298}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{another downside of looking into the messy details of real-word embodiment with}
   \ALIUSPlacedTextContent{71.080}{337.338}{81.418}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{an open mind.}
   \ALIUSPlacedTextContent{71.080}{366.138}{456.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Another, the third, downside is that you become aware of your own psychological}
@@ -298,7 +303,7 @@
   \ALIUSPlacedTextContent{71.080}{563.489}{455.681}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{selfhood is thoroughly misguided, insofar as no such things as selves exist in the}
   \ALIUSPlacedTextContent{71.080}{579.089}{455.764}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{world. More precisely, you claim that what we traditionally call "the self" is nothing}
   \ALIUSPlacedTextContent{71.080}{594.688}{455.840}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{like a mind-independent substance, but a special kind of representational content,}
-  \ALIUSPlacedTextContent{71.080}{610.289}{455.810}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{namely the content of a sophisticated mental model—a "self-model"—reducible to}
+  \ALIUSPlacedTextContent{71.080}{610.289}{455.810}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{namely the content of a sophisticated mental modelâ€”a "self-model"â€”reducible to}
   \ALIUSPlacedTextContent{71.080}{625.888}{455.791}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{neurophysiological processes. Yet you maintain that there is such a thing as an}
   \ALIUSPlacedTextContent{71.080}{641.489}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{experience of selfhood, construed as the dynamic content of the phenomenal self-}
   \ALIUSPlacedTextContent{71.080}{657.089}{455.807}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{model, or 'PSM' for short. On this view, the PSM is simply the part of the self-model}
@@ -311,7 +316,7 @@
   \ALIUSPlacedTextContent{71.080}{735.089}{60.744}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{transparent}
   \ALIUSPlacedTextContent{131.814}{735.089}{395.232}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{, meaning that the various stages underlying this cognitive model are not}
   \ALIUSPlacedTextContent{71.080}{750.688}{455.958}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{available for introspective attention. According to you, this transparency constraint}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -323,7 +328,7 @@
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
   \fill[ALIUSC1F8135] (117.160bp,-163.240bp) rectangle ++(221.760bp,-0.240bp);
   \fill[ALIUSC1F8135] (301.960bp,-472.360bp) rectangle ++(123.360bp,-0.480bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{56}
   \ALIUSPlacedTextContent{71.080}{71.008}{246.450}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{entails that we cannot be aware of our PSM}
   \ALIUSPlacedTextContent{318.248}{71.008}{56.152}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{as a model}
@@ -377,7 +382,7 @@
   \ALIUSPlacedTextContent{71.080}{707.418}{456.439}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{instantiated in isolation, they face the problem that any attempt at introspective}
   \ALIUSPlacedTextContent{71.080}{724.458}{456.590}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{validation automatically creates a much more elaborate phenomenal structure,}
   \ALIUSPlacedTextContent{71.080}{741.258}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{including an EAM. If you try to find out what the "rock bottom" level of self-}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -387,20 +392,20 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{57}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.554}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{awareness is by willfully directing your attention inwards, then you create a sense of}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.710}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{effort and the phenomenal quality of attentional agency. There is no introspective}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.553}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{knowledge of MPS as such. What overlooked is that MPS may actually be}
   \ALIUSPlacedTextContent{71.080}{121.818}{163.429}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenally indeterminate.}
   \ALIUSPlacedTextContent{71.080}{152.058}{137.538}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{Phenomenal indeterminacy}
-  \ALIUSPlacedTextContent{207.966}{152.058}{32.456}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is ¬(F(}
+  \ALIUSPlacedTextContent{207.966}{152.058}{32.456}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is Â¬(F(}
   \ALIUSPlacedTextContent{240.451}{152.058}{6.041}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{a}
   \ALIUSPlacedTextContent{246.527}{152.058}{4.301}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{)}
-  \ALIUSPlacedTextContent{264.853}{152.058}{16.977}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{¬F(}
+  \ALIUSPlacedTextContent{264.853}{152.058}{16.977}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Â¬F(}
   \ALIUSPlacedTextContent{281.848}{152.058}{6.041}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{a}
   \ALIUSPlacedTextContent{287.924}{152.058}{239.659}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{)), i.e., "neither-nor", relative to phenomenal}
-  \ALIUSPlacedTextContent{71.080}{168.858}{249.065}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{content, as in the sentence "Raphaël neither}
+  \ALIUSPlacedTextContent{71.080}{168.858}{249.065}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{content, as in the sentence "RaphaÃ«l neither}
   \ALIUSPlacedTextContent{321.263}{168.858}{57.718}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{instantiates}
   \ALIUSPlacedTextContent{379.025}{168.858}{148.606}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the phenomenal property}
   \ALIUSPlacedTextContent{71.080}{185.898}{134.810}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{called 'MPS' nor he does}
@@ -409,9 +414,9 @@
   \ALIUSPlacedTextContent{71.080}{204.138}{121.257}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is not the same as F(}
   \ALIUSPlacedTextContent{192.361}{204.138}{6.041}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{a}
   \ALIUSPlacedTextContent{198.437}{204.138}{4.301}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{)}
-  \ALIUSPlacedTextContent{216.763}{204.138}{16.977}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{¬F(}
+  \ALIUSPlacedTextContent{216.763}{204.138}{16.977}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Â¬F(}
   \ALIUSPlacedTextContent{233.758}{204.138}{6.041}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{a}
-  \ALIUSPlacedTextContent{239.834}{204.138}{201.611}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{), i.e., contradiction as in "Raphaël}
+  \ALIUSPlacedTextContent{239.834}{204.138}{201.611}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{), i.e., contradiction as in "RaphaÃ«l}
   \ALIUSPlacedTextContent{443.686}{204.138}{57.718}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{instantiates}
   \ALIUSPlacedTextContent{501.448}{204.138}{26.183}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the}
   \ALIUSPlacedTextContent{71.080}{220.938}{276.487}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenal property called 'MPS' and he does}
@@ -421,8 +426,8 @@
   \ALIUSPlacedTextContent{191.722}{237.978}{82.163}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{at the same time}
   \ALIUSPlacedTextContent{273.949}{237.978}{212.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{" and it also not the same as phenomen}
   \ALIUSPlacedTextContent{486.889}{237.978}{37.474}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{ological}
-  \ALIUSPlacedTextContent{71.080}{255.018}{456.514}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{indeterminacy: "Raphaël retrospectively reports that there was no phenomenal fact}
-  \ALIUSPlacedTextContent{71.080}{271.818}{456.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of the matter regarding minimal phenomenal selfhood" or "Raphaël retrospectively}
+  \ALIUSPlacedTextContent{71.080}{255.018}{456.514}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{indeterminacy: "RaphaÃ«l retrospectively reports that there was no phenomenal fact}
+  \ALIUSPlacedTextContent{71.080}{271.818}{456.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of the matter regarding minimal phenomenal selfhood" or "RaphaÃ«l retrospectively}
   \ALIUSPlacedTextContent{71.080}{288.858}{456.527}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{reports that there was a phenomenal fact of the matter, which cannot be expressed}
   \ALIUSPlacedTextContent{71.080}{305.898}{114.891}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in natural language".}
   \ALIUSPlacedTextContent{71.080}{334.698}{456.539}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think we must reject introspective authority: we can assume that there is a}
@@ -447,7 +452,7 @@
   \ALIUSPlacedTextContent{71.080}{539.418}{15.767}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(F(}
   \ALIUSPlacedTextContent{86.872}{539.418}{6.041}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{a}
   \ALIUSPlacedTextContent{92.948}{539.418}{4.301}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{)}
-  \ALIUSPlacedTextContent{111.274}{539.418}{16.977}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{¬F(}
+  \ALIUSPlacedTextContent{111.274}{539.418}{16.977}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Â¬F(}
   \ALIUSPlacedTextContent{128.269}{539.418}{6.041}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{a}
   \ALIUSPlacedTextContent{134.345}{539.418}{393.319}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{)). Yes, \ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-blanke-metzinger-2009}{Blanke \& Metzinger (2009)} were right, and in the future science}
   \ALIUSPlacedTextContent{71.080}{556.458}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{will show that "phenomenally transparent spatio-temporal self-location" is an}
@@ -465,7 +470,7 @@
   \ALIUSPlacedTextContent{71.080}{704.058}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{(namely, the EAM). If you would like a more poetic description, 1PP-}
   \ALIUSPlacedTextContent{71.080}{720.858}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{indeterminability of MPS can perhaps be read as the "groundlessness" of self-}
   \ALIUSPlacedTextContent{71.080}{737.898}{80.788}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{consciousness.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -475,7 +480,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{58}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.564}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I think there is an additional interesting discovery, which I tried to draw attention}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.689}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to on the excellent meeting you organized. I call it "indeterminacy blindness":}
@@ -493,20 +498,20 @@
   \ALIUSPlacedTextContent{71.080}{223.578}{96.286}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{further research.}
   \ALIUSPlacedTextContent{86.440}{257.033}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{104.440}{257.033}{388.747}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I think we must reject introspective authority: we can assume}
-  \ALIUSPlacedTextContent{104.440}{275.033}{368.879}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{that there is a determinate phenomenal fact of the matter,}
-  \ALIUSPlacedTextContent{464.440}{292.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{104.440}{292.793}{356.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{but at this point in time we do not (scientifically) know it.}
+  \ALIUSPlacedTextContent{114.374}{274.793}{368.879}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{that there is a determinate phenomenal fact of the matter,}
+  \ALIUSPlacedTextContent{497.187}{292.553}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{120.617}{292.553}{356.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{but at this point in time we do not (scientifically) know it.}
   \ALIUSPlacedTextContent{71.080}{339.568}{455.790}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{A key concept in your Self-Model Theory of Subjectivity (SMT) is the notion of}
   \ALIUSPlacedTextContent{71.080}{355.168}{136.456}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{phenomenal transparency}
   \ALIUSPlacedTextContent{207.481}{355.168}{319.396}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of conscious mental representations, which means that}
-  \ALIUSPlacedTextContent{71.080}{370.768}{455.803}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{only the content of such representations is accessible to consciousness—not the}
+  \ALIUSPlacedTextContent{71.080}{370.768}{455.803}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{only the content of such representations is accessible to consciousnessâ€”not the}
   \ALIUSPlacedTextContent{71.080}{386.368}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{fact that they are representations. As mentioned above, you propose that the}
   \ALIUSPlacedTextContent{71.080}{401.968}{455.915}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{experience of being a self arises from such a phenomenally transparent part of a}
   \ALIUSPlacedTextContent{71.080}{417.568}{236.093}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{system's self-model. This content (i.e., the}
   \ALIUSPlacedTextContent{308.623}{417.568}{121.228}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{phenomenal self-model}
   \ALIUSPlacedTextContent{429.857}{417.568}{97.050}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{) may be used to}
   \ALIUSPlacedTextContent{71.080}{433.168}{455.752}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{represent the subject component in a subject-object relationship, while also}
-  \ALIUSPlacedTextContent{71.080}{448.768}{455.735}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{representing this relationship—what you call a phenomenal model of the}
+  \ALIUSPlacedTextContent{71.080}{448.768}{455.735}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{representing this relationshipâ€”what you call a phenomenal model of the}
   \ALIUSPlacedTextContent{71.080}{464.368}{455.876}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{intentionality relation. An interesting criticism of SMT was put forth by Josh}
   \ALIUSPlacedTextContent{71.080}{479.968}{455.894}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Weisberg, who worried that the theory "makes too much of the system}
   \ALIUSPlacedTextContent{71.080}{495.568}{455.917}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{phenomenal" (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-weisberg-2006}{Weisberg, 2006}). Weisberg instead proposes, very much in the spirit}
@@ -514,7 +519,7 @@
   \ALIUSPlacedTextContent{71.080}{526.768}{455.867}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{phenomenal self-model needs to be integrated into a nonconscious model of the}
   \ALIUSPlacedTextContent{71.080}{542.369}{455.819}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{intentionality relation (NMIR). Has your conception of SMT changed in response to}
   \ALIUSPlacedTextContent{71.080}{557.969}{84.946}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{such thoughts?}
-  \ALIUSPlacedTextContent{71.080}{585.498}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Of all the critical reviews of BNO, Weisberg's is probably my favorite one—very}
+  \ALIUSPlacedTextContent{71.080}{585.498}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Of all the critical reviews of BNO, Weisberg's is probably my favorite oneâ€”very}
   \ALIUSPlacedTextContent{71.080}{602.298}{456.526}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{intelligent, careful and constructive. I have not looked into this issue for a long time,}
   \ALIUSPlacedTextContent{71.080}{619.338}{456.531}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{but in a 2003 paper co-authored with Vittorio Gallese and entitled "The emergence}
   \ALIUSPlacedTextContent{71.080}{636.138}{456.517}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of a shared action ontology: Building blocks for a theory", we showed there exist}
@@ -524,7 +529,7 @@
   \ALIUSPlacedTextContent{71.080}{704.058}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{movements and action goals in terms of multimodal representations of organism-}
   \ALIUSPlacedTextContent{71.080}{721.098}{456.510}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{object-relations and there is empirical evidence for mirror neurons as specifically}
   \ALIUSPlacedTextContent{71.080}{737.898}{456.549}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{coding organism-object relations on various levels of abstraction. The motor system}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -534,7 +539,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{59}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.624}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{constructs goal-states (successfully terminated actions), action models, and}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.503}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{intending selves as basic constituents of the world it interprets by assigning a single,}
@@ -570,7 +575,7 @@
   \ALIUSPlacedTextContent{71.080}{422.058}{456.401}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{many more pregnancies failed than today. As early as 1340, a second meaning of the}
   \ALIUSPlacedTextContent{71.080}{439.098}{456.496}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{term had appeared: "taking into your mind." If we go back to the original meaning,}
   \ALIUSPlacedTextContent{71.080}{455.898}{456.583}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{then infecting other people with memes via philosophical discussion it like trying to}
-  \ALIUSPlacedTextContent{71.080}{472.938}{456.421}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{make them pregnant with your own ideas—making them "hold" what you take to be}
+  \ALIUSPlacedTextContent{71.080}{472.938}{456.421}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{make them pregnant with your own ideasâ€”making them "hold" what you take to be}
   \ALIUSPlacedTextContent{71.080}{489.978}{456.588}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{your own intellectual fruit in their own brains, by something we like to call "rational}
   \ALIUSPlacedTextContent{71.080}{506.778}{456.587}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{argument" forcing them to "take in and hold" what you (perhaps mistakenly)}
   \ALIUSPlacedTextContent{71.080}{523.818}{101.418}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{experience as your}
@@ -580,7 +585,7 @@
   \ALIUSPlacedTextContent{71.080}{569.658}{456.703}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the human brain involved in language processing, speech or sign production, and}
   \ALIUSPlacedTextContent{71.080}{586.698}{456.489}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{comprehension. A number of studies have shown that hand/arm gestures and}
   \ALIUSPlacedTextContent{71.080}{603.498}{456.571}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{movements of the mouth are linked through a common neural substrate. For}
-  \ALIUSPlacedTextContent{71.080}{620.538}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{example, grasping movements influence pronunciation—and not only when they are}
+  \ALIUSPlacedTextContent{71.080}{620.538}{456.556}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{example, grasping movements influence pronunciationâ€”and not only when they are}
   \ALIUSPlacedTextContent{71.080}{637.578}{456.747}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{executed but also when they are observed. It has also been demonstrated that hand}
   \ALIUSPlacedTextContent{71.080}{654.378}{456.575}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{gestures and mouth gestures are directly linked in humans, and the oro-laryngeal}
   \ALIUSPlacedTextContent{71.080}{671.418}{456.532}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{movement patterns we create in order to produce speech are a part of this link. By}
@@ -588,7 +593,7 @@
   \ALIUSPlacedTextContent{71.080}{705.258}{205.736}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{language and cognition should know.}
   \ALIUSPlacedTextContent{71.080}{734.298}{456.587}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Broca's area is also a marker for the development of language in human evolution,}
   \ALIUSPlacedTextContent{71.080}{751.338}{456.549}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{so it is intriguing to see that it also contains a motor representation of hand}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -599,7 +604,7 @@
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
   \fill[ALIUSC1F8135] (226.360bp,-281.080bp) rectangle ++(144.000bp,-0.240bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{60}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.373}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{movements; here may be a part of the bridge that led from the "body semantics" of}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.583}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{gestures and the bodily self-model to linguistic semantics, associated with sounds,}
@@ -616,21 +621,21 @@
   \ALIUSPlacedTextContent{71.080}{251.248}{455.796}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{called predictive processing framework and discuss its philosophical implications}
   \ALIUSPlacedTextContent{71.080}{266.848}{455.825}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{(Metzinger \& Wiese, 2017, http://predictive-mind.net). The predictive processing}
   \ALIUSPlacedTextContent{71.080}{282.448}{455.819}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{framework has appealed to philosophers, however, it has been interpreted both in}
-  \ALIUSPlacedTextContent{71.080}{298.048}{455.771}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{representationalist terms (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-hohwy-2013}{Hohwy, 2013}; Gładziejewski, 2016) or along enactivist}
+  \ALIUSPlacedTextContent{71.080}{298.048}{455.771}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{representationalist terms (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-hohwy-2013}{Hohwy, 2013}; GÅ‚adziejewski, 2016) or along enactivist}
   \ALIUSPlacedTextContent{71.080}{313.648}{455.806}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{ideas (Bruineberg, Kiverstein, \& Rietveld, 2016; \ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-gallagher-allen-2016}{Gallagher \& Allen, 2016}). The active}
   \ALIUSPlacedTextContent{71.080}{329.248}{455.800}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{inference formulation of predictive processing (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-friston-2009}{Friston, 2009}) has been proposed}
   \ALIUSPlacedTextContent{71.080}{344.848}{455.824}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{to dissolve this tension: on the one hand, active inference fundamentally assumes}
-  \ALIUSPlacedTextContent{71.080}{360.448}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{inference on representations in hierarchical generative models in the brain—thus}
+  \ALIUSPlacedTextContent{71.080}{360.448}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{inference on representations in hierarchical generative models in the brainâ€”thus}
   \ALIUSPlacedTextContent{71.080}{376.048}{455.972}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{appealing to representationalist accounts. On the other hand, active inference is all}
   \ALIUSPlacedTextContent{71.080}{391.648}{455.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{about reaching the best possible (i.e., least surprising) situation of myself in and as}
-  \ALIUSPlacedTextContent{71.080}{407.248}{453.275}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{part of my world, and hence representations arise from interaction with the world—}
+  \ALIUSPlacedTextContent{71.080}{407.248}{453.275}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{part of my world, and hence representations arise from interaction with the worldâ€”}
   \ALIUSPlacedTextContent{71.080}{422.848}{455.842}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{thus appealing to enactivist ideas. Since your initial SMT is a purely}
   \ALIUSPlacedTextContent{71.080}{438.448}{455.814}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{representationalist account, do you think the active inference (predictive}
   \ALIUSPlacedTextContent{71.080}{454.048}{455.842}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{processing) framework may indeed resolve some issues that philosophers have}
-  \ALIUSPlacedTextContent{71.080}{469.648}{455.762}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{been arguing about for a while now—or do you think this is a too ambitious claim?}
+  \ALIUSPlacedTextContent{71.080}{469.648}{455.762}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{been arguing about for a while nowâ€”or do you think this is a too ambitious claim?}
   \ALIUSPlacedTextContent{71.080}{485.248}{455.638}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{How much do you think theoretical neuroscience and philosophy can mutually}
   \ALIUSPlacedTextContent{71.080}{500.848}{103.626}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{enrich each other?}
-  \ALIUSPlacedTextContent{71.080}{528.378}{456.490}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Oh, they can certainly enrich each other—but it may need a new generation of}
+  \ALIUSPlacedTextContent{71.080}{528.378}{456.490}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Oh, they can certainly enrich each otherâ€”but it may need a new generation of}
   \ALIUSPlacedTextContent{71.080}{545.418}{456.586}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{philosophers who not only know neuroscience and cognitive science, but also}
   \ALIUSPlacedTextContent{71.080}{562.218}{456.415}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mathematics. Personally, I have a very relaxed attitude about the concept of}
   \ALIUSPlacedTextContent{71.080}{579.258}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"representation". Many people take me as a realist, and sometimes also assume some}
@@ -650,7 +655,7 @@
   \ALIUSPlacedTextContent{495.099}{714.858}{32.519}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{were}
   \ALIUSPlacedTextContent{71.080}{731.898}{456.567}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{important books in my own intellectual biography), dynamicism and EEEE. I think}
   \ALIUSPlacedTextContent{71.080}{748.698}{456.654}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{that running neural models described as having properties like "integrated}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -660,14 +665,14 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{61}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.542}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{likelihood" or "model evidence" in Bayesian statistics can still count as}
   \ALIUSPlacedTextContent{71.080}{87.978}{315.493}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{representational processes, and that the representational}
   \ALIUSPlacedTextContent{387.463}{87.978}{83.183}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{level of analysis}
   \ALIUSPlacedTextContent{471.559}{87.978}{56.064}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{continues}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.685}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to be very useful and fecund. But that doesn't commit one to realism, it is just a}
-  \ALIUSPlacedTextContent{71.080}{121.818}{456.523}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{theoretical tool that works for a certain time—maybe we can dissolve it all into}
+  \ALIUSPlacedTextContent{71.080}{121.818}{456.523}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{theoretical tool that works for a certain timeâ€”maybe we can dissolve it all into}
   \ALIUSPlacedTextContent{71.080}{138.858}{242.653}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{measures of entropy or something else soon.}
   \ALIUSPlacedTextContent{71.080}{167.658}{456.658}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I still remember when, ages ago, Francisco Varela invited Dave Chalmers and me to}
   \ALIUSPlacedTextContent{71.080}{184.698}{456.547}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Paris, and after my talk on self-models he said to me: "I think in principle your whole}
@@ -692,10 +697,10 @@
   \ALIUSPlacedTextContent{71.080}{362.368}{455.832}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{your SMT is that one can in principle derive empirically testable predictions about}
   \ALIUSPlacedTextContent{71.080}{377.968}{455.824}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{when an (artificial) organism or system would experience a first-person perspective}
   \ALIUSPlacedTextContent{71.080}{393.568}{455.828}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{and, ultimately, phenomenal selfhood (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-blanke-metzinger-2009}{Blanke \& Metzinger, 2009}). In light of your}
-  \ALIUSPlacedTextContent{71.080}{409.168}{455.735}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{recent modifications of your initial proposal—do you think a collaborative effort of}
+  \ALIUSPlacedTextContent{71.080}{409.168}{455.735}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{recent modifications of your initial proposalâ€”do you think a collaborative effort of}
   \ALIUSPlacedTextContent{71.080}{424.768}{455.819}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{philosophers and cognitive and computer scientists could in fact lead to a form of}
   \ALIUSPlacedTextContent{71.080}{440.368}{455.878}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{"Turing test" for first-person perspective and experience of selfhood in artificial}
-  \ALIUSPlacedTextContent{71.080}{455.968}{455.802}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{systems? And, if this was the case, what would your advice to AI developers be—do}
+  \ALIUSPlacedTextContent{71.080}{455.968}{455.802}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{systems? And, if this was the case, what would your advice to AI developers beâ€”do}
   \ALIUSPlacedTextContent{71.080}{471.568}{386.596}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{you think we should be (more) worried by these recent developments?}
   \ALIUSPlacedTextContent{71.080}{499.098}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I have indeed been recently working on ethical issues raised by technological}
   \ALIUSPlacedTextContent{71.080}{515.898}{197.151}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{advances such as Virtual Reality}
@@ -717,7 +722,7 @@
   \ALIUSPlacedTextContent{99.430}{724.072}{399.720}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.000}{It is important that all politicians understand the difference between "artificial}
   \ALIUSPlacedTextContent{99.430}{738.712}{399.712}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.000}{intelligence" and "artificial consciousness". The unintended or even intentional}
   \ALIUSPlacedTextContent{99.430}{753.112}{399.720}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.000}{creation of artificial consciousness is highly problematic from an ethical perspective,}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -727,7 +732,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{62}
   \ALIUSPlacedTextContent{99.430}{71.032}{399.715}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.000}{because it may lead to artificial suffering and a consciously experienced sense of self}
   \ALIUSPlacedTextContent{99.430}{85.672}{399.712}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.000}{in autonomous, intelligent systems. "Synthetic phenomenology" (SP; a term coined in}
@@ -763,14 +768,14 @@
   \ALIUSPlacedTextContent{71.080}{623.898}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{necessary conditions for suffering in some freely available papers (for example:}
   \ALIUSPlacedTextContent{71.080}{640.698}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-metzinger-2013b}{Metzinger, 2013b}, 2016): The C-condition (having a phenomenal model of reality),}
   \ALIUSPlacedTextContent{71.080}{657.738}{456.537}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the PSM-condition (a self-model), the NV-condition (the ability to represent}
-  \ALIUSPlacedTextContent{71.080}{674.778}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{negative valences—for example via homeostatic cost functions folded into the self-}
+  \ALIUSPlacedTextContent{71.080}{674.778}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{negative valencesâ€”for example via homeostatic cost functions folded into the self-}
   \ALIUSPlacedTextContent{71.080}{691.578}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{model, representations of decreasing functional coherence or low levels of self-}
   \ALIUSPlacedTextContent{71.080}{708.618}{456.482}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{control), and the T-condition (transparency, Mother Nature's most evil trick:}
   \ALIUSPlacedTextContent{71.080}{725.658}{115.104}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{forcing organisms to}
   \ALIUSPlacedTextContent{186.029}{725.658}{41.693}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{identify}
   \ALIUSPlacedTextContent{227.550}{725.658}{300.035}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{with negatively valenced states). Nobody knows if they}
   \ALIUSPlacedTextContent{71.080}{742.458}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{are sufficient, and we have no theory of consciousness. From this it follows that there}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -780,7 +785,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{63}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.456}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{is an ethics of risk too: We should take great care to always err on the side of caution,}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and this principle holds for future AI systems as well as for animals. In any case, we}
@@ -788,11 +793,11 @@
   \ALIUSPlacedTextContent{71.080}{121.818}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{independent as possible. We need such a theory, else in the mid-term we will be}
   \ALIUSPlacedTextContent{71.080}{138.858}{352.215}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{unable to move forward with AI in an ethically responsible way.}
   \ALIUSPlacedTextContent{134.440}{176.633}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{152.440}{176.633}{273.291}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Recklessly creating artificial consciousness}
-  \ALIUSPlacedTextContent{152.440}{194.633}{160.606}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{would carry a high risk of}
-  \ALIUSPlacedTextContent{313.000}{194.633}{60.088}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{increasing}
-  \ALIUSPlacedTextContent{373.000}{194.633}{27.125}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the}
-  \ALIUSPlacedTextContent{428.440}{210.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{152.470}{176.633}{273.291}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Recklessly creating artificial consciousness}
+  \ALIUSPlacedTextContent{208.813}{194.633}{160.606}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{would carry a high risk of}
+  \ALIUSPlacedTextContent{259.072}{194.633}{60.088}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{increasing}
+  \ALIUSPlacedTextContent{275.553}{194.633}{27.125}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the}
+  \ALIUSPlacedTextContent{429.792}{212.633}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{152.440}{212.633}{273.352}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{overall amount of suffering in the universe.}
   \ALIUSPlacedTextContent{71.080}{254.538}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{But if you look at what "The First Postbiotic Philosopher" already said in 2009, we}
   \ALIUSPlacedTextContent{71.080}{271.578}{126.914}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{could also introduce a}
@@ -827,18 +832,18 @@
   \ALIUSPlacedTextContent{71.080}{645.089}{455.807}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{namely either: (a) the experienced origin of the visuospatial perspective as an}
   \ALIUSPlacedTextContent{71.080}{660.688}{268.933}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{"extensionless point in space", which you call the}
   \ALIUSPlacedTextContent{340.462}{660.688}{42.009}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{minimal}
-  \ALIUSPlacedTextContent{382.476}{660.688}{144.427}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{UI—the simplest possible}
+  \ALIUSPlacedTextContent{382.476}{660.688}{144.427}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{UIâ€”the simplest possible}
   \ALIUSPlacedTextContent{71.080}{676.289}{455.807}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{unit of identification; or (b) the unity of consciousness, or "awareness as such", which}
   \ALIUSPlacedTextContent{71.080}{691.888}{71.423}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{you call the}
   \ALIUSPlacedTextContent{145.916}{691.888}{44.315}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{maximal}
-  \ALIUSPlacedTextContent{190.238}{691.888}{336.639}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{UI—the most general phenomenal property available for}
+  \ALIUSPlacedTextContent{190.238}{691.888}{336.639}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{UIâ€”the most general phenomenal property available for}
   \ALIUSPlacedTextContent{71.080}{707.489}{455.793}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{identification. The latter, you speculate, might happen in some asomatic OBEs and}
   \ALIUSPlacedTextContent{71.080}{723.089}{455.816}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{in deep meditative states in which subjects self-identify with "pure consciousness".}
   \ALIUSPlacedTextContent{71.080}{738.688}{455.719}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Apparently against your original account, you conclude that MPS is constituted by}
   \ALIUSPlacedTextContent{71.080}{754.289}{126.054}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{self-identification with}
   \ALIUSPlacedTextContent{197.106}{754.289}{37.513}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{at least}
   \ALIUSPlacedTextContent{234.637}{754.289}{292.275}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{a minimal UI (and not necessarily with a body), which}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -848,7 +853,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{64}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.900}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{merely requires spatiotemporal self-location. Can you explain to us how the}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.677}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{introduction of the minimal UI concept has changed the original MPS proposal, and}
@@ -858,7 +863,7 @@
   \ALIUSPlacedTextContent{71.080}{149.008}{455.876}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{property of being an "extensionless point in space": a disembodied experience may}
   \ALIUSPlacedTextContent{71.080}{164.609}{455.683}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{simply be an experience of a visual scene which lacks any bodily awareness. The}
   \ALIUSPlacedTextContent{71.080}{180.208}{455.770}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{assumption that there is an extra feeling of being a disembodied point in space is at}
-  \ALIUSPlacedTextContent{71.080}{195.808}{455.752}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{least controversial – subjects might describe their experiences in such a way simply}
+  \ALIUSPlacedTextContent{71.080}{195.808}{455.752}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{least controversial â€“ subjects might describe their experiences in such a way simply}
   \ALIUSPlacedTextContent{71.080}{211.408}{455.731}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{because this is the easiest way to describe an experience of disembodiment. Do you}
   \ALIUSPlacedTextContent{71.080}{227.008}{380.214}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{think there is room for a more deflationary take on such experiences?}
   \ALIUSPlacedTextContent{71.080}{254.538}{297.473}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The original motivation was to describe more clearly}
@@ -870,22 +875,22 @@
   \ALIUSPlacedTextContent{238.773}{288.378}{288.879}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{create classical OBEs in the strong sense of involving}
   \ALIUSPlacedTextContent{71.080}{305.418}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{a perceptually impossible external perspective (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-metzinger-2005a}{Metzinger, 2005a}, 2009b). The UI-}
   \ALIUSPlacedTextContent{71.080}{322.458}{370.709}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{concept is determined by the following set of empirical constraints:}
-  \ALIUSPlacedTextContent{89.630}{351.366}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.630}{351.366}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{351.881}{329.794}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Explicit embodiment is not a necessary condition for the UI}
-  \ALIUSPlacedTextContent{89.630}{370.086}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.630}{370.086}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{370.601}{41.398}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Minimal}
   \ALIUSPlacedTextContent{140.842}{370.601}{346.842}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{spatiotemporal self-location is a sufficient condition for the UI}
-  \ALIUSPlacedTextContent{89.630}{388.806}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.630}{388.806}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{389.321}{349.631}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The UI and origin of visuospatial perspective can be dissociated}
-  \ALIUSPlacedTextContent{89.630}{407.286}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.630}{407.286}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{407.801}{320.900}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The UI can be located outside of phenomenal body model}
-  \ALIUSPlacedTextContent{89.630}{426.006}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.630}{426.006}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{426.521}{370.187}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The UI and the origin of visuospatial perspective can be dissociated}
-  \ALIUSPlacedTextContent{89.630}{444.726}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.630}{444.726}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{445.241}{82.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The UI can be}
   \ALIUSPlacedTextContent{181.523}{445.241}{36.557}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{smeared}
   \ALIUSPlacedTextContent{218.122}{445.241}{120.997}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in phenomenal space}
-  \ALIUSPlacedTextContent{89.630}{463.206}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.630}{463.206}{6.375}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{463.721}{82.075}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{The UI can be}
   \ALIUSPlacedTextContent{181.523}{463.721}{49.861}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{duplicated}
   \ALIUSPlacedTextContent{231.398}{463.721}{92.867}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in some subjects}
@@ -905,7 +910,7 @@
   \ALIUSPlacedTextContent{71.080}{718.289}{455.795}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Berkovich-Ohana, Glicksohn, \& Goldstein, 2013). On the face of it, self-reports of}
   \ALIUSPlacedTextContent{71.080}{733.888}{455.719}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{such states are consistent with this claim (although they certainly must be}
   \ALIUSPlacedTextContent{71.080}{749.489}{455.826}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{interpreted with caution): "It was emptiness, as if the self fell out of the picture.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -915,7 +920,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{65}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.652}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{There was an experience but it had no address, it was not attached to a center or}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.815}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{subject" (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-dor-ziderman-berkovich-ohana-2013}{Dor-Ziderman et al., 2013}, p. 6). (Incidentally, if reports of expert}
@@ -970,11 +975,11 @@
   \ALIUSPlacedTextContent{71.080}{655.578}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{can ask new questions more precisely: can the phenomenology of identification and}
   \ALIUSPlacedTextContent{71.080}{672.618}{261.735}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the phenomenology of selfhood be dissociated?}
   \ALIUSPlacedTextContent{99.430}{701.658}{428.231}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{For example, could there be a maximal UI that is non-selfy? Do we know}
-  \ALIUSPlacedTextContent{89.080}{702.006}{6.375}{ALIUSC1A1718}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.080}{702.006}{6.375}{ALIUSC1A1718}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{718.458}{428.190}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{conceivable and empirically plausible phenomenologies of unification with the}
   \ALIUSPlacedTextContent{99.430}{735.498}{428.203}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{world as a whole, which are more like an "all-pervading emptiness that has}
   \ALIUSPlacedTextContent{99.430}{752.298}{428.191}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{awoken to itself", i.e. more on the Buddhist side than on the Advaita Vedanta}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -984,11 +989,11 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{66}
   \ALIUSPlacedTextContent{99.430}{70.938}{32.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{side?}
   \ALIUSPlacedTextContent{99.430}{99.978}{428.236}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{For example, could there be a minimal UI that is non-selfy? This could for}
-  \ALIUSPlacedTextContent{89.080}{100.326}{6.375}{ALIUSC1A1718}{\ALIUSFontSymbolFallback}{13.920}{§}
+  \ALIUSPlacedTextContent{89.080}{100.326}{6.375}{ALIUSC1A1718}{\ALIUSFontSymbolFallback}{13.920}{Â§}
   \ALIUSPlacedTextContent{99.430}{116.778}{178.951}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{example be a phenomenology of}
   \ALIUSPlacedTextContent{278.682}{116.778}{46.596}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{hacceity.}
   \ALIUSPlacedTextContent{325.612}{116.778}{202.013}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Maybe, if we do the phenomenology}
@@ -1007,7 +1012,7 @@
   \ALIUSPlacedTextContent{487.324}{264.618}{40.337}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{, when}
   \ALIUSPlacedTextContent{71.080}{281.418}{456.583}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{there really is no such thing as a self there? If the phenomenology is indeterminate,}
   \ALIUSPlacedTextContent{71.080}{298.458}{456.503}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{then all reports are necessarily theory-contaminated. If you think of your beautiful}
-  \ALIUSPlacedTextContent{71.080}{315.498}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Dor-Ziderman quote above—would the subject ever have used the word "emptiness"}
+  \ALIUSPlacedTextContent{71.080}{315.498}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Dor-Ziderman quote aboveâ€”would the subject ever have used the word "emptiness"}
   \ALIUSPlacedTextContent{71.080}{332.298}{456.571}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{if there hadn't been twenty-five centuries of Buddhist philosophy for which exactly}
   \ALIUSPlacedTextContent{71.080}{349.338}{197.406}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{this concept was absolutely central?}
   \ALIUSPlacedTextContent{71.080}{378.138}{456.587}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{But the notion of an UI also allows you to describe empirical results in a more}
@@ -1038,7 +1043,7 @@
   \ALIUSPlacedTextContent{71.080}{716.369}{455.714}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{second case may loosely coincide with the Buddhist notion of "enlightenment",}
   \ALIUSPlacedTextContent{71.080}{731.969}{455.881}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{although it is unclear whether it is nomologically possible, at least for humans. Do}
   \ALIUSPlacedTextContent{71.080}{747.568}{455.794}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{you believe that either of these forms of "selflessness" can be (at least temporarily)}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1048,7 +1053,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{67}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.783}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{exemplified by human subjects, for instance in radically altered states of}
   \ALIUSPlacedTextContent{71.080}{86.609}{377.049}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{consciousness induced by psychopathologies or psychoactive drugs?}
@@ -1062,8 +1067,8 @@
   \ALIUSPlacedTextContent{472.070}{114.138}{30.019}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{cases}
   \ALIUSPlacedTextContent{513.376}{114.138}{14.251}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of}
   \ALIUSPlacedTextContent{71.080}{131.178}{456.645}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{depersonalization disorder or organic brain diseases, and I can only recommend}
-  \ALIUSPlacedTextContent{71.080}{147.978}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{your own paper on causal etiologies based on pharmacological stimuli (Millière,}
-  \ALIUSPlacedTextContent{71.080}{165.018}{456.589}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{2017)—it is perhaps the best, most well-researched, and most careful discussion of}
+  \ALIUSPlacedTextContent{71.080}{147.978}{456.548}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{your own paper on causal etiologies based on pharmacological stimuli (MilliÃ¨re,}
+  \ALIUSPlacedTextContent{71.080}{165.018}{456.589}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{2017)â€”it is perhaps the best, most well-researched, and most careful discussion of}
   \ALIUSPlacedTextContent{71.080}{182.058}{456.685}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the empirical literature out there. Possibility (b) also seems quite obviously}
   \ALIUSPlacedTextContent{71.080}{198.858}{456.703}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{something that has happened to human beings for millennia and in many different}
   \ALIUSPlacedTextContent{71.080}{215.898}{456.484}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{cultures. My own attempt to approach what, if I remember correctly, I have called}
@@ -1071,9 +1076,9 @@
   \ALIUSPlacedTextContent{71.080}{249.738}{456.539}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{highly dubious, because it is relative to a certain level of description and a specific}
   \ALIUSPlacedTextContent{71.080}{266.778}{456.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{functional analysis. The way I used the concepts of "transparency" and "opacity" was}
   \ALIUSPlacedTextContent{71.080}{283.818}{456.552}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{as properties of phenomenal representations and, as indicated above, such concepts}
-  \ALIUSPlacedTextContent{71.080}{300.618}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{are historically plastic entities. Nevertheless, if my central conceptual point—}
+  \ALIUSPlacedTextContent{71.080}{300.618}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{are historically plastic entities. Nevertheless, if my central conceptual pointâ€”}
   \ALIUSPlacedTextContent{71.080}{317.658}{456.488}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{namely, that for conscious self-representations transparency necessarily leads to the}
-  \ALIUSPlacedTextContent{71.080}{334.698}{456.596}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenology of identification—still holds, then it is obvious how this specific}
+  \ALIUSPlacedTextContent{71.080}{334.698}{456.596}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenology of identificationâ€”still holds, then it is obvious how this specific}
   \ALIUSPlacedTextContent{71.080}{351.498}{456.632}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenology can gradually be dissolved by leaving the content of the conscious}
   \ALIUSPlacedTextContent{71.080}{368.538}{456.500}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{self-model as it is. There could be many stages, for examples for whom MPS is still}
   \ALIUSPlacedTextContent{71.080}{385.338}{456.573}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{robust and fully transparent, but in which the phenomenology of agency on the}
@@ -1082,11 +1087,11 @@
   \ALIUSPlacedTextContent{71.080}{436.218}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{underlying it. But again, please note the functional analysis I have developed for}
   \ALIUSPlacedTextContent{71.080}{453.258}{456.517}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{opacity and de-identification rests on notions like "earlier processing stages" and}
   \ALIUSPlacedTextContent{71.080}{470.298}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{"vehicle properties" versus "intentional properties". Especially the last two concepts}
-  \ALIUSPlacedTextContent{71.080}{487.098}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{might soon begin to look as artifacts of old-school armchair philosophizing—for}
+  \ALIUSPlacedTextContent{71.080}{487.098}{456.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{might soon begin to look as artifacts of old-school armchair philosophizingâ€”for}
   \ALIUSPlacedTextContent{71.080}{504.138}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{example, I think we may perhaps find better conceptual tools in the predictive}
   \ALIUSPlacedTextContent{71.080}{521.178}{126.189}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{processing framework.}
-  \ALIUSPlacedTextContent{71.080}{550.048}{455.841}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{To add to the previous question, several authors—philosophers and scientists}
-  \ALIUSPlacedTextContent{71.080}{565.648}{455.798}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{alike—have argued that in a predictive processing framework, the self-model results}
+  \ALIUSPlacedTextContent{71.080}{550.048}{455.841}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{To add to the previous question, several authorsâ€”philosophers and scientists}
+  \ALIUSPlacedTextContent{71.080}{565.648}{455.798}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{alikeâ€”have argued that in a predictive processing framework, the self-model results}
   \ALIUSPlacedTextContent{71.080}{581.248}{455.894}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{from active (Bayesian) inference and the brain's implied prediction error}
   \ALIUSPlacedTextContent{71.080}{596.849}{455.728}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{minimization about which sensory signals are "the most likely to be me" across}
   \ALIUSPlacedTextContent{71.080}{612.448}{455.784}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{exteroceptive, proprioceptive and interoceptive domains (Apps \& Tsakiris, 2014;}
@@ -1097,9 +1102,9 @@
   \ALIUSPlacedTextContent{71.080}{690.448}{455.690}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{resulting in an update of normally very stable predictions regarding the self and}
   \ALIUSPlacedTextContent{71.080}{706.048}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{world. For example, couldn't it be the case that the phenomenon known as "drug-}
   \ALIUSPlacedTextContent{71.080}{721.648}{455.807}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{induced ego dissolution", described as a (reversible) loss of self-awareness at high}
-  \ALIUSPlacedTextContent{71.080}{737.248}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{doses of psychedelic drugs such as LSD (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-letheby-gerrans-2017}{Letheby \& Gerrans, 2017}; \ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-milliere-2017}{Millière, 2017}),}
-  \ALIUSPlacedTextContent{71.080}{752.849}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{is best construed as a breakdown of the conscious self-model itself—resulting from}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{737.248}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{doses of psychedelic drugs such as LSD (\ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-letheby-gerrans-2017}{Letheby \& Gerrans, 2017}; \ALIUSCitationLink{aliusref-metzinger-limanowski-milliere-milliere-2017}{MilliÃ¨re, 2017}),}
+  \ALIUSPlacedTextContent{71.080}{752.849}{455.801}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{is best construed as a breakdown of the conscious self-model itselfâ€”resulting from}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1109,7 +1114,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{68}
   \ALIUSPlacedTextContent{71.080}{71.008}{455.972}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{an (temporary) update of hyperpriors regarding the distinction between self and}
   \ALIUSPlacedTextContent{71.080}{86.609}{455.745}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{world? One might argue that this would be an instance in which the first way of being}
@@ -1136,12 +1141,12 @@
   \ALIUSPlacedTextContent{71.080}{424.218}{456.465}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{if you will, it leads to a Husserlian "bracketing" of the certainty of one's very own}
   \ALIUSPlacedTextContent{71.080}{441.018}{55.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{existence.}
   \ALIUSPlacedTextContent{92.440}{481.193}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
-  \ALIUSPlacedTextContent{110.440}{481.193}{337.720}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Psychedelics states hold the potential to simply make}
-  \ALIUSPlacedTextContent{110.440}{499.193}{381.746}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{normal people very concretely and directly aware of the fact}
-  \ALIUSPlacedTextContent{476.440}{516.568}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{110.440}{516.953}{53.523}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{that it is}
-  \ALIUSPlacedTextContent{163.960}{516.953}{47.039}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{literally}
-  \ALIUSPlacedTextContent{211.240}{516.953}{265.912}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{true that conscious experience is a model.}
+  \ALIUSPlacedTextContent{132.453}{481.193}{337.720}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Psychedelics states hold the potential to simply make}
+  \ALIUSPlacedTextContent{110.440}{498.953}{381.746}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{normal people very concretely and directly aware of the fact}
+  \ALIUSPlacedTextContent{496.186}{516.713}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{274.551}{516.713}{53.523}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{that it is}
+  \ALIUSPlacedTextContent{277.793}{516.713}{47.039}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{literally}
+  \ALIUSPlacedTextContent{168.357}{516.713}{265.912}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{true that conscious experience is a model.}
   \ALIUSPlacedTextContent{71.080}{556.938}{456.517}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{About the philosophical problem of a "performative self-contradiction" as related to}
   \ALIUSPlacedTextContent{71.080}{573.738}{456.622}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{pharmacologically induced non-egoic states I simply have to say that I have no}
   \ALIUSPlacedTextContent{71.080}{590.778}{456.697}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{solution and am thinking about it. Probably the answer is that full blown}
@@ -1155,7 +1160,7 @@
   \ALIUSPlacedTextContent{71.080}{692.538}{456.555}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{integration leading to MPS and the bodily self-model is an automatic bottom-up}
   \ALIUSPlacedTextContent{71.080}{709.578}{456.487}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{process, and it may exactly be what "rescues" the subject in a scientific experiment}
   \ALIUSPlacedTextContent{71.080}{726.378}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{with ego-dissolving psychoactive substances. At some point, the Here-Now-model}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1165,7 +1170,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{69}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.578}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{becomes so good that the veil of transparency drops and everything becomes real}
   \ALIUSPlacedTextContent{71.080}{87.978}{35.051}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{again.}
@@ -1181,8 +1186,8 @@
   \ALIUSPlacedTextContent{71.080}{257.248}{455.874}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{memory itself. Furthermore, descriptions of "drug-induced ego dissolution", for}
   \ALIUSPlacedTextContent{71.080}{272.848}{455.815}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{instance, frequently underline the inadequacy of the first-person pronoun to report}
   \ALIUSPlacedTextContent{71.080}{288.448}{455.771}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{such experiences, although it is hard to avoid using it for grammatical reasons (e.g.}
-  \ALIUSPlacedTextContent{71.080}{304.048}{455.713}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{"There existed no one, not even me… so would it be proper to still speak of 'I', even}
-  \ALIUSPlacedTextContent{71.080}{319.648}{380.004}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{as the notion of 'I' seemed so palpably illusory?'', Millière 2017, p. 14).}
+  \ALIUSPlacedTextContent{71.080}{304.048}{455.713}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{"There existed no one, not even meâ€¦ so would it be proper to still speak of 'I', even}
+  \ALIUSPlacedTextContent{71.080}{319.648}{380.004}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{as the notion of 'I' seemed so palpably illusory?'', MilliÃ¨re 2017, p. 14).}
   \ALIUSPlacedTextContent{71.080}{347.178}{456.571}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{I have already touched upon this topic in a previous answer, but I think you are}
   \ALIUSPlacedTextContent{71.080}{364.218}{456.547}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{floating a very interesting idea here, namely that there could be different}
   \ALIUSPlacedTextContent{71.080}{381.258}{456.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenal data-formats and that sincere autophenomenological reports could}
@@ -1193,11 +1198,11 @@
   \ALIUSPlacedTextContent{71.080}{465.978}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{originally selfless, and is transformed into first-person experience by continuously}
   \ALIUSPlacedTextContent{71.080}{483.018}{456.423}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{creating false memories of the type you describe, via ultrafast forms of "illusionary}
   \ALIUSPlacedTextContent{71.080}{499.818}{106.100}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{memory retrieval"?}
-  \ALIUSPlacedTextContent{134.920}{535.433}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{134.680}{535.433}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{152.680}{535.433}{270.215}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{As a philosopher, I am very skeptical about}
-  \ALIUSPlacedTextContent{152.680}{553.433}{262.071}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{all this loose talk concerning 'first-person}
-  \ALIUSPlacedTextContent{359.080}{571.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
-  \ALIUSPlacedTextContent{152.680}{571.433}{206.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{methods' and 'first-person data'.}
+  \ALIUSPlacedTextContent{156.752}{553.433}{262.071}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{all this loose talk concerning 'first-person}
+  \ALIUSPlacedTextContent{426.895}{571.433}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
+  \ALIUSPlacedTextContent{184.592}{571.433}{206.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{methods' and 'first-person data'.}
   \ALIUSPlacedTextContent{71.080}{614.369}{455.735}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{You have argued that "first-person data do not exist" (Metzinger 2003, p. 591),}
   \ALIUSPlacedTextContent{71.080}{629.969}{455.795}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{because there is no scientific procedure to settle introspective disagreements.}
   \ALIUSPlacedTextContent{71.080}{645.568}{455.725}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Furthermore, you have suggested that there might not even be any "empirical fact}
@@ -1208,7 +1213,7 @@
   \ALIUSPlacedTextContent{71.080}{723.568}{455.709}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{what you call "paradigmatic autophenomenological reports". What epistemological}
   \ALIUSPlacedTextContent{71.080}{739.169}{455.773}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{status do you attribute to such reports? Do you endorse the view that part or totality}
   \ALIUSPlacedTextContent{71.080}{754.768}{262.821}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{of phenomenal consciousness is indeterminate?}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1218,13 +1223,13 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{70}
   \ALIUSPlacedTextContent{71.080}{70.938}{456.562}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{A part certainly is, and indeterminacy is an important research target for the future.}
   \ALIUSPlacedTextContent{71.080}{87.978}{456.577}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Total indeterminacy would be then end of all knowledge. I am a strange person: As}
   \ALIUSPlacedTextContent{71.080}{104.778}{456.549}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{a philosopher, I am very skeptical about all this loose talk concerning "first-person}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.478}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{methods" and "first-person data", but as a consciousness researcher I have certainly}
-  \ALIUSPlacedTextContent{71.080}{138.858}{456.589}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{tried many of these methods—probably even a bit more rigorously than all the}
+  \ALIUSPlacedTextContent{71.080}{138.858}{456.589}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{tried many of these methodsâ€”probably even a bit more rigorously than all the}
   \ALIUSPlacedTextContent{71.080}{155.658}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{people who publicly advertise them to promote ideological forms of anti-}
   \ALIUSPlacedTextContent{71.080}{172.698}{456.621}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{reductionism or for purposes of academic virtue signaling and reputation}
   \ALIUSPlacedTextContent{71.080}{189.738}{456.342}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{management. But it is exactly because I have done a bit of this in my personal life}
@@ -1242,12 +1247,12 @@
   \ALIUSPlacedTextContent{71.080}{393.018}{180.793}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{philosophical perspective, the}
   \ALIUSPlacedTextContent{259.892}{393.018}{31.715}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{really}
   \ALIUSPlacedTextContent{299.603}{393.018}{228.026}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{interesting methods are "zero-person}
-  \ALIUSPlacedTextContent{71.080}{410.058}{445.328}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{methods"—but they are extremely difficult to talk about in any coherent manner.}
+  \ALIUSPlacedTextContent{71.080}{410.058}{445.328}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{methods"â€”but they are extremely difficult to talk about in any coherent manner.}
   \ALIUSPlacedTextContent{71.080}{439.098}{456.498}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{But of course, we can get very far by refining interview methods and simply taking}
   \ALIUSPlacedTextContent{71.080}{455.898}{456.658}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the reports themselves as data, doing careful semantic evaluation and statistics.}
   \ALIUSPlacedTextContent{71.080}{472.938}{456.558}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Reports, neural correlates, and computational models can get us much further than}
   \ALIUSPlacedTextContent{71.080}{489.978}{119.987}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{we may often believe.}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1257,7 +1262,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{71}
   \ALIUSPlacedTextContent{263.991}{71.444}{67.420}{ALIUSC000000}{\ALIUSFontLatoLight}{13.731}{References}
   \ALIUSPlacedTextContent{71.080}{101.105}{456.326}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-apps-tsakiris-2014}Apps, M. A. J., \& Tsakiris, M. (2014). The free-energy self: a predictive coding account of}
@@ -1269,14 +1274,14 @@
   \ALIUSPlacedTextContent{440.380}{116.945}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{461.457}{116.945}{9.270}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{41}
   \ALIUSPlacedTextContent{470.738}{116.945}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
-  \ALIUSPlacedTextContent{491.817}{116.945}{35.594}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{85–97.}
+  \ALIUSPlacedTextContent{491.817}{116.945}{35.594}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{85â€“97.}
   \ALIUSPlacedTextContent{106.530}{132.785}{232.374}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.neubiorev.2013.01.029}
   \ALIUSPlacedTextContent{71.080}{160.385}{456.389}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-ataria-dor-ziderman-2015}Ataria, Y., Dor-Ziderman, Y., \& Berkovich-Ohana, A. (2015). How does it feel to lack a}
   \ALIUSPlacedTextContent{106.530}{176.225}{420.908}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{sense of boundaries? A case study of a long-term mindfulness meditator.}
   \ALIUSPlacedTextContent{106.530}{191.825}{132.850}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Consciousness and Cognition}
   \ALIUSPlacedTextContent{239.412}{191.825}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{245.340}{191.825}{9.461}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{37}
-  \ALIUSPlacedTextContent{254.817}{191.825}{268.162}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 133–147. https://doi.org/10.1016/j.concog.2015.09.002}
+  \ALIUSPlacedTextContent{254.817}{191.825}{268.162}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 133â€“147. https://doi.org/10.1016/j.concog.2015.09.002}
   \ALIUSPlacedTextContent{71.080}{219.665}{456.433}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-aymerich-franch-petit-2016}Aymerich-Franch, L., Petit, D., Ganesh, G., \& Kheddar, A. (2016). The second me: Seeing}
   \ALIUSPlacedTextContent{106.530}{235.505}{417.837}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{the real body during humanoid robot embodiment produces an illusion of bi-}
   \ALIUSPlacedTextContent{106.530}{251.105}{46.918}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{location.}
@@ -1286,29 +1291,29 @@
   \ALIUSPlacedTextContent{392.713}{251.105}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{434.107}{251.105}{10.942}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{46}
   \ALIUSPlacedTextContent{445.066}{251.105}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
-  \ALIUSPlacedTextContent{486.465}{251.105}{40.954}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{99–109.}
+  \ALIUSPlacedTextContent{486.465}{251.105}{40.954}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{99â€“109.}
   \ALIUSPlacedTextContent{106.530}{266.945}{218.906}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.concog.2016.09.017}
   \ALIUSPlacedTextContent{71.080}{294.545}{456.306}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-blanke-metzinger-2009}Blanke, O., \& Metzinger, T. (2009). Full-body illusions and minimal phenomenal selfhood.}
   \ALIUSPlacedTextContent{106.530}{310.385}{131.426}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Trends in Cognitive Sciences}
   \ALIUSPlacedTextContent{237.996}{310.385}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{243.924}{310.385}{8.215}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{13}
-  \ALIUSPlacedTextContent{252.153}{310.385}{248.285}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 7–13. https://doi.org/10.1016/j.tics.2008.10.003}
+  \ALIUSPlacedTextContent{252.153}{310.385}{248.285}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 7â€“13. https://doi.org/10.1016/j.tics.2008.10.003}
   \ALIUSPlacedTextContent{71.080}{338.225}{456.332}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-bruineberg-kiverstein-2016}Bruineberg, J., Kiverstein, J., \& Rietveld, E. (2016). The anticipating brain is not a scientist:}
   \ALIUSPlacedTextContent{106.530}{353.825}{343.058}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{the free-energy principle from an ecological-enactive perspective.}
   \ALIUSPlacedTextContent{451.300}{353.825}{40.290}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Synthese}
-  \ALIUSPlacedTextContent{491.586}{353.825}{35.817}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1–28.}
+  \ALIUSPlacedTextContent{491.586}{353.825}{35.817}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1â€“28.}
   \ALIUSPlacedTextContent{106.530}{369.665}{204.528}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1007/s11229-016-1239-1}
   \ALIUSPlacedTextContent{71.080}{397.265}{456.320}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-dehaene-lau-2017}Dehaene, S., Lau, H., \& Kouider, S. (2017). What is consciousness, and could machines have}
   \ALIUSPlacedTextContent{106.530}{413.105}{15.246}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{it?}
   \ALIUSPlacedTextContent{121.791}{413.105}{33.183}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Science}
   \ALIUSPlacedTextContent{154.980}{413.105}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{160.908}{413.105}{15.008}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{358}
-  \ALIUSPlacedTextContent{175.935}{413.105}{281.252}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(6362), 486–492. https://doi.org/10.1126/science.aan8871}
+  \ALIUSPlacedTextContent{175.935}{413.105}{281.252}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(6362), 486â€“492. https://doi.org/10.1126/science.aan8871}
   \ALIUSPlacedTextContent{71.080}{440.945}{253.894}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-dennett-1976}Dennett, D. C. (1976). Are Dreams Experiences?}
   \ALIUSPlacedTextContent{326.712}{440.945}{121.100}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{The Philosophical Review}
   \ALIUSPlacedTextContent{447.860}{440.945}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{455.486}{440.945}{10.568}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{85}
-  \ALIUSPlacedTextContent{466.068}{440.945}{61.345}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 151–171.}
+  \ALIUSPlacedTextContent{466.068}{440.945}{61.345}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 151â€“171.}
   \ALIUSPlacedTextContent{106.530}{456.545}{158.782}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.2307/2183728}
   \ALIUSPlacedTextContent{71.080}{484.385}{111.186}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-dennett-1991}Dennett, D. C. (1991).}
   \ALIUSPlacedTextContent{182.293}{484.385}{112.708}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Consciousness Explained}
@@ -1325,16 +1330,16 @@
   \ALIUSPlacedTextContent{106.530}{587.105}{37.115}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Sciences}
   \ALIUSPlacedTextContent{143.644}{587.105}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{149.572}{587.105}{8.215}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{13}
-  \ALIUSPlacedTextContent{157.801}{587.105}{267.993}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(7), 293–301. https://doi.org/10.1016/j.tics.2009.04.005}
+  \ALIUSPlacedTextContent{157.801}{587.105}{267.993}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(7), 293â€“301. https://doi.org/10.1016/j.tics.2009.04.005}
   \ALIUSPlacedTextContent{71.080}{614.705}{456.314}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-gallagher-allen-2016}Gallagher, S., \& Allen, M. (2016). Active inference, enactivism and the hermeneutics of}
   \ALIUSPlacedTextContent{106.530}{630.545}{85.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{social cognition.}
   \ALIUSPlacedTextContent{192.042}{630.545}{40.275}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Synthese}
-  \ALIUSPlacedTextContent{232.328}{630.545}{240.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1–22. https://doi.org/10.1007/s11229-016-1269-8}
-  \ALIUSPlacedTextContent{71.080}{658.385}{348.658}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Gładziejewski, P. (2016). Predictive coding and representationalism.}
+  \ALIUSPlacedTextContent{232.328}{630.545}{240.551}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1â€“22. https://doi.org/10.1007/s11229-016-1269-8}
+  \ALIUSPlacedTextContent{71.080}{658.385}{348.658}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{GÅ‚adziejewski, P. (2016). Predictive coding and representationalism.}
   \ALIUSPlacedTextContent{420.500}{658.385}{40.290}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Synthese}
   \ALIUSPlacedTextContent{460.786}{658.385}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{467.422}{658.385}{13.670}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{193}
-  \ALIUSPlacedTextContent{481.111}{658.385}{43.249}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 559–}
+  \ALIUSPlacedTextContent{481.111}{658.385}{43.249}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2), 559â€“}
   \ALIUSPlacedTextContent{106.530}{673.985}{230.437}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{582. https://doi.org/10.1007/s11229-015-0762-9}
   \ALIUSPlacedTextContent{71.080}{701.825}{456.343}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-graziano-2017}Graziano, M. S. A. (2017). The Attention Schema Theory: A Foundation for Engineering}
   \ALIUSPlacedTextContent{106.530}{717.425}{50.039}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Artificial}
@@ -1348,7 +1353,7 @@
   \ALIUSPlacedTextContent{516.307}{717.425}{5.482}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{4}
   \ALIUSPlacedTextContent{521.806}{717.425}{5.607}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{.}
   \ALIUSPlacedTextContent{106.530}{733.265}{204.385}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.3389/frobt.2017.00060}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1358,7 +1363,7 @@
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSC767171] (69.640bp,-54.760bp) rectangle ++(456.480bp,-0.480bp);
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{72}
   \ALIUSPlacedTextContent{71.080}{70.865}{87.144}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-hohwy-2013}Hohwy, J. (2013).}
   \ALIUSPlacedTextContent{158.243}{70.865}{92.115}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{The predictive mind}
@@ -1399,10 +1404,10 @@
   \ALIUSPlacedTextContent{106.530}{379.025}{79.818}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Mind and Matter}
   \ALIUSPlacedTextContent{186.375}{379.025}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{192.303}{379.025}{4.432}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{3}
-  \ALIUSPlacedTextContent{196.749}{379.025}{53.693}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 57–84.}
+  \ALIUSPlacedTextContent{196.749}{379.025}{53.693}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1), 57â€“84.}
   \ALIUSPlacedTextContent{71.080}{406.865}{222.885}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-2005b}Metzinger, T. (2005b). Precis: being no-one.}
   \ALIUSPlacedTextContent{293.974}{406.865}{30.955}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Psyche}
-  \ALIUSPlacedTextContent{324.939}{406.865}{32.932}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1–35.}
+  \ALIUSPlacedTextContent{324.939}{406.865}{32.932}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 1â€“35.}
   \ALIUSPlacedTextContent{71.080}{434.465}{456.354}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-2008}Metzinger, T. (2008). Empirical Perspectives From the Self-Model Theory of Subjectivity:}
   \ALIUSPlacedTextContent{106.530}{450.305}{385.801}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{A Brief Summary with Examples. In R. Banerjee \& B. K. Chakrabarti (Eds.),}
   \ALIUSPlacedTextContent{492.427}{450.305}{34.982}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Models}
@@ -1422,7 +1427,7 @@
   \ALIUSPlacedTextContent{413.838}{553.025}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{435.921}{553.025}{10.346}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{45}
   \ALIUSPlacedTextContent{446.281}{553.025}{19.176}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(2),}
-  \ALIUSPlacedTextContent{481.617}{553.025}{45.786}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{256–258.}
+  \ALIUSPlacedTextContent{481.617}{553.025}{45.786}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{256â€“258.}
   \ALIUSPlacedTextContent{106.530}{568.865}{219.296}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{https://doi.org/10.1016/j.cortex.2008.09.004}
   \ALIUSPlacedTextContent{71.080}{596.465}{456.275}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-2013a}Metzinger, T. (2013a). The Myth of Cognitive Agency: Subpersonal Thinking as a Cyclically}
   \ALIUSPlacedTextContent{106.530}{612.305}{192.008}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Recurring Loss of Mental Autonomy.}
@@ -1430,10 +1435,10 @@
   \ALIUSPlacedTextContent{406.382}{612.305}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{412.310}{612.305}{5.482}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{4}
   \ALIUSPlacedTextContent{417.808}{612.305}{26.965}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 931.}
-  \ALIUSPlacedTextContent{71.080}{639.905}{456.329}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-2013b}Metzinger, T. (2013b). Two principles for robot ethics. In E. Hilgendorf \& J.-P. Günther}
+  \ALIUSPlacedTextContent{71.080}{639.905}{456.329}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-2013b}Metzinger, T. (2013b). Two principles for robot ethics. In E. Hilgendorf \& J.-P. GÃ¼nther}
   \ALIUSPlacedTextContent{106.530}{655.745}{34.580}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(Eds.),}
   \ALIUSPlacedTextContent{141.109}{655.745}{121.781}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Robotik und Gesetzgebung}
-  \ALIUSPlacedTextContent{262.969}{655.745}{191.022}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 247–286). Baden-Baden: Nomos.}
+  \ALIUSPlacedTextContent{262.969}{655.745}{191.022}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 247â€“286). Baden-Baden: Nomos.}
   \ALIUSPlacedTextContent{71.080}{683.345}{456.311}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-2013c}Metzinger, T. (2013c). Why are dreams interesting for philosophers? The example of}
   \ALIUSPlacedTextContent{106.530}{699.185}{351.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{minimal phenomenal selfhood, plus an agenda for future research.}
   \ALIUSPlacedTextContent{460.357}{699.185}{67.047}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Consciousness}
@@ -1442,7 +1447,7 @@
   \ALIUSPlacedTextContent{153.641}{715.025}{5.482}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{4}
   \ALIUSPlacedTextContent{159.140}{715.025}{232.451}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{, 746. https://doi.org/10.3389/fpsyg.2013.00746}
   \ALIUSPlacedTextContent{71.080}{742.625}{456.345}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-2014}Metzinger, T. (2014). First-order embodiment, second-order embodiment, third-order}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1454,12 +1459,12 @@
   \fill[ALIUSC767171] (69.640bp,-787.000bp) rectangle ++(456.480bp,-0.720bp);
   \fill[ALIUSC0563C1] (106.600bp,-246.280bp) rectangle ++(411.120bp,-0.480bp);
   \fill[ALIUSC0563C1] (106.600bp,-262.120bp) rectangle ++(71.520bp,-0.480bp);
-  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger – Splendor and misery of self-models}
+  \ALIUSPlacedTextContent{71.080}{35.460}{234.322}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{T. Metzinger â€“ Splendor and misery of self-models}
   \ALIUSPlacedTextContent{511.720}{35.700}{12.644}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{73}
   \ALIUSPlacedTextContent{106.530}{70.865}{420.927}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{embodiment: From spatiotemporal self-location to minimal phenomenal selfhood.}
   \ALIUSPlacedTextContent{106.530}{86.705}{104.859}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{In L. Shapiro (Ed.),}
   \ALIUSPlacedTextContent{213.175}{86.705}{234.551}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{The Routledge Handbook of Embodied Cognition}
-  \ALIUSPlacedTextContent{447.814}{86.705}{79.589}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 272–286).}
+  \ALIUSPlacedTextContent{447.814}{86.705}{79.589}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 272â€“286).}
   \ALIUSPlacedTextContent{106.530}{102.305}{102.949}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{London: Routledge.}
   \ALIUSPlacedTextContent{71.080}{130.145}{321.641}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-2016}Metzinger, T. (2016). Suffering. In K. Almqvist \& A. Hagg (Eds.),}
   \ALIUSPlacedTextContent{391.992}{130.145}{129.745}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{The Return of Consciousness}
@@ -1483,18 +1488,18 @@
   \ALIUSPlacedTextContent{211.282}{351.425}{132.850}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Consciousness and Cognition}
   \ALIUSPlacedTextContent{344.164}{351.425}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{350.092}{351.425}{8.487}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{12}
-  \ALIUSPlacedTextContent{358.594}{351.425}{64.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(4), 549–571.}
+  \ALIUSPlacedTextContent{358.594}{351.425}{64.560}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(4), 549â€“571.}
   \ALIUSPlacedTextContent{71.080}{379.025}{189.403}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-wiese-2017}Metzinger, T., \& Wiese, W. (2017).}
   \ALIUSPlacedTextContent{263.182}{379.025}{177.662}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Philosophy and Predictive Processing}
   \ALIUSPlacedTextContent{440.837}{379.025}{86.609}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{. MIND Group.}
   \ALIUSPlacedTextContent{106.530}{394.865}{226.913}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Retrieved from https://predictive-mind.net/}
-  \ALIUSPlacedTextContent{71.080}{422.465}{456.289}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-windt-2014}Metzinger, T., \& Windt, J. M. (2014). Die phänomenale Signatur des Wissens:}
+  \ALIUSPlacedTextContent{71.080}{422.465}{456.289}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-metzinger-windt-2014}Metzinger, T., \& Windt, J. M. (2014). Die phÃ¤nomenale Signatur des Wissens:}
   \ALIUSPlacedTextContent{106.530}{438.305}{420.898}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Experimentelle Philosophie des Geistes mit oder ohne Intuitionen? In T.}
   \ALIUSPlacedTextContent{106.530}{454.145}{235.320}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Grundmann, J. Horvath, \& J. Kipper (Eds.),}
   \ALIUSPlacedTextContent{344.203}{454.145}{183.181}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Die Experimentelle Philosophie in der}
   \ALIUSPlacedTextContent{106.530}{469.745}{48.822}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Diskussion}
-  \ALIUSPlacedTextContent{155.383}{469.745}{168.285}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 279–321). Berlin: Suhrkamp.}
-  \ALIUSPlacedTextContent{71.080}{497.585}{456.402}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-milliere-2017}Millière, R. (2017). Looking For The Self: Phenomenology, Neurophysiology and}
+  \ALIUSPlacedTextContent{155.383}{469.745}{168.285}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(pp. 279â€“321). Berlin: Suhrkamp.}
+  \ALIUSPlacedTextContent{71.080}{497.585}{456.402}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-milliere-2017}MilliÃ¨re, R. (2017). Looking For The Self: Phenomenology, Neurophysiology and}
   \ALIUSPlacedTextContent{106.530}{513.185}{319.221}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{Philosophical Significance of Drug-induced Ego Dissolution.}
   \ALIUSPlacedTextContent{427.802}{513.185}{99.611}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Frontiers in Human}
   \ALIUSPlacedTextContent{106.530}{529.025}{59.655}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Neuroscience}
@@ -1506,13 +1511,13 @@
   \ALIUSPlacedTextContent{106.530}{572.465}{84.248}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Cognitive Sciences}
   \ALIUSPlacedTextContent{190.807}{572.465}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{196.735}{572.465}{8.799}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{17}
-  \ALIUSPlacedTextContent{205.549}{572.465}{269.345}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(11), 565–573. https://doi.org/10.1016/j.tics.2013.09.007}
+  \ALIUSPlacedTextContent{205.549}{572.465}{269.345}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(11), 565â€“573. https://doi.org/10.1016/j.tics.2013.09.007}
   \ALIUSPlacedTextContent{71.080}{600.305}{419.584}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{\ALIUSRefAnchor{aliusref-metzinger-limanowski-milliere-weisberg-2006}Weisberg, J. (2006). Consciousness Constrained: A Commentary on Being No One.}
   \ALIUSPlacedTextContent{490.529}{600.305}{30.955}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{Psyche}
   \ALIUSPlacedTextContent{521.494}{600.305}{5.919}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{,}
   \ALIUSPlacedTextContent{106.530}{615.905}{8.488}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{12.960}{12}
   \ALIUSPlacedTextContent{115.032}{615.905}{17.956}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{12.960}{(1).}
-  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
+  \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin nÂ°2 (2018)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null

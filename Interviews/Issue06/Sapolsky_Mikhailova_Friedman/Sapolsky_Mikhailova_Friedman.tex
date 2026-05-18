@@ -1,4 +1,4 @@
-% !TeX program = lualatex
+﻿% !TeX program = lualatex
 % ALIUS Bulletin native visual reconstruction source.
 % Generated from off-repo reference layout data; does not include or input a pre-existing article PDF.
 \ifdefined\ALIUSIssueBuild
@@ -87,12 +87,17 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
-\providecommand{\ALIUSNotableQuoteAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
-    \begin{minipage}{#3bp}%
-      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
-    \end{minipage}%
+\providecommand{\ALIUSPullQuoteBlockAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
+  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+    {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
+  };%
+}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \ALIUSPullQuoteBlockAt{#1}{#2}{#3}{#4}%
 }
 \providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
   \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
@@ -258,7 +263,7 @@
   \ALIUSPlacedTextContent{134.003}{731.096}{24.168}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{your}
   \ALIUSPlacedTextContent{161.987}{731.096}{342.758}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{usage or definition of free will here? What are your definitions of}
   \ALIUSPlacedTextContent{90.000}{747.656}{159.394}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{consciousness and awareness?}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -269,7 +274,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (96.750bp,-668.933bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p002-b007.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (465.750bp,-710.160bp) {\includegraphics[width=130.250bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p002-b008.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{500.452}{37.248}{4.824}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{2}
   \ALIUSPlacedTextContent{90.000}{72.000}{414.693}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{These are great questions that I'm spending half my waking hours obsessing}
   \ALIUSPlacedTextContent{90.000}{91.497}{414.550}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{over. Philosophers/legal people define free will along the lines of, having had}
@@ -338,7 +343,7 @@
   \ALIUSPlacedTextContent{464.798}{227.977}{5.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{a}
   \ALIUSPlacedTextContent{476.185}{227.977}{28.490}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{small}
   \ALIUSPlacedTextContent{90.000}{247.474}{414.990}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{handful of neurons). They activated because a neuron(s) upstream activated}
-  \ALIUSPlacedTextContent{90.000}{266.971}{233.758}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{it, which did so because upstream from it…}
+  \ALIUSPlacedTextContent{90.000}{266.971}{233.758}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{it, which did so because upstream from itâ€¦}
   \ALIUSPlacedTextContent{90.000}{298.468}{415.136}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{So, let's take a neuron that has just triggered a behavior in this sense. Show}
   \ALIUSPlacedTextContent{90.000}{317.965}{16.388}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{me}
   \ALIUSPlacedTextContent{111.909}{317.965}{22.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that}
@@ -486,7 +491,7 @@
   \ALIUSPlacedTextContent{133.508}{688.410}{328.260}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{Show me that the neuron's behavior was not shaped}
   \ALIUSPlacedTextContent{133.137}{709.110}{329.002}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{by any of these influences, and you've demonstrated}
   \ALIUSPlacedTextContent{270.780}{729.810}{53.745}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{free will.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -495,7 +500,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{500.608}{37.248}{4.668}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{3}
   \ALIUSPlacedTextContent{90.000}{72.000}{26.376}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Soon}
   \ALIUSPlacedTextContent{120.192}{72.000}{19.332}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{you}
@@ -519,7 +524,7 @@
   \ALIUSPlacedTextContent{90.000}{105.120}{154.492}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{regarding free will (O'Connor}
   \ALIUSPlacedTextContent{244.492}{105.120}{26.490}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{et al.}
   \ALIUSPlacedTextContent{270.976}{105.120}{233.613}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{, 2018). To judge a book by its title in advance}
-  \ALIUSPlacedTextContent{144.323}{121.680}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{—}
+  \ALIUSPlacedTextContent{144.323}{121.680}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{â€”}
   \ALIUSPlacedTextContent{90.000}{123.654}{10.716}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{of}
   \ALIUSPlacedTextContent{104.532}{123.654}{39.792}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{reading}
   \ALIUSPlacedTextContent{155.454}{123.654}{9.744}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{in}
@@ -568,7 +573,7 @@
   \ALIUSPlacedTextContent{469.976}{207.240}{18.516}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{grit}
   \ALIUSPlacedTextContent{493.807}{207.240}{11.148}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{to}
   \ALIUSPlacedTextContent{90.000}{223.800}{414.835}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{succeed. While surely the book itself will be addressing these questions as well}
-  \ALIUSPlacedTextContent{90.000}{240.360}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{—}
+  \ALIUSPlacedTextContent{90.000}{240.360}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{â€”}
   \ALIUSPlacedTextContent{101.131}{242.334}{403.549}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{What motivated or influenced you to write this book now? What do you hope}
   \ALIUSPlacedTextContent{90.000}{259.680}{132.682}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{the book's impact will be?}
   \ALIUSPlacedTextContent{90.000}{288.240}{18.014}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{I'm}
@@ -677,7 +682,7 @@
   \ALIUSPlacedTextContent{426.347}{640.754}{20.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{this}
   \ALIUSPlacedTextContent{451.382}{640.754}{53.747}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{enormous}
   \ALIUSPlacedTextContent{90.000}{660.251}{414.953}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{human need for a sense of agency. It's something we desperately hold on to}
-  \ALIUSPlacedTextContent{90.000}{679.748}{31.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{—loss}
+  \ALIUSPlacedTextContent{90.000}{679.748}{31.303}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{â€”loss}
   \ALIUSPlacedTextContent{127.575}{679.748}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{144.819}{679.748}{5.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{a}
   \ALIUSPlacedTextContent{156.956}{679.748}{28.114}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{sense}
@@ -697,11 +702,11 @@
   \ALIUSPlacedTextContent{180.703}{699.245}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{196.447}{699.245}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{218.641}{699.245}{286.377}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{hypervigilance of anxiety. It's so tough to take apart}
-  \ALIUSPlacedTextContent{90.000}{718.742}{414.623}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{because we are working simply on the conscious level of attribution—it's so}
+  \ALIUSPlacedTextContent{90.000}{718.742}{414.623}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{because we are working simply on the conscious level of attributionâ€”it's so}
   \ALIUSPlacedTextContent{90.000}{738.239}{88.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{counterintuitive}
   \ALIUSPlacedTextContent{183.639}{738.239}{11.435}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to}
   \ALIUSPlacedTextContent{199.844}{738.239}{304.782}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{think that an answer to the question, "Why did you do}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -712,7 +717,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (102.000bp,-179.864bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p004-b010.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (459.000bp,-203.864bp) {\includegraphics[width=137.000bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p004-b011.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{499.864}{37.248}{5.412}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{4}
   \ALIUSPlacedTextContent{90.000}{72.000}{22.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that}
   \ALIUSPlacedTextContent{117.828}{72.000}{19.956}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{just}
@@ -761,8 +766,8 @@
   \ALIUSPlacedTextContent{90.000}{169.486}{350.072}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{usually post-hoc attributions to make sense of what you just did.}
   \ALIUSPlacedTextContent{140.970}{200.983}{313.335}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{Our conscious sense of agency is usually post-hoc}
   \ALIUSPlacedTextContent{149.284}{221.683}{296.715}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{attributions to make sense of what you just did.}
-  \ALIUSPlacedTextContent{168.431}{258.251}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{—}
-  \ALIUSPlacedTextContent{327.808}{258.251}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{—}
+  \ALIUSPlacedTextContent{168.431}{258.251}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{â€”}
+  \ALIUSPlacedTextContent{327.808}{258.251}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{â€”}
   \ALIUSPlacedTextContent{90.000}{260.225}{78.431}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Why do people}
   \ALIUSPlacedTextContent{179.562}{260.225}{148.246}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{many of them quite honestly}
   \ALIUSPlacedTextContent{338.939}{260.225}{145.882}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{feel that they have free will?}
@@ -773,7 +778,7 @@
   \ALIUSPlacedTextContent{244.695}{289.571}{11.058}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{in}
   \ALIUSPlacedTextContent{260.523}{289.571}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{282.717}{289.571}{19.648}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{one}
-  \ALIUSPlacedTextContent{307.137}{289.571}{87.845}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{above—because,}
+  \ALIUSPlacedTextContent{307.137}{289.571}{87.845}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{aboveâ€”because,}
   \ALIUSPlacedTextContent{399.754}{289.571}{62.127}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{cognitively,}
   \ALIUSPlacedTextContent{466.653}{289.571}{8.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{it}
   \ALIUSPlacedTextContent{479.976}{289.571}{8.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{is}
@@ -833,7 +838,7 @@
   \ALIUSPlacedTextContent{250.042}{484.794}{27.240}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{et al.}
   \ALIUSPlacedTextContent{277.276}{484.794}{227.667}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{, 2016; \ALIUSCitationLink{aliusref-sapolsky-mikhailova-friedman-sirgy-2021}{Sirgy, 2021}). In your view, how is our}
   \ALIUSPlacedTextContent{90.000}{501.354}{414.883}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{personal stance on free will associated with our behaviors and context? Where}
-  \ALIUSPlacedTextContent{246.850}{517.914}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{—}
+  \ALIUSPlacedTextContent{246.850}{517.914}{11.144}{ALIUSC1F8135}{\ALIUSFontLatoLight}{14.000}{â€”}
   \ALIUSPlacedTextContent{90.000}{519.888}{156.850}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{are the causal arrows pointing}
   \ALIUSPlacedTextContent{257.981}{519.888}{103.079}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{what leads to what?}
   \ALIUSPlacedTextContent{90.000}{549.234}{414.639}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Something that everyone assumes is that if people stopped believing in free}
@@ -882,7 +887,7 @@
   \ALIUSPlacedTextContent{485.081}{724.708}{8.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{is}
   \ALIUSPlacedTextContent{499.155}{724.708}{5.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{a}
   \ALIUSPlacedTextContent{90.000}{744.205}{312.826}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{version of, "Why not, I'm not responsible for my actions."}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -891,7 +896,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{500.368}{37.248}{4.908}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{5}
   \ALIUSPlacedTextContent{90.000}{72.000}{9.828}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{A}
   \ALIUSPlacedTextContent{104.597}{72.000}{22.965}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{very}
@@ -1061,12 +1066,12 @@
   \ALIUSPlacedTextContent{90.000}{536.182}{55.999}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{important}
   \ALIUSPlacedTextContent{150.771}{536.182}{11.435}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{to}
   \ALIUSPlacedTextContent{166.977}{536.182}{27.862}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{these}
-  \ALIUSPlacedTextContent{199.609}{536.182}{86.740}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{issues—whether}
+  \ALIUSPlacedTextContent{199.609}{536.182}{86.740}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{issuesâ€”whether}
   \ALIUSPlacedTextContent{291.121}{536.182}{19.691}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{you}
   \ALIUSPlacedTextContent{315.582}{536.182}{19.956}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{just}
   \ALIUSPlacedTextContent{340.309}{536.182}{18.152}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{did}
   \ALIUSPlacedTextContent{363.231}{536.182}{142.012}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{something with conscious}
-  \ALIUSPlacedTextContent{90.000}{555.679}{415.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{intent or otherwise, it is subject to the same reality—that behavior occurred}
+  \ALIUSPlacedTextContent{90.000}{555.679}{415.256}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{intent or otherwise, it is subject to the same realityâ€”that behavior occurred}
   \ALIUSPlacedTextContent{90.000}{575.176}{41.644}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{because}
   \ALIUSPlacedTextContent{137.915}{575.176}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{155.159}{575.176}{84.641}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{neurobiological}
@@ -1082,7 +1087,7 @@
   \ALIUSPlacedTextContent{161.844}{594.673}{49.102}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{hormone}
   \ALIUSPlacedTextContent{215.717}{594.673}{29.442}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{levels}
   \ALIUSPlacedTextContent{249.931}{594.673}{22.306}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that}
-  \ALIUSPlacedTextContent{277.009}{594.673}{69.375}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{morning…all}
+  \ALIUSPlacedTextContent{277.009}{594.673}{69.375}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{morningâ€¦all}
   \ALIUSPlacedTextContent{351.156}{594.673}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{373.350}{594.673}{21.020}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{way}
   \ALIUSPlacedTextContent{399.141}{594.673}{25.624}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{back}
@@ -1152,7 +1157,7 @@
   \ALIUSPlacedTextContent{386.708}{738.902}{9.744}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{in}
   \ALIUSPlacedTextContent{400.268}{738.902}{104.447}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{how neural systems}
   \ALIUSPlacedTextContent{90.000}{755.462}{414.691}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{are currently studied. In the years since that article, there have continued to be}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1161,7 +1166,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{499.696}{37.248}{5.580}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{6}
   \ALIUSPlacedTextContent{90.000}{72.000}{48.791}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{advances}
   \ALIUSPlacedTextContent{143.357}{72.000}{9.744}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{in}
@@ -1219,15 +1224,15 @@
   \ALIUSPlacedTextContent{450.302}{190.857}{24.461}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{have}
   \ALIUSPlacedTextContent{479.535}{190.857}{25.708}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{been}
   \ALIUSPlacedTextContent{90.000}{210.354}{415.131}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{doing has been done to reveal more and more of the subterranean influences}
-  \ALIUSPlacedTextContent{90.000}{229.851}{370.461}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{on our behavior—Wow, I had no idea that biology/genes/hormones/}
+  \ALIUSPlacedTextContent{90.000}{229.851}{370.461}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{on our behaviorâ€”Wow, I had no idea that biology/genes/hormones/}
   \ALIUSPlacedTextContent{460.459}{229.851}{13.757}{ALIUSC000000}{\ALIUSFontCormorantItalic}{14.000}{etc}
   \ALIUSPlacedTextContent{474.213}{229.851}{30.492}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{. have}
   \ALIUSPlacedTextContent{90.000}{249.348}{210.079}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{something to do with THAT behavior.}
   \ALIUSPlacedTextContent{90.000}{280.845}{414.639}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{Where things are really problematic is that the scientific findings are on the}
-  \ALIUSPlacedTextContent{90.000}{300.343}{415.000}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{group level, not the individual level – yes, we know with certainty that, for}
+  \ALIUSPlacedTextContent{90.000}{300.343}{415.000}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{group level, not the individual level â€“ yes, we know with certainty that, for}
   \ALIUSPlacedTextContent{90.000}{319.840}{414.757}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{example, someone with their frontal cortex destroyed will behave in socially}
   \ALIUSPlacedTextContent{90.000}{339.337}{75.211}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{inappropriate}
-  \ALIUSPlacedTextContent{172.982}{339.337}{56.125}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{ways—but}
+  \ALIUSPlacedTextContent{172.982}{339.337}{56.125}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{waysâ€”but}
   \ALIUSPlacedTextContent{236.879}{339.337}{26.631}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{good}
   \ALIUSPlacedTextContent{271.280}{339.337}{23.133}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{luck}
   \ALIUSPlacedTextContent{302.183}{339.337}{56.448}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{predicting}
@@ -1246,7 +1251,7 @@
   \ALIUSPlacedTextContent{229.871}{378.331}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{252.066}{378.331}{252.691}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{legal scholars who weigh in with rejecting the}
   \ALIUSPlacedTextContent{90.000}{397.828}{22.489}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{idea}
-  \ALIUSPlacedTextContent{117.260}{397.828}{387.810}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that free will is a myth start at this point – if all this scientific insight}
+  \ALIUSPlacedTextContent{117.260}{397.828}{387.810}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that free will is a myth start at this point â€“ if all this scientific insight}
   \ALIUSPlacedTextContent{90.000}{417.325}{414.665}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{can't tell me anything about what THIS individual is going to do, it has no}
   \ALIUSPlacedTextContent{90.000}{436.822}{414.846}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{place in the courtroom, and you sure haven't disproved the existence of free}
   \ALIUSPlacedTextContent{90.000}{456.319}{23.187}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{will.}
@@ -1265,7 +1270,7 @@
   \ALIUSPlacedTextContent{90.000}{534.308}{415.255}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{physical, sexual, or psychological abuse, did they experience it, was a family}
   \ALIUSPlacedTextContent{90.000}{553.805}{414.775}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{member incarcerated, was the person raised in poverty, was there substance}
   \ALIUSPlacedTextContent{90.000}{573.302}{10.595}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{at}
-  \ALIUSPlacedTextContent{105.366}{573.302}{39.379}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{home…}
+  \ALIUSPlacedTextContent{105.366}{573.302}{39.379}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{homeâ€¦}
   \ALIUSPlacedTextContent{149.514}{573.302}{28.057}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{there}
   \ALIUSPlacedTextContent{182.343}{573.302}{16.500}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{are}
   \ALIUSPlacedTextContent{203.614}{573.302}{36.214}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{formal}
@@ -1308,7 +1313,7 @@
   \ALIUSPlacedTextContent{90.000}{651.291}{415.263}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{incarcerated by age 25," it doesn't matter that you can't predict events on an}
   \ALIUSPlacedTextContent{90.000}{670.788}{55.467}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{individual}
   \ALIUSPlacedTextContent{150.239}{670.788}{24.712}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{level}
-  \ALIUSPlacedTextContent{179.724}{670.788}{325.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{with 100\% accuracy—you don't need that to know that this}
+  \ALIUSPlacedTextContent{179.724}{670.788}{325.466}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{with 100\% accuracyâ€”you don't need that to know that this}
   \ALIUSPlacedTextContent{90.000}{690.285}{8.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{is}
   \ALIUSPlacedTextContent{108.573}{690.285}{5.866}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{a}
   \ALIUSPlacedTextContent{124.460}{690.285}{43.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{screwed}
@@ -1322,7 +1327,7 @@
   \ALIUSPlacedTextContent{462.193}{690.285}{16.066}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{for}
   \ALIUSPlacedTextContent{487.531}{690.285}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{90.000}{709.782}{232.314}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{uncontrollable biology that sculpted them.}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1333,7 +1338,7 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (90.000bp,-589.333bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p007-b011.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (459.750bp,-653.795bp) {\includegraphics[width=136.250bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p007-b012.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{500.128}{37.248}{5.148}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{7}
   \ALIUSPlacedTextContent{90.000}{72.000}{10.356}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{In}
   \ALIUSPlacedTextContent{104.922}{72.000}{17.436}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{the}
@@ -1398,7 +1403,7 @@
   \ALIUSPlacedTextContent{489.494}{190.857}{15.101}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{we}
   \ALIUSPlacedTextContent{90.000}{210.354}{415.029}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{have over who we are. I think I've worked on 11 cases, and lost ten of them.}
   \ALIUSPlacedTextContent{90.000}{229.851}{415.117}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{People are not open to these ideas, especially when looking at vivid pictures}
-  \ALIUSPlacedTextContent{90.000}{249.348}{194.734}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of corpses being shown to the jury…}
+  \ALIUSPlacedTextContent{90.000}{249.348}{194.734}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of corpses being shown to the juryâ€¦}
   \ALIUSPlacedTextContent{90.000}{288.343}{39.936}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Beyond}
   \ALIUSPlacedTextContent{133.751}{288.343}{17.436}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{the}
   \ALIUSPlacedTextContent{155.003}{288.343}{28.500}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{areas}
@@ -1525,7 +1530,7 @@
   \ALIUSPlacedTextContent{388.245}{743.462}{51.275}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{individual}
   \ALIUSPlacedTextContent{445.586}{743.462}{33.912}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{choice}
   \ALIUSPlacedTextContent{485.564}{743.462}{19.464}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{and}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1536,12 +1541,12 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (113.250bp,-199.680bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p008-b011.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (441.750bp,-243.166bp) {\includegraphics[width=154.250bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p008-b012.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{499.408}{37.248}{5.868}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{8}
   \ALIUSPlacedTextContent{90.000}{72.000}{414.673}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{decision-making. What are the consequences of centering or excluding free will}
   \ALIUSPlacedTextContent{90.000}{88.560}{391.027}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{from these vital conversations related to individual cognition and behavior?}
   \ALIUSPlacedTextContent{90.000}{121.680}{18.207}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{See}
-  \ALIUSPlacedTextContent{113.728}{121.680}{60.519}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{above—the}
+  \ALIUSPlacedTextContent{113.728}{121.680}{60.519}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{aboveâ€”the}
   \ALIUSPlacedTextContent{179.768}{121.680}{72.734}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{consequences}
   \ALIUSPlacedTextContent{258.024}{121.680}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{274.518}{121.680}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
@@ -1562,7 +1567,7 @@
   \ALIUSPlacedTextContent{191.835}{260.565}{211.612}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{you judge anyone about anything.}
   \ALIUSPlacedTextContent{90.000}{300.763}{27.804}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{After}
   \ALIUSPlacedTextContent{121.620}{300.763}{58.175}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{Determined}
-  \ALIUSPlacedTextContent{183.611}{300.763}{6.672}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{–}
+  \ALIUSPlacedTextContent{183.611}{300.763}{6.672}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{â€“}
   \ALIUSPlacedTextContent{194.099}{300.763}{29.460}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{What}
   \ALIUSPlacedTextContent{227.374}{300.763}{17.208}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{are}
   \ALIUSPlacedTextContent{248.398}{300.763}{256.641}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{the immediate next steps, and deeper directions,}
@@ -1607,7 +1612,7 @@
   \ALIUSPlacedTextContent{171.563}{514.168}{8.436}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{\&}
   \ALIUSPlacedTextContent{183.815}{514.168}{50.111}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Zaytseva,}
   \ALIUSPlacedTextContent{237.742}{514.168}{30.864}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{2016;}
-  \ALIUSPlacedTextContent{272.422}{514.168}{47.855}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{Milojević}
+  \ALIUSPlacedTextContent{272.422}{514.168}{47.855}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{MilojeviÄ‡}
   \ALIUSPlacedTextContent{324.093}{514.168}{9.648}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{et}
   \ALIUSPlacedTextContent{337.551}{514.168}{14.016}{ALIUSC1F8135}{\ALIUSFontLatoItalic}{12.000}{al.,}
   \ALIUSPlacedTextContent{355.377}{514.168}{33.984}{ALIUSC1F8135}{\ALIUSFontLatoRegular}{12.000}{2018).}
@@ -1709,7 +1714,7 @@
   \ALIUSPlacedTextContent{352.231}{744.133}{56.587}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{appreciate}
   \ALIUSPlacedTextContent{417.340}{744.133}{23.078}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{how}
   \ALIUSPlacedTextContent{448.937}{744.133}{55.999}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{important}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1720,27 +1725,27 @@
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (86.250bp,-131.008bp) {\includegraphics[width=237.000bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p009-b000.png}};
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (490.500bp,-194.988bp) {\includegraphics[width=105.000bp,height=73.500bp]{Interviews/Issue06/Sapolsky_Mikhailova_Friedman/assets/alius-extracted-image-p009-b027.png}};
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{499.696}{37.248}{5.580}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{9}
   \ALIUSPlacedTextContent{90.000}{72.000}{58.829}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{chaoticism}
   \ALIUSPlacedTextContent{155.097}{72.000}{20.265}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{and}
   \ALIUSPlacedTextContent{181.632}{72.000}{50.752}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{emergent}
   \ALIUSPlacedTextContent{238.656}{72.000}{60.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{complexity}
-  \ALIUSPlacedTextContent{305.222}{72.000}{72.706}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{are—whether}
+  \ALIUSPlacedTextContent{305.222}{72.000}{72.706}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{areâ€”whether}
   \ALIUSPlacedTextContent{384.200}{72.000}{10.595}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{at}
   \ALIUSPlacedTextContent{401.066}{72.000}{17.423}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{the}
   \ALIUSPlacedTextContent{424.011}{72.000}{24.712}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{level}
   \ALIUSPlacedTextContent{454.245}{72.000}{10.972}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{of}
   \ALIUSPlacedTextContent{470.739}{72.000}{34.185}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{neural}
-  \ALIUSPlacedTextContent{90.000}{91.497}{414.538}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{network function, or at the level of genetic crossing at fertilization—you see}
+  \ALIUSPlacedTextContent{90.000}{91.497}{414.538}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{network function, or at the level of genetic crossing at fertilizationâ€”you see}
   \ALIUSPlacedTextContent{90.000}{110.994}{313.244}{ALIUSC000000}{\ALIUSFontCormorantRegular}{14.000}{that reductionism can't explain the most interesting stuff.}
   \ALIUSPlacedTextContent{117.960}{149.988}{359.355}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{People need to appreciate how important chaoticism and}
   \ALIUSPlacedTextContent{92.454}{170.688}{157.417}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{emergent complexity are}
   \ALIUSPlacedTextContent{261.359}{170.688}{241.462}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{whether at the level of neural network}
-  \ALIUSPlacedTextContent{249.872}{171.675}{11.494}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.000}{—}
+  \ALIUSPlacedTextContent{249.872}{171.675}{11.494}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.000}{â€”}
   \ALIUSPlacedTextContent{100.967}{191.389}{358.455}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{function, or at the level of genetic crossing at fertilization}
   \ALIUSPlacedTextContent{470.909}{191.389}{23.400}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{you}
-  \ALIUSPlacedTextContent{459.421}{192.376}{11.494}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.000}{—}
+  \ALIUSPlacedTextContent{459.421}{192.376}{11.494}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.000}{â€”}
   \ALIUSPlacedTextContent{105.900}{212.088}{383.482}{ALIUSC000000}{\ALIUSFontLatoLight}{15.000}{see that reductionism can't explain the most interesting stuff.}
   \ALIUSPlacedTextContent{263.917}{252.286}{67.446}{ALIUSC000000}{\ALIUSFontLatoLight}{14.000}{References}
   \ALIUSPlacedTextContent{90.000}{290.925}{382.941}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-sapolsky-2005}Sapolsky, R. M. (2005). Monkeyluv: And other essays on our lives as animals.}
@@ -1782,7 +1787,7 @@
   \ALIUSPlacedTextContent{90.000}{709.244}{402.462}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-conversano-rotondo-2010}Conversano, C., Rotondo, A., Lensi, E., Della Vista, O., Arpone, F., Reda, M. A.}
   \ALIUSPlacedTextContent{126.000}{728.994}{341.796}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(2010). Optimism and its impact on mental and physical well-being.}
   \ALIUSPlacedTextContent{467.796}{728.994}{22.991}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Clin}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1791,17 +1796,17 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{495.568}{37.248}{9.708}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{10}
   \ALIUSPlacedTextContent{126.000}{72.000}{134.679}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Pract Epidemiol Ment Health}
-  \ALIUSPlacedTextContent{260.678}{72.000}{43.058}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{; 6:25–29}
+  \ALIUSPlacedTextContent{260.678}{72.000}{43.058}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{; 6:25â€“29}
   \ALIUSPlacedTextContent{126.000}{91.750}{220.050}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.2174/1745017901006010025}
   \ALIUSPlacedTextContent{90.000}{117.501}{306.199}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-sirgy-2021}Sirgy, M. J. (2021). Effects of Beliefs and Values on Wellbeing.}
   \ALIUSPlacedTextContent{396.199}{117.501}{93.454}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{In: Sirgy MJ, editor.}
   \ALIUSPlacedTextContent{126.000}{137.251}{370.322}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{The Psychology of Quality of Life: Wellbeing and Positive Mental Health.}
   \ALIUSPlacedTextContent{126.000}{157.001}{30.765}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{Cham}
   \ALIUSPlacedTextContent{156.762}{157.001}{159.956}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{: Springer International Publishing}
-  \ALIUSPlacedTextContent{316.716}{157.001}{66.501}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{. pp. 245–262.}
+  \ALIUSPlacedTextContent{316.716}{157.001}{66.501}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{. pp. 245â€“262.}
   \ALIUSPlacedTextContent{126.000}{176.752}{222.389}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1007/978-3-030-71888-6\_11}
   \ALIUSPlacedTextContent{90.000}{202.502}{254.202}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-skinner-1971}Skinner, B. F. (1971). Beyond Freedom and Dignity.}
   \ALIUSPlacedTextContent{344.202}{202.502}{90.791}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Hackett Publishing}
@@ -1814,7 +1819,7 @@
   \ALIUSPlacedTextContent{90.000}{293.503}{260.362}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-skinner-1973}Skinner, B. F. (1973). Walden (one) and Walden two.}
   \ALIUSPlacedTextContent{350.362}{293.503}{135.757}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{The Thoreau Society Bulletin}
   \ALIUSPlacedTextContent{486.118}{293.503}{5.472}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{.;}
-  \ALIUSPlacedTextContent{126.000}{313.253}{18.624}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{1–3.}
+  \ALIUSPlacedTextContent{126.000}{313.253}{18.624}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{1â€“3.}
   \ALIUSPlacedTextContent{144.624}{313.253}{188.651}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{http://www.jstor.org/stable/23399198}
   \ALIUSPlacedTextContent{90.000}{339.004}{172.002}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-skinner-1948}Skinner, B. F. (1948). Walden Two.}
   \ALIUSPlacedTextContent{262.002}{339.004}{90.791}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Hackett Publishing}
@@ -1822,22 +1827,22 @@
   \ALIUSPlacedTextContent{90.000}{364.754}{370.803}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-sapolsky-2004-2}Sapolsky, R. M. (2004). The frontal cortex and the criminal justice system.}
   \ALIUSPlacedTextContent{460.803}{364.754}{30.749}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Philos}
   \ALIUSPlacedTextContent{126.000}{384.505}{135.302}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Trans R Soc Lond B Biol Sci.;}
-  \ALIUSPlacedTextContent{261.302}{384.505}{78.106}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{359: 1787–1796.}
+  \ALIUSPlacedTextContent{261.302}{384.505}{78.106}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{359: 1787â€“1796.}
   \ALIUSPlacedTextContent{126.000}{404.254}{187.079}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1098/rstb.2004.1547}
   \ALIUSPlacedTextContent{90.000}{430.005}{367.787}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-wray-2002}Wray, K. B. (2002). The Epistemic Significance of Collaborative Research.}
   \ALIUSPlacedTextContent{457.787}{430.005}{30.749}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Philos}
   \ALIUSPlacedTextContent{126.000}{449.755}{16.259}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Sci.}
-  \ALIUSPlacedTextContent{142.258}{449.755}{65.436}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{; 69: 150–168.}
+  \ALIUSPlacedTextContent{142.258}{449.755}{65.436}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{; 69: 150â€“168.}
   \ALIUSPlacedTextContent{207.694}{449.755}{154.848}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1086/338946}
   \ALIUSPlacedTextContent{90.000}{475.506}{383.917}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-thomas-zaytseva-2016}Thomas, J., Zaytseva, A. (2016). Mapping complexity/Human knowledge as a}
   \ALIUSPlacedTextContent{126.000}{495.256}{128.167}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{complex adaptive system.}
   \ALIUSPlacedTextContent{254.167}{495.256}{55.715}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Complexity}
-  \ALIUSPlacedTextContent{309.881}{495.256}{63.135}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{. 21: 207–234.}
+  \ALIUSPlacedTextContent{309.881}{495.256}{63.135}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{. 21: 207â€“234.}
   \ALIUSPlacedTextContent{126.000}{515.006}{166.766}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1002/cplx.21799}
-  \ALIUSPlacedTextContent{90.000}{540.757}{413.742}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{Milojević, S., Radicchi, F., Walsh, J. P. (2018). Changing demographics of scientific}
+  \ALIUSPlacedTextContent{90.000}{540.757}{413.742}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{MilojeviÄ‡, S., Radicchi, F., Walsh, J. P. (2018). Changing demographics of scientific}
   \ALIUSPlacedTextContent{126.000}{560.507}{225.534}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{careers: The rise of the temporary workforce.}
   \ALIUSPlacedTextContent{351.534}{560.507}{31.841}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{PNAS}
-  \ALIUSPlacedTextContent{383.373}{560.507}{86.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{. 115: 12616–12623.}
+  \ALIUSPlacedTextContent{383.373}{560.507}{86.203}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{. 115: 12616â€“12623.}
   \ALIUSPlacedTextContent{126.000}{580.257}{196.059}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1073/pnas.1800478115}
   \ALIUSPlacedTextContent{90.000}{606.008}{399.266}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-allen-mehler-2019}Allen, C., Mehler, D. M. A. (2019). Open science challenges, benefits and tips in}
   \ALIUSPlacedTextContent{126.000}{625.758}{122.657}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{early career and beyond.}
@@ -1845,13 +1850,13 @@
   \ALIUSPlacedTextContent{297.132}{625.758}{70.088}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{; 17: e3000246.}
   \ALIUSPlacedTextContent{126.000}{645.508}{218.608}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.1371/journal.pbio.3000246}
   \ALIUSPlacedTextContent{90.000}{671.258}{401.448}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-friedman-applegate-swanson-2022}Friedman, D., Applegate-Swanson, S., Choudhury, A., Cordes, R. J., El Damaty,}
-  \ALIUSPlacedTextContent{126.000}{691.009}{109.389}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{S., Guénin-Carlut A.,}
+  \ALIUSPlacedTextContent{126.000}{691.009}{109.389}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{S., GuÃ©nin-Carlut A.,}
   \ALIUSPlacedTextContent{235.389}{691.009}{25.654}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{et al.}
   \ALIUSPlacedTextContent{261.042}{691.009}{208.003}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{(2022). An Active Inference Ontology for}
   \ALIUSPlacedTextContent{126.000}{710.759}{341.459}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{Decentralized Science: from Situated Sensemaking to the Epistemic}
   \ALIUSPlacedTextContent{126.000}{730.510}{54.870}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{Commons.}
   \ALIUSPlacedTextContent{180.870}{730.510}{196.110}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://doi.org/10.5281/zenodo.6320575}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
@@ -1860,7 +1865,7 @@
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \fill[ALIUSCFFFFFF] (0.000bp,-0.000bp) rectangle ++(595.500bp,-842.250bp);
-  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky – On free will or the lack thereof}
+  \ALIUSPlacedTextContent{90.000}{35.400}{230.439}{ALIUSC767171}{\ALIUSFontCormorantRegular}{14.000}{Sapolsky â€“ On free will or the lack thereof}
   \ALIUSPlacedTextContent{497.308}{37.248}{7.968}{ALIUSC000000}{\ALIUSFontCormorantRegular}{12.000}{11}
   \ALIUSPlacedTextContent{90.000}{72.000}{357.963}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{\ALIUSRefAnchor{aliusref-sapolsky-mikhailova-friedman-hamburg-2022}Hamburg, S. A. (2022). Guide to DeSci, the Latest Web3 Movement. In:}
   \ALIUSPlacedTextContent{447.963}{72.000}{33.881}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.000}{Future}
@@ -1872,7 +1877,7 @@
   \ALIUSPlacedTextContent{239.445}{135.605}{54.594}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.000}{[Internet].}
   \ALIUSPlacedTextContent{294.039}{135.605}{209.288}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{https://desci.medium.com/why-we-need-}
   \ALIUSPlacedTextContent{126.000}{153.710}{304.355}{ALIUSC1155CC}{\ALIUSFontCormorantRegular}{13.000}{to-fundamentally-rethink-scientific-publishing-43f2ae39af76}
-  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°6 (2022)}
+  \ALIUSPlacedTextContent{90.000}{792.318}{121.608}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin nÂ°6 (2022)}
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
