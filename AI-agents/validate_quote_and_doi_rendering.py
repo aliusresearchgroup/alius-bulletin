@@ -16,6 +16,8 @@ Checks current TeX sources for two Overleaf-sensitive details:
   and to the right of the text box, never between quote-body lines.
 - legacy absolute-position pull-quote body lines must be centered as one compact
   rectangle, so shorter lines do not drift left while the marks stay fixed.
+- semantic notable quotes must be pre-wrapped at word boundaries, not left for
+  TeX to hyphenate inside a fixed-width box.
 
 Optionally checks compiled PDFs for live DOI URI annotations.
 """
@@ -48,6 +50,9 @@ FILL_RE = re.compile(
 PULL_QUOTE_TEXT_COLORS = {"ALIUSC000000", "ALIUSC595959", "ALIUSC7F7F7F"}
 QUOTE_OPEN = r"\ALIUSPullQuoteOpen"
 QUOTE_CLOSE = r"\ALIUSPullQuoteClose"
+SEMANTIC_QUOTE_RE = re.compile(
+    r"\\ALIUSMaybeNotableQuoteAt\{[^}]*\}\{[^}]*\}\{[^}]*\}\{(?P<quote>.*)\}"
+)
 
 
 def bib_doi(tex_path: Path) -> str:
@@ -106,6 +111,7 @@ def source_report() -> dict[str, Any]:
     missing_citation_panels: list[str] = []
     bad_panel_geometry: list[str] = []
     bad_pull_quote_alignment: list[str] = []
+    bad_semantic_quote_linebreaks: list[str] = []
     doi_urls: set[str] = set()
 
     for path in files:
@@ -119,6 +125,22 @@ def source_report() -> dict[str, Any]:
             missing_citation_link_macros.append(rel)
         if r"\usepackage[hidelinks]{hyperref}" not in text:
             missing_hyperref.append(rel)
+        for line_no, line in enumerate(text.splitlines(), start=1):
+            match = SEMANTIC_QUOTE_RE.search(line)
+            if not match:
+                continue
+            quote = match.group("quote").strip()
+            if not quote:
+                continue
+            parts = [part.strip() for part in re.split(r"\s*\\\\\s*", quote) if part.strip()]
+            unwrapped = " ".join(parts)
+            if len(unwrapped) > 65 and len(parts) == 1:
+                bad_semantic_quote_linebreaks.append(f"{rel}:{line_no}: long notable quote is not pre-wrapped")
+            for left, right in zip(parts, parts[1:]):
+                if left.endswith("-") and right[:1].islower():
+                    bad_semantic_quote_linebreaks.append(
+                        f"{rel}:{line_no}: notable quote line break hyphenates '{left[-24:]} {right[:24]}'"
+                    )
 
         spans = parsed_spans_with_pages(text)
         for opener in [rec for rec in spans if rec["text"] == QUOTE_OPEN]:
@@ -243,6 +265,7 @@ def source_report() -> dict[str, Any]:
         "missing_citation_panels": missing_citation_panels,
         "bad_panel_geometry": bad_panel_geometry,
         "bad_pull_quote_alignment": bad_pull_quote_alignment,
+        "bad_semantic_quote_linebreaks": bad_semantic_quote_linebreaks,
         "bad_or_missing_green_doi_hrefs": bad_doi_lines,
         "detached_doi_nodes": sorted(set(detached_doi_nodes)),
         "source_ok": not (
@@ -254,6 +277,7 @@ def source_report() -> dict[str, Any]:
             or missing_citation_panels
             or bad_panel_geometry
             or bad_pull_quote_alignment
+            or bad_semantic_quote_linebreaks
             or bad_doi_lines
             or detached_doi_nodes
         ),

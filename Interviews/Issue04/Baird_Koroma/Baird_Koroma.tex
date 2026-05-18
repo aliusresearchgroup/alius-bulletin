@@ -88,11 +88,11 @@
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \providecommand{\ALIUSPullQuoteBlockAt}[4]{%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F] at (#1bp,-#2bp) {%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=12bp,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\hyphenpenalty10000\exhyphenpenalty10000\relax] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {\begin{tabular}{@{}c@{}}#4\end{tabular}};%
+  \node[anchor=north east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=-6bp] at (ALIUSPullQuoteBody.north west) {%
     {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}%
   };%
-  \node[anchor=north west,inner sep=0pt,outer sep=0pt,xshift=24bp,text width=\dimexpr#3bp-48bp\relax,align=center,text=ALIUSC595959,font=\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont] (ALIUSPullQuoteBody) at (#1bp,-#2bp) {#4};%
-  \node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=24bp] at (ALIUSPullQuoteBody.south east) {%
+  \node[anchor=south west,inner sep=0pt,outer sep=0pt,text=ALIUSC7F7F7F,xshift=6bp,yshift=-7bp] at (ALIUSPullQuoteBody.south east) {%
     {\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}%
   };%
 }

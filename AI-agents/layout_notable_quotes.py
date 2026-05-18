@@ -10,10 +10,12 @@ following absolute nodes. This script is the formatting rule layer:
 - if a quote leaves a large dead band before a page footer while the segment
   continues on the next page, following content is pulled forward into the usable
   space;
-- running heads, page numbers, footers, and horizontal rules stay fixed.
+- running heads, page numbers, footers, and horizontal rules stay fixed;
+- quote bodies are pre-wrapped at word boundaries so notable quotes never use
+  hyphenated line breaks.
 
-The script is conservative and idempotent. It currently rewrites only generated
-absolute coordinates; it does not change the visible quote text.
+The script is conservative and idempotent. It rewrites generated absolute
+coordinates and the generated line breaks inside semantic notable-quote slots.
 """
 
 from __future__ import annotations
@@ -34,10 +36,13 @@ PAGE_BOTTOM = 760.0
 PAGE_HEIGHT = PAGE_BOTTOM - PAGE_TOP
 FOOTER_TOP = 780.0
 HEADER_BOTTOM = 60.0
-MIN_GAP_AFTER_QUOTE = 16.5
+QUOTE_VERTICAL_GAP = 8.0
+MIN_GAP_AFTER_QUOTE = QUOTE_VERTICAL_GAP
 MAX_ALLOWED_DEAD_SPACE = 95.0
 PAGE_ROW_TOP = PAGE_TOP
 MIN_ROW_GAP = 16.5
+QUOTE_TARGET_CHARS_PER_LINE = 42
+QUOTE_MAX_LINES = 4
 
 SPAN_RE = re.compile(
     r"(?P<prefix>\s*\\ALIUSPlacedTextContent\{(?P<x>[^}]*)\}\{(?P<y>[^}]*)\}\{(?P<w>[^}]*)\}"
@@ -176,14 +181,117 @@ def normalize_quote_slot_metadata(lines: list[str]) -> tuple[list[str], int]:
     return out, changes
 
 
+def unwrap_quote_text(text: str) -> str:
+    return re.sub(r"\s*\\\\\s*", " ", text).strip()
+
+
+def quote_display_lines(text: str) -> list[str]:
+    parts = [part.strip() for part in re.split(r"\s*\\\\\s*", text.strip()) if part.strip()]
+    return parts or ([text.strip()] if text.strip() else [])
+
+
+def strip_tex_for_length(text: str) -> str:
+    text = re.sub(r"\\[A-Za-z]+\*?(?:\[[^\]]*\])?(?:\{[^}]*\})?", "", text)
+    text = re.sub(r"[{}]", "", text)
+    return text
+
+
+def best_balanced_linebreaks(words: list[str], line_count: int) -> list[str]:
+    if line_count <= 1 or len(words) <= line_count:
+        return [" ".join(words)]
+    lengths = [len(strip_tex_for_length(word)) for word in words]
+    prefix = [0]
+    for i, word_len in enumerate(lengths):
+        # Include one separating space between adjacent words inside a line.
+        prefix.append(prefix[-1] + word_len + (0 if i == 0 else 1))
+
+    def segment_len(start: int, end: int) -> int:
+        if start >= end:
+            return 0
+        return prefix[end] - prefix[start] - (0 if start == 0 else 1)
+
+    total = segment_len(0, len(words))
+    target = max(1.0, total / line_count)
+    # Dynamic programming keeps the generated quote box rectangular without
+    # ever splitting a word, which avoids TeX hyphenation in the rendered PDF.
+    dp: list[dict[tuple[int, int], tuple[float, list[int]]]] = [{} for _ in range(line_count + 1)]
+    dp[0][(0, 0)] = (0.0, [])
+    for line_no in range(1, line_count + 1):
+        remaining_lines = line_count - line_no
+        for (prev_end, _unused), (score, breaks) in dp[line_no - 1].items():
+            min_end = prev_end + 1
+            max_end = len(words) - remaining_lines
+            for end in range(min_end, max_end + 1):
+                width = segment_len(prev_end, end)
+                too_long_penalty = max(0.0, width - QUOTE_TARGET_CHARS_PER_LINE - 8) ** 2
+                new_score = score + (width - target) ** 2 + too_long_penalty
+                key = (end, line_no)
+                if key not in dp[line_no] or new_score < dp[line_no][key][0]:
+                    dp[line_no][key] = (new_score, [*breaks, end])
+    best = dp[line_count].get((len(words), line_count))
+    if not best:
+        return [" ".join(words)]
+    breaks = best[1]
+    start = 0
+    lines: list[str] = []
+    for end in breaks:
+        lines.append(" ".join(words[start:end]))
+        start = end
+    return lines
+
+
+def wrap_quote_text_for_display(text: str) -> str:
+    clean = unwrap_quote_text(text)
+    if not clean:
+        return text
+    words = clean.split()
+    if len(words) <= 3:
+        return clean
+    visible_len = len(strip_tex_for_length(clean))
+    line_count = max(2, min(QUOTE_MAX_LINES, math.ceil(visible_len / QUOTE_TARGET_CHARS_PER_LINE)))
+    line_count = min(line_count, len(words))
+    return r"\\".join(best_balanced_linebreaks(words, line_count))
+
+
+def normalize_quote_linebreaks(lines: list[str]) -> tuple[list[str], int]:
+    """Normalize semantic quote text into balanced manual line breaks."""
+    out = lines[:]
+    changes = 0
+    for idx, line in enumerate(lines):
+        match = QUOTE_RE.match(line)
+        if not match:
+            continue
+        wrapped = wrap_quote_text_for_display(match.group("quote"))
+        if wrapped == match.group("quote"):
+            continue
+        out[idx] = (
+            f"{match.group('prefix')}\\ALIUSMaybeNotableQuoteAt"
+            f"{{{match.group('x')}}}{{{match.group('y')}}}{{{match.group('w')}}}{{{wrapped}}}"
+            f"{match.group('suffix')}"
+        )
+        changes += 1
+    return out, changes
+
+
 def quote_height(quote: Quote) -> float:
-    # The TeX macro uses Lato Light 15bp / 18bp. Estimate line count from the
-    # quote width and average glyph width, then reserve extra room for quote marks.
-    avg_char_bp = 7.0
-    chars_per_line = max(32, int(quote.width / avg_char_bp))
-    visible = re.sub(r"\\[A-Za-z]+\{[^}]*\}", "", quote.text)
-    lines = max(2, math.ceil(len(visible) / chars_per_line))
-    return 18.0 * lines + 18.0
+    # The TeX macro uses Lato Light 15bp / 18bp. The layout script writes
+    # explicit \\ line breaks, so quote height follows the rendered line count
+    # rather than relying on TeX hyphenation or a fixed text width.
+    line_count = len(quote_display_lines(quote.text))
+    if line_count == 0:
+        visible = strip_tex_for_length(unwrap_quote_text(quote.text))
+        line_count = max(1, math.ceil(len(visible) / QUOTE_TARGET_CHARS_PER_LINE))
+    # Closing quote ornaments are shifted slightly below the natural body box so
+    # they visually hug the last quote line rather than floating between lines.
+    return 18.0 * max(1, line_count) + 8.0
+
+
+def quote_bottom_y(quote: Quote) -> float:
+    return quote.y + quote_height(quote)
+
+
+def quote_following_text_y(quote: Quote) -> float:
+    return quote_bottom_y(quote) + QUOTE_VERTICAL_GAP
 
 
 def is_movable_content(span: Span) -> bool:
@@ -350,7 +458,7 @@ def insert_moved_lines_by_page(
 
 def reflow_after_quote(lines: list[str], quote: Quote, next_span: Span) -> tuple[list[str], float]:
     """Pull downstream absolute content forward so the next span follows quote."""
-    target_y = quote.y + quote_height(quote) + MIN_GAP_AFTER_QUOTE
+    target_y = quote_following_text_y(quote)
     target_y = min(target_y, PAGE_BOTTOM - 20.0)
     global_next = (next_span.page - quote.page) * PAGE_HEIGHT + next_span.y
     shift = global_next - target_y
@@ -406,7 +514,7 @@ def normalize_row_flow_after_quote(lines: list[str], quote: Quote) -> tuple[list
     if not rows:
         return lines, 0
 
-    target_y = quote.y + quote_height(quote) + MIN_GAP_AFTER_QUOTE
+    target_y = quote_following_text_y(quote)
     current_page = quote.page
     current_y = max(rows[0].y if rows[0].page == quote.page else PAGE_ROW_TOP, target_y)
     if current_y > PAGE_BOTTOM:
@@ -466,7 +574,7 @@ def compact_local_spacing_around_quote(lines: list[str], quote: Quote) -> tuple[
         return lines, 0
 
     previous_bottom = previous.y + line_lead(lines, previous.idx)
-    desired_quote_y = previous_bottom + MIN_ROW_GAP
+    desired_quote_y = previous_bottom + QUOTE_VERTICAL_GAP
     changed_rows = 0
     if current_quote.y - desired_quote_y > 4.0:
         lines[current_quote.idx] = replace_second_arg_y(lines[current_quote.idx], desired_quote_y)
@@ -481,7 +589,7 @@ def compact_local_spacing_around_quote(lines: list[str], quote: Quote) -> tuple[
             quote_id=current_quote.quote_id,
         )
 
-    target_next_y = current_quote.y + quote_height(current_quote) + MIN_ROW_GAP
+    target_next_y = quote_following_text_y(current_quote)
     rows = [row for row in movable_rows_after_quote(lines, current_quote.idx) if row.page == current_quote.page]
     if not rows or rows[0].y - target_next_y <= 4.0:
         return lines, changed_rows
@@ -506,7 +614,7 @@ def downstream_row_problems(lines: list[str], quote: Quote) -> list[str]:
     problems: list[str] = []
     previous: Row | None = None
     for row in rows:
-        if row.page == quote.page and row.y < quote.y + quote_height(quote) + MIN_GAP_AFTER_QUOTE - 0.5:
+        if row.page == quote.page and row.y < quote_following_text_y(quote) - 0.5:
             problems.append(f"{quote.quote_id}: downstream content row at {row.y:.1f}bp is too close to quote")
         if previous and row.page == previous.page:
             required = max(MIN_ROW_GAP, previous.lead)
@@ -522,6 +630,7 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
     original = path.read_text(encoding="utf-8")
     lines = original.splitlines(keepends=True)
     lines, metadata_changes = normalize_quote_slot_metadata(lines)
+    lines, linebreak_changes = normalize_quote_linebreaks(lines)
     reflow_shifts: list[dict[str, Any]] = []
 
     # Iterate: a reflow changes downstream pages/y coordinates, so reparse.
@@ -533,7 +642,7 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
             next_span = next_movable_span_after(spans, quote.idx)
             if not next_span:
                 continue
-            gap = (PAGE_BOTTOM - (quote.y + quote_height(quote))) if next_span.page > quote.page else next_span.y - (quote.y + quote_height(quote))
+            gap = (PAGE_BOTTOM - quote_bottom_y(quote)) if next_span.page > quote.page else next_span.y - quote_bottom_y(quote)
             if next_span.page > quote.page and gap > MAX_ALLOWED_DEAD_SPACE:
                 lines, shift = reflow_after_quote(lines, quote, next_span)
                 if shift > 0:
@@ -616,6 +725,7 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
         "file": path.relative_to(REPO).as_posix(),
         "quotes": quote_reports,
         "metadata_blocks_added": metadata_changes,
+        "linebreaks_normalized": linebreak_changes,
         "reflow_shifts": reflow_shifts,
         "row_flow_repairs": row_flow_repairs,
         "local_spacing_repairs": local_spacing_repairs,
@@ -639,6 +749,7 @@ def main() -> int:
         "total_quotes": sum(len(item["quotes"]) for item in per_file),
         "changed_files": sum(1 for item in per_file if item["changed"]),
         "reflowed_quotes": sum(len(item["reflow_shifts"]) for item in per_file),
+        "linebreak_normalized_quotes": sum(item["linebreaks_normalized"] for item in per_file),
         "row_flow_repaired_quotes": sum(len(item["row_flow_repairs"]) for item in per_file),
         "local_spacing_repaired_quotes": sum(len(item["local_spacing_repairs"]) for item in per_file),
         "files": per_file,

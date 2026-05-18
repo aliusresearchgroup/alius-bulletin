@@ -29,7 +29,7 @@ Maintain an Overleaf-importable source archive where bulletin pieces and issue-l
 - Mandatory GitHub sync rule: after making any repo change, commit it and push the newest state to `origin/main` so Overleaf can sync it immediately.
 - Keep `AI-agents/formatting-context.md` current whenever formatting, compile-engine, layout, or visual-QA assumptions change.
 - Preserve hidden citation navigation: in-text author-year citations should use `\ALIUSCitationLink{...}{...}` only when they can resolve to a same-file `\ALIUSRefAnchor{...}` in the visible reference list.
-- Treat notable quotes as semantic Q&A-segment inserts. Do not hand-freeze a blank-producing quote position; run `python AI-agents/layout_notable_quotes.py` so generated coordinates keep the quote after its source answer material and before the next question without stranding large whitespace.
+- Treat notable quotes as semantic Q&A-segment inserts. Do not hand-freeze a blank-producing quote position; run `python AI-agents/layout_notable_quotes.py` so generated coordinates keep the quote after its source answer material and before the next question without stranding large whitespace, while using word-boundary line breaks, close quote-mark framing, and compact one-line vertical gaps.
 - Treat decorative pull quotes as framed text boxes: run `python AI-agents/standardize_pull_quote_blocks.py` after extraction/regeneration so opening and closing quote marks sit outside the centered quote body instead of becoming their own lines or landing between quote-body lines.
 
 ## LaTeX Workflow
