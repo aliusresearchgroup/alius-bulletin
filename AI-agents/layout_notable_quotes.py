@@ -5,8 +5,9 @@ draw a quote, but it cannot inspect the surrounding interview segment or repagin
 following absolute nodes. This script is the formatting rule layer:
 
 - notable quotes are treated as semantic Q&A-segment inserts;
-- they must appear after the question/answer material they amplify and before the
-  next question;
+- whenever this can be done without major reflow, they are placed immediately
+  after the segment question; otherwise they remain later in the same segment,
+  after the answer material they amplify and before the next question;
 - if a quote leaves a large dead band before a page footer while the segment
   continues on the next page, following content is pulled forward into the usable
   space;
@@ -39,6 +40,7 @@ HEADER_BOTTOM = 60.0
 QUOTE_VERTICAL_GAP = 8.0
 MIN_GAP_AFTER_QUOTE = QUOTE_VERTICAL_GAP
 MAX_ALLOWED_DEAD_SPACE = 95.0
+MAX_TOP_INSERT_SHIFT = 90.0
 PAGE_ROW_TOP = PAGE_TOP
 MIN_ROW_GAP = 16.5
 QUOTE_TARGET_CHARS_PER_LINE = 42
@@ -353,6 +355,120 @@ def replace_second_arg_y(line: str, y: float) -> str:
     return line
 
 
+def quote_block_bounds(lines: list[str], quote_idx: int) -> tuple[int, int]:
+    """Return the source block containing a semantic quote slot.
+
+    The block is moved as a unit when a quote can be safely promoted to the top
+    of its Q&A segment. Moving the source block keeps drawing order aligned with
+    visual order: question, notable quote, answer.
+    """
+
+    start = quote_idx
+    while start > 0 and lines[start].strip() != SLOT_BEGIN:
+        if lines[start].strip() == SLOT_END or start < quote_idx - 6:
+            start = quote_idx
+            break
+        start -= 1
+    end = quote_idx
+    while end + 1 < len(lines) and lines[end].strip() != SLOT_END:
+        if lines[end].strip() == SLOT_BEGIN and end > quote_idx:
+            end = quote_idx
+            break
+        end += 1
+    if end < quote_idx or lines[end].strip() != SLOT_END:
+        end = quote_idx
+    return start, end + 1
+
+
+def promote_quote_after_question(lines: list[str], quote: Quote) -> tuple[list[str], dict[str, Any] | None]:
+    """Prefer placing a notable quote immediately after its segment question.
+
+    This is intentionally conservative. It only promotes a quote when the answer
+    material for that segment can be shifted down on the same page without
+    crossing the footer or colliding with a same-page next question. If the page
+    would need substantial repagination, the quote stays in its later semantic
+    slot.
+    """
+
+    spans = parse_spans(lines)
+    previous_question = previous_question_before(spans, quote.idx)
+    if not previous_question:
+        return lines, None
+    next_question = next_question_after(spans, quote.idx)
+    boundary_idx = next_question.idx if next_question else len(lines)
+    segment_spans = [
+        span
+        for span in spans
+        if previous_question.idx < span.idx < boundary_idx and is_movable_content(span)
+    ]
+    if not segment_spans:
+        return lines, None
+    if any(span.page != previous_question.page for span in segment_spans):
+        return lines, None
+
+    first_span = min(segment_spans, key=lambda span: (span.y, span.idx))
+    preferred_y = previous_question.y + line_lead(lines, previous_question.idx) + QUOTE_VERTICAL_GAP
+    target_first_y = preferred_y + quote_height(quote) + QUOTE_VERTICAL_GAP
+    shift_down = max(0.0, target_first_y - first_span.y)
+    if shift_down > MAX_TOP_INSERT_SHIFT:
+        return lines, None
+
+    before_old_quote = [span for span in segment_spans if span.idx < quote.idx]
+    after_old_quote = [span for span in segment_spans if span.idx > quote.idx]
+    removed_old_slot = 0.0
+    if before_old_quote and after_old_quote:
+        previous_old = max(before_old_quote, key=lambda span: (span.y, span.idx))
+        next_old = min(after_old_quote, key=lambda span: (span.y, span.idx))
+        removed_old_slot = max(0.0, next_old.y - (previous_old.y + line_lead(lines, previous_old.idx)))
+    downstream_shift = shift_down - removed_old_slot
+
+    def span_shift(span: Span) -> float:
+        return shift_down if span.idx < quote.idx else downstream_shift
+
+    max_shifted_bottom = max(span.y + line_lead(lines, span.idx) + span_shift(span) for span in segment_spans)
+    min_shifted_y = min(span.y + span_shift(span) for span in segment_spans)
+    if min_shifted_y < target_first_y - 1.0:
+        return lines, None
+    if max_shifted_bottom > PAGE_BOTTOM:
+        return lines, None
+    if next_question and next_question.page == previous_question.page:
+        if max_shifted_bottom + QUOTE_VERTICAL_GAP > next_question.y:
+            return lines, None
+
+    block_start, block_end = quote_block_bounds(lines, quote.idx)
+    already_top = (
+        previous_question.idx < block_start < first_span.idx
+        and abs(quote.y - preferred_y) <= 1.0
+        and abs(first_span.y - target_first_y) <= 2.0
+    )
+    if already_top:
+        return lines, None
+
+    out = lines[:]
+    out[quote.idx] = replace_second_arg_y(out[quote.idx], preferred_y)
+    for span in segment_spans:
+        shift = span_shift(span)
+        if abs(shift) > 0.01:
+            out[span.idx] = replace_second_arg_y(out[span.idx], span.y + shift)
+
+    # Move the full metadata+macro block immediately after the question line.
+    block = out[block_start:block_end]
+    del out[block_start:block_end]
+    insert_at = previous_question.idx + 1
+    if block_start < insert_at:
+        insert_at -= block_end - block_start
+    out[insert_at:insert_at] = block
+    return out, {
+        "quote_id": quote.quote_id,
+        "page": quote.page,
+        "new_y": round(preferred_y, 3),
+        "answer_shift_bp": round(shift_down, 3),
+        "removed_old_slot_bp": round(removed_old_slot, 3),
+        "downstream_shift_bp": round(downstream_shift, 3),
+        "moved_source_block": block_start != insert_at,
+    }
+
+
 def line_is_movable_absolute(lines: list[str], idx: int, quote_idx: int) -> bool:
     span_match = SPAN_RE.match(lines[idx])
     if span_match:
@@ -632,6 +748,21 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
     lines, metadata_changes = normalize_quote_slot_metadata(lines)
     lines, linebreak_changes = normalize_quote_linebreaks(lines)
     reflow_shifts: list[dict[str, Any]] = []
+    top_slot_repairs: list[dict[str, Any]] = []
+
+    # Prefer the user-facing editorial rhythm: question, memorable quote, then
+    # answer text. Only do this when the segment can absorb the quote locally.
+    while True:
+        promoted_this_round = False
+        for quote in parse_quotes(lines):
+            lines_after, repair = promote_quote_after_question(lines, quote)
+            if repair:
+                lines = lines_after
+                top_slot_repairs.append(repair)
+                promoted_this_round = True
+                break
+        if not promoted_this_round:
+            break
 
     # Iterate: a reflow changes downstream pages/y coordinates, so reparse.
     while True:
@@ -726,6 +857,7 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
         "quotes": quote_reports,
         "metadata_blocks_added": metadata_changes,
         "linebreaks_normalized": linebreak_changes,
+        "top_slot_repairs": top_slot_repairs,
         "reflow_shifts": reflow_shifts,
         "row_flow_repairs": row_flow_repairs,
         "local_spacing_repairs": local_spacing_repairs,
@@ -749,6 +881,7 @@ def main() -> int:
         "total_quotes": sum(len(item["quotes"]) for item in per_file),
         "changed_files": sum(1 for item in per_file if item["changed"]),
         "reflowed_quotes": sum(len(item["reflow_shifts"]) for item in per_file),
+        "top_slot_quotes": sum(len(item["top_slot_repairs"]) for item in per_file),
         "linebreak_normalized_quotes": sum(item["linebreaks_normalized"] for item in per_file),
         "row_flow_repaired_quotes": sum(len(item["row_flow_repairs"]) for item in per_file),
         "local_spacing_repaired_quotes": sum(len(item["local_spacing_repairs"]) for item in per_file),
