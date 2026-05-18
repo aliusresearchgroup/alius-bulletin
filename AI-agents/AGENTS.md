@@ -31,6 +31,7 @@ Maintain an Overleaf-importable source archive where bulletin pieces and issue-l
 - Preserve hidden citation navigation: in-text author-year citations should use `\ALIUSCitationLink{...}{...}` only when they can resolve to a same-file `\ALIUSRefAnchor{...}` in the visible reference list.
 - Treat notable quotes as semantic Q&A-segment inserts. Do not hand-freeze a blank-producing quote position; run `python AI-agents/layout_notable_quotes.py` so generated coordinates keep the quote after its source answer material and before the next question without stranding large whitespace, while using word-boundary line breaks, close quote-mark framing, and compact one-line vertical gaps.
 - Treat decorative pull quotes as framed text boxes: run `python AI-agents/standardize_pull_quote_blocks.py` after extraction/regeneration so opening and closing quote marks sit outside the centered quote body instead of becoming their own lines or landing between quote-body lines.
+- Treat text encoding and inline style spacing as first-class layout integrity. After extraction/regeneration, run `python AI-agents/fix_text_encoding_and_inline_spacing.py` to repair UTF-8 mojibake such as `â€“`, `nÂ°`, and `RaphaÃ«l`, and to restore missing word spaces at style-boundaries such as `2016` + italic `PNAS` + `paper`.
 
 ## LaTeX Workflow
 
@@ -68,6 +69,7 @@ Generated PDFs should remain untracked.
 - Confirm changed interview folders still have editable `.tex` sources and matching `.bib` files when applicable.
 - Run `python AI-agents/layout_notable_quotes.py --check` after notable-quote edits.
 - Run `python AI-agents/standardize_pull_quote_blocks.py --check` after pull-quote or extraction repairs.
+- Run `python AI-agents/fix_text_encoding_and_inline_spacing.py --check` after text extraction, encoding, or inline font-style repairs.
 - Run `python AI-agents/link_in_text_citations.py --check` after citation/link edits.
 - Do not stop after a local commit. Push the completed change to `origin/main` before reporting done.
 - Summarize any visual QA limits honestly in the final note.
