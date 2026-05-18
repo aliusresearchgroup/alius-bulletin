@@ -4,8 +4,8 @@ Checks current TeX sources for two Overleaf-sensitive details:
 - oversized pull-quote placeholders must use TeX macros, never literal question marks;
 - every interview must display its own BibTeX DOI on page 1 as a green hyperlinked DOI URL;
 - every first-page citation panel must keep citation text top-left and the DOI
-  immediately inside the same citation block, without overlap with retained
-  native text spans.
+  appended inside the same citation paragraph in APA 7 style, without detached
+  DOI nodes or overlap with retained native text spans.
 - opening decorative pull quotes must sit on the first pull-quote text baseline,
   mirroring the lower-right closing quote instead of floating on a separate line.
 
@@ -90,6 +90,7 @@ def source_report() -> dict[str, Any]:
     missing_quote_macros: list[str] = []
     missing_hyperref: list[str] = []
     bad_doi_lines: list[str] = []
+    detached_doi_nodes: list[str] = []
     missing_citation_panels: list[str] = []
     bad_panel_geometry: list[str] = []
     bad_pull_quote_alignment: list[str] = []
@@ -157,11 +158,13 @@ def source_report() -> dict[str, Any]:
                         bad_panel_geometry.append(
                             f"{rel}: retained native text inside citation panel at ({x:.1f},{y:.1f}): {content[:60]}"
                         )
-            # DOI must be a single TeX line, green, hyperlinked, and placed as
-            # a north-west anchored line inside the citation block rather than
-            # as a detached bottom-right footer.
-            if expected_href in line and "text=ALIUSC1F8135" in line and "anchor=north west" in line:
+            # DOI must be a single TeX line, green, hyperlinked, and appended
+            # to the citation paragraph itself (APA 7), not detached as its
+            # own TikZ node or bottom/right footer.
+            if expected_href in line and r"\textcolor{ALIUSC1F8135}" in line and r"\mbox{" in line:
                 found_good_doi = True
+            if expected_href in line and r"\node[" in line and "text=ALIUSC1F8135" in line:
+                detached_doi_nodes.append(rel)
         if not found_good_doi:
             bad_doi_lines.append(rel)
 
@@ -175,6 +178,7 @@ def source_report() -> dict[str, Any]:
         "bad_panel_geometry": bad_panel_geometry,
         "bad_pull_quote_alignment": bad_pull_quote_alignment,
         "bad_or_missing_green_doi_hrefs": bad_doi_lines,
+        "detached_doi_nodes": sorted(set(detached_doi_nodes)),
         "source_ok": not (
             bad_large_questions
             or missing_quote_macros
@@ -183,6 +187,7 @@ def source_report() -> dict[str, Any]:
             or bad_panel_geometry
             or bad_pull_quote_alignment
             or bad_doi_lines
+            or detached_doi_nodes
         ),
     }
 

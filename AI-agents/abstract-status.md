@@ -2,17 +2,16 @@
 
 Last sweep: 2026-05-18
 
-All bulletin interview TeX files now contain either a rendered original abstract or a commented abstract metadata block. Commented draft abstracts remain non-rendered so the reconstructed PDFs stay faithful to the original article PDFs.
+All bulletin interview TeX files now contain either a rendered original abstract, a user-requested revised rendered abstract, or a commented abstract metadata block. Commented draft abstracts remain non-rendered by default so the reconstructed PDFs stay faithful to the original article PDFs unless the user explicitly asks for a revised rendered edition.
 
 ## Entries still needing abstract text
 
-- `Interviews/Issue01/Carhart-Harris_Fortier_Milliere/Carhart-Harris_Fortier_Milliere.tex` - commented TBA placeholder; placeholder is `[TBA]`.
 - `Interviews/Issue02/Metzinger_Limanowski_Milliere/Metzinger_Limanowski_Milliere.tex` - commented TBA placeholder; placeholder is `[TBA]`.
 - `Interviews/Issue02/Taves_Fortier_Canna/Taves_Fortier_Canna.tex` - commented TBA placeholder; placeholder is `[TBA]`.
 
 ## Full status
 
-- `Interviews/Issue01/Carhart-Harris_Fortier_Milliere/Carhart-Harris_Fortier_Milliere.tex` - commented TBA placeholder - needs text
+- `Interviews/Issue01/Carhart-Harris_Fortier_Milliere/Carhart-Harris_Fortier_Milliere.tex` - rendered revised abstract plus commented metadata
 - `Interviews/Issue01/Hohwy_Koroma/Hohwy_Koroma.tex` - commented draft
 - `Interviews/Issue01/Luhrmann_Fortier/Luhrmann_Fortier.tex` - commented draft
 - `Interviews/Issue01/McCarthy-Jones_Frerejouan/McCarthy-Jones_Frerejouan.tex` - commented draft

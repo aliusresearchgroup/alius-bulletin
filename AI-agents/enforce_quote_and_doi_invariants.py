@@ -1,11 +1,11 @@
 ﻿r"""Enforce ALIUS pull-quote and interview-DOI/citation layout invariants.
 
 Run after regenerating interview reconstructions from reference PDFs. It is idempotent:
-- standalone interview sources load hyperref because DOI lines use \href;
+- standalone interview sources load hyperref because DOI links use \href;
 - oversized decorative quote placeholders become robust TeX quote macros;
 - every interview gets a normalized first-page citation panel: citation text starts
-  top-left, and the DOI follows as a single unbroken green hyperlink line within
-  the same citation block.
+  top-left, and the DOI is appended inline as a single unbroken green hyperlink
+  in the same APA 7 citation paragraph.
 """
 
 from __future__ import annotations
@@ -256,18 +256,19 @@ def citation_text_from_spans(spans: list[dict[str, object]], citation: dict[str,
 def panel_lines(x: float, y: float, width: float, height: float, citation_text: str, doi: str) -> list[str]:
     url = f"https://doi.org/{doi}"
     citation_size = 9.2
-    doi_size = 8.6
     chars_per_line = max(28.0, width / 4.25)
-    estimated_lines = max(1, math.ceil(len(citation_text) / chars_per_line))
-    doi_y = y + min(height - 10.5, estimated_lines * 10.7 + 4.5)
+    estimated_lines = max(1, math.ceil((len(citation_text) + 1 + len(url)) / chars_per_line))
+    panel_height = max(34.0, min(height, estimated_lines * 10.7 + 5.0))
+    citation_with_doi = (
+        rf"{citation_text} "
+        rf"\mbox{{\textcolor{{ALIUSC1F8135}}{{\href{{{url}}}{{{url}}}}}}}"
+    )
     return [
         f"  {PANEL_BEGIN}",
         f"  {PANEL_TEXT_PREFIX}{citation_text}",
-        f"  \\fill[white] ({x - 1.5:.3f}bp,-{y - 2.0:.3f}bp) rectangle ++({width + 3.0:.3f}bp,-{height + 3.5:.3f}bp);",
+        f"  \\fill[white] ({x - 1.5:.3f}bp,-{y - 2.0:.3f}bp) rectangle ++({width + 3.0:.3f}bp,-{panel_height + 3.5:.3f}bp);",
         f"  \\node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at ({x:.3f}bp,-{y:.3f}bp) "
-        f"{{\\begin{{minipage}}{{{width:.3f}bp}}{{\\ALIUSFontLatoLight\\fontsize{{{citation_size:.3f}bp}}{{10.700bp}}\\selectfont\\raggedright {citation_text}\\par}}\\end{{minipage}}}};",
-        f"  \\node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC1F8135] at ({x:.3f}bp,-{doi_y:.3f}bp) "
-        f"{{{{\\ALIUSFontLatoLight\\fontsize{{{doi_size:.3f}bp}}{{{doi_size:.3f}bp}}\\selectfont\\href{{{url}}}{{{url}}}}}}};",
+        f"{{\\begin{{minipage}}{{{width:.3f}bp}}{{\\ALIUSFontLatoLight\\fontsize{{{citation_size:.3f}bp}}{{10.700bp}}\\selectfont\\raggedright {citation_with_doi}\\par}}\\end{{minipage}}}};",
         f"  {PANEL_END}",
     ]
 
