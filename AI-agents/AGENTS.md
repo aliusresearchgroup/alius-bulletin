@@ -26,7 +26,7 @@ Maintain an Overleaf-importable source archive where bulletin pieces and issue-l
 - Use paths that work when the whole repository is imported into Overleaf.
 - Keep folder names stable once published because Overleaf, issue files, and manifest paths depend on them.
 - Use ASCII in generated source files unless a source file already requires non-ASCII text.
-- After any completed repo change, commit and push the newest state to `origin/main` so Overleaf can sync it immediately.
+- Mandatory GitHub sync rule: after making any repo change, commit it and push the newest state to `origin/main` so Overleaf can sync it immediately.
 - Keep `AI-agents/formatting-context.md` current whenever formatting, compile-engine, layout, or visual-QA assumptions change.
 - Preserve hidden citation navigation: in-text author-year citations should use `\ALIUSCitationLink{...}{...}` only when they can resolve to a same-file `\ALIUSRefAnchor{...}` in the visible reference list.
 - Treat notable quotes as semantic Q&A-segment inserts. Do not hand-freeze a blank-producing quote position; run `python AI-agents/layout_notable_quotes.py` so generated coordinates keep the quote after its source answer material and before the next question without stranding large whitespace.
@@ -67,4 +67,5 @@ Generated PDFs should remain untracked.
 - Confirm changed interview folders still have editable `.tex` sources and matching `.bib` files when applicable.
 - Run `python AI-agents/layout_notable_quotes.py --check` after notable-quote edits.
 - Run `python AI-agents/link_in_text_citations.py --check` after citation/link edits.
+- Do not stop after a local commit. Push the completed change to `origin/main` before reporting done.
 - Summarize any visual QA limits honestly in the final note.
