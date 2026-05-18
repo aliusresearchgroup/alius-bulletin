@@ -12,3 +12,5 @@
 - [ ] `.aux`, `.log`, `.out`, `.toc`, generated PDFs, and scratch outputs are not staged.
 - [ ] Any visual QA references are external or clearly non-build-path resources.
 - [ ] Completed changes are committed and pushed to `origin/main` for Overleaf sync.
+- [ ] `AI-agents/enforce_quote_and_doi_invariants.py` has been run after regenerating interview sources.
+- [ ] `AI-agents/validate_quote_and_doi_rendering.py` passes: no oversized `?` pull quotes, and all 41 interview DOI lines are green `\href` links in the first-page citation block.

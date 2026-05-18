@@ -306,15 +306,16 @@ def repair_decorative_quote_marks(
     """Use typographic marks for oversized pull-quote glyphs.
 
     PyMuPDF extracts Word's decorative opening/closing quote glyphs as plain
-    ASCII double quotes. Render them as curly quotation marks while leaving
-    normal in-line quotes untouched.
+    ASCII double quotes or question marks, depending on the embedded font's
+    ToUnicode map. Emit robust TeX quote macros while leaving normal in-line
+    quotes untouched.
     """
 
     open_quote = True
     for spans, _rects, _images in pages:
         for span in spans:
-            if span.get("text") == '"' and float(span.get("size", 0.0)) >= 40.0:
-                span["text"] = "\u201c" if open_quote else "\u201d"
+            if span.get("text") in {'"', "?"} and float(span.get("size", 0.0)) >= 30.0:
+                span["text"] = "__ALIUS_PULLQUOTE_OPEN__" if open_quote else "__ALIUS_PULLQUOTE_CLOSE__"
                 open_quote = not open_quote
 
 
@@ -331,6 +332,7 @@ def preamble(width: float, height: float, colors: set[int]) -> list[str]:
         r"\usepackage{xcolor}",
         r"\usepackage{tikz}",
         r"\usepackage{iftex}",
+        r"\usepackage[hidelinks]{hyperref}",
         r"\ifPDFTeX",
         r"  \usepackage[T1]{fontenc}",
         r"  \usepackage[utf8]{inputenc}",
@@ -406,6 +408,8 @@ def preamble(width: float, height: float, colors: set[int]) -> list[str]:
         r"  \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}",
         r"  \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}",
         r"\fi",
+        r"\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}",
+        r"\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}",
     ]
     for c in sorted(colors):
         lines.append(rf"\definecolor{{{color_name(c)}}}{{HTML}}{{{color_hex(c)}}}")
@@ -556,7 +560,12 @@ def generate_tex_for_item(item: dict[str, Any]) -> str:
                 + rf"{{\includegraphics[width={image['w']:.3f}bp,height={image['h']:.3f}bp]{{{asset_rel}}}}};"
             )
         for span in spans:
-            text = tex_escape(span["text"])
+            if span["text"] == "__ALIUS_PULLQUOTE_OPEN__":
+                text = r"\ALIUSPullQuoteOpen"
+            elif span["text"] == "__ALIUS_PULLQUOTE_CLOSE__":
+                text = r"\ALIUSPullQuoteClose"
+            else:
+                text = tex_escape(span["text"])
             # Very small spans are usually extraction artefacts; retain page numbers
             # and punctuation by only suppressing genuinely invisible widths.
             if not text:

@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC0000FF}{HTML}{0000FF}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -100,12 +103,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -135,8 +136,8 @@
   \ALIUSPlacedTextContent{328.144}{226.202}{4.932}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{,}
   \ALIUSPlacedTextContent{340.788}{226.202}{5.846}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{4}
   \ALIUSPlacedTextContent{346.588}{226.202}{51.190}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{, 107-133}
+  \ALIUSPlacedTextContent{96.231}{238.096}{171.360}{ALIUSC1F8135}{\ALIUSFontLatoLight}{10.080}{\href{https://doi.org/10.34700/gza7-yy49}{https://doi.org/10.34700/gza7-yy49}}
   \ALIUSPlacedTextContent{408.711}{227.654}{89.245}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.040}{Carlota Serrahima}
-  \ALIUSPlacedTextContent{96.231}{238.202}{162.922}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/gza7-yy49}
   \ALIUSPlacedTextContent{408.711}{240.829}{134.507}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{carlota.serrahima@uantwerpen.be}
   \ALIUSPlacedTextContent{408.711}{251.629}{90.381}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{University of Antwerp,}
   \ALIUSPlacedTextContent{408.711}{262.429}{69.317}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Antwerp, Belgium}
@@ -181,7 +182,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -227,7 +227,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -270,17 +269,16 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.951}{36.329}{171.184}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Vignemont – Body Meet Self}
   \ALIUSPlacedTextContent{490.071}{36.329}{19.231}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{110}
-  \ALIUSPlacedTextContent{113.791}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{113.791}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{142.111}{87.307}{314.886}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The fact that the body may be at the origin of}
   \ALIUSPlacedTextContent{142.111}{105.307}{314.853}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{self-awareness does not entail that every single}
   \ALIUSPlacedTextContent{142.111}{123.307}{314.880}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{instance of self-awareness is constitutively}
-  \ALIUSPlacedTextContent{467.311}{127.719}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{467.311}{127.719}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{142.111}{141.307}{67.865}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{embodied.}
   \ALIUSPlacedTextContent{90.951}{182.133}{418.411}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{One of the main distinctive features of your approach is its substantive}
   \ALIUSPlacedTextContent{90.951}{199.413}{418.417}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{reliance on empirical data, both from experimental and clinical psychology.}
@@ -319,17 +317,16 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.951}{36.329}{171.184}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Vignemont – Body Meet Self}
   \ALIUSPlacedTextContent{491.991}{36.329}{17.201}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{111}
-  \ALIUSPlacedTextContent{109.711}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{109.711}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{138.031}{85.387}{314.860}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Experimental findings can be the starting point}
   \ALIUSPlacedTextContent{138.031}{103.387}{314.992}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{but they do not replace philosophical arguments.}
   \ALIUSPlacedTextContent{138.031}{121.387}{314.916}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Ideally, they should be the cherry on top, which}
-  \ALIUSPlacedTextContent{463.231}{129.159}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{463.231}{129.159}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{138.031}{139.387}{314.986}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{only empirically confirm what has been found}
   \ALIUSPlacedTextContent{90.951}{183.928}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{neuroscience is crucial. This discovery shows that we do not process our}
   \ALIUSPlacedTextContent{90.951}{203.609}{294.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{immediate surroundings in the same way as far space.}
@@ -364,7 +361,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -420,7 +416,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -481,7 +476,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -526,7 +520,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -578,7 +571,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -627,7 +619,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -676,7 +667,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -712,16 +702,15 @@
   \ALIUSPlacedTextContent{90.951}{608.489}{418.226}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{cognitive. It just shows that it can be cognitively penetrated, possibly through}
   \ALIUSPlacedTextContent{90.951}{627.928}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{imagination. Again, it is important to be vigilant about the significance of}
   \ALIUSPlacedTextContent{90.951}{647.609}{111.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{empirical results.}
-  \ALIUSPlacedTextContent{110.191}{684.999}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{110.191}{684.999}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{142.831}{705.307}{307.143}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{There is a strong parallel with the literature on}
-  \ALIUSPlacedTextContent{460.351}{722.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{460.351}{722.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{142.831}{723.307}{233.235}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{agency, we are just a few years late.}
   \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -787,7 +776,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 14
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -873,7 +861,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 15
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -922,7 +909,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 16
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -969,18 +955,17 @@
   \ALIUSPlacedTextContent{90.951}{613.529}{418.157}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{would not be able to experience her body as her own. This might be the case}
   \ALIUSPlacedTextContent{90.951}{630.568}{418.151}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{in depersonalization disorder, in which their sense of body disownership may}
   \ALIUSPlacedTextContent{90.951}{647.369}{210.831}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{result from a more general disruption.}
-  \ALIUSPlacedTextContent{109.231}{676.119}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{109.231}{676.119}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{140.911}{685.147}{313.994}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I do not pretend to offer an explanation of self-}
   \ALIUSPlacedTextContent{140.911}{703.147}{318.022}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{awareness in general. My objective is more}
   \ALIUSPlacedTextContent{140.911}{721.147}{314.234}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{modest: I only offer an account of bodily self-}
-  \ALIUSPlacedTextContent{469.231}{732.279}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{469.231}{732.279}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{140.911}{739.147}{71.682}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{awareness.}
   \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 17
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1027,7 +1012,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 18
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1078,7 +1062,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 19
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1118,19 +1101,18 @@
   \ALIUSPlacedTextContent{90.951}{577.048}{418.268}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{effort: "There is no commoner remark than this, that resistance to our}
   \ALIUSPlacedTextContent{90.951}{596.489}{418.140}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{muscular effort is the only sense which makes us aware of a reality}
   \ALIUSPlacedTextContent{90.951}{615.928}{418.293}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{independent from ourselves" (James, 1890). Only effortful touch presents us}
-  \ALIUSPlacedTextContent{113.791}{651.879}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{113.791}{651.879}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{138.751}{664.267}{318.039}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Only effortful touch presents us with the}
   \ALIUSPlacedTextContent{138.751}{682.267}{318.019}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{contrast between ourselves as striving agents}
   \ALIUSPlacedTextContent{138.751}{700.267}{318.023}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{and an independent causally empowered being}
   \ALIUSPlacedTextContent{138.751}{718.267}{318.016}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{that resists our effort. Tactile experiences thus}
-  \ALIUSPlacedTextContent{463.231}{730.359}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{463.231}{730.359}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{138.751}{736.267}{305.253}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{give us the boundary between body and world.}
   \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 20
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1178,7 +1160,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 21
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1238,7 +1219,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 22
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1287,7 +1267,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 23
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1332,7 +1311,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 24
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1428,7 +1406,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 25
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1521,7 +1498,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 26
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1607,7 +1583,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 27
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1675,7 +1650,6 @@
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

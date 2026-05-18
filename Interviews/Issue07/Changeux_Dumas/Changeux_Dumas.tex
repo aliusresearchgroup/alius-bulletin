@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1155CC}{HTML}{1155CC}
 \definecolor{ALIUSC1F1F1F}{HTML}{1F1F1F}
@@ -103,12 +106,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -150,6 +151,7 @@
   \ALIUSPlacedTextContent{214.510}{280.770}{53.843}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{Changeux.}
   \ALIUSPlacedTextContent{268.354}{280.770}{93.899}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{ALIUS Bulletin, XX,}
   \ALIUSPlacedTextContent{72.750}{297.150}{29.424}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{12.000}{XX-XX}
+  \ALIUSPlacedTextContent{72.750}{311.310}{198.900}{ALIUSC1F8135}{\ALIUSFontLatoLight}{10.200}{\href{https://doi.org/10.5281/zenodo.13907411}{https://doi.org/10.5281/zenodo.13907411}}
   \ALIUSPlacedTextContent{72.000}{350.100}{52.851}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.000}{Abstract}
   \ALIUSPlacedTextContent{72.000}{381.420}{10.080}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In}
   \ALIUSPlacedTextContent{88.896}{381.420}{18.780}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{this}
@@ -264,7 +266,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -440,7 +441,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -659,7 +659,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -884,7 +883,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1040,7 +1038,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1270,7 +1267,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1481,7 +1477,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1733,7 +1728,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1878,7 +1872,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2110,7 +2103,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2363,7 +2355,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2619,7 +2610,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2723,7 +2713,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 14
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2774,7 +2763,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 15
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2810,7 +2798,6 @@
   \ALIUSPlacedTextContent{420.906}{722.691}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

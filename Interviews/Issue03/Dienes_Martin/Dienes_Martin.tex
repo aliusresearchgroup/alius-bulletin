@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -100,12 +103,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -131,7 +132,7 @@
   \ALIUSPlacedTextContent{379.224}{261.767}{30.426}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Belgium}
   \ALIUSPlacedTextContent{83.016}{265.744}{32.871}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{Dienes.}
   \ALIUSPlacedTextContent{115.872}{265.744}{57.802}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{ALIUS Bulletin,}
-  \ALIUSPlacedTextContent{173.654}{265.744}{147.303}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{3, 27-35. doi: 10.34700/jpsp-3121}
+  \ALIUSPlacedTextContent{83.016}{277.303}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.796}{\href{https://doi.org/10.34700/jpsp-3121}{https://doi.org/10.34700/jpsp-3121}}
   \ALIUSPlacedTextContent{77.652}{310.836}{45.118}{ALIUSC000000}{\ALIUSFontLatoLight}{11.547}{Abstract}
   \ALIUSPlacedTextContent{77.652}{330.607}{442.780}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{In this interview, Zoltan Dienes (Brighton, UK), specialist in consciousness studies, answers}
   \ALIUSPlacedTextContent{77.652}{344.601}{442.774}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{questions related to hypnosis and meditation: Why are hypnosis and mindfulness}
@@ -164,7 +165,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -193,9 +193,9 @@
   \ALIUSPlacedTextContent{77.652}{356.440}{443.698}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{surely subscribe to the view that having higher order thoughts is an interesting form}
   \ALIUSPlacedTextContent{77.652}{372.999}{443.679}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of consciousness.  So I think hypnosis should play a more prominent role in}
   \ALIUSPlacedTextContent{77.652}{389.559}{238.167}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness science than it currently does!}
-  \ALIUSPlacedTextContent{134.561}{417.499}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{417.499}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{434.902}{309.127}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I think hypnosis should play a more prominent role}
-  \ALIUSPlacedTextContent{458.990}{451.784}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{458.990}{451.784}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{452.395}{296.503}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{in consciousness science than it currently does!}
   \ALIUSPlacedTextContent{77.652}{500.345}{443.688}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Just as hypnosis may essentially be a meta-cognitive phenomenon, so is mindfulness.}
   \ALIUSPlacedTextContent{77.652}{516.672}{443.648}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Mindfulness is a matter of having certain sorts of higher order states. One Pali sutta}
@@ -207,16 +207,15 @@
   \ALIUSPlacedTextContent{77.652}{615.563}{443.765}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{response in which one is (strategically) not mindful of the corresponding intention,}
   \ALIUSPlacedTextContent{77.652}{632.123}{443.634}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{as I discussed above. Thus, mindfulness also intrinsically relates to a major theory of}
   \ALIUSPlacedTextContent{77.652}{648.682}{233.228}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{consciousness, namely higher order theory.}
-  \ALIUSPlacedTextContent{134.561}{676.855}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{676.855}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{694.259}{265.059}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Just as hypnosis may essentially be a meta-}
-  \ALIUSPlacedTextContent{422.839}{710.907}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{422.839}{710.907}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{711.751}{259.398}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{cognitive phenomenon, so is mindfulness.}
   \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -249,10 +248,10 @@
   \ALIUSPlacedTextContent{77.652}{430.142}{443.785}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{on. The altered state often involves facilitating or inhibiting specific cognitive}
   \ALIUSPlacedTextContent{77.652}{446.701}{443.685}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{actions; maybe for example, being happy facilitates broad attentional focus, use of}
   \ALIUSPlacedTextContent{77.652}{463.261}{395.304}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{stereotypes and so on. So interesting altered states have causal properties.}
-  \ALIUSPlacedTextContent{134.561}{491.434}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{491.434}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{508.838}{274.760}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{The nature of any putative altered state in}
   \ALIUSPlacedTextContent{158.817}{526.330}{274.628}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{hypnosis or meditation is something we need}
-  \ALIUSPlacedTextContent{352.868}{542.979}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{352.868}{542.979}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{543.823}{190.076}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{to settle one way or the other.}
   \ALIUSPlacedTextContent{77.652}{587.575}{443.596}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Now, historically there have been two phenomena claimed to define hypnosis: First,}
   \ALIUSPlacedTextContent{77.652}{603.901}{443.671}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{there is the claim that there are hypnotic responses, namely suggested alterations in}
@@ -269,7 +268,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -321,7 +319,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -355,9 +352,9 @@
   \ALIUSPlacedTextContent{77.652}{443.669}{443.637}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{DLPFC is involved in a broad executive network and determining what}
   \ALIUSPlacedTextContent{77.652}{460.229}{443.679}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{psychological role it actually played in these comparisons (or in the rTMS studies)}
   \ALIUSPlacedTextContent{77.652}{476.789}{413.426}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{is far from straight forward.  By contrast, reading tea leaves is very easy to do.}
-  \ALIUSPlacedTextContent{134.561}{504.728}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{504.728}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{522.132}{274.828}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{The neural basis of metacognition should be}
-  \ALIUSPlacedTextContent{430.769}{538.781}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{430.769}{538.781}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{539.625}{267.481}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{involved in both hypnosis and mindfulness.}
   \ALIUSPlacedTextContent{77.652}{587.575}{443.679}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{An approach to getting a handle on neurocognitive mechanisms involved with}
   \ALIUSPlacedTextContent{77.652}{603.901}{443.612}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{hypnosis and meditation is to start with a general theory of neural mechanisms.}
@@ -376,7 +373,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -417,7 +413,7 @@
   \ALIUSPlacedTextContent{77.652}{595.038}{443.736}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and affective pain (e.g. Zeidan \& Grant, 2016).  The similar outcome may be}
   \ALIUSPlacedTextContent{77.652}{611.365}{443.683}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{produced by common or different mechanisms. A possible common mechanism is}
   \ALIUSPlacedTextContent{77.652}{627.924}{70.932}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{expectation.}
-  \ALIUSPlacedTextContent{134.561}{656.097}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{656.097}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{673.501}{267.880}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Both hypnosis and mindfulness can be used}
   \ALIUSPlacedTextContent{158.817}{690.994}{267.878}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{to deal with pain. Both are psychological}
   \ALIUSPlacedTextContent{158.817}{708.486}{267.952}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{therapies, involving regulation of attention}
@@ -427,7 +423,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -436,7 +431,7 @@
   \ALIUSPlacedTextContent{77.652}{46.516}{354.220}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Zoltan Dienes - The role of hypnosis and meditation in consciousness research}
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{33}
   \ALIUSPlacedTextContent{158.817}{81.086}{267.829}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{affect pain processing by the same}
-  \ALIUSPlacedTextContent{316.717}{97.501}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{316.717}{97.501}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{98.578}{153.707}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{underlying mechanisms.}
   \ALIUSPlacedTextContent{77.652}{142.331}{443.787}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{As postulated by Irving Kirsch, maybe hypnotic response is directly produced by a}
   \ALIUSPlacedTextContent{77.652}{158.890}{443.714}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{response expectancy, just as placebo analgesia is directly produced by the}
@@ -467,7 +462,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -515,7 +509,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -538,7 +531,6 @@
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

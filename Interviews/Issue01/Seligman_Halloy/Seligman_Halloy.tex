@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -102,17 +105,14 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 % --- Draft abstract retained as comments; not rendered in reconstruction. ---
 % \section*{Abstract}
 % This interview with Rebecca Seligman articulates a biocultural approach to dissociative consciousness, drawing on her ethnography of spirit possession in Afro-Brazilian Candombl\'e. Seligman begins by weighing the term "altered states of consciousness" against alternatives such as Gananath Obeyesekere's hypnomantic consciousness and Michele Stephen's autonomous imagination, arguing that the standard label implicitly normalizes a self-conscious, reflexive Euro-American awareness and that it is better carefully redefined as referring to non-reflexive states than abandoned. She then asks whether possession falls under the categories of altered states of consciousness or dissociation, contending that these framings risk eliding the ontological commitments and social relationships through which possession is constituted, and rejecting the dualism that treats culture as a post hoc interpretation of physiologically given trance. The conversation introduces her notion of looping, and more specifically bio-looping, to describe the recursive mutual influences among cultural meanings and practices, physiological states, and social roles. Further sections weigh the costs and benefits of bringing psychophysiological methods into ethnography, including the tension with participant observation and the technical demands of fieldwork, and consider how the technologies' increasing portability might allow tighter integration. The interview closes on the self-transformative and healing potential of possession in Candombl\'e, where mediumship simultaneously reshapes the social self, subjectivity, and embodied self of practitioners, with these dimensions linked through a looping process that moves participants from affliction to spiritual empowerment.\par
 % --- End draft abstract. ---
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -144,6 +144,7 @@
   \ALIUSPlacedTextContent{327.236}{254.836}{22.640}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{, 47-}
   \ALIUSPlacedTextContent{360.760}{261.995}{163.615}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{University of Nice Sophia Antipolis, France}
   \ALIUSPlacedTextContent{74.920}{269.236}{18.606}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{52.}
+  \ALIUSPlacedTextContent{74.920}{283.396}{173.400}{ALIUSC1F8135}{\ALIUSFontLatoLight}{10.200}{\href{https://doi.org/10.34700/x80s-k850}{https://doi.org/10.34700/x80s-k850}}
   \ALIUSPlacedTextContent{71.080}{320.287}{455.768}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{For many anthropologists today, the Western category 'altered states of}
   \ALIUSPlacedTextContent{71.080}{337.567}{455.788}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{consciousness' (ASC) is still haunted by the ghost of pathologization. Some of them have}
   \ALIUSPlacedTextContent{71.080}{354.847}{455.679}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{instead proposed the use of culture-specific concepts such as 'hyptomantic}
@@ -174,7 +175,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -229,7 +229,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -271,18 +270,17 @@
   \ALIUSPlacedTextContent{71.080}{621.258}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{put the ethnographer in the position of clinical data collector, as opposed to a}
   \ALIUSPlacedTextContent{71.080}{638.058}{456.594}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{participant observer. So I think that use of this kind of method is only really merited}
   \ALIUSPlacedTextContent{71.080}{655.098}{215.507}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{when the research questions call for it.}
-  \ALIUSPlacedTextContent{142.120}{670.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{142.120}{670.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{157.240}{686.873}{246.490}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Using psychophysiology measurement}
   \ALIUSPlacedTextContent{157.240}{704.873}{264.388}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{ultimately allowed me to make inferences}
   \ALIUSPlacedTextContent{157.240}{722.873}{284.009}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{about the bidirectional relationship between}
   \ALIUSPlacedTextContent{157.240}{740.393}{293.272}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{bodily states and social and cultural meanings.}
-  \ALIUSPlacedTextContent{451.720}{741.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{451.720}{741.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -321,12 +319,12 @@
   \ALIUSPlacedTextContent{71.080}{537.498}{456.482}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{experiencing via her body. These transformations are mutually dependent and}
   \ALIUSPlacedTextContent{71.080}{554.538}{456.428}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{inseparable, though for heuristic purposes we tend to carve things up into different}
   \ALIUSPlacedTextContent{71.080}{571.578}{223.964}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{domains (i.e. the social, the bodily, etc.).}
-  \ALIUSPlacedTextContent{126.760}{583.048}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{126.760}{583.048}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{146.680}{597.113}{281.911}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{These bodily, cognitive, and social aspects of}
   \ALIUSPlacedTextContent{146.680}{615.113}{250.550}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{self-transformation are linked together}
   \ALIUSPlacedTextContent{146.680}{633.113}{256.129}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{through a looping process, in which they}
   \ALIUSPlacedTextContent{146.680}{650.633}{284.632}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{continually shape and reinforce one another.}
-  \ALIUSPlacedTextContent{430.600}{653.608}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{430.600}{653.608}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{99.430}{687.258}{428.233}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{The case studies in my book show that what we think of as cognitive}
   \ALIUSPlacedTextContent{71.080}{704.298}{456.549}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{dimensions of self, as represented through self-narrative, are transformed through}
   \ALIUSPlacedTextContent{71.080}{721.098}{456.738}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{engagement with the cosmology of Candomblé. By taking on the ontological}
@@ -336,7 +334,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -366,7 +363,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -400,7 +396,6 @@
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

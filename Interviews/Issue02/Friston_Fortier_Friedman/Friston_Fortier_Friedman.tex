@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC0563C1}{HTML}{0563C1}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
@@ -102,17 +105,14 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 % --- Draft abstract retained as comments; not rendered in reconstruction. ---
 % \section*{Abstract}
 % This interview with Karl Friston presents a Bayesian account of cognition, life, and consciousness centred on the free energy principle. Friston recounts the origin of the principle in a childhood "Gerald Durrell" moment observing woodlice in the sun, later crystallized through Arthur Eddington's writings on space-time and developed mathematically through variational Bayes and ensemble density dynamics. He clarifies the relations among the Bayesian brain hypothesis, predictive coding, and the free energy principle by distinguishing principle from process theory, casting predictive coding as one of many ways to minimize variational free energy, and emphasizing the enactive, embodied, extended, embedded, and encultured aspect captured by active inference. The conversation maps these frameworks onto David Marr's three levels of analysis and proposes a six-level hierarchy of mind and brain running from peripheral reflexes through percepts, concepts, and narratives to self-awareness, with Markov blankets separating levels in ways consistent with Thomas Metzinger's self-modeling. Friston defends the view that all interesting states are low-entropy, recasting altered states through the resolution of uncertainty and the epistemic affordance of exploration. Further sections take up precision as the determinant of whether prediction errors are expressed phenomenologically, the "representation wars" between embodied and representationalist readings of the framework, and computational psychiatry, where Friston argues that process-based and precision-based models of psychosis collapse into a single story of false inference grounded in aberrant precision encoding. The interview closes on consciousness as a process of inference and self-evidencing, with self-awareness requiring counterfactual breadth and a generative model distinguishing self from other.\par
 % --- End draft abstract. ---
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -147,6 +147,7 @@
   \ALIUSPlacedTextContent{329.391}{281.448}{14.558}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{, 2,}
   \ALIUSPlacedTextContent{352.840}{289.355}{97.242}{ALIUSC000000}{\ALIUSFontLatoLight}{8.880}{Stanford University, USA}
   \ALIUSPlacedTextContent{69.400}{293.448}{30.398}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{17-43.}
+  \ALIUSPlacedTextContent{69.400}{305.059}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.840}{\href{https://doi.org/10.34700/h460-nz89}{https://doi.org/10.34700/h460-nz89}}
   \ALIUSPlacedTextContent{71.080}{353.728}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{You are well known for being the founder of the free energy principle, a wide-}
   \ALIUSPlacedTextContent{71.080}{369.328}{455.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{ranging theoretical framework aiming to unify the psychological, neural and}
   \ALIUSPlacedTextContent{71.080}{384.928}{455.754}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{biological nature of living beings (Friston, 2010, 2013; Ramstead, Badcock, \&}
@@ -182,7 +183,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -225,7 +225,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -384,7 +383,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -443,7 +441,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -510,7 +507,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -531,11 +527,11 @@
   \ALIUSPlacedTextContent{71.080}{218.538}{456.559}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{beliefs. However, the Bayesian brain is not the free energy principle, because both}
   \ALIUSPlacedTextContent{71.080}{235.578}{456.629}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the Bayesian brain hypothesis and predictive coding are incomplete theories of how}
   \ALIUSPlacedTextContent{71.080}{252.618}{135.723}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{we infer states of affairs.}
-  \ALIUSPlacedTextContent{116.920}{273.448}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{116.920}{273.448}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{134.680}{292.793}{346.317}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{It is this enactive, embodied, extended, embedded, and}
   \ALIUSPlacedTextContent{134.680}{310.793}{323.752}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{encultured aspect that is lacking from the Bayesian}
   \ALIUSPlacedTextContent{134.680}{328.793}{294.026}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{brain and predictive coding theories; precisely}
-  \ALIUSPlacedTextContent{446.920}{345.448}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{446.920}{345.448}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{134.680}{346.313}{308.872}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{because they do not consider entropy reduction.}
   \ALIUSPlacedTextContent{71.080}{397.338}{123.342}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This missing bit is the}
   \ALIUSPlacedTextContent{194.431}{397.338}{40.674}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{enactive}
@@ -570,7 +566,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -623,10 +618,10 @@
   \ALIUSPlacedTextContent{71.080}{577.338}{456.568}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Mumford, 1992; Shipp, 2016). I am continually impressed by how much this}
   \ALIUSPlacedTextContent{71.080}{594.378}{453.234}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{particular process theory explains; in terms of neuroanatomy and neurophysiology—}
   \ALIUSPlacedTextContent{71.080}{611.418}{211.448}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{at nearly any level you care to specify.}
-  \ALIUSPlacedTextContent{161.560}{640.888}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{161.560}{640.888}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{180.040}{658.073}{233.519}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I think the free energy principle ticks}
   \ALIUSPlacedTextContent{180.040}{675.593}{146.152}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{all David Marr's boxes.}
-  \ALIUSPlacedTextContent{329.800}{676.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{329.800}{676.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{727.098}{456.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{In short, I do "hold that these frameworks accurately describe how the brain and}
   \ALIUSPlacedTextContent{71.080}{744.138}{456.459}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{mind works" at all three levels. I have yet to see any empirical evidence that would}
   \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°2 (2018)}
@@ -634,7 +629,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -686,7 +680,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -740,7 +733,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -760,11 +752,11 @@
   \ALIUSPlacedTextContent{71.080}{218.538}{456.578}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{affordance; in other words, it resolves uncertainty (expected free energy). This}
   \ALIUSPlacedTextContent{71.080}{235.578}{456.668}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{simple argument generalizes to our inferences about (hidden or latent) states of the}
   \ALIUSPlacedTextContent{71.080}{252.618}{375.651}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{world—and the contingencies that underwrite those states of affairs.}
-  \ALIUSPlacedTextContent{86.680}{272.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{86.680}{272.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{104.440}{291.113}{402.238}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I do not think that 'different laws may apply at different levels'. I}
   \ALIUSPlacedTextContent{104.440}{309.113}{359.407}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{see a singular and simple explanation for all the apparent}
   \ALIUSPlacedTextContent{104.440}{327.113}{362.396}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{dialectics above: they are all explained by minimization of}
-  \ALIUSPlacedTextContent{458.920}{344.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{458.920}{344.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{104.440}{345.113}{353.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{expected free energy, expected surprise or uncertainty.}
   \ALIUSPlacedTextContent{71.080}{397.338}{456.544}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{This means that any opportunity to resolve uncertainty itself now becomes}
   \ALIUSPlacedTextContent{71.080}{414.138}{456.442}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{attractive (literally, in the mathematical sense of a random dynamical attractor)}
@@ -796,7 +788,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -851,7 +842,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -877,9 +867,9 @@
   \ALIUSPlacedTextContent{71.080}{337.338}{456.514}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{such that they can revise our beliefs and expectations about states of the world. The}
   \ALIUSPlacedTextContent{71.080}{354.138}{456.545}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{key role of precision will figure prominently below; particularly in relation to}
   \ALIUSPlacedTextContent{71.080}{371.178}{175.146}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychopathology and psychosis.}
-  \ALIUSPlacedTextContent{105.160}{389.848}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{105.160}{389.848}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{122.440}{405.593}{358.409}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{The degree to which a prediction error will be expressed}
-  \ALIUSPlacedTextContent{416.680}{416.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{416.680}{416.968}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{122.440}{423.353}{291.352}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{(and experienced) depends upon its precision.}
   \ALIUSPlacedTextContent{71.080}{472.048}{455.892}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{More broadly, this raises the question as to how the mind/brain should be parsed.}
   \ALIUSPlacedTextContent{71.080}{487.648}{455.725}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Psychologists have long considered that two levels were sufficient (e.g., Evans,}
@@ -903,7 +893,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -963,7 +952,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 14
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1023,7 +1011,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 15
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1076,7 +1063,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 16
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1097,12 +1083,12 @@
   \ALIUSPlacedTextContent{71.080}{252.618}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{position that in order for the Markov blanket to exist there must be states "out}
   \ALIUSPlacedTextContent{71.080}{269.418}{456.637}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{there". In other words, a radically skeptical free energy minimizing agent only exists}
   \ALIUSPlacedTextContent{71.080}{286.458}{414.584}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{in virtue of a mathematical construct that appeals to philosophical realism.}
-  \ALIUSPlacedTextContent{110.920}{316.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{110.920}{316.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{128.440}{333.353}{275.159}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I am quite happy to bat for both sides in the}
   \ALIUSPlacedTextContent{128.440}{351.353}{281.982}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{'representation wars'. I find these wars most}
   \ALIUSPlacedTextContent{128.440}{369.353}{344.700}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{interesting—in terms of the personalities involved, but}
   \ALIUSPlacedTextContent{128.440}{386.873}{241.672}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{also from a mathematical perspective.}
-  \ALIUSPlacedTextContent{374.680}{388.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{374.680}{388.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{431.178}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{My favorite way of eluding this dialectic is to either treat the Markov blanket as}
   \ALIUSPlacedTextContent{71.080}{448.218}{456.557}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{something that you hide under to preserve a skeptical position (Hohwy, 2016).}
   \ALIUSPlacedTextContent{71.080}{465.018}{456.437}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Alternatively, the Markov blanket can be regarded as an existential interface that}
@@ -1128,7 +1114,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 17
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1188,7 +1173,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 18
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1205,14 +1189,14 @@
   \ALIUSPlacedTextContent{71.080}{184.698}{456.506}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{can never make an inference. I think this little metaphor is useful because it speaks}
   \ALIUSPlacedTextContent{71.080}{201.738}{456.582}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{to false inference as the common denominator behind all current theories of}
   \ALIUSPlacedTextContent{71.080}{218.538}{217.342}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychopathology and pathophysiology.}
-  \ALIUSPlacedTextContent{102.280}{248.728}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{102.280}{248.728}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{120.520}{260.873}{201.782}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{There is no distinction between}
   \ALIUSPlacedTextContent{322.360}{260.873}{44.618}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{process}
   \ALIUSPlacedTextContent{367.000}{260.873}{71.979}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{-based and}
   \ALIUSPlacedTextContent{120.520}{278.873}{53.241}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{precision}
   \ALIUSPlacedTextContent{173.800}{278.873}{319.630}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{-based models of psychopathology. […] you cannot}
   \ALIUSPlacedTextContent{120.520}{296.873}{327.827}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{break any sentient or inferential machinery without}
-  \ALIUSPlacedTextContent{462.520}{311.848}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{462.520}{311.848}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{120.520}{314.393}{340.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{breaking both process and precision-based inference.}
   \ALIUSPlacedTextContent{71.080}{363.498}{456.434}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{False inference here means exactly what it sounds like; namely, type I and type II}
   \ALIUSPlacedTextContent{71.080}{380.298}{456.685}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{errors associated with false positives and false negatives. These provide a compelling}
@@ -1242,7 +1226,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 19
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1297,7 +1280,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 20
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1351,7 +1333,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 21
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1386,7 +1367,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 22
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1482,7 +1462,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 23
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1578,7 +1557,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 24
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1672,7 +1650,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 25
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1761,7 +1738,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 26
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1849,7 +1825,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 27
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1869,7 +1844,6 @@
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

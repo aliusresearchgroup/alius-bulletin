@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1155CC}{HTML}{1155CC}
 \definecolor{ALIUSC1A73E8}{HTML}{1A73E8}
@@ -101,12 +104,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -127,8 +128,7 @@
   \ALIUSPlacedTextContent{154.974}{215.628}{4.913}{ALIUSC000000}{\ALIUSFontLatoLight}{10.006}{,}
   \ALIUSPlacedTextContent{159.882}{215.628}{7.860}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.006}{6}
   \ALIUSPlacedTextContent{165.220}{215.628}{4.913}{ALIUSC000000}{\ALIUSFontLatoLight}{10.006}{,}
-  \ALIUSPlacedTextContent{170.128}{215.628}{5.503}{ALIUSC1155CC}{\ALIUSFontLatoLight}{10.006}{h}
-  \ALIUSPlacedTextContent{175.566}{215.628}{175.078}{ALIUSC1155CC}{\ALIUSFontLatoLight}{10.006}{ttps://doi.org/10.5281/zenodo.7457656}
+  \ALIUSPlacedTextContent{90.076}{227.435}{190.114}{ALIUSC1F8135}{\ALIUSFontLatoLight}{10.006}{\href{https://doi.org/10.5281/zenodo.7457656}{https://doi.org/10.5281/zenodo.7457656}}
   \ALIUSPlacedTextContent{90.076}{275.983}{55.628}{ALIUSC000000}{\ALIUSFontLatoRegular}{14.007}{Abstract}
   \ALIUSPlacedTextContent{90.076}{307.324}{364.583}{ALIUSC000000}{\ALIUSFontLatoLight}{12.010}{In  this  episode,  Steven  Jillings  reviews  the  recent  progress  on  the  scien}
   \ALIUSPlacedTextContent{454.581}{307.324}{19.132}{ALIUSC000000}{\ALIUSFontLatoLight}{12.010}{tific}
@@ -166,7 +166,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -252,7 +251,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -328,7 +326,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -414,7 +411,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -500,7 +496,6 @@
   \ALIUSPlacedTextContent{385.859}{792.995}{120.329}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.010}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

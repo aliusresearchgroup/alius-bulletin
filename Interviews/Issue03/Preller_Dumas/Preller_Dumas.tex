@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -100,12 +103,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -129,7 +130,7 @@
   \ALIUSPlacedTextContent{87.448}{256.881}{290.331}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{probing the diversity of cognition beyond individuals. An interview with}
   \ALIUSPlacedTextContent{87.448}{268.543}{59.740}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{Katrin Preller.}
   \ALIUSPlacedTextContent{147.179}{268.543}{55.904}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{ALIUS Bulletin}
-  \ALIUSPlacedTextContent{203.042}{268.543}{149.154}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{, 3, 37-44. doi: 10.34700/88st-vc41}
+  \ALIUSPlacedTextContent{87.448}{280.102}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.796}{\href{https://doi.org/10.34700/88st-vc41}{https://doi.org/10.34700/88st-vc41}}
   \ALIUSPlacedTextContent{77.652}{330.428}{45.118}{ALIUSC000000}{\ALIUSFontLatoLight}{11.547}{Abstract}
   \ALIUSPlacedTextContent{77.652}{350.199}{442.784}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{In this interview, we discuss how beyond the tremendous therapeutic opportunities}
   \ALIUSPlacedTextContent{77.652}{364.193}{442.774}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{offered by psychedelics, they also provide a unique opportunity to investigate social}
@@ -161,7 +162,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -217,7 +217,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -227,12 +226,12 @@
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{39}
   \ALIUSPlacedTextContent{77.652}{81.223}{443.719}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{example, long-term effects on social perception and, importantly, behavior have not}
   \ALIUSPlacedTextContent{77.652}{97.783}{120.659}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{been investigated yet.}
-  \ALIUSPlacedTextContent{134.561}{125.723}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{125.723}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{143.126}{254.133}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{To my knowledge, there are no studies}
   \ALIUSPlacedTextContent{158.817}{160.619}{253.985}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{currently going on that scientifically}
   \ALIUSPlacedTextContent{158.817}{178.111}{254.027}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{investigate the most effective way to}
   \ALIUSPlacedTextContent{158.817}{195.604}{254.076}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{treat people before, during, and after the}
-  \ALIUSPlacedTextContent{291.994}{211.786}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{291.994}{211.786}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{213.097}{126.113}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{psychedelic session.}
   \ALIUSPlacedTextContent{77.652}{257.144}{350.248}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{How can we better operationalize translational efforts in psychiatry?}
   \ALIUSPlacedTextContent{77.652}{283.204}{443.597}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{The challenges for psychedelic science are mostly similar to other basic science}
@@ -267,7 +266,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -279,12 +277,12 @@
   \ALIUSPlacedTextContent{77.652}{97.550}{443.682}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{We should intensify our efforts into studying the interplay of non-pharmacological}
   \ALIUSPlacedTextContent{77.652}{114.109}{443.649}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and pharmacological aspects of psychedelic-assisted therapy to increase the clinical}
   \ALIUSPlacedTextContent{77.652}{130.669}{166.127}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{potential of these compounds.}
-  \ALIUSPlacedTextContent{134.561}{158.842}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{158.842}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{176.245}{274.802}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{We should intensify our efforts into studying}
   \ALIUSPlacedTextContent{158.817}{193.738}{274.710}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{the interplay of non-pharmacological and}
   \ALIUSPlacedTextContent{158.817}{211.231}{271.910}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{pharmacological aspects of psychedelic-}
   \ALIUSPlacedTextContent{158.817}{228.723}{274.694}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{assisted therapy to increase the clinical}
-  \ALIUSPlacedTextContent{353.568}{245.838}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{353.568}{245.838}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{246.216}{188.211}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{potential of these compounds.}
   \ALIUSPlacedTextContent{77.652}{290.030}{442.982}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Both social neuroscience and psychedelic research are facing methodological}
   \ALIUSPlacedTextContent{77.652}{304.491}{442.841}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{challenges, from data mining and quantified self to laboratory setting, how can we}
@@ -320,7 +318,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -357,10 +354,10 @@
   \ALIUSPlacedTextContent{77.652}{493.348}{443.671}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{this. I am sure that when we collect more samples, analyze them rigorously,}
   \ALIUSPlacedTextContent{77.652}{509.908}{443.708}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{communicate about and evolve our methodological approaches, we'll at one point}
   \ALIUSPlacedTextContent{77.652}{526.468}{392.828}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{be able to integrate the findings into a coherent, complementary picture.}
-  \ALIUSPlacedTextContent{134.561}{554.640}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{554.640}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{572.044}{281.597}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{On a topic as complex as consciousness and}
   \ALIUSPlacedTextContent{158.817}{589.537}{281.623}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{psychedelics, we are all currently just adding}
-  \ALIUSPlacedTextContent{338.641}{606.185}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{338.641}{606.185}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{607.029}{173.626}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{puzzle pieces to the picture.}
   \ALIUSPlacedTextContent{77.652}{650.844}{442.759}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Which theoretical frameworks are you the most following on the topic of}
   \ALIUSPlacedTextContent{77.652}{665.538}{80.741}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{consciousness?}
@@ -371,7 +368,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -422,7 +418,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -430,17 +425,16 @@
   \fill[ALIUSC767171] (76.253bp,-777.332bp) rectangle ++(443.378bp,-0.466bp);
   \ALIUSPlacedTextContent{77.652}{46.516}{188.385}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Katrin Preller - Psychedelics and Sociality}
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{43}
-  \ALIUSPlacedTextContent{134.561}{81.175}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{81.175}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{98.578}{329.651}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{As in every discipline, we need to train people who are}
   \ALIUSPlacedTextContent{158.817}{116.071}{329.801}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{entering the field as junior researchers to become}
-  \ALIUSPlacedTextContent{448.495}{132.253}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{448.495}{132.253}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{133.564}{285.563}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{good and responsible scientists and clinicians.}
   \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -482,7 +476,6 @@
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

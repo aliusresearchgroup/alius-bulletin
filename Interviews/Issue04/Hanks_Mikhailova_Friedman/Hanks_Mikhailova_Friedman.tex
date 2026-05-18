@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC0000FF}{HTML}{0000FF}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -100,12 +103,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -139,9 +140,9 @@
   \ALIUSPlacedTextContent{290.974}{263.402}{7.937}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.080}{4,}
   \ALIUSPlacedTextContent{332.851}{263.402}{29.107}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{68-80,}
   \ALIUSPlacedTextContent{372.711}{266.029}{99.247}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.120}{dafriedman@ucdavis.edu}
-  \ALIUSPlacedTextContent{88.791}{275.402}{165.906}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/8pg4-0h12}
   \ALIUSPlacedTextContent{372.711}{276.829}{111.643}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Department of Entomology}
   \ALIUSPlacedTextContent{372.711}{287.629}{137.613}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{\& Nematology, UC Davis, CA, USA}
+  \ALIUSPlacedTextContent{88.791}{299.523}{171.360}{ALIUSC1F8135}{\ALIUSFontLatoLight}{10.080}{\href{https://doi.org/10.34700/8pg4-0h12}{https://doi.org/10.34700/8pg4-0h12}}
   \ALIUSPlacedTextContent{90.951}{328.732}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
   \ALIUSPlacedTextContent{90.951}{357.267}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In this interview, Professor Tim Hanks discusses topics related to neuroscience,}
   \ALIUSPlacedTextContent{90.951}{371.667}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{decision making, philosophy, and science as a career. Hanks explores how ideas}
@@ -171,16 +172,15 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
   \ALIUSPlacedTextContent{492.951}{36.329}{16.277}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{69}
-  \ALIUSPlacedTextContent{107.791}{83.799}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{107.791}{83.799}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{135.151}{91.867}{322.809}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The most helpful decision-making advice I have}
   \ALIUSPlacedTextContent{135.151}{109.867}{322.791}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{applied in my life and career is to consider every}
-  \ALIUSPlacedTextContent{466.591}{122.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{466.591}{122.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{135.151}{127.867}{171.083}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{choice in a Bayesian sense}
   \ALIUSPlacedTextContent{90.951}{179.609}{418.274}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{provided the final push in the direction of neuroscience was the belief that}
   \ALIUSPlacedTextContent{90.951}{199.049}{418.270}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{these questions were ripe for finding answers. For decision making in}
@@ -217,7 +217,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -252,7 +251,7 @@
   \ALIUSPlacedTextContent{90.951}{590.489}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{higher bound would require more evidence for decision commitment and a}
   \ALIUSPlacedTextContent{90.951}{609.928}{418.192}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{lower bound would require less evidence. In other words, a person could}
   \ALIUSPlacedTextContent{90.951}{629.609}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{respond differently to the same evidence depending on the level of the}
-  \ALIUSPlacedTextContent{117.151}{662.679}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{117.151}{662.679}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{149.071}{673.147}{301.717}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Perhaps in following this roadmap, we will find}
   \ALIUSPlacedTextContent{149.071}{691.147}{52.583}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{aspects}
   \ALIUSPlacedTextContent{214.099}{691.147}{17.542}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of}
@@ -262,14 +261,13 @@
   \ALIUSPlacedTextContent{417.832}{691.147}{32.907}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{defy}
   \ALIUSPlacedTextContent{149.071}{709.147}{301.650}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{explanation based on our current scientific}
   \ALIUSPlacedTextContent{149.071}{727.147}{301.777}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{understanding, or that are better explained}
-  \ALIUSPlacedTextContent{466.831}{738.039}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{466.831}{738.039}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{149.071}{745.147}{297.737}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{through new scientific conceptual frameworks}
   \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -314,16 +312,15 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
   \ALIUSPlacedTextContent{494.391}{36.329}{14.891}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{72}
-  \ALIUSPlacedTextContent{109.711}{77.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{109.711}{77.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{137.311}{87.547}{322.773}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{As we pursue this scientific path, I think it is}
   \ALIUSPlacedTextContent{137.311}{105.547}{322.727}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{important to keep in mind that consciousness is}
-  \ALIUSPlacedTextContent{470.911}{113.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{470.911}{113.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{137.311}{123.547}{119.989}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{not a singular type}
   \ALIUSPlacedTextContent{90.951}{175.413}{418.363}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Your work on the speed vs. accuracy trade-off in the brains of macaques was}
   \ALIUSPlacedTextContent{90.951}{192.693}{418.461}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{testing the hypothesis that fast decisions require a lower threshold of}
@@ -360,13 +357,12 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
   \ALIUSPlacedTextContent{494.391}{36.329}{14.709}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{73}
-  \ALIUSPlacedTextContent{117.151}{77.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{117.151}{77.319}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{145.471}{88.747}{306.659}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Even if you only care about the computational}
   \ALIUSPlacedTextContent{145.471}{106.747}{306.464}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{type of understanding or only care about the}
   \ALIUSPlacedTextContent{145.471}{124.747}{104.643}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{implementation}
@@ -374,7 +370,7 @@
   \ALIUSPlacedTextContent{317.536}{124.747}{17.545}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of}
   \ALIUSPlacedTextContent{352.094}{124.747}{99.888}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{understanding,}
   \ALIUSPlacedTextContent{145.471}{142.747}{306.567}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{studying both will probably help you more}
-  \ALIUSPlacedTextContent{462.271}{155.559}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{462.271}{155.559}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{145.471}{160.747}{225.730}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{effectively understand either alone}
   \ALIUSPlacedTextContent{90.951}{209.848}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{associated with cognitive control, perhaps the most prominent being with}
   \ALIUSPlacedTextContent{90.951}{229.288}{418.341}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{selective attention (Squire et al., 2013). In that case, attention to a particular}
@@ -409,7 +405,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -455,7 +450,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -501,7 +495,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -545,17 +538,16 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
   \ALIUSPlacedTextContent{90.951}{36.329}{321.512}{ALIUSC767171}{\ALIUSFontCormorantRegular}{13.920}{Timothy Hanks – The Neuroscience of Decision Making}
   \ALIUSPlacedTextContent{493.911}{36.329}{15.269}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{77}
-  \ALIUSPlacedTextContent{98.191}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{98.191}{76.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{133.951}{89.947}{322.721}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{Attentional allocation can be viewed as a decision}
   \ALIUSPlacedTextContent{133.951}{107.947}{322.875}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{process, and a reduced bound that would explain}
   \ALIUSPlacedTextContent{133.951}{125.947}{322.742}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{impulsivity would also explain lower thresholds}
-  \ALIUSPlacedTextContent{469.951}{140.679}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{469.951}{140.679}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{133.951}{143.947}{193.377}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{for changing attentional focus}
   \ALIUSPlacedTextContent{90.951}{193.049}{418.296}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{We have also been collaborating with Dr. Johannes Hell to study neural}
   \ALIUSPlacedTextContent{90.951}{212.488}{418.154}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{mechanisms of attentional control that might be affected in ADHD. One of}
@@ -591,7 +583,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -640,7 +631,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -723,7 +713,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -786,7 +775,6 @@
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

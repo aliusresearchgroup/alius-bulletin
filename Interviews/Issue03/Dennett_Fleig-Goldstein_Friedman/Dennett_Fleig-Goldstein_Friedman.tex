@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -101,12 +104,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -135,8 +136,8 @@
   \ALIUSPlacedTextContent{310.263}{270.408}{56.599}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{ALIUS Bulletin}
   \ALIUSPlacedTextContent{366.809}{270.408}{3.810}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{,}
   \ALIUSPlacedTextContent{379.224}{272.495}{88.135}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Department of Biology}
-  \ALIUSPlacedTextContent{83.016}{282.070}{149.422}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{3, 11-25. doi: 10.34700/7gkw-zh08}
   \ALIUSPlacedTextContent{379.224}{282.991}{108.112}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Stanford University, CA, USA}
+  \ALIUSPlacedTextContent{83.016}{294.550}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.796}{\href{https://doi.org/10.34700/7gkw-zh08}{https://doi.org/10.34700/7gkw-zh08}}
   \ALIUSPlacedTextContent{77.652}{327.184}{48.871}{ALIUSC000000}{\ALIUSFontLatoLight}{12.471}{Abstract}
   \ALIUSPlacedTextContent{77.652}{346.234}{442.784}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{Throughout his long career, Professor Daniel Dennett has been notable for bringing}
   \ALIUSPlacedTextContent{77.652}{360.228}{442.773}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{together the ideas of academic philosophy, workbench scientists, artificial intelligence}
@@ -175,7 +176,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -225,7 +225,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -278,7 +277,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -314,12 +312,12 @@
   \ALIUSPlacedTextContent{77.652}{516.672}{443.686}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{ambitious) geologists. But philosophers should be better positioned than most}
   \ALIUSPlacedTextContent{77.652}{533.231}{443.626}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{others to provide such perspectives because they claim to specialize in thinking the}
   \ALIUSPlacedTextContent{77.652}{549.791}{429.155}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{unthinkable, expanding the imagination, critiquing the hidden assumptions, etc.}
-  \ALIUSPlacedTextContent{134.561}{577.731}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{577.731}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{595.134}{247.144}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Anybody can, in principle, tell scientists}
   \ALIUSPlacedTextContent{158.817}{612.627}{247.134}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{how to do better science. Scientists are}
   \ALIUSPlacedTextContent{158.817}{630.119}{247.089}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{just as vulnerable to illusion, sloppy}
   \ALIUSPlacedTextContent{158.817}{647.612}{247.158}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{thinking, unrecognized presuppositions}
-  \ALIUSPlacedTextContent{260.741}{663.328}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{260.741}{663.328}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{665.105}{94.627}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{as anyone else.}
   \ALIUSPlacedTextContent{77.652}{708.919}{442.895}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Recently Carhart-Harris and Friston (Carhart-Harris \& Friston, 2010) integrated}
   \ALIUSPlacedTextContent{77.652}{723.613}{442.867}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{psychiatry with predictive processing and neuroscience to argue that "Freudian}
@@ -329,7 +327,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -382,7 +379,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -434,7 +430,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -495,7 +490,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -543,18 +537,17 @@
   \ALIUSPlacedTextContent{77.652}{590.374}{443.694}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{alcohol, caffeine, nicotine and cannabis (which has little effect on me, so I don't}
   \ALIUSPlacedTextContent{77.652}{606.933}{443.698}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{bother with it), I have avoided the mind-changing options. No LSD, no psilocybin}
   \ALIUSPlacedTextContent{77.652}{623.493}{429.793}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{or mescaline, though I've often been offered them, and none of the "hard" drugs.}
-  \ALIUSPlacedTextContent{134.561}{651.433}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{651.433}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{668.836}{274.618}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{It's risky to subject your brain and body to}
   \ALIUSPlacedTextContent{158.817}{686.329}{274.690}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{unusual substances and stimuli, but any new}
   \ALIUSPlacedTextContent{158.817}{703.821}{274.697}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{challenge may prove very enlightening—and}
-  \ALIUSPlacedTextContent{295.260}{721.170}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{295.260}{721.170}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{721.314}{133.380}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{possibly therapeutic.}
   \ALIUSPlacedTextContent{77.652}{783.303}{117.883}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{ALIUS Bulletin n°3 (2019)}
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -568,8 +561,8 @@
   \ALIUSPlacedTextContent{77.652}{130.669}{443.710}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{for a philosopher to seriously confuse an interlocutor or reader—to the point of}
   \ALIUSPlacedTextContent{77.652}{146.995}{443.559}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{mental illness or suicide, or other destructive behavior. Ideas can be just as}
   \ALIUSPlacedTextContent{77.652}{163.555}{106.156}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{dangerous as drugs.}
-  \ALIUSPlacedTextContent{134.561}{191.728}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
-  \ALIUSPlacedTextContent{411.177}{207.588}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{191.728}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
+  \ALIUSPlacedTextContent{411.177}{207.588}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{209.132}{248.689}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Ideas can be just as dangerous as drugs.}
   \ALIUSPlacedTextContent{77.652}{248.282}{442.933}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Since psychedelics were made illegal in 1966, much of psychedelic research has been}
   \ALIUSPlacedTextContent{77.652}{262.742}{442.870}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{carried out by "underground" scientists and psychonauts. While there has been}
@@ -607,7 +600,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -619,7 +611,7 @@
   \ALIUSPlacedTextContent{77.652}{97.550}{443.630}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{all; they should be regarded as intellectual vandals. The power to do tremendous}
   \ALIUSPlacedTextContent{77.652}{114.109}{443.628}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{harm to society, to life itself, is growing, and it will be very hard to keep}
   \ALIUSPlacedTextContent{77.652}{130.669}{440.351}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{irresponsible adventurers from launching projects that have terrible consequences.}
-  \ALIUSPlacedTextContent{134.561}{158.842}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{158.842}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{176.245}{281.596}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I think that the policies that have been}
   \ALIUSPlacedTextContent{158.817}{193.738}{281.618}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{hammered out in academia for doing ethically}
   \ALIUSPlacedTextContent{158.817}{211.231}{281.594}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{defensible research, while not perfect, should}
@@ -632,7 +624,7 @@
   \ALIUSPlacedTextContent{384.996}{263.708}{23.801}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{not}
   \ALIUSPlacedTextContent{422.147}{263.708}{18.238}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{be}
   \ALIUSPlacedTextContent{158.817}{281.201}{281.607}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{romanticized or honored at all; they should be}
-  \ALIUSPlacedTextContent{365.696}{297.150}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{365.696}{297.150}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{298.693}{202.656}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{regarded as intellectual vandals.}
   \ALIUSPlacedTextContent{77.652}{342.508}{442.630}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{You have said that we should teach children about religion, and in fact all of the world's}
   \ALIUSPlacedTextContent{77.652}{356.969}{442.975}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{religions, as a way to vaccinate them against absolutist beliefs held by their elders}
@@ -664,7 +656,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -679,13 +670,13 @@
   \ALIUSPlacedTextContent{77.652}{114.109}{443.695}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{entitlement, unable to summon the self-control required to negotiate the complex}
   \ALIUSPlacedTextContent{77.652}{130.669}{443.650}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{social world of adulthood without constantly falling into conflict with their fellow}
   \ALIUSPlacedTextContent{77.652}{147.229}{149.312}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{citizens and with authority.}
-  \ALIUSPlacedTextContent{134.561}{175.168}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{175.168}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{192.572}{288.593}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{The natural, genetically endorsed tendency of}
   \ALIUSPlacedTextContent{158.817}{210.064}{288.462}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{all of us to love and protect our children has}
   \ALIUSPlacedTextContent{158.817}{227.557}{288.520}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{been wisely—if largely unwittingly—exploited}
   \ALIUSPlacedTextContent{158.817}{245.050}{288.499}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{by the processes that have generated our}
   \ALIUSPlacedTextContent{158.817}{262.542}{288.576}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{moral policies and their supporting intuitions.}
-  \ALIUSPlacedTextContent{419.574}{278.724}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{419.574}{278.724}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{280.035}{257.283}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{In short we try not to "spoil" our children.}
   \ALIUSPlacedTextContent{77.652}{324.020}{443.697}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Negotiating these opposing pitfalls is a delicate task, especially in light of the fact}
   \ALIUSPlacedTextContent{77.652}{340.347}{443.650}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that every move we make is public, discussable, criticizable, likely to "telegraph our}
@@ -717,7 +708,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -751,7 +741,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -796,7 +785,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 14
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -848,7 +836,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 15
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -863,7 +850,6 @@
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

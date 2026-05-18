@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -100,12 +103,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -131,7 +132,7 @@
   \ALIUSPlacedTextContent{87.448}{248.484}{59.681}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{ALIUS Bulletin,}
   \ALIUSPlacedTextContent{147.105}{248.484}{23.980}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{3, 1-9}
   \ALIUSPlacedTextContent{171.040}{248.484}{3.810}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{.}
-  \ALIUSPlacedTextContent{174.835}{248.484}{108.358}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{doi: 10.34700/jwm7-9t64}
+  \ALIUSPlacedTextContent{87.448}{260.043}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.796}{\href{https://doi.org/10.34700/jwm7-9t64}{https://doi.org/10.34700/jwm7-9t64}}
   \ALIUSPlacedTextContent{385.521}{253.873}{93.000}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.662}{Matthieu Koroma}
   \ALIUSPlacedTextContent{385.521}{267.831}{111.929}{ALIUSC1F8135}{\ALIUSFontLatoLight}{8.863}{mkoroma@ens-paris-saclay.fr}
   \ALIUSPlacedTextContent{385.521}{278.326}{99.230}{ALIUSC000000}{\ALIUSFontLatoLight}{8.863}{Ecole Normale Supérieure}
@@ -170,7 +171,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -188,11 +188,11 @@
   \ALIUSPlacedTextContent{77.652}{208.103}{443.672}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{hand and conscious experience on the other but I have my doubts. I'm sure that there}
   \ALIUSPlacedTextContent{77.652}{224.662}{443.583}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{is much about consciousness that we will succeed in understanding, but I suspect}
   \ALIUSPlacedTextContent{77.652}{241.222}{238.356}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{that a residue of mystery will always remain.}
-  \ALIUSPlacedTextContent{141.170}{269.395}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{141.170}{269.395}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{165.348}{286.799}{240.519}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I'm sure that there is much about}
   \ALIUSPlacedTextContent{165.348}{304.291}{240.519}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{consciousness that we will succeed in}
   \ALIUSPlacedTextContent{165.348}{321.784}{240.588}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{understanding, but I suspect that a}
-  \ALIUSPlacedTextContent{406.512}{338.665}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{406.512}{338.665}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{165.348}{339.276}{235.272}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{residue of mystery will always remain.}
   \ALIUSPlacedTextContent{77.652}{383.091}{442.868}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{In "Modes of Consciousness" (Bayne and Hohwy, 2016), modes of consciousness are}
   \ALIUSPlacedTextContent{77.652}{397.552}{442.893}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{defined as global states of consciousness which are mutually exclusive. In previous}
@@ -221,7 +221,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -280,7 +279,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -323,11 +321,11 @@
   \ALIUSPlacedTextContent{119.867}{564.788}{13.528}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{¾}
   \ALIUSPlacedTextContent{77.652}{565.884}{42.253}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{you will}
   \ALIUSPlacedTextContent{133.542}{565.884}{374.571}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{as tools for homing in on the mechanisms that underlie consciousness.}
-  \ALIUSPlacedTextContent{141.170}{593.824}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{141.170}{593.824}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{165.348}{611.227}{240.621}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{The natural kind approach doesn't}
   \ALIUSPlacedTextContent{165.348}{628.720}{240.568}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{start with alleged self-evident truths,}
   \ALIUSPlacedTextContent{165.348}{646.213}{240.531}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{but instead begins with defeasible}
-  \ALIUSPlacedTextContent{347.504}{662.861}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{347.504}{662.861}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{165.348}{663.705}{177.366}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{claims about consciousness.}
   \ALIUSPlacedTextContent{77.652}{707.457}{443.688}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{When it comes to the natural kind approach theory-building and empirical}
   \ALIUSPlacedTextContent{77.652}{724.017}{443.664}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{investigation go hand-in-hand: we need theory for hypotheses formation and we}
@@ -336,7 +334,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -389,7 +386,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -441,7 +437,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -470,13 +465,13 @@
   \ALIUSPlacedTextContent{77.652}{313.991}{443.720}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of principled difficulty for its scientific study. There are important treatments of}
   \ALIUSPlacedTextContent{77.652}{330.551}{440.496}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{these issues within both philosophy and the sciences, and it's a shame that all-too-}
   \ALIUSPlacedTextContent{77.652}{347.110}{264.573}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{often they are limited by disciplinary boundaries.}
-  \ALIUSPlacedTextContent{141.170}{375.283}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{141.170}{375.283}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{165.348}{392.687}{268.085}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I'm not sure that the scientific study of}
   \ALIUSPlacedTextContent{165.348}{410.180}{268.079}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{consciousness is likely to be enhanced by}
   \ALIUSPlacedTextContent{165.348}{427.672}{268.189}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{engaging with philosophical reflection on}
   \ALIUSPlacedTextContent{165.348}{445.165}{268.058}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{the nature of the hard problem or mental}
   \ALIUSPlacedTextContent{165.348}{462.657}{268.070}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{causation, but there are a number of other}
-  \ALIUSPlacedTextContent{421.906}{479.306}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{421.906}{479.306}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{165.348}{480.150}{249.806}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{topics on which dialogue really is crucial.}
   \ALIUSPlacedTextContent{77.652}{523.964}{442.838}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{Different strategies in consciousness science can be distinguished according to the role}
   \ALIUSPlacedTextContent{77.652}{538.425}{442.986}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{they give to phenomenology in their research program. Integrated Information Theory}
@@ -505,7 +500,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -549,7 +543,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -593,7 +586,6 @@
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

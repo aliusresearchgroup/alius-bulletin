@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1155CC}{HTML}{1155CC}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -99,12 +102,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -146,7 +147,7 @@
   \ALIUSPlacedTextContent{361.319}{279.460}{1.980}{ALIUSC000000}{\ALIUSFontLatoLight}{10.000}{,}
   \ALIUSPlacedTextContent{369.723}{279.460}{5.800}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{10.000}{6}
   \ALIUSPlacedTextContent{375.520}{279.460}{1.980}{ALIUSC000000}{\ALIUSFontLatoLight}{10.000}{,}
-  \ALIUSPlacedTextContent{90.000}{291.460}{177.707}{ALIUSC1155CC}{\ALIUSFontLatoLight}{10.000}{https://doi.org/10.5281/zenodo.7394901}
+  \ALIUSPlacedTextContent{90.000}{291.260}{190.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{10.000}{\href{https://doi.org/10.5281/zenodo.7394901}{https://doi.org/10.5281/zenodo.7394901}}
   \ALIUSPlacedTextContent{393.000}{300.160}{79.224}{ALIUSC000000}{\ALIUSFontLatoRegular}{11.000}{Daniel Friedman}
   \ALIUSPlacedTextContent{393.000}{315.334}{113.306}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.000}{danielarifriedman@gmail.com}
   \ALIUSPlacedTextContent{393.000}{326.560}{104.716}{ALIUSC000000}{\ALIUSFontLatoLight}{9.000}{Department of Entomology}
@@ -266,7 +267,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -495,7 +495,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -711,7 +710,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -893,7 +891,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1164,7 +1161,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1335,7 +1331,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1539,7 +1534,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1724,7 +1718,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1798,7 +1791,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1868,7 +1860,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1889,7 +1880,6 @@
   \ALIUSPlacedTextContent{385.704}{792.318}{117.696}{ALIUSC1155CC}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

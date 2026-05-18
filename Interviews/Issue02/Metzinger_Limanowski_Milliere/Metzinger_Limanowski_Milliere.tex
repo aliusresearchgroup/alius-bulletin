@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC0563C1}{HTML}{0563C1}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
@@ -102,18 +105,14 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 % --- Draft abstract retained as comments; not rendered in reconstruction. ---
 % \section*{Abstract}
 % [TBA]\par
 % --- End draft abstract. ---
-
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -150,6 +149,7 @@
   \ALIUSPlacedTextContent{74.920}{332.568}{146.516}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{interview with Thomas Metzinger.}
   \ALIUSPlacedTextContent{221.467}{332.568}{57.395}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.840}{ALIUS Bulletin}
   \ALIUSPlacedTextContent{278.951}{332.568}{40.041}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{, 2, 53-73}
+  \ALIUSPlacedTextContent{74.920}{344.179}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.840}{\href{https://doi.org/10.34700/epgh-at59}{https://doi.org/10.34700/epgh-at59}}
   \ALIUSPlacedTextContent{71.080}{406.048}{217.575}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Hello Thomas. Are you a self right now?}
   \ALIUSPlacedTextContent{71.080}{433.578}{385.592}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Hello Raphaël and Jakub! Hmmm…. If I really was "a" self, how would I}
   \ALIUSPlacedTextContent{456.316}{433.578}{26.548}{ALIUSC1A1718}{\ALIUSFontCormorantItalic}{13.920}{know}
@@ -189,7 +189,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -212,9 +211,9 @@
   \ALIUSPlacedTextContent{71.080}{240.618}{456.689}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{of armchair phenomenology or old-school analytical philosophy of mind to}
   \ALIUSPlacedTextContent{71.080}{257.418}{456.543}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{empirically-informed, interdisciplinary philosophy of cognitive science, then what}
   \ALIUSPlacedTextContent{71.080}{274.458}{356.948}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{would you think the results over the last three decades would be?}
-  \ALIUSPlacedTextContent{170.440}{300.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{170.440}{300.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{188.680}{318.953}{202.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Philosophers should design and}
-  \ALIUSPlacedTextContent{392.440}{336.568}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{392.440}{336.568}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{188.680}{336.953}{203.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{propose their own experiments.}
   \ALIUSPlacedTextContent{71.080}{390.138}{456.576}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{A frequent epistemological fallacy consists in ascribing epistemic status to}
   \ALIUSPlacedTextContent{71.080}{407.178}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{phenomenal states because of the phenomenal signature of knowing. Jennifer Windt}
@@ -248,7 +247,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -308,7 +306,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -375,7 +372,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -464,7 +460,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -486,10 +481,10 @@
   \ALIUSPlacedTextContent{71.080}{189.738}{456.528}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about 1PP-indeterminability and indeterminacy blindness, then I think this is a}
   \ALIUSPlacedTextContent{71.080}{206.538}{456.509}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{philosophically interesting feature of human self-consciousness that might warrant}
   \ALIUSPlacedTextContent{71.080}{223.578}{96.286}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{further research.}
-  \ALIUSPlacedTextContent{86.440}{238.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{86.440}{238.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{104.440}{257.033}{388.747}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I think we must reject introspective authority: we can assume}
   \ALIUSPlacedTextContent{104.440}{275.033}{368.879}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{that there is a determinate phenomenal fact of the matter,}
-  \ALIUSPlacedTextContent{464.440}{292.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{464.440}{292.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{104.440}{292.793}{356.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{but at this point in time we do not (scientifically) know it.}
   \ALIUSPlacedTextContent{71.080}{339.568}{455.790}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{A key concept in your Self-Model Theory of Subjectivity (SMT) is the notion of}
   \ALIUSPlacedTextContent{71.080}{355.168}{136.456}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.960}{phenomenal transparency}
@@ -524,7 +519,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -589,7 +583,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -652,7 +645,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -720,7 +712,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -774,7 +765,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -787,12 +777,12 @@
   \ALIUSPlacedTextContent{71.080}{104.778}{453.274}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{should work hard at an evidence-based theory of suffering that is as hardware-}
   \ALIUSPlacedTextContent{71.080}{121.818}{456.566}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{independent as possible. We need such a theory, else in the mid-term we will be}
   \ALIUSPlacedTextContent{71.080}{138.858}{352.215}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{unable to move forward with AI in an ethically responsible way.}
-  \ALIUSPlacedTextContent{134.440}{158.488}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{134.440}{158.488}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{152.440}{176.633}{273.291}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Recklessly creating artificial consciousness}
   \ALIUSPlacedTextContent{152.440}{194.633}{160.606}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{would carry a high risk of}
   \ALIUSPlacedTextContent{313.000}{194.633}{60.088}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{increasing}
   \ALIUSPlacedTextContent{373.000}{194.633}{27.125}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the}
-  \ALIUSPlacedTextContent{428.440}{210.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{428.440}{210.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{152.440}{212.633}{273.352}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{overall amount of suffering in the universe.}
   \ALIUSPlacedTextContent{71.080}{254.538}{456.536}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{But if you look at what "The First Postbiotic Philosopher" already said in 2009, we}
   \ALIUSPlacedTextContent{71.080}{271.578}{126.914}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{could also introduce a}
@@ -843,7 +833,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -911,7 +900,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -981,7 +969,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 14
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1046,7 +1033,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 15
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1108,7 +1094,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 16
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1140,10 +1125,10 @@
   \ALIUSPlacedTextContent{71.080}{407.178}{456.436}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{on the level of self-consciousness, then it obviously is quite a dramatic affair, because,}
   \ALIUSPlacedTextContent{71.080}{424.218}{456.465}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{if you will, it leads to a Husserlian "bracketing" of the certainty of one's very own}
   \ALIUSPlacedTextContent{71.080}{441.018}{55.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{existence.}
-  \ALIUSPlacedTextContent{92.440}{462.328}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{92.440}{462.328}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{110.440}{481.193}{337.720}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Psychedelics states hold the potential to simply make}
   \ALIUSPlacedTextContent{110.440}{499.193}{381.746}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{normal people very concretely and directly aware of the fact}
-  \ALIUSPlacedTextContent{476.440}{516.568}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{476.440}{516.568}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{110.440}{516.953}{53.523}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{that it is}
   \ALIUSPlacedTextContent{163.960}{516.953}{47.039}{ALIUSC595959}{\ALIUSFontLatoLightItalic}{14.880}{literally}
   \ALIUSPlacedTextContent{211.240}{516.953}{265.912}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{true that conscious experience is a model.}
@@ -1165,7 +1150,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 17
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1199,10 +1183,10 @@
   \ALIUSPlacedTextContent{71.080}{465.978}{456.534}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{originally selfless, and is transformed into first-person experience by continuously}
   \ALIUSPlacedTextContent{71.080}{483.018}{456.423}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{creating false memories of the type you describe, via ultrafast forms of "illusionary}
   \ALIUSPlacedTextContent{71.080}{499.818}{106.100}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{memory retrieval"?}
-  \ALIUSPlacedTextContent{134.920}{517.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{134.920}{517.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{152.680}{535.433}{270.215}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{As a philosopher, I am very skeptical about}
   \ALIUSPlacedTextContent{152.680}{553.433}{262.071}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{all this loose talk concerning 'first-person}
-  \ALIUSPlacedTextContent{359.080}{571.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{359.080}{571.288}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{152.680}{571.433}{206.392}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{methods' and 'first-person data'.}
   \ALIUSPlacedTextContent{71.080}{614.369}{455.735}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{You have argued that "first-person data do not exist" (Metzinger 2003, p. 591),}
   \ALIUSPlacedTextContent{71.080}{629.969}{455.795}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{because there is no scientific procedure to settle introspective disagreements.}
@@ -1219,7 +1203,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 18
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1259,7 +1242,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 19
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1361,7 +1343,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 20
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1456,7 +1437,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 21
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1526,7 +1506,6 @@
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

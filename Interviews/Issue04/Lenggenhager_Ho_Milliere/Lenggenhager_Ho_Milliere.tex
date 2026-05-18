@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC0000FF}{HTML}{0000FF}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -100,12 +103,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -144,7 +145,7 @@
   \ALIUSPlacedTextContent{305.692}{308.282}{37.631}{ALIUSC000000}{\ALIUSFontLatoLight}{10.080}{82-105,}
   \ALIUSPlacedTextContent{351.591}{309.469}{81.432}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{University of Zürich,}
   \ALIUSPlacedTextContent{351.591}{320.269}{74.072}{ALIUSC000000}{\ALIUSFontLatoLight}{9.120}{Zürich, Switzerland}
-  \ALIUSPlacedTextContent{96.231}{320.282}{164.082}{ALIUSC0000FF}{\ALIUSFontLatoRegular}{10.080}{https://doi.org/10.34700/2vez-qq65}
+  \ALIUSPlacedTextContent{96.231}{332.163}{171.360}{ALIUSC1F8135}{\ALIUSFontLatoLight}{10.080}{\href{https://doi.org/10.34700/2vez-qq65}{https://doi.org/10.34700/2vez-qq65}}
   \ALIUSPlacedTextContent{90.951}{389.452}{55.719}{ALIUSC000000}{\ALIUSFontLatoRegular}{13.920}{Abstract}
   \ALIUSPlacedTextContent{90.951}{417.987}{418.270}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{In this interview, Bigna Lenggenhager discusses her groundbreaking empirical}
   \ALIUSPlacedTextContent{90.951}{432.387}{418.272}{ALIUSC000000}{\ALIUSFontLatoLight}{12.000}{work on bodily self-consciousness, bodily disorders and bodily illusions. The}
@@ -169,7 +170,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -212,7 +212,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -255,7 +254,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -292,18 +290,17 @@
   \ALIUSPlacedTextContent{90.951}{616.648}{418.275}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{to the full body. Even if their setup was slightly different – with a full body}
   \ALIUSPlacedTextContent{90.951}{636.328}{418.291}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{illusion from the first-person perspective – the results clearly show that the}
   \ALIUSPlacedTextContent{90.951}{655.768}{331.102}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{sense of ownership spread to the non-stimulated body parts.}
-  \ALIUSPlacedTextContent{108.991}{682.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{108.991}{682.599}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{137.071}{693.307}{314.880}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{We not only altered the perception of a single}
   \ALIUSPlacedTextContent{137.071}{711.307}{314.870}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{body part, as during the rubber hand illusion, but}
   \ALIUSPlacedTextContent{137.071}{729.307}{314.886}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{even the perception of the whole body and self}
-  \ALIUSPlacedTextContent{462.271}{733.719}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{462.271}{733.719}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{137.071}{747.307}{105.051}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{can be changed.}
   \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -356,7 +353,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -402,7 +398,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -449,7 +444,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -494,7 +488,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -542,7 +535,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -590,7 +582,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -638,7 +629,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -687,7 +677,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -724,9 +713,9 @@
   \ALIUSPlacedTextContent{90.951}{497.608}{418.313}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{altered body perception. After all, even if you wanted to call it perspectival}
   \ALIUSPlacedTextContent{90.951}{517.049}{418.171}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness, a visual or auditory perspective is only experienced the way}
   \ALIUSPlacedTextContent{90.951}{536.489}{418.246}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{we experience it, due to the way our body is physically shaped.}
-  \ALIUSPlacedTextContent{119.311}{566.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{119.311}{566.919}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{147.631}{580.027}{314.874}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{I would still see the lack of the body as a variation}
-  \ALIUSPlacedTextContent{472.591}{588.999}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{472.591}{588.999}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{147.631}{598.027}{192.414}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{of an altered body perception}
   \ALIUSPlacedTextContent{90.951}{629.973}{418.426}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{One can certainly argue that persons with surgical or congenital amputations}
   \ALIUSPlacedTextContent{90.951}{647.253}{418.488}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{retain a sense of bodily self-consciousness, despite the lack or loss of their}
@@ -741,7 +730,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 14
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -788,7 +776,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 15
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -813,12 +800,12 @@
   \ALIUSPlacedTextContent{90.951}{385.048}{418.257}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{using such tools to let people perceive how plastic the sense of the body}
   \ALIUSPlacedTextContent{90.951}{404.488}{418.338}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{actually is. This could also be applied in a more educative way by showing}
   \ALIUSPlacedTextContent{90.951}{423.928}{421.533}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{people that the sense of their own body might not be as rigid as they believe.}
-  \ALIUSPlacedTextContent{108.511}{454.839}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{108.511}{454.839}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{141.151}{464.107}{314.927}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{While a constant sense of detachment from the}
   \ALIUSPlacedTextContent{141.151}{482.107}{314.913}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{body might not be beneficial, I think that there is}
   \ALIUSPlacedTextContent{141.151}{500.107}{314.889}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{a lot of therapeutic potential in using such tools}
   \ALIUSPlacedTextContent{141.151}{518.107}{314.911}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{to let people perceive how plastic the sense of}
-  \ALIUSPlacedTextContent{471.631}{528.039}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{471.631}{528.039}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{141.151}{536.107}{124.744}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{the body actually is}
   \ALIUSPlacedTextContent{90.951}{577.893}{418.426}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{Virtual reality has undergone a transition from an expensive and arduous}
   \ALIUSPlacedTextContent{90.951}{595.173}{418.285}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.357}{device to a functional technology that is increasingly employed both in}
@@ -836,7 +823,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 16
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -882,7 +868,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 17
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -930,7 +915,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 18
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -962,18 +946,17 @@
   \ALIUSPlacedTextContent{90.951}{546.328}{418.283}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{aspects of our body and self in much more flexible ways (e.g., using facial}
   \ALIUSPlacedTextContent{90.951}{565.768}{414.974}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{filters, self-chosen avatars or holograms) might change our notion of self-}
   \ALIUSPlacedTextContent{90.951}{585.208}{259.731}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{consciousness and reveal new ethical questions.}
-  \ALIUSPlacedTextContent{114.271}{631.959}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{114.271}{631.959}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{145.951}{640.987}{314.234}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{The fact that we interact more and more in quasi-}
   \ALIUSPlacedTextContent{145.951}{658.987}{318.061}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{disembodied states through various digital media}
   \ALIUSPlacedTextContent{145.951}{676.987}{317.996}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{might shape the way we perceive ourselves and}
-  \ALIUSPlacedTextContent{474.271}{688.359}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{474.271}{688.359}{14.160}{ALIUSC595959}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{145.951}{694.987}{44.825}{ALIUSC000000}{\ALIUSFontLatoLight}{15.120}{others.}
   \ALIUSPlacedTextContent{90.951}{793.143}{122.397}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{ALIUS Bulletin n°4 (2020)}
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 19
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1054,7 +1037,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 20
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1151,7 +1133,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 21
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1231,7 +1212,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 22
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1323,7 +1303,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 23
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1403,7 +1382,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 24
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1456,7 +1434,6 @@
   \ALIUSPlacedTextContent{387.435}{793.143}{120.728}{ALIUSC767171}{\ALIUSFontCormorantLight}{12.000}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

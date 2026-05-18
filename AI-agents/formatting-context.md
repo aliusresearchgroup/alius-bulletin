@@ -32,3 +32,11 @@ This file records the current formatting and build assumptions for the ALIUS Bul
 ## Operational rule
 
 When work is done, push the newest committed state to `origin/main` so the user can sync Overleaf immediately. Keep the remote branch set minimal unless the user asks for PR-style branching.
+
+## Pull-quote and DOI display invariants
+
+- Oversized decorative pull quotes must never be literal `?` glyphs. They now render through `\ALIUSPullQuoteOpen` / `\ALIUSPullQuoteClose`, defined as TeX quote commands rather than Unicode/font-subset glyphs. This keeps both LuaLaTeX and pdfLaTeX/Overleaf fallbacks from substituting question marks.
+- Every interview source must load `hyperref` in standalone mode, because the visible citation DOI is a live `\href`.
+- Every interview's own DOI from its colocated `.bib` file must appear on page 1 in the citation block as a green (`ALIUSC1F8135`) linked URL: `\href{https://doi.org/<doi>}{https://doi.org/<doi>}`.
+- The Nichols & Nichols Issue 4 citation DOI display intentionally uses the resolving BibTeX DOI `10.34700/a5hm-fs14`, replacing the obsolete/non-resolving original-visible `10.34700/s66k-9j57` in the citation block because the current user request explicitly asked for valid interview DOI links.
+- After regenerating interview TeX files, run `python AI-agents/enforce_quote_and_doi_invariants.py`, then `python AI-agents/validate_quote_and_doi_rendering.py`. When issue PDFs are compiled, add `--compiled-dir <build-dir>` to verify live PDF link annotations.

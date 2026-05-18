@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
@@ -105,12 +108,10 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -137,7 +138,7 @@
   \ALIUSPlacedTextContent{83.016}{263.878}{287.612}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{conscious states across cultures. An interview with Michael}
   \ALIUSPlacedTextContent{83.016}{275.540}{50.738}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{Winkelman.}
   \ALIUSPlacedTextContent{133.739}{275.540}{55.904}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.796}{ALIUS Bulletin}
-  \ALIUSPlacedTextContent{189.602}{275.540}{149.436}{ALIUSC000000}{\ALIUSFontLatoLight}{9.796}{, 3, 45-97. doi: 10.34700/krg3-zk35}
+  \ALIUSPlacedTextContent{83.016}{287.099}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.796}{\href{https://doi.org/10.34700/krg3-zk35}{https://doi.org/10.34700/krg3-zk35}}
   \ALIUSPlacedTextContent{77.652}{320.632}{45.118}{ALIUSC000000}{\ALIUSFontLatoLight}{11.547}{Abstract}
   \ALIUSPlacedTextContent{77.652}{340.403}{442.772}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{In this interview, Michael Winkelman and Martin Fortier discuss the extent to which}
   \ALIUSPlacedTextContent{77.652}{354.397}{442.778}{ALIUSC000000}{\ALIUSFontLatoLight}{11.662}{consciousness is grounded in deep evolutionary mechanisms and can be enculturated.}
@@ -171,7 +172,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -228,7 +228,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -281,7 +280,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -318,9 +316,9 @@
   \ALIUSPlacedTextContent{77.652}{543.027}{443.659}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{innate about how we perceive the world. The cultural part is what we believe about}
   \ALIUSPlacedTextContent{77.652}{559.354}{443.693}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{these experiences. Such cultural beliefs may have many sources apart from the}
   \ALIUSPlacedTextContent{77.652}{575.913}{416.352}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{neurognostic dynamics produced by the innate dynamics of these experiences.}
-  \ALIUSPlacedTextContent{134.561}{604.086}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{604.086}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{621.490}{309.122}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I think that the traits emerge both from the innate}
-  \ALIUSPlacedTextContent{471.118}{638.838}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{471.118}{638.838}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{638.982}{304.067}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{tendencies, as well as environmental provocation.}
   \ALIUSPlacedTextContent{77.652}{688.565}{443.659}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{This distinction of neurognostic versus cultural structures raises the question of the}
   \ALIUSPlacedTextContent{77.652}{705.125}{443.862}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{extent to which shamanic traditions depend on culture. Clearly cultural loss leads}
@@ -331,7 +329,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -386,7 +383,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -449,7 +445,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -510,7 +505,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -565,7 +559,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -619,7 +612,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -629,7 +621,7 @@
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{54}
   \ALIUSPlacedTextContent{77.652}{81.223}{443.691}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{ritual and spiritual activities have the strong tendency to stimulate these innate}
   \ALIUSPlacedTextContent{77.652}{97.783}{373.278}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{cognitive tendencies. More to come but see: Winkelman, 2017b, 2018a.}
-  \ALIUSPlacedTextContent{134.561}{125.723}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{125.723}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{143.126}{281.635}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{The importance of the innate modules and}
   \ALIUSPlacedTextContent{158.817}{160.619}{51.242}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{evolved}
   \ALIUSPlacedTextContent{221.989}{160.619}{72.220}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{psychology}
@@ -640,7 +632,7 @@
   \ALIUSPlacedTextContent{158.817}{195.604}{281.660}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{experience or behavior across cultures, the}
   \ALIUSPlacedTextContent{158.817}{213.097}{281.629}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{traditional cultural explanation of religious or}
   \ALIUSPlacedTextContent{158.817}{230.589}{273.858}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{spiritual beliefs offers no explanatory power.}
-  \ALIUSPlacedTextContent{442.664}{231.144}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{442.664}{231.144}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{77.652}{276.503}{442.823}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{If cultural phenomena studied by anthropologists—e.g., animistic and totemistic}
   \ALIUSPlacedTextContent{77.652}{290.963}{443.004}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{beliefs/practices—are in fact underpinned by universal adapted functions, one may}
   \ALIUSPlacedTextContent{77.652}{305.657}{442.859}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{then wonder how psycho-evolutionary explanations can make sense of the}
@@ -675,7 +667,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -701,14 +692,14 @@
   \ALIUSPlacedTextContent{77.652}{351.542}{443.725}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{variation. Shamanism provided traditions for engaging and elevating certain aspects}
   \ALIUSPlacedTextContent{77.652}{368.101}{443.721}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{of consciousness adaptive for our foraging ancestors and their relations to nature.}
   \ALIUSPlacedTextContent{77.652}{384.661}{146.495}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{Back to the plasticity issue.}
-  \ALIUSPlacedTextContent{134.561}{412.834}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{412.834}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{430.238}{302.274}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{[T]he ways in which the innate modules are}
   \ALIUSPlacedTextContent{158.817}{447.730}{302.304}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{elicited, their cross-entrainments with other}
   \ALIUSPlacedTextContent{158.817}{465.223}{302.292}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{modules and cognitive process, and their roles in}
   \ALIUSPlacedTextContent{158.817}{482.715}{302.223}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{culture produce a lot of variation. Shamanism}
   \ALIUSPlacedTextContent{158.817}{500.208}{302.268}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{provided traditions for engaging and elevating}
   \ALIUSPlacedTextContent{158.817}{517.701}{302.127}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{certain aspects of consciousness adaptive for our}
-  \ALIUSPlacedTextContent{459.690}{534.815}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{459.690}{534.815}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{535.193}{293.252}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{foraging ancestors and their relations to nature.}
   \ALIUSPlacedTextContent{77.652}{580.874}{442.776}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{You have been a pioneer in using databases to address big anthropological questions.}
   \ALIUSPlacedTextContent{77.652}{595.334}{442.916}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{In particular, you have investigated the relationship between economic systems, social}
@@ -726,7 +717,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -778,7 +768,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -831,7 +820,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 14
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -879,7 +867,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 15
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -931,7 +918,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 16
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -981,7 +967,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 17
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1018,13 +1003,13 @@
   \node[anchor=north west,inner sep=0pt,outer sep=0pt] at (83.714bp,-642.707bp) {\includegraphics[width=142.847bp,height=42.078bp]{Interviews/Issue03/Winkelman_Fortier/assets/alius-extracted-image-p017-b025.png}};
   \ALIUSPlacedTextContent{77.652}{46.516}{344.963}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Michael Winkelman - The evolutionary neuroanthropology of consciousness}
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{61}
-  \ALIUSPlacedTextContent{134.561}{81.175}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{81.175}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{98.578}{309.226}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{The effects of psychedelics on global brain}
   \ALIUSPlacedTextContent{158.817}{116.071}{309.116}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{dynamics shows an enhanced global connectivity}
   \ALIUSPlacedTextContent{158.817}{133.564}{309.089}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{and increased connectivity between areas that are}
   \ALIUSPlacedTextContent{158.817}{151.056}{309.122}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{not normally connected. This illustrates how ASC}
   \ALIUSPlacedTextContent{158.817}{168.549}{309.146}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{provide adaptive benefits by increasing access to}
-  \ALIUSPlacedTextContent{430.069}{185.664}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{430.069}{185.664}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{186.041}{261.956}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{novel information and cognitive processes.}
   \ALIUSPlacedTextContent{77.652}{231.722}{442.703}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{It is not entirely clear to me whether you endorse a pluralist or unified account of}
   \ALIUSPlacedTextContent{77.652}{246.416}{442.878}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{altered states of consciousness. First, let me mention for the readers who are not}
@@ -1082,7 +1067,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 18
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1139,7 +1123,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 19
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1197,7 +1180,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 20
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1257,7 +1239,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 21
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1308,7 +1289,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 22
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1372,7 +1352,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 23
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1423,7 +1402,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 24
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1475,7 +1453,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 25
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1527,7 +1504,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 26
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1586,7 +1562,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 27
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1640,7 +1615,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 28
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1700,7 +1674,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 29
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1757,7 +1730,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 30
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1821,7 +1793,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 31
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1885,7 +1856,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 32
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -1938,7 +1908,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 33
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2001,7 +1970,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 34
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2048,7 +2016,7 @@
   \ALIUSPlacedTextContent{77.652}{593.872}{443.839}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{enter into a parasympathetic visionary state, the functional dynamics of that state}
   \ALIUSPlacedTextContent{77.652}{610.432}{443.714}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{are generally the same whether or not you got there by LSD or ibogaine or ayahuasca}
   \ALIUSPlacedTextContent{77.652}{626.992}{215.092}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{or some dopaminergic or GABA action.}
-  \ALIUSPlacedTextContent{134.561}{655.164}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{655.164}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{672.568}{322.940}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{I do not think that the individual neurotransmitters}
   \ALIUSPlacedTextContent{158.817}{690.061}{322.963}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{are really the best level of analysis for differences in}
   \ALIUSPlacedTextContent{158.817}{707.553}{322.863}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{consciousness. There are major global contrasts}
@@ -2058,7 +2026,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 35
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2067,7 +2034,7 @@
   \ALIUSPlacedTextContent{77.652}{46.516}{344.963}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{Michael Winkelman - The evolutionary neuroanthropology of consciousness}
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{79}
   \ALIUSPlacedTextContent{158.817}{81.086}{322.909}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{us to provide a generalized profile that can be}
-  \ALIUSPlacedTextContent{364.297}{98.434}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{364.297}{98.434}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{98.578}{197.244}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{induced by diverse mechanisms.}
   \ALIUSPlacedTextContent{77.652}{144.197}{443.621}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{So this gets back to how many modes do we need. Perhaps the answer is in terms of}
   \ALIUSPlacedTextContent{77.652}{160.756}{443.697}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{access. Most people can't access the dreaming mode directly from waking}
@@ -2107,7 +2074,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 36
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2127,14 +2093,14 @@
   \ALIUSPlacedTextContent{77.652}{202.505}{443.706}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{knowledge, and I think that means a necessary engagement with metaphysical}
   \ALIUSPlacedTextContent{77.652}{219.065}{386.693}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{dualism. What we need to avoid is ontological and metaphysical naivety.}
   \ALIUSPlacedTextContent{464.354}{219.403}{11.404}{ALIUSC000000}{\ALIUSFontSymbolFallback}{13.528}{J}
-  \ALIUSPlacedTextContent{134.561}{247.238}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{134.561}{247.238}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{158.817}{264.641}{309.259}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Requirements for a mature psychedelic science}
   \ALIUSPlacedTextContent{158.817}{282.134}{309.201}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{must grapple with, on one hand, a recognition of a}
   \ALIUSPlacedTextContent{158.817}{299.626}{309.142}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{unitary basis for all kinds of knowing and believing,}
   \ALIUSPlacedTextContent{158.817}{317.119}{309.168}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{while on the other hand recognizing what is the}
   \ALIUSPlacedTextContent{158.817}{334.612}{309.117}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{distinctive manner of knowing opened by}
   \ALIUSPlacedTextContent{158.817}{352.104}{309.151}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{psychedelics. […] I think that means a necessary}
-  \ALIUSPlacedTextContent{410.477}{368.986}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{410.477}{368.986}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{158.817}{369.597}{246.912}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{engagement with metaphysical dualism.}
   \ALIUSPlacedTextContent{77.652}{403.849}{440.521}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{It is often assumed that hallucinogenic use is very ancient and widespread cross-}
   \ALIUSPlacedTextContent{77.652}{418.309}{442.839}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.128}{culturally. Let us call this view the "archaic hallucinogenic use hypothesis." In some}
@@ -2171,7 +2137,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 37
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2242,7 +2207,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 38
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2293,7 +2257,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 39
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2303,9 +2266,9 @@
   \ALIUSPlacedTextContent{505.773}{46.516}{14.471}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{83}
   \ALIUSPlacedTextContent{77.652}{81.223}{443.673}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{and withered many times, but the innate potentials of our brain are always disposed}
   \ALIUSPlacedTextContent{77.652}{97.783}{292.750}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{to respond when there is the need and the stimulation.}
-  \ALIUSPlacedTextContent{120.762}{125.723}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{120.762}{125.723}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{147.972}{143.126}{313.227}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Humans everywhere discovered religiosity and}
-  \ALIUSPlacedTextContent{470.185}{158.609}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{470.185}{158.609}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{145.057}{160.619}{316.022}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{spiritual experiences via the impulses that came for}
   \ALIUSPlacedTextContent{145.057}{178.111}{316.056}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{psilocybin-containing mushrooms. […]. This impulse}
   \ALIUSPlacedTextContent{145.057}{195.604}{316.067}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{has risen and withered many times, but the innate}
@@ -2323,7 +2286,7 @@
   \ALIUSPlacedTextContent{77.652}{438.305}{443.825}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{experiences are also very personal; the insights obtained are of a personal nature.}
   \ALIUSPlacedTextContent{77.652}{454.865}{443.743}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{This kind of knowledge can help us better understand what may and may not be}
   \ALIUSPlacedTextContent{77.652}{471.424}{175.868}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{revealed in third person studies.}
-  \ALIUSPlacedTextContent{127.661}{499.364}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{127.661}{499.364}{24.676}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{154.736}{516.768}{299.285}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{Science as we know it is largely an ordinary}
   \ALIUSPlacedTextContent{151.821}{534.260}{42.386}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{reality}
   \ALIUSPlacedTextContent{211.248}{534.260}{65.108}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{construct,}
@@ -2333,7 +2296,7 @@
   \ALIUSPlacedTextContent{438.722}{534.260}{15.423}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{of}
   \ALIUSPlacedTextContent{151.821}{551.753}{302.221}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{consciousness way of ascertaining information}
   \ALIUSPlacedTextContent{151.821}{569.245}{302.325}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{about the universe. Psychedelics and other ASCs}
-  \ALIUSPlacedTextContent{423.072}{585.894}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{?}
+  \ALIUSPlacedTextContent{423.072}{585.894}{13.761}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{46.647}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{151.821}{586.738}{264.950}{ALIUSC595959}{\ALIUSFontLatoLight}{14.694}{provide a different epistemic approach […].}
   \ALIUSPlacedTextContent{77.652}{632.589}{443.647}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{But I think the ultimately most important reason for directly experiencing these}
   \ALIUSPlacedTextContent{77.652}{648.916}{443.712}{ALIUSC000000}{\ALIUSFontCormorantMedium}{13.528}{substances is what Charles Tart (1972) referred to as "state-specific sciences." Science}
@@ -2347,7 +2310,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 40
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2362,7 +2324,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 41
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2416,7 +2377,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 42
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2475,7 +2435,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 43
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2521,7 +2480,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 44
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2568,7 +2526,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 45
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2619,7 +2576,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 46
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2676,7 +2632,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 47
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2730,7 +2685,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 48
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2788,7 +2742,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 49
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2843,7 +2796,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 50
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2891,7 +2843,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 51
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -2944,7 +2895,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 52
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -3005,7 +2955,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 53
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -3047,7 +2996,6 @@
   \ALIUSPlacedTextContent{402.025}{783.303}{116.144}{ALIUSC767171}{\ALIUSFontLatoLight}{10.729}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

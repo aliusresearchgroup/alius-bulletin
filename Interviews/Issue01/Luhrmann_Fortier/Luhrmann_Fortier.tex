@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
 \definecolor{ALIUSC595959}{HTML}{595959}
@@ -100,17 +103,14 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 % --- Draft abstract retained as comments; not rendered in reconstruction. ---
 % \section*{Abstract}
 % This interview with Tanya Luhrmann examines the cultural and psychological mechanisms through which the supernatural becomes experientially real, with attention to voices, visions, and unusual sensory experiences. Luhrmann describes her trajectory toward an anthropology of mind concerned with how reality acquires its texture for individuals and how that texture shifts at the edges of experience. The conversation turns to participant observation and the role of first-hand anomalous experience in fieldwork on altered states, then to how imagination becomes perception-like among evangelicals through kataphatic prayer. Luhrmann weighs three candidate mechanisms: metacognitive retagging of inner events along the lines of Richard Bentall and Marcia Johnson, training-induced increases in sensory content and imagery vividness, and attentional cultivation of the inner senses, arguing that they can work in concert through micro-moments of attention. She treats the internal-external divide as a continuum rather than a binary and distinguishes the shift from imagination to perception from the sense of reality itself, illustrating the latter through depersonalization. Further sections address the absorption scale, its relation to hypnotizability, dissociation, and psychosis, its genetic component, and the role of personal proclivity in religious practice. The conversation engages the cognitive penetrability debate through a three-level model of theories of mind, habits of mind, and perception, and presents her cross-cultural project across Ghana, China, Thailand, Vanuatu, and the United States on how local theories of mind shape supernatural experience. It closes on participation and Lucien L\'evy-Bruhl's mystical mode of thought, and on new scale items capturing sensorial engagement with a responsive world.\par
 % --- End draft abstract. ---
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -142,6 +142,7 @@
   \ALIUSPlacedTextContent{284.156}{268.728}{3.874}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{,}
   \ALIUSPlacedTextContent{288.061}{268.728}{5.707}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.840}{1}
   \ALIUSPlacedTextContent{293.860}{268.728}{32.377}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{, 25-36.}
+  \ALIUSPlacedTextContent{74.920}{280.339}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.840}{\href{https://doi.org/10.34700/7ppf-h459}{https://doi.org/10.34700/7ppf-h459}}
   \ALIUSPlacedTextContent{71.080}{316.927}{455.665}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{To begin, could you please tell us a few words as to how you position yourself within the}
   \ALIUSPlacedTextContent{71.080}{334.207}{95.664}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{academic field? In}
   \ALIUSPlacedTextContent{166.911}{334.207}{158.557}{ALIUSC1F8135}{\ALIUSFontLatoLightItalic}{12.310}{Persuasions of the Witch's Craft}
@@ -174,7 +175,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -209,11 +209,11 @@
   \ALIUSPlacedTextContent{71.080}{491.898}{456.614}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{as well—I realized that talk of cognitive interpretation was not enough to capture}
   \ALIUSPlacedTextContent{71.080}{508.938}{456.576}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{what I had experienced. That changed the way I thought about religion and what a}
   \ALIUSPlacedTextContent{71.080}{525.978}{178.465}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{scholar should strive to explain.}
-  \ALIUSPlacedTextContent{101.320}{548.488}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{101.320}{548.488}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{119.320}{569.513}{339.795}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I don't think that first-hand experience is essential for}
   \ALIUSPlacedTextContent{119.320}{587.513}{318.206}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{understanding human experience… yet there is no}
   \ALIUSPlacedTextContent{119.320}{605.513}{355.882}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{question that to have an insider's experience gives you a}
-  \ALIUSPlacedTextContent{443.560}{620.248}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{443.560}{620.248}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{119.320}{623.273}{324.472}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{level of insight that you cannot have any other way.}
   \ALIUSPlacedTextContent{71.080}{670.927}{455.576}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{In your work, you are especially interested in understanding the mechanisms through}
   \ALIUSPlacedTextContent{71.080}{688.206}{455.760}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{which imagination gradually becomes perception-like. In the case of evangelicals, for}
@@ -225,7 +225,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -275,7 +274,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -326,7 +324,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -377,7 +374,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -406,12 +402,12 @@
   \ALIUSPlacedTextContent{71.080}{416.298}{456.578}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{preference, etc) that I assumed that differences in proclivity would wash out. I}
   \ALIUSPlacedTextContent{71.080}{433.338}{456.523}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{increasingly think proclivity plays some role in the choice of religion. I would expect}
   \ALIUSPlacedTextContent{71.080}{450.138}{456.557}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that role to be more pronounced in smaller religions that require more effort to join.}
-  \ALIUSPlacedTextContent{113.800}{472.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{113.800}{472.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{128.440}{490.073}{304.690}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{No great religion has been founded by someone}
   \ALIUSPlacedTextContent{128.440}{508.073}{334.542}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{without voices and visions of some sort, even though}
   \ALIUSPlacedTextContent{128.440}{526.073}{345.400}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{the predisposition to accept the plausibility of invisible}
   \ALIUSPlacedTextContent{128.440}{544.073}{347.210}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{others may be far more broadly distributed, part of the}
-  \ALIUSPlacedTextContent{344.680}{558.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{344.680}{558.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{128.440}{561.833}{213.112}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{orientation of our evolved brains.}
   \ALIUSPlacedTextContent{106.480}{598.698}{421.103}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{Is proclivity inherently limiting? That is, should someone with low absorption}
   \ALIUSPlacedTextContent{71.080}{615.738}{456.572}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{give up an ambition to know God in a sensorially rich manner? Well, no. In my}
@@ -430,7 +426,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -479,7 +474,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -504,10 +498,10 @@
   \ALIUSPlacedTextContent{71.080}{308.298}{456.552}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{four populations not only to have comparable groups but also to investigate the}
   \ALIUSPlacedTextContent{71.080}{325.338}{456.575}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{impact of charismatic Christianity and industrialization on the way people think}
   \ALIUSPlacedTextContent{71.080}{342.138}{309.138}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{about thinking and their experience of the supernatural.}
-  \ALIUSPlacedTextContent{119.080}{361.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{119.080}{361.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{137.320}{383.993}{298.767}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{Anthropologists have found that different faith}
   \ALIUSPlacedTextContent{137.320}{401.993}{342.294}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{interpretations about the believer's mental state have}
-  \ALIUSPlacedTextContent{406.840}{418.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{406.840}{418.408}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{137.320}{419.753}{264.472}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{significant consequences for the believer.}
   \ALIUSPlacedTextContent{106.480}{458.058}{421.159}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{In my previous work, I have seen that persons new to a church that taught}
   \ALIUSPlacedTextContent{71.080}{475.098}{456.650}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{them that God spoke inside the mind learned to experience thoughts which they}
@@ -531,7 +525,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -585,7 +578,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -619,7 +611,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -718,7 +709,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -746,7 +736,6 @@
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput

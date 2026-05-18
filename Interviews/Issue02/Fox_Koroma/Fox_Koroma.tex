@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{iftex}
+\usepackage[hidelinks]{hyperref}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -84,6 +85,8 @@
   \providecommand{\ALIUSFontCambria}{\fontspec{Cambria}}
   \providecommand{\ALIUSFontSymbolFallback}{\fontspec{Times New Roman}}
 \fi
+\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
+\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC000000}{HTML}{00000A}
 \definecolor{ALIUSC1A1718}{HTML}{1A1718}
@@ -102,17 +105,14 @@
     \resizebox{#3bp}{!}{{#5\fontsize{#6bp}{#6bp}\selectfont #7}}%
   };%
 }
-
 % --- Draft abstract retained as comments; not rendered in reconstruction. ---
 % \section*{Abstract}
 % This interview with Kieran Fox examines spontaneous thinking as an umbrella covering mind-wandering, dreaming, and meditation, and its connections to creativity and well-being. Fox recounts how his work with Kalina Christoff led him to map the parallels between mind-wandering and dreaming. The conversation lays out the spontaneous thought framework, in which cognition sits on a spectrum between totally constrained thought and disorganized thinking approaching acute psychosis, with mind-wandering, dreaming, and creative thinking falling between these extremes. Fox argues that most mind-wandering proceeds below meta-awareness and compares the stream of inner thought to other perceptual channels filtered by attention. He treats mind-wandering and dreaming as matters of degree, with sensory decoupling and increased activity in default, memory, and visual networks accounting for the more immersive character of dream experience. Further sections examine the determinants of thought content, including dominant visual, auditory, and somatosensory modalities, mildly positive average emotional valence, and Eric Klinger's notion of current concerns. The conversation turns to mindfulness meditation as a way to investigate spontaneous thought without disturbing it, citing work on long-term practitioners that locates the medial temporal lobe and default network among the antecedent activations of arising thoughts. Fox then considers the adaptive value of mind-wandering, flow states, and creativity as a special case of focus on current concerns, before treating post-traumatic stress disorder and depressive rumination as distortions of spontaneous thinking. The interview closes on neuroimaging evidence linking mind-wandering to the default network and on future work into the stability and malleability of thought patterns.\par
 % --- End draft abstract. ---
-
 \ifdefined\ALIUSIssueBuild
 \else
 \begin{document}
 \fi
-
 % Page 1
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -146,6 +146,7 @@
   \ALIUSPlacedTextContent{68.920}{281.928}{174.246}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{well-being. An interview with Kieran Fox.}
   \ALIUSPlacedTextContent{243.197}{281.928}{57.395}{ALIUSC000000}{\ALIUSFontLatoLightItalic}{9.840}{ALIUS Bulletin}
   \ALIUSPlacedTextContent{300.680}{281.928}{36.282}{ALIUSC000000}{\ALIUSFontLatoLight}{9.840}{, 2, 1-15.}
+  \ALIUSPlacedTextContent{68.920}{293.539}{170.000}{ALIUSC1F8135}{\ALIUSFontLatoLight}{9.840}{\href{https://doi.org/10.34700/m6kp-c494}{https://doi.org/10.34700/m6kp-c494}}
   \ALIUSPlacedTextContent{71.080}{355.087}{445.974}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{What has triggered your scientific interest in the study of mind-wandering and other}
   \ALIUSPlacedTextContent{71.080}{373.087}{125.636}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.310}{associated phenomena?}
   \ALIUSPlacedTextContent{71.080}{402.858}{456.547}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{I really owe my interest in mind-wandering specifically and spontaneous thought}
@@ -173,7 +174,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 2
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -203,11 +203,11 @@
   \ALIUSPlacedTextContent{71.080}{368.538}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{these states are difficult to study and define and we hope to make more progress in}
   \ALIUSPlacedTextContent{71.080}{385.338}{456.533}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{the future (see Figure 1, reproduced with permission from Christoff, Irving, Fox,}
   \ALIUSPlacedTextContent{71.080}{402.378}{188.446}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Spreng, \& Andrews-Hanna, 2016).}
-  \ALIUSPlacedTextContent{108.280}{418.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{108.280}{418.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{128.920}{437.513}{335.825}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{By 'spontaneous' we mean cognition that is relatively}
   \ALIUSPlacedTextContent{128.920}{455.513}{334.031}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{unconstrained—either by bottom-up constraints like}
   \ALIUSPlacedTextContent{128.920}{473.513}{285.359}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{affective or perceptual salience, or top-down}
-  \ALIUSPlacedTextContent{446.680}{490.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{446.680}{490.168}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{128.920}{491.513}{317.032}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{constraints like the executive control of attention.}
   \ALIUSPlacedTextContent{71.080}{541.888}{455.802}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{Is mind-wandering necessarily a conscious phenomenon or can there be a}
   \ALIUSPlacedTextContent{71.080}{557.489}{455.841}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{subconscious form of mind-wandering, with a drifting in the activation of different}
@@ -227,7 +227,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 3
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -241,7 +240,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 4
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -265,11 +263,11 @@
   \ALIUSPlacedTextContent{71.080}{291.498}{456.540}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{about why these phenomena take place at all—why are there rich}
   \ALIUSPlacedTextContent{71.080}{308.298}{456.480}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{psychological/subjective correlates of these brain processes that we so seldom notice}
   \ALIUSPlacedTextContent{71.080}{325.338}{316.907}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{and whose function (if any) is very difficult to determine?}
-  \ALIUSPlacedTextContent{92.440}{357.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{92.440}{357.928}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{112.600}{369.833}{377.014}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I think the evidence that detailed and complex spontaneous}
   \ALIUSPlacedTextContent{112.600}{387.833}{364.028}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{thought processes can take place without any concurrent}
   \ALIUSPlacedTextContent{112.600}{405.353}{311.992}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{awareness or subsequent recall is overwhelming.}
-  \ALIUSPlacedTextContent{424.360}{408.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{424.360}{408.808}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{464.608}{458.310}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{If you consider mind-wandering as a conscious phenomenon, would you}
   \ALIUSPlacedTextContent{71.080}{480.208}{453.293}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{consider mind-wandering as a proper conscious state (in a sense that mind-}
   \ALIUSPlacedTextContent{71.080}{495.808}{455.817}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{wandering characterizes a way of being conscious (Bayne et al., 2016), like}
@@ -292,7 +290,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 5
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -345,7 +342,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 6
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -397,7 +393,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 7
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -454,7 +449,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 8
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -492,12 +486,12 @@
   \ALIUSPlacedTextContent{71.080}{528.858}{456.458}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{resources available. If you're an artist, your concern will be your next creation; if}
   \ALIUSPlacedTextContent{71.080}{545.658}{456.604}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{you're a new parent, your newborn child. In both cases, your mind will tend to focus}
   \ALIUSPlacedTextContent{71.080}{562.698}{289.958}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{on your central concerns whenever it has the chance.}
-  \ALIUSPlacedTextContent{108.520}{571.768}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{108.520}{571.768}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteOpen}
   \ALIUSPlacedTextContent{127.960}{589.913}{327.747}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{I see the relationship with creativity as just a special}
   \ALIUSPlacedTextContent{127.960}{607.913}{279.202}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{case of the more general phenomenon of an}
   \ALIUSPlacedTextContent{127.960}{625.913}{286.687}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{automatic, natural focus on current concerns}
   \ALIUSPlacedTextContent{127.960}{643.433}{316.312}{ALIUSC595959}{\ALIUSFontLatoLight}{14.880}{whenever there are cognitive resources available.}
-  \ALIUSPlacedTextContent{446.440}{643.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{?}
+  \ALIUSPlacedTextContent{446.440}{643.528}{14.160}{ALIUSC7F7F7F}{\ALIUSFontCormorantLight}{48.000}{\ALIUSPullQuoteClose}
   \ALIUSPlacedTextContent{71.080}{677.248}{455.791}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{How is the study of mind-wandering informative regarding clinical conditions like}
   \ALIUSPlacedTextContent{71.080}{692.849}{235.683}{ALIUSC1F8135}{\ALIUSFontLatoLight}{12.960}{ADHD or for mental well-being in general?}
   \ALIUSPlacedTextContent{71.080}{720.378}{456.660}{ALIUSC1A1718}{\ALIUSFontCormorantRegular}{13.920}{Well, if you accept the hypothesis I've advanced above, that spontaneous thought}
@@ -508,7 +502,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 9
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -564,7 +557,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 10
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -615,7 +607,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 11
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -636,7 +627,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 12
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -706,7 +696,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 13
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -778,7 +767,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 14
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -846,7 +834,6 @@
 \end{tikzpicture}
 \null
 \newpage
-
 % Page 15
 \thispagestyle{empty}
 \noindent\begin{tikzpicture}[remember picture,overlay,x=1bp,y=1bp,shift={(current page.north west)}]
@@ -918,7 +905,6 @@
   \ALIUSPlacedTextContent{405.163}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}
 \null
-
 \ifdefined\ALIUSIssueBuild
 \clearpage
 \expandafter\endinput
