@@ -3,8 +3,11 @@
 Checks current TeX sources for two Overleaf-sensitive details:
 - oversized pull-quote placeholders must use TeX macros, never literal question marks;
 - every interview must display its own BibTeX DOI on page 1 as a green hyperlinked DOI URL;
-- every first-page citation panel must keep citation text top-left and the DOI bottom-right
-  without overlapping retained native text spans.
+- every first-page citation panel must keep citation text top-left and the DOI
+  immediately inside the same citation block, without overlap with retained
+  native text spans.
+- opening decorative pull quotes must sit on the first pull-quote text baseline,
+  mirroring the lower-right closing quote instead of floating on a separate line.
 
 Optionally checks compiled PDFs for live DOI URI annotations.
 """
@@ -34,6 +37,7 @@ FILL_RE = re.compile(
     r"\\fill\[white\] \((?P<x>[0-9.]+)bp,-(?P<y>[0-9.]+)bp\) rectangle "
     r"\+\+\((?P<w>[0-9.]+)bp,-(?P<h>[0-9.]+)bp\);"
 )
+PULL_QUOTE_TEXT_COLORS = {"ALIUSC000000", "ALIUSC595959", "ALIUSC7F7F7F"}
 
 
 def bib_doi(tex_path: Path) -> str:
@@ -44,6 +48,42 @@ def bib_doi(tex_path: Path) -> str:
     return match.group(1).strip()
 
 
+def parsed_spans_with_pages(text: str) -> list[dict[str, Any]]:
+    spans: list[dict[str, Any]] = []
+    page = 0
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        page_match = re.match(r"% Page (\d+)", line)
+        if page_match:
+            page = int(page_match.group(1))
+        match = SPAN_RE.search(line)
+        if not match:
+            continue
+        rec = match.groupdict()
+        rec["line"] = line_no
+        rec["page"] = page
+        rec["xf"] = float(rec["x"])
+        rec["yf"] = float(rec["y"])
+        rec["sf"] = float(rec["size"])
+        spans.append(rec)
+    return spans
+
+
+def is_pull_quote_text_candidate(rec: dict[str, Any], opener: dict[str, Any]) -> bool:
+    content = rec["text"].strip()
+    return (
+        rec["page"] == opener["page"]
+        and rec["line"] > opener["line"]
+        and rec["yf"] >= opener["yf"] - 1.0
+        and rec["yf"] <= opener["yf"] + 165.0
+        and rec["xf"] >= opener["xf"] + 5.0
+        and "ALIUSFontLato" in rec["font"]
+        and 13.0 <= rec["sf"] <= 18.5
+        and rec["color"] in PULL_QUOTE_TEXT_COLORS
+        and content not in {"", "References"}
+        and "http" not in content
+    )
+
+
 def source_report() -> dict[str, Any]:
     files = sorted(REPO.glob(TEX_GLOB))
     bad_large_questions: list[str] = []
@@ -52,6 +92,7 @@ def source_report() -> dict[str, Any]:
     bad_doi_lines: list[str] = []
     missing_citation_panels: list[str] = []
     bad_panel_geometry: list[str] = []
+    bad_pull_quote_alignment: list[str] = []
     doi_urls: set[str] = set()
 
     for path in files:
@@ -61,6 +102,18 @@ def source_report() -> dict[str, Any]:
             missing_quote_macros.append(rel)
         if r"\usepackage[hidelinks]{hyperref}" not in text:
             missing_hyperref.append(rel)
+
+        spans = parsed_spans_with_pages(text)
+        for opener in [rec for rec in spans if rec["text"] == r"\ALIUSPullQuoteOpen"]:
+            candidates = [rec for rec in spans if is_pull_quote_text_candidate(rec, opener)]
+            if not candidates:
+                bad_pull_quote_alignment.append(f"{rel}:{opener['line']}: no pull-quote text candidate near opener")
+                continue
+            target_y = min(rec["yf"] for rec in candidates)
+            if abs(opener["yf"] - target_y) > 1.1:
+                bad_pull_quote_alignment.append(
+                    f"{rel}:{opener['line']}: opener y={opener['yf']:.3f}, first text y={target_y:.3f}"
+                )
 
         first_page = text.split(r"\end{tikzpicture}", 1)[0]
         doi = bib_doi(path)
@@ -104,9 +157,10 @@ def source_report() -> dict[str, Any]:
                         bad_panel_geometry.append(
                             f"{rel}: retained native text inside citation panel at ({x:.1f},{y:.1f}): {content[:60]}"
                         )
-            # DOI must be a single TeX line, green, hyperlinked, and aligned to the
-            # bottom-right of the normalized citation panel.
-            if expected_href in line and "text=ALIUSC1F8135" in line and "anchor=south east" in line:
+            # DOI must be a single TeX line, green, hyperlinked, and placed as
+            # a north-west anchored line inside the citation block rather than
+            # as a detached bottom-right footer.
+            if expected_href in line and "text=ALIUSC1F8135" in line and "anchor=north west" in line:
                 found_good_doi = True
         if not found_good_doi:
             bad_doi_lines.append(rel)
@@ -119,6 +173,7 @@ def source_report() -> dict[str, Any]:
         "missing_hyperref": missing_hyperref,
         "missing_citation_panels": missing_citation_panels,
         "bad_panel_geometry": bad_panel_geometry,
+        "bad_pull_quote_alignment": bad_pull_quote_alignment,
         "bad_or_missing_green_doi_hrefs": bad_doi_lines,
         "source_ok": not (
             bad_large_questions
@@ -126,6 +181,7 @@ def source_report() -> dict[str, Any]:
             or missing_hyperref
             or missing_citation_panels
             or bad_panel_geometry
+            or bad_pull_quote_alignment
             or bad_doi_lines
         ),
     }

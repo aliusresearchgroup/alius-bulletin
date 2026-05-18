@@ -4,12 +4,14 @@ Run after regenerating interview reconstructions from reference PDFs. It is idem
 - standalone interview sources load hyperref because DOI lines use \href;
 - oversized decorative quote placeholders become robust TeX quote macros;
 - every interview gets a normalized first-page citation panel: citation text starts
-  top-left, the DOI is a single unbroken green hyperlink aligned bottom-right.
+  top-left, and the DOI follows as a single unbroken green hyperlink line within
+  the same citation block.
 """
 
 from __future__ import annotations
 
 from pathlib import Path
+import math
 import re
 
 REPO = Path(__file__).resolve().parents[1]
@@ -20,6 +22,7 @@ SPAN_RE = re.compile(
 PANEL_BEGIN = "% ALIUS normalized citation panel begin"
 PANEL_END = "% ALIUS normalized citation panel end"
 PANEL_TEXT_PREFIX = "% ALIUS normalized citation panel text: "
+PULL_QUOTE_TEXT_COLORS = {"ALIUSC000000", "ALIUSC595959", "ALIUSC7F7F7F"}
 
 
 def bib_doi(tex_path: Path) -> str:
@@ -112,6 +115,66 @@ def is_footer_span(rec: dict[str, object]) -> bool:
     return str(rec["color"]) == "ALIUSC767171" or float(rec["yf"]) > 760.0
 
 
+def parse_spans_with_pages(lines: list[str]) -> list[dict[str, object]]:
+    page = 0
+    spans: list[dict[str, object]] = []
+    for idx, line in enumerate(lines):
+        page_match = re.match(r"% Page (\d+)", line)
+        if page_match:
+            page = int(page_match.group(1))
+        match = SPAN_RE.match(line)
+        if not match:
+            continue
+        rec: dict[str, object] = match.groupdict()
+        rec["idx"] = idx
+        rec["page"] = page
+        rec["xf"] = float(match.group("x"))
+        rec["yf"] = float(match.group("y"))
+        rec["wf"] = float(match.group("w"))
+        rec["sf"] = float(match.group("size"))
+        spans.append(rec)
+    return spans
+
+
+def is_pull_quote_text_candidate(rec: dict[str, object], opener: dict[str, object]) -> bool:
+    text = str(rec["text"]).strip()
+    return (
+        int(rec["page"]) == int(opener["page"])
+        and int(rec["idx"]) > int(opener["idx"])
+        and float(rec["yf"]) >= float(opener["yf"]) - 1.0
+        and float(rec["yf"]) <= float(opener["yf"]) + 165.0
+        and float(rec["xf"]) >= float(opener["xf"]) + 5.0
+        and "ALIUSFontLato" in str(rec["font"])
+        and 13.0 <= float(rec["sf"]) <= 18.5
+        and str(rec["color"]) in PULL_QUOTE_TEXT_COLORS
+        and text not in {"", "References"}
+        and "http" not in text
+    )
+
+
+def replace_span_y(line: str, y: float) -> str:
+    return re.sub(r"(\\ALIUSPlacedTextContent\{[^}]+\}\{)[^}]+", rf"\g<1>{y:.3f}", line, count=1)
+
+
+def align_pull_quote_openers(lines: list[str]) -> int:
+    """Lower opening decorative quote marks to the first pull-quote text line."""
+    spans = parse_spans_with_pages(lines)
+    changes = 0
+    for opener in spans:
+        if opener["text"] != r"\ALIUSPullQuoteOpen":
+            continue
+        candidates = [rec for rec in spans if is_pull_quote_text_candidate(rec, opener)]
+        if not candidates:
+            continue
+        target_y = min(float(rec["yf"]) for rec in candidates)
+        if abs(target_y - float(opener["yf"])) <= 0.5:
+            continue
+        idx = int(opener["idx"])
+        lines[idx] = replace_span_y(lines[idx], target_y)
+        changes += 1
+    return changes
+
+
 def parse_spans(lines: list[str], first_end: int) -> list[dict[str, object]]:
     spans: list[dict[str, object]] = []
     for idx in range(first_end):
@@ -194,20 +257,22 @@ def panel_lines(x: float, y: float, width: float, height: float, citation_text: 
     url = f"https://doi.org/{doi}"
     citation_size = 9.2
     doi_size = 8.6
-    doi_y = y + height - 3.0
+    chars_per_line = max(28.0, width / 4.25)
+    estimated_lines = max(1, math.ceil(len(citation_text) / chars_per_line))
+    doi_y = y + min(height - 10.5, estimated_lines * 10.7 + 4.5)
     return [
         f"  {PANEL_BEGIN}",
         f"  {PANEL_TEXT_PREFIX}{citation_text}",
         f"  \\fill[white] ({x - 1.5:.3f}bp,-{y - 2.0:.3f}bp) rectangle ++({width + 3.0:.3f}bp,-{height + 3.5:.3f}bp);",
         f"  \\node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC000000] at ({x:.3f}bp,-{y:.3f}bp) "
         f"{{\\begin{{minipage}}{{{width:.3f}bp}}{{\\ALIUSFontLatoLight\\fontsize{{{citation_size:.3f}bp}}{{10.700bp}}\\selectfont\\raggedright {citation_text}\\par}}\\end{{minipage}}}};",
-        f"  \\node[anchor=south east,inner sep=0pt,outer sep=0pt,text=ALIUSC1F8135] at ({x + width:.3f}bp,-{doi_y:.3f}bp) "
+        f"  \\node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC1F8135] at ({x:.3f}bp,-{doi_y:.3f}bp) "
         f"{{{{\\ALIUSFontLatoLight\\fontsize{{{doi_size:.3f}bp}}{{{doi_size:.3f}bp}}\\selectfont\\href{{{url}}}{{{url}}}}}}};",
         f"  {PANEL_END}",
     ]
 
 
-def enforce_file(path: Path) -> tuple[int, int]:
+def enforce_file(path: Path) -> tuple[int, int, int]:
     doi = bib_doi(path)
     original = path.read_text(encoding="utf-8")
     ensured = ensure_preamble(original)
@@ -225,6 +290,7 @@ def enforce_file(path: Path) -> tuple[int, int]:
             lines[idx] = f"{match.group('prefix')}{macro}{match.group('suffix')}"
             quote_replacements += 1
             open_quote = not open_quote
+    quote_alignments = align_pull_quote_openers(lines)
 
     first_end = next((idx for idx, line in enumerate(lines) if line.strip() == r"\end{tikzpicture}"), len(lines))
     spans = parse_spans(lines, first_end)
@@ -311,17 +377,23 @@ def enforce_file(path: Path) -> tuple[int, int]:
     updated = "\n".join(lines) + "\n"
     if updated != original:
         path.write_text(updated, encoding="utf-8", newline="\n")
-    return quote_replacements, 1
+    return quote_replacements, quote_alignments, 1
 
 
 def main() -> int:
     total_quotes = 0
+    total_quote_alignments = 0
     total_panels = 0
     for tex_path in sorted(REPO.glob("Interviews/Issue*/*/*.tex")):
-        q, d = enforce_file(tex_path)
+        q, qa, d = enforce_file(tex_path)
         total_quotes += q
+        total_quote_alignments += qa
         total_panels += d
-    print(f"enforced {total_panels} normalized citation panels; repaired {total_quotes} pull-quote placeholders")
+    print(
+        f"enforced {total_panels} normalized citation panels; "
+        f"repaired {total_quotes} pull-quote placeholders; "
+        f"aligned {total_quote_alignments} opening pull quotes"
+    )
     return 0
 
 
