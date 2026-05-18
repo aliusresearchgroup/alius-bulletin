@@ -87,6 +87,16 @@
 \fi
 \providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}
 \providecommand{\ALIUSPullQuoteClose}{\textquotedblright}
+\providecommand{\ALIUSNotableQuoteAt}[4]{%
+  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%
+    \begin{minipage}{#3bp}%
+      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%
+    \end{minipage}%
+  };%
+}
+\providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%
+  \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%
+}
 \definecolor{ALIUSC000000}{HTML}{000000}
 \definecolor{ALIUSC1F8135}{HTML}{1F8135}
 \definecolor{ALIUSC595959}{HTML}{595959}
@@ -189,6 +199,8 @@
   \ALIUSPlacedTextContent{71.080}{439.829}{456.632}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{that could alter the topography of the mind to aid access to the unconscious and}
   \ALIUSPlacedTextContent{71.080}{456.869}{248.402}{ALIUSC000000}{\ALIUSFontCormorantRegular}{13.920}{then I discovered Stanislav Grof's book,}
   \ALIUSPlacedTextContent{325.271}{456.869}{205.525}{ALIUSC000000}{\ALIUSFontCormorantItalic}{13.920}{Realms of the Human Unconscious:}
+  % ALIUS Q&A segment notable quote slot: carhart-harris-2017-q01
+  \ALIUSMaybeNotableQuoteAt{110.000}{538.000}{380.000}{I entertained the idea that a drug might exist that could alter the topography of the mind to aid access to the unconscious.}
   \ALIUSPlacedTextContent{71.080}{793.620}{125.501}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{ALIUS Bulletin n°1 (2017)}
   \ALIUSPlacedTextContent{404.763}{793.620}{121.602}{ALIUSC767171}{\ALIUSFontLatoLight}{10.800}{aliusresearch.org/bulletin}
 \end{tikzpicture}

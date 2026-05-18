@@ -6,6 +6,8 @@ Checks current TeX sources for two Overleaf-sensitive details:
 - every first-page citation panel must keep citation text top-left and the DOI
   appended inside the same citation paragraph in APA 7 style, without detached
   DOI nodes or overlap with retained native text spans.
+- every interview must expose the optional per-segment notable-quote macro so
+  amplified answer excerpts can be added without ad-hoc spacing.
 - opening decorative pull quotes must sit on the first pull-quote text baseline,
   mirroring the lower-right closing quote instead of floating on a separate line.
 
@@ -88,6 +90,7 @@ def source_report() -> dict[str, Any]:
     files = sorted(REPO.glob(TEX_GLOB))
     bad_large_questions: list[str] = []
     missing_quote_macros: list[str] = []
+    missing_notable_quote_macros: list[str] = []
     missing_hyperref: list[str] = []
     bad_doi_lines: list[str] = []
     detached_doi_nodes: list[str] = []
@@ -101,6 +104,8 @@ def source_report() -> dict[str, Any]:
         rel = path.relative_to(REPO).as_posix()
         if r"\providecommand{\ALIUSPullQuoteOpen}" not in text or r"\providecommand{\ALIUSPullQuoteClose}" not in text:
             missing_quote_macros.append(rel)
+        if r"\providecommand{\ALIUSMaybeNotableQuoteAt}" not in text:
+            missing_notable_quote_macros.append(rel)
         if r"\usepackage[hidelinks]{hyperref}" not in text:
             missing_hyperref.append(rel)
 
@@ -173,6 +178,7 @@ def source_report() -> dict[str, Any]:
         "unique_expected_doi_urls": len(doi_urls),
         "bad_large_question_spans": bad_large_questions,
         "missing_quote_macros": missing_quote_macros,
+        "missing_notable_quote_macros": missing_notable_quote_macros,
         "missing_hyperref": missing_hyperref,
         "missing_citation_panels": missing_citation_panels,
         "bad_panel_geometry": bad_panel_geometry,
@@ -182,6 +188,7 @@ def source_report() -> dict[str, Any]:
         "source_ok": not (
             bad_large_questions
             or missing_quote_macros
+            or missing_notable_quote_macros
             or missing_hyperref
             or missing_citation_panels
             or bad_panel_geometry

@@ -15,3 +15,4 @@
 - [ ] `AI-agents/enforce_quote_and_doi_invariants.py` has been run after regenerating interview sources.
 - [ ] `AI-agents/validate_quote_and_doi_rendering.py` passes: no oversized `?` pull quotes, all 41 interview DOI links are green single-line APA 7 inline `\href` links, and every interview has the normalized citation panel.
 - [ ] Citation panels preserve the edition-wide structure: white left-column panel, citation text top-left, DOI appended inline after the citation sentence in APA 7 style, no detached DOI node, no overlap with author/contact text or abstract/heading blocks.
+- [ ] Optional notable quotes use `\ALIUSMaybeNotableQuoteAt{x}{y}{width}{quote}` within the relevant Q&A segment; empty quote arguments render nothing, and non-empty quotes sit after the amplified answer sentence but before the next question.

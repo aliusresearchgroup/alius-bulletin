@@ -410,6 +410,16 @@ def preamble(width: float, height: float, colors: set[int]) -> list[str]:
         r"\fi",
         r"\providecommand{\ALIUSPullQuoteOpen}{\textquotedblleft}",
         r"\providecommand{\ALIUSPullQuoteClose}{\textquotedblright}",
+        r"\providecommand{\ALIUSNotableQuoteAt}[4]{%",
+        r"  \node[anchor=north west,inner sep=0pt,outer sep=0pt,text=ALIUSC595959] at (#1bp,-#2bp) {%",
+        r"    \begin{minipage}{#3bp}%",
+        r"      {\ALIUSFontLatoLight\fontsize{15.000bp}{18.000bp}\selectfont\raggedright{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteOpen}}\hspace{2.000bp}#4\hspace{2.000bp}{\textcolor{ALIUSC7F7F7F}{\ALIUSFontCormorantLight\fontsize{32.000bp}{32.000bp}\selectfont\ALIUSPullQuoteClose}}\par}%",
+        r"    \end{minipage}%",
+        r"  };%",
+        r"}",
+        r"\providecommand{\ALIUSMaybeNotableQuoteAt}[4]{%",
+        r"  \if\relax\detokenize{#4}\relax\else\ALIUSNotableQuoteAt{#1}{#2}{#3}{#4}\fi%",
+        r"}",
     ]
     for c in sorted(colors):
         lines.append(rf"\definecolor{{{color_name(c)}}}{{HTML}}{{{color_hex(c)}}}")
