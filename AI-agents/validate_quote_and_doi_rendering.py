@@ -2,7 +2,9 @@
 
 Checks current TeX sources for two Overleaf-sensitive details:
 - oversized pull-quote placeholders must use TeX macros, never literal question marks;
-- every interview must display its own BibTeX DOI on page 1 as a green hyperlinked DOI URL.
+- every interview must display its own BibTeX DOI on page 1 as a green hyperlinked DOI URL;
+- every first-page citation panel must keep citation text top-left and the DOI bottom-right
+  without overlapping retained native text spans.
 
 Optionally checks compiled PDFs for live DOI URI annotations.
 """
@@ -26,6 +28,12 @@ SPAN_RE = re.compile(
     r"\\ALIUSPlacedTextContent\{(?P<x>[^}]*)\}\{(?P<y>[^}]*)\}\{(?P<w>[^}]*)\}"
     r"\{(?P<color>[^}]*)\}\{(?P<font>[^}]*)\}\{(?P<size>[^}]*)\}\{(?P<text>.*)\}"
 )
+PANEL_BEGIN = "% ALIUS normalized citation panel begin"
+PANEL_END = "% ALIUS normalized citation panel end"
+FILL_RE = re.compile(
+    r"\\fill\[white\] \((?P<x>[0-9.]+)bp,-(?P<y>[0-9.]+)bp\) rectangle "
+    r"\+\+\((?P<w>[0-9.]+)bp,-(?P<h>[0-9.]+)bp\);"
+)
 
 
 def bib_doi(tex_path: Path) -> str:
@@ -42,6 +50,8 @@ def source_report() -> dict[str, Any]:
     missing_quote_macros: list[str] = []
     missing_hyperref: list[str] = []
     bad_doi_lines: list[str] = []
+    missing_citation_panels: list[str] = []
+    bad_panel_geometry: list[str] = []
     doi_urls: set[str] = set()
 
     for path in files:
@@ -57,20 +67,46 @@ def source_report() -> dict[str, Any]:
         doi_url = f"https://doi.org/{doi}"
         doi_urls.add(doi_url)
         expected_href = rf"\href{{{doi_url}}}{{{doi_url}}}"
+        panel_text = ""
+        if PANEL_BEGIN not in first_page:
+            missing_citation_panels.append(rel)
+        else:
+            panel_text = first_page.split(PANEL_BEGIN, 1)[1].split(PANEL_END, 1)[0]
 
         found_good_doi = False
+        panel_box = None
+        if panel_text:
+            fill_match = FILL_RE.search(panel_text)
+            if not fill_match:
+                bad_panel_geometry.append(f"{rel}: missing white citation panel box")
+            else:
+                left = float(fill_match.group("x"))
+                top = float(fill_match.group("y"))
+                right = left + float(fill_match.group("w"))
+                bottom = top + float(fill_match.group("h"))
+                panel_box = (left, top, right, bottom)
+
         for line in first_page.splitlines():
             match = SPAN_RE.search(line)
-            if not match:
-                continue
-            content = match.group("text")
-            try:
-                size = float(match.group("size"))
-            except ValueError:
-                size = 0.0
-            if content == "?" and size >= 30.0:
-                bad_large_questions.append(f"{rel}: {line.strip()}")
-            if expected_href in content and match.group("color") == "ALIUSC1F8135":
+            if match:
+                content = match.group("text")
+                x = float(match.group("x"))
+                y = float(match.group("y"))
+                try:
+                    size = float(match.group("size"))
+                except ValueError:
+                    size = 0.0
+                if content == "?" and size >= 30.0:
+                    bad_large_questions.append(f"{rel}: {line.strip()}")
+                if panel_box is not None:
+                    left, top, right, bottom = panel_box
+                    if left <= x <= right and top <= y <= bottom:
+                        bad_panel_geometry.append(
+                            f"{rel}: retained native text inside citation panel at ({x:.1f},{y:.1f}): {content[:60]}"
+                        )
+            # DOI must be a single TeX line, green, hyperlinked, and aligned to the
+            # bottom-right of the normalized citation panel.
+            if expected_href in line and "text=ALIUSC1F8135" in line and "anchor=south east" in line:
                 found_good_doi = True
         if not found_good_doi:
             bad_doi_lines.append(rel)
@@ -81,8 +117,17 @@ def source_report() -> dict[str, Any]:
         "bad_large_question_spans": bad_large_questions,
         "missing_quote_macros": missing_quote_macros,
         "missing_hyperref": missing_hyperref,
+        "missing_citation_panels": missing_citation_panels,
+        "bad_panel_geometry": bad_panel_geometry,
         "bad_or_missing_green_doi_hrefs": bad_doi_lines,
-        "source_ok": not (bad_large_questions or missing_quote_macros or missing_hyperref or bad_doi_lines),
+        "source_ok": not (
+            bad_large_questions
+            or missing_quote_macros
+            or missing_hyperref
+            or missing_citation_panels
+            or bad_panel_geometry
+            or bad_doi_lines
+        ),
     }
 
 

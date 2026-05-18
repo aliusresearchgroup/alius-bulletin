@@ -13,4 +13,5 @@
 - [ ] Any visual QA references are external or clearly non-build-path resources.
 - [ ] Completed changes are committed and pushed to `origin/main` for Overleaf sync.
 - [ ] `AI-agents/enforce_quote_and_doi_invariants.py` has been run after regenerating interview sources.
-- [ ] `AI-agents/validate_quote_and_doi_rendering.py` passes: no oversized `?` pull quotes, and all 41 interview DOI lines are green `\href` links in the first-page citation block.
+- [ ] `AI-agents/validate_quote_and_doi_rendering.py` passes: no oversized `?` pull quotes, all 41 interview DOI lines are green single-line `\href` links, and every interview has the normalized top-left/bottom-right citation panel.
+- [ ] Citation panels preserve the edition-wide structure: white left-column panel, citation text top-left, DOI bottom-right, no overlap with author/contact text or abstract/heading blocks.
