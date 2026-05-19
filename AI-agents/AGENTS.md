@@ -32,6 +32,8 @@ Maintain an Overleaf-importable source archive where bulletin pieces and issue-l
 - Treat notable quotes as semantic Q&A-segment inserts. Do not hand-freeze a blank-producing quote position; run `python AI-agents/layout_notable_quotes.py` so generated coordinates keep the quote after its source answer material and before the next question without stranding large whitespace, while using word-boundary line breaks, close quote-mark framing, and compact one-line vertical gaps.
 - Treat decorative pull quotes as framed text boxes: run `python AI-agents/standardize_pull_quote_blocks.py` after extraction/regeneration so opening and closing quote marks sit outside the centered quote body instead of becoming their own lines or landing between quote-body lines.
 - Treat text encoding and inline style spacing as first-class layout integrity. After extraction/regeneration, run `python AI-agents/fix_text_encoding_and_inline_spacing.py` to repair UTF-8 mojibake such as `â€“`, `nÂ°`, and `RaphaÃ«l`, and to restore missing word spaces at style-boundaries such as `2016` + italic `PNAS` + `paper`.
+- Preserve original-style typographic punctuation in visible prose. After broad text repairs, run `python AI-agents/smarten_visible_quotes.py --check`; do not use generic repair settings that turn original-style smart apostrophes/quotes back into ASCII.
+- For original-vs-current text fidelity work, run `python AI-agents/audit_pdf_text_fidelity.py` after local issue builds. Treat mojibake/tofu hits as blockers, but review low similarity cases manually because pull quotes, citation panels, abstracts, hidden links, and multi-column extraction can reorder otherwise correct text.
 
 ## LaTeX Workflow
 
@@ -70,6 +72,8 @@ Generated PDFs should remain untracked.
 - Run `python AI-agents/layout_notable_quotes.py --check` after notable-quote edits.
 - Run `python AI-agents/standardize_pull_quote_blocks.py --check` after pull-quote or extraction repairs.
 - Run `python AI-agents/fix_text_encoding_and_inline_spacing.py --check` after text extraction, encoding, or inline font-style repairs.
+- Run `python AI-agents/smarten_visible_quotes.py --check` after broad text repairs.
+- Run `python AI-agents/audit_pdf_text_fidelity.py` when validating article-body text against the external original PDFs.
 - Run `python AI-agents/link_in_text_citations.py --check` after citation/link edits.
 - Do not stop after a local commit. Push the completed change to `origin/main` before reporting done.
 - Summarize any visual QA limits honestly in the final note.

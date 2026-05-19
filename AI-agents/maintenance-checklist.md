@@ -6,7 +6,9 @@
 - [ ] Interview `.tex` files typeset native LaTeX and do not include published/original article PDFs.
 - [ ] Every bulletin interview has either a rendered original abstract, a user-requested revised rendered abstract, or a commented draft/TBA abstract block.
 - [ ] `AI-agents/fix_text_encoding_and_inline_spacing.py --check` has been run after text extraction or inline font-style repairs, and it reports no mojibake or missing style-boundary word-space repairs.
+- [ ] `AI-agents/smarten_visible_quotes.py --check` has been run after text repair/regeneration, and visible interview prose still uses typographic apostrophes and quotation marks rather than drifting back to ASCII placeholders.
 - [ ] `AI-agents/check_style_uniformity.py` has been run after text-extraction or formatting repairs, and it reports `issues=0` for both local style islands and category-level title/question/answer/pull-quote uniformity.
+- [ ] `AI-agents/audit_pdf_text_fidelity.py` has been run when the task is article-body fidelity against originals; review `tmp/pdf-text-fidelity/manual-review.md` honestly, with special care for extraction-order artifacts caused by pull quotes, citation panels, abstracts, and hidden links.
 - [ ] Issue files compile via `build-bulletins.ps1`, which generates local cover/issue PDFs as ignored outputs.
 - [ ] LuaLaTeX remains the faithful build path, and the pdfTeX fallback still avoids `fontspec` failures for direct Overleaf/file compiles.
 - [ ] `AI-agents/formatting-context.md` reflects any new formatting or compile-context lesson from this run.

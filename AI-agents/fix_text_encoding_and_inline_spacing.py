@@ -74,6 +74,24 @@ def is_inline_style_boundary(left: dict[str, Any], right: dict[str, Any]) -> boo
     return "Italic" in left["font"] or "Italic" in right["font"]
 
 
+def is_punctuation_word_boundary(left_text: str, right_text: str) -> bool:
+    left = plain_text(left_text).rstrip()
+    right = plain_text(right_text).lstrip()
+    if not left or not right:
+        return False
+    if left[-1] not in ",;:.?!":
+        return False
+    if not re.match(r"[A-Za-z0-9\u00ab\u2018\u201c'\"]", right):
+        return False
+    # Coordinate pairs, stereochemistry abbreviations, and chemical names such
+    # as N,N-dimethyl are intentionally comma-tight.
+    if re.search(r"\b[A-Z],$", left) and re.match(r"[A-Z](?:\b|[-,])", right):
+        return False
+    if re.search(r"\b[RS],$", left) and re.match(r"[RS]\b", right):
+        return False
+    return True
+
+
 def allowed_spacing_pair(left: dict[str, Any], right: dict[str, Any], gap: float) -> bool:
     """Return whether two adjacent spans are plausible pieces of one sentence.
 
@@ -107,6 +125,8 @@ def needs_word_space(left_text: str, right_text: str) -> bool:
         return False
     if right[0] in ".,;:!?)]}/\u2013\u2014-":
         return False
+    if left[-1] in ",;:.?!":
+        return bool(re.match(r"[A-Za-z0-9\u00ab\u2018\u201c'\"]", right))
     return bool(re.search(r"[A-Za-z0-9)\]\u00bb'\"]$", left) and re.match(r"[A-Za-z0-9\u00ab'\"]", right))
 
 
@@ -156,7 +176,7 @@ def repair_inline_spacing(lines: list[str]) -> tuple[list[str], list[dict[str, A
     repairs: list[dict[str, Any]] = []
     for row in row_groups(spans):
         for left, right in zip(row, row[1:]):
-            if not is_inline_style_boundary(left, right):
+            if not (is_inline_style_boundary(left, right) or is_punctuation_word_boundary(left["text"], right["text"])):
                 continue
             gap = right["x"] - (left["x"] + left["w"])
             if not allowed_spacing_pair(left, right, gap):
@@ -183,7 +203,7 @@ def repair_inline_spacing(lines: list[str]) -> tuple[list[str], list[dict[str, A
 
 def process_file(path: Path, write: bool = True) -> dict[str, Any]:
     original = path.read_text(encoding="utf-8")
-    fixed = fix_text(original)
+    fixed = fix_text(original, uncurl_quotes=False)
     for before, after in MANUAL_TEXT_REPAIRS.items():
         fixed = fixed.replace(before, after)
     mojibake_fixed = original != fixed
