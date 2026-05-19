@@ -11,6 +11,8 @@ following absolute nodes. This script is the formatting rule layer:
   continues on the next page, following content is pulled forward into the usable
   space;
 - running heads, page numbers, footers, and horizontal rules stay fixed;
+- notable quote boxes are centered on the PDF/text page horizontally, not
+  aligned to nearby paragraph starts;
 - quote bodies are pre-wrapped at word boundaries so notable quotes never use
   hyphenated line breaks.
 
@@ -32,6 +34,8 @@ REPO = Path(__file__).resolve().parents[1]
 TEX_GLOB = "Interviews/Issue*/*/*.tex"
 
 PAGE_TOP = 70.938
+PAGE_WIDTH = 595.0
+PAGE_CENTER_X = PAGE_WIDTH / 2.0
 PAGE_BOTTOM = 760.0
 PAGE_HEIGHT = PAGE_BOTTOM - PAGE_TOP
 FOOTER_TOP = 780.0
@@ -170,7 +174,7 @@ def normalize_quote_slot_metadata(lines: list[str]) -> tuple[list[str], int]:
                 continue
             out.append(f"{SLOT_BEGIN}\n")
             out.append(f"% ALIUS notable quote id: {quote_id}\n")
-            out.append("% ALIUS notable quote rule: segment-auto-place; generated coordinates, do not hand-position\n")
+            out.append("% ALIUS notable quote rule: segment-auto-place; page-centered x; generated coordinates, do not hand-position\n")
             out.append(lines[i + 1])
             out.append(f"{SLOT_END}\n")
             changes += 1
@@ -351,6 +355,39 @@ def replace_second_arg_y(line: str, y: float) -> str:
     if QUOTE_RE.match(line):
         return re.sub(r"(\\ALIUSMaybeNotableQuoteAt\{[^}]+\}\{)[^}]+", rf"\g<1>{y:.3f}", line, count=1)
     return line
+
+
+def replace_quote_x_width(line: str, x: float, width: float | None = None) -> str:
+    match = QUOTE_RE.match(line)
+    if not match:
+        return line
+    new_width = float(match.group("w")) if width is None else width
+    return (
+        f"{match.group('prefix')}\\ALIUSMaybeNotableQuoteAt"
+        f"{{{x:.3f}}}{{{match.group('y')}}}{{{new_width:.3f}}}{{{match.group('quote')}}}"
+        f"{match.group('suffix')}"
+    )
+
+
+def centered_quote_x(width: float) -> float:
+    return PAGE_CENTER_X - width / 2.0
+
+
+def normalize_quote_horizontal_center(lines: list[str]) -> tuple[list[str], int]:
+    """Center semantic memorable/notable quotes on the PDF page.
+
+    The y coordinate remains governed by segment-aware placement. The x
+    coordinate is universal: the quote box sits at the page center rather than
+    inheriting the paragraph's left edge or a hand-tuned local anchor.
+    """
+    out = lines[:]
+    changes = 0
+    for quote in parse_quotes(lines):
+        desired_x = centered_quote_x(quote.width)
+        if abs(quote.x - desired_x) > 0.01:
+            out[quote.idx] = replace_quote_x_width(out[quote.idx], desired_x)
+            changes += 1
+    return out, changes
 
 
 def line_is_movable_absolute(lines: list[str], idx: int, quote_idx: int) -> bool:
@@ -631,6 +668,7 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
     lines = original.splitlines(keepends=True)
     lines, metadata_changes = normalize_quote_slot_metadata(lines)
     lines, linebreak_changes = normalize_quote_linebreaks(lines)
+    lines, horizontal_center_changes = normalize_quote_horizontal_center(lines)
     reflow_shifts: list[dict[str, Any]] = []
 
     # Iterate: a reflow changes downstream pages/y coordinates, so reparse.
@@ -698,6 +736,11 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
             problems.append(f"{quote.quote_id}: no preceding question found")
         if next_question and next_question.idx < quote.idx:
             problems.append(f"{quote.quote_id}: quote is not before next question")
+        desired_x = centered_quote_x(quote.width)
+        if abs(quote.x - desired_x) > 0.1:
+            problems.append(
+                f"{quote.quote_id}: quote x={quote.x:.1f}bp is not page-centered at {desired_x:.1f}bp"
+            )
         dead_space = 0.0
         if next_span:
             if next_span.page > quote.page:
@@ -712,6 +755,8 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
                 "id": quote.quote_id,
                 "page": quote.page,
                 "y": quote.y,
+                "x": quote.x,
+                "center_x": round(quote.x + quote.width / 2.0, 1),
                 "estimated_height": round(qh, 1),
                 "next_content_page": next_span.page if next_span else None,
                 "dead_space_bp": round(dead_space, 1),
@@ -726,6 +771,7 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
         "quotes": quote_reports,
         "metadata_blocks_added": metadata_changes,
         "linebreaks_normalized": linebreak_changes,
+        "horizontal_center_normalized": horizontal_center_changes,
         "reflow_shifts": reflow_shifts,
         "row_flow_repairs": row_flow_repairs,
         "local_spacing_repairs": local_spacing_repairs,
@@ -750,6 +796,7 @@ def main() -> int:
         "changed_files": sum(1 for item in per_file if item["changed"]),
         "reflowed_quotes": sum(len(item["reflow_shifts"]) for item in per_file),
         "linebreak_normalized_quotes": sum(item["linebreaks_normalized"] for item in per_file),
+        "horizontal_centered_quotes": sum(item["horizontal_center_normalized"] for item in per_file),
         "row_flow_repaired_quotes": sum(len(item["row_flow_repairs"]) for item in per_file),
         "local_spacing_repaired_quotes": sum(len(item["local_spacing_repairs"]) for item in per_file),
         "files": per_file,

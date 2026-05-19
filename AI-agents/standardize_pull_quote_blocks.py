@@ -11,7 +11,7 @@ change page flow. It only normalizes the geometry of each extracted pull-quote
 cluster:
 
 - body lines remain in their existing line breaks but are centered as a compact
-  rectangular text box;
+  rectangular text box on the PDF page centerline;
 - the opening quote mark sits just outside the top-left of the body box;
 - the closing quote mark sits just outside the bottom-right of the final body
   line, never between body lines;
@@ -42,6 +42,8 @@ QUOTE_OPEN = r"\ALIUSPullQuoteOpen"
 QUOTE_CLOSE = r"\ALIUSPullQuoteClose"
 PULL_QUOTE_TEXT_COLORS = {"ALIUSC000000", "ALIUSC595959", "ALIUSC7F7F7F"}
 MIN_SURROUNDING_GAP = 18.0
+PAGE_WIDTH = 595.0
+PAGE_CENTER_X = PAGE_WIDTH / 2.0
 PAGE_TEXT_BOTTOM = 760.0
 
 
@@ -270,9 +272,7 @@ def repair_one_cross_page_pull_quote(lines: list[str]) -> tuple[list[str], dict[
         if first_y + shift + gap * len(body) > PAGE_TEXT_BOTTOM + 0.1:
             continue
 
-        left = min(span.x for span in body)
-        right = max(span.x + span.width for span in body)
-        center = (left + right) / 2.0
+        center = PAGE_CENTER_X
         new_lefts = {span.idx: center - span.width / 2.0 for span in body}
         body_left = min(new_lefts.values())
         body_right = max(new_lefts[span.idx] + span.width for span in body)
@@ -359,9 +359,7 @@ def process_file(path: Path, write: bool = True) -> dict[str, Any]:
             for row in rows
         ]
         max_width = max(right - left for left, right, _row in row_boxes)
-        left = min(left for left, _right, _row in row_boxes)
-        right = max(right for _left, right, _row in row_boxes)
-        center = (left + right) / 2.0
+        center = PAGE_CENTER_X
         first = min(block.body, key=lambda span: (span.y, span.x))
         above, below = surrounding_spans(spans, block)
         line_gap = quote_line_gap(rows)

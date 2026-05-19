@@ -15,7 +15,8 @@ Checks current TeX sources for two Overleaf-sensitive details:
 - closing decorative pull quotes must sit on the final pull-quote text baseline
   and to the right of the text box, never between quote-body lines.
 - legacy absolute-position pull-quote body lines must be centered as one compact
-  rectangle, so shorter lines do not drift left while the marks stay fixed.
+  rectangle on the PDF page centerline, so shorter lines do not drift left while
+  the marks stay fixed.
 - semantic notable quotes must be pre-wrapped at word boundaries, not left for
   TeX to hyphenate inside a fixed-width box.
 
@@ -48,6 +49,8 @@ FILL_RE = re.compile(
     r"\+\+\((?P<w>[0-9.]+)bp,-(?P<h>[0-9.]+)bp\);"
 )
 PULL_QUOTE_TEXT_COLORS = {"ALIUSC000000", "ALIUSC595959", "ALIUSC7F7F7F"}
+PAGE_WIDTH = 595.0
+PAGE_CENTER_X = PAGE_WIDTH / 2.0
 QUOTE_OPEN = r"\ALIUSPullQuoteOpen"
 QUOTE_CLOSE = r"\ALIUSPullQuoteClose"
 SEMANTIC_QUOTE_RE = re.compile(
@@ -200,6 +203,10 @@ def source_report() -> dict[str, Any]:
             if drift > 2.0:
                 bad_pull_quote_alignment.append(
                     f"{rel}:{opener['line']}: pull-quote body centers drift by {drift:.1f}bp"
+                )
+            if abs(center - PAGE_CENTER_X) > 2.0:
+                bad_pull_quote_alignment.append(
+                    f"{rel}:{opener['line']}: pull-quote center x={center:.1f}bp is not page-centered at {PAGE_CENTER_X:.1f}bp"
                 )
 
         first_page = text.split(r"\end{tikzpicture}", 1)[0]
