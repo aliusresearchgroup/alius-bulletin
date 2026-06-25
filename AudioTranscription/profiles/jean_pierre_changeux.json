@@ -1,0 +1,39 @@
+{
+    "speaker_slug":  "jean_pierre_changeux",
+    "speaker_name":  "Jean-Pierre Changeux",
+    "consent":  "confirmed",
+    "profile_status":  "candidate_ready",
+    "source_status":  "downloaded_reference_candidate",
+    "voice_engine":  "F5TTS_v1_Base",
+    "roles":  [
+                  "interviewee"
+              ],
+    "interviews":  [
+                       "Issue07/Changeux_Dumas"
+                   ],
+    "youtube_query":  "Jean-Pierre Changeux lecture interview consciousness neuroscience",
+    "source_type":  "youtube_source_candidate",
+    "source_audio":  "AudioTranscription/sources/raw/jean_pierre_changeux/8yWmxcRkZz0.m4a.part",
+    "reference_audio":  "AudioTranscription/references/jean_pierre_changeux/jean_pierre_changeux_youtube_8yWmxcRkZz0_ref_v2.wav",
+    "reference_text":  "But to my opinion, it\u0027s a very critical aspect of consciousness, which is to report verbally or by an intended gesture.",
+    "reference_source_start_seconds":  1220,
+    "reference_duration_seconds":  8.6,
+    "demographics":  {
+                         "person":  "Jean-Pierre Changeux",
+                         "voice_gender":  "male",
+                         "birth_year_or_age":  "1936",
+                         "nationality_signal":  "France",
+                         "accent_region":  "american",
+                         "age_group":  "older",
+                         "voice":  "am_michael",
+                         "source_url":  "https://en.wikipedia.org/wiki/Jean-Pierre_Changeux",
+                         "notes":  "public biography; default American accent per request because not UK"
+                     },
+    "notes":  "F5-safe ref_v2 recut from the existing local Heller lecture audio fragment because the prior French interview window was noisy and ASR-garbled; tiny Whisper ASR spotcheck passed on 2026-06-03.",
+    "source_url":  "https://www.youtube.com/watch?v=8yWmxcRkZz0",
+    "source_title":  "2012 Heller Lecture - Prof. Jean-Pierre Changeux",
+    "source_channel":  "ELSC Video",
+    "reference_filter_preset":  "speech_reference_crisp_noisy_mic",
+    "reference_sha256":  "FA967EE8D6137097CBABD3CD4CBE2C72FAA0057A7CD6FC7B518B81934BB3F455",
+    "reference_review_status":  "asr_spotcheck_passed"
+}

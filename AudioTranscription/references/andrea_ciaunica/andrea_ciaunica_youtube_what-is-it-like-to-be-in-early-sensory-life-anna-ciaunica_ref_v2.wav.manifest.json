@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\andrea_ciaunica\\what-is-it-like-to-be-in-early-sensory-life-anna-ciaunica.mp3",
+  "output": "AudioTranscription\\references\\andrea_ciaunica\\andrea_ciaunica_youtube_what-is-it-like-to-be-in-early-sensory-life-anna-ciaunica_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 125.65,
+  "duration_seconds": 9.85,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "9.850000",
+      "size": "472912",
+      "bit_rate": "384090"
+    }
+  },
+  "input_sha256": "0B2529CEE4ADFC8F72258F7937C770D21F30B9C5B1A9A493E942F44FFE25C4D3",
+  "output_sha256": "79EFCD09250811374758CA74613CB22A2A1C00D51FC7144382714716017EF62A"
+}

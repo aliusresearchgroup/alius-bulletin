@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "monima_chadha",
+  "speaker_name": "Monima Chadha",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue05/Chadha_Aviles_Koroma"
+  ],
+  "youtube_query": "Monima Chadha lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/monima_chadha/tAd5oRWYwWY.webm",
+  "reference_audio": "AudioTranscription/references/monima_chadha/monima_chadha_youtube_tAd5oRWYwWY_ref_v4.wav",
+  "reference_text": "Vasubandhu says, the question is, what is meant by this phrase? Devadatta, what does the name refer to? What's the reference?",
+  "reference_source_start_seconds": 562.34,
+  "reference_duration_seconds": 7.48,
+  "demographics": {
+    "person": "Monima Chadha",
+    "voice_gender": "female",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "India",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "af_aoede",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Monima%20Chadha&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase and avoided the next clause tail.",
+  "source_url": "https://www.youtube.com/watch?v=tAd5oRWYwWY",
+  "source_title": "Seminar in Philosophy II - Monima Chadha 2023.04.28",
+  "source_channel": "國立陽明交通大學心智哲學研究所",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "AEAAB4FB69A53488A290D3F2F43846ECF310AC56F186354E5E0A1058AEF38815",
+  "reference_review_status": "asr_spotcheck_passed"
+}

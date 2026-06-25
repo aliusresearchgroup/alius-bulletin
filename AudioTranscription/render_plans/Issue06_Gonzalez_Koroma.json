@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue06/Gonzalez_Koroma",
+  "interview_slug": "Issue06_Gonzalez_Koroma",
+  "source_qa_dir": "output/audio_interviews/Issue06/Gonzalez_Koroma",
+  "output_file_stem": "Issue06_Gonzalez_Koroma_clone_full_interview",
+  "voices": {
+    "question": "matthieu_koroma",
+    "answer": "juan_gonzalez"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Matthieu Koroma",
+        "speaker_slug": "matthieu_koroma"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Juan Gonzalez",
+        "speaker_slug": "juan_gonzalez"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

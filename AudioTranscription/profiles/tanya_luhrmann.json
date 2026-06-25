@@ -1,0 +1,50 @@
+{
+  "speaker_slug": "tanya_luhrmann",
+  "speaker_name": "Tanya Luhrmann",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue01/Luhrmann_Fortier"
+  ],
+  "youtube_query": "Tanya Luhrmann lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/tanya_luhrmann/GWrxx2HLEis.webm",
+  "source_captions": "AudioTranscription/sources/raw/tanya_luhrmann/GWrxx2HLEis.en-orig.vtt",
+  "reference_audio": "AudioTranscription/references/tanya_luhrmann/tanya_luhrmann_youtube_GWrxx2HLEis_ref_v3.wav",
+  "reference_text": "The good old-fashioned ethnographies were kind of wonderful because they were written with the idea that nobody who was reading them had ever been to, say, Africa. So I was studying at Cambridge.",
+  "reference_source_start_seconds": 881.28,
+  "reference_duration_seconds": 10.7,
+  "demographics": {
+    "person": "Tanya Luhrmann",
+    "voice_gender": "female",
+    "birth_year_or_age": "1959",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "older",
+    "voice": "af_nicole",
+    "source_url": "https://en.wikipedia.org/wiki/Tanya_Luhrmann",
+    "notes": "public biography"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Current reference is sub-12 seconds and sentence-bounded; tiny.en heard 'starting' for 'studying' at the end, so the caption-backed text is retained pending listening review.",
+  "source_url": "https://www.youtube.com/watch?v=GWrxx2HLEis",
+  "source_title": "Witches, Psychiatrists, and Evangelicals with Tanya Luhrmann - Conversations with History",
+  "source_channel": "University of California Television (UCTV)",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "F5917C9A588CA5231B51E0B502345AFE6FD9E7A88030C900255E25598740A107",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/tanya_luhrmann/tanya_luhrmann_youtube_GWrxx2HLEis_ref.wav",
+      "reason": "Fourteen-second reference exceeded F5's safe prompt length and continued into additional prompt text."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/tanya_luhrmann/tanya_luhrmann_youtube_GWrxx2HLEis_ref_v2.wav",
+      "reason": "Shorter candidate still trailed into an unfinished next sentence."
+    }
+  ]
+}

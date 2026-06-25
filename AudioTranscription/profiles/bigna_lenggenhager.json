@@ -1,0 +1,39 @@
+{
+    "speaker_slug":  "bigna_lenggenhager",
+    "speaker_name":  "Bigna Lenggenhager",
+    "consent":  "confirmed",
+    "profile_status":  "candidate_ready",
+    "source_status":  "downloaded_reference_candidate",
+    "voice_engine":  "F5TTS_v1_Base",
+    "roles":  [
+                  "interviewee"
+              ],
+    "interviews":  [
+                       "Issue04/Lenggenhager_Ho_Milliere"
+                   ],
+    "youtube_query":  "Bigna Lenggenhager lecture interview consciousness neuroscience",
+    "source_type":  "youtube_source_candidate",
+    "source_audio":  "AudioTranscription/sources/raw/bigna_lenggenhager/-a4i46lp3Nk.webm",
+    "reference_audio":  "AudioTranscription/references/bigna_lenggenhager/bigna_lenggenhager_youtube_-a4i46lp3Nk_ref_v2.wav",
+    "reference_text":  "And again, through touch, you can increase this feeling by providing synchronous information about the touch seen on the other person and the one felt on your own body.",
+    "reference_source_start_seconds":  345,
+    "reference_duration_seconds":  11.35,
+    "demographics":  {
+                         "person":  "Bigna Lenggenhager",
+                         "voice_gender":  "female",
+                         "birth_year_or_age":  "unknown",
+                         "nationality_signal":  "Switzerland",
+                         "accent_region":  "american",
+                         "age_group":  "adult",
+                         "voice":  "af_sarah",
+                         "source_url":  "https://www.wikidata.org/w/index.php?search=Bigna%20Lenggenhager\u0026title=Special%3ASearch\u0026ns0=1",
+                         "notes":  "public metadata sparse; default American accent per request"
+                     },
+    "notes":  "F5-safe ref_v2 recut from the existing YouTube source; caption-backed wording and tiny Whisper ASR spotcheck passed on 2026-06-03.",
+    "source_url":  "https://www.youtube.com/watch?v=-a4i46lp3Nk",
+    "source_title":  "Bigna Lenggenhager | Talk 3",
+    "source_channel":  "Neuroscience \u0026 Humanities",
+    "reference_filter_preset":  "lecture_cleanup",
+    "reference_sha256":  "0390A6B46617B7ABCD54E6B2B388775A266C42D7A014FBBFEB0574CEB103C6F6",
+    "reference_review_status":  "asr_spotcheck_passed"
+}

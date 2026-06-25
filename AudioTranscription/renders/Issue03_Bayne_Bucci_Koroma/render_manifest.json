@@ -1,0 +1,223 @@
+{
+  "interview_id": "Issue03/Bayne_Bucci_Koroma",
+  "interview_slug": "Issue03_Bayne_Bucci_Koroma",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "tts_speed": 1.0,
+  "tts_voice_speeds": {},
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 0.97,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.97",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "tim_bayne",
+      "answer_voice_segments": [
+        "tim_bayne"
+      ]
+    }
+  ],
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue03_Bayne_Bucci_Koroma\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue03_Bayne_Bucci_Koroma\\Issue03_Bayne_Bucci_Koroma_clone_full_interview.wav",
+    "duration_seconds": 1104.544,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "8EDF846B5804762ECF6829DC9AD2FAC3C0CAC960870F8B75A479014A4EFAE743"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue03_Bayne_Bucci_Koroma\\Issue03_Bayne_Bucci_Koroma_clone_full_interview.mp3",
+    "duration_seconds": 1138.694,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128009,
+    "sha256": "A76BCD36E9052C1251F3415B9225CD4DAC6E4AC7DE56B6A820A83EB389541AEA"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\alessio_bucci.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\tim_bayne.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "alessio_bucci",
+      "speaker_name": "Alessio Bucci",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\alessio_bucci.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/alessio_bucci/f_5MoCn8rXA.webm",
+      "source_url": "https://www.youtube.com/watch?v=f_5MoCn8rXA",
+      "reference_audio": "AudioTranscription/references/alessio_bucci/alessio_bucci_youtube_f_5MoCn8rXA_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.850",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.85",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "F8DD995025B04FC047662C888F4FE86BB6FFB97A3384B3D3ECB9CFF92F60E177",
+      "actual_reference_sha256": "F8DD995025B04FC047662C888F4FE86BB6FFB97A3384B3D3ECB9CFF92F60E177",
+      "reference_text_word_count": "27",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "tim_bayne",
+      "speaker_name": "Tim Bayne",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\tim_bayne.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/tim_bayne/2XfADVXGxps.webm",
+      "source_url": "https://www.youtube.com/watch?v=2XfADVXGxps",
+      "reference_audio": "AudioTranscription/references/tim_bayne/tim_bayne_youtube_2XfADVXGxps_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "10.000",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "10.0",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "B35E8323206637F170B9EE7D7B6E89273907761F4A18175D96E6C4F94DBD6BF2",
+      "actual_reference_sha256": "B35E8323206637F170B9EE7D7B6E89273907761F4A18175D96E6C4F94DBD6BF2",
+      "reference_text_word_count": "28",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+      "profile_status": "working",
+      "source_status": "",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/matthieu_koroma/kEmCbay9t1w.wav",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_audio": "AudioTranscription/references/matthieu_koroma/matthieu_koroma_youtube_kEmCbay9t1w_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "6.750",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "6.75",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "actual_reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "reference_text_word_count": "21",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    }
+  ],
+  "human_listening_check": "asr_first60_passed_pending_full_human_listening",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue03_Bayne_Bucci_Koroma/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue03_Bayne_Bucci_Koroma/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "routing_check": "passed_manifest_round_robin_alessio_matthieu_questions_tim_answers",
+    "pronunciation_check": "not_applicable_first60_no_ALIUS_occurrence",
+    "notes": "ASR follows intended opening question and Tim Bayne answer; no spoken speaker labels detected.",
+    "excerpt": "Consciousness remains one of the most puzzling phenomena for both philosophers and scientists\ncould you explain what triggered your interest in this topic?\nWhat are the questions about consciousness you have been addressing with your research?\nDo you think that there are questions about consciousness that cannot be answered?\nMy initial interest in consciousness focused on the unity of consciousness.\nI was struck by the fact that philosophers have traditionally regarded unity as one of the central features of consciousness\nwhereas many consciousness scientists and a significant number of philosophers\nseem to assume that consciousness is anything but unified.\nI began to wonder whether those who were pro unity had the same conception of the unity of consciousness\nas those who were against it and the more I read on the topic, the more convinced I became\nthat there were many conceptions of th"
+  },
+  "quality_checks": {
+    "duration_seconds": 1138.694,
+    "sha256": "A76BCD36E9052C1251F3415B9225CD4DAC6E4AC7DE56B6A820A83EB389541AEA",
+    "mean_volume_db": -18.3,
+    "max_volume_db": -2.4,
+    "estimated_wpm": 164.1,
+    "pace_status": "ok",
+    "target_wpm_range": "125-165"
+  }
+}

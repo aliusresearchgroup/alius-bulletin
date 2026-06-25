@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\tanya_luhrmann\\GWrxx2HLEis.webm",
+  "output": "AudioTranscription\\references\\tanya_luhrmann\\tanya_luhrmann_youtube_GWrxx2HLEis_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 885.28,
+  "duration_seconds": 9.0,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "9.000000",
+      "size": "432078",
+      "bit_rate": "384069"
+    }
+  },
+  "input_sha256": "1FBA4DDBDB100C278F0D4CE11B64AD8358C550E19E22B0849AB3A297B54C72ED",
+  "output_sha256": "6757903B53F5349205AD9037700CF0218FD569868645B37A4575DB2B72B4BDFA"
+}

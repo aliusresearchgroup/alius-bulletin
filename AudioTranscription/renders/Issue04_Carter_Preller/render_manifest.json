@@ -1,0 +1,92 @@
+{
+  "interview_id": "Issue04/Carter_Preller",
+  "interview_slug": "Issue04_Carter_Preller",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue04_Carter_Preller\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue04_Carter_Preller\\Issue04_Carter_Preller_clone_full_interview.wav",
+    "duration_seconds": 1114.439,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "E5C0CFEA2E9760C206EEB5D5FE0E0D4A75BCDAB44BF785E362B644BD48CC6430",
+    "retained": false,
+    "cleanup_note": "Intermediate work WAV removed after verified MP3 render. Regenerate with render_interview.py --force if needed."
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue04_Carter_Preller\\Issue04_Carter_Preller_clone_full_interview.mp3",
+    "duration_seconds": 1114.439,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128008,
+    "sha256": "8F05FB42BB73488ABDE4CEA2022002951AE22CF4C35DA5148DD7E080FE30BE47"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\katrin_preller.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\olivia_carter.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "katrin_preller",
+      "speaker_name": "Katrin Preller",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\katrin_preller.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/katrin_preller/t9KMDg_ZGyg.webm",
+      "source_url": "https://www.youtube.com/watch?v=t9KMDg_ZGyg",
+      "reference_audio": "AudioTranscription/references/katrin_preller/katrin_preller_youtube_t9KMDg_ZGyg_ref_v4.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "11.350",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "11.35",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "71E7806851B1C5C25482A09824A2CBF81BB9DB910884373D689B0E9821BA3C97",
+      "actual_reference_sha256": "71E7806851B1C5C25482A09824A2CBF81BB9DB910884373D689B0E9821BA3C97",
+      "reference_text_word_count": "20",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "olivia_carter",
+      "speaker_name": "Olivia Carter",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\olivia_carter.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/olivia_carter/s-Y_9oxxBj8.webm",
+      "source_url": "https://www.youtube.com/watch?v=s-Y_9oxxBj8",
+      "reference_audio": "AudioTranscription/references/olivia_carter/olivia_carter_youtube_s-Y_9oxxBj8_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.000",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "F32E379768B0054F56F44B6D0DDC23069EC048AA0E7156BABD64F5F325FCE5BB",
+      "actual_reference_sha256": "F32E379768B0054F56F44B6D0DDC23069EC048AA0E7156BABD64F5F325FCE5BB",
+      "reference_text_word_count": "18",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    }
+  ],
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue04_Carter_Preller/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue04_Carter_Preller/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "human_listening_check": "pending"
+}

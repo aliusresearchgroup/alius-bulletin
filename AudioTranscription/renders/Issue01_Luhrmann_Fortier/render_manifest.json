@@ -1,0 +1,147 @@
+{
+  "interview_id": "Issue01/Luhrmann_Fortier",
+  "interview_slug": "Issue01_Luhrmann_Fortier",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue01_Luhrmann_Fortier\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue01_Luhrmann_Fortier\\Issue01_Luhrmann_Fortier_clone_full_interview.wav",
+    "duration_seconds": 1443.035,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "7232D73274D2FD1DA3944402D9EAD3FA3623CE7DDB10EEE00CA2D42A6F0AF8BC",
+    "retained": false,
+    "cleanup_note": "Intermediate work WAV removed after verified MP3 render. Regenerate with render_interview.py --force if needed."
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue01_Luhrmann_Fortier\\Issue01_Luhrmann_Fortier_clone_full_interview.mp3",
+    "duration_seconds": 1443.035,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128007,
+    "sha256": "D87622B6672CD33CF3702B644CC1EF78619ADD9D244C723D65D656577FCE74DF"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\martin_fortier.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\tanya_luhrmann.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "martin_fortier",
+      "speaker_name": "Martin Fortier",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\martin_fortier.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/martin_fortier/_irgS0b1q1c.webm",
+      "source_url": "https://www.youtube.com/watch?v=_irgS0b1q1c",
+      "reference_audio": "AudioTranscription/references/martin_fortier/martin_fortier_youtube_irgS0b1q1c_ref_v6.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "7.250",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "7.25",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "8AF1ED72991F147F77003154763A24C5656DE0C280C8FA7DFF0E9EF3BFED93AE",
+      "actual_reference_sha256": "8AF1ED72991F147F77003154763A24C5656DE0C280C8FA7DFF0E9EF3BFED93AE",
+      "reference_text_word_count": "17",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "tanya_luhrmann",
+      "speaker_name": "Tanya Luhrmann",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\tanya_luhrmann.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/tanya_luhrmann/GWrxx2HLEis.webm",
+      "source_url": "https://www.youtube.com/watch?v=GWrxx2HLEis",
+      "reference_audio": "AudioTranscription/references/tanya_luhrmann/tanya_luhrmann_youtube_GWrxx2HLEis_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "10.700",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "10.7",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "F5917C9A588CA5231B51E0B502345AFE6FD9E7A88030C900255E25598740A107",
+      "actual_reference_sha256": "F5917C9A588CA5231B51E0B502345AFE6FD9E7A88030C900255E25598740A107",
+      "reference_text_word_count": "33",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    }
+  ],
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue01_Luhrmann_Fortier/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue01_Luhrmann_Fortier/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening question and shows no obvious profile prompt-tail leakage."
+  },
+  "human_listening_check": "pending",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "martin_fortier",
+      "answer_voice": "tanya_luhrmann",
+      "answer_voice_segments": [
+        "tanya_luhrmann"
+      ]
+    }
+  ],
+  "routing_check": "passed: 6 Q&A units route questions to martin_fortier and answers to tanya_luhrmann; speaker labels are metadata only.",
+  "speaker_label_check": "passed: generated F5 control text uses bracketed voice tags only; speaker names are not part of spoken QUESTION/ANSWER text.",
+  "pronunciation_check": "passed: protocol normalizes uppercase ALIUS to spoken alius when present."
+}

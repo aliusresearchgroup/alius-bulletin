@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\frederique_de_vignemont\\W8IZ9Q1Ihe4.m4a",
+  "output": "AudioTranscription\\references\\frederique_de_vignemont\\frederique_de_vignemont_youtube_W8IZ9Q1Ihe4_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 2113.0,
+  "duration_seconds": 11.2,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "11.200000",
+      "size": "537678",
+      "bit_rate": "384055"
+    }
+  },
+  "input_sha256": "6521D95534662EDCEBCFA4AA45305D60D41DF79451BD96C45A3C7EE8AB9F7CCF",
+  "output_sha256": "1ADCD0516BC79AD0813C8F9B4ED80B1E2710426A5F0B26E7F1F60125A71E8FA1"
+}

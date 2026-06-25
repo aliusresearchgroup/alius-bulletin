@@ -1,0 +1,73 @@
+{
+  "speaker_slug": "jasmine_t_ho",
+  "speaker_name": "Jasmine T. Ho",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue04/Lenggenhager_Ho_Milliere"
+  ],
+  "youtube_query": "Jasmine T. Ho lecture interview consciousness neuroscience",
+  "source_type": "srf_public_broadcast_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/jasmine_t_ho/srf_einstein_jasmine_36m48_36m57.mp4",
+  "source_captions": "AudioTranscription/sources/raw/jasmine_t_ho/srf_einstein_wie_rassismus_entsteht.de.vtt",
+  "reference_audio": "AudioTranscription/references/jasmine_t_ho/jasmine_t_ho_srf_einstein_wie_rassismus_entsteht_ref_v2.wav",
+  "reference_text": "Die virtuelle Realität kann zum Teil so ein guter Trigger sein, um es mal aus der Perspektive der ersten Person zu erleben.",
+  "reference_source_start_seconds": 0.0,
+  "reference_duration_seconds": 8.4,
+  "demographics": {
+    "person": "Jasmine T. Ho",
+    "voice_gender": "female",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "unknown",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "af_alloy",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Jasmine%20T.%20Ho%20consciousness&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "SRF Einstein public broadcast source identifies Jasmine Ho as Neuropsychologin, Uni Zürich. Reference v2 is a minimal section download from absolute program time about 00:36:48.206-00:36:56.606, cleaned with lecture_cleanup, subtitle-window checked, and recut shorter than v1 to remove the start of the following sentence. Small Whisper German spot-check follows the intended sentence closely but remains imperfect on Swiss German; listening review is still recommended before production rendering.",
+  "source_url": "https://www.srf.ch/play/tv/-/video/-?urn=urn:srf:video:28f4c73e-4cbd-46de-a985-1e367a35f314",
+  "source_title": "Wie Rassismus entsteht",
+  "source_channel": "SRF Einstein",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "BA0053873CC5E84C3E2D74B7242A78C24F03EDF840565F15E63652BD7306518B",
+  "reference_review_status": "asr_spotcheck_passed_caption_window_verified_needs_listening_review",
+  "source_candidates": [
+    {
+      "url": "https://www.srf.ch/play/tv/-/video/-?urn=urn:srf:video:28f4c73e-4cbd-46de-a985-1e367a35f314",
+      "title": "Wie Rassismus entsteht",
+      "status": "downloaded_subtitles_and_reference_section",
+      "why_likely_correct": "SRF/IMDb context identifies Jasmine Ho as a University of Zurich neuropsychologist in this episode; the selected yellow-captioned window is her speech.",
+      "reference_window": "00:36:48.206-00:36:56.606"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=hLgQwzMSRDs",
+      "title": "Wunsch nach Behinderung: Deshalb wuenscht sich Jogi eine Amputation I reporter",
+      "status": "secondary_source_not_used",
+      "failure_reason": "Embedded on a SimplyScience Jasmine Ho profile page, but not needed because the SRF source has stronger named-speaker context and subtitle timing."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41338124/",
+      "title": "PubMed record listing Jasmine T. Ho",
+      "status": "identity_only_no_media",
+      "failure_reason": "Confirms scholarly identity but exposes no audio or video source."
+    },
+    {
+      "url": "https://www.frontiersin.org/research-topics/75729/implementation-and-effectiveness-of-virtual-reality-applications-for-mental-health-assessment-and-intervention",
+      "title": "Frontiers research-topic editor page",
+      "status": "identity_only_no_media",
+      "failure_reason": "Confirms public academic context but exposes no usable speaker audio/video."
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=%22Jasmine+T.+Ho%22",
+      "title": "Exact-name YouTube search",
+      "status": "search_no_confirmed_voice_source",
+      "failure_reason": "Exact-name and affiliation/topic searches returned Jasmine Thompson, Cassey Ho, Jasmine Sandlas, and other namesakes/noise rather than the ALIUS person."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\zoltan_dienes\\fiHKhZtsL_0.webm",
+  "output": "AudioTranscription\\references\\zoltan_dienes\\zoltan_dienes_youtube_fiHKhZtsL_0_ref_v4.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 782.76,
+  "duration_seconds": 10.1,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.100000",
+      "size": "484878",
+      "bit_rate": "384061"
+    }
+  },
+  "input_sha256": "53992FA70F50C78A308B4F1CEBE9ECC06D057F41D1C8D08F67CE98BD712165B7",
+  "output_sha256": "00F4EC47934912D906B1A27B100DA7A36AF70208E7C911C56272F28CF2511BF2"
+}

@@ -1,0 +1,33 @@
+{
+  "interview_id": "Issue06/Gonzalez_Koroma",
+  "interview_slug": "Issue06_Gonzalez_Koroma",
+  "status": "dry_run",
+  "engine": "KokoClone_Kokoro_ONNX_Kanade",
+  "mode": "tts_then_voice_conversion",
+  "kokoclone_dir": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone",
+  "kokoclone_cli": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone\\cli.py",
+  "lang": "en",
+  "max_chars": 700,
+  "units": [
+    {
+      "index": 1,
+      "source": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\output\\audio_interviews\\Issue06\\Gonzalez_Koroma\\qa_001.txt",
+      "chunks": 8
+    }
+  ],
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 1.0,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\juan_gonzalez.json"
+  ],
+  "human_listening_check": "pending"
+}

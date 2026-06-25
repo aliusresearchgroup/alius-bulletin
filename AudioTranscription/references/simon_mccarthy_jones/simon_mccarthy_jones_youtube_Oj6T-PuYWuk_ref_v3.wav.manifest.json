@@ -1,0 +1,27 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\simon_mccarthy_jones\\Oj6T-PuYWuk.webm",
+  "output": "AudioTranscription\\references\\simon_mccarthy_jones\\simon_mccarthy_jones_youtube_Oj6T-PuYWuk_ref_v3.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 2093.12,
+  "duration_seconds": 8.8,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.800000",
+      "size": "422478",
+      "bit_rate": "384070"
+    }
+  },
+  "input_sha256": "816606F3E87C469082792CD0A7874A27F0DA44C0A613DBAE1391A69BB002297A",
+  "output_sha256": "45E2757ECE7254E731D3A87EC5BE76F3C14D5BFD9D71640C9ED08214F21B61D3"
+}

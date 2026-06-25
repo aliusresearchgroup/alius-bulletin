@@ -1,0 +1,44 @@
+{
+  "speaker_slug": "raphael_milliere",
+  "speaker_name": "Raphael Milliere",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue01/Carhart-Harris_Fortier_Milliere",
+    "Issue01/Windt_Bucci_Milliere",
+    "Issue02/Friston",
+    "Issue02/Metzinger_Limanowski_Milliere",
+    "Issue04/Lenggenhager_Ho_Milliere",
+    "Issue04/Vignemont_Milliere_Serrahima"
+  ],
+  "youtube_query": "Raphael Milliere lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/raphael_milliere/Q3MCTZ1P_J0.webm",
+  "reference_audio": "AudioTranscription/references/raphael_milliere/raphael_milliere_youtube_Q3MCTZ1P_J0_ref_v3.wav",
+  "reference_text": "which we look at the different sources of evidence to arbitrate these agreements about the capacities of language models.",
+  "reference_source_start_seconds": 554.15,
+  "reference_duration_seconds": 7.35,
+  "demographics": {
+    "person": "Raphael Milliere",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "France",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_liam",
+    "source_url": "https://www.wikidata.org/wiki/Q91344619",
+    "notes": "Wikidata public researcher page; default American accent per request"
+  },
+  "notes": "Short F5-safe YouTube reference re-cut with lecture_cleanup and ASR spot-check.",
+  "source_url": "https://www.youtube.com/watch?v=Q3MCTZ1P_J0",
+  "source_title": "Raphael Milliere: \"Desiderata for Artificial Cognitive Science\"",
+  "source_channel": "cccm_seminar",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "84EF6628C5DB12BA9BBCCD5888D7DC354796EB30569D946BE0F1D4101AA0AB7E",
+  "reference_review_status": "asr_spotcheck_passed"
+}

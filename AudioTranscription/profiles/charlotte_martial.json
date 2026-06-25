@@ -1,0 +1,41 @@
+{
+    "speaker_slug":  "charlotte_martial",
+    "speaker_name":  "Charlotte Martial",
+    "consent":  "confirmed",
+    "profile_status":  "candidate_ready",
+    "source_status":  "downloaded_reference_candidate",
+    "voice_engine":  "F5TTS_v1_Base",
+    "roles":  [
+                  "interviewee",
+                  "interviewer"
+              ],
+    "interviews":  [
+                       "Issue04/Gosseries_Martial",
+                       "Issue05/Martial"
+                   ],
+    "youtube_query":  "Charlotte Martial lecture interview consciousness neuroscience",
+    "source_type":  "youtube_source_candidate",
+    "source_audio":  "AudioTranscription/sources/raw/charlotte_martial/PofqcPLOPIE.webm",
+    "reference_audio":  "AudioTranscription/references/charlotte_martial/charlotte_martial_youtube_PofqcPLOPIE_ref_v2.wav",
+    "reference_text":  "Voilà, dans un premier temps, on va également faire passer des questionnaires aux personnes qui ont vécu une EMI.",
+    "reference_source_start_seconds":  228.48,
+    "reference_duration_seconds":  7.3,
+    "demographics":  {
+                         "person":  "Charlotte Martial",
+                         "voice_gender":  "female",
+                         "birth_year_or_age":  "unknown",
+                         "nationality_signal":  "Belgium",
+                         "accent_region":  "american",
+                         "age_group":  "adult",
+                         "voice":  "af_bella",
+                         "source_url":  "https://www.wikidata.org/w/index.php?search=Charlotte%20Martial\u0026title=Special%3ASearch\u0026ns0=1",
+                         "notes":  "public metadata sparse; default American accent per request"
+                     },
+    "notes":  "F5-safe ref_v2 recut from the existing YouTube source; French tiny Whisper ASR spotcheck passed on 2026-06-03.",
+    "source_url":  "https://www.youtube.com/watch?v=PofqcPLOPIE",
+    "source_title":  "Charlotte Martial, la DMT et les expériences de mort imminente",
+    "source_channel":  "Substance",
+    "reference_filter_preset":  "speech_reference_crisp_noisy_mic",
+    "reference_sha256":  "36385CEE48434962C200F968986EA103642EB40D36D1ED870AE927B20941E64D",
+    "reference_review_status":  "asr_spotcheck_passed"
+}

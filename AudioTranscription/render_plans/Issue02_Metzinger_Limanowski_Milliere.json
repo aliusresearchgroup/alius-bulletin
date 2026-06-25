@@ -1,0 +1,36 @@
+{
+  "interview_id": "Issue02/Metzinger_Limanowski_Milliere",
+  "interview_slug": "Issue02_Metzinger_Limanowski_Milliere",
+  "source_qa_dir": "output/audio_interviews/Issue02/Metzinger_Limanowski_Milliere",
+  "output_file_stem": "Issue02_Metzinger_Limanowski_Milliere_clone_full_interview",
+  "voices": {
+    "question": "jakub_limanowski",
+    "answer": "thomas_metzinger"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Jakub Limanowski",
+        "speaker_slug": "jakub_limanowski"
+      },
+      {
+        "name": "Raphael Milliere",
+        "speaker_slug": "raphael_milliere"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Thomas Metzinger",
+        "speaker_slug": "thomas_metzinger"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

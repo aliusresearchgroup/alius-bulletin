@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\karl_friston\\NwzuibY5kUs.webm",
+  "output": "AudioTranscription\\references\\karl_friston\\karl_friston_youtube_NwzuibY5kUs_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 1373.6,
+  "duration_seconds": 10.0,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.000000",
+      "size": "480078",
+      "bit_rate": "384062"
+    }
+  },
+  "input_sha256": "26658E7D162FFDB9ED5DFE7079830EC21F28EDE408C014949572F2BF10A7B7B3",
+  "output_sha256": "603BB1331B677F1C82B8C4FBCB1638D4E80A2828ED0A726CAF55B178F01EB838"
+}

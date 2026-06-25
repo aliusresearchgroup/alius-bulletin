@@ -1,0 +1,139 @@
+{
+  "interview_id": "Issue01/McCarthy-Jones_Frerejouan",
+  "interview_slug": "Issue01_McCarthy-Jones_Frerejouan",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue01_McCarthy-Jones_Frerejouan\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue01_McCarthy-Jones_Frerejouan\\Issue01_McCarthy-Jones_Frerejouan_clone_full_interview.wav",
+    "duration_seconds": 1199.599,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "B0808A61BB390A6766A26F54E17B45672A16161126E344856A7BC18DFDEAA2CD",
+    "retained": false,
+    "cleanup_note": "Intermediate work WAV removed after verified MP3 render. Regenerate with render_interview.py --force if needed."
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue01_McCarthy-Jones_Frerejouan\\Issue01_McCarthy-Jones_Frerejouan_clone_full_interview.mp3",
+    "duration_seconds": 1199.599,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128009,
+    "sha256": "802D106C78EB00BBB2649B92DF5D89517621EEBD6DDF6E9E8DB51DB96639910D"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\mathieu_frerejouan.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\simon_mccarthy_jones.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "mathieu_frerejouan",
+      "speaker_name": "Mathieu Frerejouan",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\mathieu_frerejouan.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/mathieu_frerejouan/YBsR4MVpT4I.webm",
+      "source_url": "https://www.youtube.com/watch?v=YBsR4MVpT4I",
+      "reference_audio": "AudioTranscription/references/mathieu_frerejouan/mathieu_frerejouan_youtube_YBsR4MVpT4I_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.200",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.2",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "78D97EEA7C50013F91E9E3E1A3BCEC64C81E90715B73076AC559104C0B2DB61A",
+      "actual_reference_sha256": "78D97EEA7C50013F91E9E3E1A3BCEC64C81E90715B73076AC559104C0B2DB61A",
+      "reference_text_word_count": "26",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "simon_mccarthy_jones",
+      "speaker_name": "Simon McCarthy-Jones",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\simon_mccarthy_jones.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/simon_mccarthy_jones/Oj6T-PuYWuk.webm",
+      "source_url": "https://www.youtube.com/watch?v=Oj6T-PuYWuk",
+      "reference_audio": "AudioTranscription/references/simon_mccarthy_jones/simon_mccarthy_jones_youtube_Oj6T-PuYWuk_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.800",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.8",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "45E2757ECE7254E731D3A87EC5BE76F3C14D5BFD9D71640C9ED08214F21B61D3",
+      "actual_reference_sha256": "45E2757ECE7254E731D3A87EC5BE76F3C14D5BFD9D71640C9ED08214F21B61D3",
+      "reference_text_word_count": "20",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    }
+  ],
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue01_McCarthy-Jones_Frerejouan/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue01_McCarthy-Jones_Frerejouan/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "human_listening_check": "pending",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "mathieu_frerejouan",
+      "answer_voice": "simon_mccarthy_jones",
+      "answer_voice_segments": [
+        "simon_mccarthy_jones"
+      ]
+    }
+  ],
+  "routing_check": "passed: 5 Q&A units route questions to mathieu_frerejouan and answers to simon_mccarthy_jones; speaker labels are metadata only.",
+  "speaker_label_check": "passed: generated F5 control text uses bracketed voice tags only; speaker names are not part of spoken QUESTION/ANSWER text.",
+  "pronunciation_check": "passed: protocol normalizes uppercase ALIUS to spoken alius when present."
+}

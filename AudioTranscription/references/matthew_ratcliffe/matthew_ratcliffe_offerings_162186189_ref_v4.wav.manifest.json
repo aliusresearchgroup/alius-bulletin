@@ -1,0 +1,27 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\matthew_ratcliffe\\offerings_162186189.mp3",
+  "output": "AudioTranscription\\references\\matthew_ratcliffe\\matthew_ratcliffe_offerings_162186189_ref_v4.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 196.0,
+  "duration_seconds": 22.8,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "22.800000",
+      "size": "1094504",
+      "bit_rate": "384036"
+    }
+  },
+  "input_sha256": "0A02D0F647465CB60A0C0EA18528ACF06B58CB699B37E33884529895114B4571",
+  "output_sha256": "F649B22AB161DE8D8E1B4A5B8F9F772E001A2C0206B531EA41A663999B95BC06"
+}

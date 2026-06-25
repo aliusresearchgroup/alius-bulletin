@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "jennifer_windt",
+  "speaker_name": "Jennifer Windt",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue01/Windt_Bucci_Milliere"
+  ],
+  "youtube_query": "Jennifer Windt lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/jennifer_windt/pYZ67vg0FlY.webm",
+  "reference_audio": "AudioTranscription/references/jennifer_windt/jennifer_windt_youtube_pYZ67vg0FlY_ref_v2.wav",
+  "reference_text": "So it really just describes NPE as contentless in the sense that there is an absence of certain types of imagery.",
+  "reference_source_start_seconds": 873.06,
+  "reference_duration_seconds": 8.1,
+  "demographics": {
+    "person": "Jennifer Windt",
+    "voice_gender": "female",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Germany",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "af_sarah",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Jennifer%20Windt&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=pYZ67vg0FlY",
+  "source_title": "Jennifer Windt  (Monash University), Empty Minds in Sleep & Wakefulness, Cultivated and in the Wild",
+  "source_channel": "Kronos7",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "EE558AECEFC670416423957809E65BE90EBFB0E00CCA95E43092D88A33380AF0",
+  "reference_review_status": "asr_spotcheck_passed"
+}

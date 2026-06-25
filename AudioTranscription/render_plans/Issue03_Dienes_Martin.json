@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue03/Dienes_Martin",
+  "interview_slug": "Issue03_Dienes_Martin",
+  "source_qa_dir": "output/audio_interviews/Issue03/Dienes_Martin",
+  "output_file_stem": "Issue03_Dienes_Martin_clone_full_interview",
+  "voices": {
+    "question": "jean_remi_martin",
+    "answer": "zoltan_dienes"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Jean-Remi Martin",
+        "speaker_slug": "jean_remi_martin"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Zoltan Dienes",
+        "speaker_slug": "zoltan_dienes"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

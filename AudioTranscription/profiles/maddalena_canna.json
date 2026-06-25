@@ -1,0 +1,57 @@
+{
+  "speaker_slug": "maddalena_canna",
+  "speaker_name": "Maddalena Canna",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee",
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue02/Taves_Fortier_Canna",
+    "Issue05/Canna_Seligman_Koroma"
+  ],
+  "youtube_query": "Maddalena Canna lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/maddalena_canna/_GkB6Uz-pV0_canna_720_738.m4a",
+  "reference_audio": "AudioTranscription/references/maddalena_canna/maddalena_canna_youtube__GkB6Uz-pV0_ref_v5.wav",
+  "reference_text": "In favor of the scientific validity of full participation as ethnographic method under specific conditions.",
+  "reference_source_start_seconds": 5.66,
+  "reference_duration_seconds": 9.2,
+  "demographics": {
+    "person": "Maddalena Canna",
+    "voice_gender": "female",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Italy",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "af_bella",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Maddalena%20Canna&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Exact ALIUS Workshop 2018 YouTube candidate found and minimally section-downloaded for reference extraction. The reference is from _GkB6Uz-pV0 at absolute video time about 00:12:05.66, ASR spot-checked, and trimmed before the next sentence tail.",
+  "source_url": "https://www.youtube.com/watch?v=_GkB6Uz-pV0",
+  "source_title": "ALIUS Workshop 2018",
+  "source_channel": "ALIUS RESEARCH",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "8B30904369F612F1F5BBF6115F9A2425546C3EEB687F21042FB382A78A98DFAB",
+  "reference_review_status": "asr_spotcheck_passed",
+  "source_candidates": [
+    {
+      "url": "https://www.youtube.com/watch?v=_GkB6Uz-pV0",
+      "title": "ALIUS Workshop 2018",
+      "source_page": "https://aliusresearch.org/events/legacy/workshop-2018/",
+      "status": "downloaded_caption_and_reference_section",
+      "download_blocker": ""
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4BAkrF7qhJ4",
+      "title": "ALIUS Workshop 2018",
+      "source_page": "https://aliusresearch.org/events/legacy/workshop-2018/",
+      "status": "verified_alius_workshop_video",
+      "download_blocker": "youtube_bot_confirmation_exported_cookies_needed"
+    }
+  ]
+}

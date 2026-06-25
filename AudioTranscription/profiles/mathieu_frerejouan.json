@@ -1,0 +1,60 @@
+{
+  "speaker_slug": "mathieu_frerejouan",
+  "speaker_name": "Mathieu Frerejouan",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue01/McCarthy-Jones_Frerejouan",
+    "Issue02/Ratcliffe_Frerejouan"
+  ],
+  "youtube_query": "Mathieu Frerejouan lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/mathieu_frerejouan/YBsR4MVpT4I.webm",
+  "reference_audio": "AudioTranscription/references/mathieu_frerejouan/mathieu_frerejouan_youtube_YBsR4MVpT4I_ref_v3.wav",
+  "reference_text": "Quelque chose qui n'existe pas, c'est quelque chose qui est rentré dans le langage de tous les jours. Avoir des hallucinations, est-ce que c'était une hallucination.",
+  "reference_source_start_seconds": 137.52,
+  "reference_duration_seconds": 8.2,
+  "demographics": {
+    "person": "Mathieu Frerejouan",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "France",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_eric",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Mathieu%20Frerejouan&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=YBsR4MVpT4I",
+  "source_title": "Mathieu Frerejouan - Halluciner : histoire et philosophie de la perception sans objet",
+  "source_channel": "librairie mollat",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "78D97EEA7C50013F91E9E3E1A3BCEC64C81E90715B73076AC559104C0B2DB61A",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/mathieu_frerejouan/mathieu_frerejouan_youtube_YBsR4MVpT4I_ref_v2.wav",
+      "reference_sha256": "BFFAF4640F2C501C759A672F01FBFB4599097D464B29D572872468F5BB4A250D",
+      "reason": "Ended on 'tous les jours', which leaked as malformed English-like words in generated interviewer speech."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/mathieu_frerejouan/mathieu_frerejouan_youtube_YBsR4MVpT4I_ref.wav",
+      "reference_sha256": "DBA372D4D8DF9C8EA9322C2A05EC6501773ABE9CA63E5B5AC564B7CC7C9B6B26",
+      "reason": "Ended on a mojibake proper-name fragment and caused prompt-tail leakage in generated interviewer speech."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/mathieu_frerejouan/mathieu_frerejouan_youtube_YBsR4MVpT4I_ref_v2b.wav",
+      "reason": "Contained trailing 'et il me semblait' fragment in ASR spot check."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/mathieu_frerejouan/mathieu_frerejouan_youtube_YBsR4MVpT4I_ref_v2c.wav",
+      "reason": "Contained trailing 'et il me semblait' fragment in ASR spot check."
+    }
+  ]
+}

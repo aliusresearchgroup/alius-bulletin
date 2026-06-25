@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "kieran_fox",
+  "speaker_name": "Kieran Fox",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue02/Fox_Koroma"
+  ],
+  "youtube_query": "Kieran Fox lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/kieran_fox/CUV7R14CJW0.webm",
+  "reference_audio": "AudioTranscription/references/kieran_fox/kieran_fox_youtube_CUV7R14CJW0_ref_v2.wav",
+  "reference_text": "And again, that's a really ancient thing in Indian religion, in all branches pretty much, in Jainism, in the various branches of Hinduism and Buddhism.",
+  "reference_source_start_seconds": 625.04,
+  "reference_duration_seconds": 8.2,
+  "demographics": {
+    "person": "Kieran Fox",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Canada",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_liam",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Kieran%20Fox%20neuroscience&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=CUV7R14CJW0",
+  "source_title": "Science and Spirituality with Dr Kieran Fox (Ep 15)",
+  "source_channel": "The Self You Seek",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "929440C72A3D2DFD5EFD08A5EA971B5F19152F2393F85B6E4F8072B71FC57F38",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review"
+}

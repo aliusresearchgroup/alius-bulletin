@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\monima_chadha\\tAd5oRWYwWY.webm",
+  "output": "AudioTranscription\\references\\monima_chadha\\monima_chadha_youtube_tAd5oRWYwWY_ref_v4.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 562.34,
+  "duration_seconds": 7.48,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.480000",
+      "size": "359118",
+      "bit_rate": "384083"
+    }
+  },
+  "input_sha256": "66E1C50F384A9E6725CA6BF5C2FB4F049404E342D82E1E9A65B1CCAA6E1E1D0F",
+  "output_sha256": "AEAAB4FB69A53488A290D3F2F43846ECF310AC56F186354E5E0A1058AEF38815"
+}

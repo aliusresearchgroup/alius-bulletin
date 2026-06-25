@@ -1,0 +1,230 @@
+{
+  "interview_id": "Issue05/Chadha_Aviles_Koroma",
+  "interview_slug": "Issue05_Chadha_Aviles_Koroma",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "tts_speed": 1.0,
+  "tts_voice_speeds": {},
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 1.0,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue05_Chadha_Aviles_Koroma\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue05_Chadha_Aviles_Koroma\\Issue05_Chadha_Aviles_Koroma_clone_full_interview.wav",
+    "duration_seconds": 1120.296,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "799BC81D44F712ECCBF959C907198DA9EDCD726791614AD8D90E03215816DD51"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue05_Chadha_Aviles_Koroma\\Issue05_Chadha_Aviles_Koroma_clone_full_interview.mp3",
+    "duration_seconds": 1120.296,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128008,
+    "sha256": "0BB950DD82D5C2322A27936BBAD7ED73C500800551F5D430C5811410791A4C55"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\edvard_aviles.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\monima_chadha.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "edvard_aviles",
+      "speaker_name": "Edvard Aviles",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\edvard_aviles.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/edvard_aviles/edvard_aviles_educast_segment_900s.m4a",
+      "source_url": "https://educast.pucp.edu.pe/video/7763/xii_simposio_de_estudiantes_de_filosofia_de_la_pucp__parte_4",
+      "reference_audio": "AudioTranscription/references/edvard_aviles/edvard_aviles_educast_segment_900s_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "9.800",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "9.800042",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "4EAF5EEF09059122CB9AD9F2E38CF7735CD18C1D0535FA1795E3D3B5E1FED989",
+      "actual_reference_sha256": "4EAF5EEF09059122CB9AD9F2E38CF7735CD18C1D0535FA1795E3D3B5E1FED989",
+      "reference_text_word_count": "17",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "monima_chadha",
+      "speaker_name": "Monima Chadha",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\monima_chadha.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/monima_chadha/tAd5oRWYwWY.webm",
+      "source_url": "https://www.youtube.com/watch?v=tAd5oRWYwWY",
+      "reference_audio": "AudioTranscription/references/monima_chadha/monima_chadha_youtube_tAd5oRWYwWY_ref_v4.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "7.480",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "7.48",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "AEAAB4FB69A53488A290D3F2F43846ECF310AC56F186354E5E0A1058AEF38815",
+      "actual_reference_sha256": "AEAAB4FB69A53488A290D3F2F43846ECF310AC56F186354E5E0A1058AEF38815",
+      "reference_text_word_count": "21",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+      "profile_status": "working",
+      "source_status": "",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/matthieu_koroma/kEmCbay9t1w.wav",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_audio": "AudioTranscription/references/matthieu_koroma/matthieu_koroma_youtube_kEmCbay9t1w_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "6.750",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "6.75",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "actual_reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "reference_text_word_count": "21",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    }
+  ],
+  "human_listening_check": "asr_first60_passed_pending_full_human_listening",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 9,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 10,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 11,
+      "question_voice": "edvard_aviles",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    },
+    {
+      "unit": 12,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "monima_chadha",
+      "answer_voice_segments": [
+        "monima_chadha"
+      ]
+    }
+  ],
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue05_Chadha_Aviles_Koroma/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue05_Chadha_Aviles_Koroma/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "routing_check": "passed_first_question_edvard_answer_monima_and_manifest_round_robin_edvard_matthieu",
+    "pronunciation_check": "not_applicable_first60_no_ALIUS_occurrence",
+    "notes": "ASR follows the intended opening Q&A and does not detect spoken speaker labels. First 60s contains no ALIUS occurrence; generated text normalizes ALIUS to lowercase alius in the final unit.",
+    "excerpt": "You are an associate professor in philosophy at Manash University.\nIn your research, it is contemporary debates of philosophy of mind, including consciousness\nthrough the lens of Buddhist and Hinduist philosophy.\nWould you say that your interest for Indian philosophy led you to your interest for the\nphilosophy of mind or the reverse?\nIs there something in particular in the Indian philosophical corpus that sparkle your interest?\nI have always been intrigued by issues in philosophy of mind and language, so in a sense\nit was philosophy of mind that came first.\nMy interest in Indian philosophy was sparked by the Buddhist no self doctrine.\nSome Buddhist abidama philosophers in the northern Indian tradition in particular claim that\nthe work of the self can be transferred to the mind.\nThe self is an ontological dangler that does not do any causal work.\nI became interested in investigating."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "speaker_slug": "rebecca_seligman",
+  "speaker_name": "Rebecca Seligman",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue01/Seligman_Halloy",
+    "Issue05/Canna_Seligman_Koroma"
+  ],
+  "youtube_query": "Rebecca Seligman lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/rebecca_seligman/wfrKnnuTF2c.webm",
+  "reference_audio": "AudioTranscription/references/rebecca_seligman/rebecca_seligman_youtube_wfrKnnuTF2c_ref_v2.wav",
+  "reference_text": "More often than not, we're shown severe illness, and those with mental health problems are made to appear childlike, incompetent, and destructive.",
+  "reference_source_start_seconds": 121.12,
+  "reference_duration_seconds": 8.31,
+  "demographics": {
+    "person": "Rebecca Seligman",
+    "voice_gender": "female",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "mature",
+    "voice": "af_nicole",
+    "source_url": "https://www.wikidata.org/wiki/Q113839524",
+    "notes": "Wikidata public researcher page"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase.",
+  "source_url": "https://www.youtube.com/watch?v=wfrKnnuTF2c",
+  "source_title": "Global Media Representations of Mental Health/Illness (Global Catalyst Grant Recipient)",
+  "source_channel": "Roberta Buffett Institute for Global Affairs",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "9B22E1CC9C18117C58643BB4B40E044EAB53A087CFC6751EB72FDC00DB991326",
+  "reference_review_status": "asr_spotcheck_passed"
+}

@@ -1,0 +1,51 @@
+{
+  "speaker_slug": "katrin_preller",
+  "speaker_name": "Katrin Preller",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee",
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue03/Preller_Dumas",
+    "Issue04/Carter_Preller"
+  ],
+  "youtube_query": "Katrin Preller lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/katrin_preller/t9KMDg_ZGyg.webm",
+  "reference_audio": "AudioTranscription/references/katrin_preller/katrin_preller_youtube_t9KMDg_ZGyg_ref_v4.wav",
+  "reference_text": "The thalamus is communicating with the rest of the brain, and we used a technique which is called seed-based connectivity.",
+  "reference_source_start_seconds": 638.5,
+  "reference_duration_seconds": 11.35,
+  "demographics": {
+    "person": "Katrin Preller",
+    "voice_gender": "female",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Switzerland",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "af_nova",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Katrin%20Preller&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "fallback_voice": {
+    "enabled": true,
+    "engine": "kokoro_onnx",
+    "kokoro_voice": "ff_siwis",
+    "kokoro_lang": "en-us",
+    "speed": 0.9,
+    "requested_accent": "German female English",
+    "selection_reason": "Primary path uses Katrin Preller's real lecture reference. If that reference is unavailable, use the closest available continental-European female Kokoro v1.0 voice. The current KokoClone/Kokoro checkout does not expose a dedicated German English voice.",
+    "not_a_real_voice_clone": true
+  },
+  "notes": "Short F5-safe YouTube reference re-cut with lecture_cleanup and ASR spot-check.",
+  "source_url": "https://www.youtube.com/watch?v=t9KMDg_ZGyg",
+  "source_title": "Mechanisms of Action of Psychedelic Substances by Katrin Preller PhD at the ALPS Conference 2021",
+  "source_channel": "ALPS Awareness Lectures on Psychedelic Science",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "71E7806851B1C5C25482A09824A2CBF81BB9DB910884373D689B0E9821BA3C97",
+  "reference_review_status": "asr_spotcheck_passed"
+}

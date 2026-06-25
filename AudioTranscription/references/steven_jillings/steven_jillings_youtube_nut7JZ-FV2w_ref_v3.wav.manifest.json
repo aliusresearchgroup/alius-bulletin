@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\steven_jillings\\nut7JZ-FV2w.webm",
+  "output": "AudioTranscription\\references\\steven_jillings\\steven_jillings_youtube_nut7JZ-FV2w_ref_v3.wav",
+  "preset": "speech_reference_light",
+  "preset_description": "Conservative cleanup for already usable voice references. Keeps timbre mostly intact.",
+  "ffmpeg_filter": "highpass=f=75,lowpass=f=12000,afftdn=nf=-20,equalizer=f=3200:t=q:w=1.2:g=2.0,acompressor=threshold=-22dB:ratio=1.7:attack=8:release=80:makeup=1.3,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 19.8,
+  "duration_seconds": 6.4,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.400000",
+      "size": "307278",
+      "bit_rate": "384097"
+    }
+  },
+  "input_sha256": "A7EB2613BCF7558FCADFA1B9B322FC559BBDDDE70056078D4658C8CFCB653519",
+  "output_sha256": "EB3B1F7294DA7F3A77CCD67661FBA451D04221FB4858E7346FD1BF5E6F7E294B"
+}

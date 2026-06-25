@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "edvard_aviles",
+  "speaker_name": "Edvard Aviles",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue05/Chadha_Aviles_Koroma"
+  ],
+  "youtube_query": "Edvard Aviles lecture interview consciousness neuroscience",
+  "source_type": "public_video_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/edvard_aviles/edvard_aviles_educast_segment_900s.m4a",
+  "reference_audio": "AudioTranscription/references/edvard_aviles/edvard_aviles_educast_segment_900s_ref_v3.wav",
+  "reference_text": "Es gracias al lenguaje que categorizamos e identificamos los afectos, evaluamos con qué otros afectos están vinculados.",
+  "reference_source_start_seconds": 104.8,
+  "reference_duration_seconds": 9.800042,
+  "demographics": {
+    "person": "Edvard Aviles",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "unknown",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_echo",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Edvard%20Aviles&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Public video source segment and cleaned F5-safe Spanish reference candidate are present. ASR spot-check matched the intended bounded phrase.",
+  "source_url": "https://educast.pucp.edu.pe/video/7763/xii_simposio_de_estudiantes_de_filosofia_de_la_pucp__parte_4",
+  "source_title": "XII Simposio de Estudiantes de Filosofia de la PUCP - Parte 4",
+  "source_channel": "",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "4EAF5EEF09059122CB9AD9F2E38CF7735CD18C1D0535FA1795E3D3B5E1FED989",
+  "reference_review_status": "asr_spotcheck_passed"
+}

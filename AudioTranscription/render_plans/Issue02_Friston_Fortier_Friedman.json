@@ -1,0 +1,36 @@
+{
+  "interview_id": "Issue02/Friston_Fortier_Friedman",
+  "interview_slug": "Issue02_Friston_Fortier_Friedman",
+  "source_qa_dir": "output/audio_interviews/Issue02/Friston_Fortier_Friedman",
+  "output_file_stem": "Issue02_Friston_Fortier_Friedman_clone_full_interview",
+  "voices": {
+    "question": "martin_fortier",
+    "answer": "karl_friston"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Martin Fortier",
+        "speaker_slug": "martin_fortier"
+      },
+      {
+        "name": "Daniel A. Friedman",
+        "speaker_slug": "daniel_a_friedman"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Karl Friston",
+        "speaker_slug": "karl_friston"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

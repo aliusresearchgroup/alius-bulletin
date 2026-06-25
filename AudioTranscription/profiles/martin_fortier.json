@@ -1,0 +1,61 @@
+{
+  "speaker_slug": "martin_fortier",
+  "speaker_name": "Martin Fortier",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee",
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue01/Carhart-Harris_Fortier_Milliere",
+    "Issue01/Luhrmann_Fortier",
+    "Issue02/Friston",
+    "Issue02/Friston_Fortier_Friedman",
+    "Issue02/Taves_Fortier_Canna",
+    "Issue03/Winkelman_Fortier",
+    "Issue04/Fortier_ALIUS"
+  ],
+  "youtube_query": "Martin Fortier lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/martin_fortier/_irgS0b1q1c.webm",
+  "source_captions": "AudioTranscription/sources/raw/martin_fortier/_irgS0b1q1c.en-orig.vtt",
+  "reference_audio": "AudioTranscription/references/martin_fortier/martin_fortier_youtube_irgS0b1q1c_ref_v6.wav",
+  "reference_text": "So I'm interested in studying the different ways in which the sense of reality can be altered.",
+  "reference_source_start_seconds": 760.0,
+  "reference_duration_seconds": 7.25,
+  "demographics": {
+    "person": "Martin Fortier",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "France",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_fenrir",
+    "source_url": "https://www.wikidata.org/wiki/Q90418530",
+    "notes": "Wikidata public researcher page; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Current reference is sub-12 seconds, single-speaker, and ASR-aligned after rejecting the prior overlong psychedelic-description fragment. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=_irgS0b1q1c",
+  "source_title": "The Sense Of Reality | Interview with philosopher Martin Fortier | EP 54",
+  "source_channel": "Adventures Through The Mind | James W. Jesso",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "8AF1ED72991F147F77003154763A24C5656DE0C280C8FA7DFF0E9EF3BFED93AE",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/martin_fortier/martin_fortier_youtube_irgS0b1q1c_ref.wav",
+      "reason": "Fourteen-second reference exceeded F5's safe prompt length and ended mid-phrase."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/martin_fortier/martin_fortier_youtube_irgS0b1q1c_ref_v4.wav",
+      "reason": "Candidate contained the host question before Martin's answer."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/martin_fortier/martin_fortier_youtube_irgS0b1q1c_ref_v5.wav",
+      "reason": "Candidate was clean but included a trailing 'That is...' prompt-tail fragment."
+    }
+  ]
+}

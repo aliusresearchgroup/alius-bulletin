@@ -1,0 +1,39 @@
+{
+    "speaker_slug":  "carlota_serrahima",
+    "speaker_name":  "Carlota Serrahima",
+    "consent":  "confirmed",
+    "profile_status":  "candidate_ready",
+    "source_status":  "downloaded_reference_candidate",
+    "voice_engine":  "F5TTS_v1_Base",
+    "roles":  [
+                  "interviewer"
+              ],
+    "interviews":  [
+                       "Issue04/Vignemont_Milliere_Serrahima"
+                   ],
+    "youtube_query":  "Carlota Serrahima lecture interview consciousness neuroscience",
+    "source_type":  "youtube_source_candidate",
+    "source_audio":  "AudioTranscription/sources/raw/carlota_serrahima/0Dgc_oCSOeI.m4a",
+    "reference_audio":  "AudioTranscription/references/carlota_serrahima/carlota_serrahima_youtube_0Dgc_oCSOeI_ref_v2.wav",
+    "reference_text":  "That is, those which typically provide us with perceptual information about the environment through the specific process that we will call exteroception.",
+    "reference_source_start_seconds":  121.68,
+    "reference_duration_seconds":  8.95,
+    "demographics":  {
+                         "person":  "Carlota Serrahima",
+                         "voice_gender":  "female",
+                         "birth_year_or_age":  "unknown",
+                         "nationality_signal":  "Spain",
+                         "accent_region":  "american",
+                         "age_group":  "adult",
+                         "voice":  "af_jessica",
+                         "source_url":  "https://www.wikidata.org/w/index.php?search=Carlota%20Serrahima\u0026title=Special%3ASearch\u0026ns0=1",
+                         "notes":  "public metadata sparse; default American accent per request"
+                     },
+    "notes":  "F5-safe ref_v2 recut from the existing YouTube source; caption-backed wording and tiny Whisper ASR spotcheck passed on 2026-06-03.",
+    "source_url":  "https://www.youtube.com/watch?v=0Dgc_oCSOeI",
+    "source_title":  "Seminari SARX: Carlota Serrahima parlant sobre la propiocepció i l\u0027acció",
+    "source_channel":  "Sergi Font",
+    "reference_filter_preset":  "lecture_cleanup",
+    "reference_sha256":  "1843E6B18E2BA300F41BB1C2D1621D93EFA2C421BA3CEB9B5CC7A54672915FA0",
+    "reference_review_status":  "asr_spotcheck_passed"
+}

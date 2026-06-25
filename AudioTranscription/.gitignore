@@ -1,0 +1,11 @@
+/cache/
+/work/
+/sources/
+/tools/kokoclone/.git/
+/tools/kokoclone/model/
+/tools/kokoclone/voice/
+/tools/kokoclone/*.wav
+/tools/kokoclone/*.mp3
+/renders/*/*.wav
+/renders_kokoclone/*/*.wav
+/renders_kokoclone/**/*_sample_*.mp3

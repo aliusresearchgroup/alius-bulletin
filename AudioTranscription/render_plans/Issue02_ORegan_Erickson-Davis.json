@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue02/ORegan_Erickson-Davis",
+  "interview_slug": "Issue02_ORegan_Erickson-Davis",
+  "source_qa_dir": "output/audio_interviews/Issue02/ORegan_Erickson-Davis",
+  "output_file_stem": "Issue02_ORegan_Erickson-Davis_clone_full_interview",
+  "voices": {
+    "question": "cordelia_erickson_davis",
+    "answer": "kevin_oregan"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Cordelia Erickson-Davis",
+        "speaker_slug": "cordelia_erickson_davis"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Kevin O'Regan",
+        "speaker_slug": "kevin_oregan"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

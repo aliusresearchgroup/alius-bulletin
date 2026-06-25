@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\matthieu_koroma\\kEmCbay9t1w.wav",
+  "output": "AudioTranscription\\references\\matthieu_koroma\\matthieu_koroma_youtube_kEmCbay9t1w_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 54.06,
+  "duration_seconds": 6.6,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.600000",
+      "size": "316878",
+      "bit_rate": "384094"
+    }
+  },
+  "input_sha256": "B21C4DA830437D7CAC102097A6234E1ED52B4BAE29A4D8BB1828FE12AFD3FA16",
+  "output_sha256": "09FCF642DB4293ED01376A9DAB5E1D4382CF212F1147516432816C0A1CA29AC4"
+}

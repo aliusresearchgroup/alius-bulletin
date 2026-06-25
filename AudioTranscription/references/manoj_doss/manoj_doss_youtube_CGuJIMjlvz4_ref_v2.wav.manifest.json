@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\manoj_doss\\CGuJIMjlvz4.webm",
+  "output": "AudioTranscription\\references\\manoj_doss\\manoj_doss_youtube_CGuJIMjlvz4_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 549.0,
+  "duration_seconds": 9.72,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "9.720000",
+      "size": "466638",
+      "bit_rate": "384064"
+    }
+  },
+  "input_sha256": "64811643744FAFEE0ABC7C4E42453A969540A7187D71835BE2599186D3C4E6D9",
+  "output_sha256": "E426115738E7E65FAB13C30D7B0F2A3675E8BF3E842ECE1D80EA7E7A870F5F8C"
+}

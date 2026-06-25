@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "benjamin_baird",
+  "speaker_name": "Benjamin Baird",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue04/Baird_Koroma"
+  ],
+  "youtube_query": "Benjamin Baird lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/benjamin_baird/uDYBXj_wv78.webm",
+  "reference_audio": "AudioTranscription/references/benjamin_baird/benjamin_baird_youtube_uDYBXj_wv78_ref_v4.wav",
+  "reference_text": "There are also a number of clinical applications, the largest of which is treatment of chronic idiopathic nightmare disorder, and in the U.S.",
+  "reference_source_start_seconds": 445.5,
+  "reference_duration_seconds": 8.8,
+  "demographics": {
+    "person": "Benjamin Baird",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_puck",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Benjamin%20Baird%20consciousness&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Short F5-safe YouTube reference re-cut with lecture_cleanup and ASR spot-check.",
+  "source_url": "https://www.youtube.com/watch?v=uDYBXj_wv78",
+  "source_title": "Benjamin Baird - The cognitive neuroscience of lucid dreaming",
+  "source_channel": "GIGA Consciousness Seminars",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "A33B8CA63F13BEB46320E85F85C8D0E6AE0AAC485316DB131E4DA01CCA37FADA",
+  "reference_review_status": "asr_spotcheck_passed"
+}

@@ -1,0 +1,53 @@
+{
+  "speaker_slug": "simon_mccarthy_jones",
+  "speaker_name": "Simon McCarthy-Jones",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue01/McCarthy-Jones_Frerejouan"
+  ],
+  "youtube_query": "Simon McCarthy-Jones lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/simon_mccarthy_jones/Oj6T-PuYWuk.webm",
+  "reference_audio": "AudioTranscription/references/simon_mccarthy_jones/simon_mccarthy_jones_youtube_Oj6T-PuYWuk_ref_v3.wav",
+  "reference_text": "A second crucial reason why breaking the silence matters is because support is now both widely available and incredibly powerful.",
+  "reference_source_start_seconds": 2093.12,
+  "reference_duration_seconds": 8.8,
+  "demographics": {
+    "person": "Simon McCarthy-Jones",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Ireland",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_onyx",
+    "source_url": "https://www.wikidata.org/wiki/Q87668209",
+    "notes": "Wikidata public researcher page; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. v3 reference uses a shorter sentence-bounded segment after ASR checks showed prompt-tail leakage from earlier reference candidates. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=Oj6T-PuYWuk",
+  "source_title": "Breaking the Silence - Supporting the Trinity Community (Webinar recording)",
+  "source_channel": "One in Four",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "45E2757ECE7254E731D3A87EC5BE76F3C14D5BFD9D71640C9ED08214F21B61D3",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/simon_mccarthy_jones/simon_mccarthy_jones_youtube_Oj6T-PuYWuk_ref_v2.wav",
+      "reference_source_start_seconds": 2030.12,
+      "reference_text": "twice the odds of having a high BMI, three times the odds of having a mental health condition, four times the odds of being alcohol dependent, five times the odds of being drug dependent, and six times the odds of attempting suicide. So fairly pervasive effects on physical.",
+      "rejection_reason": "ASR spot check of generated interview showed repeated leakage of the prompt tail 'So fairly pervasive effects...'; segment ended on a partial thought."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/simon_mccarthy_jones/simon_mccarthy_jones_youtube_Oj6T-PuYWuk_ref.wav",
+      "reference_source_start_seconds": 589.14,
+      "reference_text": "And if that attachment is breached, that has all sorts of implications later on, which I'm sure Simon will talk about. But it is just not possible for children to be sexually abused and somebody not to know something.",
+      "rejection_reason": "ASR spot check of generated interview showed repeated leakage of the handoff phrase 'somebody not to know something'; segment likely contained another speaker introducing Simon."
+    }
+  ]
+}

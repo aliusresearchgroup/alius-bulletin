@@ -1,0 +1,27 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\mathieu_frerejouan\\YBsR4MVpT4I.webm",
+  "output": "AudioTranscription\\references\\mathieu_frerejouan\\mathieu_frerejouan_youtube_YBsR4MVpT4I_ref_v2c.wav",
+  "preset": "speech_reference_crisp_noisy_mic",
+  "preset_description": "Default for muffled laptop/headset/interview mics. Reduces rumble/noise, adds presence, controls dynamics.",
+  "ffmpeg_filter": "highpass=f=90,lowpass=f=9500,afftdn=nf=-28,equalizer=f=180:t=q:w=1.0:g=-1.5,equalizer=f=3000:t=q:w=1.0:g=3.0,equalizer=f=5500:t=q:w=1.5:g=1.5,acompressor=threshold=-24dB:ratio=2.2:attack=5:release=80:makeup=2.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 184.6,
+  "duration_seconds": 7.9,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.900000",
+      "size": "379278",
+      "bit_rate": "384078"
+    }
+  },
+  "input_sha256": "E9D5C8CA6522CC81F30BA0579D4C860157DC9DBDDA409ADB9C8F1704A15038E2",
+  "output_sha256": "0CB2225D4A9DEED5E5A99D7CFBAEC4DEEE59CD4F8694998DA7D27542C6EAACAC"
+}

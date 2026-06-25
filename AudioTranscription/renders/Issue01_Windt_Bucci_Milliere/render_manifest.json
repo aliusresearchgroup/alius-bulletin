@@ -1,0 +1,207 @@
+{
+  "interview_id": "Issue01/Windt_Bucci_Milliere",
+  "interview_slug": "Issue01_Windt_Bucci_Milliere",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "tts_speed": 1.0,
+  "tts_voice_speeds": {},
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 1.0,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "question_voice_policy": "round_robin_interviewers_by_unit",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "jennifer_windt",
+      "answer_voice_segments": [
+        "jennifer_windt"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "jennifer_windt",
+      "answer_voice_segments": [
+        "jennifer_windt"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "jennifer_windt",
+      "answer_voice_segments": [
+        "jennifer_windt"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "jennifer_windt",
+      "answer_voice_segments": [
+        "jennifer_windt"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "jennifer_windt",
+      "answer_voice_segments": [
+        "jennifer_windt"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "jennifer_windt",
+      "answer_voice_segments": [
+        "jennifer_windt"
+      ]
+    },
+    {
+      "unit": 7,
+      "question_voice": "alessio_bucci",
+      "answer_voice": "jennifer_windt",
+      "answer_voice_segments": [
+        "jennifer_windt"
+      ]
+    },
+    {
+      "unit": 8,
+      "question_voice": "raphael_milliere",
+      "answer_voice": "jennifer_windt",
+      "answer_voice_segments": [
+        "jennifer_windt"
+      ]
+    }
+  ],
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue01_Windt_Bucci_Milliere\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue01_Windt_Bucci_Milliere\\Issue01_Windt_Bucci_Milliere_clone_full_interview.wav",
+    "duration_seconds": 4148.58,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "0C84BAA8173A1B9A123470C94E18FFAFB748465C2B2F3C0DA2B47BB37FE281B7"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue01_Windt_Bucci_Milliere\\Issue01_Windt_Bucci_Milliere_clone_full_interview.mp3",
+    "duration_seconds": 4148.58,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128002,
+    "sha256": "685E18683C4128093F4DE8E738256F64CAF8B2D85D1A69416CD3302C08F9D8B9"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\alessio_bucci.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\jennifer_windt.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\raphael_milliere.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "alessio_bucci",
+      "speaker_name": "Alessio Bucci",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\alessio_bucci.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/alessio_bucci/f_5MoCn8rXA.webm",
+      "source_url": "https://www.youtube.com/watch?v=f_5MoCn8rXA",
+      "reference_audio": "AudioTranscription/references/alessio_bucci/alessio_bucci_youtube_f_5MoCn8rXA_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.850",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.85",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "F8DD995025B04FC047662C888F4FE86BB6FFB97A3384B3D3ECB9CFF92F60E177",
+      "actual_reference_sha256": "F8DD995025B04FC047662C888F4FE86BB6FFB97A3384B3D3ECB9CFF92F60E177",
+      "reference_text_word_count": "27",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "jennifer_windt",
+      "speaker_name": "Jennifer Windt",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\jennifer_windt.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/jennifer_windt/pYZ67vg0FlY.webm",
+      "source_url": "https://www.youtube.com/watch?v=pYZ67vg0FlY",
+      "reference_audio": "AudioTranscription/references/jennifer_windt/jennifer_windt_youtube_pYZ67vg0FlY_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.100",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.1",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "EE558AECEFC670416423957809E65BE90EBFB0E00CCA95E43092D88A33380AF0",
+      "actual_reference_sha256": "EE558AECEFC670416423957809E65BE90EBFB0E00CCA95E43092D88A33380AF0",
+      "reference_text_word_count": "21",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "raphael_milliere",
+      "speaker_name": "Raphael Milliere",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\raphael_milliere.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/raphael_milliere/Q3MCTZ1P_J0.webm",
+      "source_url": "https://www.youtube.com/watch?v=Q3MCTZ1P_J0",
+      "reference_audio": "AudioTranscription/references/raphael_milliere/raphael_milliere_youtube_Q3MCTZ1P_J0_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "7.350",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "7.35",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "84EF6628C5DB12BA9BBCCD5888D7DC354796EB30569D946BE0F1D4101AA0AB7E",
+      "actual_reference_sha256": "84EF6628C5DB12BA9BBCCD5888D7DC354796EB30569D946BE0F1D4101AA0AB7E",
+      "reference_text_word_count": "19",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    }
+  ],
+  "human_listening_check": "asr_first60_passed_pending_full_human_listening",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue01_Windt_Bucci_Milliere/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue01_Windt_Bucci_Milliere/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "routing_check": "passed_manifest_round_robin_alessio_raphael_questions_jennifer_answers",
+    "pronunciation_check": "not_applicable_first60_no_ALIUS_occurrence",
+    "notes": "ASR follows intended opening question and Jennifer Windt answer; no spoken speaker labels detected.",
+    "excerpt": "How did you become interested in the topic of dreaming?\nI first became interested in dreaming as an undergraduate.\nThomas Metzinger was teaching a series of lectures and seminars in philosophy of mind.\nA lot of it went right over my head, but what I did understand blew my mind and I was hooked.\nFor the seminar, each of us had to pick one week's readings to present to the class.\nWhen Thomas introduced the topic of dreaming, he asked if any of us had ever had a lucid dream.\nThat is, if any of us had ever noticed while dreaming that we were now dreaming.\nI had had some nightmares in which I was vaguely aware that this wasn't really happening,\nthat this was just a dream.\nAnd even though I had never really given much thought to dreaming, something about that\nquestion peaked my interest, so I put up my hand for the topic.\nAnd then I started reading the reading."
+  },
+  "quality_checks": {
+    "duration_seconds": 4148.58,
+    "sha256": "685E18683C4128093F4DE8E738256F64CAF8B2D85D1A69416CD3302C08F9D8B9",
+    "mean_volume_db": -18.2,
+    "max_volume_db": -2.4,
+    "estimated_wpm": 136.5,
+    "pace_status": "ok",
+    "target_wpm_range": "125-165"
+  }
+}

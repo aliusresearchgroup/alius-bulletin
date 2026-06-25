@@ -1,0 +1,40 @@
+{
+  "speaker_slug": "leor_roseman",
+  "speaker_name": "Leor Roseman",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue02/Nichols_Roseman_Timmermann",
+    "Issue06/Skipper_Roseman_Koroma_Fejer"
+  ],
+  "youtube_query": "Leor Roseman lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/leor_roseman/nvn0qhD3vB4.webm",
+  "reference_audio": "AudioTranscription/references/leor_roseman/leor_roseman_youtube_nvn0qhD3vB4_ref_v3.wav",
+  "reference_text": "The experience of unity or the loss of sense of self is an important dimension of this experience, transcendence of time and space.",
+  "reference_source_start_seconds": 477.66,
+  "reference_duration_seconds": 7.65,
+  "demographics": {
+    "person": "Leor Roseman",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Israel",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_fenrir",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Leor%20Roseman&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Short F5-safe YouTube reference re-cut with lecture_cleanup and ASR spot-check.",
+  "source_url": "https://www.youtube.com/watch?v=nvn0qhD3vB4",
+  "source_title": "FRONTIERS IN PSYCHEDELIC SCIENCE: Psilocybin Assisted Therapy & Peak Experiences with Leor Roseman",
+  "source_channel": "Psychedelic Society Switzerland",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "AB638AFDB6AA02301BCAB144D7CE891CE188E843FADBABB008A589EF198EAB7D",
+  "reference_review_status": "asr_spotcheck_passed"
+}

@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "juan_gonzalez",
+  "speaker_name": "Juan Gonzalez",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue06/Gonzalez_Koroma"
+  ],
+  "youtube_query": "Juan Gonzalez lecture interview consciousness neuroscience",
+  "source_type": "local_deployed_alius_audio_candidate",
+  "source_audio": "AudioTranscription/sources/raw/juan_gonzalez/an-interdisciplinary-journey-into-consciousness-research-juan-gonzalez.mp3",
+  "reference_audio": "AudioTranscription/references/juan_gonzalez/juan_gonzalez_interdisciplinary_journey_ref_v2.wav",
+  "reference_text": "Well, what you're talking about is, I think, also concerns cognitive science in general.",
+  "reference_source_start_seconds": 703.48,
+  "reference_duration_seconds": 7.2,
+  "demographics": {
+    "person": "Juan Gonzalez",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "unknown",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_echo",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Juan%20Gonzalez%20consciousness%20ALIUS&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Local deployed ALIUS natural-audio candidate and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "",
+  "source_title": "",
+  "source_channel": "",
+  "reference_filter_preset": "speech_reference_crisp_noisy_mic",
+  "reference_sha256": "B340484E70D571212C1232F632429A42095ED6B64767D53123FA30C2EFCEAA42",
+  "reference_review_status": "asr_spotcheck_passed"
+}

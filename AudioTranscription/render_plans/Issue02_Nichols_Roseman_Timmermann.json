@@ -1,0 +1,36 @@
+{
+  "interview_id": "Issue02/Nichols_Roseman_Timmermann",
+  "interview_slug": "Issue02_Nichols_Roseman_Timmermann",
+  "source_qa_dir": "output/audio_interviews/Issue02/Nichols_Roseman_Timmermann",
+  "output_file_stem": "Issue02_Nichols_Roseman_Timmermann_clone_full_interview",
+  "voices": {
+    "question": "leor_roseman",
+    "answer": "david_e_nichols"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Leor Roseman",
+        "speaker_slug": "leor_roseman"
+      },
+      {
+        "name": "Christopher Timmermann",
+        "speaker_slug": "christopher_timmermann"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "David E. Nichols",
+        "speaker_slug": "david_e_nichols"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

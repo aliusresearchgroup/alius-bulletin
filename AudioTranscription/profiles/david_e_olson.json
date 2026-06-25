@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "david_e_olson",
+  "speaker_name": "David E. Olson",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue05/Olson_Yaden_Fejer"
+  ],
+  "youtube_query": "David E. Olson lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/david_e_olson/3wmfVcvZn_0.webm",
+  "reference_audio": "AudioTranscription/references/david_e_olson/david_e_olson_youtube_3wmfVcvZn_0_ref_v3.wav",
+  "reference_text": "And so one of the first experiments that we ever did is we just took neurons in a dish.",
+  "reference_source_start_seconds": 610.5,
+  "reference_duration_seconds": 6.8,
+  "demographics": {
+    "person": "David E. Olson",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_fenrir",
+    "source_url": "https://www.wikidata.org/w/index.php?search=David%20E.%20Olson%20psychedelics&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=3wmfVcvZn_0",
+  "source_title": "From Dead Heads to Depression Meds: How Psychedelics are Impacting Health with Dr. David Olson",
+  "source_channel": "UC Davis Health",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "0736EDDC00FF70735ADA0FC24A6A243D4D2BF34FFF979243627905FBA1713AE5",
+  "reference_review_status": "asr_spotcheck_passed"
+}

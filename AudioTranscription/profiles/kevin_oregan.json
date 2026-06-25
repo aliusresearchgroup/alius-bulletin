@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "kevin_oregan",
+  "speaker_name": "Kevin O'Regan",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue02/ORegan_Erickson-Davis"
+  ],
+  "youtube_query": "Kevin O'Regan lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/kevin_oregan/8c-qbGgEAEI.webm",
+  "reference_audio": "AudioTranscription/references/kevin_oregan/kevin_oregan_youtube_8c-qbGgEAEI_ref_v2.wav",
+  "reference_text": "There is a logical difficulty here of making the link between what it is like to feel something and neural processes.",
+  "reference_source_start_seconds": 651.2,
+  "reference_duration_seconds": 10.35,
+  "demographics": {
+    "person": "Kevin O'Regan",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United Kingdom",
+    "accent_region": "british",
+    "age_group": "older",
+    "voice": "bm_lewis",
+    "source_url": "https://en.wikipedia.org/wiki/J._Kevin_O%27Regan",
+    "notes": "public biography; British older male voice"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=8c-qbGgEAEI",
+  "source_title": "Why things feel the way they do?  J. Kevin O’Regan",
+  "source_channel": "Copernicus",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "3FBAF164319F0AF4AEF4381DDE8A979715A202F0FD8AF49AA040DD9F6E1AA51F",
+  "reference_review_status": "asr_spotcheck_passed"
+}

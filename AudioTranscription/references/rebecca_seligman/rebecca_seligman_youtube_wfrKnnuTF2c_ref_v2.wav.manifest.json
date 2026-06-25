@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\rebecca_seligman\\wfrKnnuTF2c.webm",
+  "output": "AudioTranscription\\references\\rebecca_seligman\\rebecca_seligman_youtube_wfrKnnuTF2c_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 121.12,
+  "duration_seconds": 8.31,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.310000",
+      "size": "398958",
+      "bit_rate": "384075"
+    }
+  },
+  "input_sha256": "8CE78D5423A77DED29FDD65829EEE6903346FCDC23846C281E112813B7DFD099",
+  "output_sha256": "9B22E1CC9C18117C58643BB4B40E044EAB53A087CFC6751EB72FDC00DB991326"
+}

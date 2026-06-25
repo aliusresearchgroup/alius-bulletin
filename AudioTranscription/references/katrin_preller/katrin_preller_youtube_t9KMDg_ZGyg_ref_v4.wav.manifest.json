@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\katrin_preller\\t9KMDg_ZGyg.webm",
+  "output": "AudioTranscription\\references\\katrin_preller\\katrin_preller_youtube_t9KMDg_ZGyg_ref_v4.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 638.5,
+  "duration_seconds": 11.35,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "11.350000",
+      "size": "544878",
+      "bit_rate": "384054"
+    }
+  },
+  "input_sha256": "ED771B76F295601419ABE673FEB4C56D8E6440DE71A5BE470F0D38CA7D82A311",
+  "output_sha256": "71E7806851B1C5C25482A09824A2CBF81BB9DB910884373D689B0E9821BA3C97"
+}

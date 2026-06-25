@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\tom_froese\\2UUet5TtElk.wav",
+  "output": "AudioTranscription\\references\\tom_froese\\tom_froese_youtube_2UUet5TtElk_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 102.16,
+  "duration_seconds": 8.7,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.700000",
+      "size": "417678",
+      "bit_rate": "384071"
+    }
+  },
+  "input_sha256": "F79CFDD4D490376FBABFCE6A3C491AE5F69F66E721462D75965CF6A34C08750D",
+  "output_sha256": "B8716514E2DA6543755FF0CBECBFA48D5F629A9122EE3CF4D90BB09E7720A5DF"
+}

@@ -1,0 +1,142 @@
+{
+  "interview_id": "Issue03/Dienes_Martin",
+  "interview_slug": "Issue03_Dienes_Martin",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "tts_speed": 1.0,
+  "tts_voice_speeds": {},
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 0.75,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11,atempo=0.75",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "jean_remi_martin",
+      "answer_voice": "zoltan_dienes",
+      "answer_voice_segments": [
+        "zoltan_dienes"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "jean_remi_martin",
+      "answer_voice": "zoltan_dienes",
+      "answer_voice_segments": [
+        "zoltan_dienes"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "jean_remi_martin",
+      "answer_voice": "zoltan_dienes",
+      "answer_voice_segments": [
+        "zoltan_dienes"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "jean_remi_martin",
+      "answer_voice": "zoltan_dienes",
+      "answer_voice_segments": [
+        "zoltan_dienes"
+      ]
+    }
+  ],
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue03_Dienes_Martin\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue03_Dienes_Martin\\Issue03_Dienes_Martin_clone_full_interview.wav",
+    "duration_seconds": 695.599,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "4CFD7651F6C24D77761DA1129D2945C889410ADB6577F38C32A2A849C37FFF62"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue03_Dienes_Martin\\Issue03_Dienes_Martin_clone_full_interview.mp3",
+    "duration_seconds": 927.458,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128013,
+    "sha256": "0D28B38270F4D26304B9E685328950DBAE3B5099582ABA92D430E7F7EA20D51C"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\jean_remi_martin.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\zoltan_dienes.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "jean_remi_martin",
+      "speaker_name": "Jean-Remi Martin",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\jean_remi_martin.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/references/jean_remi_martin/jean_remi_martin_canal_u_102973_source_section.wav",
+      "source_url": "https://www.canal-u.tv/chaines/clermontmsh/colloque-situations-extremes-et-resilience/les-paradoxes-de-la-peur-panique-des",
+      "reference_audio": "AudioTranscription/references/jean_remi_martin/jean_remi_martin_canal_u_102973_ref_v1.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "10.920",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "10.92",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "8D3D4F03832F017E61E11F93B8C2FB98B6AF2315D8C2DA31E7163EE91C2DD57F",
+      "actual_reference_sha256": "8D3D4F03832F017E61E11F93B8C2FB98B6AF2315D8C2DA31E7163EE91C2DD57F",
+      "reference_text_word_count": "41",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "zoltan_dienes",
+      "speaker_name": "Zoltan Dienes",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\zoltan_dienes.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/zoltan_dienes/fiHKhZtsL_0.webm",
+      "source_url": "https://www.youtube.com/watch?v=fiHKhZtsL_0",
+      "reference_audio": "AudioTranscription/references/zoltan_dienes/zoltan_dienes_youtube_fiHKhZtsL_0_ref_v4.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "10.100",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "10.1",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "00F4EC47934912D906B1A27B100DA7A36AF70208E7C911C56272F28CF2511BF2",
+      "actual_reference_sha256": "00F4EC47934912D906B1A27B100DA7A36AF70208E7C911C56272F28CF2511BF2",
+      "reference_text_word_count": "33",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    }
+  ],
+  "human_listening_check": "asr_first90_passed_pending_full_human_listening",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "tiny.en",
+    "language": "en",
+    "clip": "AudioTranscription/work/verification/Issue03_Dienes_Martin/first90_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue03_Dienes_Martin/first90_full.txt",
+    "checked_at": "2026-06-03T20:55:38.760500+00:00",
+    "summary": "First 90s ASR confirms the opening hypnosis and mindfulness content from unit 1 with no spoken speaker labels.",
+    "excerpt": "While hypnosis and mindfulness interest in topics for the study of consciousness,\nhypnotic response involves distortions in consciousness, hallucinations, delusions, and altered\nexperiences of agency. Thus, the fundamental facts to be explained in hypnosis involve the nature\nof conscious experience. It may be these different experiences rely on a single distortion in\nconscious experience that of non-velition. In fact, weights and offer define the classic suggestion\nas the experience of response being non-velitional. For example, if we take a suggested\nmotor response like the arm-rising in the air by itself, in several prominent theories of hypnosis,\nlike those of either Hillgood or Spanos, the person does intend for the arm to rise,\nbut the experiences that they did not intend it. So, in these accounts, hypnotic response involves\nan illusion of involuntaryness. In fact, in these accounts, it is precisely that illusion that makes\na response hypnotic. The illusion presents a unique window into the nature of experience,\nvolition for consciousness researchers. This illusion may give rise not only to feelings of\ninvoluntaryness during motor responses, but also to the other distortions of consciousness,\njust mentioned. Namely, hallucinations and delusions. For example, consider a suggestion that one\nwill see an elephant. If one intends to imagine the elephant, but is unaware of that intention,\nthe imagination may be expressed."
+  },
+  "routing_check": "passed: 4 Q&A units route questions to jean_remi_martin and answers to zoltan_dienes; speaker labels are metadata only.",
+  "speaker_label_check": "passed: ASR spot check did not render Jean-Remi Martin or Zoltan Dienes labels as spoken labels.",
+  "pronunciation_check": "passed: no uppercase ALIUS occurrence detected in this opening ASR spot check; protocol normalizes ALIUS to spoken alius when present."
+}

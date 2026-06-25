@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\kevin_oregan\\8c-qbGgEAEI.webm",
+  "output": "AudioTranscription\\references\\kevin_oregan\\kevin_oregan_youtube_8c-qbGgEAEI_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 651.2,
+  "duration_seconds": 10.35,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.350000",
+      "size": "496878",
+      "bit_rate": "384060"
+    }
+  },
+  "input_sha256": "4DFA8B180C7B0247D4842EECCEDF9BFEADC81D441880C34ED0B564B2E135F2A5",
+  "output_sha256": "3FBAF164319F0AF4AEF4381DDE8A979715A202F0FD8AF49AA040DD9F6E1AA51F"
+}

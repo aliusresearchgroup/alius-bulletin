@@ -1,0 +1,221 @@
+% !TeX program = lualatex
+\documentclass[11pt]{article}
+\IfFileExists{alius-guidelines-style.tex}{\input{alius-guidelines-style.tex}}{\input{Guidelines/alius-guidelines-style.tex}}
+\usepackage{iftex}
+\ifPDFTeX
+  \newcommand{\GuideSansLight}{\sffamily}
+  \newcommand{\GuideSansRegular}{\sffamily}
+  \newcommand{\GuideSansLightItalic}{\sffamily\itshape}
+  \newcommand{\GuideSerif}{\rmfamily}
+  \newcommand{\GuideSerifItalic}{\rmfamily\itshape}
+\else
+  \usepackage{fontspec}
+  \IfFontExistsTF{Lato Light}{\newfontfamily\GuideSansLight{Lato Light}}{\newfontfamily\GuideSansLight{Latin Modern Sans}}
+  \IfFontExistsTF{Lato Regular}{\newfontfamily\GuideSansRegular{Lato Regular}}{\newfontfamily\GuideSansRegular{Latin Modern Sans}}
+  \IfFontExistsTF{Lato Light Italic}{\newfontfamily\GuideSansLightItalic{Lato Light Italic}}{\newfontfamily\GuideSansLightItalic{Lato Light}}
+  \IfFontExistsTF{Cormorant Garamond Regular}{\newfontfamily\GuideSerif{Cormorant Garamond Regular}[ItalicFont={Cormorant Garamond Italic}]}{\newfontfamily\GuideSerif{TeX Gyre Pagella}[ItalicFont={TeX Gyre Pagella Italic}]}
+  \IfFontExistsTF{Cormorant Garamond Italic}{\newfontfamily\GuideSerifItalic{Cormorant Garamond Italic}}{\newfontfamily\GuideSerifItalic{TeX Gyre Pagella Italic}}
+\fi
+
+\renewcommand{\ALIUSFooterTitle}{ALIUS Bulletin Interview Guidelines (2026)}
+
+\newcommand{\guideInterviewTitle}[3]{%
+  \thispagestyle{fancy}%
+  \vspace*{2mm}
+  \begin{center}
+    {\GuideSansRegular\fontsize{13}{15}\selectfont\MakeUppercase{ALIUS Bulletin}\par}
+    \vspace{0.35em}
+    {\GuideSansLight\fontsize{30}{35}\selectfont Bulletin Interview Guidelines\par}
+    \vspace{0.2em}
+    {\GuideSansLight\fontsize{15}{18}\selectfont #1\par}
+  \end{center}
+  \vspace{1.0em}
+  \begin{tabularx}{\textwidth}{@{}>{\GuideSerif\fontsize{11}{14}\selectfont\raggedright\arraybackslash}X!{\hspace{1.2em}{\color{aliusline}\vrule width 0.45pt}\hspace{1.2em}}>{\GuideSansLight\fontsize{9.5}{12}\selectfont\raggedright\arraybackslash}p{0.35\textwidth}@{}}
+    #2 &
+    \textcolor{aliusgreen}{BEFORE YOU START}\par
+    Confirm the proposed interviewee and topic with an editor.\par\vspace{0.55em}
+    \textcolor{aliusgreen}{FINAL HANDOFF}\par
+    Approved text, APA 7 references, and marked memorable quotations.\par\vspace{0.55em}
+    \textcolor{aliusgreen}{CONTACT}\par
+    #3
+  \end{tabularx}
+  \vspace{0.8em}
+  \guideDivider
+}
+
+\newcounter{guideprompt}
+\newcommand{\guidePrompt}[1]{%
+  \Needspace{7\baselineskip}%
+  \stepcounter{guideprompt}%
+  \par\vspace{1.25em}%
+  {\GuideSansLight\fontsize{9}{11}\selectfont\color{aliusgray}\MakeUppercase{Segment \theguideprompt}}\par
+  {\GuideSansRegular\fontsize{17}{21}\selectfont\color{aliusgreen}#1\par}
+  \vspace{0.35em}
+}
+
+\newenvironment{guideAnswerBlock}
+  {\begingroup\GuideSerif\fontsize{12.4}{16.8}\selectfont\setlength{\parskip}{0.55em}\color{black}}
+  {\par\endgroup}
+
+\newcommand{\guideMinihead}[1]{%
+  \par\vspace{0.45em}{\GuideSansRegular\fontsize{10.5}{13}\selectfont\color{aliusgreen}#1}\par\vspace{-0.25em}
+}
+
+\newcommand{\guideLinkLine}[1]{%
+  \par{\GuideSansLight\fontsize{10.2}{13}\selectfont\color{aliusgreen}\raggedright\href{#1}{#1}\par}
+}
+
+\newcommand{\guideInterviewQuote}[1]{%
+  \Needspace{6\baselineskip}%
+  \par\vspace{0.85em}
+  \begin{center}
+    \begin{minipage}{0.9\textwidth}
+      \centering
+      {\GuideSansLightItalic\fontsize{15.5}{20}\selectfont\color{aliusgray}#1}
+    \end{minipage}
+  \end{center}
+  \vspace{0.35em}
+}
+
+\begin{document}
+
+\guideInterviewTitle
+  {For contributors preparing interviews and conversations for the 2026 Bulletin}
+  {If you want to conduct an ALIUS Bulletin interview, begin by checking the proposed topic and interviewee with an editor. Your task is to prepare a clear scholarly exchange, gather the references needed to support it, and send the editors an approved text that can move into proofing and layout.}
+  {\href{mailto:aliusresearchgroup@gmail.com}{aliusresearchgroup@gmail.com}}
+
+\guideInterviewQuote{Collect the questions, answers, citations, and memorable quotations; the editors can shape the final layout.}
+
+\guidePrompt{What kind of interview or Bulletin piece am I preparing?}
+\begin{guideAnswerBlock}
+ALIUS Bulletin pieces can take several forms. The most common format is the written scholarly interview: a prepared exchange of questions and answers, usually at least 3,500 words including questions, answers, and references. The Bulletin can also include edited conversations based on recorded calls, short podcast-style scripts, debate commentaries and replies, reviews of published work, and other pieces agreed with the editors.
+
+\guideMinihead{Interviews and conversations}
+Use this format when the piece is built around an exchange with one or more researchers. Questions may be concise or extensive, depending on what the reader needs in order to understand the answer.
+
+\guideMinihead{Commentaries, replies, and reviews}
+Use these formats when the piece is less a dialogue and more a focused argument, response, or assessment of a book, article, theory, method, or state of consciousness.
+
+\guideMinihead{Podcast-style pieces}
+Use this format when the piece begins from a script or spoken explanation. The written version should still include sources and enough context for editorial review.
+\end{guideAnswerBlock}
+
+\guidePrompt{What am I responsible for as the interviewer or contributor?}
+\begin{guideAnswerBlock}
+Your main responsibility is the substance of the piece. Before the editors format anything, you should gather the questions, answers, references, and memorable quotations that make the piece publishable.
+
+\begin{guideChecklist}
+\item Collect the final questions in the intended order.
+\item Collect the answers or transcript material that should appear in the final piece.
+\item Check that the interviewee or author has approved the substance of the text.
+\item Gather complete citations for sources mentioned in the questions or answers.
+\item Mark two to six memorable quotations that could be used as pull quotes.
+\item Provide the title, abstract, keywords, contributor details, and any acknowledgments.
+\item Tell the editors about any unresolved permissions, missing references, or uncertain claims.
+\end{guideChecklist}
+
+Editors can refine layout, typography, issue integration, and final Bulletin formatting. They should not have to reconstruct the intellectual skeleton of the piece from scattered notes.
+\end{guideAnswerBlock}
+
+\guidePrompt{What medium can I use to collect the interview?}
+\begin{guideAnswerBlock}
+Use whatever medium works best for the interviewer and interviewee: email, a shared document, recorded audio, recorded video, a transcript, handwritten notes later typed up, Overleaf, Word, Google Docs, Markdown, or plain text. The Bulletin does not require a single workflow.
+
+If the exchange is recorded, make sure the interviewee knows what is being recorded, why it is being recorded, and that the recording is a working document unless everyone explicitly agrees otherwise. Nothing should be published before the interviewee or author has approved the final text.
+\end{guideAnswerBlock}
+
+\guidePrompt{What makes a good ALIUS interview question?}
+\begin{guideAnswerBlock}
+An ALIUS question is allowed to do some scholarly work. It may introduce a concept, summarize a debate, name an article, identify a methodological issue, or explain why a topic matters for the diversity of consciousness. The question does not need to sound journalistic.
+
+Short questions are welcome when they are clear. Longer questions are welcome when they help readers from another discipline follow the exchange. A philosopher should be able to follow a neuroscientific answer; a neuroscientist should be able to follow an anthropological one.
+\end{guideAnswerBlock}
+
+\guidePrompt{What is my Bulletin checklist before I send the piece?}
+\begin{guideAnswerBlock}
+Send the editors one organized file or folder with the materials below. If something is missing, flag it clearly rather than leaving the editors to discover the gap later.
+
+\begin{guideChecklist}
+\item Title, subtitle if needed, and contributor names.
+\item Abstract, ideally under 200 words.
+\item Up to five keywords.
+\item Full question-and-answer text, transcript, review, commentary, or script.
+\item APA 7 reference list.
+\item DOI or URL links whenever available.
+\item Two to six memorable quotations, copied exactly and clearly marked.
+\item Any images, recordings, transcript files, or supplementary notes needed by the editors.
+\item Confirmation that the interviewee or author has approved the version being submitted.
+\end{guideChecklist}
+\end{guideAnswerBlock}
+
+\guideInterviewQuote{Bring the editorial team a complete conversation, not a puzzle.}
+
+\guidePrompt{How should memorable quotations be marked?}
+\begin{guideAnswerBlock}
+Memorable quotations are short passages from the interviewee's own words that crystallize the piece. They should usually be one sentence and rarely more than two. Do not paraphrase them. Copy the exact wording from the approved answer or transcript.
+
+You can mark them in any clear way: a section titled \emph{Memorable quotations}, comments in a shared document, highlighted text, or a note after the relevant answer. The editors will decide where and how they appear visually in the final layout.
+\end{guideAnswerBlock}
+
+\guidePrompt{How should citations and references work in 2026?}
+\begin{guideAnswerBlock}
+Use APA 7th edition for in-text citations and references. This replaces the older APA 6 instruction in the 2022 guidelines. Use author-date citations in the text and a complete reference list at the end.
+
+Include DOI links as URLs when available. If a DOI does not exist but the source is openly available online, include a stable URL. If the source is unpublished, personal, or difficult to verify, flag it for the editors.
+
+\guideMinihead{APA 7 reference shapes}
+\begin{description}
+\item[Journal article] Author, A. A., \& Author, B. B. (2026). Title of the article in sentence case. \emph{Journal Title, 12}(3), 45--67. https://doi.org/xx.xxxx/example
+\item[Book] Author, A. A. (2026). \emph{Title of the book in sentence case}. Publisher.
+\item[Chapter] Author, A. A. (2026). Title of the chapter. In B. B. Editor \& C. C. Editor (Eds.), \emph{Title of the book} (pp. 10--25). Publisher. https://doi.org/xx.xxxx/example
+\item[Website] Organization Name. (2026, Month Day). \emph{Title of page in sentence case}. Site Name. https://example.org/page
+\end{description}
+\end{guideAnswerBlock}
+
+\guidePrompt{Which website resources can make this easier?}
+\begin{guideAnswerBlock}
+The public instructions page is intended to live here:
+\guideLinkLine{https://aliusresearch.org/bulletin/instructions-guidelines}
+
+The website also provides an ALIUS Interview Generator here:
+\guideLinkLine{https://aliusresearch.org/bulletin/interview-generator/}
+
+The generator lets contributors enter metadata, questions, answers, references, and memorable quotations. It can export an Overleaf-ready ZIP containing \texttt{main.tex} and \texttt{references.bib}. Use it if it helps. If you prefer a simple document, that is also fine.
+\end{guideAnswerBlock}
+
+\guidePrompt{What are the GitHub resources for?}
+\begin{guideAnswerBlock}
+The Bulletin source archive is available here:
+\guideLinkLine{https://github.com/aliusresearchgroup/alius-bulletin}
+
+GitHub is mainly for editors and contributors who are comfortable working with source files. It contains editable Bulletin sources, templates, shared assets, guideline files, and production scripts. Contributors do not need to use GitHub unless the editors ask them to, but it is available for anyone who wants to inspect or reuse the source structure.
+\end{guideAnswerBlock}
+
+\guidePrompt{Can I use Overleaf or LaTeX directly?}
+\begin{guideAnswerBlock}
+Yes. Contributors who are comfortable with LaTeX or Overleaf may work directly from the website-generated template or from a template supplied by the editors. This can make editorial production faster, especially when references and memorable quotations are already entered cleanly.
+
+This is optional. The priority is not that contributors become layout editors; the priority is that the submitted material is complete, approved, and easy to turn into a Bulletin piece.
+\end{guideAnswerBlock}
+
+\guidePrompt{What style rules should I keep in mind while drafting?}
+\begin{guideAnswerBlock}
+Use American English punctuation and spelling in the final text unless the editors agree to preserve a contributor's preferred phrasing. Use double quotation marks as the main quotation marks and single quotation marks only inside quotations. Do not leave spaces before commas, periods, colons, semicolons, question marks, or exclamation marks.
+
+For LaTeX drafts, parenthetical dashes should be em dashes written as \texttt{---}. In Word, Google Docs, or plain text, do not worry too much about this; editors can normalize typographic details during formatting.
+\end{guideAnswerBlock}
+
+\guidePrompt{What happens after I submit the material?}
+\begin{guideAnswerBlock}
+Editors review the piece for fit, clarity, completeness, references, language, and publication readiness. They may ask for missing citations, a shorter abstract, clearer keywords, a revised title, or a cleaner set of memorable quotations. Once the content is settled, editors prepare the Bulletin layout, coordinate proofing, and return the piece for final approval when needed.
+
+The guiding division of labor is simple: contributors prepare the publishable substance; editors prepare the publishable form.
+\end{guideAnswerBlock}
+
+\guideSection{Reference}
+
+\begin{guideAnswerBlock}
+American Psychological Association. (2020). \emph{Publication manual of the American Psychological Association} (7th ed.). American Psychological Association.
+\end{guideAnswerBlock}
+
+\end{document}

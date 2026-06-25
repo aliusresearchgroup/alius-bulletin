@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "robert_sapolsky",
+  "speaker_name": "Robert Sapolsky",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue06/Sapolsky_Mikhailova_Friedman"
+  ],
+  "youtube_query": "Robert Sapolsky lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/robert_sapolsky/7htlm3DQ_so.webm",
+  "reference_audio": "AudioTranscription/references/robert_sapolsky/robert_sapolsky_youtube_7htlm3DQ_so_ref_v3.wav",
+  "reference_text": "Suddenly, you have that whole problem of the world of people who are disgusted by somebody's behavior, which in somebody else's eyes is just a normal loving lifestyle.",
+  "reference_source_start_seconds": 603.72,
+  "reference_duration_seconds": 10.25,
+  "demographics": {
+    "person": "Robert Sapolsky",
+    "voice_gender": "male",
+    "birth_year_or_age": "1957",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "older",
+    "voice": "am_michael",
+    "source_url": "https://en.wikipedia.org/wiki/Robert_Sapolsky",
+    "notes": "public biography"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=7htlm3DQ_so",
+  "source_title": "Prof. Robert Sapolsky - The Neuroscience Behind Behavior",
+  "source_channel": "The Artificial Intelligence Channel",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "1C04AFD054B31C7FDFD0B26C8618186F2E953A6A45BF9FC5667FC107A00EC79F",
+  "reference_review_status": "asr_spotcheck_passed"
+}

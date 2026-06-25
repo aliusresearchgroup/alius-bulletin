@@ -1,0 +1,27 @@
+{
+  "speech_reference_light": {
+    "description": "Conservative cleanup for already usable voice references. Keeps timbre mostly intact.",
+    "ffmpeg_filter": "highpass=f=75,lowpass=f=12000,afftdn=nf=-20,equalizer=f=3200:t=q:w=1.2:g=2.0,acompressor=threshold=-22dB:ratio=1.7:attack=8:release=80:makeup=1.3,loudnorm=I=-18:TP=-2:LRA=11",
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "speech_reference_crisp_noisy_mic": {
+    "description": "Default for muffled laptop/headset/interview mics. Reduces rumble/noise, adds presence, controls dynamics.",
+    "ffmpeg_filter": "highpass=f=90,lowpass=f=9500,afftdn=nf=-28,equalizer=f=180:t=q:w=1.0:g=-1.5,equalizer=f=3000:t=q:w=1.0:g=3.0,equalizer=f=5500:t=q:w=1.5:g=1.5,acompressor=threshold=-24dB:ratio=2.2:attack=5:release=80:makeup=2.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "lecture_cleanup": {
+    "description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+    "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+    "sample_rate_hz": 24000,
+    "channels": 1
+  },
+  "aggressive_noisy_mic": {
+    "description": "Fallback for very noisy or distant microphones. Use only if light/crisp presets remain unclear.",
+    "ffmpeg_filter": "highpass=f=110,lowpass=f=8500,afftdn=nf=-32,equalizer=f=220:t=q:w=1.0:g=-2.5,equalizer=f=3500:t=q:w=1.0:g=4.0,acompressor=threshold=-26dB:ratio=2.8:attack=4:release=120:makeup=2.5,loudnorm=I=-18:TP=-2:LRA=11",
+    "sample_rate_hz": 24000,
+    "channels": 1
+  }
+}
+

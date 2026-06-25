@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\robert_sapolsky\\7htlm3DQ_so.webm",
+  "output": "AudioTranscription\\references\\robert_sapolsky\\robert_sapolsky_youtube_7htlm3DQ_so_ref_v3.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 603.72,
+  "duration_seconds": 10.25,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.250000",
+      "size": "492078",
+      "bit_rate": "384060"
+    }
+  },
+  "input_sha256": "081D3943702BF5D37A0D2AC86147F011FC9C05A6A386F9C8CDB4A2DC0E221ACC",
+  "output_sha256": "1C04AFD054B31C7FDFD0B26C8618186F2E953A6A45BF9FC5667FC107A00EC79F"
+}

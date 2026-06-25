@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "christopher_timmermann",
+  "speaker_name": "Christopher Timmermann",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue02/Nichols_Roseman_Timmermann"
+  ],
+  "youtube_query": "Christopher Timmermann lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/christopher_timmermann/N-GBRdN1DdM.webm",
+  "reference_audio": "AudioTranscription/references/christopher_timmermann/christopher_timmermann_youtube_N-GBRdN1DdM_ref_v2.wav",
+  "reference_text": "We found that it was the quieting down of brain activity. So reductions in high frequency activity or gamma power, which is very much related to neural firing.",
+  "reference_source_start_seconds": 120.0,
+  "reference_duration_seconds": 9.8,
+  "demographics": {
+    "person": "Christopher Timmermann",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Chile",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_liam",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Christopher%20Timmermann&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=N-GBRdN1DdM",
+  "source_title": "5-meo DMT & meditation study results | Dr Christopher Timmermann",
+  "source_channel": "Bernardo Kastrup 🇪🇺",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "7DB5817002174600D366CE8C90A10ECED478A2B3D9D353BCB8A3EED4BAC5B8BF",
+  "reference_review_status": "asr_spotcheck_passed"
+}

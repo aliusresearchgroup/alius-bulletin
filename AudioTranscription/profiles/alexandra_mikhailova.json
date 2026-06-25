@@ -1,0 +1,79 @@
+{
+  "speaker_slug": "alexandra_mikhailova",
+  "speaker_name": "Alexandra Mikhailova",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue04/Hanks_Mikhailova_Friedman",
+    "Issue06/Sapolsky_Mikhailova_Friedman"
+  ],
+  "youtube_query": "Alexandra Mikhailova lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/references/alexandra_mikhailova/alexandra_mikhailova_youtube_mz7L4GD5g-E_source_section.webm",
+  "reference_audio": "AudioTranscription/references/alexandra_mikhailova/alexandra_mikhailova_youtube_mz7L4GD5g-E_ref_v3.wav",
+  "reference_text": "But I just wanted to say that communication is highly culture and context dependent.",
+  "reference_source_start_seconds": 399.44,
+  "reference_duration_seconds": 9.44,
+  "demographics": {
+    "person": "Alexandra Mikhailova",
+    "voice_gender": "female",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "unknown",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "af_sky",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Alexandra%20Mikhailova&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Public Active Inference Institute livestream source is retained as a short local section only. Speaker is addressed as Sasha and self-identifies as being in Davis, California immediately before the selected reference phrase, matching Alexandra (Sasha) Mikhailova's UC Davis identity context; tiny Whisper ASR and YouTube caption timing agree on the selected phrase, so listening review is still recommended before production rendering.",
+  "source_url": "https://www.youtube.com/watch?v=mz7L4GD5g-E",
+  "source_title": "ActInf Livestream #003.1 \"A World Unto Itself: Human Communication as Active Inference\"",
+  "source_channel": "Active Inference Institute",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "02C8283FB74758EFF255ABB5681386C217B279C60118EE7030902D31EB5488F7",
+  "reference_review_status": "asr_spotcheck_passed_caption_window_verified_needs_listening_review",
+  "source_candidates": [
+    {
+      "url": "https://www.youtube.com/watch?v=mz7L4GD5g-E",
+      "title": "ActInf Livestream #003.1 \"A World Unto Itself: Human Communication as Active Inference\"",
+      "status": "downloaded_reference_candidate",
+      "why_likely_correct": "The speaker is addressed as Sasha and self-identifies as being in Davis, California; this matches Alexandra (Sasha) Mikhailova's UC Davis identity, and the livestream is from Active Inference/Team Comm context where Alexandra Mikhailova is a known collaborator.",
+      "reference_window": "00:06:35.48-00:06:48.93"
+    },
+    {
+      "url": "https://lamp-training.ucdavis.edu/people/alexandra-sasha-mikhailova",
+      "title": "Alexandra (Sasha) Mikhailova UC Davis LaMP profile",
+      "status": "identity_only_no_media",
+      "failure_reason": "Confirms identity/affiliation but exposes no audio or video source."
+    },
+    {
+      "url": "https://grad.neuroscience.ucdavis.edu/training-program-basic-neuroscience-trainees",
+      "title": "UC Davis neuroscience trainee listing",
+      "status": "identity_only_no_media",
+      "failure_reason": "Confirms identity/affiliation but exposes no audio or video source."
+    },
+    {
+      "url": "https://soma.neuroscience.ucdavis.edu/news/update-immigration-visas-dr-falcone",
+      "title": "SOMA interview article by Alexandra Mikhailova",
+      "status": "authored_text_no_speaker_audio",
+      "failure_reason": "Article is authored by Alexandra Mikhailova but the embedded/linked media are not confirmed to contain her natural voice."
+    },
+    {
+      "url": "https://www.activeinference.institute/officers",
+      "title": "Active Inference Institute officers page",
+      "status": "identity_only_no_media",
+      "failure_reason": "Confirms public role but exposes no usable speaker audio/video."
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=%22Alexandra+Mikhailova%22+%22UC+Davis%22",
+      "title": "Exact-name YouTube search",
+      "status": "search_no_confirmed_voice_source",
+      "failure_reason": "Exact-name and alias searches returned skating/fencing, music, politics, ophthalmology, and other namesake/noise results rather than the ALIUS/UC Davis person."
+    }
+  ]
+}

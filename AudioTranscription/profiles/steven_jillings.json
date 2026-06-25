@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "steven_jillings",
+  "speaker_name": "Steven Jillings",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue06/Jillings_Friedman_Coutrot_Koroma"
+  ],
+  "youtube_query": "Steven Jillings lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/steven_jillings/nut7JZ-FV2w.webm",
+  "reference_audio": "AudioTranscription/references/steven_jillings/steven_jillings_youtube_nut7JZ-FV2w_ref_v3.wav",
+  "reference_text": "Well, it's not very much related, so it's difficult to say, because I study the effects on the brain.",
+  "reference_source_start_seconds": 19.8,
+  "reference_duration_seconds": 6.4,
+  "demographics": {
+    "person": "Steven Jillings",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Belgium",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_echo",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Steven%20Jillings&title=Special%3ASearch&ns0=1",
+    "notes": "episode speaker; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=nut7JZ-FV2w",
+  "source_title": "#ASIC2019: Speakers' Thoughts in Short - Steven Jillings 1",
+  "source_channel": "Asgardia Space Nation",
+  "reference_filter_preset": "speech_reference_light",
+  "reference_sha256": "EB3B1F7294DA7F3A77CCD67661FBA451D04221FB4858E7346FD1BF5E6F7E294B",
+  "reference_review_status": "asr_spotcheck_passed"
+}

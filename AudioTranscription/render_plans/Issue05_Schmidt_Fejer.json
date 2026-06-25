@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue05/Schmidt_Fejer",
+  "interview_slug": "Issue05_Schmidt_Fejer",
+  "source_qa_dir": "output/audio_interviews/Issue05/Schmidt_Fejer",
+  "output_file_stem": "Issue05_Schmidt_Fejer_clone_full_interview",
+  "voices": {
+    "question": "george_fejer",
+    "answer": "timo_torsten_schmidt"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "George Fejer",
+        "speaker_slug": "george_fejer"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Timo Torsten Schmidt",
+        "speaker_slug": "timo_torsten_schmidt"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

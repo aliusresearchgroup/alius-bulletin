@@ -1,0 +1,36 @@
+{
+  "interview_id": "Issue02/Taves_Fortier_Canna",
+  "interview_slug": "Issue02_Taves_Fortier_Canna",
+  "source_qa_dir": "output/audio_interviews/Issue02/Taves_Fortier_Canna",
+  "output_file_stem": "Issue02_Taves_Fortier_Canna_clone_full_interview",
+  "voices": {
+    "question": "martin_fortier",
+    "answer": "ann_taves"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Martin Fortier",
+        "speaker_slug": "martin_fortier"
+      },
+      {
+        "name": "Maddalena Canna",
+        "speaker_slug": "maddalena_canna"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Ann Taves",
+        "speaker_slug": "ann_taves"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

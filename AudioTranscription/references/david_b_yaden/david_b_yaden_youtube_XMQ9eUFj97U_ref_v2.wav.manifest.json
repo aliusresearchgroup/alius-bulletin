@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\david_b_yaden\\XMQ9eUFj97U.webm",
+  "output": "AudioTranscription\\references\\david_b_yaden\\david_b_yaden_youtube_XMQ9eUFj97U_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 655.68,
+  "duration_seconds": 10.48,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.480000",
+      "size": "503118",
+      "bit_rate": "384059"
+    }
+  },
+  "input_sha256": "9F151BFE225B367623C1CDB40DF12DFD0E32E9304E3B2F782FAF7AB27E8E4148",
+  "output_sha256": "7A1450689EF575D3277828EEE5B6116A01BEB92800214AE35279C4F66B016246"
+}

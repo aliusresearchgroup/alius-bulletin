@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\raphael_milliere\\Q3MCTZ1P_J0.webm",
+  "output": "AudioTranscription\\references\\raphael_milliere\\raphael_milliere_youtube_Q3MCTZ1P_J0_ref_v3.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 554.15,
+  "duration_seconds": 7.35,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.350000",
+      "size": "352878",
+      "bit_rate": "384084"
+    }
+  },
+  "input_sha256": "A8759472B13949182C2088DCCC9F4499BBE3325A58F4E54AFBE5C76B6654A4A0",
+  "output_sha256": "84EF6628C5DB12BA9BBCCD5888D7DC354796EB30569D946BE0F1D4101AA0AB7E"
+}

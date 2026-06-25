@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue02/Fox_Koroma",
+  "interview_slug": "Issue02_Fox_Koroma",
+  "source_qa_dir": "output/audio_interviews/Issue02/Fox_Koroma",
+  "output_file_stem": "Issue02_Fox_Koroma_clone_full_interview",
+  "voices": {
+    "question": "matthieu_koroma",
+    "answer": "kieran_fox"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Matthieu Koroma",
+        "speaker_slug": "matthieu_koroma"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Kieran Fox",
+        "speaker_slug": "kieran_fox"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

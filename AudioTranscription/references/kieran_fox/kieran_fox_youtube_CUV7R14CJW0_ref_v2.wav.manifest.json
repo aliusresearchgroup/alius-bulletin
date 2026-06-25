@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\kieran_fox\\CUV7R14CJW0.webm",
+  "output": "AudioTranscription\\references\\kieran_fox\\kieran_fox_youtube_CUV7R14CJW0_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 625.04,
+  "duration_seconds": 8.2,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.200000",
+      "size": "393678",
+      "bit_rate": "384076"
+    }
+  },
+  "input_sha256": "CAF41DF8949ADB6D527261903728BE22E68C62C935CD7D0A2623CE241A13FD7F",
+  "output_sha256": "929440C72A3D2DFD5EFD08A5EA971B5F19152F2393F85B6E4F8072B71FC57F38"
+}

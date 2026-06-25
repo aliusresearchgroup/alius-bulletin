@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\olivia_carter\\s-Y_9oxxBj8.webm",
+  "output": "AudioTranscription\\references\\olivia_carter\\olivia_carter_youtube_s-Y_9oxxBj8_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 283.94,
+  "duration_seconds": 8.0,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.000000",
+      "size": "384078",
+      "bit_rate": "384078"
+    }
+  },
+  "input_sha256": "A2EF0B368E6726AA5EE3880DE3080609CC2BEB20EA36E680DBC93C0A62E161E3",
+  "output_sha256": "F32E379768B0054F56F44B6D0DDC23069EC048AA0E7156BABD64F5F325FCE5BB"
+}

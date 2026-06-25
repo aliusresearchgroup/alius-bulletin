@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\brittany_fleig_goldstein\\joyEOh8vq9s.webm",
+  "output": "AudioTranscription\\references\\brittany_fleig_goldstein\\brittany_fleig_goldstein_youtube_joyEOh8vq9s_ref.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 9.28,
+  "duration_seconds": 7.0,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.000000",
+      "size": "336078",
+      "bit_rate": "384089"
+    }
+  },
+  "input_sha256": "8E80C0EAC776AC600228D18D3C993C2BA26BEC7A37D1F7B663E53121D451FCD6",
+  "output_sha256": "F0FBB6E85CC0F258AF479AD584F9FC15858380FA8E232BA48E94E46C6D096C9E"
+}

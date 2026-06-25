@@ -1,0 +1,36 @@
+{
+  "interview_id": "Issue04/Hanks_Mikhailova_Friedman",
+  "interview_slug": "Issue04_Hanks_Mikhailova_Friedman",
+  "source_qa_dir": "output/audio_interviews/Issue04/Hanks_Mikhailova_Friedman",
+  "output_file_stem": "Issue04_Hanks_Mikhailova_Friedman_clone_full_interview",
+  "voices": {
+    "question": "alexandra_mikhailova",
+    "answer": "timothy_hanks"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Alexandra Mikhailova",
+        "speaker_slug": "alexandra_mikhailova"
+      },
+      {
+        "name": "Daniel A. Friedman",
+        "speaker_slug": "daniel_a_friedman"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Timothy Hanks",
+        "speaker_slug": "timothy_hanks"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

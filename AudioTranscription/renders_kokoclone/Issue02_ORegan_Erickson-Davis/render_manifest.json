@@ -1,0 +1,98 @@
+{
+  "interview_id": "Issue02/ORegan_Erickson-Davis",
+  "interview_slug": "Issue02_ORegan_Erickson-Davis",
+  "status": "dry_run",
+  "engine": "KokoClone_Kokoro_ONNX_Kanade",
+  "mode": "tts_then_voice_conversion",
+  "execution_mode": "api",
+  "kokoclone_dir": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone",
+  "kokoclone_cwd": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone",
+  "kokoclone_cli": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone\\cli.py",
+  "hf_home": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\cache\\huggingface",
+  "lang": "en",
+  "max_chars": 220,
+  "units": [
+    {
+      "index": 1,
+      "source": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\output\\audio_interviews\\Issue02\\ORegan_Erickson-Davis\\qa_001.txt",
+      "chunks": 38
+    }
+  ],
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 1.0,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "max_units": 1,
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\cordelia_erickson_davis.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\kevin_oregan.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "cordelia_erickson_davis",
+      "speaker_name": "Cordelia Erickson-Davis",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\cordelia_erickson_davis.json",
+      "profile_status": "needs_source",
+      "source_status": "needs_source",
+      "reference_review_status": "",
+      "source_audio": "",
+      "source_url": "",
+      "reference_audio": "",
+      "reference_exists": "no",
+      "reference_duration_seconds": "",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "",
+      "declared_duration_delta_seconds": "",
+      "reference_sha_status": "",
+      "reference_sha256": "",
+      "actual_reference_sha256": "",
+      "reference_text_word_count": "0",
+      "risk_flags": "missing_reference_audio;missing_reference_text",
+      "warnings": "source_needs_research;profile_not_ready;using_kokoro_fallback_voice;not_a_real_voice_clone",
+      "profile_gate": "fallback",
+      "fallback_engine": "kokoro_onnx",
+      "fallback_voice": "af_aoede",
+      "fallback_lang": "en-us"
+    },
+    {
+      "speaker_slug": "kevin_oregan",
+      "speaker_name": "Kevin O'Regan",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\kevin_oregan.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/kevin_oregan/8c-qbGgEAEI.webm",
+      "source_url": "https://www.youtube.com/watch?v=8c-qbGgEAEI",
+      "reference_audio": "AudioTranscription/references/kevin_oregan/kevin_oregan_youtube_8c-qbGgEAEI_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "10.350",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "10.35",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "3FBAF164319F0AF4AEF4381DDE8A979715A202F0FD8AF49AA040DD9F6E1AA51F",
+      "actual_reference_sha256": "3FBAF164319F0AF4AEF4381DDE8A979715A202F0FD8AF49AA040DD9F6E1AA51F",
+      "reference_text_word_count": "21",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    }
+  ],
+  "fallback_voice_usage": {
+    "cordelia_erickson_davis": {
+      "engine": "kokoro_onnx",
+      "kokoro_voice": "af_aoede",
+      "kokoro_lang": "en-us",
+      "selection_reason": "No confirmed public natural-voice source found after expanded audit. Use an adult American female Kokoro voice as a clearly marked fallback, not as a real voice clone.",
+      "not_a_real_voice_clone": true
+    }
+  },
+  "human_listening_check": "pending"
+}

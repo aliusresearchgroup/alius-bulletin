@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "jakub_limanowski",
+  "speaker_name": "Jakub Limanowski",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue02/Metzinger_Limanowski_Milliere"
+  ],
+  "youtube_query": "Jakub Limanowski lecture interview consciousness neuroscience",
+  "source_type": "public_podcast_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/jakub_limanowski/E31_Biologische_Psychologie_Podcast.mp3",
+  "reference_audio": "AudioTranscription/references/jakub_limanowski/jakub_limanowski_youtube_E31_Biologische_Psychologie_Podcast_ref_v2.wav",
+  "reference_text": "Sondern wir wollen genau diese Mechanismen, die wir haben, anhand von ?hnlichen Schaltkreisen nachbauen.",
+  "reference_source_start_seconds": 510.684,
+  "reference_duration_seconds": 6.05,
+  "demographics": {
+    "person": "Jakub Limanowski",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Germany",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_echo",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Jakub%20Limanowski&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Public podcast source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://verein-radio98eins.de/wp-content/uploads/2024/07/E31_Biologische%20Psychologie_Podcast.mp3",
+  "source_title": "E31 Biologische Psychologie Podcast",
+  "source_channel": "",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "B95A81D4E6319EEBFBFFF858E286834D02075CFB79413E8B087F52190EF8D066",
+  "reference_review_status": "asr_spotcheck_passed"
+}

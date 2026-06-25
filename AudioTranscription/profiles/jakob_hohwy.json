@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "jakob_hohwy",
+  "speaker_name": "Jakob Hohwy",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue01/Hohwy_Koroma"
+  ],
+  "youtube_query": "Jakob Hohwy lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/jakob_hohwy/rW3zKigrTD0.webm",
+  "reference_audio": "AudioTranscription/references/jakob_hohwy/jakob_hohwy_youtube_rW3zKigrTD0_ref_v2.wav",
+  "reference_text": "That's the inferential task. That's uncertainty about it. You're not sure where it is. There's some noise in the system and so on.",
+  "reference_source_start_seconds": 570.94,
+  "reference_duration_seconds": 6.4,
+  "demographics": {
+    "person": "Jakob Hohwy",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Denmark",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_puck",
+    "source_url": "https://www.wikidata.org/wiki/Q42560411",
+    "notes": "Wikidata public researcher page"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=rW3zKigrTD0",
+  "source_title": "Jakob Hohwy: From inference to consciousness",
+  "source_channel": "Philosophy at the University of Edinburgh",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "EBBD51D20A47E223A3E686C830C5398A02C0802BEE4D12057946315474CA8264",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review"
+}

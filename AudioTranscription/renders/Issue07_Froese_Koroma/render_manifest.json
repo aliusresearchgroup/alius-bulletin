@@ -1,0 +1,92 @@
+{
+  "interview_id": "Issue07/Froese_Koroma",
+  "interview_slug": "Issue07_Froese_Koroma",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue07_Froese_Koroma\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue07_Froese_Koroma\\froese_clone_full_interview.wav",
+    "duration_seconds": 844.641,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "77388663DECFF23785206BE75FA65635A8645C3967BA6DFC3206310807989971",
+    "retained": false,
+    "cleanup_note": "Intermediate work WAV removed after verified MP3 render. Regenerate with render_interview.py --force if needed."
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue07_Froese_Koroma\\froese_clone_full_interview.mp3",
+    "duration_seconds": 844.641,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128013,
+    "sha256": "BA18BCFDF6C9E70CCB9635A7BD168F798F9CFC98979C93603ECFA7FB79FA0D86"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\tom_froese.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+      "profile_status": "working",
+      "source_status": "",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/matthieu_koroma/kEmCbay9t1w.wav",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_audio": "AudioTranscription/references/matthieu_koroma/matthieu_koroma_youtube_kEmCbay9t1w_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "6.750",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "6.75",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "actual_reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "reference_text_word_count": "21",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "tom_froese",
+      "speaker_name": "Tom Froese",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\tom_froese.json",
+      "profile_status": "working",
+      "source_status": "",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/tom_froese/2UUet5TtElk.wav",
+      "source_url": "https://www.youtube.com/watch?v=2UUet5TtElk",
+      "reference_audio": "AudioTranscription/references/tom_froese/tom_froese_youtube_2UUet5TtElk_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.400",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.4",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "731998E2048A9A15A176A1D3F4FE292964C378CB1D60EB40B127D1ECB78BCA1F",
+      "actual_reference_sha256": "731998E2048A9A15A176A1D3F4FE292964C378CB1D60EB40B127D1ECB78BCA1F",
+      "reference_text_word_count": "24",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    }
+  ],
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue07_Froese_Koroma/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue07_Froese_Koroma/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "human_listening_check": "pending"
+}

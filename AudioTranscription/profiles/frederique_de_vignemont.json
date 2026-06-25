@@ -1,0 +1,39 @@
+{
+    "speaker_slug":  "frederique_de_vignemont",
+    "speaker_name":  "Frederique de Vignemont",
+    "consent":  "confirmed",
+    "profile_status":  "candidate_ready",
+    "source_status":  "downloaded_reference_candidate",
+    "voice_engine":  "F5TTS_v1_Base",
+    "roles":  [
+                  "interviewee"
+              ],
+    "interviews":  [
+                       "Issue04/Vignemont_Milliere_Serrahima"
+                   ],
+    "youtube_query":  "Frederique de Vignemont lecture interview consciousness neuroscience",
+    "source_type":  "youtube_source_candidate",
+    "source_audio":  "AudioTranscription/sources/raw/frederique_de_vignemont/W8IZ9Q1Ihe4.m4a",
+    "reference_audio":  "AudioTranscription/references/frederique_de_vignemont/frederique_de_vignemont_youtube_W8IZ9Q1Ihe4_ref_v2.wav",
+    "reference_text":  "So it\u0027s optimal to combine information when you have different sources of information, and vision has been shown to be especially good to process spatial location.",
+    "reference_source_start_seconds":  2113,
+    "reference_duration_seconds":  11.2,
+    "demographics":  {
+                         "person":  "Frederique de Vignemont",
+                         "voice_gender":  "female",
+                         "birth_year_or_age":  "unknown",
+                         "nationality_signal":  "France",
+                         "accent_region":  "american",
+                         "age_group":  "adult",
+                         "voice":  "af_heart",
+                         "source_url":  "https://www.wikidata.org/w/index.php?search=Frederique%20de%20Vignemont\u0026title=Special%3ASearch\u0026ns0=1",
+                         "notes":  "public metadata sparse; default American accent per request"
+                     },
+    "notes":  "F5-safe ref_v2 recut from a clearer section of the existing YouTube lecture source; tiny Whisper ASR spotcheck passed on 2026-06-03.",
+    "source_url":  "https://www.youtube.com/watch?v=W8IZ9Q1Ihe4",
+    "source_title":  "Frederique De Vignemont - Bodily Immunity to Error",
+    "source_channel":  "Western University",
+    "reference_filter_preset":  "lecture_cleanup",
+    "reference_sha256":  "1ADCD0516BC79AD0813C8F9B4ED80B1E2710426A5F0B26E7F1F60125A71E8FA1",
+    "reference_review_status":  "asr_spotcheck_passed"
+}

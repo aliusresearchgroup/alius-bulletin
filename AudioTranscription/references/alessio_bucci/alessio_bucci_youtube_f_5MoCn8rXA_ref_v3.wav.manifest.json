@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\alessio_bucci\\f_5MoCn8rXA.webm",
+  "output": "AudioTranscription\\references\\alessio_bucci\\alessio_bucci_youtube_f_5MoCn8rXA_ref_v3.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 310.25,
+  "duration_seconds": 8.85,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.850000",
+      "size": "424878",
+      "bit_rate": "384070"
+    }
+  },
+  "input_sha256": "9CB73F43345CA5D73AEC1A059B81595AC4FE1F7FDFFF7752C8394730A723241D",
+  "output_sha256": "F8DD995025B04FC047662C888F4FE86BB6FFB97A3384B3D3ECB9CFF92F60E177"
+}

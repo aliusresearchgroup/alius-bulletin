@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "thomas_metzinger",
+  "speaker_name": "Thomas Metzinger",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue02/Metzinger_Limanowski_Milliere"
+  ],
+  "youtube_query": "Thomas Metzinger lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/thomas_metzinger/4vXBcXtcXK4.webm",
+  "reference_audio": "AudioTranscription/references/thomas_metzinger/thomas_metzinger_youtube_4vXBcXtcXK4_ref_v2.wav",
+  "reference_text": "So it is not true that the body representation in the dream state is completely offline.",
+  "reference_source_start_seconds": 115.0,
+  "reference_duration_seconds": 7.0,
+  "demographics": {
+    "person": "Thomas Metzinger",
+    "voice_gender": "male",
+    "birth_year_or_age": "1958",
+    "nationality_signal": "Germany",
+    "accent_region": "american",
+    "age_group": "older",
+    "voice": "am_michael",
+    "source_url": "https://en.wikipedia.org/wiki/Thomas_Metzinger",
+    "notes": "public biography; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=4vXBcXtcXK4",
+  "source_title": "Interview with Professor Thomas Metzinger (University of Mainz)",
+  "source_channel": "Claudia Faita",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "15BC9170D568790AC3C192738D63EE0B90E73F56CC608B75AA9DB74A8273A903",
+  "reference_review_status": "asr_spotcheck_passed"
+}

@@ -1,0 +1,40 @@
+{
+  "speaker_slug": "karl_friston",
+  "speaker_name": "Karl Friston",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue02/Friston",
+    "Issue02/Friston_Fortier_Friedman"
+  ],
+  "youtube_query": "Karl Friston lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/karl_friston/NwzuibY5kUs.webm",
+  "reference_audio": "AudioTranscription/references/karl_friston/karl_friston_youtube_NwzuibY5kUs_ref_v2.wav",
+  "reference_text": "basic proxies for elevated activity and message passing and neuronal dynamics.",
+  "reference_source_start_seconds": 1373.6,
+  "reference_duration_seconds": 10.0,
+  "demographics": {
+    "person": "Karl Friston",
+    "voice_gender": "male",
+    "birth_year_or_age": "1959",
+    "nationality_signal": "United Kingdom",
+    "accent_region": "british",
+    "age_group": "older",
+    "voice": "bm_george",
+    "source_url": "https://en.wikipedia.org/wiki/Karl_J._Friston",
+    "notes": "public biography; British older male voice"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=NwzuibY5kUs",
+  "source_title": "Karl Friston: Neuroscience and the Free Energy Principle | Lex Fridman Podcast #99",
+  "source_channel": "Lex Fridman",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "603BB1331B677F1C82B8C4FBCB1638D4E80A2828ED0A726CAF55B178F01EB838",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review"
+}

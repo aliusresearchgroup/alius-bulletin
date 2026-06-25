@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "timothy_hanks",
+  "speaker_name": "Timothy Hanks",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue04/Hanks_Mikhailova_Friedman"
+  ],
+  "youtube_query": "Timothy Hanks lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/timothy_hanks/qWN1a5i23R4.webm",
+  "reference_audio": "AudioTranscription/references/timothy_hanks/timothy_hanks_youtube_qWN1a5i23R4_ref_v2.wav",
+  "reference_text": "And what you can see is that, not surprisingly, rats do much better for these easy red trials than these more difficult blue trials.",
+  "reference_source_start_seconds": 467.84,
+  "reference_duration_seconds": 7.28,
+  "demographics": {
+    "person": "Timothy Hanks",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_puck",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Timothy%20Hanks%20neuroscience&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=qWN1a5i23R4",
+  "source_title": "Timothy Hanks - Neural circuit analysis during an accumulation of evidence decision task",
+  "source_channel": "New Trends in Decision Making",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "2219D3DE7F11EC534819B4FC83B831F503DF6A760BD3771923AAE7697809F65C",
+  "reference_review_status": "asr_spotcheck_passed"
+}

@@ -1,0 +1,39 @@
+{
+    "speaker_slug":  "olivia_carter",
+    "speaker_name":  "Olivia Carter",
+    "consent":  "confirmed",
+    "profile_status":  "candidate_ready",
+    "source_status":  "downloaded_reference_candidate",
+    "voice_engine":  "F5TTS_v1_Base",
+    "roles":  [
+                  "interviewee"
+              ],
+    "interviews":  [
+                       "Issue04/Carter_Preller"
+                   ],
+    "youtube_query":  "Olivia Carter lecture interview consciousness neuroscience",
+    "source_type":  "youtube_source_candidate",
+    "source_audio":  "AudioTranscription/sources/raw/olivia_carter/s-Y_9oxxBj8.webm",
+    "reference_audio":  "AudioTranscription/references/olivia_carter/olivia_carter_youtube_s-Y_9oxxBj8_ref_v2.wav",
+    "reference_text":  "Anyway, I think it\u0027s important to look back at what has been done and what has been learned.",
+    "reference_source_start_seconds":  283.94,
+    "reference_duration_seconds":  8,
+    "demographics":  {
+                         "person":  "Olivia Carter",
+                         "voice_gender":  "female",
+                         "birth_year_or_age":  "unknown",
+                         "nationality_signal":  "Australia",
+                         "accent_region":  "american",
+                         "age_group":  "adult",
+                         "voice":  "af_nova",
+                         "source_url":  "https://www.wikidata.org/w/index.php?search=Olivia%20Carter%20psychology\u0026title=Special%3ASearch\u0026ns0=1",
+                         "notes":  "public metadata sparse; default American accent per request"
+                     },
+    "notes":  "F5-safe ref_v2 recut from the existing YouTube source; tiny Whisper ASR spotcheck passed on 2026-06-03.",
+    "source_url":  "https://www.youtube.com/watch?v=s-Y_9oxxBj8",
+    "source_title":  "Dr Olivia Carter - Psilocybin in the Lab and Clinic",
+    "source_channel":  "Entheogenesis Australis - Entheo TV",
+    "reference_filter_preset":  "lecture_cleanup",
+    "reference_sha256":  "F32E379768B0054F56F44B6D0DDC23069EC048AA0E7156BABD64F5F325FCE5BB",
+    "reference_review_status":  "asr_spotcheck_passed"
+}

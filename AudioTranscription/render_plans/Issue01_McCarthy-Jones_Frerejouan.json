@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue01/McCarthy-Jones_Frerejouan",
+  "interview_slug": "Issue01_McCarthy-Jones_Frerejouan",
+  "source_qa_dir": "output/audio_interviews/Issue01/McCarthy-Jones_Frerejouan",
+  "output_file_stem": "Issue01_McCarthy-Jones_Frerejouan_clone_full_interview",
+  "voices": {
+    "question": "mathieu_frerejouan",
+    "answer": "simon_mccarthy_jones"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Mathieu Frerejouan",
+        "speaker_slug": "mathieu_frerejouan"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Simon McCarthy-Jones",
+        "speaker_slug": "simon_mccarthy_jones"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

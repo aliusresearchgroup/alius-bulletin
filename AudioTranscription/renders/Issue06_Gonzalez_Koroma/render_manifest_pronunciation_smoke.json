@@ -1,0 +1,105 @@
+{
+  "interview_id": "Issue06/Gonzalez_Koroma",
+  "interview_slug": "Issue06_Gonzalez_Koroma",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "tts_speed": 1.0,
+  "tts_voice_speeds": {},
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 1.0,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "juan_gonzalez",
+      "answer_voice_segments": [
+        "juan_gonzalez"
+      ]
+    }
+  ],
+  "max_units": 1,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue06_Gonzalez_Koroma\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue06_Gonzalez_Koroma\\Issue06_Gonzalez_Koroma_clone_full_interview_pronunciation_smoke.wav",
+    "duration_seconds": 328.281,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384001,
+    "sha256": "FAA4644E091BFD6A2500EA0EC49F2C4304601CD527B85411747463E6121E10F0"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue06_Gonzalez_Koroma\\Issue06_Gonzalez_Koroma_clone_full_interview_pronunciation_smoke.mp3",
+    "duration_seconds": 328.281,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128035,
+    "sha256": "6B29043275F487A31BFE4D93A884D2FD286F2D7AB4E7CE7D5D40E8A406F3ACB3"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\juan_gonzalez.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+      "profile_status": "working",
+      "source_status": "",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/matthieu_koroma/kEmCbay9t1w.wav",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_audio": "AudioTranscription/references/matthieu_koroma/matthieu_koroma_youtube_kEmCbay9t1w_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "6.750",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "6.75",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "actual_reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "reference_text_word_count": "21",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "juan_gonzalez",
+      "speaker_name": "Juan Gonzalez",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\juan_gonzalez.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/juan_gonzalez/an-interdisciplinary-journey-into-consciousness-research-juan-gonzalez.mp3",
+      "source_url": "",
+      "reference_audio": "AudioTranscription/references/juan_gonzalez/juan_gonzalez_interdisciplinary_journey_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "7.200",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "7.2",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "B340484E70D571212C1232F632429A42095ED6B64767D53123FA30C2EFCEAA42",
+      "actual_reference_sha256": "B340484E70D571212C1232F632429A42095ED6B64767D53123FA30C2EFCEAA42",
+      "reference_text_word_count": "14",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    }
+  ],
+  "human_listening_check": "pending"
+}

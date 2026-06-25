@@ -1,0 +1,62 @@
+{
+  "input": "AudioTranscription/references/jean_remi_martin/jean_remi_martin_canal_u_102973_source_section.wav",
+  "output": "AudioTranscription/references/jean_remi_martin/jean_remi_martin_canal_u_102973_ref_v1.wav",
+  "source_url": "https://www.canal-u.tv/chaines/clermontmsh/colloque-situations-extremes-et-resilience/les-paradoxes-de-la-peur-panique-des",
+  "source_audio_url": "https://www.canal-u.tv/media/102973/ressource/podcast",
+  "source_media_id": 102973,
+  "source_node_id": 167868,
+  "source_title": "Les paradoxes de la peur panique des individus confrontés à l’extrême ? Le cas du bataclan",
+  "source_channel": "Maison des Sciences Humaines de Clermont-Ferrand / ClermontMsh",
+  "source_realisation_date": "2024-05-22",
+  "source_publication_date": "2025-02-11",
+  "source_section_start_seconds": 900.0,
+  "preset": "lecture_cleanup",
+  "preset_description": "For lecture or conference audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 7.78,
+  "source_url_reference_start_seconds": 907.78,
+  "duration_seconds": 10.92,
+  "max_reference_seconds": 15.0,
+  "allow_long_reference": false,
+  "reference_text": "Donc un petit peu de contexte sur les attentats de Paris, qui ont eu lieu le 13 novembre 2015. Il y a eu six attaques terroristes quasi simultanées, donc à la fois dans les rues de Paris, au stade de France.",
+  "asr_spotcheck": {
+    "engine": "whisper small",
+    "language": "French",
+    "status": "passed",
+    "transcript": "Donc un petit peu de contexte sur les attentats de Paris, qui ont eu lieu le 13 novembre 2015. Il y a eu 6 attaques terroristes quasi simultanées, donc à la fois dans les rues de Paris, au stade de France."
+  },
+  "input_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "20.000000",
+      "size": "960128",
+      "bit_rate": "384051"
+    }
+  },
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.920000",
+      "size": "524288",
+      "bit_rate": "384093"
+    }
+  },
+  "input_sha256": "CCF31EDB1C9D1EB9C74452D4DB51C01CE969E29D82D0AF06D04F135EE2D589E6",
+  "output_sha256": "8D3D4F03832F017E61E11F93B8C2FB98B6AF2315D8C2DA31E7163EE91C2DD57F"
+}

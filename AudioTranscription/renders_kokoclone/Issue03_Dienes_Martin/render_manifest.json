@@ -1,0 +1,128 @@
+{
+  "interview_id": "Issue03/Dienes_Martin",
+  "interview_slug": "Issue03_Dienes_Martin",
+  "status": "rendered",
+  "engine": "KokoClone_Kokoro_ONNX_Kanade",
+  "mode": "tts_then_voice_conversion",
+  "execution_mode": "api",
+  "kokoclone_dir": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone",
+  "kokoclone_cwd": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone",
+  "kokoclone_cli": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone\\cli.py",
+  "hf_home": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\cache\\huggingface",
+  "lang": "en",
+  "max_chars": 320,
+  "units": [
+    {
+      "index": 1,
+      "source": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\output\\audio_interviews\\Issue03\\Dienes_Martin\\qa_001.txt",
+      "chunks": 17
+    },
+    {
+      "index": 2,
+      "source": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\output\\audio_interviews\\Issue03\\Dienes_Martin\\qa_002.txt",
+      "chunks": 19
+    },
+    {
+      "index": 3,
+      "source": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\output\\audio_interviews\\Issue03\\Dienes_Martin\\qa_003.txt",
+      "chunks": 16
+    },
+    {
+      "index": 4,
+      "source": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\output\\audio_interviews\\Issue03\\Dienes_Martin\\qa_004.txt",
+      "chunks": 13
+    }
+  ],
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 1.0,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "max_units": null,
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\jean_remi_martin.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\zoltan_dienes.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "jean_remi_martin",
+      "speaker_name": "Jean-Remi Martin",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\jean_remi_martin.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/references/jean_remi_martin/jean_remi_martin_canal_u_102973_source_section.wav",
+      "source_url": "https://www.canal-u.tv/chaines/clermontmsh/colloque-situations-extremes-et-resilience/les-paradoxes-de-la-peur-panique-des",
+      "reference_audio": "AudioTranscription/references/jean_remi_martin/jean_remi_martin_canal_u_102973_ref_v1.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "10.920",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "10.92",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "8D3D4F03832F017E61E11F93B8C2FB98B6AF2315D8C2DA31E7163EE91C2DD57F",
+      "actual_reference_sha256": "8D3D4F03832F017E61E11F93B8C2FB98B6AF2315D8C2DA31E7163EE91C2DD57F",
+      "reference_text_word_count": "41",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "zoltan_dienes",
+      "speaker_name": "Zoltan Dienes",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\zoltan_dienes.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/zoltan_dienes/fiHKhZtsL_0.webm",
+      "source_url": "https://www.youtube.com/watch?v=fiHKhZtsL_0",
+      "reference_audio": "AudioTranscription/references/zoltan_dienes/zoltan_dienes_youtube_fiHKhZtsL_0_ref_v4.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "10.100",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "10.1",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "00F4EC47934912D906B1A27B100DA7A36AF70208E7C911C56272F28CF2511BF2",
+      "actual_reference_sha256": "00F4EC47934912D906B1A27B100DA7A36AF70208E7C911C56272F28CF2511BF2",
+      "reference_text_word_count": "33",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    }
+  ],
+  "fallback_voice_usage": {},
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue03_Dienes_Martin_kokoclone/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue03_Dienes_Martin_kokoclone/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "human_listening_check": "pending",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\kokoclone\\Issue03_Dienes_Martin\\Issue03_Dienes_Martin_clone_full_interview_kokoclone.wav",
+    "duration_seconds": 1070.656,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "C3E8AFE2533261CDF54374A929E3FB7B2AAB37DF568D478858C56B9DCAD35464"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders_kokoclone\\Issue03_Dienes_Martin\\Issue03_Dienes_Martin_clone_full_interview_kokoclone.mp3",
+    "duration_seconds": 1070.656,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128009,
+    "sha256": "375302F7F8DC1D9CF94D8B65809CA1BED58B54C590E5498A46FD90A05CEC33FE"
+  }
+}

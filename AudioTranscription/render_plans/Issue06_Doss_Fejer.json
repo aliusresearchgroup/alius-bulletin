@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue06/Doss_Fejer",
+  "interview_slug": "Issue06_Doss_Fejer",
+  "source_qa_dir": "output/audio_interviews/Issue06/Doss_Fejer",
+  "output_file_stem": "Issue06_Doss_Fejer_clone_full_interview",
+  "voices": {
+    "question": "george_fejer",
+    "answer": "manoj_doss"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "George Fejer",
+        "speaker_slug": "george_fejer"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Manoj Doss",
+        "speaker_slug": "manoj_doss"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

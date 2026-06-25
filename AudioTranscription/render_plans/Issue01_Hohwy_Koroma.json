@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue01/Hohwy_Koroma",
+  "interview_slug": "Issue01_Hohwy_Koroma",
+  "source_qa_dir": "output/audio_interviews/Issue01/Hohwy_Koroma",
+  "output_file_stem": "Issue01_Hohwy_Koroma_clone_full_interview",
+  "voices": {
+    "question": "matthieu_koroma",
+    "answer": "jakob_hohwy"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Matthieu Koroma",
+        "speaker_slug": "matthieu_koroma"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Jakob Hohwy",
+        "speaker_slug": "jakob_hohwy"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

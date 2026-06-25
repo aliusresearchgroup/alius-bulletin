@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\carlota_serrahima\\0Dgc_oCSOeI.m4a",
+  "output": "AudioTranscription\\references\\carlota_serrahima\\carlota_serrahima_youtube_0Dgc_oCSOeI_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 121.68,
+  "duration_seconds": 8.95,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.950000",
+      "size": "429678",
+      "bit_rate": "384069"
+    }
+  },
+  "input_sha256": "C3FA30C0A92639F0958685BB4A8E944C0FD79AA1068AE39E51DAE72DE138D9FF",
+  "output_sha256": "1843E6B18E2BA300F41BB1C2D1621D93EFA2C421BA3CEB9B5CC7A54672915FA0"
+}

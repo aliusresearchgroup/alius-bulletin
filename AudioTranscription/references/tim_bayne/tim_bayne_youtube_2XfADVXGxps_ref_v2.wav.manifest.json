@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\tim_bayne\\2XfADVXGxps.webm",
+  "output": "AudioTranscription\\references\\tim_bayne\\tim_bayne_youtube_2XfADVXGxps_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 819.68,
+  "duration_seconds": 10.0,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.000000",
+      "size": "480078",
+      "bit_rate": "384062"
+    }
+  },
+  "input_sha256": "BF1D3F96E8A739466ADB8D00355AB78B4C9E86A7FFADA2934E72543758F29026",
+  "output_sha256": "B35E8323206637F170B9EE7D7B6E89273907761F4A18175D96E6C4F94DBD6BF2"
+}

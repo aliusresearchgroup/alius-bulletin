@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue02/Ratcliffe_Frerejouan",
+  "interview_slug": "Issue02_Ratcliffe_Frerejouan",
+  "source_qa_dir": "output/audio_interviews/Issue02/Ratcliffe_Frerejouan",
+  "output_file_stem": "Issue02_Ratcliffe_Frerejouan_clone_full_interview",
+  "voices": {
+    "question": "mathieu_frerejouan",
+    "answer": "matthew_ratcliffe"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Mathieu Frerejouan",
+        "speaker_slug": "mathieu_frerejouan"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Matthew Ratcliffe",
+        "speaker_slug": "matthew_ratcliffe"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

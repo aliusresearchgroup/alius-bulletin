@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "manoj_doss",
+  "speaker_name": "Manoj Doss",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue06/Doss_Fejer"
+  ],
+  "youtube_query": "Manoj Doss lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/manoj_doss/CGuJIMjlvz4.webm",
+  "reference_audio": "AudioTranscription/references/manoj_doss/manoj_doss_youtube_CGuJIMjlvz4_ref_v2.wav",
+  "reference_text": "showing that it can have kind of rapid antidepressant or anxiolytic effects, and there's at least one case report in which somebody said that they self-medicated with salvia.",
+  "reference_source_start_seconds": 549.0,
+  "reference_duration_seconds": 9.72,
+  "demographics": {
+    "person": "Manoj Doss",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_puck",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Manoj%20Doss%20psychedelic%20research&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=CGuJIMjlvz4",
+  "source_title": "IPS 2019 | The Effects of Salvinorin A on Functional Connectivity | Manoj Doss",
+  "source_channel": "Penn Society for Psychedelic Studies",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "E426115738E7E65FAB13C30D7B0F2A3675E8BF3E842ECE1D80EA7E7A870F5F8C",
+  "reference_review_status": "asr_spotcheck_passed"
+}

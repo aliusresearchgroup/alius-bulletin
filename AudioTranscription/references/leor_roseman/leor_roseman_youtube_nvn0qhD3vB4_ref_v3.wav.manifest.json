@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\leor_roseman\\nvn0qhD3vB4.webm",
+  "output": "AudioTranscription\\references\\leor_roseman\\leor_roseman_youtube_nvn0qhD3vB4_ref_v3.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 477.66,
+  "duration_seconds": 7.65,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.650000",
+      "size": "367278",
+      "bit_rate": "384081"
+    }
+  },
+  "input_sha256": "43749640E870C0699EF716A94828423F936812EE907A4265909AEAFD4F70ED23",
+  "output_sha256": "AB638AFDB6AA02301BCAB144D7CE891CE188E843FADBABB008A589EF198EAB7D"
+}

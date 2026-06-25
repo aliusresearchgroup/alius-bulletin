@@ -1,0 +1,81 @@
+{
+  "speaker_slug": "jean_remi_martin",
+  "speaker_name": "Jean-Remi Martin",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue03/Dienes_Martin"
+  ],
+  "youtube_query": "Jean-Remi Martin lecture interview consciousness neuroscience",
+  "source_type": "canal_u_public_conference_audio",
+  "source_audio": "AudioTranscription/references/jean_remi_martin/jean_remi_martin_canal_u_102973_source_section.wav",
+  "reference_audio": "AudioTranscription/references/jean_remi_martin/jean_remi_martin_canal_u_102973_ref_v1.wav",
+  "reference_text": "Donc un petit peu de contexte sur les attentats de Paris, qui ont eu lieu le 13 novembre 2015. Il y a eu six attaques terroristes quasi simultanées, donc à la fois dans les rues de Paris, au stade de France.",
+  "reference_source_start_seconds": 907.78,
+  "reference_duration_seconds": 10.92,
+  "demographics": {
+    "person": "Jean-Remi Martin",
+    "voice_gender": "male",
+    "birth_year_or_age": "1985",
+    "nationality_signal": "France",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_liam",
+    "source_url": "https://www.canal-u.tv/intervenants/martin-jean-remy-178053058",
+    "notes": "Canal-U public speaker page lists Jean-Remy Martin (1985-....), cognitive-science thesis at Paris 6 in 2014, and LAPSCO UMR 6024 UCA-CNRS in 2024; default American accent retained per scaffold."
+  },
+  "notes": "Public Canal-U conference source found on 2026-06-03 after prior exact-name web/YouTube audits had no confirmed voice. The Canal-U page credits Jean-Remy Martin as the intervention speaker and the speaker page matches the ALIUS researcher context. The reference is a 10.92 second sentence-bounded French excerpt cut from a local 20 second source section; the full public podcast was not saved. Whisper small ASR spot-check passed; run human listening review before production rendering.",
+  "source_url": "https://www.canal-u.tv/chaines/clermontmsh/colloque-situations-extremes-et-resilience/les-paradoxes-de-la-peur-panique-des",
+  "source_title": "Les paradoxes de la peur panique des individus confrontés à l’extrême ? Le cas du bataclan",
+  "source_channel": "Maison des Sciences Humaines de Clermont-Ferrand / ClermontMsh",
+  "source_direct_audio": "https://www.canal-u.tv/media/102973/ressource/podcast",
+  "source_doi": "10.60527/h1ca-0r11",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "8D3D4F03832F017E61E11F93B8C2FB98B6AF2315D8C2DA31E7163EE91C2DD57F",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "source_candidates": [
+    {
+      "url": "https://www.canal-u.tv/chaines/clermontmsh/colloque-situations-extremes-et-resilience/les-paradoxes-de-la-peur-panique-des",
+      "title": "Les paradoxes de la peur panique des individus confrontés à l’extrême ? Le cas du bataclan",
+      "source_page": "Canal-U / Maison des Sciences Humaines de Clermont-Ferrand",
+      "status": "downloaded_reference_candidate",
+      "why_likely_correct": "The resource credits Jean-Remy Martin (Intervention); the linked Canal-U intervenant page identifies Martin, Jean-Remy (1985-....), author of a cognitive-science thesis at Paris 6 in 2014 and LAPSCO UMR 6024 UCA-CNRS member in 2024.",
+      "reference_window": "00:15:07.78-00:15:18.70"
+    },
+    {
+      "url": "https://www.canal-u.tv/intervenants/martin-jean-remy-178053058",
+      "title": "Martin, Jean-Remy (1985-....) | Canal U",
+      "status": "identity_page_with_linked_media",
+      "why_likely_correct": "Matches the ALIUS hypnosis/consciousness researcher context through cognitive-science thesis and LAPSCO affiliation."
+    },
+    {
+      "url": "https://www.aliusresearch.org/blog-v1/introducing-jean-remy-martin",
+      "title": "Introducing Jean-Remy Martin - ALIUS",
+      "status": "identity_text_no_media",
+      "failure_reason": "Older ALIUS page confirms the exact researcher and hypnosis/placebo context but contains no embedded or downloadable audio/video."
+    },
+    {
+      "url": "https://www.aliusresearch.org/blog-v1/jean-remy-martin-consciousness-anaesthetised-placebo-and-metacognition",
+      "title": "Jean-Remy Martin - Consciousness anaesthetised: placebo and metacognition",
+      "status": "authored_text_no_speaker_audio",
+      "failure_reason": "Older ALIUS article is text-only and contains no speaker media."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Jean-Remi+Martin%22",
+      "title": "PubMed exact-name search",
+      "status": "identity_only_no_media",
+      "failure_reason": "Confirms scholarly identity context only; no audio or video source."
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=%22Jean-Remi+Martin%22+hypnosis",
+      "title": "Exact-name/topic YouTube search",
+      "status": "search_no_confirmed_voice_source",
+      "failure_reason": "Exact-name/topic searches returned Jean-Remi King, Remy Martin/cognac, priest, performer, and other namesakes/noise rather than the ALIUS hypnosis researcher."
+    }
+  ]
+}

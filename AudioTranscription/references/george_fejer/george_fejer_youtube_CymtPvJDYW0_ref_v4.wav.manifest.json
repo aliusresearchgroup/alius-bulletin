@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\george_fejer\\CymtPvJDYW0.webm",
+  "output": "AudioTranscription\\references\\george_fejer\\george_fejer_youtube_CymtPvJDYW0_ref_v4.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 426.78,
+  "duration_seconds": 10.2,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.200000",
+      "size": "489678",
+      "bit_rate": "384061"
+    }
+  },
+  "input_sha256": "8C52C9FCA30291CD4EE7C6CE1150089689EECDC900E14C9426E6BF2BC988C105",
+  "output_sha256": "DC9A1E396C0992C360AEFE706B79FE0890A324C6522EE30FEB7A9C19302EA5D5"
+}

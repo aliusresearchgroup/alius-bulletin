@@ -1,0 +1,40 @@
+{
+  "speaker_slug": "david_e_nichols",
+  "speaker_name": "David E. Nichols",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue02/Nichols_Roseman_Timmermann",
+    "Issue04/Nichols_Nichols"
+  ],
+  "youtube_query": "David E. Nichols lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/david_e_nichols/RlDCM5JQzRk.webm",
+  "reference_audio": "AudioTranscription/references/david_e_nichols/david_e_nichols_youtube_RlDCM5JQzRk_ref_v2.wav",
+  "reference_text": "If we could improve on the properties or make them more useful or just to understand how they work. And essentially, you can attach things into the side chain. You can modify things that are on the ring here.",
+  "reference_source_start_seconds": 567.0,
+  "reference_duration_seconds": 10.15,
+  "demographics": {
+    "person": "David E. Nichols",
+    "voice_gender": "male",
+    "birth_year_or_age": "1944",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "older",
+    "voice": "am_michael",
+    "source_url": "https://en.wikipedia.org/wiki/David_E._Nichols",
+    "notes": "public biography"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=RlDCM5JQzRk",
+  "source_title": "David Nichols - Keynote (2019)",
+  "source_channel": "Telluride Institute",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "6EBA7C20C766EE47F26D5686A43AFAFAB4D12A5F5C23DE666CD73EA6E2FCC051",
+  "reference_review_status": "asr_spotcheck_passed"
+}

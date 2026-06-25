@@ -1,0 +1,42 @@
+{
+  "speaker_slug": "george_fejer",
+  "speaker_name": "George Fejer",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue05/Olson_Yaden_Fejer",
+    "Issue05/Schmidt_Fejer",
+    "Issue06/Doss_Fejer",
+    "Issue06/Skipper_Roseman_Koroma_Fejer"
+  ],
+  "youtube_query": "George Fejer lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/george_fejer/Qm-lmC-xYCI.webm",
+  "reference_audio": "AudioTranscription/references/george_fejer/george_fejer_youtube_Qm-lmC-xYCI_ref_v2.wav",
+  "reference_text": "Sphere expansion and contraction, forming cone-like patterns that provide clear three-dimensional spatial references without relying on recognizable objects or semantic cues.",
+  "reference_source_start_seconds": 159.44,
+  "reference_duration_seconds": 10.87,
+  "demographics": {
+    "person": "George Fejer",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "unknown",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_puck",
+    "source_url": "https://www.wikidata.org/w/index.php?search=George%20Fejer%20ALIUS&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Short F5-safe YouTube reference cut from user-requested ALIUS Research source with lecture_cleanup and ASR spot-check.",
+  "source_url": "https://www.youtube.com/watch?v=Qm-lmC-xYCI",
+  "source_title": "Viscereality: A Bio-Responsive VR System for Augmenting Altered States through Breathwork",
+  "source_channel": "ALIUS RESEARCH",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "D8BC9A85CA68952D76CF7574925B5DDFA7AE78B689865F77DBD38F9FB7B39EE8",
+  "reference_review_status": "asr_spotcheck_passed"
+}

@@ -1,0 +1,39 @@
+{
+    "speaker_slug":  "andrea_ciaunica",
+    "speaker_name":  "Anna Ciaunica",
+    "consent":  "confirmed",
+    "profile_status":  "candidate_ready",
+    "source_status":  "downloaded_reference_candidate",
+    "voice_engine":  "F5TTS_v1_Base",
+    "roles":  [
+                  "interviewee"
+              ],
+    "interviews":  [
+                       "Issue06/Ciaunica_Friedman_Coutrot_Koroma"
+                   ],
+    "youtube_query":  "Anna Ciaunica lecture interview consciousness neuroscience",
+    "source_type":  "local_deployed_alius_audio_candidate",
+    "source_audio":  "AudioTranscription/sources/raw/andrea_ciaunica/what-is-it-like-to-be-in-early-sensory-life-anna-ciaunica.mp3",
+    "reference_audio":  "AudioTranscription/references/andrea_ciaunica/andrea_ciaunica_youtube_what-is-it-like-to-be-in-early-sensory-life-anna-ciaunica_ref_v2.wav",
+    "reference_text":  "First, my entire body is immersed in a liquid environment, which makes my movements literally fluid.",
+    "reference_source_start_seconds":  125.65,
+    "reference_duration_seconds":  9.85,
+    "demographics":  {
+                         "person":  "Anna Ciaunica",
+                         "voice_gender":  "female",
+                         "birth_year_or_age":  "unknown",
+                         "nationality_signal":  "Romania",
+                         "accent_region":  "american",
+                         "age_group":  "adult",
+                         "voice":  "af_kore",
+                         "source_url":  "https://www.wikidata.org/w/index.php?search=Anna%20Ciaunica\u0026title=Special%3ASearch\u0026ns0=1",
+                         "notes":  "Corrected from Andrea to Anna based on the Issue06 interview source files; default American accent per scaffold."
+                     },
+    "notes":  "F5-safe ref_v2 recut from the existing local ALIUS audio source; tiny Whisper ASR spotcheck passed on 2026-06-03.",
+    "source_url":  "",
+    "source_title":  "",
+    "source_channel":  "",
+    "reference_filter_preset":  "lecture_cleanup",
+    "reference_sha256":  "79EFCD09250811374758CA74613CB22A2A1C00D51FC7144382714716017EF62A",
+    "reference_review_status":  "asr_spotcheck_passed"
+}

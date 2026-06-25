@@ -1,0 +1,104 @@
+{
+  "interview_id": "Issue05/Schmidt_Fejer",
+  "interview_slug": "Issue05_Schmidt_Fejer",
+  "status": "rendered",
+  "engine": "KokoClone_Kokoro_ONNX_Kanade",
+  "mode": "tts_then_voice_conversion",
+  "execution_mode": "api",
+  "kokoclone_dir": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone",
+  "kokoclone_cwd": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone",
+  "kokoclone_cli": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\tools\\kokoclone\\cli.py",
+  "hf_home": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\cache\\huggingface",
+  "lang": "en",
+  "max_chars": 320,
+  "units": [
+    {
+      "index": 1,
+      "source": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\output\\audio_interviews\\Issue05\\Schmidt_Fejer\\qa_001.txt",
+      "chunks": 19
+    }
+  ],
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 1.0,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering.",
+  "max_units": 1,
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\george_fejer.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\timo_torsten_schmidt.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "george_fejer",
+      "speaker_name": "George Fejer",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\george_fejer.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/george_fejer/CymtPvJDYW0.webm",
+      "source_url": "https://www.youtube.com/watch?v=CymtPvJDYW0",
+      "reference_audio": "AudioTranscription/references/george_fejer/george_fejer_youtube_CymtPvJDYW0_ref_v4.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "10.200",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "10.2",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "DC9A1E396C0992C360AEFE706B79FE0890A324C6522EE30FEB7A9C19302EA5D5",
+      "actual_reference_sha256": "DC9A1E396C0992C360AEFE706B79FE0890A324C6522EE30FEB7A9C19302EA5D5",
+      "reference_text_word_count": "20",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "timo_torsten_schmidt",
+      "speaker_name": "Timo Torsten Schmidt",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\timo_torsten_schmidt.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/timo_torsten_schmidt/F6OC4GOoPD4.webm",
+      "source_url": "https://www.youtube.com/watch?v=F6OC4GOoPD4",
+      "reference_audio": "AudioTranscription/references/timo_torsten_schmidt/timo_torsten_schmidt_youtube_F6OC4GOoPD4_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.000",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.0",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "0BAEFFC7D0683B3464B0EAE896C22A271ECFC2E116E055CF030CA81F32FD82C8",
+      "actual_reference_sha256": "0BAEFFC7D0683B3464B0EAE896C22A271ECFC2E116E055CF030CA81F32FD82C8",
+      "reference_text_word_count": "26",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    }
+  ],
+  "human_listening_check": "pending",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\kokoclone\\Issue05_Schmidt_Fejer\\Issue05_Schmidt_Fejer_clone_full_interview_kokoclone.wav",
+    "duration_seconds": 295.256,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384002,
+    "sha256": "FAD40B6F11F80F92900E8B6797122CF611C103072BCD71CA887A8C6EC0E0A967"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders_kokoclone\\Issue05_Schmidt_Fejer\\Issue05_Schmidt_Fejer_clone_full_interview_kokoclone.mp3",
+    "duration_seconds": 295.256,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128039,
+    "sha256": "5D0D1E429BFDDB3157FAA9045FB73E6333BC8B5C3B4F2474D6212ABCBEDD4AB0"
+  }
+}

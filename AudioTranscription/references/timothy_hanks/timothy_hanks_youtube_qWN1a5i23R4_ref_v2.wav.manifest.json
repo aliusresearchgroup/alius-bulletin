@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\timothy_hanks\\qWN1a5i23R4.webm",
+  "output": "AudioTranscription\\references\\timothy_hanks\\timothy_hanks_youtube_qWN1a5i23R4_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 467.84,
+  "duration_seconds": 7.28,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.280000",
+      "size": "349518",
+      "bit_rate": "384085"
+    }
+  },
+  "input_sha256": "2674B6A91CC4EAA44FA5A5BD6B107BCDF50F9D1E700FC249FD7D1E10932F9F01",
+  "output_sha256": "2219D3DE7F11EC534819B4FC83B831F503DF6A760BD3771923AAE7697809F65C"
+}

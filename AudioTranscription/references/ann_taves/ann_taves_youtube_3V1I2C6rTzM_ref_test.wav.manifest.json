@@ -1,0 +1,27 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\ann_taves\\3V1I2C6rTzM.webm",
+  "output": "AudioTranscription\\references\\ann_taves\\ann_taves_youtube_3V1I2C6rTzM_ref_test.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 900.0,
+  "duration_seconds": 14.0,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "14.000000",
+      "size": "672078",
+      "bit_rate": "384044"
+    }
+  },
+  "input_sha256": "16E109FD10369730DB7C54E7C35B15704B8EB3212899CC542F81B92EC5660CD7",
+  "output_sha256": "A31F55CE6F2F5B3967585D9969101C9248B703A59F175AE02C92BCABE87A6688"
+}

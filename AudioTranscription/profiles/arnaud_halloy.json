@@ -1,0 +1,56 @@
+{
+  "speaker_slug": "arnaud_halloy",
+  "speaker_name": "Arnaud Halloy",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue01/Seligman_Halloy"
+  ],
+  "youtube_query": "Arnaud Halloy lecture interview consciousness neuroscience",
+  "source_type": "public_video_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/arnaud_halloy/l-hypothese-des-1.m4a",
+  "reference_audio": "AudioTranscription/references/arnaud_halloy/arnaud_halloy_youtube_l-hypothese-des-1_ref_v5.wav",
+  "reference_text": "Un comportement agressif invite \u00e0 une r\u00e9ponse d\u00e9fensive, un cadeau invite \u00e0 la coop\u00e9ration et un parent en d\u00e9tresse invite \u00e0 un comportement d'aide.",
+  "reference_source_start_seconds": 732.1,
+  "reference_duration_seconds": 8.45,
+  "demographics": {
+    "person": "Arnaud Halloy",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Belgium",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_eric",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Arnaud%20Halloy&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Public Canal-U source and cleaned v5 reference candidate are present. v5 uses an 8.45s sentence-bounded quote with leading/trailing silence; ASR spot-check matched the intended text and avoided the following 'Fin de citation' tail. Tiny F5 smoke output ASR matched the generated sentence with no French prompt-tail leakage; full interview render review is still pending.",
+  "source_url": "https://www.canal-u.tv/chaines/mshs-sud-est/jecis-journees-d-etudes-cognition-information-et-societe-2023/l-hypothese-des",
+  "source_title": "L'hypothèse des affordances affectives. Une théorie ethnographique du phénomène de possession | Canal U (1)",
+  "source_channel": "",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "27CB32241F0AC8B5442579AC9F8225430CF2857A11D45CEFA5215F045861861C",
+  "reference_review_status": "asr_spotcheck_passed_f5_smoke_passed_needs_full_render_review",
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/arnaud_halloy/arnaud_halloy_youtube_l-hypothese-des-1_ref_v4.wav",
+      "reference_sha256": "F28EB76F7E4BE20DC57BA2E4CC011E48A992AF7BC2683F5111CAEF992D2B172C",
+      "reason": "Full reference transcript still leaked the French tail 'qui ne le perd pas des yeux' into the generated Seligman/Halloy opening; retained the audio but shortened active reference_text for smoke testing."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/arnaud_halloy/arnaud_halloy_youtube_l-hypothese-des-1_ref_v3.wav",
+      "reference_sha256": "2A6058536BE50AFF6A80B61A26EB6D13279E6C5BD44B28DA7FEBD093A0A21CC7",
+      "reason": "Single-sentence cut still leaked the final French phrase into the generated Seligman/Halloy opening; replaced with v4 padded by trailing silence."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/arnaud_halloy/arnaud_halloy_youtube_l-hypothese-des-1_ref_v2.wav",
+      "reference_sha256": "3CB85E2C92627E682E6DA6B48E1B7274A9175AF20FDEA6452D05356227E07656",
+      "reason": "Ended on 'mouvements amples et puissants', which leaked into the generated Seligman/Halloy opening as malformed English/French prompt-tail text."
+    }
+  ]
+}

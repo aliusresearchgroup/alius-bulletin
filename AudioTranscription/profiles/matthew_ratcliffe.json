@@ -1,0 +1,62 @@
+{
+  "speaker_slug": "matthew_ratcliffe",
+  "speaker_name": "Matthew Ratcliffe",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue02/Ratcliffe_Frerejouan"
+  ],
+  "youtube_query": "Matthew Ratcliffe lecture interview consciousness neuroscience",
+  "source_type": "public_podcast_audio",
+  "source_audio": "AudioTranscription/sources/raw/matthew_ratcliffe/offerings_162186189.mp3",
+  "reference_audio": "AudioTranscription/references/matthew_ratcliffe/matthew_ratcliffe_offerings_162186189_ref_v5.wav",
+  "reference_text": "More generally my work for a number of years now has addressed the nature of poorly understood emotional experiences and feelings.",
+  "reference_source_start_seconds": 196.0,
+  "reference_duration_seconds": 8.8,
+  "demographics": {
+    "person": "Matthew Ratcliffe",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United Kingdom",
+    "accent_region": "british",
+    "age_group": "adult",
+    "voice": "bm_fable",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Matthew%20Ratcliffe%20philosopher&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; British country signal"
+  },
+  "notes": "Offerings podcast source and ASR-checked cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://podcast.app/offerings-p6783028",
+  "source_title": "Offering: Grief Worlds with Matthew Ratcliffe",
+  "source_channel": "Offerings / Jessica Dore",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "F2D7908228B04449FD8D5DC96A4DB421BFD4959495D0E584233FCDF066D4F77A",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/matthew_ratcliffe/matthew_ratcliffe_offerings_162186189_ref_v4.wav",
+      "reference_sha256": "F649B22AB161DE8D8E1B4A5B8F9F772E001A2C0206B531EA41A663999B95BC06",
+      "reason": "Reference audio exceeded F5's 12 second preprocessing limit and the longer transcript tail leaked at generated answer chunk boundaries."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/matthew_ratcliffe/matthew_ratcliffe_offerings_162186189_ref_v3.wav",
+      "reference_sha256": "E8428F512D5D18F77C73D3FBB0EFD23BADD7435106A28DE783B2913EA7BDFC05",
+      "reason": "Ended on a question about grief and depression; that prompt tail leaked before the first generated answer."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/matthew_ratcliffe/matthew_ratcliffe_youtube_LA5GBs6IuB8_ref.wav",
+      "reference_sha256": "059704995AE26294F072855C18F46D52C2FEF2340CA409884031C7C642CE3168",
+      "reference_text": "I miteinander스타illao og opinodd ydfaith am llawau o'r Y ε-dol. Wraaa an überna gather and shout out to my II",
+      "reason": "Existing keynote source/reference transcript ASR was nonsensical and caused unusable F5 prompt text."
+    },
+    {
+      "source_audio": "AudioTranscription/sources/raw/matthew_ratcliffe/abc_5796608.mp3",
+      "source_url": "https://www.abc.net.au/listen/programs/philosopherszone/a-philosophy-of-depression/5796608",
+      "reason": "False-positive metadata match; downloaded audio is a Les Murray Books and Arts Daily segment, not Matthew Ratcliffe."
+    }
+  ]
+}

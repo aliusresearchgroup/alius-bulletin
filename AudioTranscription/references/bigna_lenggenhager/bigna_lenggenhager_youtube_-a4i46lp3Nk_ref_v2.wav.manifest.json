@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\bigna_lenggenhager\\-a4i46lp3Nk.webm",
+  "output": "AudioTranscription\\references\\bigna_lenggenhager\\bigna_lenggenhager_youtube_-a4i46lp3Nk_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 345.0,
+  "duration_seconds": 11.35,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "11.350000",
+      "size": "544878",
+      "bit_rate": "384054"
+    }
+  },
+  "input_sha256": "9855A54276ED6E7EB7311299435A86A40546D0774EF458EB0ABEDB2463F799BB",
+  "output_sha256": "0390A6B46617B7ABCD54E6B2B388775A266C42D7A014FBBFEB0574CEB103C6F6"
+}

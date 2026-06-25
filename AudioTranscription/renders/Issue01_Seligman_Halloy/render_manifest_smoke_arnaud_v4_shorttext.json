@@ -1,0 +1,82 @@
+{
+  "interview_id": "Issue01/Seligman_Halloy",
+  "interview_slug": "Issue01_Seligman_Halloy",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "max_units": 1,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue01_Seligman_Halloy\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue01_Seligman_Halloy\\Issue01_Seligman_Halloy_clone_full_interview_smoke_arnaud_v4_shorttext.wav",
+    "duration_seconds": 123.717,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384002,
+    "sha256": "3ACB490A26B647229C3A88435C50A5B6CAA1F0E4B82C5420B7DF5EF8DC0B2A37"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue01_Seligman_Halloy\\Issue01_Seligman_Halloy_clone_full_interview_smoke_arnaud_v4_shorttext.mp3",
+    "duration_seconds": 123.717,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128080,
+    "sha256": "F545548CA9E1E035CCD0AC89F131644817FD91AB5D236FE8A938B11B376A8F0A"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\arnaud_halloy.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\rebecca_seligman.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "arnaud_halloy",
+      "speaker_name": "Arnaud Halloy",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\arnaud_halloy.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_full_render_review",
+      "source_audio": "AudioTranscription/sources/raw/arnaud_halloy/l-hypothese-des-1.m4a",
+      "source_url": "https://www.canal-u.tv/chaines/mshs-sud-est/jecis-journees-d-etudes-cognition-information-et-societe-2023/l-hypothese-des",
+      "reference_audio": "AudioTranscription/references/arnaud_halloy/arnaud_halloy_youtube_l-hypothese-des-1_ref_v4.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "6.100",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "6.1",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "F28EB76F7E4BE20DC57BA2E4CC011E48A992AF7BC2683F5111CAEF992D2B172C",
+      "actual_reference_sha256": "F28EB76F7E4BE20DC57BA2E4CC011E48A992AF7BC2683F5111CAEF992D2B172C",
+      "reference_text_word_count": "9",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "rebecca_seligman",
+      "speaker_name": "Rebecca Seligman",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\rebecca_seligman.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/rebecca_seligman/wfrKnnuTF2c.webm",
+      "source_url": "https://www.youtube.com/watch?v=wfrKnnuTF2c",
+      "reference_audio": "AudioTranscription/references/rebecca_seligman/rebecca_seligman_youtube_wfrKnnuTF2c_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.310",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.31",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "9B22E1CC9C18117C58643BB4B40E044EAB53A087CFC6751EB72FDC00DB991326",
+      "actual_reference_sha256": "9B22E1CC9C18117C58643BB4B40E044EAB53A087CFC6751EB72FDC00DB991326",
+      "reference_text_word_count": "22",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    }
+  ],
+  "human_listening_check": "pending"
+}

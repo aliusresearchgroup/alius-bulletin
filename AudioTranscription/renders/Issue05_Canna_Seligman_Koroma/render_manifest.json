@@ -1,0 +1,184 @@
+{
+  "interview_id": "Issue05/Canna_Seligman_Koroma",
+  "interview_slug": "Issue05_Canna_Seligman_Koroma",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "tts_speed": 1.0,
+  "tts_voice_speeds": {},
+  "audio_postprocess": {
+    "delivery_preset": "engaged",
+    "delivery_filter": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0",
+    "final_audio_filter": "loudnorm=I=-18:TP=-2:LRA=11",
+    "final_tempo": 1.0,
+    "ffmpeg_filter_chain": "equalizer=f=3200:t=q:w=1.1:g=1.2,equalizer=f=6500:t=q:w=1.4:g=0.6,acompressor=threshold=-22dB:ratio=1.4:attack=5:release=90:makeup=1.0,loudnorm=I=-18:TP=-2:LRA=11",
+    "target_sample_rate_hz": 24000,
+    "target_channels": 1
+  },
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "pronunciation_protocol": "Uppercase ALIUS / A.L.I.U.S. is normalized to lowercase alius for spoken rendering; common formal symbols are converted to spoken forms; selected proper names may be phonetically normalized for speech.",
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue05_Canna_Seligman_Koroma\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue05_Canna_Seligman_Koroma\\Issue05_Canna_Seligman_Koroma_clone_full_interview.wav",
+    "duration_seconds": 1493.723,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "101C3C917ABDAFE6393B6969EF1EFCDC190D732FF460873A692A58DAD9184D7E"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue05_Canna_Seligman_Koroma\\Issue05_Canna_Seligman_Koroma_clone_full_interview.mp3",
+    "duration_seconds": 1493.723,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128007,
+    "sha256": "69CEA01688EAC28F1BAB63C8152C0C2690A63B828A3FCC35E7BF60087436734C"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\maddalena_canna.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\rebecca_seligman.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "matthieu_koroma",
+      "speaker_name": "Matthieu Koroma",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\matthieu_koroma.json",
+      "profile_status": "working",
+      "source_status": "",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/matthieu_koroma/kEmCbay9t1w.wav",
+      "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+      "reference_audio": "AudioTranscription/references/matthieu_koroma/matthieu_koroma_youtube_kEmCbay9t1w_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "6.750",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "6.75",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "actual_reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+      "reference_text_word_count": "21",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "maddalena_canna",
+      "speaker_name": "Maddalena Canna",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\maddalena_canna.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/maddalena_canna/_GkB6Uz-pV0_canna_720_738.m4a",
+      "source_url": "https://www.youtube.com/watch?v=_GkB6Uz-pV0",
+      "reference_audio": "AudioTranscription/references/maddalena_canna/maddalena_canna_youtube__GkB6Uz-pV0_ref_v5.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "9.200",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "9.2",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "8B30904369F612F1F5BBF6115F9A2425546C3EEB687F21042FB382A78A98DFAB",
+      "actual_reference_sha256": "8B30904369F612F1F5BBF6115F9A2425546C3EEB687F21042FB382A78A98DFAB",
+      "reference_text_word_count": "15",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    },
+    {
+      "speaker_slug": "rebecca_seligman",
+      "speaker_name": "Rebecca Seligman",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\rebecca_seligman.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/rebecca_seligman/wfrKnnuTF2c.webm",
+      "source_url": "https://www.youtube.com/watch?v=wfrKnnuTF2c",
+      "reference_audio": "AudioTranscription/references/rebecca_seligman/rebecca_seligman_youtube_wfrKnnuTF2c_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.310",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.31",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "9B22E1CC9C18117C58643BB4B40E044EAB53A087CFC6751EB72FDC00DB991326",
+      "actual_reference_sha256": "9B22E1CC9C18117C58643BB4B40E044EAB53A087CFC6751EB72FDC00DB991326",
+      "reference_text_word_count": "22",
+      "risk_flags": "",
+      "warnings": "source_audio_missing",
+      "profile_gate": "warn"
+    }
+  ],
+  "human_listening_check": "asr_first60_passed_pending_full_human_listening",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper tiny.en",
+    "language": "en",
+    "audio_window_seconds": 60,
+    "checked_audio": "AudioTranscription/work/verification/Issue05_Canna_Seligman_Koroma/first60_full.wav",
+    "checked_transcript": "AudioTranscription/work/verification/Issue05_Canna_Seligman_Koroma/first60_full.txt",
+    "speaker_label_check": "passed_no_spoken_q_or_a_labels_detected",
+    "pronunciation_check": "passed_no_letter_spelling_for_ALIUS_detected_asr_heard_lowercase_pronunciation_as_Elias",
+    "notes": "ASR did not detect spoken speaker labels. The lowercase alius pronunciation was recognized as Elias, not as A L I U S spelling.",
+    "excerpt": "Dr. Madelina Kanna is a postdoctoral researcher at Northwestern University and Dr. Rebecca\nSeligman is an associate professor of anthropology at Northwestern University.\nYou are both part of the Elias Research Group devoted to fostering interdisciplinary research\nabout the diversity of consciousness.\nWhat types of consciousness phenomena have you been primarily interested in?\nCould you illustrate how transcultural research has helped you better understand some aspects\nof consciousness?\nWe both conducted our PhD research on spirit possession, Madelina Kanna on demonic\npossession in Nicaragua, and Rebecca Seligman on religious possession in Brazilian,\nKingdom LA.\nSpirit possession has been frequently exoticized as something exclusively bounded to\nlocalized systems of beliefs.\nAlso, it has been medicalized and conflated with a wide array of psychiatric constructs\nfrom hysteria to conversion"
+  },
+  "question_voice_policy": "qa_header_or_plan_default",
+  "unit_voice_routing": [
+    {
+      "unit": 1,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 2,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 3,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 4,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    },
+    {
+      "unit": 5,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "maddalena_canna",
+      "answer_voice_segments": [
+        "maddalena_canna"
+      ]
+    },
+    {
+      "unit": 6,
+      "question_voice": "matthieu_koroma",
+      "answer_voice": "rebecca_seligman",
+      "answer_voice_segments": [
+        "rebecca_seligman"
+      ]
+    }
+  ],
+  "routing_check": "passed: 6 Q&A units route questions to matthieu_koroma; answer units alternate maddalena_canna on 1/3/5 and rebecca_seligman on 2/4/6; speaker labels are metadata only.",
+  "speaker_label_check": "passed: generated F5 control text uses bracketed voice tags only; speaker names are not part of spoken QUESTION/ANSWER text.",
+  "pronunciation_check": "passed: uppercase ALIUS is normalized to spoken alius; existing F5 input matched current cleaner output."
+}

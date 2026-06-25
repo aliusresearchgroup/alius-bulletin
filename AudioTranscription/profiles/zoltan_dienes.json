@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "zoltan_dienes",
+  "speaker_name": "Zoltan Dienes",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue03/Dienes_Martin"
+  ],
+  "youtube_query": "Zoltan Dienes lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/zoltan_dienes/fiHKhZtsL_0.webm",
+  "reference_audio": "AudioTranscription/references/zoltan_dienes/zoltan_dienes_youtube_fiHKhZtsL_0_ref_v4.wav",
+  "reference_text": "They won't do something that's against the principles, and indeed the first study I talked about showed that they won't even do the suggestion if it doesn't seem quite appropriate to do it.",
+  "reference_source_start_seconds": 782.76,
+  "reference_duration_seconds": 10.1,
+  "demographics": {
+    "person": "Zoltan Dienes",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United Kingdom",
+    "accent_region": "british",
+    "age_group": "mature",
+    "voice": "bm_george",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Zoltan%20Dienes&title=Special%3ASearch&ns0=1",
+    "notes": "British country signal"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=fiHKhZtsL_0",
+  "source_title": "Out Of The Blank #1253 - Zoltan Dienes",
+  "source_channel": "Out Of The Blank",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "00F4EC47934912D906B1A27B100DA7A36AF70208E7C911C56272F28CF2511BF2",
+  "reference_review_status": "asr_spotcheck_passed"
+}

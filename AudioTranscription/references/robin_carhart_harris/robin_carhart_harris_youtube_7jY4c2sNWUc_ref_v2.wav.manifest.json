@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\robin_carhart_harris\\7jY4c2sNWUc.webm",
+  "output": "AudioTranscription\\references\\robin_carhart_harris\\robin_carhart_harris_youtube_7jY4c2sNWUc_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 628.4,
+  "duration_seconds": 6.0,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.000000",
+      "size": "288078",
+      "bit_rate": "384104"
+    }
+  },
+  "input_sha256": "A80FC53A4FFFE11A0821D69D9F22BF6B6F1DF92150F4538AE9E2D266912392D3",
+  "output_sha256": "5DFDF59664A451D4F55BDED91098F92EAC5395849B38033654E98D9522DDBB2C"
+}

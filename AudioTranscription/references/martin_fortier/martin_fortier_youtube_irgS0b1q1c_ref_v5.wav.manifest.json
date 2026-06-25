@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\martin_fortier\\_irgS0b1q1c.webm",
+  "output": "AudioTranscription\\references\\martin_fortier\\martin_fortier_youtube_irgS0b1q1c_ref_v5.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 760.0,
+  "duration_seconds": 8.8,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.800000",
+      "size": "422478",
+      "bit_rate": "384070"
+    }
+  },
+  "input_sha256": "28CFFB2059FF8DE5315A2F8E8CD243069C041F904AC80BE9B4112322DAE36475",
+  "output_sha256": "1A4C24DF4023CBC422B02EF0024EEDBAD270E44769F5D29A7E1183D0769F6205"
+}

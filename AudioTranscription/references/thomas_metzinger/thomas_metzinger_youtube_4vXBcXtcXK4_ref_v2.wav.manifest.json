@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\thomas_metzinger\\4vXBcXtcXK4.webm",
+  "output": "AudioTranscription\\references\\thomas_metzinger\\thomas_metzinger_youtube_4vXBcXtcXK4_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 115.0,
+  "duration_seconds": 7.0,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.000000",
+      "size": "336078",
+      "bit_rate": "384089"
+    }
+  },
+  "input_sha256": "816A7E14CFA2C5E6F6B3CCC2D633B35A14999748E60CF4A24A5FBE9DA175778D",
+  "output_sha256": "15BC9170D568790AC3C192738D63EE0B90E73F56CC608B75AA9DB74A8273A903"
+}

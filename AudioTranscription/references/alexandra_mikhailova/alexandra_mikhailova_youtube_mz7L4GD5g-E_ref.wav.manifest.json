@@ -1,0 +1,32 @@
+{
+  "input": "AudioTranscription\\references\\alexandra_mikhailova\\alexandra_mikhailova_youtube_mz7L4GD5g-E_source_section.webm",
+  "output": "AudioTranscription\\references\\alexandra_mikhailova\\alexandra_mikhailova_youtube_mz7L4GD5g-E_ref.wav",
+  "source_url": "https://www.youtube.com/watch?v=mz7L4GD5g-E",
+  "source_title": "ActInf Livestream #003.1 \"A World Unto Itself: Human Communication as Active Inference\"",
+  "source_channel": "Active Inference Institute",
+  "source_section_start_seconds": 394.8,
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 0.68,
+  "source_url_reference_start_seconds": 395.48,
+  "duration_seconds": 13.45,
+  "max_reference_seconds": 15.0,
+  "allow_long_reference": false,
+  "output_probe": {
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "13.450000",
+      "size": "645678",
+      "bit_rate": "384046"
+    }
+  },
+  "input_sha256": "3F77239D5E88A639DF151B3D6B5611E005D89F6BD105ADA0F1FA4B30FE656059",
+  "output_sha256": "A78B25130AEEC41D936E437726EF86DB93B4758DED3FE1B99669707C1BE2B439"
+}

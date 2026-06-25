@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "tim_bayne",
+  "speaker_name": "Tim Bayne",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue03/Bayne_Bucci_Koroma"
+  ],
+  "youtube_query": "Tim Bayne lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/tim_bayne/2XfADVXGxps.webm",
+  "reference_audio": "AudioTranscription/references/tim_bayne/tim_bayne_youtube_2XfADVXGxps_ref_v2.wav",
+  "reference_text": "Is it something about the relationship between consciousness and control, that if it's not conscious, it's not got the kind of control that you need for free will?",
+  "reference_source_start_seconds": 819.68,
+  "reference_duration_seconds": 10.0,
+  "demographics": {
+    "person": "Tim Bayne",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Australia",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_fenrir",
+    "source_url": "https://en.wikipedia.org/wiki/Tim_Bayne",
+    "notes": "public biography; default American accent per request"
+  },
+  "notes": "Short F5-safe YouTube reference re-cut with lecture_cleanup and ASR spot-check.",
+  "source_url": "https://www.youtube.com/watch?v=2XfADVXGxps",
+  "source_title": "The Free Will Show Episode 22: The Libet Experiment with Tim Bayne",
+  "source_channel": "The Free Will Show",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "B35E8323206637F170B9EE7D7B6E89273907761F4A18175D96E6C4F94DBD6BF2",
+  "reference_review_status": "asr_spotcheck_passed"
+}

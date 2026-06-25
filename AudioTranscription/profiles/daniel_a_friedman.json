@@ -1,0 +1,45 @@
+{
+  "speaker_slug": "daniel_a_friedman",
+  "speaker_name": "Daniel A. Friedman",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue02/Friston_Fortier_Friedman",
+    "Issue03/Dennett_Fleig-Goldstein_Friedman",
+    "Issue04/Hanks_Mikhailova_Friedman",
+    "Issue06/Ciaunica_Friedman_Coutrot_Koroma",
+    "Issue06/Jillings_Friedman_Coutrot_Koroma",
+    "Issue06/Koroma_Friedman_Coutrot",
+    "Issue06/Sapolsky_Mikhailova_Friedman"
+  ],
+  "youtube_query": "Daniel A. Friedman lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/daniel_a_friedman/yHnm-zMqLvY.webm",
+  "reference_audio": "AudioTranscription/references/daniel_a_friedman/daniel_a_friedman_youtube_yHnm-zMqLvY_ref_v2.wav",
+  "reference_text": "The nutshell is its own domain, and inside of it there's so much space to be developing, and there's so much that will sprout out of it.",
+  "reference_source_start_seconds": 646.4,
+  "reference_duration_seconds": 9.76,
+  "demographics": {
+    "person": "Daniel A. Friedman",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_fenrir",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Daniel%20A.%20Friedman%20Stanford%20biology&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "Short F5-safe YouTube reference re-cut with lecture_cleanup and ASR spot-check.",
+  "source_url": "https://www.youtube.com/watch?v=yHnm-zMqLvY",
+  "source_title": "What is Active Inference?...with Daniel Friedman",
+  "source_channel": "Inner Sense - Know Your Inner World",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "53342F02624C979210A8485CAF36C3D7B3A0C8B7EF44B43EB2C14FCFCD0C3E74",
+  "reference_review_status": "asr_spotcheck_passed"
+}

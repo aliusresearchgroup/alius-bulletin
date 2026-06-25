@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\jennifer_windt\\pYZ67vg0FlY.webm",
+  "output": "AudioTranscription\\references\\jennifer_windt\\jennifer_windt_youtube_pYZ67vg0FlY_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 873.06,
+  "duration_seconds": 8.1,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.100000",
+      "size": "388878",
+      "bit_rate": "384077"
+    }
+  },
+  "input_sha256": "9A77704D2FEE8ED2FE5CE24CD918D420F2642E6966E1EEC0A801286D1A632384",
+  "output_sha256": "EE558AECEFC670416423957809E65BE90EBFB0E00CCA95E43092D88A33380AF0"
+}

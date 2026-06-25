@@ -1,0 +1,33 @@
+{
+  "speaker_slug": "tom_froese",
+  "speaker_name": "Tom Froese",
+  "consent": "confirmed",
+  "profile_status": "working",
+  "voice_engine": "F5TTS_v1_Base",
+  "source_type": "reviewed_youtube_lecture_audio",
+  "source_url": "https://www.youtube.com/watch?v=2UUet5TtElk",
+  "source_title": "Introducing the irruption theory of consciousness by Tom Froese",
+  "source_channel": "Consciousness Club Tokyo",
+  "source_audio": "AudioTranscription/sources/raw/tom_froese/2UUet5TtElk.wav",
+  "source_captions": "AudioTranscription/sources/raw/tom_froese/2UUet5TtElk.en-orig.vtt",
+  "reference_audio": "AudioTranscription/references/tom_froese/tom_froese_youtube_2UUet5TtElk_ref_v3.wav",
+  "reference_text": "It's something that hasn't been published yet, so it's work in progress, and I'm just going to put it out here for some discussion.",
+  "reference_source_start_seconds": 76.16,
+  "reference_duration_seconds": 8.4,
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "731998E2048A9A15A176A1D3F4FE292964C378CB1D60EB40B127D1ECB78BCA1F",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "caption_window_csv": "AudioTranscription/work/caption_windows/tom_froese_youtube.csv",
+  "notes": "Reference clip extracted from reviewed public YouTube lecture audio and cleaned with the standard lecture_cleanup filter. Current reference is sub-12 seconds to avoid F5 prompt truncation. Previous local interview-source reference remains in AudioTranscription/references/Issue07_Froese_Koroma/ for comparison.",
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/tom_froese/tom_froese_youtube_2UUet5TtElk_ref_v2.wav",
+      "reference_sha256": "B8716514E2DA6543755FF0CBECBFA48D5F629A9122EE3CF4D90BB09E7720A5DF",
+      "reason": "Ended on 'consciousness', which leaked into the first-minute ASR of the full Issue07 render."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/tom_froese/tom_froese_youtube_2UUet5TtElk_ref.wav",
+      "reason": "Fourteen-second reference exceeded F5's safe prompt length and ended with extra prompt-tail text beyond the new sentence-bounded clip."
+    }
+  ]
+}

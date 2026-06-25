@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "david_b_yaden",
+  "speaker_name": "David B. Yaden",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue05/Olson_Yaden_Fejer"
+  ],
+  "youtube_query": "David B. Yaden lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/david_b_yaden/XMQ9eUFj97U.webm",
+  "reference_audio": "AudioTranscription/references/david_b_yaden/david_b_yaden_youtube_XMQ9eUFj97U_ref_v2.wav",
+  "reference_text": "But they seem similar in that they're all intensely altered states of consciousness involving some degree of self-diminishment and feelings of connectedness.",
+  "reference_source_start_seconds": 655.68,
+  "reference_duration_seconds": 10.48,
+  "demographics": {
+    "person": "David B. Yaden",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_onyx",
+    "source_url": "https://www.wikidata.org/w/index.php?search=David%20B.%20Yaden&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=XMQ9eUFj97U",
+  "source_title": "David Yaden on Self-Transcendence, Psychedelics, and Behavior Change",
+  "source_channel": "John R. Miles",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "7A1450689EF575D3277828EEE5B6116A01BEB92800214AE35279C4F66B016246",
+  "reference_review_status": "asr_spotcheck_passed"
+}

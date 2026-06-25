@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\daniel_dennett\\KOApAHhKCxQ.webm",
+  "output": "AudioTranscription\\references\\daniel_dennett\\daniel_dennett_youtube_KOApAHhKCxQ_ref_v3.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 1543.05,
+  "duration_seconds": 8.45,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.450000",
+      "size": "405678",
+      "bit_rate": "384073"
+    }
+  },
+  "input_sha256": "EFDFF1635EC1827D2A430A53DC0802B1910B225C3314CF2151A51ECD631D5A44",
+  "output_sha256": "0E943FFACCFC9C5E4CBE49A30C33B50093B23BB53371DDCF001607B8ADA4B940"
+}

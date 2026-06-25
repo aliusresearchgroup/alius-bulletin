@@ -1,0 +1,92 @@
+{
+  "interview_id": "Issue03/Preller_Dumas",
+  "interview_slug": "Issue03_Preller_Dumas",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "max_units": null,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue03_Preller_Dumas\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue03_Preller_Dumas\\Issue03_Preller_Dumas_clone_full_interview.wav",
+    "duration_seconds": 1119.117,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384000,
+    "sha256": "2EB482580DF94C12E510AA9B9C1808E911AFE8A73EF42C01F20CC97837B8A949",
+    "retained": false,
+    "cleanup_note": "Intermediate work WAV removed after verified MP3 render. Regenerate with render_interview.py --force if needed."
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue03_Preller_Dumas\\Issue03_Preller_Dumas_clone_full_interview.mp3",
+    "duration_seconds": 1119.117,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128008,
+    "sha256": "E5189EE070FB82A593DDEA489D79A35BE7AB89A55D2DA04EB1D5C026CB8A6769"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\guillaume_dumas.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\katrin_preller.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "guillaume_dumas",
+      "speaker_name": "Guillaume Dumas",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\guillaume_dumas.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/guillaume_dumas/bZdhwsRoz54.webm",
+      "source_url": "https://www.youtube.com/watch?v=bZdhwsRoz54",
+      "reference_audio": "AudioTranscription/references/guillaume_dumas/guillaume_dumas_youtube_bZdhwsRoz54_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "9.200",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "9.2",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "E385B856C08270AD84D46858D86FE4A44A3348EE1B12F252AC34E9A4C087B60E",
+      "actual_reference_sha256": "E385B856C08270AD84D46858D86FE4A44A3348EE1B12F252AC34E9A4C087B60E",
+      "reference_text_word_count": "22",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "katrin_preller",
+      "speaker_name": "Katrin Preller",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\katrin_preller.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed",
+      "source_audio": "AudioTranscription/sources/raw/katrin_preller/t9KMDg_ZGyg.webm",
+      "source_url": "https://www.youtube.com/watch?v=t9KMDg_ZGyg",
+      "reference_audio": "AudioTranscription/references/katrin_preller/katrin_preller_youtube_t9KMDg_ZGyg_ref_v4.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "11.350",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "11.35",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "71E7806851B1C5C25482A09824A2CBF81BB9DB910884373D689B0E9821BA3C97",
+      "actual_reference_sha256": "71E7806851B1C5C25482A09824A2CBF81BB9DB910884373D689B0E9821BA3C97",
+      "reference_text_word_count": "20",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    }
+  ],
+  "asr_spotcheck": {
+    "result": "passed",
+    "sample": "first60",
+    "model": "whisper_tiny.en",
+    "audio": "AudioTranscription/work/verification/Issue03_Preller_Dumas/first60_full.wav",
+    "transcript": "AudioTranscription/work/verification/Issue03_Preller_Dumas/first60_full.txt",
+    "notes": "First-minute ASR follows the intended opening and shows no obvious profile prompt-tail leakage."
+  },
+  "human_listening_check": "pending"
+}

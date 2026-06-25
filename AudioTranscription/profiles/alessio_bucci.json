@@ -1,0 +1,40 @@
+{
+  "speaker_slug": "alessio_bucci",
+  "speaker_name": "Alessio Bucci",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue01/Windt_Bucci_Milliere",
+    "Issue03/Bayne_Bucci_Koroma"
+  ],
+  "youtube_query": "Alessio Bucci lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/alessio_bucci/f_5MoCn8rXA.webm",
+  "reference_audio": "AudioTranscription/references/alessio_bucci/alessio_bucci_youtube_f_5MoCn8rXA_ref_v3.wav",
+  "reference_text": "I think it's now almost common sensical that we don't have a consciousness that is like a property of a system that is switched on and off.",
+  "reference_source_start_seconds": 310.25,
+  "reference_duration_seconds": 8.85,
+  "demographics": {
+    "person": "Alessio Bucci",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Italy",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_echo",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Alessio%20Bucci&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase and avoided the next sentence tail.",
+  "source_url": "https://www.youtube.com/watch?v=f_5MoCn8rXA",
+  "source_title": "Alessio Bucci - Breaking Down Consciousness: A Conceptual Clarification Of “Altered States”",
+  "source_channel": "Breaking Convention",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "F8DD995025B04FC047662C888F4FE86BB6FFB97A3384B3D3ECB9CFF92F60E177",
+  "reference_review_status": "asr_spotcheck_passed"
+}

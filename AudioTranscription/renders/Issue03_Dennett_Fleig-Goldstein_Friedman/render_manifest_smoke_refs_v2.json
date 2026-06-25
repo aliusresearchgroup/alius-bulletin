@@ -1,0 +1,82 @@
+{
+  "interview_id": "Issue03/Dennett_Fleig-Goldstein_Friedman",
+  "interview_slug": "Issue03_Dennett_Fleig-Goldstein_Friedman",
+  "status": "rendered",
+  "engine": "F5TTS_v1_Base",
+  "device": "cuda",
+  "nfe_step": 16,
+  "text_protocol": "output/audio_interviews qa_*.txt QUESTION/ANSWER SPOKEN TEXT",
+  "max_units": 2,
+  "config": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue03_Dennett_Fleig-Goldstein_Friedman\\f5_config.toml",
+  "wav": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\work\\Issue03_Dennett_Fleig-Goldstein_Friedman\\Issue03_Dennett_Fleig-Goldstein_Friedman_clone_full_interview_smoke_refs_v2.wav",
+    "duration_seconds": 147.461,
+    "codec": "pcm_s16le",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 384002,
+    "sha256": "3E8FEE0503E8B9683027881B217F13F53B2F91A1B417B06D7A4041ADC1475BF4"
+  },
+  "mp3": {
+    "path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\renders\\Issue03_Dennett_Fleig-Goldstein_Friedman\\Issue03_Dennett_Fleig-Goldstein_Friedman_clone_full_interview_smoke_refs_v2.mp3",
+    "duration_seconds": 147.461,
+    "codec": "mp3",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "bit_rate_bps": 128081,
+    "sha256": "173DC8D8E1FFC0F32E0253CA0ABCCC6DA93DF28B799EEE40FD59EA0D86F0B404"
+  },
+  "voice_profiles": [
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\brittany_fleig_goldstein.json",
+    "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\daniel_dennett.json"
+  ],
+  "voice_profile_audit": [
+    {
+      "speaker_slug": "brittany_fleig_goldstein",
+      "speaker_name": "Brendan Fleig-Goldstein",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\brittany_fleig_goldstein.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/brittany_fleig_goldstein/joyEOh8vq9s.webm",
+      "source_url": "https://www.youtube.com/watch?v=joyEOh8vq9s",
+      "reference_audio": "AudioTranscription/references/brittany_fleig_goldstein/brittany_fleig_goldstein_youtube_joyEOh8vq9s_ref_v2.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "7.850",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "7.85",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "29781CB8D61E4E9AB3ACA3B08566F8D2AF1848B32791E01ED2C4E3B005FAD2DE",
+      "actual_reference_sha256": "29781CB8D61E4E9AB3ACA3B08566F8D2AF1848B32791E01ED2C4E3B005FAD2DE",
+      "reference_text_word_count": "18",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    },
+    {
+      "speaker_slug": "daniel_dennett",
+      "speaker_name": "Daniel Dennett",
+      "profile_path": "C:\\Users\\cogpsy-vrlab\\Documents\\GitHub\\ALIUS-bulletin\\AudioTranscription\\profiles\\daniel_dennett.json",
+      "profile_status": "candidate_ready",
+      "source_status": "downloaded_reference_candidate",
+      "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+      "source_audio": "AudioTranscription/sources/raw/daniel_dennett/KOApAHhKCxQ.webm",
+      "source_url": "https://www.youtube.com/watch?v=KOApAHhKCxQ",
+      "reference_audio": "AudioTranscription/references/daniel_dennett/daniel_dennett_youtube_KOApAHhKCxQ_ref_v3.wav",
+      "reference_exists": "yes",
+      "reference_duration_seconds": "8.450",
+      "max_reference_seconds": "11.500",
+      "declared_reference_duration_seconds": "8.45",
+      "declared_duration_delta_seconds": "0.000",
+      "reference_sha_status": "ok",
+      "reference_sha256": "0E943FFACCFC9C5E4CBE49A30C33B50093B23BB53371DDCF001607B8ADA4B940",
+      "actual_reference_sha256": "0E943FFACCFC9C5E4CBE49A30C33B50093B23BB53371DDCF001607B8ADA4B940",
+      "reference_text_word_count": "24",
+      "risk_flags": "",
+      "warnings": "",
+      "profile_gate": "pass"
+    }
+  ],
+  "human_listening_check": "pending"
+}

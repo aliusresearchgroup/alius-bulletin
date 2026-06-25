@@ -1,0 +1,18 @@
+{
+  "interview_id": "Issue07/Froese_Koroma",
+  "interview_slug": "Issue07_Froese_Koroma",
+  "source_qa_dir": "output/audio_interviews/Issue07/Froese_Koroma",
+  "output_file_stem": "froese_clone_full_interview",
+  "voices": {
+    "question": "matthieu_koroma",
+    "answer": "tom_froese"
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "notes": "Uses existing cleaned QUESTION/ANSWER SPOKEN TEXT fields from the ALIUS Kokoro audio pipeline."
+}
+

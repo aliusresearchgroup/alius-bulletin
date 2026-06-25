@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue04/Carter_Preller",
+  "interview_slug": "Issue04_Carter_Preller",
+  "source_qa_dir": "output/audio_interviews/Issue04/Carter_Preller",
+  "output_file_stem": "Issue04_Carter_Preller_clone_full_interview",
+  "voices": {
+    "question": "katrin_preller",
+    "answer": "olivia_carter"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Katrin Preller",
+        "speaker_slug": "katrin_preller"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Olivia Carter",
+        "speaker_slug": "olivia_carter"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

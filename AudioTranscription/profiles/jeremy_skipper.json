@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "jeremy_skipper",
+  "speaker_name": "Jeremy Skipper",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue06/Skipper_Roseman_Koroma_Fejer"
+  ],
+  "youtube_query": "Jeremy Skipper lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/jeremy_skipper/3TjvrdhRqJg.webm",
+  "reference_audio": "AudioTranscription/references/jeremy_skipper/jeremy_skipper_youtube_3TjvrdhRqJg_ref_v3.wav",
+  "reference_text": "I'm not going to give much detail of the experimental methods for lack of time.",
+  "reference_source_start_seconds": 199.2,
+  "reference_duration_seconds": 6.5,
+  "demographics": {
+    "person": "Jeremy Skipper",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_onyx",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Jeremy%20Skipper%20language%20neuroscience&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=3TjvrdhRqJg",
+  "source_title": "OHBM 2024 | Symposium | Jeremy Skipper |  The interrelationship between the neurobiology of langua…",
+  "source_channel": "Organization for Human Brain Mapping",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "F7B433E292EC2D390DC48667214ABC62EEB5218A7B36291F243ECB03341186F9",
+  "reference_review_status": "asr_spotcheck_passed"
+}

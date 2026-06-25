@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "timo_torsten_schmidt",
+  "speaker_name": "Timo Torsten Schmidt",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue05/Schmidt_Fejer"
+  ],
+  "youtube_query": "Timo Torsten Schmidt lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/timo_torsten_schmidt/F6OC4GOoPD4.webm",
+  "reference_audio": "AudioTranscription/references/timo_torsten_schmidt/timo_torsten_schmidt_youtube_F6OC4GOoPD4_ref_v2.wav",
+  "reference_text": "When you want to assess the phenomenology of an altered state, you hand out a questionnaire, like after the experience, and people fill in the questionnaires.",
+  "reference_source_start_seconds": 632.0,
+  "reference_duration_seconds": 8.0,
+  "demographics": {
+    "person": "Timo Torsten Schmidt",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "Germany",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_liam",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Timo%20Torsten%20Schmidt&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=F6OC4GOoPD4",
+  "source_title": "Timo Torsten-Schmidt - Common Structures of Altered States Experiences",
+  "source_channel": "Amsterdam Psychedelic Research Association",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "0BAEFFC7D0683B3464B0EAE896C22A271ECFC2E116E055CF030CA81F32FD82C8",
+  "reference_review_status": "asr_spotcheck_passed"
+}

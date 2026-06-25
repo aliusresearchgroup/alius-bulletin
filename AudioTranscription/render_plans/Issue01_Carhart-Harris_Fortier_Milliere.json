@@ -1,0 +1,36 @@
+{
+  "interview_id": "Issue01/Carhart-Harris_Fortier_Milliere",
+  "interview_slug": "Issue01_Carhart-Harris_Fortier_Milliere",
+  "source_qa_dir": "output/audio_interviews/Issue01/Carhart-Harris_Fortier_Milliere",
+  "output_file_stem": "Issue01_Carhart-Harris_Fortier_Milliere_clone_full_interview",
+  "voices": {
+    "question": "martin_fortier",
+    "answer": "robin_carhart_harris"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Martin Fortier",
+        "speaker_slug": "martin_fortier"
+      },
+      {
+        "name": "Raphael Milliere",
+        "speaker_slug": "raphael_milliere"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Robin Carhart-Harris",
+        "speaker_slug": "robin_carhart_harris"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

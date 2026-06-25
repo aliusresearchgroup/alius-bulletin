@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\jasmine_t_ho\\srf_einstein_jasmine_36m48_36m57.mp4",
+  "output": "AudioTranscription\\references\\jasmine_t_ho\\jasmine_t_ho_srf_einstein_wie_rassismus_entsteht_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": null,
+  "duration_seconds": 8.4,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.400000",
+      "size": "403278",
+      "bit_rate": "384074"
+    }
+  },
+  "input_sha256": "D36AD4AF415A7F79C9A8A07A2EA4159DE9086C65BAD1B342016C738A598A9456",
+  "output_sha256": "BA0053873CC5E84C3E2D74B7242A78C24F03EDF840565F15E63652BD7306518B"
+}

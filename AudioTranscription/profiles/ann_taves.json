@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "ann_taves",
+  "speaker_name": "Ann Taves",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue02/Taves_Fortier_Canna"
+  ],
+  "youtube_query": "Ann Taves lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/ann_taves/3V1I2C6rTzM.webm",
+  "reference_audio": "AudioTranscription/references/ann_taves/ann_taves_youtube_3V1I2C6rTzM_ref_v4.wav",
+  "reference_text": "Everyday common sense psychology to highly refined philosophical or scientific understandings are often hard to reconcile with one another.",
+  "reference_source_start_seconds": 596.88,
+  "reference_duration_seconds": 8.9,
+  "demographics": {
+    "person": "Ann Taves",
+    "voice_gender": "female",
+    "birth_year_or_age": "1952",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "older",
+    "voice": "af_nicole",
+    "source_url": "https://en.wikipedia.org/wiki/Ann_Taves",
+    "notes": "public scholar page"
+  },
+  "notes": "YouTube source and cleaned F5-safe reference candidate are present. ASR spot-check matched the intended bounded phrase closely enough for profile gating.",
+  "source_url": "https://www.youtube.com/watch?v=3V1I2C6rTzM",
+  "source_title": "Ann Taves: Inaugural Lecture: Ecstasy: Linking the Humanities and the Brain",
+  "source_channel": "UCSB Interdisciplinary Humanities Center",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "0C5824F301F94040089C1CB16B3B190AE1FEE229102BA0D930F69642F4A83501",
+  "reference_review_status": "asr_spotcheck_passed"
+}

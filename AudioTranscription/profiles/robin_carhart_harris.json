@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "robin_carhart_harris",
+  "speaker_name": "Robin Carhart-Harris",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue01/Carhart-Harris_Fortier_Milliere"
+  ],
+  "youtube_query": "Robin Carhart-Harris lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/robin_carhart_harris/7jY4c2sNWUc.webm",
+  "reference_audio": "AudioTranscription/references/robin_carhart_harris/robin_carhart_harris_youtube_7jY4c2sNWUc_ref_v2.wav",
+  "reference_text": "that we see in humans with even a single dose of psilocybin.",
+  "reference_source_start_seconds": 628.4,
+  "reference_duration_seconds": 6.0,
+  "demographics": {
+    "person": "Robin Carhart-Harris",
+    "voice_gender": "male",
+    "birth_year_or_age": "1980",
+    "nationality_signal": "United Kingdom",
+    "accent_region": "british",
+    "age_group": "adult",
+    "voice": "bm_fable",
+    "source_url": "https://www.wikidata.org/wiki/Q49986629",
+    "notes": "Wikidata public researcher page; British male voice"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=7jY4c2sNWUc",
+  "source_title": "MINDSET Lecture Series: Robin Carhart-Harris, PhD",
+  "source_channel": "Icahn School of Medicine",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "5DFDF59664A451D4F55BDED91098F92EAC5395849B38033654E98D9522DDBB2C",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review"
+}

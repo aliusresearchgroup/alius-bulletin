@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\jean_pierre_changeux\\8yWmxcRkZz0.m4a.part",
+  "output": "AudioTranscription\\references\\jean_pierre_changeux\\jean_pierre_changeux_youtube_8yWmxcRkZz0_ref_v2.wav",
+  "preset": "speech_reference_crisp_noisy_mic",
+  "preset_description": "Default for muffled laptop/headset/interview mics. Reduces rumble/noise, adds presence, controls dynamics.",
+  "ffmpeg_filter": "highpass=f=90,lowpass=f=9500,afftdn=nf=-28,equalizer=f=180:t=q:w=1.0:g=-1.5,equalizer=f=3000:t=q:w=1.0:g=3.0,equalizer=f=5500:t=q:w=1.5:g=1.5,acompressor=threshold=-24dB:ratio=2.2:attack=5:release=80:makeup=2.0,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 1220.0,
+  "duration_seconds": 8.6,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.600000",
+      "size": "412878",
+      "bit_rate": "384072"
+    }
+  },
+  "input_sha256": "6BD36229B443D542D9885B60598390274CB9994955CA29847DEF5007CCDEB4A4",
+  "output_sha256": "FA967EE8D6137097CBABD3CD4CBE2C72FAA0057A7CD6FC7B518B81934BB3F455"
+}

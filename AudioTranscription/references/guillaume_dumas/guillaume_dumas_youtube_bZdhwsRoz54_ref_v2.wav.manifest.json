@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\guillaume_dumas\\bZdhwsRoz54.webm",
+  "output": "AudioTranscription\\references\\guillaume_dumas\\guillaume_dumas_youtube_bZdhwsRoz54_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 445.68,
+  "duration_seconds": 9.2,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "9.200000",
+      "size": "441678",
+      "bit_rate": "384067"
+    }
+  },
+  "input_sha256": "913A318867C3CC3DD2CC1503FAE4420E8967E5B81796B4DB7D666D7F6D763B42",
+  "output_sha256": "E385B856C08270AD84D46858D86FE4A44A3348EE1B12F252AC34E9A4C087B60E"
+}

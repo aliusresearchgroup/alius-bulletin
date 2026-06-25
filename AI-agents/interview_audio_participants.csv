@@ -1,0 +1,106 @@
+interview_id,role,person
+Fictional/Peterson_Zizek,interviewer,Slavoj Zizek
+Fictional/Peterson_Zizek,interviewee,Jordan Peterson
+Issue01/Carhart-Harris_Fortier_Milliere,interviewee,Robin Carhart-Harris
+Issue01/Carhart-Harris_Fortier_Milliere,interviewer,Martin Fortier
+Issue01/Carhart-Harris_Fortier_Milliere,interviewer,Raphael Milliere
+Issue01/Hohwy_Koroma,interviewee,Jakob Hohwy
+Issue01/Hohwy_Koroma,interviewer,Matthieu Koroma
+Issue01/Luhrmann_Fortier,interviewee,Tanya Luhrmann
+Issue01/Luhrmann_Fortier,interviewer,Martin Fortier
+Issue01/McCarthy-Jones_Frerejouan,interviewee,Simon McCarthy-Jones
+Issue01/McCarthy-Jones_Frerejouan,interviewer,Mathieu Frerejouan
+Issue01/Seligman_Halloy,interviewee,Rebecca Seligman
+Issue01/Seligman_Halloy,interviewer,Arnaud Halloy
+Issue01/Windt_Bucci_Milliere,interviewee,Jennifer Windt
+Issue01/Windt_Bucci_Milliere,interviewer,Alessio Bucci
+Issue01/Windt_Bucci_Milliere,interviewer,Raphael Milliere
+Issue02/Fox_Koroma,interviewee,Kieran Fox
+Issue02/Fox_Koroma,interviewer,Matthieu Koroma
+Issue02/Friston,interviewee,Karl Friston
+Issue02/Friston,interviewer,Martin Fortier
+Issue02/Friston,interviewer,Matthieu Koroma
+Issue02/Friston,interviewer,Raphael Milliere
+Issue02/Friston_Fortier_Friedman,interviewee,Karl Friston
+Issue02/Friston_Fortier_Friedman,interviewer,Martin Fortier
+Issue02/Friston_Fortier_Friedman,interviewer,Daniel A. Friedman
+Issue02/Metzinger_Limanowski_Milliere,interviewee,Thomas Metzinger
+Issue02/Metzinger_Limanowski_Milliere,interviewer,Jakub Limanowski
+Issue02/Metzinger_Limanowski_Milliere,interviewer,Raphael Milliere
+Issue02/Nichols_Roseman_Timmermann,interviewee,David E. Nichols
+Issue02/Nichols_Roseman_Timmermann,interviewer,Leor Roseman
+Issue02/Nichols_Roseman_Timmermann,interviewer,Christopher Timmermann
+Issue02/ORegan_Erickson-Davis,interviewee,Kevin O'Regan
+Issue02/ORegan_Erickson-Davis,interviewer,Cordelia Erickson-Davis
+Issue02/Ratcliffe_Frerejouan,interviewee,Matthew Ratcliffe
+Issue02/Ratcliffe_Frerejouan,interviewer,Mathieu Frerejouan
+Issue02/Taves_Fortier_Canna,interviewee,Ann Taves
+Issue02/Taves_Fortier_Canna,interviewer,Martin Fortier
+Issue02/Taves_Fortier_Canna,interviewer,Maddalena Canna
+Issue03/Bayne_Bucci_Koroma,interviewee,Tim Bayne
+Issue03/Bayne_Bucci_Koroma,interviewer,Alessio Bucci
+Issue03/Bayne_Bucci_Koroma,interviewer,Matthieu Koroma
+Issue03/Dennett_Fleig-Goldstein_Friedman,interviewee,Daniel Dennett
+Issue03/Dennett_Fleig-Goldstein_Friedman,interviewer,Brittany Fleig-Goldstein
+Issue03/Dennett_Fleig-Goldstein_Friedman,interviewer,Daniel A. Friedman
+Issue03/Dienes_Martin,interviewee,Zoltan Dienes
+Issue03/Dienes_Martin,interviewer,Jean-Remi Martin
+Issue03/Preller_Dumas,interviewee,Katrin Preller
+Issue03/Preller_Dumas,interviewer,Guillaume Dumas
+Issue03/Winkelman_Fortier,interviewee,Michael Winkelman
+Issue03/Winkelman_Fortier,interviewer,Martin Fortier
+Issue04/Baird_Koroma,interviewee,Benjamin Baird
+Issue04/Baird_Koroma,interviewer,Matthieu Koroma
+Issue04/Carter_Preller,interviewee,Olivia Carter
+Issue04/Carter_Preller,interviewer,Katrin Preller
+Issue04/Fortier_ALIUS,interviewee,Martin Fortier
+Issue04/Fortier_ALIUS,interviewer,ALIUS Research Group
+Issue04/Gosseries_Martial,interviewee,Olivia Gosseries
+Issue04/Gosseries_Martial,interviewer,Charlotte Martial
+Issue04/Hanks_Mikhailova_Friedman,interviewee,Timothy Hanks
+Issue04/Hanks_Mikhailova_Friedman,interviewer,Alexandra Mikhailova
+Issue04/Hanks_Mikhailova_Friedman,interviewer,Daniel A. Friedman
+Issue04/Lenggenhager_Ho_Milliere,interviewee,Bigna Lenggenhager
+Issue04/Lenggenhager_Ho_Milliere,interviewer,Jasmine T. Ho
+Issue04/Lenggenhager_Ho_Milliere,interviewer,Raphael Milliere
+Issue04/Nichols_Nichols,interviewee,David E. Nichols
+Issue04/Nichols_Nichols,interviewer,ALIUS Research Group
+Issue04/Vignemont_Milliere_Serrahima,interviewee,Frederique de Vignemont
+Issue04/Vignemont_Milliere_Serrahima,interviewer,Raphael Milliere
+Issue04/Vignemont_Milliere_Serrahima,interviewer,Carlota Serrahima
+Issue05/Canna_Seligman_Koroma,interviewee,Maddalena Canna
+Issue05/Canna_Seligman_Koroma,interviewee,Rebecca Seligman
+Issue05/Canna_Seligman_Koroma,interviewer,Matthieu Koroma
+Issue05/Chadha_Aviles_Koroma,interviewee,Monima Chadha
+Issue05/Chadha_Aviles_Koroma,interviewer,Edvard Aviles
+Issue05/Chadha_Aviles_Koroma,interviewer,Matthieu Koroma
+Issue05/Martial,interviewee,Charlotte Martial
+Issue05/Martial,interviewer,ALIUS Research Group
+Issue05/Olson_Yaden_Fejer,interviewee,David E. Olson
+Issue05/Olson_Yaden_Fejer,interviewee,David B. Yaden
+Issue05/Olson_Yaden_Fejer,interviewer,George Fejer
+Issue05/Schmidt_Fejer,interviewee,Timo Torsten Schmidt
+Issue05/Schmidt_Fejer,interviewer,George Fejer
+Issue06/Ciaunica_Friedman_Coutrot_Koroma,interviewee,Andrea Ciaunica
+Issue06/Ciaunica_Friedman_Coutrot_Koroma,interviewer,Daniel A. Friedman
+Issue06/Ciaunica_Friedman_Coutrot_Koroma,interviewer,Matthieu Koroma
+Issue06/Doss_Fejer,interviewee,Manoj Doss
+Issue06/Doss_Fejer,interviewer,George Fejer
+Issue06/Gonzalez_Koroma,interviewee,Juan Gonzalez
+Issue06/Gonzalez_Koroma,interviewer,Matthieu Koroma
+Issue06/Jillings_Friedman_Coutrot_Koroma,interviewee,Steven Jillings
+Issue06/Jillings_Friedman_Coutrot_Koroma,interviewer,Daniel A. Friedman
+Issue06/Jillings_Friedman_Coutrot_Koroma,interviewer,Matthieu Koroma
+Issue06/Koroma_Friedman_Coutrot,interviewee,Matthieu Koroma
+Issue06/Koroma_Friedman_Coutrot,interviewer,Daniel A. Friedman
+Issue06/Sapolsky_Mikhailova_Friedman,interviewee,Robert Sapolsky
+Issue06/Sapolsky_Mikhailova_Friedman,interviewer,Alexandra Mikhailova
+Issue06/Sapolsky_Mikhailova_Friedman,interviewer,Daniel A. Friedman
+Issue06/Skipper_Roseman_Koroma_Fejer,interviewee,Jeremy Skipper
+Issue06/Skipper_Roseman_Koroma_Fejer,interviewer,Leor Roseman
+Issue06/Skipper_Roseman_Koroma_Fejer,interviewer,Matthieu Koroma
+Issue06/Skipper_Roseman_Koroma_Fejer,interviewer,George Fejer
+Issue07/Changeux_Dumas,interviewee,Jean-Pierre Changeux
+Issue07/Changeux_Dumas,interviewer,Guillaume Dumas
+Issue07/Froese_Koroma,interviewee,Tom Froese
+Issue07/Froese_Koroma,interviewer,Matthieu Koroma

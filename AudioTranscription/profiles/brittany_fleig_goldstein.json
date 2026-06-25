@@ -1,0 +1,68 @@
+{
+  "speaker_slug": "brittany_fleig_goldstein",
+  "speaker_name": "Brendan Fleig-Goldstein",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue03/Dennett_Fleig-Goldstein_Friedman"
+  ],
+  "youtube_query": "Brendan Fleig-Goldstein lecture interview cognitive science psychology",
+  "source_type": "reviewed_youtube_lecture_audio",
+  "source_audio": "AudioTranscription/sources/raw/brittany_fleig_goldstein/joyEOh8vq9s.webm",
+  "source_captions": "AudioTranscription/sources/raw/brittany_fleig_goldstein/joyEOh8vq9s.en-orig.vtt",
+  "source_url": "https://www.youtube.com/watch?v=joyEOh8vq9s",
+  "source_title": "Brendan Fleig-Goldstein, \"Normative Commitments/the Foundations of Rational and Moral Agency in AI\"",
+  "source_channel": "Cogut Institute for the Humanities",
+  "reference_audio": "AudioTranscription/references/brittany_fleig_goldstein/brittany_fleig_goldstein_youtube_joyEOh8vq9s_ref_v2.wav",
+  "reference_text": "I work on the philosophical foundations of cognitive science and artificial intelligence, primarily as a philosopher of science.",
+  "reference_source_start_seconds": 9.28,
+  "reference_duration_seconds": 7.85,
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "29781CB8D61E4E9AB3ACA3B08566F8D2AF1848B32791E01ED2C4E3B005FAD2DE",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "demographics": {
+    "person": "Brendan Fleig-Goldstein",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "unknown",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_adam",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Brendan%20Fleig-Goldstein&title=Special%3ASearch&ns0=1",
+    "notes": "Corrected from Brittany to Brendan based on the Issue03 interview source files; default American accent per scaffold."
+  },
+  "notes": "Exact public Cogut Institute talk downloaded on 2026-06-03 and converted into a sub-12 second sentence-bounded F5 reference. Slug retained for compatibility after correcting displayed person name to Brendan. Run human listening review before marking this profile working.",
+  "source_candidates": [
+    {
+      "url": "https://www.youtube.com/watch?v=joyEOh8vq9s",
+      "title": "Brendan Fleig-Goldstein, \"Normative Commitments/the Foundations of Rational and Moral Agency in AI\"",
+      "source_page": "YouTube search result from Cogut Institute for the Humanities",
+      "status": "downloaded_reference_candidate"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Ez6CnJG9UMY",
+      "title": "Three questions about mathematical psychology",
+      "source_page": "https://mathpsych.org/presentation/540",
+      "status": "verified_exact_embed",
+      "download_blocker": "not_used_because_cogut_source_is_shorter_and_cleaner"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=XD3pYsCexrc",
+      "title": "Brendan Fleig-Goldstein candidate video",
+      "source_page": "",
+      "status": "unverified_exact_name_candidate",
+      "download_blocker": "youtube_bot_confirmation_exported_cookies_needed"
+    }
+  ],
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/brittany_fleig_goldstein/brittany_fleig_goldstein_youtube_joyEOh8vq9s_ref.wav",
+      "reason": "First Cogut reference cut omitted the final words 'of science'."
+    }
+  ]
+}

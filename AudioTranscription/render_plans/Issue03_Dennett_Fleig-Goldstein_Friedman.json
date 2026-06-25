@@ -1,0 +1,36 @@
+{
+  "interview_id": "Issue03/Dennett_Fleig-Goldstein_Friedman",
+  "interview_slug": "Issue03_Dennett_Fleig-Goldstein_Friedman",
+  "source_qa_dir": "output/audio_interviews/Issue03/Dennett_Fleig-Goldstein_Friedman",
+  "output_file_stem": "Issue03_Dennett_Fleig-Goldstein_Friedman_clone_full_interview",
+  "voices": {
+    "question": "brittany_fleig_goldstein",
+    "answer": "daniel_dennett"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Brendan Fleig-Goldstein",
+        "speaker_slug": "brittany_fleig_goldstein"
+      },
+      {
+        "name": "Daniel A. Friedman",
+        "speaker_slug": "daniel_a_friedman"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Daniel Dennett",
+        "speaker_slug": "daniel_dennett"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

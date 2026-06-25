@@ -1,0 +1,39 @@
+{
+  "speaker_slug": "michael_winkelman",
+  "speaker_name": "Michael Winkelman",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewee"
+  ],
+  "interviews": [
+    "Issue03/Winkelman_Fortier"
+  ],
+  "youtube_query": "Michael Winkelman lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/michael_winkelman/C297m3el6yo.webm",
+  "reference_audio": "AudioTranscription/references/michael_winkelman/michael_winkelman_youtube_C297m3el6yo_ref_v2.wav",
+  "reference_text": "basic structure of our brain leads us to perceive spirits as sort of an extension of the basic structure of our brain for perceiving humans.",
+  "reference_source_start_seconds": 1291.2,
+  "reference_duration_seconds": 8.9,
+  "demographics": {
+    "person": "Michael Winkelman",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "older",
+    "voice": "am_michael",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Michael%20Winkelman%20anthropology&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; older-scholar voice selected"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=C297m3el6yo",
+  "source_title": "85: Michael Winkelman – Shamanism: A Biopsychosocial Paradigm of Consciousness & Healing",
+  "source_channel": "The Sacred Speaks",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "1C952677E53A8417A41EC208E302612C05F72FB8E923DEEC32CE74182B8B2784",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review"
+}

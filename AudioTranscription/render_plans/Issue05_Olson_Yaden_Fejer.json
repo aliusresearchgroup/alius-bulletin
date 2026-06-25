@@ -1,0 +1,36 @@
+{
+  "interview_id": "Issue05/Olson_Yaden_Fejer",
+  "interview_slug": "Issue05_Olson_Yaden_Fejer",
+  "source_qa_dir": "output/audio_interviews/Issue05/Olson_Yaden_Fejer",
+  "output_file_stem": "Issue05_Olson_Yaden_Fejer_clone_full_interview",
+  "voices": {
+    "question": "george_fejer",
+    "answer": "david_e_olson"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "George Fejer",
+        "speaker_slug": "george_fejer"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "David E. Olson",
+        "speaker_slug": "david_e_olson"
+      },
+      {
+        "name": "David B. Yaden",
+        "speaker_slug": "david_b_yaden"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

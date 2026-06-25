@@ -1,0 +1,38 @@
+{
+  "input": "AudioTranscription/references/alexandra_mikhailova/alexandra_mikhailova_youtube_mz7L4GD5g-E_source_section.webm",
+  "output": "AudioTranscription/references/alexandra_mikhailova/alexandra_mikhailova_youtube_mz7L4GD5g-E_ref_v3.wav",
+  "source_url": "https://www.youtube.com/watch?v=mz7L4GD5g-E",
+  "source_title": "ActInf Livestream #003.1 \"A World Unto Itself: Human Communication as Active Inference\"",
+  "source_channel": "Active Inference Institute",
+  "source_section_start_seconds": 394.8,
+  "source_section_offset_seconds": 4.64,
+  "source_url_reference_start_seconds": 399.44,
+  "duration_seconds": 9.44,
+  "max_reference_seconds": 11.5,
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "reference_text": "But I just wanted to say that communication is highly culture and context dependent.",
+  "asr_spotcheck": {
+    "result": "passed",
+    "model": "whisper_tiny.en",
+    "transcript": "AudioTranscription/references/alexandra_mikhailova/alexandra_mikhailova_youtube_mz7L4GD5g-E_ref_v3.txt",
+    "notes": "Tiny Whisper matched the intended complete phrase. Speaker identity is supported by the immediately preceding caption/audio context in the retained source section."
+  },
+  "output_probe": {
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "9.440000",
+      "size": "453198",
+      "bit_rate": "384066"
+    }
+  },
+  "input_sha256": "3F77239D5E88A639DF151B3D6B5611E005D89F6BD105ADA0F1FA4B30FE656059",
+  "output_sha256": "02C8283FB74758EFF255ABB5681386C217B279C60118EE7030902D31EB5488F7"
+}

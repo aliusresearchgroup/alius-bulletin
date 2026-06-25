@@ -1,0 +1,32 @@
+{
+  "speaker_slug": "matthieu_koroma",
+  "speaker_name": "Matthieu Koroma",
+  "consent": "confirmed",
+  "profile_status": "working",
+  "voice_engine": "F5TTS_v1_Base",
+  "source_type": "reviewed_youtube_lecture_audio",
+  "source_url": "https://www.youtube.com/watch?v=kEmCbay9t1w",
+  "source_title": "Matthieu Koroma - Selective processing and associative transfer learning in the sleeping brain",
+  "source_channel": "GIGA Consciousness Seminars",
+  "source_audio": "AudioTranscription/sources/raw/matthieu_koroma/kEmCbay9t1w.wav",
+  "source_captions": "AudioTranscription/sources/raw/matthieu_koroma/kEmCbay9t1w.en-orig.vtt",
+  "reference_audio": "AudioTranscription/references/matthieu_koroma/matthieu_koroma_youtube_kEmCbay9t1w_ref_v3.wav",
+  "reference_text": "I also want to share with you that I'm part of the alius research group, which is an international research group.",
+  "reference_source_start_seconds": 60.54,
+  "reference_duration_seconds": 6.75,
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "0132C9A87BC715BA96931BC5847EA85FBD2EF8D9ED6515BAF88A52497EF36A02",
+  "reference_review_status": "asr_spotcheck_passed_needs_listening_review",
+  "caption_window_csv": "AudioTranscription/work/caption_windows/matthieu_koroma_youtube.csv",
+  "notes": "Reference clip extracted from reviewed public YouTube lecture audio and cleaned with the standard lecture_cleanup filter. Current reference is sub-12 seconds to avoid F5 prompt truncation. Whisper tiny.en misheard ALIUS as address, so the caption-backed text is retained pending listening review. Previous local interview-source reference remains in AudioTranscription/references/Issue07_Froese_Koroma/ for comparison.",
+  "rejected_reference_candidates": [
+    {
+      "reference_audio": "AudioTranscription/references/matthieu_koroma/matthieu_koroma_youtube_kEmCbay9t1w_ref.wav",
+      "reason": "Fourteen-second reference exceeded F5's safe prompt length and ended mid-sentence."
+    },
+    {
+      "reference_audio": "AudioTranscription/references/matthieu_koroma/matthieu_koroma_youtube_kEmCbay9t1w_ref_v2.wav",
+      "reason": "Shorter clip was sentence-bounded, but tiny.en ASR missed the opening phrase too badly for a clean prompt transcript."
+    }
+  ]
+}

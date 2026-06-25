@@ -1,0 +1,32 @@
+{
+  "interview_id": "Issue04/Gosseries_Martial",
+  "interview_slug": "Issue04_Gosseries_Martial",
+  "source_qa_dir": "output/audio_interviews/Issue04/Gosseries_Martial",
+  "output_file_stem": "Issue04_Gosseries_Martial_clone_full_interview",
+  "voices": {
+    "question": "charlotte_martial",
+    "answer": "olivia_gosseries"
+  },
+  "all_participants": {
+    "interviewers": [
+      {
+        "name": "Charlotte Martial",
+        "speaker_slug": "charlotte_martial"
+      }
+    ],
+    "interviewees": [
+      {
+        "name": "Olivia Gosseries",
+        "speaker_slug": "olivia_gosseries"
+      }
+    ]
+  },
+  "tts": {
+    "model": "F5TTS_v1_Base",
+    "nfe_step": 16,
+    "speed": 1.0,
+    "remove_silence": false
+  },
+  "render_status": "needs_voice_profiles",
+  "notes": "Scaffolded from participant metadata. Multi-speaker interviews may need manual per-turn speaker attribution if answer text alternates between interviewees."
+}

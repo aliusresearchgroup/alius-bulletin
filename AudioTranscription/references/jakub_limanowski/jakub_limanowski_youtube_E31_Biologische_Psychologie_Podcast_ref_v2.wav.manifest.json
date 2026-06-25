@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\jakub_limanowski\\E31_Biologische_Psychologie_Podcast.mp3",
+  "output": "AudioTranscription\\references\\jakub_limanowski\\jakub_limanowski_youtube_E31_Biologische_Psychologie_Podcast_ref_v2.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 510.684,
+  "duration_seconds": 6.05,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.050000",
+      "size": "290536",
+      "bit_rate": "384179"
+    }
+  },
+  "input_sha256": "211D5DCDAFA9178A8293077DD51578B52C6055FACDD3817FF28DB254E9CC3C3A",
+  "output_sha256": "B95A81D4E6319EEBFBFFF858E286834D02075CFB79413E8B087F52190EF8D066"
+}

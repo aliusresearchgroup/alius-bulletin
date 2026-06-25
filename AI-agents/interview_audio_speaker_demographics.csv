@@ -1,0 +1,62 @@
+person,voice_gender,birth_year_or_age,nationality_signal,accent_region,age_group,voice,source_url,notes
+ALIUS Research Group,unknown,unknown,unknown,american,adult,af_heart,https://aliusresearch.org/,fallback only; not a person-specific demographic row
+Alessio Bucci,male,unknown,Italy,american,adult,am_echo,https://www.wikidata.org/w/index.php?search=Alessio%20Bucci&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Alexandra Mikhailova,female,unknown,unknown,american,adult,af_sky,https://www.wikidata.org/w/index.php?search=Alexandra%20Mikhailova&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Andrea Ciaunica,female,unknown,Romania,american,adult,af_kore,https://www.wikidata.org/w/index.php?search=Andrea%20Ciaunica&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Ann Taves,female,1952,United States,american,older,af_nicole,https://en.wikipedia.org/wiki/Ann_Taves,public scholar page
+Arnaud Halloy,male,unknown,Belgium,american,adult,am_eric,https://www.wikidata.org/w/index.php?search=Arnaud%20Halloy&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Benjamin Baird,male,unknown,United States,american,adult,am_puck,https://www.wikidata.org/w/index.php?search=Benjamin%20Baird%20consciousness&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Bigna Lenggenhager,female,unknown,Switzerland,american,adult,af_sarah,https://www.wikidata.org/w/index.php?search=Bigna%20Lenggenhager&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Brittany Fleig-Goldstein,female,unknown,unknown,american,adult,af_river,https://www.wikidata.org/w/index.php?search=Brittany%20Fleig-Goldstein&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Carlota Serrahima,female,unknown,Spain,american,adult,af_jessica,https://www.wikidata.org/w/index.php?search=Carlota%20Serrahima&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Charlotte Martial,female,unknown,Belgium,american,adult,af_bella,https://www.wikidata.org/w/index.php?search=Charlotte%20Martial&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Christopher Timmermann,male,unknown,Chile,american,adult,am_liam,https://www.wikidata.org/w/index.php?search=Christopher%20Timmermann&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Cordelia Erickson-Davis,female,unknown,United States,american,adult,af_aoede,https://www.wikidata.org/w/index.php?search=Cordelia%20Erickson-Davis&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Daniel A. Friedman,male,unknown,United States,american,adult,am_fenrir,https://www.wikidata.org/w/index.php?search=Daniel%20A.%20Friedman%20Stanford%20biology&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Daniel Dennett,male,1942,United States,american,older,am_michael,https://en.wikipedia.org/wiki/Daniel_Dennett,public biography; deceased in 2024 but voiced as older scholar for interview
+David B. Yaden,male,unknown,United States,american,adult,am_onyx,https://www.wikidata.org/w/index.php?search=David%20B.%20Yaden&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+David E. Nichols,male,1944,United States,american,older,am_michael,https://en.wikipedia.org/wiki/David_E._Nichols,public biography
+David E. Olson,male,unknown,United States,american,adult,am_fenrir,https://www.wikidata.org/w/index.php?search=David%20E.%20Olson%20psychedelics&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Edvard Aviles,male,unknown,unknown,american,adult,am_echo,https://www.wikidata.org/w/index.php?search=Edvard%20Aviles&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Frederique de Vignemont,female,unknown,France,american,adult,af_heart,https://www.wikidata.org/w/index.php?search=Frederique%20de%20Vignemont&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+George Fejer,male,unknown,unknown,american,adult,am_puck,https://www.wikidata.org/w/index.php?search=George%20Fejer%20ALIUS&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Guillaume Dumas,male,unknown,France,american,adult,am_eric,https://www.wikidata.org/w/index.php?search=Guillaume%20Dumas%20neuroscience&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Jakob Hohwy,male,unknown,Denmark,american,adult,am_puck,https://www.wikidata.org/wiki/Q42560411,Wikidata public researcher page
+Jakub Limanowski,male,unknown,Germany,american,adult,am_echo,https://www.wikidata.org/w/index.php?search=Jakub%20Limanowski&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Jasmine T. Ho,female,unknown,unknown,american,adult,af_alloy,https://www.wikidata.org/w/index.php?search=Jasmine%20T.%20Ho%20consciousness&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Jean-Pierre Changeux,male,1936,France,american,older,am_michael,https://en.wikipedia.org/wiki/Jean-Pierre_Changeux,public biography; default American accent per request because not UK
+Jean-Remi Martin,male,unknown,France,american,adult,am_liam,https://www.wikidata.org/w/index.php?search=Jean-Remi%20Martin%20hypnosis&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Jennifer Windt,female,unknown,Germany,american,adult,af_sarah,https://www.wikidata.org/w/index.php?search=Jennifer%20Windt&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Jeremy Skipper,male,unknown,United States,american,adult,am_onyx,https://www.wikidata.org/w/index.php?search=Jeremy%20Skipper%20language%20neuroscience&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Jordan Peterson,male,1962,Canada,american,mature,am_michael,https://en.wikipedia.org/wiki/Jordan_Peterson,public biography; fictional supplement
+Juan Gonzalez,male,unknown,unknown,american,adult,am_echo,https://www.wikidata.org/w/index.php?search=Juan%20Gonzalez%20consciousness%20ALIUS&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Karl Friston,male,1959,United Kingdom,british,older,bm_george,https://en.wikipedia.org/wiki/Karl_J._Friston,public biography; British older male voice
+Katrin Preller,female,unknown,Switzerland,american,adult,af_nova,https://www.wikidata.org/w/index.php?search=Katrin%20Preller&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Kevin O'Regan,male,unknown,United Kingdom,british,older,bm_lewis,https://en.wikipedia.org/wiki/J._Kevin_O%27Regan,public biography; British older male voice
+Kieran Fox,male,unknown,Canada,american,adult,am_liam,https://www.wikidata.org/w/index.php?search=Kieran%20Fox%20neuroscience&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Leor Roseman,male,unknown,Israel,american,adult,am_fenrir,https://www.wikidata.org/w/index.php?search=Leor%20Roseman&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Maddalena Canna,female,unknown,Italy,american,adult,af_bella,https://www.wikidata.org/w/index.php?search=Maddalena%20Canna&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Manoj Doss,male,unknown,United States,american,adult,am_puck,https://www.wikidata.org/w/index.php?search=Manoj%20Doss%20psychedelic%20research&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Martin Fortier,male,unknown,France,american,adult,am_fenrir,https://www.wikidata.org/wiki/Q90418530,Wikidata public researcher page; default American accent per request
+Mathieu Frerejouan,male,unknown,France,american,adult,am_eric,https://www.wikidata.org/w/index.php?search=Mathieu%20Frerejouan&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Matthieu Koroma,male,unknown,France/Belgium,american,adult,am_puck,https://www.wikidata.org/wiki/Q92886897,Wikidata public researcher page; default American accent per request
+Matthew Ratcliffe,male,unknown,United Kingdom,british,adult,bm_fable,https://www.wikidata.org/w/index.php?search=Matthew%20Ratcliffe%20philosopher&title=Special%3ASearch&ns0=1,public metadata sparse; British country signal
+Michael Winkelman,male,unknown,United States,american,older,am_michael,https://www.wikidata.org/w/index.php?search=Michael%20Winkelman%20anthropology&title=Special%3ASearch&ns0=1,public metadata sparse; older-scholar voice selected
+Monima Chadha,female,unknown,India,american,adult,af_aoede,https://www.wikidata.org/w/index.php?search=Monima%20Chadha&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Olivia Carter,female,unknown,Australia,american,adult,af_nova,https://www.wikidata.org/w/index.php?search=Olivia%20Carter%20psychology&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Olivia Gosseries,female,unknown,Belgium,american,adult,af_kore,https://www.wikidata.org/w/index.php?search=Olivia%20Gosseries&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Raphael Milliere,male,unknown,France,american,adult,am_liam,https://www.wikidata.org/wiki/Q91344619,Wikidata public researcher page; default American accent per request
+Rebecca Seligman,female,unknown,United States,american,mature,af_nicole,https://www.wikidata.org/wiki/Q113839524,Wikidata public researcher page
+Robert Sapolsky,male,1957,United States,american,older,am_michael,https://en.wikipedia.org/wiki/Robert_Sapolsky,public biography
+Robin Carhart-Harris,male,1980,United Kingdom,british,adult,bm_fable,https://www.wikidata.org/wiki/Q49986629,Wikidata public researcher page; British male voice
+Samantha Jillings,female,unknown,Belgium,american,adult,af_sky,https://www.wikidata.org/w/index.php?search=Samantha%20Jillings%20neuroscience&title=Special%3ASearch&ns0=1,not used unless transcript names Samantha rather than Steven
+Simon McCarthy-Jones,male,unknown,Ireland,american,adult,am_onyx,https://www.wikidata.org/wiki/Q87668209,Wikidata public researcher page; default American accent per request
+Slavoj Zizek,male,1949,Slovenia,american,older,am_adam,https://en.wikipedia.org/wiki/Slavoj_Zizek,public biography; fictional supplement; default American accent per request
+Steven Jillings,male,unknown,Belgium,american,adult,am_echo,https://www.wikidata.org/w/index.php?search=Steven%20Jillings&title=Special%3ASearch&ns0=1,episode speaker; default American accent per request
+Tanya Luhrmann,female,1959,United States,american,older,af_nicole,https://en.wikipedia.org/wiki/Tanya_Luhrmann,public biography
+Thomas Metzinger,male,1958,Germany,american,older,am_michael,https://en.wikipedia.org/wiki/Thomas_Metzinger,public biography; default American accent per request
+Tim Bayne,male,unknown,Australia,american,adult,am_fenrir,https://en.wikipedia.org/wiki/Tim_Bayne,public biography; default American accent per request
+Timo Torsten Schmidt,male,unknown,Germany,american,adult,am_liam,https://www.wikidata.org/w/index.php?search=Timo%20Torsten%20Schmidt&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Timothy Hanks,male,unknown,United States,american,adult,am_puck,https://www.wikidata.org/w/index.php?search=Timothy%20Hanks%20neuroscience&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Tom Froese,male,unknown,Canada,american,adult,am_onyx,https://www.wikidata.org/w/index.php?search=Tom%20Froese%20consciousness&title=Special%3ASearch&ns0=1,public metadata sparse; default American accent per request
+Zoltan Dienes,male,unknown,United Kingdom,british,mature,bm_george,https://www.wikidata.org/w/index.php?search=Zoltan%20Dienes&title=Special%3ASearch&ns0=1,British country signal

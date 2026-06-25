@@ -1,0 +1,157 @@
+{
+  "speaker_slug": "cordelia_erickson_davis",
+  "speaker_name": "Cordelia Erickson-Davis",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "kokoro_fallback_reference_generated",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue02/ORegan_Erickson-Davis"
+  ],
+  "youtube_query": "Cordelia Erickson-Davis lecture interview consciousness neuroscience",
+  "source_type": "kokoro_fallback_reference",
+  "source_audio": "AudioTranscription/references/fallback/cordelia_erickson_davis/cordelia_erickson_davis_kokoro_af_aoede_ref.wav",
+  "reference_audio": "AudioTranscription/references/fallback/cordelia_erickson_davis/cordelia_erickson_davis_kokoro_af_aoede_ref.wav",
+  "reference_text": "This interview explores perception, experience, and consciousness through careful questions and an open, steady conversation.",
+  "reference_source_start_seconds": 0,
+  "reference_duration_seconds": 8.533,
+  "demographics": {
+    "person": "Cordelia Erickson-Davis",
+    "voice_gender": "female",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "United States",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "af_aoede",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Cordelia%20Erickson-Davis&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "fallback_voice": {
+    "enabled": true,
+    "engine": "kokoro_onnx",
+    "kokoro_voice": "af_aoede",
+    "kokoro_lang": "en-us",
+    "speed": 0.9,
+    "selection_reason": "No confirmed public natural-voice source found after expanded audit. Use an adult American female Kokoro voice as a clearly marked fallback, not as a real voice clone.",
+    "not_a_real_voice_clone": true
+  },
+  "notes": "2026-06-03 expanded audit plus second targeted pass: no confirmed public natural-voice source or local original ALIUS interview audio found after exact-name, alias, YouTube/yt-dlp, Kaltura, Vimeo, SoundCloud, Archive, Stanford Medicine, Stanford CME/Medcast/Grand Rounds, ALIUS public pages, and local repository searches. Local Issue02/ORegan_Erickson-Davis audio is generated TTS using af_aoede for Cordelia and bm_lewis for Kevin, not usable as a natural reference. Identity/event pages and rejected media/search candidates are recorded in source_candidates; request a direct sample or original interview audio with consent.",
+  "source_candidates": [
+    {
+      "url": "https://med.stanford.edu/profiles/cordelia-erickson-davis",
+      "title": "Stanford profile",
+      "status": "identity_only_no_media",
+      "failure_reason": "Confirms identity/affiliation but exposes no audio or video source."
+    },
+    {
+      "url": "https://anthropology.stanford.edu/events/cordelia-erickson-davis-dissertation-defense",
+      "title": "Stanford dissertation defense event page",
+      "status": "event_page_no_recording",
+      "failure_reason": "Event page is a Zoom/event listing and does not expose a public recording or downloadable media URL."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TE7JYDDKYNw",
+      "title": "Northampton Community College 2017 Summer Theatre Promo",
+      "status": "rejected_false_positive",
+      "failure_reason": "Exact-name YouTube search result is not contextually tied to the ALIUS/Stanford researcher and is not an acceptable natural voice source."
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=%22Cordelia+Erickson-Davis%22",
+      "title": "Exact-name YouTube search",
+      "status": "search_no_confirmed_voice_source",
+      "failure_reason": "Exact-name searches returned generic/noisy results and no context-proven speaker media."
+    },
+    {
+      "url": "https://med.stanford.edu/psychiatry/education/Neuropsychiatry.html",
+      "title": "Stanford Neuropsychiatry Fellowship Program page",
+      "status": "identity_page_embedded_media_not_cordelia",
+      "failure_reason": "Confirms Cordelia Erickson-Davis MD PhD MPH on the page, but embedded media are department/GME tour videos or FND educational context, not a confirmed Cordelia natural-voice source."
+    },
+    {
+      "url": "kaltura:1392761:0_imz1temb",
+      "title": "Stanford GME Virtual Tour for Applicants",
+      "status": "rejected_context_mismatch",
+      "failure_reason": "Embedded on the Stanford fellowship page, but title and metadata identify it as a general GME virtual tour, not Cordelia Erickson-Davis speech."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RXBM36Wa4lk",
+      "title": "Stanford University, Department of Psychiatry",
+      "status": "rejected_context_mismatch",
+      "failure_reason": "Embedded department overview video; no Cordelia-specific title, description, or search evidence confirms her speech."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=VPvitBOvwJQ",
+      "title": "500p Virtual Tour",
+      "status": "rejected_context_mismatch",
+      "failure_reason": "Embedded general virtual tour video; not a Cordelia voice source."
+    },
+    {
+      "url": "https://stanford.cloud-cme.com/course/courseoverview?EID=47276&P=0",
+      "title": "Psychiatry Grand Rounds - Scholarly Presentations",
+      "status": "event_page_handout_only_no_recording",
+      "failure_reason": "CME page and handout confirm Cordelia Erickson-Davis as one of three speakers on 2024-04-11, but expose no public recording or media link."
+    },
+    {
+      "url": "https://stanford.cloud-cme.com/Assets/stanford/activities/47276/Brochure_47276.pdf",
+      "title": "CME handout for Psychiatry Grand Rounds - Scholarly Presentations",
+      "status": "identity_only_no_media",
+      "failure_reason": "PDF lists Cordelia Erickson-Davis as a speaker but contains no audio/video source URL."
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=%22Cordelia+Erickson-Davis%22+Stanford+Psychiatry",
+      "title": "Exact-name and alias web/video searches",
+      "status": "search_no_confirmed_voice_source",
+      "failure_reason": "Searches for Cordelia Erickson-Davis, Cordelia Erickson Davis, Cordelia Michele Erickson-Davis, Cordelia Erikson-Davis, and C. Erickson-Davis across web/video/podcast hosts found identity pages, publications, or noisy results, but no confirmed public natural-voice media."
+    },
+    {
+      "url": "ytsearch:Cordelia Erickson-Davis; Cordelia Erickson Davis; Cordelia Michele Erickson-Davis; C. Erickson-Davis Stanford",
+      "title": "Second-pass YouTube metadata searches via yt-dlp",
+      "status": "search_no_confirmed_voice_source",
+      "failure_reason": "yt-dlp exact-name and variant searches returned the already rejected Northampton promo plus unrelated Stanford/Davis/Erickson videos, or no results for Cordelia Michele Erickson-Davis; no result was context-confirmed as Cordelia Erickson-Davis speaking."
+    },
+    {
+      "url": "local:output/audio_interviews/Issue02/ORegan_Erickson-Davis/qa_*.wav",
+      "title": "Local Issue02 ORegan_Erickson-Davis Q&A WAV files",
+      "status": "rejected_generated_tts_not_natural_voice",
+      "failure_reason": "Each paired qa_*.txt file identifies the question voice as Cordelia Erickson-Davis (af_aoede) and answer voice as Kevin O'Regan (bm_lewis), confirming generated TTS output rather than original ALIUS interview audio."
+    },
+    {
+      "url": "local:output/audio_interviews/Issue02/ORegan_Erickson-Davis/interview.mp3",
+      "title": "Local Issue02 ORegan_Erickson-Davis composite MP3",
+      "status": "rejected_generated_tts_not_natural_voice",
+      "failure_reason": "Composite MP3 is built from the generated qa_*.wav files listed in interview_concat.txt; ffprobe shows 24 kHz mono MP3, but local text metadata confirms the source voices are synthetic."
+    },
+    {
+      "url": "https://aliusresearch.org/team/index.html",
+      "title": "ALIUS public team profile",
+      "status": "identity_page_no_media",
+      "failure_reason": "Public ALIUS team page contains Cordelia Erickson-Davis bio/contact text but no public audio, video, or downloadable media source."
+    },
+    {
+      "url": "https://whatfeelingislike.net/?page_id=643",
+      "title": "Kevin O'Regan press/interview reference page",
+      "status": "text_interview_reference_no_cordelia_media",
+      "failure_reason": "Page references the ALIUS text interview with Kevin O'Regan and links Kevin O'Regan media, but does not expose Cordelia Erickson-Davis natural-voice audio/video."
+    },
+    {
+      "url": "search:Kaltura/Vimeo/SoundCloud/Archive/Medcast/podcast exact-variant audit 2026-06-03",
+      "title": "Second-pass public audio/video host searches",
+      "status": "search_no_confirmed_voice_source",
+      "failure_reason": "Targeted searches for exact and variant names across Kaltura, Vimeo, SoundCloud, Internet Archive, Stanford Medcast, Apple Podcasts, Spotify, and Stanford psychiatry/neuropsychiatry contexts found no confirmed Cordelia Erickson-Davis natural-voice source."
+    }
+  ],
+  "reference_sha256": "AF976A094E0E755C698F85F68B5F0F8EF6DEBCF90112B253C02BFBC962D91AAF",
+  "reference_review_status": "kokoro_fallback_generated_not_real_voice_clone",
+  "fallback_reference": {
+    "generated": true,
+    "engine": "kokoro_onnx",
+    "kokoro_voice": "af_aoede",
+    "kokoro_lang": "en-us",
+    "speed": 0.9,
+    "not_a_real_voice_clone": true,
+    "selection_reason": "No confirmed public natural-voice source found after expanded audit. Use an adult American female Kokoro voice as a clearly marked fallback, not as a real voice clone."
+  }
+}

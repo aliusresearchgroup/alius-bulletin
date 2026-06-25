@@ -1,0 +1,29 @@
+{
+  "input": "AudioTranscription\\sources\\raw\\benjamin_baird\\uDYBXj_wv78.webm",
+  "output": "AudioTranscription\\references\\benjamin_baird\\benjamin_baird_youtube_uDYBXj_wv78_ref_v4.wav",
+  "preset": "lecture_cleanup",
+  "preset_description": "For YouTube lectures or podcast audio with decent speech and room tone. Cleaner than aggressive denoising.",
+  "ffmpeg_filter": "highpass=f=70,lowpass=f=12000,afftdn=nf=-22,equalizer=f=2800:t=q:w=1.1:g=2.0,acompressor=threshold=-23dB:ratio=1.8:attack=8:release=100:makeup=1.5,loudnorm=I=-18:TP=-2:LRA=11",
+  "start_seconds": 445.5,
+  "duration_seconds": 8.8,
+  "max_reference_seconds": 11.5,
+  "allow_long_reference": false,
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.800000",
+      "size": "422478",
+      "bit_rate": "384070"
+    }
+  },
+  "input_sha256": "C2F917A58EAB0B7A2460254CB59FD44442DABBC1B64E022EE61F3010818F74F2",
+  "output_sha256": "A33B8CA63F13BEB46320E85F85C8D0E6AE0AAC485316DB131E4DA01CCA37FADA"
+}

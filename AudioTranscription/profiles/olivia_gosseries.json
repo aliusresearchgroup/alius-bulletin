@@ -1,0 +1,39 @@
+{
+    "speaker_slug":  "olivia_gosseries",
+    "speaker_name":  "Olivia Gosseries",
+    "consent":  "confirmed",
+    "profile_status":  "candidate_ready",
+    "source_status":  "downloaded_reference_candidate",
+    "voice_engine":  "F5TTS_v1_Base",
+    "roles":  [
+                  "interviewee"
+              ],
+    "interviews":  [
+                       "Issue04/Gosseries_Martial"
+                   ],
+    "youtube_query":  "Olivia Gosseries lecture interview consciousness neuroscience",
+    "source_type":  "youtube_source_candidate",
+    "source_audio":  "AudioTranscription/sources/raw/olivia_gosseries/Jmp_X82dIyk.webm",
+    "reference_audio":  "AudioTranscription/references/olivia_gosseries/olivia_gosseries_youtube_Jmp_X82dIyk_ref_v2.wav",
+    "reference_text":  "And if we only look at those five, we can actually detect 99 percent of the patient in a minimally conscious state.",
+    "reference_source_start_seconds":  388,
+    "reference_duration_seconds":  7.82,
+    "demographics":  {
+                         "person":  "Olivia Gosseries",
+                         "voice_gender":  "female",
+                         "birth_year_or_age":  "unknown",
+                         "nationality_signal":  "Belgium",
+                         "accent_region":  "american",
+                         "age_group":  "adult",
+                         "voice":  "af_kore",
+                         "source_url":  "https://www.wikidata.org/w/index.php?search=Olivia%20Gosseries\u0026title=Special%3ASearch\u0026ns0=1",
+                         "notes":  "public metadata sparse; default American accent per request"
+                     },
+    "notes":  "F5-safe ref_v2 recut from the existing YouTube source; caption-backed wording and tiny Whisper ASR spotcheck passed on 2026-06-03.",
+    "source_url":  "https://www.youtube.com/watch?v=Jmp_X82dIyk",
+    "source_title":  "Helsinki TMS Hub seminar/7.10.2020/Dr. Olivia Gosseries",
+    "source_channel":  "Helsinki TMS Hub",
+    "reference_filter_preset":  "lecture_cleanup",
+    "reference_sha256":  "293995F4C92209378A5607E264FF6BDE11E318C4380B22D7909E3B98F220C9EF",
+    "reference_review_status":  "asr_spotcheck_passed"
+}

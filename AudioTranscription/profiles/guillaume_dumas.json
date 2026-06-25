@@ -1,0 +1,40 @@
+{
+  "speaker_slug": "guillaume_dumas",
+  "speaker_name": "Guillaume Dumas",
+  "consent": "confirmed",
+  "profile_status": "candidate_ready",
+  "source_status": "downloaded_reference_candidate",
+  "voice_engine": "F5TTS_v1_Base",
+  "roles": [
+    "interviewer"
+  ],
+  "interviews": [
+    "Issue03/Preller_Dumas",
+    "Issue07/Changeux_Dumas"
+  ],
+  "youtube_query": "Guillaume Dumas lecture interview consciousness neuroscience",
+  "source_type": "youtube_source_candidate",
+  "source_audio": "AudioTranscription/sources/raw/guillaume_dumas/bZdhwsRoz54.webm",
+  "reference_audio": "AudioTranscription/references/guillaume_dumas/guillaume_dumas_youtube_bZdhwsRoz54_ref_v2.wav",
+  "reference_text": "I put the 1965 because it's a funny anecdote since the first dual brain recording actually was published in Science in 1965.",
+  "reference_source_start_seconds": 445.68,
+  "reference_duration_seconds": 9.2,
+  "demographics": {
+    "person": "Guillaume Dumas",
+    "voice_gender": "male",
+    "birth_year_or_age": "unknown",
+    "nationality_signal": "France",
+    "accent_region": "american",
+    "age_group": "adult",
+    "voice": "am_eric",
+    "source_url": "https://www.wikidata.org/w/index.php?search=Guillaume%20Dumas%20neuroscience&title=Special%3ASearch&ns0=1",
+    "notes": "public metadata sparse; default American accent per request"
+  },
+  "notes": "YouTube source and cleaned reference candidate are present. Run listening review before marking this profile working.",
+  "source_url": "https://www.youtube.com/watch?v=bZdhwsRoz54",
+  "source_title": "[USS 2023] Talk by Guillaume Dumas, PhD",
+  "source_channel": "UNIQUE Centre Student Symposium",
+  "reference_filter_preset": "lecture_cleanup",
+  "reference_sha256": "E385B856C08270AD84D46858D86FE4A44A3348EE1B12F252AC34E9A4C087B60E",
+  "reference_review_status": "asr_spotcheck_passed"
+}
